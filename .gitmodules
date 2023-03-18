@@ -1,0 +1,4 @@
+[submodule "peripherals"]
+	path = peripherals
+	url = https://github.com/abt8601/broadcom-peripherals.git
+	branch = main-build

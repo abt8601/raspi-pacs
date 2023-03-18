@@ -1,0 +1,26 @@
+name: Check
+
+on: [push, pull_request]
+
+jobs:
+
+  check:
+
+    strategy:
+      matrix:
+        mcu: [bcm2835, bcm2837, bcm2711]
+        rust-version: [1.61.0, 1.62.1, 1.63.0, 1.64.0, 1.65.0, 1.66.1, 1.67.1, 1.68.0]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Rust
+        run: rustup default ${{ matrix.rust-version }}
+
+      - name: Check crate
+        working-directory: crates/${{ matrix.mcu }}-lpa
+        run: |
+          cargo check
+          cargo check --all-features
