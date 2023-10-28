@@ -17,6 +17,7 @@ svd2rust -i "../../peripherals/svd/gen/${mcu_name}_lpa.svd" --target none \
     --atomics --impl_debug
 
 rm -rf src/
-form -i lib.rs -o src/
-rm lib.rs
+# TODO: Switch back to using `form` as soon as djmcgill/form#12 is resolved.
+mkdir src/
+mv lib.rs src/
 cargo fmt
