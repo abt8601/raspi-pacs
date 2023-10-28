@@ -1,82 +1,69 @@
 #[doc = "Register `GPLEV0` reader"]
-pub struct R(crate::R<GPLEV0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPLEV0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPLEV0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPLEV0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPLEV0_SPEC>;
 #[doc = "Field `LEV0` reader - Level 0"]
-pub type LEV0_R = crate::BitReader<bool>;
+pub type LEV0_R = crate::BitReader;
 #[doc = "Field `LEV1` reader - Level 1"]
-pub type LEV1_R = crate::BitReader<bool>;
+pub type LEV1_R = crate::BitReader;
 #[doc = "Field `LEV2` reader - Level 2"]
-pub type LEV2_R = crate::BitReader<bool>;
+pub type LEV2_R = crate::BitReader;
 #[doc = "Field `LEV3` reader - Level 3"]
-pub type LEV3_R = crate::BitReader<bool>;
+pub type LEV3_R = crate::BitReader;
 #[doc = "Field `LEV4` reader - Level 4"]
-pub type LEV4_R = crate::BitReader<bool>;
+pub type LEV4_R = crate::BitReader;
 #[doc = "Field `LEV5` reader - Level 5"]
-pub type LEV5_R = crate::BitReader<bool>;
+pub type LEV5_R = crate::BitReader;
 #[doc = "Field `LEV6` reader - Level 6"]
-pub type LEV6_R = crate::BitReader<bool>;
+pub type LEV6_R = crate::BitReader;
 #[doc = "Field `LEV7` reader - Level 7"]
-pub type LEV7_R = crate::BitReader<bool>;
+pub type LEV7_R = crate::BitReader;
 #[doc = "Field `LEV8` reader - Level 8"]
-pub type LEV8_R = crate::BitReader<bool>;
+pub type LEV8_R = crate::BitReader;
 #[doc = "Field `LEV9` reader - Level 9"]
-pub type LEV9_R = crate::BitReader<bool>;
+pub type LEV9_R = crate::BitReader;
 #[doc = "Field `LEV10` reader - Level 10"]
-pub type LEV10_R = crate::BitReader<bool>;
+pub type LEV10_R = crate::BitReader;
 #[doc = "Field `LEV11` reader - Level 11"]
-pub type LEV11_R = crate::BitReader<bool>;
+pub type LEV11_R = crate::BitReader;
 #[doc = "Field `LEV12` reader - Level 12"]
-pub type LEV12_R = crate::BitReader<bool>;
+pub type LEV12_R = crate::BitReader;
 #[doc = "Field `LEV13` reader - Level 13"]
-pub type LEV13_R = crate::BitReader<bool>;
+pub type LEV13_R = crate::BitReader;
 #[doc = "Field `LEV14` reader - Level 14"]
-pub type LEV14_R = crate::BitReader<bool>;
+pub type LEV14_R = crate::BitReader;
 #[doc = "Field `LEV15` reader - Level 15"]
-pub type LEV15_R = crate::BitReader<bool>;
+pub type LEV15_R = crate::BitReader;
 #[doc = "Field `LEV16` reader - Level 16"]
-pub type LEV16_R = crate::BitReader<bool>;
+pub type LEV16_R = crate::BitReader;
 #[doc = "Field `LEV17` reader - Level 17"]
-pub type LEV17_R = crate::BitReader<bool>;
+pub type LEV17_R = crate::BitReader;
 #[doc = "Field `LEV18` reader - Level 18"]
-pub type LEV18_R = crate::BitReader<bool>;
+pub type LEV18_R = crate::BitReader;
 #[doc = "Field `LEV19` reader - Level 19"]
-pub type LEV19_R = crate::BitReader<bool>;
+pub type LEV19_R = crate::BitReader;
 #[doc = "Field `LEV20` reader - Level 20"]
-pub type LEV20_R = crate::BitReader<bool>;
+pub type LEV20_R = crate::BitReader;
 #[doc = "Field `LEV21` reader - Level 21"]
-pub type LEV21_R = crate::BitReader<bool>;
+pub type LEV21_R = crate::BitReader;
 #[doc = "Field `LEV22` reader - Level 22"]
-pub type LEV22_R = crate::BitReader<bool>;
+pub type LEV22_R = crate::BitReader;
 #[doc = "Field `LEV23` reader - Level 23"]
-pub type LEV23_R = crate::BitReader<bool>;
+pub type LEV23_R = crate::BitReader;
 #[doc = "Field `LEV24` reader - Level 24"]
-pub type LEV24_R = crate::BitReader<bool>;
+pub type LEV24_R = crate::BitReader;
 #[doc = "Field `LEV25` reader - Level 25"]
-pub type LEV25_R = crate::BitReader<bool>;
+pub type LEV25_R = crate::BitReader;
 #[doc = "Field `LEV26` reader - Level 26"]
-pub type LEV26_R = crate::BitReader<bool>;
+pub type LEV26_R = crate::BitReader;
 #[doc = "Field `LEV27` reader - Level 27"]
-pub type LEV27_R = crate::BitReader<bool>;
+pub type LEV27_R = crate::BitReader;
 #[doc = "Field `LEV28` reader - Level 28"]
-pub type LEV28_R = crate::BitReader<bool>;
+pub type LEV28_R = crate::BitReader;
 #[doc = "Field `LEV29` reader - Level 29"]
-pub type LEV29_R = crate::BitReader<bool>;
+pub type LEV29_R = crate::BitReader;
 #[doc = "Field `LEV30` reader - Level 30"]
-pub type LEV30_R = crate::BitReader<bool>;
+pub type LEV30_R = crate::BitReader;
 #[doc = "Field `LEV31` reader - Level 31"]
-pub type LEV31_R = crate::BitReader<bool>;
+pub type LEV31_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Level 0"]
     #[inline(always)]
@@ -239,12 +226,53 @@ impl R {
         LEV31_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "GPIO Pin Level 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gplev0](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPLEV0")
+            .field("lev0", &format_args!("{}", self.lev0().bit()))
+            .field("lev1", &format_args!("{}", self.lev1().bit()))
+            .field("lev2", &format_args!("{}", self.lev2().bit()))
+            .field("lev3", &format_args!("{}", self.lev3().bit()))
+            .field("lev4", &format_args!("{}", self.lev4().bit()))
+            .field("lev5", &format_args!("{}", self.lev5().bit()))
+            .field("lev6", &format_args!("{}", self.lev6().bit()))
+            .field("lev7", &format_args!("{}", self.lev7().bit()))
+            .field("lev8", &format_args!("{}", self.lev8().bit()))
+            .field("lev9", &format_args!("{}", self.lev9().bit()))
+            .field("lev10", &format_args!("{}", self.lev10().bit()))
+            .field("lev11", &format_args!("{}", self.lev11().bit()))
+            .field("lev12", &format_args!("{}", self.lev12().bit()))
+            .field("lev13", &format_args!("{}", self.lev13().bit()))
+            .field("lev14", &format_args!("{}", self.lev14().bit()))
+            .field("lev15", &format_args!("{}", self.lev15().bit()))
+            .field("lev16", &format_args!("{}", self.lev16().bit()))
+            .field("lev17", &format_args!("{}", self.lev17().bit()))
+            .field("lev18", &format_args!("{}", self.lev18().bit()))
+            .field("lev19", &format_args!("{}", self.lev19().bit()))
+            .field("lev20", &format_args!("{}", self.lev20().bit()))
+            .field("lev21", &format_args!("{}", self.lev21().bit()))
+            .field("lev22", &format_args!("{}", self.lev22().bit()))
+            .field("lev23", &format_args!("{}", self.lev23().bit()))
+            .field("lev24", &format_args!("{}", self.lev24().bit()))
+            .field("lev25", &format_args!("{}", self.lev25().bit()))
+            .field("lev26", &format_args!("{}", self.lev26().bit()))
+            .field("lev27", &format_args!("{}", self.lev27().bit()))
+            .field("lev28", &format_args!("{}", self.lev28().bit()))
+            .field("lev29", &format_args!("{}", self.lev29().bit()))
+            .field("lev30", &format_args!("{}", self.lev30().bit()))
+            .field("lev31", &format_args!("{}", self.lev31().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GPLEV0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "GPIO Pin Level 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gplev0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPLEV0_SPEC;
 impl crate::RegisterSpec for GPLEV0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gplev0::R](R) reader structure"]
-impl crate::Readable for GPLEV0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gplev0::R`](R) reader structure"]
+impl crate::Readable for GPLEV0_SPEC {}

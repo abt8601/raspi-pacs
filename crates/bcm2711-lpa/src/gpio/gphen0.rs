@@ -1,167 +1,135 @@
 #[doc = "Register `GPHEN0` reader"]
-pub struct R(crate::R<GPHEN0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPHEN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPHEN0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPHEN0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPHEN0_SPEC>;
 #[doc = "Register `GPHEN0` writer"]
-pub struct W(crate::W<GPHEN0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPHEN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPHEN0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPHEN0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GPHEN0_SPEC>;
 #[doc = "Field `HEN0` reader - High detect enabled 0"]
-pub type HEN0_R = crate::BitReader<bool>;
+pub type HEN0_R = crate::BitReader;
 #[doc = "Field `HEN0` writer - High detect enabled 0"]
-pub type HEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN1` reader - High detect enabled 1"]
-pub type HEN1_R = crate::BitReader<bool>;
+pub type HEN1_R = crate::BitReader;
 #[doc = "Field `HEN1` writer - High detect enabled 1"]
-pub type HEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN2` reader - High detect enabled 2"]
-pub type HEN2_R = crate::BitReader<bool>;
+pub type HEN2_R = crate::BitReader;
 #[doc = "Field `HEN2` writer - High detect enabled 2"]
-pub type HEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN3` reader - High detect enabled 3"]
-pub type HEN3_R = crate::BitReader<bool>;
+pub type HEN3_R = crate::BitReader;
 #[doc = "Field `HEN3` writer - High detect enabled 3"]
-pub type HEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN4` reader - High detect enabled 4"]
-pub type HEN4_R = crate::BitReader<bool>;
+pub type HEN4_R = crate::BitReader;
 #[doc = "Field `HEN4` writer - High detect enabled 4"]
-pub type HEN4_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN5` reader - High detect enabled 5"]
-pub type HEN5_R = crate::BitReader<bool>;
+pub type HEN5_R = crate::BitReader;
 #[doc = "Field `HEN5` writer - High detect enabled 5"]
-pub type HEN5_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN6` reader - High detect enabled 6"]
-pub type HEN6_R = crate::BitReader<bool>;
+pub type HEN6_R = crate::BitReader;
 #[doc = "Field `HEN6` writer - High detect enabled 6"]
-pub type HEN6_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN7` reader - High detect enabled 7"]
-pub type HEN7_R = crate::BitReader<bool>;
+pub type HEN7_R = crate::BitReader;
 #[doc = "Field `HEN7` writer - High detect enabled 7"]
-pub type HEN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN8` reader - High detect enabled 8"]
-pub type HEN8_R = crate::BitReader<bool>;
+pub type HEN8_R = crate::BitReader;
 #[doc = "Field `HEN8` writer - High detect enabled 8"]
-pub type HEN8_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN9` reader - High detect enabled 9"]
-pub type HEN9_R = crate::BitReader<bool>;
+pub type HEN9_R = crate::BitReader;
 #[doc = "Field `HEN9` writer - High detect enabled 9"]
-pub type HEN9_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN10` reader - High detect enabled 10"]
-pub type HEN10_R = crate::BitReader<bool>;
+pub type HEN10_R = crate::BitReader;
 #[doc = "Field `HEN10` writer - High detect enabled 10"]
-pub type HEN10_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN11` reader - High detect enabled 11"]
-pub type HEN11_R = crate::BitReader<bool>;
+pub type HEN11_R = crate::BitReader;
 #[doc = "Field `HEN11` writer - High detect enabled 11"]
-pub type HEN11_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN12` reader - High detect enabled 12"]
-pub type HEN12_R = crate::BitReader<bool>;
+pub type HEN12_R = crate::BitReader;
 #[doc = "Field `HEN12` writer - High detect enabled 12"]
-pub type HEN12_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN13` reader - High detect enabled 13"]
-pub type HEN13_R = crate::BitReader<bool>;
+pub type HEN13_R = crate::BitReader;
 #[doc = "Field `HEN13` writer - High detect enabled 13"]
-pub type HEN13_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN14` reader - High detect enabled 14"]
-pub type HEN14_R = crate::BitReader<bool>;
+pub type HEN14_R = crate::BitReader;
 #[doc = "Field `HEN14` writer - High detect enabled 14"]
-pub type HEN14_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN15` reader - High detect enabled 15"]
-pub type HEN15_R = crate::BitReader<bool>;
+pub type HEN15_R = crate::BitReader;
 #[doc = "Field `HEN15` writer - High detect enabled 15"]
-pub type HEN15_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN16` reader - High detect enabled 16"]
-pub type HEN16_R = crate::BitReader<bool>;
+pub type HEN16_R = crate::BitReader;
 #[doc = "Field `HEN16` writer - High detect enabled 16"]
-pub type HEN16_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN17` reader - High detect enabled 17"]
-pub type HEN17_R = crate::BitReader<bool>;
+pub type HEN17_R = crate::BitReader;
 #[doc = "Field `HEN17` writer - High detect enabled 17"]
-pub type HEN17_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN18` reader - High detect enabled 18"]
-pub type HEN18_R = crate::BitReader<bool>;
+pub type HEN18_R = crate::BitReader;
 #[doc = "Field `HEN18` writer - High detect enabled 18"]
-pub type HEN18_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN19` reader - High detect enabled 19"]
-pub type HEN19_R = crate::BitReader<bool>;
+pub type HEN19_R = crate::BitReader;
 #[doc = "Field `HEN19` writer - High detect enabled 19"]
-pub type HEN19_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN19_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN20` reader - High detect enabled 20"]
-pub type HEN20_R = crate::BitReader<bool>;
+pub type HEN20_R = crate::BitReader;
 #[doc = "Field `HEN20` writer - High detect enabled 20"]
-pub type HEN20_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN20_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN21` reader - High detect enabled 21"]
-pub type HEN21_R = crate::BitReader<bool>;
+pub type HEN21_R = crate::BitReader;
 #[doc = "Field `HEN21` writer - High detect enabled 21"]
-pub type HEN21_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN21_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN22` reader - High detect enabled 22"]
-pub type HEN22_R = crate::BitReader<bool>;
+pub type HEN22_R = crate::BitReader;
 #[doc = "Field `HEN22` writer - High detect enabled 22"]
-pub type HEN22_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN22_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN23` reader - High detect enabled 23"]
-pub type HEN23_R = crate::BitReader<bool>;
+pub type HEN23_R = crate::BitReader;
 #[doc = "Field `HEN23` writer - High detect enabled 23"]
-pub type HEN23_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN23_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN24` reader - High detect enabled 24"]
-pub type HEN24_R = crate::BitReader<bool>;
+pub type HEN24_R = crate::BitReader;
 #[doc = "Field `HEN24` writer - High detect enabled 24"]
-pub type HEN24_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN24_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN25` reader - High detect enabled 25"]
-pub type HEN25_R = crate::BitReader<bool>;
+pub type HEN25_R = crate::BitReader;
 #[doc = "Field `HEN25` writer - High detect enabled 25"]
-pub type HEN25_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN25_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN26` reader - High detect enabled 26"]
-pub type HEN26_R = crate::BitReader<bool>;
+pub type HEN26_R = crate::BitReader;
 #[doc = "Field `HEN26` writer - High detect enabled 26"]
-pub type HEN26_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN26_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN27` reader - High detect enabled 27"]
-pub type HEN27_R = crate::BitReader<bool>;
+pub type HEN27_R = crate::BitReader;
 #[doc = "Field `HEN27` writer - High detect enabled 27"]
-pub type HEN27_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN27_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN28` reader - High detect enabled 28"]
-pub type HEN28_R = crate::BitReader<bool>;
+pub type HEN28_R = crate::BitReader;
 #[doc = "Field `HEN28` writer - High detect enabled 28"]
-pub type HEN28_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN28_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN29` reader - High detect enabled 29"]
-pub type HEN29_R = crate::BitReader<bool>;
+pub type HEN29_R = crate::BitReader;
 #[doc = "Field `HEN29` writer - High detect enabled 29"]
-pub type HEN29_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN29_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN30` reader - High detect enabled 30"]
-pub type HEN30_R = crate::BitReader<bool>;
+pub type HEN30_R = crate::BitReader;
 #[doc = "Field `HEN30` writer - High detect enabled 30"]
-pub type HEN30_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN30_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HEN31` reader - High detect enabled 31"]
-pub type HEN31_R = crate::BitReader<bool>;
+pub type HEN31_R = crate::BitReader;
 #[doc = "Field `HEN31` writer - High detect enabled 31"]
-pub type HEN31_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPHEN0_SPEC, bool, O>;
+pub type HEN31_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - High detect enabled 0"]
     #[inline(always)]
@@ -324,218 +292,262 @@ impl R {
         HEN31_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPHEN0")
+            .field("hen0", &format_args!("{}", self.hen0().bit()))
+            .field("hen1", &format_args!("{}", self.hen1().bit()))
+            .field("hen2", &format_args!("{}", self.hen2().bit()))
+            .field("hen3", &format_args!("{}", self.hen3().bit()))
+            .field("hen4", &format_args!("{}", self.hen4().bit()))
+            .field("hen5", &format_args!("{}", self.hen5().bit()))
+            .field("hen6", &format_args!("{}", self.hen6().bit()))
+            .field("hen7", &format_args!("{}", self.hen7().bit()))
+            .field("hen8", &format_args!("{}", self.hen8().bit()))
+            .field("hen9", &format_args!("{}", self.hen9().bit()))
+            .field("hen10", &format_args!("{}", self.hen10().bit()))
+            .field("hen11", &format_args!("{}", self.hen11().bit()))
+            .field("hen12", &format_args!("{}", self.hen12().bit()))
+            .field("hen13", &format_args!("{}", self.hen13().bit()))
+            .field("hen14", &format_args!("{}", self.hen14().bit()))
+            .field("hen15", &format_args!("{}", self.hen15().bit()))
+            .field("hen16", &format_args!("{}", self.hen16().bit()))
+            .field("hen17", &format_args!("{}", self.hen17().bit()))
+            .field("hen18", &format_args!("{}", self.hen18().bit()))
+            .field("hen19", &format_args!("{}", self.hen19().bit()))
+            .field("hen20", &format_args!("{}", self.hen20().bit()))
+            .field("hen21", &format_args!("{}", self.hen21().bit()))
+            .field("hen22", &format_args!("{}", self.hen22().bit()))
+            .field("hen23", &format_args!("{}", self.hen23().bit()))
+            .field("hen24", &format_args!("{}", self.hen24().bit()))
+            .field("hen25", &format_args!("{}", self.hen25().bit()))
+            .field("hen26", &format_args!("{}", self.hen26().bit()))
+            .field("hen27", &format_args!("{}", self.hen27().bit()))
+            .field("hen28", &format_args!("{}", self.hen28().bit()))
+            .field("hen29", &format_args!("{}", self.hen29().bit()))
+            .field("hen30", &format_args!("{}", self.hen30().bit()))
+            .field("hen31", &format_args!("{}", self.hen31().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GPHEN0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - High detect enabled 0"]
     #[inline(always)]
     #[must_use]
-    pub fn hen0(&mut self) -> HEN0_W<0> {
+    pub fn hen0(&mut self) -> HEN0_W<GPHEN0_SPEC, 0> {
         HEN0_W::new(self)
     }
     #[doc = "Bit 1 - High detect enabled 1"]
     #[inline(always)]
     #[must_use]
-    pub fn hen1(&mut self) -> HEN1_W<1> {
+    pub fn hen1(&mut self) -> HEN1_W<GPHEN0_SPEC, 1> {
         HEN1_W::new(self)
     }
     #[doc = "Bit 2 - High detect enabled 2"]
     #[inline(always)]
     #[must_use]
-    pub fn hen2(&mut self) -> HEN2_W<2> {
+    pub fn hen2(&mut self) -> HEN2_W<GPHEN0_SPEC, 2> {
         HEN2_W::new(self)
     }
     #[doc = "Bit 3 - High detect enabled 3"]
     #[inline(always)]
     #[must_use]
-    pub fn hen3(&mut self) -> HEN3_W<3> {
+    pub fn hen3(&mut self) -> HEN3_W<GPHEN0_SPEC, 3> {
         HEN3_W::new(self)
     }
     #[doc = "Bit 4 - High detect enabled 4"]
     #[inline(always)]
     #[must_use]
-    pub fn hen4(&mut self) -> HEN4_W<4> {
+    pub fn hen4(&mut self) -> HEN4_W<GPHEN0_SPEC, 4> {
         HEN4_W::new(self)
     }
     #[doc = "Bit 5 - High detect enabled 5"]
     #[inline(always)]
     #[must_use]
-    pub fn hen5(&mut self) -> HEN5_W<5> {
+    pub fn hen5(&mut self) -> HEN5_W<GPHEN0_SPEC, 5> {
         HEN5_W::new(self)
     }
     #[doc = "Bit 6 - High detect enabled 6"]
     #[inline(always)]
     #[must_use]
-    pub fn hen6(&mut self) -> HEN6_W<6> {
+    pub fn hen6(&mut self) -> HEN6_W<GPHEN0_SPEC, 6> {
         HEN6_W::new(self)
     }
     #[doc = "Bit 7 - High detect enabled 7"]
     #[inline(always)]
     #[must_use]
-    pub fn hen7(&mut self) -> HEN7_W<7> {
+    pub fn hen7(&mut self) -> HEN7_W<GPHEN0_SPEC, 7> {
         HEN7_W::new(self)
     }
     #[doc = "Bit 8 - High detect enabled 8"]
     #[inline(always)]
     #[must_use]
-    pub fn hen8(&mut self) -> HEN8_W<8> {
+    pub fn hen8(&mut self) -> HEN8_W<GPHEN0_SPEC, 8> {
         HEN8_W::new(self)
     }
     #[doc = "Bit 9 - High detect enabled 9"]
     #[inline(always)]
     #[must_use]
-    pub fn hen9(&mut self) -> HEN9_W<9> {
+    pub fn hen9(&mut self) -> HEN9_W<GPHEN0_SPEC, 9> {
         HEN9_W::new(self)
     }
     #[doc = "Bit 10 - High detect enabled 10"]
     #[inline(always)]
     #[must_use]
-    pub fn hen10(&mut self) -> HEN10_W<10> {
+    pub fn hen10(&mut self) -> HEN10_W<GPHEN0_SPEC, 10> {
         HEN10_W::new(self)
     }
     #[doc = "Bit 11 - High detect enabled 11"]
     #[inline(always)]
     #[must_use]
-    pub fn hen11(&mut self) -> HEN11_W<11> {
+    pub fn hen11(&mut self) -> HEN11_W<GPHEN0_SPEC, 11> {
         HEN11_W::new(self)
     }
     #[doc = "Bit 12 - High detect enabled 12"]
     #[inline(always)]
     #[must_use]
-    pub fn hen12(&mut self) -> HEN12_W<12> {
+    pub fn hen12(&mut self) -> HEN12_W<GPHEN0_SPEC, 12> {
         HEN12_W::new(self)
     }
     #[doc = "Bit 13 - High detect enabled 13"]
     #[inline(always)]
     #[must_use]
-    pub fn hen13(&mut self) -> HEN13_W<13> {
+    pub fn hen13(&mut self) -> HEN13_W<GPHEN0_SPEC, 13> {
         HEN13_W::new(self)
     }
     #[doc = "Bit 14 - High detect enabled 14"]
     #[inline(always)]
     #[must_use]
-    pub fn hen14(&mut self) -> HEN14_W<14> {
+    pub fn hen14(&mut self) -> HEN14_W<GPHEN0_SPEC, 14> {
         HEN14_W::new(self)
     }
     #[doc = "Bit 15 - High detect enabled 15"]
     #[inline(always)]
     #[must_use]
-    pub fn hen15(&mut self) -> HEN15_W<15> {
+    pub fn hen15(&mut self) -> HEN15_W<GPHEN0_SPEC, 15> {
         HEN15_W::new(self)
     }
     #[doc = "Bit 16 - High detect enabled 16"]
     #[inline(always)]
     #[must_use]
-    pub fn hen16(&mut self) -> HEN16_W<16> {
+    pub fn hen16(&mut self) -> HEN16_W<GPHEN0_SPEC, 16> {
         HEN16_W::new(self)
     }
     #[doc = "Bit 17 - High detect enabled 17"]
     #[inline(always)]
     #[must_use]
-    pub fn hen17(&mut self) -> HEN17_W<17> {
+    pub fn hen17(&mut self) -> HEN17_W<GPHEN0_SPEC, 17> {
         HEN17_W::new(self)
     }
     #[doc = "Bit 18 - High detect enabled 18"]
     #[inline(always)]
     #[must_use]
-    pub fn hen18(&mut self) -> HEN18_W<18> {
+    pub fn hen18(&mut self) -> HEN18_W<GPHEN0_SPEC, 18> {
         HEN18_W::new(self)
     }
     #[doc = "Bit 19 - High detect enabled 19"]
     #[inline(always)]
     #[must_use]
-    pub fn hen19(&mut self) -> HEN19_W<19> {
+    pub fn hen19(&mut self) -> HEN19_W<GPHEN0_SPEC, 19> {
         HEN19_W::new(self)
     }
     #[doc = "Bit 20 - High detect enabled 20"]
     #[inline(always)]
     #[must_use]
-    pub fn hen20(&mut self) -> HEN20_W<20> {
+    pub fn hen20(&mut self) -> HEN20_W<GPHEN0_SPEC, 20> {
         HEN20_W::new(self)
     }
     #[doc = "Bit 21 - High detect enabled 21"]
     #[inline(always)]
     #[must_use]
-    pub fn hen21(&mut self) -> HEN21_W<21> {
+    pub fn hen21(&mut self) -> HEN21_W<GPHEN0_SPEC, 21> {
         HEN21_W::new(self)
     }
     #[doc = "Bit 22 - High detect enabled 22"]
     #[inline(always)]
     #[must_use]
-    pub fn hen22(&mut self) -> HEN22_W<22> {
+    pub fn hen22(&mut self) -> HEN22_W<GPHEN0_SPEC, 22> {
         HEN22_W::new(self)
     }
     #[doc = "Bit 23 - High detect enabled 23"]
     #[inline(always)]
     #[must_use]
-    pub fn hen23(&mut self) -> HEN23_W<23> {
+    pub fn hen23(&mut self) -> HEN23_W<GPHEN0_SPEC, 23> {
         HEN23_W::new(self)
     }
     #[doc = "Bit 24 - High detect enabled 24"]
     #[inline(always)]
     #[must_use]
-    pub fn hen24(&mut self) -> HEN24_W<24> {
+    pub fn hen24(&mut self) -> HEN24_W<GPHEN0_SPEC, 24> {
         HEN24_W::new(self)
     }
     #[doc = "Bit 25 - High detect enabled 25"]
     #[inline(always)]
     #[must_use]
-    pub fn hen25(&mut self) -> HEN25_W<25> {
+    pub fn hen25(&mut self) -> HEN25_W<GPHEN0_SPEC, 25> {
         HEN25_W::new(self)
     }
     #[doc = "Bit 26 - High detect enabled 26"]
     #[inline(always)]
     #[must_use]
-    pub fn hen26(&mut self) -> HEN26_W<26> {
+    pub fn hen26(&mut self) -> HEN26_W<GPHEN0_SPEC, 26> {
         HEN26_W::new(self)
     }
     #[doc = "Bit 27 - High detect enabled 27"]
     #[inline(always)]
     #[must_use]
-    pub fn hen27(&mut self) -> HEN27_W<27> {
+    pub fn hen27(&mut self) -> HEN27_W<GPHEN0_SPEC, 27> {
         HEN27_W::new(self)
     }
     #[doc = "Bit 28 - High detect enabled 28"]
     #[inline(always)]
     #[must_use]
-    pub fn hen28(&mut self) -> HEN28_W<28> {
+    pub fn hen28(&mut self) -> HEN28_W<GPHEN0_SPEC, 28> {
         HEN28_W::new(self)
     }
     #[doc = "Bit 29 - High detect enabled 29"]
     #[inline(always)]
     #[must_use]
-    pub fn hen29(&mut self) -> HEN29_W<29> {
+    pub fn hen29(&mut self) -> HEN29_W<GPHEN0_SPEC, 29> {
         HEN29_W::new(self)
     }
     #[doc = "Bit 30 - High detect enabled 30"]
     #[inline(always)]
     #[must_use]
-    pub fn hen30(&mut self) -> HEN30_W<30> {
+    pub fn hen30(&mut self) -> HEN30_W<GPHEN0_SPEC, 30> {
         HEN30_W::new(self)
     }
     #[doc = "Bit 31 - High detect enabled 31"]
     #[inline(always)]
     #[must_use]
-    pub fn hen31(&mut self) -> HEN31_W<31> {
+    pub fn hen31(&mut self) -> HEN31_W<GPHEN0_SPEC, 31> {
         HEN31_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPIO Pin High Detect Enable 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gphen0](index.html) module"]
+#[doc = "GPIO Pin High Detect Enable 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gphen0::R`](R).  You can [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gphen0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPHEN0_SPEC;
 impl crate::RegisterSpec for GPHEN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gphen0::R](R) reader structure"]
-impl crate::Readable for GPHEN0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gphen0::W](W) writer structure"]
+#[doc = "`read()` method returns [`gphen0::R`](R) reader structure"]
+impl crate::Readable for GPHEN0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gphen0::W`](W) writer structure"]
 impl crate::Writable for GPHEN0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

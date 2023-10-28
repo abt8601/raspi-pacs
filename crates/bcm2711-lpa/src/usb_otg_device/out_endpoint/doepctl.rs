@@ -1,63 +1,31 @@
 #[doc = "Register `DOEPCTL` reader"]
-pub struct R(crate::R<DOEPCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DOEPCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DOEPCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DOEPCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DOEPCTL_SPEC>;
 #[doc = "Register `DOEPCTL` writer"]
-pub struct W(crate::W<DOEPCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DOEPCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DOEPCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DOEPCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DOEPCTL_SPEC>;
 #[doc = "Field `MPSIZ` reader - Maximum packet size"]
-pub type MPSIZ_R = crate::FieldReader<u8, u8>;
+pub type MPSIZ_R = crate::FieldReader;
 #[doc = "Field `USBAEP` reader - USB active endpoint"]
-pub type USBAEP_R = crate::BitReader<bool>;
+pub type USBAEP_R = crate::BitReader;
 #[doc = "Field `NAKSTS` reader - NAK status"]
-pub type NAKSTS_R = crate::BitReader<bool>;
+pub type NAKSTS_R = crate::BitReader;
 #[doc = "Field `EPTYP` reader - Endpoint type"]
-pub type EPTYP_R = crate::FieldReader<u8, u8>;
+pub type EPTYP_R = crate::FieldReader;
 #[doc = "Field `SNPM` reader - Snoop mode"]
-pub type SNPM_R = crate::BitReader<bool>;
+pub type SNPM_R = crate::BitReader;
 #[doc = "Field `SNPM` writer - Snoop mode"]
-pub type SNPM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL_SPEC, bool, O>;
+pub type SNPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `Stall` reader - STALL handshake"]
-pub type STALL_R = crate::BitReader<bool>;
+pub type STALL_R = crate::BitReader;
 #[doc = "Field `Stall` writer - STALL handshake"]
-pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL_SPEC, bool, O>;
+pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CNAK` writer - Clear NAK"]
-pub type CNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL_SPEC, bool, O>;
+pub type CNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SNAK` writer - Set NAK"]
-pub type SNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL_SPEC, bool, O>;
+pub type SNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPDIS` reader - Endpoint disable"]
-pub type EPDIS_R = crate::BitReader<bool>;
+pub type EPDIS_R = crate::BitReader;
 #[doc = "Field `EPENA` writer - Endpoint enable"]
-pub type EPENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL_SPEC, bool, O>;
+pub type EPENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:1 - Maximum packet size"]
     #[inline(always)]
@@ -95,56 +63,75 @@ impl R {
         EPDIS_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPCTL")
+            .field("mpsiz", &format_args!("{}", self.mpsiz().bits()))
+            .field("usbaep", &format_args!("{}", self.usbaep().bit()))
+            .field("naksts", &format_args!("{}", self.naksts().bit()))
+            .field("eptyp", &format_args!("{}", self.eptyp().bits()))
+            .field("snpm", &format_args!("{}", self.snpm().bit()))
+            .field("stall", &format_args!("{}", self.stall().bit()))
+            .field("epdis", &format_args!("{}", self.epdis().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DOEPCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 20 - Snoop mode"]
     #[inline(always)]
     #[must_use]
-    pub fn snpm(&mut self) -> SNPM_W<20> {
+    pub fn snpm(&mut self) -> SNPM_W<DOEPCTL_SPEC, 20> {
         SNPM_W::new(self)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<21> {
+    pub fn stall(&mut self) -> STALL_W<DOEPCTL_SPEC, 21> {
         STALL_W::new(self)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<26> {
+    pub fn cnak(&mut self) -> CNAK_W<DOEPCTL_SPEC, 26> {
         CNAK_W::new(self)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<27> {
+    pub fn snak(&mut self) -> SNAK_W<DOEPCTL_SPEC, 27> {
         SNAK_W::new(self)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epena(&mut self) -> EPENA_W<31> {
+    pub fn epena(&mut self) -> EPENA_W<DOEPCTL_SPEC, 31> {
         EPENA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [doepctl](index.html) module"]
+#[doc = "Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPCTL_SPEC;
 impl crate::RegisterSpec for DOEPCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [doepctl::R](R) reader structure"]
-impl crate::Readable for DOEPCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [doepctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`doepctl::R`](R) reader structure"]
+impl crate::Readable for DOEPCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`doepctl::W`](W) writer structure"]
 impl crate::Writable for DOEPCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

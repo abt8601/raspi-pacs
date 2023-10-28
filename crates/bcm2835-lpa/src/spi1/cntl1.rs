@@ -1,59 +1,27 @@
 #[doc = "Register `CNTL1` reader"]
-pub struct R(crate::R<CNTL1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CNTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CNTL1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CNTL1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CNTL1_SPEC>;
 #[doc = "Register `CNTL1` writer"]
-pub struct W(crate::W<CNTL1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CNTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CNTL1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CNTL1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CNTL1_SPEC>;
 #[doc = "Field `KEEP_INPUT` reader - Don't clear the RX shift register before a new transaction"]
-pub type KEEP_INPUT_R = crate::BitReader<bool>;
+pub type KEEP_INPUT_R = crate::BitReader;
 #[doc = "Field `KEEP_INPUT` writer - Don't clear the RX shift register before a new transaction"]
-pub type KEEP_INPUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTL1_SPEC, bool, O>;
+pub type KEEP_INPUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MSB_FIRST` reader - Shift the most significant bit first (MSB)"]
-pub type MSB_FIRST_R = crate::BitReader<bool>;
+pub type MSB_FIRST_R = crate::BitReader;
 #[doc = "Field `MSB_FIRST` writer - Shift the most significant bit first (MSB)"]
-pub type MSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTL1_SPEC, bool, O>;
+pub type MSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DONE_ENABLE` reader - Enable DONE interrupt"]
-pub type DONE_ENABLE_R = crate::BitReader<bool>;
+pub type DONE_ENABLE_R = crate::BitReader;
 #[doc = "Field `DONE_ENABLE` writer - Enable DONE interrupt"]
-pub type DONE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTL1_SPEC, bool, O>;
+pub type DONE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXE_ENABLE` reader - Enable TX empty interrupt"]
-pub type TXE_ENABLE_R = crate::BitReader<bool>;
+pub type TXE_ENABLE_R = crate::BitReader;
 #[doc = "Field `TXE_ENABLE` writer - Enable TX empty interrupt"]
-pub type TXE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTL1_SPEC, bool, O>;
+pub type TXE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CS_HIGH_TIME` reader - Additional SPI clock cycles where CS is high"]
-pub type CS_HIGH_TIME_R = crate::FieldReader<u8, u8>;
+pub type CS_HIGH_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_HIGH_TIME` writer - Additional SPI clock cycles where CS is high"]
-pub type CS_HIGH_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CNTL1_SPEC, u8, u8, 3, O>;
+pub type CS_HIGH_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bit 0 - Don't clear the RX shift register before a new transaction"]
     #[inline(always)]
@@ -81,56 +49,76 @@ impl R {
         CS_HIGH_TIME_R::new(((self.bits >> 8) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CNTL1")
+            .field(
+                "cs_high_time",
+                &format_args!("{}", self.cs_high_time().bits()),
+            )
+            .field("txe_enable", &format_args!("{}", self.txe_enable().bit()))
+            .field("done_enable", &format_args!("{}", self.done_enable().bit()))
+            .field("msb_first", &format_args!("{}", self.msb_first().bit()))
+            .field("keep_input", &format_args!("{}", self.keep_input().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CNTL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Don't clear the RX shift register before a new transaction"]
     #[inline(always)]
     #[must_use]
-    pub fn keep_input(&mut self) -> KEEP_INPUT_W<0> {
+    pub fn keep_input(&mut self) -> KEEP_INPUT_W<CNTL1_SPEC, 0> {
         KEEP_INPUT_W::new(self)
     }
     #[doc = "Bit 1 - Shift the most significant bit first (MSB)"]
     #[inline(always)]
     #[must_use]
-    pub fn msb_first(&mut self) -> MSB_FIRST_W<1> {
+    pub fn msb_first(&mut self) -> MSB_FIRST_W<CNTL1_SPEC, 1> {
         MSB_FIRST_W::new(self)
     }
     #[doc = "Bit 6 - Enable DONE interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn done_enable(&mut self) -> DONE_ENABLE_W<6> {
+    pub fn done_enable(&mut self) -> DONE_ENABLE_W<CNTL1_SPEC, 6> {
         DONE_ENABLE_W::new(self)
     }
     #[doc = "Bit 7 - Enable TX empty interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn txe_enable(&mut self) -> TXE_ENABLE_W<7> {
+    pub fn txe_enable(&mut self) -> TXE_ENABLE_W<CNTL1_SPEC, 7> {
         TXE_ENABLE_W::new(self)
     }
     #[doc = "Bits 8:10 - Additional SPI clock cycles where CS is high"]
     #[inline(always)]
     #[must_use]
-    pub fn cs_high_time(&mut self) -> CS_HIGH_TIME_W<8> {
+    pub fn cs_high_time(&mut self) -> CS_HIGH_TIME_W<CNTL1_SPEC, 8> {
         CS_HIGH_TIME_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Control 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl1](index.html) module"]
+#[doc = "Control 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cntl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cntl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CNTL1_SPEC;
 impl crate::RegisterSpec for CNTL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntl1::R](R) reader structure"]
-impl crate::Readable for CNTL1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cntl1::W](W) writer structure"]
+#[doc = "`read()` method returns [`cntl1::R`](R) reader structure"]
+impl crate::Readable for CNTL1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`cntl1::W`](W) writer structure"]
 impl crate::Writable for CNTL1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

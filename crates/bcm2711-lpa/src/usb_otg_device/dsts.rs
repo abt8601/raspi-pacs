@@ -1,26 +1,13 @@
 #[doc = "Register `DSTS` reader"]
-pub struct R(crate::R<DSTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DSTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DSTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DSTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DSTS_SPEC>;
 #[doc = "Field `SUSPSTS` reader - Suspend status"]
-pub type SUSPSTS_R = crate::BitReader<bool>;
+pub type SUSPSTS_R = crate::BitReader;
 #[doc = "Field `ENUMSPD` reader - Enumerated speed"]
-pub type ENUMSPD_R = crate::FieldReader<u8, u8>;
+pub type ENUMSPD_R = crate::FieldReader;
 #[doc = "Field `EERR` reader - Erratic error"]
-pub type EERR_R = crate::BitReader<bool>;
+pub type EERR_R = crate::BitReader;
 #[doc = "Field `FNSOF` reader - Frame number of the received SOF"]
-pub type FNSOF_R = crate::FieldReader<u16, u16>;
+pub type FNSOF_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0 - Suspend status"]
     #[inline(always)]
@@ -43,15 +30,28 @@ impl R {
         FNSOF_R::new(((self.bits >> 8) & 0x3fff) as u16)
     }
 }
-#[doc = "OTG_HS device status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dsts](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DSTS")
+            .field("suspsts", &format_args!("{}", self.suspsts().bit()))
+            .field("enumspd", &format_args!("{}", self.enumspd().bits()))
+            .field("eerr", &format_args!("{}", self.eerr().bit()))
+            .field("fnsof", &format_args!("{}", self.fnsof().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "OTG_HS device status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSTS_SPEC;
 impl crate::RegisterSpec for DSTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dsts::R](R) reader structure"]
-impl crate::Readable for DSTS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dsts::R`](R) reader structure"]
+impl crate::Readable for DSTS_SPEC {}
 #[doc = "`reset()` method sets DSTS to value 0x10"]
 impl crate::Resettable for DSTS_SPEC {
     const RESET_VALUE: Self::Ux = 0x10;

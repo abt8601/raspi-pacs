@@ -1,20 +1,7 @@
 #[doc = "Register `HW_DIRECTION` reader"]
-pub struct R(crate::R<HW_DIRECTION_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HW_DIRECTION_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HW_DIRECTION_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HW_DIRECTION_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HW_DIRECTION_SPEC>;
 #[doc = "Field `DIRECTION[0-15]` reader - Direction %s"]
-pub type DIRECTION_R = crate::FieldReader<u8, DIRECTION_A>;
+pub type DIRECTION_R = crate::FieldReader<DIRECTION_A>;
 #[doc = "Direction %s"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -32,10 +19,13 @@ impl From<DIRECTION_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for DIRECTION_A {
+    type Ux = u8;
+}
 impl DIRECTION_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<DIRECTION_A> {
+    pub const fn variant(&self) -> Option<DIRECTION_A> {
         match self.bits {
             0 => Some(DIRECTION_A::BIDIR),
             1 => Some(DIRECTION_A::IN),
@@ -43,17 +33,17 @@ impl DIRECTION_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `BIDIR`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_bidir(&self) -> bool {
         *self == DIRECTION_A::BIDIR
     }
-    #[doc = "Checks if the value of the field is `IN`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_in(&self) -> bool {
         *self == DIRECTION_A::IN
     }
-    #[doc = "Checks if the value of the field is `OUT`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_out(&self) -> bool {
         *self == DIRECTION_A::OUT
@@ -146,12 +136,55 @@ impl R {
         DIRECTION_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
-#[doc = "Direction\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hw_direction](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HW_DIRECTION")
+            .field("direction0", &format_args!("{}", self.direction0().bits()))
+            .field("direction1", &format_args!("{}", self.direction1().bits()))
+            .field("direction2", &format_args!("{}", self.direction2().bits()))
+            .field("direction3", &format_args!("{}", self.direction3().bits()))
+            .field("direction4", &format_args!("{}", self.direction4().bits()))
+            .field("direction5", &format_args!("{}", self.direction5().bits()))
+            .field("direction6", &format_args!("{}", self.direction6().bits()))
+            .field("direction7", &format_args!("{}", self.direction7().bits()))
+            .field("direction8", &format_args!("{}", self.direction8().bits()))
+            .field("direction9", &format_args!("{}", self.direction9().bits()))
+            .field(
+                "direction10",
+                &format_args!("{}", self.direction10().bits()),
+            )
+            .field(
+                "direction11",
+                &format_args!("{}", self.direction11().bits()),
+            )
+            .field(
+                "direction12",
+                &format_args!("{}", self.direction12().bits()),
+            )
+            .field(
+                "direction13",
+                &format_args!("{}", self.direction13().bits()),
+            )
+            .field(
+                "direction14",
+                &format_args!("{}", self.direction14().bits()),
+            )
+            .field(
+                "direction15",
+                &format_args!("{}", self.direction15().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HW_DIRECTION_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Direction\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hw_direction::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HW_DIRECTION_SPEC;
 impl crate::RegisterSpec for HW_DIRECTION_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hw_direction::R](R) reader structure"]
-impl crate::Readable for HW_DIRECTION_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`hw_direction::R`](R) reader structure"]
+impl crate::Readable for HW_DIRECTION_SPEC {}

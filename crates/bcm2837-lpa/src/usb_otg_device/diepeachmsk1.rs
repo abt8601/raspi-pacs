@@ -1,75 +1,43 @@
 #[doc = "Register `DIEPEACHMSK1` reader"]
-pub struct R(crate::R<DIEPEACHMSK1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEPEACHMSK1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEPEACHMSK1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEPEACHMSK1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEPEACHMSK1_SPEC>;
 #[doc = "Register `DIEPEACHMSK1` writer"]
-pub struct W(crate::W<DIEPEACHMSK1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEPEACHMSK1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEPEACHMSK1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEPEACHMSK1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEPEACHMSK1_SPEC>;
 #[doc = "Field `XFRCM` reader - Transfer completed interrupt mask"]
-pub type XFRCM_R = crate::BitReader<bool>;
+pub type XFRCM_R = crate::BitReader;
 #[doc = "Field `XFRCM` writer - Transfer completed interrupt mask"]
-pub type XFRCM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type XFRCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPDM` reader - Endpoint disabled interrupt mask"]
-pub type EPDM_R = crate::BitReader<bool>;
+pub type EPDM_R = crate::BitReader;
 #[doc = "Field `EPDM` writer - Endpoint disabled interrupt mask"]
-pub type EPDM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type EPDM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TOM` reader - Timeout condition mask (nonisochronous endpoints)"]
-pub type TOM_R = crate::BitReader<bool>;
+pub type TOM_R = crate::BitReader;
 #[doc = "Field `TOM` writer - Timeout condition mask (nonisochronous endpoints)"]
-pub type TOM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type TOM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ITTXFEMSK` reader - IN token received when TxFIFO empty mask"]
-pub type ITTXFEMSK_R = crate::BitReader<bool>;
+pub type ITTXFEMSK_R = crate::BitReader;
 #[doc = "Field `ITTXFEMSK` writer - IN token received when TxFIFO empty mask"]
-pub type ITTXFEMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type ITTXFEMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEPNMM` reader - IN token received with EP mismatch mask"]
-pub type INEPNMM_R = crate::BitReader<bool>;
+pub type INEPNMM_R = crate::BitReader;
 #[doc = "Field `INEPNMM` writer - IN token received with EP mismatch mask"]
-pub type INEPNMM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type INEPNMM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INEPNEM` reader - IN endpoint NAK effective mask"]
-pub type INEPNEM_R = crate::BitReader<bool>;
+pub type INEPNEM_R = crate::BitReader;
 #[doc = "Field `INEPNEM` writer - IN endpoint NAK effective mask"]
-pub type INEPNEM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type INEPNEM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFURM` reader - FIFO underrun mask"]
-pub type TXFURM_R = crate::BitReader<bool>;
+pub type TXFURM_R = crate::BitReader;
 #[doc = "Field `TXFURM` writer - FIFO underrun mask"]
-pub type TXFURM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type TXFURM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BIM` reader - BNA interrupt mask"]
-pub type BIM_R = crate::BitReader<bool>;
+pub type BIM_R = crate::BitReader;
 #[doc = "Field `BIM` writer - BNA interrupt mask"]
-pub type BIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type BIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NAKM` reader - NAK interrupt mask"]
-pub type NAKM_R = crate::BitReader<bool>;
+pub type NAKM_R = crate::BitReader;
 #[doc = "Field `NAKM` writer - NAK interrupt mask"]
-pub type NAKM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPEACHMSK1_SPEC, bool, O>;
+pub type NAKM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
@@ -117,80 +85,101 @@ impl R {
         NAKM_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPEACHMSK1")
+            .field("xfrcm", &format_args!("{}", self.xfrcm().bit()))
+            .field("epdm", &format_args!("{}", self.epdm().bit()))
+            .field("tom", &format_args!("{}", self.tom().bit()))
+            .field("ittxfemsk", &format_args!("{}", self.ittxfemsk().bit()))
+            .field("inepnmm", &format_args!("{}", self.inepnmm().bit()))
+            .field("inepnem", &format_args!("{}", self.inepnem().bit()))
+            .field("txfurm", &format_args!("{}", self.txfurm().bit()))
+            .field("bim", &format_args!("{}", self.bim().bit()))
+            .field("nakm", &format_args!("{}", self.nakm().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIEPEACHMSK1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrcm(&mut self) -> XFRCM_W<0> {
+    pub fn xfrcm(&mut self) -> XFRCM_W<DIEPEACHMSK1_SPEC, 0> {
         XFRCM_W::new(self)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn epdm(&mut self) -> EPDM_W<1> {
+    pub fn epdm(&mut self) -> EPDM_W<DIEPEACHMSK1_SPEC, 1> {
         EPDM_W::new(self)
     }
     #[doc = "Bit 3 - Timeout condition mask (nonisochronous endpoints)"]
     #[inline(always)]
     #[must_use]
-    pub fn tom(&mut self) -> TOM_W<3> {
+    pub fn tom(&mut self) -> TOM_W<DIEPEACHMSK1_SPEC, 3> {
         TOM_W::new(self)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO empty mask"]
     #[inline(always)]
     #[must_use]
-    pub fn ittxfemsk(&mut self) -> ITTXFEMSK_W<4> {
+    pub fn ittxfemsk(&mut self) -> ITTXFEMSK_W<DIEPEACHMSK1_SPEC, 4> {
         ITTXFEMSK_W::new(self)
     }
     #[doc = "Bit 5 - IN token received with EP mismatch mask"]
     #[inline(always)]
     #[must_use]
-    pub fn inepnmm(&mut self) -> INEPNMM_W<5> {
+    pub fn inepnmm(&mut self) -> INEPNMM_W<DIEPEACHMSK1_SPEC, 5> {
         INEPNMM_W::new(self)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective mask"]
     #[inline(always)]
     #[must_use]
-    pub fn inepnem(&mut self) -> INEPNEM_W<6> {
+    pub fn inepnem(&mut self) -> INEPNEM_W<DIEPEACHMSK1_SPEC, 6> {
         INEPNEM_W::new(self)
     }
     #[doc = "Bit 8 - FIFO underrun mask"]
     #[inline(always)]
     #[must_use]
-    pub fn txfurm(&mut self) -> TXFURM_W<8> {
+    pub fn txfurm(&mut self) -> TXFURM_W<DIEPEACHMSK1_SPEC, 8> {
         TXFURM_W::new(self)
     }
     #[doc = "Bit 9 - BNA interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn bim(&mut self) -> BIM_W<9> {
+    pub fn bim(&mut self) -> BIM_W<DIEPEACHMSK1_SPEC, 9> {
         BIM_W::new(self)
     }
     #[doc = "Bit 13 - NAK interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn nakm(&mut self) -> NAKM_W<13> {
+    pub fn nakm(&mut self) -> NAKM_W<DIEPEACHMSK1_SPEC, 13> {
         NAKM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS device each in endpoint-1 interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diepeachmsk1](index.html) module"]
+#[doc = "OTG_HS device each in endpoint-1 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepeachmsk1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepeachmsk1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPEACHMSK1_SPEC;
 impl crate::RegisterSpec for DIEPEACHMSK1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [diepeachmsk1::R](R) reader structure"]
-impl crate::Readable for DIEPEACHMSK1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [diepeachmsk1::W](W) writer structure"]
+#[doc = "`read()` method returns [`diepeachmsk1::R`](R) reader structure"]
+impl crate::Readable for DIEPEACHMSK1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`diepeachmsk1::W`](W) writer structure"]
 impl crate::Writable for DIEPEACHMSK1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

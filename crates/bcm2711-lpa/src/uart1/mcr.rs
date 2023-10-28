@@ -1,43 +1,11 @@
 #[doc = "Register `MCR` reader"]
-pub struct R(crate::R<MCR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MCR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MCR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MCR_SPEC>;
 #[doc = "Register `MCR` writer"]
-pub struct W(crate::W<MCR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MCR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MCR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MCR_SPEC>;
 #[doc = "Field `RTS` reader - RTS is low"]
-pub type RTS_R = crate::BitReader<bool>;
+pub type RTS_R = crate::BitReader;
 #[doc = "Field `RTS` writer - RTS is low"]
-pub type RTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, MCR_SPEC, bool, O>;
+pub type RTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - RTS is low"]
     #[inline(always)]
@@ -45,32 +13,45 @@ impl R {
         RTS_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MCR")
+            .field("rts", &format_args!("{}", self.rts().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MCR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - RTS is low"]
     #[inline(always)]
     #[must_use]
-    pub fn rts(&mut self) -> RTS_W<1> {
+    pub fn rts(&mut self) -> RTS_W<MCR_SPEC, 1> {
         RTS_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Modem Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mcr](index.html) module"]
+#[doc = "Modem Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MCR_SPEC;
 impl crate::RegisterSpec for MCR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mcr::R](R) reader structure"]
-impl crate::Readable for MCR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mcr::W](W) writer structure"]
+#[doc = "`read()` method returns [`mcr::R`](R) reader structure"]
+impl crate::Readable for MCR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`mcr::W`](W) writer structure"]
 impl crate::Writable for MCR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

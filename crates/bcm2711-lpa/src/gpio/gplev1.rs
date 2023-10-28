@@ -1,70 +1,57 @@
 #[doc = "Register `GPLEV1` reader"]
-pub struct R(crate::R<GPLEV1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPLEV1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPLEV1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPLEV1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPLEV1_SPEC>;
 #[doc = "Field `LEV32` reader - Level 32"]
-pub type LEV32_R = crate::BitReader<bool>;
+pub type LEV32_R = crate::BitReader;
 #[doc = "Field `LEV33` reader - Level 33"]
-pub type LEV33_R = crate::BitReader<bool>;
+pub type LEV33_R = crate::BitReader;
 #[doc = "Field `LEV34` reader - Level 34"]
-pub type LEV34_R = crate::BitReader<bool>;
+pub type LEV34_R = crate::BitReader;
 #[doc = "Field `LEV35` reader - Level 35"]
-pub type LEV35_R = crate::BitReader<bool>;
+pub type LEV35_R = crate::BitReader;
 #[doc = "Field `LEV36` reader - Level 36"]
-pub type LEV36_R = crate::BitReader<bool>;
+pub type LEV36_R = crate::BitReader;
 #[doc = "Field `LEV37` reader - Level 37"]
-pub type LEV37_R = crate::BitReader<bool>;
+pub type LEV37_R = crate::BitReader;
 #[doc = "Field `LEV38` reader - Level 38"]
-pub type LEV38_R = crate::BitReader<bool>;
+pub type LEV38_R = crate::BitReader;
 #[doc = "Field `LEV39` reader - Level 39"]
-pub type LEV39_R = crate::BitReader<bool>;
+pub type LEV39_R = crate::BitReader;
 #[doc = "Field `LEV40` reader - Level 40"]
-pub type LEV40_R = crate::BitReader<bool>;
+pub type LEV40_R = crate::BitReader;
 #[doc = "Field `LEV41` reader - Level 41"]
-pub type LEV41_R = crate::BitReader<bool>;
+pub type LEV41_R = crate::BitReader;
 #[doc = "Field `LEV42` reader - Level 42"]
-pub type LEV42_R = crate::BitReader<bool>;
+pub type LEV42_R = crate::BitReader;
 #[doc = "Field `LEV43` reader - Level 43"]
-pub type LEV43_R = crate::BitReader<bool>;
+pub type LEV43_R = crate::BitReader;
 #[doc = "Field `LEV44` reader - Level 44"]
-pub type LEV44_R = crate::BitReader<bool>;
+pub type LEV44_R = crate::BitReader;
 #[doc = "Field `LEV45` reader - Level 45"]
-pub type LEV45_R = crate::BitReader<bool>;
+pub type LEV45_R = crate::BitReader;
 #[doc = "Field `LEV46` reader - Level 46"]
-pub type LEV46_R = crate::BitReader<bool>;
+pub type LEV46_R = crate::BitReader;
 #[doc = "Field `LEV47` reader - Level 47"]
-pub type LEV47_R = crate::BitReader<bool>;
+pub type LEV47_R = crate::BitReader;
 #[doc = "Field `LEV48` reader - Level 48"]
-pub type LEV48_R = crate::BitReader<bool>;
+pub type LEV48_R = crate::BitReader;
 #[doc = "Field `LEV49` reader - Level 49"]
-pub type LEV49_R = crate::BitReader<bool>;
+pub type LEV49_R = crate::BitReader;
 #[doc = "Field `LEV50` reader - Level 50"]
-pub type LEV50_R = crate::BitReader<bool>;
+pub type LEV50_R = crate::BitReader;
 #[doc = "Field `LEV51` reader - Level 51"]
-pub type LEV51_R = crate::BitReader<bool>;
+pub type LEV51_R = crate::BitReader;
 #[doc = "Field `LEV52` reader - Level 52"]
-pub type LEV52_R = crate::BitReader<bool>;
+pub type LEV52_R = crate::BitReader;
 #[doc = "Field `LEV53` reader - Level 53"]
-pub type LEV53_R = crate::BitReader<bool>;
+pub type LEV53_R = crate::BitReader;
 #[doc = "Field `LEV54` reader - Level 54"]
-pub type LEV54_R = crate::BitReader<bool>;
+pub type LEV54_R = crate::BitReader;
 #[doc = "Field `LEV55` reader - Level 55"]
-pub type LEV55_R = crate::BitReader<bool>;
+pub type LEV55_R = crate::BitReader;
 #[doc = "Field `LEV56` reader - Level 56"]
-pub type LEV56_R = crate::BitReader<bool>;
+pub type LEV56_R = crate::BitReader;
 #[doc = "Field `LEV57` reader - Level 57"]
-pub type LEV57_R = crate::BitReader<bool>;
+pub type LEV57_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Level 32"]
     #[inline(always)]
@@ -197,12 +184,47 @@ impl R {
         LEV57_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
-#[doc = "GPIO Pin Level 1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gplev1](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPLEV1")
+            .field("lev32", &format_args!("{}", self.lev32().bit()))
+            .field("lev33", &format_args!("{}", self.lev33().bit()))
+            .field("lev34", &format_args!("{}", self.lev34().bit()))
+            .field("lev35", &format_args!("{}", self.lev35().bit()))
+            .field("lev36", &format_args!("{}", self.lev36().bit()))
+            .field("lev37", &format_args!("{}", self.lev37().bit()))
+            .field("lev38", &format_args!("{}", self.lev38().bit()))
+            .field("lev39", &format_args!("{}", self.lev39().bit()))
+            .field("lev40", &format_args!("{}", self.lev40().bit()))
+            .field("lev41", &format_args!("{}", self.lev41().bit()))
+            .field("lev42", &format_args!("{}", self.lev42().bit()))
+            .field("lev43", &format_args!("{}", self.lev43().bit()))
+            .field("lev44", &format_args!("{}", self.lev44().bit()))
+            .field("lev45", &format_args!("{}", self.lev45().bit()))
+            .field("lev46", &format_args!("{}", self.lev46().bit()))
+            .field("lev47", &format_args!("{}", self.lev47().bit()))
+            .field("lev48", &format_args!("{}", self.lev48().bit()))
+            .field("lev49", &format_args!("{}", self.lev49().bit()))
+            .field("lev50", &format_args!("{}", self.lev50().bit()))
+            .field("lev51", &format_args!("{}", self.lev51().bit()))
+            .field("lev52", &format_args!("{}", self.lev52().bit()))
+            .field("lev53", &format_args!("{}", self.lev53().bit()))
+            .field("lev54", &format_args!("{}", self.lev54().bit()))
+            .field("lev55", &format_args!("{}", self.lev55().bit()))
+            .field("lev56", &format_args!("{}", self.lev56().bit()))
+            .field("lev57", &format_args!("{}", self.lev57().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GPLEV1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "GPIO Pin Level 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gplev1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPLEV1_SPEC;
 impl crate::RegisterSpec for GPLEV1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gplev1::R](R) reader structure"]
-impl crate::Readable for GPLEV1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gplev1::R`](R) reader structure"]
+impl crate::Readable for GPLEV1_SPEC {}

@@ -1,83 +1,51 @@
 #[doc = "Register `GICC_CTLR` reader"]
-pub struct R(crate::R<GICC_CTLR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICC_CTLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICC_CTLR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICC_CTLR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICC_CTLR_SPEC>;
 #[doc = "Register `GICC_CTLR` writer"]
-pub struct W(crate::W<GICC_CTLR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICC_CTLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICC_CTLR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICC_CTLR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICC_CTLR_SPEC>;
 #[doc = "Field `ENABLE_GROUP_0` reader - Enable signaling of group 0"]
-pub type ENABLE_GROUP_0_R = crate::BitReader<bool>;
+pub type ENABLE_GROUP_0_R = crate::BitReader;
 #[doc = "Field `ENABLE_GROUP_0` writer - Enable signaling of group 0"]
-pub type ENABLE_GROUP_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type ENABLE_GROUP_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENABLE_GROUP_1` reader - Enable signaling of group 1"]
-pub type ENABLE_GROUP_1_R = crate::BitReader<bool>;
+pub type ENABLE_GROUP_1_R = crate::BitReader;
 #[doc = "Field `ENABLE_GROUP_1` writer - Enable signaling of group 1"]
-pub type ENABLE_GROUP_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type ENABLE_GROUP_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ACKCTL` reader - Whether a read of IAR acknowledges the interrupt"]
-pub type ACKCTL_R = crate::BitReader<bool>;
+pub type ACKCTL_R = crate::BitReader;
 #[doc = "Field `ACKCTL` writer - Whether a read of IAR acknowledges the interrupt"]
-pub type ACKCTL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type ACKCTL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FIQEN` reader - Group 0 triggers FIQ"]
-pub type FIQEN_R = crate::BitReader<bool>;
+pub type FIQEN_R = crate::BitReader;
 #[doc = "Field `FIQEN` writer - Group 0 triggers FIQ"]
-pub type FIQEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type FIQEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CBPR` reader - Common control of interrupts through GICC_BPR"]
-pub type CBPR_R = crate::BitReader<bool>;
+pub type CBPR_R = crate::BitReader;
 #[doc = "Field `CBPR` writer - Common control of interrupts through GICC_BPR"]
-pub type CBPR_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type CBPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FIQBYPDISGRP0` reader - Bypass FIQ is not signaled to processor"]
-pub type FIQBYPDISGRP0_R = crate::BitReader<bool>;
+pub type FIQBYPDISGRP0_R = crate::BitReader;
 #[doc = "Field `FIQBYPDISGRP0` writer - Bypass FIQ is not signaled to processor"]
-pub type FIQBYPDISGRP0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type FIQBYPDISGRP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IRQBYPDISGRP0` reader - Bypass IRQ is not signaled to processor"]
-pub type IRQBYPDISGRP0_R = crate::BitReader<bool>;
+pub type IRQBYPDISGRP0_R = crate::BitReader;
 #[doc = "Field `IRQBYPDISGRP0` writer - Bypass IRQ is not signaled to processor"]
-pub type IRQBYPDISGRP0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type IRQBYPDISGRP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FIQBYPDISGRP1` reader - Alias of group 1 FIQ bypass disable"]
-pub type FIQBYPDISGRP1_R = crate::BitReader<bool>;
+pub type FIQBYPDISGRP1_R = crate::BitReader;
 #[doc = "Field `FIQBYPDISGRP1` writer - Alias of group 1 FIQ bypass disable"]
-pub type FIQBYPDISGRP1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type FIQBYPDISGRP1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IRQBYPDISGRP1` reader - Alias of group 1 IRQ bypass disable"]
-pub type IRQBYPDISGRP1_R = crate::BitReader<bool>;
+pub type IRQBYPDISGRP1_R = crate::BitReader;
 #[doc = "Field `IRQBYPDISGRP1` writer - Alias of group 1 IRQ bypass disable"]
-pub type IRQBYPDISGRP1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type IRQBYPDISGRP1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EOIMODES` reader - Secure EOIR does priority drop. DIR does deactivate."]
-pub type EOIMODES_R = crate::BitReader<bool>;
+pub type EOIMODES_R = crate::BitReader;
 #[doc = "Field `EOIMODES` writer - Secure EOIR does priority drop. DIR does deactivate."]
-pub type EOIMODES_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type EOIMODES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EOIMODENS` reader - Non-Secure EOIR does priority drop. DIR does deactivate."]
-pub type EOIMODENS_R = crate::BitReader<bool>;
+pub type EOIMODENS_R = crate::BitReader;
 #[doc = "Field `EOIMODENS` writer - Non-Secure EOIR does priority drop. DIR does deactivate."]
-pub type EOIMODENS_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICC_CTLR_SPEC, bool, O>;
+pub type EOIMODENS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Enable signaling of group 0"]
     #[inline(always)]
@@ -135,92 +103,133 @@ impl R {
         EOIMODENS_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICC_CTLR")
+            .field(
+                "enable_group_0",
+                &format_args!("{}", self.enable_group_0().bit()),
+            )
+            .field(
+                "enable_group_1",
+                &format_args!("{}", self.enable_group_1().bit()),
+            )
+            .field("ackctl", &format_args!("{}", self.ackctl().bit()))
+            .field("fiqen", &format_args!("{}", self.fiqen().bit()))
+            .field("cbpr", &format_args!("{}", self.cbpr().bit()))
+            .field(
+                "fiqbypdisgrp0",
+                &format_args!("{}", self.fiqbypdisgrp0().bit()),
+            )
+            .field(
+                "irqbypdisgrp0",
+                &format_args!("{}", self.irqbypdisgrp0().bit()),
+            )
+            .field(
+                "fiqbypdisgrp1",
+                &format_args!("{}", self.fiqbypdisgrp1().bit()),
+            )
+            .field(
+                "irqbypdisgrp1",
+                &format_args!("{}", self.irqbypdisgrp1().bit()),
+            )
+            .field("eoimodes", &format_args!("{}", self.eoimodes().bit()))
+            .field("eoimodens", &format_args!("{}", self.eoimodens().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICC_CTLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Enable signaling of group 0"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_group_0(&mut self) -> ENABLE_GROUP_0_W<0> {
+    pub fn enable_group_0(&mut self) -> ENABLE_GROUP_0_W<GICC_CTLR_SPEC, 0> {
         ENABLE_GROUP_0_W::new(self)
     }
     #[doc = "Bit 1 - Enable signaling of group 1"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_group_1(&mut self) -> ENABLE_GROUP_1_W<1> {
+    pub fn enable_group_1(&mut self) -> ENABLE_GROUP_1_W<GICC_CTLR_SPEC, 1> {
         ENABLE_GROUP_1_W::new(self)
     }
     #[doc = "Bit 2 - Whether a read of IAR acknowledges the interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ackctl(&mut self) -> ACKCTL_W<2> {
+    pub fn ackctl(&mut self) -> ACKCTL_W<GICC_CTLR_SPEC, 2> {
         ACKCTL_W::new(self)
     }
     #[doc = "Bit 3 - Group 0 triggers FIQ"]
     #[inline(always)]
     #[must_use]
-    pub fn fiqen(&mut self) -> FIQEN_W<3> {
+    pub fn fiqen(&mut self) -> FIQEN_W<GICC_CTLR_SPEC, 3> {
         FIQEN_W::new(self)
     }
     #[doc = "Bit 4 - Common control of interrupts through GICC_BPR"]
     #[inline(always)]
     #[must_use]
-    pub fn cbpr(&mut self) -> CBPR_W<4> {
+    pub fn cbpr(&mut self) -> CBPR_W<GICC_CTLR_SPEC, 4> {
         CBPR_W::new(self)
     }
     #[doc = "Bit 5 - Bypass FIQ is not signaled to processor"]
     #[inline(always)]
     #[must_use]
-    pub fn fiqbypdisgrp0(&mut self) -> FIQBYPDISGRP0_W<5> {
+    pub fn fiqbypdisgrp0(&mut self) -> FIQBYPDISGRP0_W<GICC_CTLR_SPEC, 5> {
         FIQBYPDISGRP0_W::new(self)
     }
     #[doc = "Bit 6 - Bypass IRQ is not signaled to processor"]
     #[inline(always)]
     #[must_use]
-    pub fn irqbypdisgrp0(&mut self) -> IRQBYPDISGRP0_W<6> {
+    pub fn irqbypdisgrp0(&mut self) -> IRQBYPDISGRP0_W<GICC_CTLR_SPEC, 6> {
         IRQBYPDISGRP0_W::new(self)
     }
     #[doc = "Bit 7 - Alias of group 1 FIQ bypass disable"]
     #[inline(always)]
     #[must_use]
-    pub fn fiqbypdisgrp1(&mut self) -> FIQBYPDISGRP1_W<7> {
+    pub fn fiqbypdisgrp1(&mut self) -> FIQBYPDISGRP1_W<GICC_CTLR_SPEC, 7> {
         FIQBYPDISGRP1_W::new(self)
     }
     #[doc = "Bit 8 - Alias of group 1 IRQ bypass disable"]
     #[inline(always)]
     #[must_use]
-    pub fn irqbypdisgrp1(&mut self) -> IRQBYPDISGRP1_W<8> {
+    pub fn irqbypdisgrp1(&mut self) -> IRQBYPDISGRP1_W<GICC_CTLR_SPEC, 8> {
         IRQBYPDISGRP1_W::new(self)
     }
     #[doc = "Bit 9 - Secure EOIR does priority drop. DIR does deactivate."]
     #[inline(always)]
     #[must_use]
-    pub fn eoimodes(&mut self) -> EOIMODES_W<9> {
+    pub fn eoimodes(&mut self) -> EOIMODES_W<GICC_CTLR_SPEC, 9> {
         EOIMODES_W::new(self)
     }
     #[doc = "Bit 10 - Non-Secure EOIR does priority drop. DIR does deactivate."]
     #[inline(always)]
     #[must_use]
-    pub fn eoimodens(&mut self) -> EOIMODENS_W<10> {
+    pub fn eoimodens(&mut self) -> EOIMODENS_W<GICC_CTLR_SPEC, 10> {
         EOIMODENS_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "CPU Interface Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicc_ctlr](index.html) module"]
+#[doc = "CPU Interface Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicc_ctlr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicc_ctlr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICC_CTLR_SPEC;
 impl crate::RegisterSpec for GICC_CTLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicc_ctlr::R](R) reader structure"]
-impl crate::Readable for GICC_CTLR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicc_ctlr::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicc_ctlr::R`](R) reader structure"]
+impl crate::Readable for GICC_CTLR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicc_ctlr::W`](W) writer structure"]
 impl crate::Writable for GICC_CTLR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,65 +1,33 @@
 #[doc = "Register `S` reader"]
-pub struct R(crate::R<S_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<S_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<S_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<S_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<S_SPEC>;
 #[doc = "Register `S` writer"]
-pub struct W(crate::W<S_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<S_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<S_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<S_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<S_SPEC>;
 #[doc = "Field `TA` reader - Transfer active"]
-pub type TA_R = crate::BitReader<bool>;
+pub type TA_R = crate::BitReader;
 #[doc = "Field `DONE` reader - Transfer done"]
-pub type DONE_R = crate::BitReader<bool>;
+pub type DONE_R = crate::BitReader;
 #[doc = "Field `DONE` writer - Transfer done"]
-pub type DONE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, S_SPEC, bool, O>;
+pub type DONE_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
 #[doc = "Field `TXW` reader - FIFO needs to be written"]
-pub type TXW_R = crate::BitReader<bool>;
+pub type TXW_R = crate::BitReader;
 #[doc = "Field `RXR` reader - FIFO needs to be read"]
-pub type RXR_R = crate::BitReader<bool>;
+pub type RXR_R = crate::BitReader;
 #[doc = "Field `TXD` reader - FIFO has space for at least one byte"]
-pub type TXD_R = crate::BitReader<bool>;
+pub type TXD_R = crate::BitReader;
 #[doc = "Field `RXD` reader - FIFO contains at least one byte"]
-pub type RXD_R = crate::BitReader<bool>;
+pub type RXD_R = crate::BitReader;
 #[doc = "Field `TXE` reader - FIFO is empty. Nothing to transmit"]
-pub type TXE_R = crate::BitReader<bool>;
+pub type TXE_R = crate::BitReader;
 #[doc = "Field `RXF` reader - FIFO is full. Can't receive anything else"]
-pub type RXF_R = crate::BitReader<bool>;
+pub type RXF_R = crate::BitReader;
 #[doc = "Field `ERR` reader - Error: No ack"]
-pub type ERR_R = crate::BitReader<bool>;
+pub type ERR_R = crate::BitReader;
 #[doc = "Field `ERR` writer - Error: No ack"]
-pub type ERR_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, S_SPEC, bool, O>;
+pub type ERR_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
 #[doc = "Field `CLKT` reader - Clock stretch timeout"]
-pub type CLKT_R = crate::BitReader<bool>;
+pub type CLKT_R = crate::BitReader;
 #[doc = "Field `CLKT` writer - Clock stretch timeout"]
-pub type CLKT_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, S_SPEC, bool, O>;
+pub type CLKT_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Transfer active"]
     #[inline(always)]
@@ -112,44 +80,66 @@ impl R {
         CLKT_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("S")
+            .field("clkt", &format_args!("{}", self.clkt().bit()))
+            .field("err", &format_args!("{}", self.err().bit()))
+            .field("rxf", &format_args!("{}", self.rxf().bit()))
+            .field("txe", &format_args!("{}", self.txe().bit()))
+            .field("rxd", &format_args!("{}", self.rxd().bit()))
+            .field("txd", &format_args!("{}", self.txd().bit()))
+            .field("rxr", &format_args!("{}", self.rxr().bit()))
+            .field("txw", &format_args!("{}", self.txw().bit()))
+            .field("done", &format_args!("{}", self.done().bit()))
+            .field("ta", &format_args!("{}", self.ta().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<S_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Transfer done"]
     #[inline(always)]
     #[must_use]
-    pub fn done(&mut self) -> DONE_W<1> {
+    pub fn done(&mut self) -> DONE_W<S_SPEC, 1> {
         DONE_W::new(self)
     }
     #[doc = "Bit 8 - Error: No ack"]
     #[inline(always)]
     #[must_use]
-    pub fn err(&mut self) -> ERR_W<8> {
+    pub fn err(&mut self) -> ERR_W<S_SPEC, 8> {
         ERR_W::new(self)
     }
     #[doc = "Bit 9 - Clock stretch timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn clkt(&mut self) -> CLKT_W<9> {
+    pub fn clkt(&mut self) -> CLKT_W<S_SPEC, 9> {
         CLKT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Status\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [s](index.html) module"]
+#[doc = "Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct S_SPEC;
 impl crate::RegisterSpec for S_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [s::R](R) reader structure"]
-impl crate::Readable for S_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [s::W](W) writer structure"]
+#[doc = "`read()` method returns [`s::R`](R) reader structure"]
+impl crate::Readable for S_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`s::W`](W) writer structure"]
 impl crate::Writable for S_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x0302;
 }

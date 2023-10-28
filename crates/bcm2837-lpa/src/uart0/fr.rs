@@ -1,75 +1,43 @@
 #[doc = "Register `FR` reader"]
-pub struct R(crate::R<FR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FR_SPEC>;
 #[doc = "Register `FR` writer"]
-pub struct W(crate::W<FR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FR_SPEC>;
 #[doc = "Field `CTS` reader - CTS"]
-pub type CTS_R = crate::BitReader<bool>;
+pub type CTS_R = crate::BitReader;
 #[doc = "Field `CTS` writer - CTS"]
-pub type CTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type CTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DSR` reader - DSR"]
-pub type DSR_R = crate::BitReader<bool>;
+pub type DSR_R = crate::BitReader;
 #[doc = "Field `DSR` writer - DSR"]
-pub type DSR_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type DSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DCD` reader - DCD"]
-pub type DCD_R = crate::BitReader<bool>;
+pub type DCD_R = crate::BitReader;
 #[doc = "Field `DCD` writer - DCD"]
-pub type DCD_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type DCD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BUSY` reader - BUSY"]
-pub type BUSY_R = crate::BitReader<bool>;
+pub type BUSY_R = crate::BitReader;
 #[doc = "Field `BUSY` writer - BUSY"]
-pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFE` reader - RXFE"]
-pub type RXFE_R = crate::BitReader<bool>;
+pub type RXFE_R = crate::BitReader;
 #[doc = "Field `RXFE` writer - RXFE"]
-pub type RXFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type RXFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFF` reader - TXFF"]
-pub type TXFF_R = crate::BitReader<bool>;
+pub type TXFF_R = crate::BitReader;
 #[doc = "Field `TXFF` writer - TXFF"]
-pub type TXFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type TXFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFF` reader - RXFF"]
-pub type RXFF_R = crate::BitReader<bool>;
+pub type RXFF_R = crate::BitReader;
 #[doc = "Field `RXFF` writer - RXFF"]
-pub type RXFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type RXFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXFE` reader - TXFE"]
-pub type TXFE_R = crate::BitReader<bool>;
+pub type TXFE_R = crate::BitReader;
 #[doc = "Field `TXFE` writer - TXFE"]
-pub type TXFE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type TXFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RI` reader - RI"]
-pub type RI_R = crate::BitReader<bool>;
+pub type RI_R = crate::BitReader;
 #[doc = "Field `RI` writer - RI"]
-pub type RI_W<'a, const O: u8> = crate::BitWriter<'a, u32, FR_SPEC, bool, O>;
+pub type RI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - CTS"]
     #[inline(always)]
@@ -117,80 +85,101 @@ impl R {
         RI_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FR")
+            .field("cts", &format_args!("{}", self.cts().bit()))
+            .field("dsr", &format_args!("{}", self.dsr().bit()))
+            .field("dcd", &format_args!("{}", self.dcd().bit()))
+            .field("busy", &format_args!("{}", self.busy().bit()))
+            .field("rxfe", &format_args!("{}", self.rxfe().bit()))
+            .field("txff", &format_args!("{}", self.txff().bit()))
+            .field("rxff", &format_args!("{}", self.rxff().bit()))
+            .field("txfe", &format_args!("{}", self.txfe().bit()))
+            .field("ri", &format_args!("{}", self.ri().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - CTS"]
     #[inline(always)]
     #[must_use]
-    pub fn cts(&mut self) -> CTS_W<0> {
+    pub fn cts(&mut self) -> CTS_W<FR_SPEC, 0> {
         CTS_W::new(self)
     }
     #[doc = "Bit 1 - DSR"]
     #[inline(always)]
     #[must_use]
-    pub fn dsr(&mut self) -> DSR_W<1> {
+    pub fn dsr(&mut self) -> DSR_W<FR_SPEC, 1> {
         DSR_W::new(self)
     }
     #[doc = "Bit 2 - DCD"]
     #[inline(always)]
     #[must_use]
-    pub fn dcd(&mut self) -> DCD_W<2> {
+    pub fn dcd(&mut self) -> DCD_W<FR_SPEC, 2> {
         DCD_W::new(self)
     }
     #[doc = "Bit 3 - BUSY"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<3> {
+    pub fn busy(&mut self) -> BUSY_W<FR_SPEC, 3> {
         BUSY_W::new(self)
     }
     #[doc = "Bit 4 - RXFE"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfe(&mut self) -> RXFE_W<4> {
+    pub fn rxfe(&mut self) -> RXFE_W<FR_SPEC, 4> {
         RXFE_W::new(self)
     }
     #[doc = "Bit 5 - TXFF"]
     #[inline(always)]
     #[must_use]
-    pub fn txff(&mut self) -> TXFF_W<5> {
+    pub fn txff(&mut self) -> TXFF_W<FR_SPEC, 5> {
         TXFF_W::new(self)
     }
     #[doc = "Bit 6 - RXFF"]
     #[inline(always)]
     #[must_use]
-    pub fn rxff(&mut self) -> RXFF_W<6> {
+    pub fn rxff(&mut self) -> RXFF_W<FR_SPEC, 6> {
         RXFF_W::new(self)
     }
     #[doc = "Bit 7 - TXFE"]
     #[inline(always)]
     #[must_use]
-    pub fn txfe(&mut self) -> TXFE_W<7> {
+    pub fn txfe(&mut self) -> TXFE_W<FR_SPEC, 7> {
         TXFE_W::new(self)
     }
     #[doc = "Bit 8 - RI"]
     #[inline(always)]
     #[must_use]
-    pub fn ri(&mut self) -> RI_W<8> {
+    pub fn ri(&mut self) -> RI_W<FR_SPEC, 8> {
         RI_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Flag Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fr](index.html) module"]
+#[doc = "Flag Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FR_SPEC;
 impl crate::RegisterSpec for FR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fr::R](R) reader structure"]
-impl crate::Readable for FR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [fr::W](W) writer structure"]
+#[doc = "`read()` method returns [`fr::R`](R) reader structure"]
+impl crate::Readable for FR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`fr::W`](W) writer structure"]
 impl crate::Writable for FR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,72 +1,39 @@
 #[doc = "Register `ENABLE_BASIC` reader"]
-pub struct R(crate::R<ENABLE_BASIC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ENABLE_BASIC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ENABLE_BASIC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ENABLE_BASIC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ENABLE_BASIC_SPEC>;
 #[doc = "Register `ENABLE_BASIC` writer"]
-pub struct W(crate::W<ENABLE_BASIC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ENABLE_BASIC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ENABLE_BASIC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ENABLE_BASIC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ENABLE_BASIC_SPEC>;
 #[doc = "Field `TIMER` reader - ARMC Timer"]
-pub type TIMER_R = crate::BitReader<bool>;
+pub type TIMER_R = crate::BitReader;
 #[doc = "Field `TIMER` writer - ARMC Timer"]
-pub type TIMER_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type TIMER_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `MAILBOX` reader - Mailbox"]
-pub type MAILBOX_R = crate::BitReader<bool>;
+pub type MAILBOX_R = crate::BitReader;
 #[doc = "Field `MAILBOX` writer - Mailbox"]
-pub type MAILBOX_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type MAILBOX_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `DOORBELL0` reader - Doorbell 0"]
-pub type DOORBELL0_R = crate::BitReader<bool>;
+pub type DOORBELL0_R = crate::BitReader;
 #[doc = "Field `DOORBELL0` writer - Doorbell 0"]
-pub type DOORBELL0_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type DOORBELL0_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `DOORBELL1` reader - Doorbell 1"]
-pub type DOORBELL1_R = crate::BitReader<bool>;
+pub type DOORBELL1_R = crate::BitReader;
 #[doc = "Field `DOORBELL1` writer - Doorbell 1"]
-pub type DOORBELL1_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type DOORBELL1_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `VPU0_HALTED` reader - VPU0 halted"]
-pub type VPU0_HALTED_R = crate::BitReader<bool>;
+pub type VPU0_HALTED_R = crate::BitReader;
 #[doc = "Field `VPU0_HALTED` writer - VPU0 halted"]
-pub type VPU0_HALTED_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type VPU0_HALTED_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `VPU1_HALTED` reader - VPU1 halted"]
-pub type VPU1_HALTED_R = crate::BitReader<bool>;
+pub type VPU1_HALTED_R = crate::BitReader;
 #[doc = "Field `VPU1_HALTED` writer - VPU1 halted"]
-pub type VPU1_HALTED_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type VPU1_HALTED_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `ARM_ADDRESS_ERROR` reader - ARM address error"]
-pub type ARM_ADDRESS_ERROR_R = crate::BitReader<bool>;
+pub type ARM_ADDRESS_ERROR_R = crate::BitReader;
 #[doc = "Field `ARM_ADDRESS_ERROR` writer - ARM address error"]
-pub type ARM_ADDRESS_ERROR_W<'a, const O: u8> =
-    crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type ARM_ADDRESS_ERROR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `ARM_AXI_ERROR` reader - ARM AXI error"]
-pub type ARM_AXI_ERROR_R = crate::BitReader<bool>;
+pub type ARM_AXI_ERROR_R = crate::BitReader;
 #[doc = "Field `ARM_AXI_ERROR` writer - ARM AXI error"]
-pub type ARM_AXI_ERROR_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, ENABLE_BASIC_SPEC, bool, O>;
+pub type ARM_AXI_ERROR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - ARMC Timer"]
     #[inline(always)]
@@ -109,74 +76,100 @@ impl R {
         ARM_AXI_ERROR_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ENABLE_BASIC")
+            .field("timer", &format_args!("{}", self.timer().bit()))
+            .field("mailbox", &format_args!("{}", self.mailbox().bit()))
+            .field("doorbell0", &format_args!("{}", self.doorbell0().bit()))
+            .field("doorbell1", &format_args!("{}", self.doorbell1().bit()))
+            .field("vpu0_halted", &format_args!("{}", self.vpu0_halted().bit()))
+            .field("vpu1_halted", &format_args!("{}", self.vpu1_halted().bit()))
+            .field(
+                "arm_address_error",
+                &format_args!("{}", self.arm_address_error().bit()),
+            )
+            .field(
+                "arm_axi_error",
+                &format_args!("{}", self.arm_axi_error().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ENABLE_BASIC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - ARMC Timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timer(&mut self) -> TIMER_W<0> {
+    pub fn timer(&mut self) -> TIMER_W<ENABLE_BASIC_SPEC, 0> {
         TIMER_W::new(self)
     }
     #[doc = "Bit 1 - Mailbox"]
     #[inline(always)]
     #[must_use]
-    pub fn mailbox(&mut self) -> MAILBOX_W<1> {
+    pub fn mailbox(&mut self) -> MAILBOX_W<ENABLE_BASIC_SPEC, 1> {
         MAILBOX_W::new(self)
     }
     #[doc = "Bit 2 - Doorbell 0"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell0(&mut self) -> DOORBELL0_W<2> {
+    pub fn doorbell0(&mut self) -> DOORBELL0_W<ENABLE_BASIC_SPEC, 2> {
         DOORBELL0_W::new(self)
     }
     #[doc = "Bit 3 - Doorbell 1"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell1(&mut self) -> DOORBELL1_W<3> {
+    pub fn doorbell1(&mut self) -> DOORBELL1_W<ENABLE_BASIC_SPEC, 3> {
         DOORBELL1_W::new(self)
     }
     #[doc = "Bit 4 - VPU0 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<4> {
+    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<ENABLE_BASIC_SPEC, 4> {
         VPU0_HALTED_W::new(self)
     }
     #[doc = "Bit 5 - VPU1 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<5> {
+    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<ENABLE_BASIC_SPEC, 5> {
         VPU1_HALTED_W::new(self)
     }
     #[doc = "Bit 6 - ARM address error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<6> {
+    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<ENABLE_BASIC_SPEC, 6> {
         ARM_ADDRESS_ERROR_W::new(self)
     }
     #[doc = "Bit 7 - ARM AXI error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<7> {
+    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<ENABLE_BASIC_SPEC, 7> {
         ARM_AXI_ERROR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Enable basic interrupts\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [enable_basic](index.html) module"]
+#[doc = "Enable basic interrupts\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`enable_basic::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_basic::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLE_BASIC_SPEC;
 impl crate::RegisterSpec for ENABLE_BASIC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [enable_basic::R](R) reader structure"]
-impl crate::Readable for ENABLE_BASIC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [enable_basic::W](W) writer structure"]
+#[doc = "`read()` method returns [`enable_basic::R`](R) reader structure"]
+impl crate::Readable for ENABLE_BASIC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`enable_basic::W`](W) writer structure"]
 impl crate::Writable for ENABLE_BASIC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xff;
 }

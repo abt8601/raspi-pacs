@@ -1,20 +1,7 @@
 #[doc = "Register `HW_CONFIG0` reader"]
-pub struct R(crate::R<HW_CONFIG0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HW_CONFIG0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HW_CONFIG0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HW_CONFIG0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HW_CONFIG0_SPEC>;
 #[doc = "Field `OPERATING_MODE` reader - Operating Mode"]
-pub type OPERATING_MODE_R = crate::FieldReader<u8, OPERATING_MODE_A>;
+pub type OPERATING_MODE_R = crate::FieldReader<OPERATING_MODE_A>;
 #[doc = "Operating Mode"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -40,10 +27,13 @@ impl From<OPERATING_MODE_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for OPERATING_MODE_A {
+    type Ux = u8;
+}
 impl OPERATING_MODE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<OPERATING_MODE_A> {
+    pub const fn variant(&self) -> Option<OPERATING_MODE_A> {
         match self.bits {
             0 => Some(OPERATING_MODE_A::HNP_SRP_CAPABLE),
             1 => Some(OPERATING_MODE_A::SRP_ONLY_CAPABLE),
@@ -55,44 +45,44 @@ impl OPERATING_MODE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `HNP_SRP_CAPABLE`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_hnp_srp_capable(&self) -> bool {
         *self == OPERATING_MODE_A::HNP_SRP_CAPABLE
     }
-    #[doc = "Checks if the value of the field is `SRP_ONLY_CAPABLE`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_srp_only_capable(&self) -> bool {
         *self == OPERATING_MODE_A::SRP_ONLY_CAPABLE
     }
-    #[doc = "Checks if the value of the field is `NO_HNP_SRP_CAPABLE`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_no_hnp_srp_capable(&self) -> bool {
         *self == OPERATING_MODE_A::NO_HNP_SRP_CAPABLE
     }
-    #[doc = "Checks if the value of the field is `SRP_CAPABLE_DEVICE`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_srp_capable_device(&self) -> bool {
         *self == OPERATING_MODE_A::SRP_CAPABLE_DEVICE
     }
-    #[doc = "Checks if the value of the field is `NO_SRP_CAPABLE_DEVICE`"]
+    #[doc = "`100`"]
     #[inline(always)]
     pub fn is_no_srp_capable_device(&self) -> bool {
         *self == OPERATING_MODE_A::NO_SRP_CAPABLE_DEVICE
     }
-    #[doc = "Checks if the value of the field is `SRP_CAPABLE_HOST`"]
+    #[doc = "`101`"]
     #[inline(always)]
     pub fn is_srp_capable_host(&self) -> bool {
         *self == OPERATING_MODE_A::SRP_CAPABLE_HOST
     }
-    #[doc = "Checks if the value of the field is `NO_SRP_CAPABLE_HOST`"]
+    #[doc = "`110`"]
     #[inline(always)]
     pub fn is_no_srp_capable_host(&self) -> bool {
         *self == OPERATING_MODE_A::NO_SRP_CAPABLE_HOST
     }
 }
 #[doc = "Field `ARCHITECTURE` reader - Architecture"]
-pub type ARCHITECTURE_R = crate::FieldReader<u8, ARCHITECTURE_A>;
+pub type ARCHITECTURE_R = crate::FieldReader<ARCHITECTURE_A>;
 #[doc = "Architecture"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -110,10 +100,13 @@ impl From<ARCHITECTURE_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for ARCHITECTURE_A {
+    type Ux = u8;
+}
 impl ARCHITECTURE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<ARCHITECTURE_A> {
+    pub const fn variant(&self) -> Option<ARCHITECTURE_A> {
         match self.bits {
             0 => Some(ARCHITECTURE_A::SLAVE_ONLY),
             1 => Some(ARCHITECTURE_A::EXTERNAL_DMA),
@@ -121,26 +114,26 @@ impl ARCHITECTURE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `SLAVE_ONLY`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_slave_only(&self) -> bool {
         *self == ARCHITECTURE_A::SLAVE_ONLY
     }
-    #[doc = "Checks if the value of the field is `EXTERNAL_DMA`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_external_dma(&self) -> bool {
         *self == ARCHITECTURE_A::EXTERNAL_DMA
     }
-    #[doc = "Checks if the value of the field is `INTERNAL_DMA`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_internal_dma(&self) -> bool {
         *self == ARCHITECTURE_A::INTERNAL_DMA
     }
 }
 #[doc = "Field `POINT_TO_POINT` reader - Point to Point"]
-pub type POINT_TO_POINT_R = crate::BitReader<bool>;
+pub type POINT_TO_POINT_R = crate::BitReader;
 #[doc = "Field `HIGH_SPEED_PHY` reader - High Speed Physical"]
-pub type HIGH_SPEED_PHY_R = crate::FieldReader<u8, HIGH_SPEED_PHY_A>;
+pub type HIGH_SPEED_PHY_R = crate::FieldReader<HIGH_SPEED_PHY_A>;
 #[doc = "High Speed Physical"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -160,10 +153,13 @@ impl From<HIGH_SPEED_PHY_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for HIGH_SPEED_PHY_A {
+    type Ux = u8;
+}
 impl HIGH_SPEED_PHY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HIGH_SPEED_PHY_A {
+    pub const fn variant(&self) -> HIGH_SPEED_PHY_A {
         match self.bits {
             0 => HIGH_SPEED_PHY_A::NOT_SUPPORTED,
             1 => HIGH_SPEED_PHY_A::UTMI,
@@ -172,29 +168,29 @@ impl HIGH_SPEED_PHY_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NOT_SUPPORTED`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_not_supported(&self) -> bool {
         *self == HIGH_SPEED_PHY_A::NOT_SUPPORTED
     }
-    #[doc = "Checks if the value of the field is `UTMI`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_utmi(&self) -> bool {
         *self == HIGH_SPEED_PHY_A::UTMI
     }
-    #[doc = "Checks if the value of the field is `ULPI`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_ulpi(&self) -> bool {
         *self == HIGH_SPEED_PHY_A::ULPI
     }
-    #[doc = "Checks if the value of the field is `UTMI_ULPI`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_utmi_ulpi(&self) -> bool {
         *self == HIGH_SPEED_PHY_A::UTMI_ULPI
     }
 }
 #[doc = "Field `FULL_SPEED_PHY` reader - Full Speed Physical"]
-pub type FULL_SPEED_PHY_R = crate::FieldReader<u8, FULL_SPEED_PHY_A>;
+pub type FULL_SPEED_PHY_R = crate::FieldReader<FULL_SPEED_PHY_A>;
 #[doc = "Full Speed Physical"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -214,10 +210,13 @@ impl From<FULL_SPEED_PHY_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FULL_SPEED_PHY_A {
+    type Ux = u8;
+}
 impl FULL_SPEED_PHY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FULL_SPEED_PHY_A {
+    pub const fn variant(&self) -> FULL_SPEED_PHY_A {
         match self.bits {
             0 => FULL_SPEED_PHY_A::PHY0,
             1 => FULL_SPEED_PHY_A::DEDICATED,
@@ -226,45 +225,45 @@ impl FULL_SPEED_PHY_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `PHY0`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_phy0(&self) -> bool {
         *self == FULL_SPEED_PHY_A::PHY0
     }
-    #[doc = "Checks if the value of the field is `DEDICATED`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_dedicated(&self) -> bool {
         *self == FULL_SPEED_PHY_A::DEDICATED
     }
-    #[doc = "Checks if the value of the field is `PHY2`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_phy2(&self) -> bool {
         *self == FULL_SPEED_PHY_A::PHY2
     }
-    #[doc = "Checks if the value of the field is `PHY3`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_phy3(&self) -> bool {
         *self == FULL_SPEED_PHY_A::PHY3
     }
 }
 #[doc = "Field `DEVICE_END_POINT_COUNT` reader - Device end point count"]
-pub type DEVICE_END_POINT_COUNT_R = crate::FieldReader<u8, u8>;
+pub type DEVICE_END_POINT_COUNT_R = crate::FieldReader;
 #[doc = "Field `HOST_CHANNEL_COUNT` reader - Host channel count"]
-pub type HOST_CHANNEL_COUNT_R = crate::FieldReader<u8, u8>;
+pub type HOST_CHANNEL_COUNT_R = crate::FieldReader;
 #[doc = "Field `SUPPORTS_PERIODIC_ENDPOINTS` reader - Supports periodic endpoints"]
-pub type SUPPORTS_PERIODIC_ENDPOINTS_R = crate::BitReader<bool>;
+pub type SUPPORTS_PERIODIC_ENDPOINTS_R = crate::BitReader;
 #[doc = "Field `DYNAMIC_FIFO` reader - Dynamic FIFO"]
-pub type DYNAMIC_FIFO_R = crate::BitReader<bool>;
+pub type DYNAMIC_FIFO_R = crate::BitReader;
 #[doc = "Field `MULTI_PROC_INT` reader - Multi proc int"]
-pub type MULTI_PROC_INT_R = crate::BitReader<bool>;
+pub type MULTI_PROC_INT_R = crate::BitReader;
 #[doc = "Field `NON_PERIODIC_QUEUE_DEPTH` reader - Non periodic queue depth"]
-pub type NON_PERIODIC_QUEUE_DEPTH_R = crate::FieldReader<u8, u8>;
+pub type NON_PERIODIC_QUEUE_DEPTH_R = crate::FieldReader;
 #[doc = "Field `HOST_PERIODIC_QUEUE_DEPTH` reader - Host periodic queue depth"]
-pub type HOST_PERIODIC_QUEUE_DEPTH_R = crate::FieldReader<u8, u8>;
+pub type HOST_PERIODIC_QUEUE_DEPTH_R = crate::FieldReader;
 #[doc = "Field `DEVICE_TOKEN_QUEUE_DEPTH` reader - Device token queue depth"]
-pub type DEVICE_TOKEN_QUEUE_DEPTH_R = crate::FieldReader<u8, u8>;
+pub type DEVICE_TOKEN_QUEUE_DEPTH_R = crate::FieldReader;
 #[doc = "Field `ENABLE_IC_USB` reader - Enable IC USB"]
-pub type ENABLE_IC_USB_R = crate::BitReader<bool>;
+pub type ENABLE_IC_USB_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:2 - Operating Mode"]
     #[inline(always)]
@@ -337,12 +336,77 @@ impl R {
         ENABLE_IC_USB_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Hardware Config 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hw_config0](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HW_CONFIG0")
+            .field(
+                "operating_mode",
+                &format_args!("{}", self.operating_mode().bits()),
+            )
+            .field(
+                "architecture",
+                &format_args!("{}", self.architecture().bits()),
+            )
+            .field(
+                "point_to_point",
+                &format_args!("{}", self.point_to_point().bit()),
+            )
+            .field(
+                "high_speed_phy",
+                &format_args!("{}", self.high_speed_phy().bits()),
+            )
+            .field(
+                "full_speed_phy",
+                &format_args!("{}", self.full_speed_phy().bits()),
+            )
+            .field(
+                "device_end_point_count",
+                &format_args!("{}", self.device_end_point_count().bits()),
+            )
+            .field(
+                "host_channel_count",
+                &format_args!("{}", self.host_channel_count().bits()),
+            )
+            .field(
+                "supports_periodic_endpoints",
+                &format_args!("{}", self.supports_periodic_endpoints().bit()),
+            )
+            .field(
+                "dynamic_fifo",
+                &format_args!("{}", self.dynamic_fifo().bit()),
+            )
+            .field(
+                "multi_proc_int",
+                &format_args!("{}", self.multi_proc_int().bit()),
+            )
+            .field(
+                "non_periodic_queue_depth",
+                &format_args!("{}", self.non_periodic_queue_depth().bits()),
+            )
+            .field(
+                "host_periodic_queue_depth",
+                &format_args!("{}", self.host_periodic_queue_depth().bits()),
+            )
+            .field(
+                "device_token_queue_depth",
+                &format_args!("{}", self.device_token_queue_depth().bits()),
+            )
+            .field(
+                "enable_ic_usb",
+                &format_args!("{}", self.enable_ic_usb().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HW_CONFIG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Hardware Config 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hw_config0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HW_CONFIG0_SPEC;
 impl crate::RegisterSpec for HW_CONFIG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hw_config0::R](R) reader structure"]
-impl crate::Readable for HW_CONFIG0_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`hw_config0::R`](R) reader structure"]
+impl crate::Readable for HW_CONFIG0_SPEC {}

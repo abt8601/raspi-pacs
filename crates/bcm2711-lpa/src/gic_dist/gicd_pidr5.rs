@@ -1,20 +1,7 @@
 #[doc = "Register `GICD_PIDR5` reader"]
-pub struct R(crate::R<GICD_PIDR5_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_PIDR5_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_PIDR5_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_PIDR5_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_PIDR5_SPEC>;
 #[doc = "Field `GICD_PIDR5` reader - Peripheral ID 5"]
-pub type GICD_PIDR5_R = crate::FieldReader<u32, GICD_PIDR5_A>;
+pub type GICD_PIDR5_R = crate::FieldReader<GICD_PIDR5_A>;
 #[doc = "Peripheral ID 5\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u32)]
@@ -28,16 +15,19 @@ impl From<GICD_PIDR5_A> for u32 {
         variant as _
     }
 }
+impl crate::FieldSpec for GICD_PIDR5_A {
+    type Ux = u32;
+}
 impl GICD_PIDR5_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<GICD_PIDR5_A> {
+    pub const fn variant(&self) -> Option<GICD_PIDR5_A> {
         match self.bits {
             0 => Some(GICD_PIDR5_A::VALID),
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VALID`"]
+    #[doc = "Valid"]
     #[inline(always)]
     pub fn is_valid(&self) -> bool {
         *self == GICD_PIDR5_A::VALID
@@ -50,15 +40,25 @@ impl R {
         GICD_PIDR5_R::new(self.bits)
     }
 }
-#[doc = "Peripheral ID 5\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_pidr5](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_PIDR5")
+            .field("gicd_pidr5", &format_args!("{}", self.gicd_pidr5().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_PIDR5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Peripheral ID 5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_pidr5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_PIDR5_SPEC;
 impl crate::RegisterSpec for GICD_PIDR5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_pidr5::R](R) reader structure"]
-impl crate::Readable for GICD_PIDR5_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gicd_pidr5::R`](R) reader structure"]
+impl crate::Readable for GICD_PIDR5_SPEC {}
 #[doc = "`reset()` method sets GICD_PIDR5 to value 0"]
 impl crate::Resettable for GICD_PIDR5_SPEC {
     const RESET_VALUE: Self::Ux = 0;

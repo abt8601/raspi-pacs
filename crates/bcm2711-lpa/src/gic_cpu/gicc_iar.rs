@@ -1,22 +1,9 @@
 #[doc = "Register `GICC_IAR` reader"]
-pub struct R(crate::R<GICC_IAR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICC_IAR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICC_IAR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICC_IAR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICC_IAR_SPEC>;
 #[doc = "Field `INTERRUPT_ID` reader - Interrupt ID"]
-pub type INTERRUPT_ID_R = crate::FieldReader<u16, u16>;
+pub type INTERRUPT_ID_R = crate::FieldReader<u16>;
 #[doc = "Field `CPUID` reader - CPUID that requested a software interrupt, 0 otherwise"]
-pub type CPUID_R = crate::FieldReader<u8, u8>;
+pub type CPUID_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:9 - Interrupt ID"]
     #[inline(always)]
@@ -29,15 +16,29 @@ impl R {
         CPUID_R::new(((self.bits >> 10) & 7) as u8)
     }
 }
-#[doc = "Interrupt Acknowledge\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicc_iar](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICC_IAR")
+            .field("cpuid", &format_args!("{}", self.cpuid().bits()))
+            .field(
+                "interrupt_id",
+                &format_args!("{}", self.interrupt_id().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICC_IAR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Interrupt Acknowledge\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicc_iar::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICC_IAR_SPEC;
 impl crate::RegisterSpec for GICC_IAR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicc_iar::R](R) reader structure"]
-impl crate::Readable for GICC_IAR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gicc_iar::R`](R) reader structure"]
+impl crate::Readable for GICC_IAR_SPEC {}
 #[doc = "`reset()` method sets GICC_IAR to value 0"]
 impl crate::Resettable for GICC_IAR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

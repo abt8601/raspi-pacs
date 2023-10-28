@@ -1,39 +1,7 @@
 #[doc = "Register `GICD_ICFGR44` reader"]
-pub struct R(crate::R<GICD_ICFGR44_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_ICFGR44_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_ICFGR44_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_ICFGR44_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_ICFGR44_SPEC>;
 #[doc = "Register `GICD_ICFGR44` writer"]
-pub struct W(crate::W<GICD_ICFGR44_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICD_ICFGR44_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICD_ICFGR44_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICD_ICFGR44_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICD_ICFGR44_SPEC>;
 #[doc = "Field `INT176` reader - Interrupt 176"]
 pub type INT176_R = crate::BitReader<INT176_A>;
 #[doc = "Interrupt 176\n\nValue on reset: 0"]
@@ -53,34 +21,37 @@ impl From<INT176_A> for bool {
 impl INT176_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT176_A {
+    pub const fn variant(&self) -> INT176_A {
         match self.bits {
             false => INT176_A::LEVEL,
             true => INT176_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT176_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT176_A::EDGE
     }
 }
 #[doc = "Field `INT176` writer - Interrupt 176"]
-pub type INT176_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT176_A, O>;
-impl<'a, const O: u8> INT176_W<'a, O> {
+pub type INT176_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT176_A>;
+impl<'a, REG, const O: u8> INT176_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT176_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT176_A::EDGE)
     }
 }
@@ -103,34 +74,37 @@ impl From<INT177_A> for bool {
 impl INT177_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT177_A {
+    pub const fn variant(&self) -> INT177_A {
         match self.bits {
             false => INT177_A::LEVEL,
             true => INT177_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT177_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT177_A::EDGE
     }
 }
 #[doc = "Field `INT177` writer - Interrupt 177"]
-pub type INT177_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT177_A, O>;
-impl<'a, const O: u8> INT177_W<'a, O> {
+pub type INT177_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT177_A>;
+impl<'a, REG, const O: u8> INT177_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT177_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT177_A::EDGE)
     }
 }
@@ -153,34 +127,37 @@ impl From<INT178_A> for bool {
 impl INT178_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT178_A {
+    pub const fn variant(&self) -> INT178_A {
         match self.bits {
             false => INT178_A::LEVEL,
             true => INT178_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT178_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT178_A::EDGE
     }
 }
 #[doc = "Field `INT178` writer - Interrupt 178"]
-pub type INT178_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT178_A, O>;
-impl<'a, const O: u8> INT178_W<'a, O> {
+pub type INT178_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT178_A>;
+impl<'a, REG, const O: u8> INT178_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT178_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT178_A::EDGE)
     }
 }
@@ -203,34 +180,37 @@ impl From<INT179_A> for bool {
 impl INT179_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT179_A {
+    pub const fn variant(&self) -> INT179_A {
         match self.bits {
             false => INT179_A::LEVEL,
             true => INT179_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT179_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT179_A::EDGE
     }
 }
 #[doc = "Field `INT179` writer - Interrupt 179"]
-pub type INT179_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT179_A, O>;
-impl<'a, const O: u8> INT179_W<'a, O> {
+pub type INT179_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT179_A>;
+impl<'a, REG, const O: u8> INT179_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT179_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT179_A::EDGE)
     }
 }
@@ -253,34 +233,37 @@ impl From<INT180_A> for bool {
 impl INT180_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT180_A {
+    pub const fn variant(&self) -> INT180_A {
         match self.bits {
             false => INT180_A::LEVEL,
             true => INT180_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT180_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT180_A::EDGE
     }
 }
 #[doc = "Field `INT180` writer - Interrupt 180"]
-pub type INT180_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT180_A, O>;
-impl<'a, const O: u8> INT180_W<'a, O> {
+pub type INT180_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT180_A>;
+impl<'a, REG, const O: u8> INT180_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT180_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT180_A::EDGE)
     }
 }
@@ -303,34 +286,37 @@ impl From<INT181_A> for bool {
 impl INT181_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT181_A {
+    pub const fn variant(&self) -> INT181_A {
         match self.bits {
             false => INT181_A::LEVEL,
             true => INT181_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT181_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT181_A::EDGE
     }
 }
 #[doc = "Field `INT181` writer - Interrupt 181"]
-pub type INT181_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT181_A, O>;
-impl<'a, const O: u8> INT181_W<'a, O> {
+pub type INT181_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT181_A>;
+impl<'a, REG, const O: u8> INT181_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT181_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT181_A::EDGE)
     }
 }
@@ -353,34 +339,37 @@ impl From<INT182_A> for bool {
 impl INT182_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT182_A {
+    pub const fn variant(&self) -> INT182_A {
         match self.bits {
             false => INT182_A::LEVEL,
             true => INT182_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT182_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT182_A::EDGE
     }
 }
 #[doc = "Field `INT182` writer - Interrupt 182"]
-pub type INT182_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT182_A, O>;
-impl<'a, const O: u8> INT182_W<'a, O> {
+pub type INT182_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT182_A>;
+impl<'a, REG, const O: u8> INT182_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT182_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT182_A::EDGE)
     }
 }
@@ -403,34 +392,37 @@ impl From<INT183_A> for bool {
 impl INT183_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT183_A {
+    pub const fn variant(&self) -> INT183_A {
         match self.bits {
             false => INT183_A::LEVEL,
             true => INT183_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT183_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT183_A::EDGE
     }
 }
 #[doc = "Field `INT183` writer - Interrupt 183"]
-pub type INT183_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT183_A, O>;
-impl<'a, const O: u8> INT183_W<'a, O> {
+pub type INT183_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT183_A>;
+impl<'a, REG, const O: u8> INT183_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT183_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT183_A::EDGE)
     }
 }
@@ -453,34 +445,37 @@ impl From<INT184_A> for bool {
 impl INT184_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT184_A {
+    pub const fn variant(&self) -> INT184_A {
         match self.bits {
             false => INT184_A::LEVEL,
             true => INT184_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT184_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT184_A::EDGE
     }
 }
 #[doc = "Field `INT184` writer - Interrupt 184"]
-pub type INT184_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT184_A, O>;
-impl<'a, const O: u8> INT184_W<'a, O> {
+pub type INT184_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT184_A>;
+impl<'a, REG, const O: u8> INT184_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT184_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT184_A::EDGE)
     }
 }
@@ -503,34 +498,37 @@ impl From<INT185_A> for bool {
 impl INT185_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT185_A {
+    pub const fn variant(&self) -> INT185_A {
         match self.bits {
             false => INT185_A::LEVEL,
             true => INT185_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT185_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT185_A::EDGE
     }
 }
 #[doc = "Field `INT185` writer - Interrupt 185"]
-pub type INT185_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT185_A, O>;
-impl<'a, const O: u8> INT185_W<'a, O> {
+pub type INT185_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT185_A>;
+impl<'a, REG, const O: u8> INT185_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT185_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT185_A::EDGE)
     }
 }
@@ -553,34 +551,37 @@ impl From<INT186_A> for bool {
 impl INT186_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT186_A {
+    pub const fn variant(&self) -> INT186_A {
         match self.bits {
             false => INT186_A::LEVEL,
             true => INT186_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT186_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT186_A::EDGE
     }
 }
 #[doc = "Field `INT186` writer - Interrupt 186"]
-pub type INT186_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT186_A, O>;
-impl<'a, const O: u8> INT186_W<'a, O> {
+pub type INT186_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT186_A>;
+impl<'a, REG, const O: u8> INT186_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT186_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT186_A::EDGE)
     }
 }
@@ -603,34 +604,37 @@ impl From<INT187_A> for bool {
 impl INT187_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT187_A {
+    pub const fn variant(&self) -> INT187_A {
         match self.bits {
             false => INT187_A::LEVEL,
             true => INT187_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT187_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT187_A::EDGE
     }
 }
 #[doc = "Field `INT187` writer - Interrupt 187"]
-pub type INT187_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT187_A, O>;
-impl<'a, const O: u8> INT187_W<'a, O> {
+pub type INT187_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT187_A>;
+impl<'a, REG, const O: u8> INT187_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT187_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT187_A::EDGE)
     }
 }
@@ -653,34 +657,37 @@ impl From<INT188_A> for bool {
 impl INT188_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT188_A {
+    pub const fn variant(&self) -> INT188_A {
         match self.bits {
             false => INT188_A::LEVEL,
             true => INT188_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT188_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT188_A::EDGE
     }
 }
 #[doc = "Field `INT188` writer - Interrupt 188"]
-pub type INT188_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT188_A, O>;
-impl<'a, const O: u8> INT188_W<'a, O> {
+pub type INT188_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT188_A>;
+impl<'a, REG, const O: u8> INT188_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT188_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT188_A::EDGE)
     }
 }
@@ -703,34 +710,37 @@ impl From<INT189_A> for bool {
 impl INT189_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT189_A {
+    pub const fn variant(&self) -> INT189_A {
         match self.bits {
             false => INT189_A::LEVEL,
             true => INT189_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT189_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT189_A::EDGE
     }
 }
 #[doc = "Field `INT189` writer - Interrupt 189"]
-pub type INT189_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT189_A, O>;
-impl<'a, const O: u8> INT189_W<'a, O> {
+pub type INT189_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT189_A>;
+impl<'a, REG, const O: u8> INT189_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT189_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT189_A::EDGE)
     }
 }
@@ -753,34 +763,37 @@ impl From<INT190_A> for bool {
 impl INT190_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT190_A {
+    pub const fn variant(&self) -> INT190_A {
         match self.bits {
             false => INT190_A::LEVEL,
             true => INT190_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT190_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT190_A::EDGE
     }
 }
 #[doc = "Field `INT190` writer - Interrupt 190"]
-pub type INT190_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT190_A, O>;
-impl<'a, const O: u8> INT190_W<'a, O> {
+pub type INT190_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT190_A>;
+impl<'a, REG, const O: u8> INT190_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT190_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT190_A::EDGE)
     }
 }
@@ -803,34 +816,37 @@ impl From<INT191_A> for bool {
 impl INT191_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INT191_A {
+    pub const fn variant(&self) -> INT191_A {
         match self.bits {
             false => INT191_A::LEVEL,
             true => INT191_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == INT191_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == INT191_A::EDGE
     }
 }
 #[doc = "Field `INT191` writer - Interrupt 191"]
-pub type INT191_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR44_SPEC, INT191_A, O>;
-impl<'a, const O: u8> INT191_W<'a, O> {
+pub type INT191_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT191_A>;
+impl<'a, REG, const O: u8> INT191_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(INT191_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(INT191_A::EDGE)
     }
 }
@@ -916,122 +932,150 @@ impl R {
         INT191_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_ICFGR44")
+            .field("int176", &format_args!("{}", self.int176().bit()))
+            .field("int177", &format_args!("{}", self.int177().bit()))
+            .field("int178", &format_args!("{}", self.int178().bit()))
+            .field("int179", &format_args!("{}", self.int179().bit()))
+            .field("int180", &format_args!("{}", self.int180().bit()))
+            .field("int181", &format_args!("{}", self.int181().bit()))
+            .field("int182", &format_args!("{}", self.int182().bit()))
+            .field("int183", &format_args!("{}", self.int183().bit()))
+            .field("int184", &format_args!("{}", self.int184().bit()))
+            .field("int185", &format_args!("{}", self.int185().bit()))
+            .field("int186", &format_args!("{}", self.int186().bit()))
+            .field("int187", &format_args!("{}", self.int187().bit()))
+            .field("int188", &format_args!("{}", self.int188().bit()))
+            .field("int189", &format_args!("{}", self.int189().bit()))
+            .field("int190", &format_args!("{}", self.int190().bit()))
+            .field("int191", &format_args!("{}", self.int191().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR44_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Interrupt 176"]
     #[inline(always)]
     #[must_use]
-    pub fn int176(&mut self) -> INT176_W<1> {
+    pub fn int176(&mut self) -> INT176_W<GICD_ICFGR44_SPEC, 1> {
         INT176_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt 177"]
     #[inline(always)]
     #[must_use]
-    pub fn int177(&mut self) -> INT177_W<3> {
+    pub fn int177(&mut self) -> INT177_W<GICD_ICFGR44_SPEC, 3> {
         INT177_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt 178"]
     #[inline(always)]
     #[must_use]
-    pub fn int178(&mut self) -> INT178_W<5> {
+    pub fn int178(&mut self) -> INT178_W<GICD_ICFGR44_SPEC, 5> {
         INT178_W::new(self)
     }
     #[doc = "Bit 7 - Interrupt 179"]
     #[inline(always)]
     #[must_use]
-    pub fn int179(&mut self) -> INT179_W<7> {
+    pub fn int179(&mut self) -> INT179_W<GICD_ICFGR44_SPEC, 7> {
         INT179_W::new(self)
     }
     #[doc = "Bit 9 - Interrupt 180"]
     #[inline(always)]
     #[must_use]
-    pub fn int180(&mut self) -> INT180_W<9> {
+    pub fn int180(&mut self) -> INT180_W<GICD_ICFGR44_SPEC, 9> {
         INT180_W::new(self)
     }
     #[doc = "Bit 11 - Interrupt 181"]
     #[inline(always)]
     #[must_use]
-    pub fn int181(&mut self) -> INT181_W<11> {
+    pub fn int181(&mut self) -> INT181_W<GICD_ICFGR44_SPEC, 11> {
         INT181_W::new(self)
     }
     #[doc = "Bit 13 - Interrupt 182"]
     #[inline(always)]
     #[must_use]
-    pub fn int182(&mut self) -> INT182_W<13> {
+    pub fn int182(&mut self) -> INT182_W<GICD_ICFGR44_SPEC, 13> {
         INT182_W::new(self)
     }
     #[doc = "Bit 15 - Interrupt 183"]
     #[inline(always)]
     #[must_use]
-    pub fn int183(&mut self) -> INT183_W<15> {
+    pub fn int183(&mut self) -> INT183_W<GICD_ICFGR44_SPEC, 15> {
         INT183_W::new(self)
     }
     #[doc = "Bit 17 - Interrupt 184"]
     #[inline(always)]
     #[must_use]
-    pub fn int184(&mut self) -> INT184_W<17> {
+    pub fn int184(&mut self) -> INT184_W<GICD_ICFGR44_SPEC, 17> {
         INT184_W::new(self)
     }
     #[doc = "Bit 19 - Interrupt 185"]
     #[inline(always)]
     #[must_use]
-    pub fn int185(&mut self) -> INT185_W<19> {
+    pub fn int185(&mut self) -> INT185_W<GICD_ICFGR44_SPEC, 19> {
         INT185_W::new(self)
     }
     #[doc = "Bit 21 - Interrupt 186"]
     #[inline(always)]
     #[must_use]
-    pub fn int186(&mut self) -> INT186_W<21> {
+    pub fn int186(&mut self) -> INT186_W<GICD_ICFGR44_SPEC, 21> {
         INT186_W::new(self)
     }
     #[doc = "Bit 23 - Interrupt 187"]
     #[inline(always)]
     #[must_use]
-    pub fn int187(&mut self) -> INT187_W<23> {
+    pub fn int187(&mut self) -> INT187_W<GICD_ICFGR44_SPEC, 23> {
         INT187_W::new(self)
     }
     #[doc = "Bit 25 - Interrupt 188"]
     #[inline(always)]
     #[must_use]
-    pub fn int188(&mut self) -> INT188_W<25> {
+    pub fn int188(&mut self) -> INT188_W<GICD_ICFGR44_SPEC, 25> {
         INT188_W::new(self)
     }
     #[doc = "Bit 27 - Interrupt 189"]
     #[inline(always)]
     #[must_use]
-    pub fn int189(&mut self) -> INT189_W<27> {
+    pub fn int189(&mut self) -> INT189_W<GICD_ICFGR44_SPEC, 27> {
         INT189_W::new(self)
     }
     #[doc = "Bit 29 - Interrupt 190"]
     #[inline(always)]
     #[must_use]
-    pub fn int190(&mut self) -> INT190_W<29> {
+    pub fn int190(&mut self) -> INT190_W<GICD_ICFGR44_SPEC, 29> {
         INT190_W::new(self)
     }
     #[doc = "Bit 31 - Interrupt 191"]
     #[inline(always)]
     #[must_use]
-    pub fn int191(&mut self) -> INT191_W<31> {
+    pub fn int191(&mut self) -> INT191_W<GICD_ICFGR44_SPEC, 31> {
         INT191_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Configuration 176 - 191\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_icfgr44](index.html) module"]
+#[doc = "Interrupt Configuration 176 - 191\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icfgr44::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icfgr44::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_ICFGR44_SPEC;
 impl crate::RegisterSpec for GICD_ICFGR44_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_icfgr44::R](R) reader structure"]
-impl crate::Readable for GICD_ICFGR44_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicd_icfgr44::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicd_icfgr44::R`](R) reader structure"]
+impl crate::Readable for GICD_ICFGR44_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicd_icfgr44::W`](W) writer structure"]
 impl crate::Writable for GICD_ICFGR44_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,26 +1,13 @@
 #[doc = "Register `GRXSTSP_Host` reader"]
-pub struct R(crate::R<GRXSTSP_HOST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GRXSTSP_HOST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GRXSTSP_HOST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GRXSTSP_HOST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GRXSTSP_HOST_SPEC>;
 #[doc = "Field `CHNUM` reader - Channel number"]
-pub type CHNUM_R = crate::FieldReader<u8, u8>;
+pub type CHNUM_R = crate::FieldReader;
 #[doc = "Field `BCNT` reader - Byte count"]
-pub type BCNT_R = crate::FieldReader<u16, u16>;
+pub type BCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `DPID` reader - Data PID"]
-pub type DPID_R = crate::FieldReader<u8, u8>;
+pub type DPID_R = crate::FieldReader;
 #[doc = "Field `PKTSTS` reader - Packet status"]
-pub type PKTSTS_R = crate::FieldReader<u8, u8>;
+pub type PKTSTS_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Channel number"]
     #[inline(always)]
@@ -43,15 +30,28 @@ impl R {
         PKTSTS_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
 }
-#[doc = "OTG_HS status read and pop register (host mode)\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grxstsp_host](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GRXSTSP_Host")
+            .field("chnum", &format_args!("{}", self.chnum().bits()))
+            .field("bcnt", &format_args!("{}", self.bcnt().bits()))
+            .field("dpid", &format_args!("{}", self.dpid().bits()))
+            .field("pktsts", &format_args!("{}", self.pktsts().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GRXSTSP_HOST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "OTG_HS status read and pop register (host mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grxstsp_host::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRXSTSP_HOST_SPEC;
 impl crate::RegisterSpec for GRXSTSP_HOST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [grxstsp_host::R](R) reader structure"]
-impl crate::Readable for GRXSTSP_HOST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`grxstsp_host::R`](R) reader structure"]
+impl crate::Readable for GRXSTSP_HOST_SPEC {}
 #[doc = "`reset()` method sets GRXSTSP_Host to value 0"]
 impl crate::Resettable for GRXSTSP_HOST_SPEC {
     const RESET_VALUE: Self::Ux = 0;

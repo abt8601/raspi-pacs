@@ -1,43 +1,11 @@
 #[doc = "Register `DVBUSDIS` reader"]
-pub struct R(crate::R<DVBUSDIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DVBUSDIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DVBUSDIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DVBUSDIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DVBUSDIS_SPEC>;
 #[doc = "Register `DVBUSDIS` writer"]
-pub struct W(crate::W<DVBUSDIS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DVBUSDIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DVBUSDIS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DVBUSDIS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DVBUSDIS_SPEC>;
 #[doc = "Field `VBUSDT` reader - Device VBUS discharge time"]
-pub type VBUSDT_R = crate::FieldReader<u16, u16>;
+pub type VBUSDT_R = crate::FieldReader<u16>;
 #[doc = "Field `VBUSDT` writer - Device VBUS discharge time"]
-pub type VBUSDT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DVBUSDIS_SPEC, u16, u16, 16, O>;
+pub type VBUSDT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Device VBUS discharge time"]
     #[inline(always)]
@@ -45,32 +13,45 @@ impl R {
         VBUSDT_R::new((self.bits & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DVBUSDIS")
+            .field("vbusdt", &format_args!("{}", self.vbusdt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DVBUSDIS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Device VBUS discharge time"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusdt(&mut self) -> VBUSDT_W<0> {
+    pub fn vbusdt(&mut self) -> VBUSDT_W<DVBUSDIS_SPEC, 0> {
         VBUSDT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS device VBUS discharge time register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dvbusdis](index.html) module"]
+#[doc = "OTG_HS device VBUS discharge time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dvbusdis::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dvbusdis::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DVBUSDIS_SPEC;
 impl crate::RegisterSpec for DVBUSDIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dvbusdis::R](R) reader structure"]
-impl crate::Readable for DVBUSDIS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dvbusdis::W](W) writer structure"]
+#[doc = "`read()` method returns [`dvbusdis::R`](R) reader structure"]
+impl crate::Readable for DVBUSDIS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dvbusdis::W`](W) writer structure"]
 impl crate::Writable for DVBUSDIS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

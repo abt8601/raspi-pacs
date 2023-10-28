@@ -1,41 +1,9 @@
 #[doc = "Register `FIQ_CONTROL` reader"]
-pub struct R(crate::R<FIQ_CONTROL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FIQ_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FIQ_CONTROL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FIQ_CONTROL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FIQ_CONTROL_SPEC>;
 #[doc = "Register `FIQ_CONTROL` writer"]
-pub struct W(crate::W<FIQ_CONTROL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FIQ_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FIQ_CONTROL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FIQ_CONTROL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FIQ_CONTROL_SPEC>;
 #[doc = "Field `SOURCE` reader - FIQ Source"]
-pub type SOURCE_R = crate::FieldReader<u8, SOURCE_A>;
+pub type SOURCE_R = crate::FieldReader<SOURCE_A>;
 #[doc = "FIQ Source\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -191,10 +159,13 @@ impl From<SOURCE_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for SOURCE_A {
+    type Ux = u8;
+}
 impl SOURCE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SOURCE_A> {
+    pub const fn variant(&self) -> Option<SOURCE_A> {
         match self.bits {
             0 => Some(SOURCE_A::TIMER_0),
             1 => Some(SOURCE_A::TIMER_1),
@@ -271,736 +242,739 @@ impl SOURCE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `TIMER_0`"]
+    #[doc = "Timer 0"]
     #[inline(always)]
     pub fn is_timer_0(&self) -> bool {
         *self == SOURCE_A::TIMER_0
     }
-    #[doc = "Checks if the value of the field is `TIMER_1`"]
+    #[doc = "Timer 1"]
     #[inline(always)]
     pub fn is_timer_1(&self) -> bool {
         *self == SOURCE_A::TIMER_1
     }
-    #[doc = "Checks if the value of the field is `TIMER_2`"]
+    #[doc = "Timer 2"]
     #[inline(always)]
     pub fn is_timer_2(&self) -> bool {
         *self == SOURCE_A::TIMER_2
     }
-    #[doc = "Checks if the value of the field is `TIMER_3`"]
+    #[doc = "Timer 3"]
     #[inline(always)]
     pub fn is_timer_3(&self) -> bool {
         *self == SOURCE_A::TIMER_3
     }
-    #[doc = "Checks if the value of the field is `H264_0`"]
+    #[doc = "H264 0"]
     #[inline(always)]
     pub fn is_h264_0(&self) -> bool {
         *self == SOURCE_A::H264_0
     }
-    #[doc = "Checks if the value of the field is `H264_1`"]
+    #[doc = "H264 1"]
     #[inline(always)]
     pub fn is_h264_1(&self) -> bool {
         *self == SOURCE_A::H264_1
     }
-    #[doc = "Checks if the value of the field is `H264_2`"]
+    #[doc = "H264 2"]
     #[inline(always)]
     pub fn is_h264_2(&self) -> bool {
         *self == SOURCE_A::H264_2
     }
-    #[doc = "Checks if the value of the field is `JPEG`"]
+    #[doc = "JPEG"]
     #[inline(always)]
     pub fn is_jpeg(&self) -> bool {
         *self == SOURCE_A::JPEG
     }
-    #[doc = "Checks if the value of the field is `ISP`"]
+    #[doc = "ISP"]
     #[inline(always)]
     pub fn is_isp(&self) -> bool {
         *self == SOURCE_A::ISP
     }
-    #[doc = "Checks if the value of the field is `USB`"]
+    #[doc = "USB"]
     #[inline(always)]
     pub fn is_usb(&self) -> bool {
         *self == SOURCE_A::USB
     }
-    #[doc = "Checks if the value of the field is `V3D`"]
+    #[doc = "V3D"]
     #[inline(always)]
     pub fn is_v3d(&self) -> bool {
         *self == SOURCE_A::V3D
     }
-    #[doc = "Checks if the value of the field is `TRANSPOSER`"]
+    #[doc = "Transposer"]
     #[inline(always)]
     pub fn is_transposer(&self) -> bool {
         *self == SOURCE_A::TRANSPOSER
     }
-    #[doc = "Checks if the value of the field is `MULTICORE_SYNC_0`"]
+    #[doc = "Multicore Sync 0"]
     #[inline(always)]
     pub fn is_multicore_sync_0(&self) -> bool {
         *self == SOURCE_A::MULTICORE_SYNC_0
     }
-    #[doc = "Checks if the value of the field is `MULTICORE_SYNC_1`"]
+    #[doc = "Multicore Sync 1"]
     #[inline(always)]
     pub fn is_multicore_sync_1(&self) -> bool {
         *self == SOURCE_A::MULTICORE_SYNC_1
     }
-    #[doc = "Checks if the value of the field is `MULTICORE_SYNC_2`"]
+    #[doc = "Multicore Sync 2"]
     #[inline(always)]
     pub fn is_multicore_sync_2(&self) -> bool {
         *self == SOURCE_A::MULTICORE_SYNC_2
     }
-    #[doc = "Checks if the value of the field is `MULTICORE_SYNC_3`"]
+    #[doc = "Multicore Sync 3"]
     #[inline(always)]
     pub fn is_multicore_sync_3(&self) -> bool {
         *self == SOURCE_A::MULTICORE_SYNC_3
     }
-    #[doc = "Checks if the value of the field is `DMA_0`"]
+    #[doc = "DMA 0"]
     #[inline(always)]
     pub fn is_dma_0(&self) -> bool {
         *self == SOURCE_A::DMA_0
     }
-    #[doc = "Checks if the value of the field is `DMA_1`"]
+    #[doc = "DMA 1"]
     #[inline(always)]
     pub fn is_dma_1(&self) -> bool {
         *self == SOURCE_A::DMA_1
     }
-    #[doc = "Checks if the value of the field is `DMA_2`"]
+    #[doc = "DMA 2"]
     #[inline(always)]
     pub fn is_dma_2(&self) -> bool {
         *self == SOURCE_A::DMA_2
     }
-    #[doc = "Checks if the value of the field is `DMA_3`"]
+    #[doc = "DMA 3"]
     #[inline(always)]
     pub fn is_dma_3(&self) -> bool {
         *self == SOURCE_A::DMA_3
     }
-    #[doc = "Checks if the value of the field is `DMA_4`"]
+    #[doc = "DMA 4"]
     #[inline(always)]
     pub fn is_dma_4(&self) -> bool {
         *self == SOURCE_A::DMA_4
     }
-    #[doc = "Checks if the value of the field is `DMA_5`"]
+    #[doc = "DMA 5"]
     #[inline(always)]
     pub fn is_dma_5(&self) -> bool {
         *self == SOURCE_A::DMA_5
     }
-    #[doc = "Checks if the value of the field is `DMA_6`"]
+    #[doc = "DMA 6"]
     #[inline(always)]
     pub fn is_dma_6(&self) -> bool {
         *self == SOURCE_A::DMA_6
     }
-    #[doc = "Checks if the value of the field is `DMA_7_8`"]
+    #[doc = "OR of DMA 7 and 8"]
     #[inline(always)]
     pub fn is_dma_7_8(&self) -> bool {
         *self == SOURCE_A::DMA_7_8
     }
-    #[doc = "Checks if the value of the field is `DMA_9_10`"]
+    #[doc = "OR of DMA 9 and 10"]
     #[inline(always)]
     pub fn is_dma_9_10(&self) -> bool {
         *self == SOURCE_A::DMA_9_10
     }
-    #[doc = "Checks if the value of the field is `DMA_11`"]
+    #[doc = "DMA 11"]
     #[inline(always)]
     pub fn is_dma_11(&self) -> bool {
         *self == SOURCE_A::DMA_11
     }
-    #[doc = "Checks if the value of the field is `DMA_12`"]
+    #[doc = "DMA 12"]
     #[inline(always)]
     pub fn is_dma_12(&self) -> bool {
         *self == SOURCE_A::DMA_12
     }
-    #[doc = "Checks if the value of the field is `DMA_13`"]
+    #[doc = "DMA 13"]
     #[inline(always)]
     pub fn is_dma_13(&self) -> bool {
         *self == SOURCE_A::DMA_13
     }
-    #[doc = "Checks if the value of the field is `DMA_14`"]
+    #[doc = "DMA 14"]
     #[inline(always)]
     pub fn is_dma_14(&self) -> bool {
         *self == SOURCE_A::DMA_14
     }
-    #[doc = "Checks if the value of the field is `AUX`"]
+    #[doc = "OR of UART1, SPI1 and SPI2"]
     #[inline(always)]
     pub fn is_aux(&self) -> bool {
         *self == SOURCE_A::AUX
     }
-    #[doc = "Checks if the value of the field is `ARM`"]
+    #[doc = "ARM"]
     #[inline(always)]
     pub fn is_arm(&self) -> bool {
         *self == SOURCE_A::ARM
     }
-    #[doc = "Checks if the value of the field is `DMA_15`"]
+    #[doc = "DMA 15"]
     #[inline(always)]
     pub fn is_dma_15(&self) -> bool {
         *self == SOURCE_A::DMA_15
     }
-    #[doc = "Checks if the value of the field is `HDMI_CEC`"]
+    #[doc = "HDMI CEC"]
     #[inline(always)]
     pub fn is_hdmi_cec(&self) -> bool {
         *self == SOURCE_A::HDMI_CEC
     }
-    #[doc = "Checks if the value of the field is `HVS`"]
+    #[doc = "HVS"]
     #[inline(always)]
     pub fn is_hvs(&self) -> bool {
         *self == SOURCE_A::HVS
     }
-    #[doc = "Checks if the value of the field is `RPIVID`"]
+    #[doc = "RPIVID"]
     #[inline(always)]
     pub fn is_rpivid(&self) -> bool {
         *self == SOURCE_A::RPIVID
     }
-    #[doc = "Checks if the value of the field is `SDC`"]
+    #[doc = "SDC"]
     #[inline(always)]
     pub fn is_sdc(&self) -> bool {
         *self == SOURCE_A::SDC
     }
-    #[doc = "Checks if the value of the field is `DSI_0`"]
+    #[doc = "DSI 0"]
     #[inline(always)]
     pub fn is_dsi_0(&self) -> bool {
         *self == SOURCE_A::DSI_0
     }
-    #[doc = "Checks if the value of the field is `PIXEL_VALVE_2`"]
+    #[doc = "Pixel Valve 2"]
     #[inline(always)]
     pub fn is_pixel_valve_2(&self) -> bool {
         *self == SOURCE_A::PIXEL_VALVE_2
     }
-    #[doc = "Checks if the value of the field is `CAMERA_0`"]
+    #[doc = "Camera 0"]
     #[inline(always)]
     pub fn is_camera_0(&self) -> bool {
         *self == SOURCE_A::CAMERA_0
     }
-    #[doc = "Checks if the value of the field is `CAMERA_1`"]
+    #[doc = "Camera 1"]
     #[inline(always)]
     pub fn is_camera_1(&self) -> bool {
         *self == SOURCE_A::CAMERA_1
     }
-    #[doc = "Checks if the value of the field is `HDMI_0`"]
+    #[doc = "HDMI 0"]
     #[inline(always)]
     pub fn is_hdmi_0(&self) -> bool {
         *self == SOURCE_A::HDMI_0
     }
-    #[doc = "Checks if the value of the field is `HDMI_1`"]
+    #[doc = "HDMI 1"]
     #[inline(always)]
     pub fn is_hdmi_1(&self) -> bool {
         *self == SOURCE_A::HDMI_1
     }
-    #[doc = "Checks if the value of the field is `PIXEL_VALVE_3`"]
+    #[doc = "Pixel Valve 3"]
     #[inline(always)]
     pub fn is_pixel_valve_3(&self) -> bool {
         *self == SOURCE_A::PIXEL_VALVE_3
     }
-    #[doc = "Checks if the value of the field is `SPI_BSC_SLAVE`"]
+    #[doc = "SPI/BSC Slave"]
     #[inline(always)]
     pub fn is_spi_bsc_slave(&self) -> bool {
         *self == SOURCE_A::SPI_BSC_SLAVE
     }
-    #[doc = "Checks if the value of the field is `DSI_1`"]
+    #[doc = "DSI 1"]
     #[inline(always)]
     pub fn is_dsi_1(&self) -> bool {
         *self == SOURCE_A::DSI_1
     }
-    #[doc = "Checks if the value of the field is `PIXEL_VALVE_0`"]
+    #[doc = "Pixel Valve 0"]
     #[inline(always)]
     pub fn is_pixel_valve_0(&self) -> bool {
         *self == SOURCE_A::PIXEL_VALVE_0
     }
-    #[doc = "Checks if the value of the field is `PIXEL_VALVE_1_2`"]
+    #[doc = "OR of Pixel Valve 1 and 2"]
     #[inline(always)]
     pub fn is_pixel_valve_1_2(&self) -> bool {
         *self == SOURCE_A::PIXEL_VALVE_1_2
     }
-    #[doc = "Checks if the value of the field is `CPR`"]
+    #[doc = "CPR"]
     #[inline(always)]
     pub fn is_cpr(&self) -> bool {
         *self == SOURCE_A::CPR
     }
-    #[doc = "Checks if the value of the field is `SMI`"]
+    #[doc = "SMI"]
     #[inline(always)]
     pub fn is_smi(&self) -> bool {
         *self == SOURCE_A::SMI
     }
-    #[doc = "Checks if the value of the field is `GPIO_0`"]
+    #[doc = "GPIO 0"]
     #[inline(always)]
     pub fn is_gpio_0(&self) -> bool {
         *self == SOURCE_A::GPIO_0
     }
-    #[doc = "Checks if the value of the field is `GPIO_1`"]
+    #[doc = "GPIO 1"]
     #[inline(always)]
     pub fn is_gpio_1(&self) -> bool {
         *self == SOURCE_A::GPIO_1
     }
-    #[doc = "Checks if the value of the field is `GPIO_2`"]
+    #[doc = "GPIO 2"]
     #[inline(always)]
     pub fn is_gpio_2(&self) -> bool {
         *self == SOURCE_A::GPIO_2
     }
-    #[doc = "Checks if the value of the field is `GPIO_3`"]
+    #[doc = "GPIO 3"]
     #[inline(always)]
     pub fn is_gpio_3(&self) -> bool {
         *self == SOURCE_A::GPIO_3
     }
-    #[doc = "Checks if the value of the field is `I2C`"]
+    #[doc = "OR of all I2C"]
     #[inline(always)]
     pub fn is_i2c(&self) -> bool {
         *self == SOURCE_A::I2C
     }
-    #[doc = "Checks if the value of the field is `SPI`"]
+    #[doc = "OR of all SPI"]
     #[inline(always)]
     pub fn is_spi(&self) -> bool {
         *self == SOURCE_A::SPI
     }
-    #[doc = "Checks if the value of the field is `PCM_I2S`"]
+    #[doc = "PCM/I2S"]
     #[inline(always)]
     pub fn is_pcm_i2s(&self) -> bool {
         *self == SOURCE_A::PCM_I2S
     }
-    #[doc = "Checks if the value of the field is `SDHOST`"]
+    #[doc = "SDHOST"]
     #[inline(always)]
     pub fn is_sdhost(&self) -> bool {
         *self == SOURCE_A::SDHOST
     }
-    #[doc = "Checks if the value of the field is `UART`"]
+    #[doc = "OR of all PL011 UARTs"]
     #[inline(always)]
     pub fn is_uart(&self) -> bool {
         *self == SOURCE_A::UART
     }
-    #[doc = "Checks if the value of the field is `ETH_PCIE`"]
+    #[doc = "OR of all ETH_PCIe L2"]
     #[inline(always)]
     pub fn is_eth_pcie(&self) -> bool {
         *self == SOURCE_A::ETH_PCIE
     }
-    #[doc = "Checks if the value of the field is `VEC`"]
+    #[doc = "VEC"]
     #[inline(always)]
     pub fn is_vec(&self) -> bool {
         *self == SOURCE_A::VEC
     }
-    #[doc = "Checks if the value of the field is `CPG`"]
+    #[doc = "CPG"]
     #[inline(always)]
     pub fn is_cpg(&self) -> bool {
         *self == SOURCE_A::CPG
     }
-    #[doc = "Checks if the value of the field is `RNG`"]
+    #[doc = "RNG"]
     #[inline(always)]
     pub fn is_rng(&self) -> bool {
         *self == SOURCE_A::RNG
     }
-    #[doc = "Checks if the value of the field is `EMMC`"]
+    #[doc = "OR of EMMC and EMMC2"]
     #[inline(always)]
     pub fn is_emmc(&self) -> bool {
         *self == SOURCE_A::EMMC
     }
-    #[doc = "Checks if the value of the field is `ETH_PCIE_SECURE`"]
+    #[doc = "ETH_PCIe secure"]
     #[inline(always)]
     pub fn is_eth_pcie_secure(&self) -> bool {
         *self == SOURCE_A::ETH_PCIE_SECURE
     }
-    #[doc = "Checks if the value of the field is `TIMER`"]
+    #[doc = "ARMC Timer"]
     #[inline(always)]
     pub fn is_timer(&self) -> bool {
         *self == SOURCE_A::TIMER
     }
-    #[doc = "Checks if the value of the field is `MAILBOX`"]
+    #[doc = "Mailbox"]
     #[inline(always)]
     pub fn is_mailbox(&self) -> bool {
         *self == SOURCE_A::MAILBOX
     }
-    #[doc = "Checks if the value of the field is `DOORBELL0`"]
+    #[doc = "Doorbell 0"]
     #[inline(always)]
     pub fn is_doorbell0(&self) -> bool {
         *self == SOURCE_A::DOORBELL0
     }
-    #[doc = "Checks if the value of the field is `DOORBELL1`"]
+    #[doc = "Doorbell 1"]
     #[inline(always)]
     pub fn is_doorbell1(&self) -> bool {
         *self == SOURCE_A::DOORBELL1
     }
-    #[doc = "Checks if the value of the field is `VPU0_HALTED`"]
+    #[doc = "VPU0 halted"]
     #[inline(always)]
     pub fn is_vpu0_halted(&self) -> bool {
         *self == SOURCE_A::VPU0_HALTED
     }
-    #[doc = "Checks if the value of the field is `VPU1_HALTED`"]
+    #[doc = "VPU1 halted"]
     #[inline(always)]
     pub fn is_vpu1_halted(&self) -> bool {
         *self == SOURCE_A::VPU1_HALTED
     }
-    #[doc = "Checks if the value of the field is `ARM_ADDRESS_ERROR`"]
+    #[doc = "ARM address error"]
     #[inline(always)]
     pub fn is_arm_address_error(&self) -> bool {
         *self == SOURCE_A::ARM_ADDRESS_ERROR
     }
-    #[doc = "Checks if the value of the field is `ARM_AXI_ERROR`"]
+    #[doc = "ARM AXI error"]
     #[inline(always)]
     pub fn is_arm_axi_error(&self) -> bool {
         *self == SOURCE_A::ARM_AXI_ERROR
     }
 }
 #[doc = "Field `SOURCE` writer - FIQ Source"]
-pub type SOURCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FIQ_CONTROL_SPEC, u8, SOURCE_A, 7, O>;
-impl<'a, const O: u8> SOURCE_W<'a, O> {
+pub type SOURCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O, SOURCE_A>;
+impl<'a, REG, const O: u8> SOURCE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Timer 0"]
     #[inline(always)]
-    pub fn timer_0(self) -> &'a mut W {
+    pub fn timer_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TIMER_0)
     }
     #[doc = "Timer 1"]
     #[inline(always)]
-    pub fn timer_1(self) -> &'a mut W {
+    pub fn timer_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TIMER_1)
     }
     #[doc = "Timer 2"]
     #[inline(always)]
-    pub fn timer_2(self) -> &'a mut W {
+    pub fn timer_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TIMER_2)
     }
     #[doc = "Timer 3"]
     #[inline(always)]
-    pub fn timer_3(self) -> &'a mut W {
+    pub fn timer_3(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TIMER_3)
     }
     #[doc = "H264 0"]
     #[inline(always)]
-    pub fn h264_0(self) -> &'a mut W {
+    pub fn h264_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::H264_0)
     }
     #[doc = "H264 1"]
     #[inline(always)]
-    pub fn h264_1(self) -> &'a mut W {
+    pub fn h264_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::H264_1)
     }
     #[doc = "H264 2"]
     #[inline(always)]
-    pub fn h264_2(self) -> &'a mut W {
+    pub fn h264_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::H264_2)
     }
     #[doc = "JPEG"]
     #[inline(always)]
-    pub fn jpeg(self) -> &'a mut W {
+    pub fn jpeg(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::JPEG)
     }
     #[doc = "ISP"]
     #[inline(always)]
-    pub fn isp(self) -> &'a mut W {
+    pub fn isp(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ISP)
     }
     #[doc = "USB"]
     #[inline(always)]
-    pub fn usb(self) -> &'a mut W {
+    pub fn usb(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::USB)
     }
     #[doc = "V3D"]
     #[inline(always)]
-    pub fn v3d(self) -> &'a mut W {
+    pub fn v3d(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::V3D)
     }
     #[doc = "Transposer"]
     #[inline(always)]
-    pub fn transposer(self) -> &'a mut W {
+    pub fn transposer(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TRANSPOSER)
     }
     #[doc = "Multicore Sync 0"]
     #[inline(always)]
-    pub fn multicore_sync_0(self) -> &'a mut W {
+    pub fn multicore_sync_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::MULTICORE_SYNC_0)
     }
     #[doc = "Multicore Sync 1"]
     #[inline(always)]
-    pub fn multicore_sync_1(self) -> &'a mut W {
+    pub fn multicore_sync_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::MULTICORE_SYNC_1)
     }
     #[doc = "Multicore Sync 2"]
     #[inline(always)]
-    pub fn multicore_sync_2(self) -> &'a mut W {
+    pub fn multicore_sync_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::MULTICORE_SYNC_2)
     }
     #[doc = "Multicore Sync 3"]
     #[inline(always)]
-    pub fn multicore_sync_3(self) -> &'a mut W {
+    pub fn multicore_sync_3(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::MULTICORE_SYNC_3)
     }
     #[doc = "DMA 0"]
     #[inline(always)]
-    pub fn dma_0(self) -> &'a mut W {
+    pub fn dma_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_0)
     }
     #[doc = "DMA 1"]
     #[inline(always)]
-    pub fn dma_1(self) -> &'a mut W {
+    pub fn dma_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_1)
     }
     #[doc = "DMA 2"]
     #[inline(always)]
-    pub fn dma_2(self) -> &'a mut W {
+    pub fn dma_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_2)
     }
     #[doc = "DMA 3"]
     #[inline(always)]
-    pub fn dma_3(self) -> &'a mut W {
+    pub fn dma_3(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_3)
     }
     #[doc = "DMA 4"]
     #[inline(always)]
-    pub fn dma_4(self) -> &'a mut W {
+    pub fn dma_4(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_4)
     }
     #[doc = "DMA 5"]
     #[inline(always)]
-    pub fn dma_5(self) -> &'a mut W {
+    pub fn dma_5(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_5)
     }
     #[doc = "DMA 6"]
     #[inline(always)]
-    pub fn dma_6(self) -> &'a mut W {
+    pub fn dma_6(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_6)
     }
     #[doc = "OR of DMA 7 and 8"]
     #[inline(always)]
-    pub fn dma_7_8(self) -> &'a mut W {
+    pub fn dma_7_8(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_7_8)
     }
     #[doc = "OR of DMA 9 and 10"]
     #[inline(always)]
-    pub fn dma_9_10(self) -> &'a mut W {
+    pub fn dma_9_10(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_9_10)
     }
     #[doc = "DMA 11"]
     #[inline(always)]
-    pub fn dma_11(self) -> &'a mut W {
+    pub fn dma_11(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_11)
     }
     #[doc = "DMA 12"]
     #[inline(always)]
-    pub fn dma_12(self) -> &'a mut W {
+    pub fn dma_12(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_12)
     }
     #[doc = "DMA 13"]
     #[inline(always)]
-    pub fn dma_13(self) -> &'a mut W {
+    pub fn dma_13(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_13)
     }
     #[doc = "DMA 14"]
     #[inline(always)]
-    pub fn dma_14(self) -> &'a mut W {
+    pub fn dma_14(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_14)
     }
     #[doc = "OR of UART1, SPI1 and SPI2"]
     #[inline(always)]
-    pub fn aux(self) -> &'a mut W {
+    pub fn aux(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::AUX)
     }
     #[doc = "ARM"]
     #[inline(always)]
-    pub fn arm(self) -> &'a mut W {
+    pub fn arm(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ARM)
     }
     #[doc = "DMA 15"]
     #[inline(always)]
-    pub fn dma_15(self) -> &'a mut W {
+    pub fn dma_15(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DMA_15)
     }
     #[doc = "HDMI CEC"]
     #[inline(always)]
-    pub fn hdmi_cec(self) -> &'a mut W {
+    pub fn hdmi_cec(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::HDMI_CEC)
     }
     #[doc = "HVS"]
     #[inline(always)]
-    pub fn hvs(self) -> &'a mut W {
+    pub fn hvs(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::HVS)
     }
     #[doc = "RPIVID"]
     #[inline(always)]
-    pub fn rpivid(self) -> &'a mut W {
+    pub fn rpivid(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::RPIVID)
     }
     #[doc = "SDC"]
     #[inline(always)]
-    pub fn sdc(self) -> &'a mut W {
+    pub fn sdc(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::SDC)
     }
     #[doc = "DSI 0"]
     #[inline(always)]
-    pub fn dsi_0(self) -> &'a mut W {
+    pub fn dsi_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DSI_0)
     }
     #[doc = "Pixel Valve 2"]
     #[inline(always)]
-    pub fn pixel_valve_2(self) -> &'a mut W {
+    pub fn pixel_valve_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::PIXEL_VALVE_2)
     }
     #[doc = "Camera 0"]
     #[inline(always)]
-    pub fn camera_0(self) -> &'a mut W {
+    pub fn camera_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::CAMERA_0)
     }
     #[doc = "Camera 1"]
     #[inline(always)]
-    pub fn camera_1(self) -> &'a mut W {
+    pub fn camera_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::CAMERA_1)
     }
     #[doc = "HDMI 0"]
     #[inline(always)]
-    pub fn hdmi_0(self) -> &'a mut W {
+    pub fn hdmi_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::HDMI_0)
     }
     #[doc = "HDMI 1"]
     #[inline(always)]
-    pub fn hdmi_1(self) -> &'a mut W {
+    pub fn hdmi_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::HDMI_1)
     }
     #[doc = "Pixel Valve 3"]
     #[inline(always)]
-    pub fn pixel_valve_3(self) -> &'a mut W {
+    pub fn pixel_valve_3(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::PIXEL_VALVE_3)
     }
     #[doc = "SPI/BSC Slave"]
     #[inline(always)]
-    pub fn spi_bsc_slave(self) -> &'a mut W {
+    pub fn spi_bsc_slave(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::SPI_BSC_SLAVE)
     }
     #[doc = "DSI 1"]
     #[inline(always)]
-    pub fn dsi_1(self) -> &'a mut W {
+    pub fn dsi_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DSI_1)
     }
     #[doc = "Pixel Valve 0"]
     #[inline(always)]
-    pub fn pixel_valve_0(self) -> &'a mut W {
+    pub fn pixel_valve_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::PIXEL_VALVE_0)
     }
     #[doc = "OR of Pixel Valve 1 and 2"]
     #[inline(always)]
-    pub fn pixel_valve_1_2(self) -> &'a mut W {
+    pub fn pixel_valve_1_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::PIXEL_VALVE_1_2)
     }
     #[doc = "CPR"]
     #[inline(always)]
-    pub fn cpr(self) -> &'a mut W {
+    pub fn cpr(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::CPR)
     }
     #[doc = "SMI"]
     #[inline(always)]
-    pub fn smi(self) -> &'a mut W {
+    pub fn smi(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::SMI)
     }
     #[doc = "GPIO 0"]
     #[inline(always)]
-    pub fn gpio_0(self) -> &'a mut W {
+    pub fn gpio_0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::GPIO_0)
     }
     #[doc = "GPIO 1"]
     #[inline(always)]
-    pub fn gpio_1(self) -> &'a mut W {
+    pub fn gpio_1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::GPIO_1)
     }
     #[doc = "GPIO 2"]
     #[inline(always)]
-    pub fn gpio_2(self) -> &'a mut W {
+    pub fn gpio_2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::GPIO_2)
     }
     #[doc = "GPIO 3"]
     #[inline(always)]
-    pub fn gpio_3(self) -> &'a mut W {
+    pub fn gpio_3(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::GPIO_3)
     }
     #[doc = "OR of all I2C"]
     #[inline(always)]
-    pub fn i2c(self) -> &'a mut W {
+    pub fn i2c(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::I2C)
     }
     #[doc = "OR of all SPI"]
     #[inline(always)]
-    pub fn spi(self) -> &'a mut W {
+    pub fn spi(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::SPI)
     }
     #[doc = "PCM/I2S"]
     #[inline(always)]
-    pub fn pcm_i2s(self) -> &'a mut W {
+    pub fn pcm_i2s(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::PCM_I2S)
     }
     #[doc = "SDHOST"]
     #[inline(always)]
-    pub fn sdhost(self) -> &'a mut W {
+    pub fn sdhost(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::SDHOST)
     }
     #[doc = "OR of all PL011 UARTs"]
     #[inline(always)]
-    pub fn uart(self) -> &'a mut W {
+    pub fn uart(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::UART)
     }
     #[doc = "OR of all ETH_PCIe L2"]
     #[inline(always)]
-    pub fn eth_pcie(self) -> &'a mut W {
+    pub fn eth_pcie(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ETH_PCIE)
     }
     #[doc = "VEC"]
     #[inline(always)]
-    pub fn vec(self) -> &'a mut W {
+    pub fn vec(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::VEC)
     }
     #[doc = "CPG"]
     #[inline(always)]
-    pub fn cpg(self) -> &'a mut W {
+    pub fn cpg(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::CPG)
     }
     #[doc = "RNG"]
     #[inline(always)]
-    pub fn rng(self) -> &'a mut W {
+    pub fn rng(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::RNG)
     }
     #[doc = "OR of EMMC and EMMC2"]
     #[inline(always)]
-    pub fn emmc(self) -> &'a mut W {
+    pub fn emmc(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::EMMC)
     }
     #[doc = "ETH_PCIe secure"]
     #[inline(always)]
-    pub fn eth_pcie_secure(self) -> &'a mut W {
+    pub fn eth_pcie_secure(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ETH_PCIE_SECURE)
     }
     #[doc = "ARMC Timer"]
     #[inline(always)]
-    pub fn timer(self) -> &'a mut W {
+    pub fn timer(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TIMER)
     }
     #[doc = "Mailbox"]
     #[inline(always)]
-    pub fn mailbox(self) -> &'a mut W {
+    pub fn mailbox(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::MAILBOX)
     }
     #[doc = "Doorbell 0"]
     #[inline(always)]
-    pub fn doorbell0(self) -> &'a mut W {
+    pub fn doorbell0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DOORBELL0)
     }
     #[doc = "Doorbell 1"]
     #[inline(always)]
-    pub fn doorbell1(self) -> &'a mut W {
+    pub fn doorbell1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DOORBELL1)
     }
     #[doc = "VPU0 halted"]
     #[inline(always)]
-    pub fn vpu0_halted(self) -> &'a mut W {
+    pub fn vpu0_halted(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::VPU0_HALTED)
     }
     #[doc = "VPU1 halted"]
     #[inline(always)]
-    pub fn vpu1_halted(self) -> &'a mut W {
+    pub fn vpu1_halted(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::VPU1_HALTED)
     }
     #[doc = "ARM address error"]
     #[inline(always)]
-    pub fn arm_address_error(self) -> &'a mut W {
+    pub fn arm_address_error(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ARM_ADDRESS_ERROR)
     }
     #[doc = "ARM AXI error"]
     #[inline(always)]
-    pub fn arm_axi_error(self) -> &'a mut W {
+    pub fn arm_axi_error(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ARM_AXI_ERROR)
     }
 }
 #[doc = "Field `ENABLE` reader - FIQ Enable"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - FIQ Enable"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIQ_CONTROL_SPEC, bool, O>;
+pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:6 - FIQ Source"]
     #[inline(always)]
@@ -1013,38 +987,52 @@ impl R {
         ENABLE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIQ_CONTROL")
+            .field("enable", &format_args!("{}", self.enable().bit()))
+            .field("source", &format_args!("{}", self.source().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FIQ_CONTROL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - FIQ Source"]
     #[inline(always)]
     #[must_use]
-    pub fn source(&mut self) -> SOURCE_W<0> {
+    pub fn source(&mut self) -> SOURCE_W<FIQ_CONTROL_SPEC, 0> {
         SOURCE_W::new(self)
     }
     #[doc = "Bit 7 - FIQ Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<7> {
+    pub fn enable(&mut self) -> ENABLE_W<FIQ_CONTROL_SPEC, 7> {
         ENABLE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "FIQ control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fiq_control](index.html) module"]
+#[doc = "FIQ control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fiq_control::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fiq_control::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIQ_CONTROL_SPEC;
 impl crate::RegisterSpec for FIQ_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fiq_control::R](R) reader structure"]
-impl crate::Readable for FIQ_CONTROL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [fiq_control::W](W) writer structure"]
+#[doc = "`read()` method returns [`fiq_control::R`](R) reader structure"]
+impl crate::Readable for FIQ_CONTROL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`fiq_control::W`](W) writer structure"]
 impl crate::Writable for FIQ_CONTROL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

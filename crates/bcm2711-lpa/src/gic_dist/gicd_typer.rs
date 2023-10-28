@@ -1,26 +1,13 @@
 #[doc = "Register `GICD_TYPER` reader"]
-pub struct R(crate::R<GICD_TYPER_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_TYPER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_TYPER_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_TYPER_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_TYPER_SPEC>;
 #[doc = "Field `IT_LINES_NUMBER` reader - Interrupt line number"]
-pub type IT_LINES_NUMBER_R = crate::FieldReader<u8, u8>;
+pub type IT_LINES_NUMBER_R = crate::FieldReader;
 #[doc = "Field `CPU_NUMBER` reader - CPU number"]
-pub type CPU_NUMBER_R = crate::FieldReader<u8, u8>;
+pub type CPU_NUMBER_R = crate::FieldReader;
 #[doc = "Field `SECURITY_EXTENSION` reader - Security extension implemented"]
-pub type SECURITY_EXTENSION_R = crate::BitReader<bool>;
+pub type SECURITY_EXTENSION_R = crate::BitReader;
 #[doc = "Field `LSPI` reader - Lockable SPI count"]
-pub type LSPI_R = crate::FieldReader<u8, u8>;
+pub type LSPI_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4 - Interrupt line number"]
     #[inline(always)]
@@ -43,15 +30,34 @@ impl R {
         LSPI_R::new(((self.bits >> 11) & 0x0f) as u8)
     }
 }
-#[doc = "Interrupt Controller Type Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_typer](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_TYPER")
+            .field(
+                "it_lines_number",
+                &format_args!("{}", self.it_lines_number().bits()),
+            )
+            .field("cpu_number", &format_args!("{}", self.cpu_number().bits()))
+            .field(
+                "security_extension",
+                &format_args!("{}", self.security_extension().bit()),
+            )
+            .field("lspi", &format_args!("{}", self.lspi().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_TYPER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Interrupt Controller Type Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_typer::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_TYPER_SPEC;
 impl crate::RegisterSpec for GICD_TYPER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_typer::R](R) reader structure"]
-impl crate::Readable for GICD_TYPER_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gicd_typer::R`](R) reader structure"]
+impl crate::Readable for GICD_TYPER_SPEC {}
 #[doc = "`reset()` method sets GICD_TYPER to value 0"]
 impl crate::Resettable for GICD_TYPER_SPEC {
     const RESET_VALUE: Self::Ux = 0;

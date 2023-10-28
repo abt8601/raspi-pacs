@@ -9,12 +9,12 @@ jobs:
     strategy:
       matrix:
         mcu: [bcm2835, bcm2837, bcm2711]
-        rust-version: [1.61.0, 1.62.1, 1.63.0, 1.64.0, 1.65.0, 1.66.1, 1.67.1, 1.68.0]
+        rust-version: [1.65.0, 1.66.1, 1.67.1, 1.68.2, 1.69.0, 1.70.0, 1.71.1, 1.72.1, 1.73.0]
 
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install Rust
         run: rustup default ${{ matrix.rust-version }}

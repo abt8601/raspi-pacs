@@ -1,83 +1,51 @@
 #[doc = "Register `HCINT` reader"]
-pub struct R(crate::R<HCINT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCINT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCINT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCINT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCINT_SPEC>;
 #[doc = "Register `HCINT` writer"]
-pub struct W(crate::W<HCINT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCINT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCINT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCINT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCINT_SPEC>;
 #[doc = "Field `XFRC` reader - Transfer completed"]
-pub type XFRC_R = crate::BitReader<bool>;
+pub type XFRC_R = crate::BitReader;
 #[doc = "Field `XFRC` writer - Transfer completed"]
-pub type XFRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type XFRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CHH` reader - Channel halted"]
-pub type CHH_R = crate::BitReader<bool>;
+pub type CHH_R = crate::BitReader;
 #[doc = "Field `CHH` writer - Channel halted"]
-pub type CHH_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type CHH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `AHBERR` reader - AHB error"]
-pub type AHBERR_R = crate::BitReader<bool>;
+pub type AHBERR_R = crate::BitReader;
 #[doc = "Field `AHBERR` writer - AHB error"]
-pub type AHBERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type AHBERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STALL` reader - STALL response received interrupt"]
-pub type STALL_R = crate::BitReader<bool>;
+pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL response received interrupt"]
-pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NAK` reader - NAK response received interrupt"]
-pub type NAK_R = crate::BitReader<bool>;
+pub type NAK_R = crate::BitReader;
 #[doc = "Field `NAK` writer - NAK response received interrupt"]
-pub type NAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type NAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ACK` reader - ACK response received/transmitted interrupt"]
-pub type ACK_R = crate::BitReader<bool>;
+pub type ACK_R = crate::BitReader;
 #[doc = "Field `ACK` writer - ACK response received/transmitted interrupt"]
-pub type ACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NYET` reader - Response received interrupt"]
-pub type NYET_R = crate::BitReader<bool>;
+pub type NYET_R = crate::BitReader;
 #[doc = "Field `NYET` writer - Response received interrupt"]
-pub type NYET_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type NYET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXERR` reader - Transaction error"]
-pub type TXERR_R = crate::BitReader<bool>;
+pub type TXERR_R = crate::BitReader;
 #[doc = "Field `TXERR` writer - Transaction error"]
-pub type TXERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type TXERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BBERR` reader - Babble error"]
-pub type BBERR_R = crate::BitReader<bool>;
+pub type BBERR_R = crate::BitReader;
 #[doc = "Field `BBERR` writer - Babble error"]
-pub type BBERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type BBERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FRMOR` reader - Frame overrun"]
-pub type FRMOR_R = crate::BitReader<bool>;
+pub type FRMOR_R = crate::BitReader;
 #[doc = "Field `FRMOR` writer - Frame overrun"]
-pub type FRMOR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type FRMOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DTERR` reader - Data toggle error"]
-pub type DTERR_R = crate::BitReader<bool>;
+pub type DTERR_R = crate::BitReader;
 #[doc = "Field `DTERR` writer - Data toggle error"]
-pub type DTERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT_SPEC, bool, O>;
+pub type DTERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]
@@ -135,92 +103,115 @@ impl R {
         DTERR_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCINT")
+            .field("xfrc", &format_args!("{}", self.xfrc().bit()))
+            .field("chh", &format_args!("{}", self.chh().bit()))
+            .field("ahberr", &format_args!("{}", self.ahberr().bit()))
+            .field("stall", &format_args!("{}", self.stall().bit()))
+            .field("nak", &format_args!("{}", self.nak().bit()))
+            .field("ack", &format_args!("{}", self.ack().bit()))
+            .field("nyet", &format_args!("{}", self.nyet().bit()))
+            .field("txerr", &format_args!("{}", self.txerr().bit()))
+            .field("bberr", &format_args!("{}", self.bberr().bit()))
+            .field("frmor", &format_args!("{}", self.frmor().bit()))
+            .field("dterr", &format_args!("{}", self.dterr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrc(&mut self) -> XFRC_W<0> {
+    pub fn xfrc(&mut self) -> XFRC_W<HCINT_SPEC, 0> {
         XFRC_W::new(self)
     }
     #[doc = "Bit 1 - Channel halted"]
     #[inline(always)]
     #[must_use]
-    pub fn chh(&mut self) -> CHH_W<1> {
+    pub fn chh(&mut self) -> CHH_W<HCINT_SPEC, 1> {
         CHH_W::new(self)
     }
     #[doc = "Bit 2 - AHB error"]
     #[inline(always)]
     #[must_use]
-    pub fn ahberr(&mut self) -> AHBERR_W<2> {
+    pub fn ahberr(&mut self) -> AHBERR_W<HCINT_SPEC, 2> {
         AHBERR_W::new(self)
     }
     #[doc = "Bit 3 - STALL response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<3> {
+    pub fn stall(&mut self) -> STALL_W<HCINT_SPEC, 3> {
         STALL_W::new(self)
     }
     #[doc = "Bit 4 - NAK response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nak(&mut self) -> NAK_W<4> {
+    pub fn nak(&mut self) -> NAK_W<HCINT_SPEC, 4> {
         NAK_W::new(self)
     }
     #[doc = "Bit 5 - ACK response received/transmitted interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ack(&mut self) -> ACK_W<5> {
+    pub fn ack(&mut self) -> ACK_W<HCINT_SPEC, 5> {
         ACK_W::new(self)
     }
     #[doc = "Bit 6 - Response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nyet(&mut self) -> NYET_W<6> {
+    pub fn nyet(&mut self) -> NYET_W<HCINT_SPEC, 6> {
         NYET_W::new(self)
     }
     #[doc = "Bit 7 - Transaction error"]
     #[inline(always)]
     #[must_use]
-    pub fn txerr(&mut self) -> TXERR_W<7> {
+    pub fn txerr(&mut self) -> TXERR_W<HCINT_SPEC, 7> {
         TXERR_W::new(self)
     }
     #[doc = "Bit 8 - Babble error"]
     #[inline(always)]
     #[must_use]
-    pub fn bberr(&mut self) -> BBERR_W<8> {
+    pub fn bberr(&mut self) -> BBERR_W<HCINT_SPEC, 8> {
         BBERR_W::new(self)
     }
     #[doc = "Bit 9 - Frame overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn frmor(&mut self) -> FRMOR_W<9> {
+    pub fn frmor(&mut self) -> FRMOR_W<HCINT_SPEC, 9> {
         FRMOR_W::new(self)
     }
     #[doc = "Bit 10 - Data toggle error"]
     #[inline(always)]
     #[must_use]
-    pub fn dterr(&mut self) -> DTERR_W<10> {
+    pub fn dterr(&mut self) -> DTERR_W<HCINT_SPEC, 10> {
         DTERR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcint](index.html) module"]
+#[doc = "Interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcint::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcint::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCINT_SPEC;
 impl crate::RegisterSpec for HCINT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcint::R](R) reader structure"]
-impl crate::Readable for HCINT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hcint::W](W) writer structure"]
+#[doc = "`read()` method returns [`hcint::R`](R) reader structure"]
+impl crate::Readable for HCINT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hcint::W`](W) writer structure"]
 impl crate::Writable for HCINT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

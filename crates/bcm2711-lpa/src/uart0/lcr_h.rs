@@ -1,67 +1,35 @@
 #[doc = "Register `LCR_H` reader"]
-pub struct R(crate::R<LCR_H_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<LCR_H_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<LCR_H_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<LCR_H_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<LCR_H_SPEC>;
 #[doc = "Register `LCR_H` writer"]
-pub struct W(crate::W<LCR_H_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<LCR_H_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<LCR_H_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<LCR_H_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<LCR_H_SPEC>;
 #[doc = "Field `BRK` reader - BRK"]
-pub type BRK_R = crate::BitReader<bool>;
+pub type BRK_R = crate::BitReader;
 #[doc = "Field `BRK` writer - BRK"]
-pub type BRK_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCR_H_SPEC, bool, O>;
+pub type BRK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PEN` reader - PEN"]
-pub type PEN_R = crate::BitReader<bool>;
+pub type PEN_R = crate::BitReader;
 #[doc = "Field `PEN` writer - PEN"]
-pub type PEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCR_H_SPEC, bool, O>;
+pub type PEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EPS` reader - EPS"]
-pub type EPS_R = crate::BitReader<bool>;
+pub type EPS_R = crate::BitReader;
 #[doc = "Field `EPS` writer - EPS"]
-pub type EPS_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCR_H_SPEC, bool, O>;
+pub type EPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `STP2` reader - STP2"]
-pub type STP2_R = crate::BitReader<bool>;
+pub type STP2_R = crate::BitReader;
 #[doc = "Field `STP2` writer - STP2"]
-pub type STP2_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCR_H_SPEC, bool, O>;
+pub type STP2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FEN` reader - FEN"]
-pub type FEN_R = crate::BitReader<bool>;
+pub type FEN_R = crate::BitReader;
 #[doc = "Field `FEN` writer - FEN"]
-pub type FEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCR_H_SPEC, bool, O>;
+pub type FEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WLEN` reader - WLEN"]
-pub type WLEN_R = crate::FieldReader<u8, u8>;
+pub type WLEN_R = crate::FieldReader;
 #[doc = "Field `WLEN` writer - WLEN"]
-pub type WLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCR_H_SPEC, u8, u8, 2, O>;
+pub type WLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `SPS` reader - SPS"]
-pub type SPS_R = crate::BitReader<bool>;
+pub type SPS_R = crate::BitReader;
 #[doc = "Field `SPS` writer - SPS"]
-pub type SPS_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCR_H_SPEC, bool, O>;
+pub type SPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - BRK"]
     #[inline(always)]
@@ -99,68 +67,87 @@ impl R {
         SPS_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCR_H")
+            .field("brk", &format_args!("{}", self.brk().bit()))
+            .field("pen", &format_args!("{}", self.pen().bit()))
+            .field("eps", &format_args!("{}", self.eps().bit()))
+            .field("stp2", &format_args!("{}", self.stp2().bit()))
+            .field("fen", &format_args!("{}", self.fen().bit()))
+            .field("wlen", &format_args!("{}", self.wlen().bits()))
+            .field("sps", &format_args!("{}", self.sps().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<LCR_H_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - BRK"]
     #[inline(always)]
     #[must_use]
-    pub fn brk(&mut self) -> BRK_W<0> {
+    pub fn brk(&mut self) -> BRK_W<LCR_H_SPEC, 0> {
         BRK_W::new(self)
     }
     #[doc = "Bit 1 - PEN"]
     #[inline(always)]
     #[must_use]
-    pub fn pen(&mut self) -> PEN_W<1> {
+    pub fn pen(&mut self) -> PEN_W<LCR_H_SPEC, 1> {
         PEN_W::new(self)
     }
     #[doc = "Bit 2 - EPS"]
     #[inline(always)]
     #[must_use]
-    pub fn eps(&mut self) -> EPS_W<2> {
+    pub fn eps(&mut self) -> EPS_W<LCR_H_SPEC, 2> {
         EPS_W::new(self)
     }
     #[doc = "Bit 3 - STP2"]
     #[inline(always)]
     #[must_use]
-    pub fn stp2(&mut self) -> STP2_W<3> {
+    pub fn stp2(&mut self) -> STP2_W<LCR_H_SPEC, 3> {
         STP2_W::new(self)
     }
     #[doc = "Bit 4 - FEN"]
     #[inline(always)]
     #[must_use]
-    pub fn fen(&mut self) -> FEN_W<4> {
+    pub fn fen(&mut self) -> FEN_W<LCR_H_SPEC, 4> {
         FEN_W::new(self)
     }
     #[doc = "Bits 5:6 - WLEN"]
     #[inline(always)]
     #[must_use]
-    pub fn wlen(&mut self) -> WLEN_W<5> {
+    pub fn wlen(&mut self) -> WLEN_W<LCR_H_SPEC, 5> {
         WLEN_W::new(self)
     }
     #[doc = "Bit 7 - SPS"]
     #[inline(always)]
     #[must_use]
-    pub fn sps(&mut self) -> SPS_W<7> {
+    pub fn sps(&mut self) -> SPS_W<LCR_H_SPEC, 7> {
         SPS_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Line Control Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcr_h](index.html) module"]
+#[doc = "Line Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcr_h::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcr_h::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCR_H_SPEC;
 impl crate::RegisterSpec for LCR_H_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcr_h::R](R) reader structure"]
-impl crate::Readable for LCR_H_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [lcr_h::W](W) writer structure"]
+#[doc = "`read()` method returns [`lcr_h::R`](R) reader structure"]
+impl crate::Readable for LCR_H_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`lcr_h::W`](W) writer structure"]
 impl crate::Writable for LCR_H_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

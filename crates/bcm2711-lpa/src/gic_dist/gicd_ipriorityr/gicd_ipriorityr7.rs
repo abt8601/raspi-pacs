@@ -1,59 +1,23 @@
 #[doc = "Register `GICD_IPRIORITYR7` reader"]
-pub struct R(crate::R<GICD_IPRIORITYR7_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_IPRIORITYR7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_IPRIORITYR7_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_IPRIORITYR7_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_IPRIORITYR7_SPEC>;
 #[doc = "Register `GICD_IPRIORITYR7` writer"]
-pub struct W(crate::W<GICD_IPRIORITYR7_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICD_IPRIORITYR7_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICD_IPRIORITYR7_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICD_IPRIORITYR7_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICD_IPRIORITYR7_SPEC>;
 #[doc = "Field `INT28` reader - Interrupt 28"]
-pub type INT28_R = crate::FieldReader<u8, u8>;
+pub type INT28_R = crate::FieldReader;
 #[doc = "Field `INT28` writer - Interrupt 28"]
-pub type INT28_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_IPRIORITYR7_SPEC, u8, u8, 8, O>;
+pub type INT28_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `INT29` reader - Interrupt 29"]
-pub type INT29_R = crate::FieldReader<u8, u8>;
+pub type INT29_R = crate::FieldReader;
 #[doc = "Field `INT29` writer - Interrupt 29"]
-pub type INT29_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_IPRIORITYR7_SPEC, u8, u8, 8, O>;
+pub type INT29_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `INT30` reader - Interrupt 30"]
-pub type INT30_R = crate::FieldReader<u8, u8>;
+pub type INT30_R = crate::FieldReader;
 #[doc = "Field `INT30` writer - Interrupt 30"]
-pub type INT30_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_IPRIORITYR7_SPEC, u8, u8, 8, O>;
+pub type INT30_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `INT31` reader - Interrupt 31"]
-pub type INT31_R = crate::FieldReader<u8, u8>;
+pub type INT31_R = crate::FieldReader;
 #[doc = "Field `INT31` writer - Interrupt 31"]
-pub type INT31_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_IPRIORITYR7_SPEC, u8, u8, 8, O>;
+pub type INT31_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Interrupt 28"]
     #[inline(always)]
@@ -76,50 +40,66 @@ impl R {
         INT31_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_IPRIORITYR7")
+            .field("int28", &format_args!("{}", self.int28().bits()))
+            .field("int29", &format_args!("{}", self.int29().bits()))
+            .field("int30", &format_args!("{}", self.int30().bits()))
+            .field("int31", &format_args!("{}", self.int31().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Interrupt 28"]
     #[inline(always)]
     #[must_use]
-    pub fn int28(&mut self) -> INT28_W<0> {
+    pub fn int28(&mut self) -> INT28_W<GICD_IPRIORITYR7_SPEC, 0> {
         INT28_W::new(self)
     }
     #[doc = "Bits 8:15 - Interrupt 29"]
     #[inline(always)]
     #[must_use]
-    pub fn int29(&mut self) -> INT29_W<8> {
+    pub fn int29(&mut self) -> INT29_W<GICD_IPRIORITYR7_SPEC, 8> {
         INT29_W::new(self)
     }
     #[doc = "Bits 16:23 - Interrupt 30"]
     #[inline(always)]
     #[must_use]
-    pub fn int30(&mut self) -> INT30_W<16> {
+    pub fn int30(&mut self) -> INT30_W<GICD_IPRIORITYR7_SPEC, 16> {
         INT30_W::new(self)
     }
     #[doc = "Bits 24:31 - Interrupt 31"]
     #[inline(always)]
     #[must_use]
-    pub fn int31(&mut self) -> INT31_W<24> {
+    pub fn int31(&mut self) -> INT31_W<GICD_IPRIORITYR7_SPEC, 24> {
         INT31_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Priority 28 - 31 (Lower is first)\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_ipriorityr7](index.html) module"]
+#[doc = "Interrupt Priority 28 - 31 (Lower is first)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_ipriorityr7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_ipriorityr7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_IPRIORITYR7_SPEC;
 impl crate::RegisterSpec for GICD_IPRIORITYR7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_ipriorityr7::R](R) reader structure"]
-impl crate::Readable for GICD_IPRIORITYR7_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicd_ipriorityr7::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicd_ipriorityr7::R`](R) reader structure"]
+impl crate::Readable for GICD_IPRIORITYR7_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicd_ipriorityr7::W`](W) writer structure"]
 impl crate::Writable for GICD_IPRIORITYR7_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

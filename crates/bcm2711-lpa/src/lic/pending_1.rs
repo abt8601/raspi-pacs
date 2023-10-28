@@ -1,82 +1,69 @@
 #[doc = "Register `PENDING_1` reader"]
-pub struct R(crate::R<PENDING_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PENDING_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PENDING_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PENDING_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PENDING_1_SPEC>;
 #[doc = "Field `INT0` reader - Interrupt 0"]
-pub type INT0_R = crate::BitReader<bool>;
+pub type INT0_R = crate::BitReader;
 #[doc = "Field `INT1` reader - Interrupt 1"]
-pub type INT1_R = crate::BitReader<bool>;
+pub type INT1_R = crate::BitReader;
 #[doc = "Field `INT2` reader - Interrupt 2"]
-pub type INT2_R = crate::BitReader<bool>;
+pub type INT2_R = crate::BitReader;
 #[doc = "Field `INT3` reader - Interrupt 3"]
-pub type INT3_R = crate::BitReader<bool>;
+pub type INT3_R = crate::BitReader;
 #[doc = "Field `INT4` reader - Interrupt 4"]
-pub type INT4_R = crate::BitReader<bool>;
+pub type INT4_R = crate::BitReader;
 #[doc = "Field `INT5` reader - Interrupt 5"]
-pub type INT5_R = crate::BitReader<bool>;
+pub type INT5_R = crate::BitReader;
 #[doc = "Field `INT6` reader - Interrupt 6"]
-pub type INT6_R = crate::BitReader<bool>;
+pub type INT6_R = crate::BitReader;
 #[doc = "Field `INT7` reader - Interrupt 7"]
-pub type INT7_R = crate::BitReader<bool>;
+pub type INT7_R = crate::BitReader;
 #[doc = "Field `INT8` reader - Interrupt 8"]
-pub type INT8_R = crate::BitReader<bool>;
+pub type INT8_R = crate::BitReader;
 #[doc = "Field `INT9` reader - Interrupt 9"]
-pub type INT9_R = crate::BitReader<bool>;
+pub type INT9_R = crate::BitReader;
 #[doc = "Field `INT10` reader - Interrupt 10"]
-pub type INT10_R = crate::BitReader<bool>;
+pub type INT10_R = crate::BitReader;
 #[doc = "Field `INT11` reader - Interrupt 11"]
-pub type INT11_R = crate::BitReader<bool>;
+pub type INT11_R = crate::BitReader;
 #[doc = "Field `INT12` reader - Interrupt 12"]
-pub type INT12_R = crate::BitReader<bool>;
+pub type INT12_R = crate::BitReader;
 #[doc = "Field `INT13` reader - Interrupt 13"]
-pub type INT13_R = crate::BitReader<bool>;
+pub type INT13_R = crate::BitReader;
 #[doc = "Field `INT14` reader - Interrupt 14"]
-pub type INT14_R = crate::BitReader<bool>;
+pub type INT14_R = crate::BitReader;
 #[doc = "Field `INT15` reader - Interrupt 15"]
-pub type INT15_R = crate::BitReader<bool>;
+pub type INT15_R = crate::BitReader;
 #[doc = "Field `INT16` reader - Interrupt 16"]
-pub type INT16_R = crate::BitReader<bool>;
+pub type INT16_R = crate::BitReader;
 #[doc = "Field `INT17` reader - Interrupt 17"]
-pub type INT17_R = crate::BitReader<bool>;
+pub type INT17_R = crate::BitReader;
 #[doc = "Field `INT18` reader - Interrupt 18"]
-pub type INT18_R = crate::BitReader<bool>;
+pub type INT18_R = crate::BitReader;
 #[doc = "Field `INT19` reader - Interrupt 19"]
-pub type INT19_R = crate::BitReader<bool>;
+pub type INT19_R = crate::BitReader;
 #[doc = "Field `INT20` reader - Interrupt 20"]
-pub type INT20_R = crate::BitReader<bool>;
+pub type INT20_R = crate::BitReader;
 #[doc = "Field `INT21` reader - Interrupt 21"]
-pub type INT21_R = crate::BitReader<bool>;
+pub type INT21_R = crate::BitReader;
 #[doc = "Field `INT22` reader - Interrupt 22"]
-pub type INT22_R = crate::BitReader<bool>;
+pub type INT22_R = crate::BitReader;
 #[doc = "Field `INT23` reader - Interrupt 23"]
-pub type INT23_R = crate::BitReader<bool>;
+pub type INT23_R = crate::BitReader;
 #[doc = "Field `INT24` reader - Interrupt 24"]
-pub type INT24_R = crate::BitReader<bool>;
+pub type INT24_R = crate::BitReader;
 #[doc = "Field `INT25` reader - Interrupt 25"]
-pub type INT25_R = crate::BitReader<bool>;
+pub type INT25_R = crate::BitReader;
 #[doc = "Field `INT26` reader - Interrupt 26"]
-pub type INT26_R = crate::BitReader<bool>;
+pub type INT26_R = crate::BitReader;
 #[doc = "Field `INT27` reader - Interrupt 27"]
-pub type INT27_R = crate::BitReader<bool>;
+pub type INT27_R = crate::BitReader;
 #[doc = "Field `INT28` reader - Interrupt 28"]
-pub type INT28_R = crate::BitReader<bool>;
+pub type INT28_R = crate::BitReader;
 #[doc = "Field `INT29` reader - Interrupt 29"]
-pub type INT29_R = crate::BitReader<bool>;
+pub type INT29_R = crate::BitReader;
 #[doc = "Field `INT30` reader - Interrupt 30"]
-pub type INT30_R = crate::BitReader<bool>;
+pub type INT30_R = crate::BitReader;
 #[doc = "Field `INT31` reader - Interrupt 31"]
-pub type INT31_R = crate::BitReader<bool>;
+pub type INT31_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Interrupt 0"]
     #[inline(always)]
@@ -239,15 +226,56 @@ impl R {
         INT31_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Pending state for interrupts 1 - 31\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pending_1](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PENDING_1")
+            .field("int0", &format_args!("{}", self.int0().bit()))
+            .field("int1", &format_args!("{}", self.int1().bit()))
+            .field("int2", &format_args!("{}", self.int2().bit()))
+            .field("int3", &format_args!("{}", self.int3().bit()))
+            .field("int4", &format_args!("{}", self.int4().bit()))
+            .field("int5", &format_args!("{}", self.int5().bit()))
+            .field("int6", &format_args!("{}", self.int6().bit()))
+            .field("int7", &format_args!("{}", self.int7().bit()))
+            .field("int8", &format_args!("{}", self.int8().bit()))
+            .field("int9", &format_args!("{}", self.int9().bit()))
+            .field("int10", &format_args!("{}", self.int10().bit()))
+            .field("int11", &format_args!("{}", self.int11().bit()))
+            .field("int12", &format_args!("{}", self.int12().bit()))
+            .field("int13", &format_args!("{}", self.int13().bit()))
+            .field("int14", &format_args!("{}", self.int14().bit()))
+            .field("int15", &format_args!("{}", self.int15().bit()))
+            .field("int16", &format_args!("{}", self.int16().bit()))
+            .field("int17", &format_args!("{}", self.int17().bit()))
+            .field("int18", &format_args!("{}", self.int18().bit()))
+            .field("int19", &format_args!("{}", self.int19().bit()))
+            .field("int20", &format_args!("{}", self.int20().bit()))
+            .field("int21", &format_args!("{}", self.int21().bit()))
+            .field("int22", &format_args!("{}", self.int22().bit()))
+            .field("int23", &format_args!("{}", self.int23().bit()))
+            .field("int24", &format_args!("{}", self.int24().bit()))
+            .field("int25", &format_args!("{}", self.int25().bit()))
+            .field("int26", &format_args!("{}", self.int26().bit()))
+            .field("int27", &format_args!("{}", self.int27().bit()))
+            .field("int28", &format_args!("{}", self.int28().bit()))
+            .field("int29", &format_args!("{}", self.int29().bit()))
+            .field("int30", &format_args!("{}", self.int30().bit()))
+            .field("int31", &format_args!("{}", self.int31().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PENDING_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Pending state for interrupts 1 - 31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pending_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PENDING_1_SPEC;
 impl crate::RegisterSpec for PENDING_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pending_1::R](R) reader structure"]
-impl crate::Readable for PENDING_1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`pending_1::R`](R) reader structure"]
+impl crate::Readable for PENDING_1_SPEC {}
 #[doc = "`reset()` method sets PENDING_1 to value 0"]
 impl crate::Resettable for PENDING_1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

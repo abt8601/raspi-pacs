@@ -1,9 +1,9 @@
 [package]
 name = "bcm2711-lpa"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Po-Yi Tsai <abt8601@protonmail.ch>"]
 edition = "2021"
-rust-version = "1.61.0"
+rust-version = "1.65.0"
 description = "Peripheral access crate for BCM2711 found in the Raspberry Pi 4."
 repository = "https://github.com/abt8601/raspi-pacs"
 license = "Unlicense"

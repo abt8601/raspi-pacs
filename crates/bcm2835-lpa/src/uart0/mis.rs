@@ -1,40 +1,27 @@
 #[doc = "Register `MIS` reader"]
-pub struct R(crate::R<MIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MIS_SPEC>;
 #[doc = "Field `RIMMIS` reader - RIMMIS"]
-pub type RIMMIS_R = crate::BitReader<bool>;
+pub type RIMMIS_R = crate::BitReader;
 #[doc = "Field `CTSMMIS` reader - CTSMMIS"]
-pub type CTSMMIS_R = crate::BitReader<bool>;
+pub type CTSMMIS_R = crate::BitReader;
 #[doc = "Field `DCDMMIS` reader - DCDMMIS"]
-pub type DCDMMIS_R = crate::BitReader<bool>;
+pub type DCDMMIS_R = crate::BitReader;
 #[doc = "Field `DSRMMIS` reader - DSRMMIS"]
-pub type DSRMMIS_R = crate::BitReader<bool>;
+pub type DSRMMIS_R = crate::BitReader;
 #[doc = "Field `RXMIS` reader - RXMIS"]
-pub type RXMIS_R = crate::BitReader<bool>;
+pub type RXMIS_R = crate::BitReader;
 #[doc = "Field `TXMIS` reader - TXMIS"]
-pub type TXMIS_R = crate::BitReader<bool>;
+pub type TXMIS_R = crate::BitReader;
 #[doc = "Field `RTMIS` reader - RTMIS"]
-pub type RTMIS_R = crate::BitReader<bool>;
+pub type RTMIS_R = crate::BitReader;
 #[doc = "Field `FEMIS` reader - FEMIS"]
-pub type FEMIS_R = crate::BitReader<bool>;
+pub type FEMIS_R = crate::BitReader;
 #[doc = "Field `PEMIS` reader - PEMIS"]
-pub type PEMIS_R = crate::BitReader<bool>;
+pub type PEMIS_R = crate::BitReader;
 #[doc = "Field `BEMIS` reader - BEMIS"]
-pub type BEMIS_R = crate::BitReader<bool>;
+pub type BEMIS_R = crate::BitReader;
 #[doc = "Field `OEMIS` reader - OEMIS"]
-pub type OEMIS_R = crate::BitReader<bool>;
+pub type OEMIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - RIMMIS"]
     #[inline(always)]
@@ -92,15 +79,35 @@ impl R {
         OEMIS_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
-#[doc = "Masked Interrupt Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mis](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MIS")
+            .field("rimmis", &format_args!("{}", self.rimmis().bit()))
+            .field("ctsmmis", &format_args!("{}", self.ctsmmis().bit()))
+            .field("dcdmmis", &format_args!("{}", self.dcdmmis().bit()))
+            .field("dsrmmis", &format_args!("{}", self.dsrmmis().bit()))
+            .field("rxmis", &format_args!("{}", self.rxmis().bit()))
+            .field("txmis", &format_args!("{}", self.txmis().bit()))
+            .field("rtmis", &format_args!("{}", self.rtmis().bit()))
+            .field("femis", &format_args!("{}", self.femis().bit()))
+            .field("pemis", &format_args!("{}", self.pemis().bit()))
+            .field("bemis", &format_args!("{}", self.bemis().bit()))
+            .field("oemis", &format_args!("{}", self.oemis().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MIS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Masked Interrupt Status Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MIS_SPEC;
 impl crate::RegisterSpec for MIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mis::R](R) reader structure"]
-impl crate::Readable for MIS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`mis::R`](R) reader structure"]
+impl crate::Readable for MIS_SPEC {}
 #[doc = "`reset()` method sets MIS to value 0"]
 impl crate::Resettable for MIS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

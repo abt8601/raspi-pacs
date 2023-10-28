@@ -1,51 +1,19 @@
 #[doc = "Register `IIR` reader"]
-pub struct R(crate::R<IIR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IIR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IIR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IIR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IIR_SPEC>;
 #[doc = "Register `IIR` writer"]
-pub struct W(crate::W<IIR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IIR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IIR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IIR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IIR_SPEC>;
 #[doc = "Field `nPENDING` reader - No pending interrupt"]
-pub type N_PENDING_R = crate::BitReader<bool>;
+pub type N_PENDING_R = crate::BitReader;
 #[doc = "Field `nPENDING` writer - No pending interrupt"]
-pub type N_PENDING_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIR_SPEC, bool, O>;
+pub type N_PENDING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DATA_READY` reader - Receive FIFO has at least 1 byte"]
-pub type DATA_READY_R = crate::BitReader<bool>;
+pub type DATA_READY_R = crate::BitReader;
 #[doc = "Field `DATA_READY` writer - Receive FIFO has at least 1 byte"]
-pub type DATA_READY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIR_SPEC, bool, O>;
+pub type DATA_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TX_READY` reader - Transmit FIFO is empty"]
-pub type TX_READY_R = crate::BitReader<bool>;
+pub type TX_READY_R = crate::BitReader;
 #[doc = "Field `TX_READY` writer - Transmit FIFO is empty"]
-pub type TX_READY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IIR_SPEC, bool, O>;
+pub type TX_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - No pending interrupt"]
     #[inline(always)]
@@ -63,44 +31,59 @@ impl R {
         TX_READY_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IIR")
+            .field("tx_ready", &format_args!("{}", self.tx_ready().bit()))
+            .field("data_ready", &format_args!("{}", self.data_ready().bit()))
+            .field("n_pending", &format_args!("{}", self.n_pending().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IIR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - No pending interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn n_pending(&mut self) -> N_PENDING_W<0> {
+    pub fn n_pending(&mut self) -> N_PENDING_W<IIR_SPEC, 0> {
         N_PENDING_W::new(self)
     }
     #[doc = "Bit 1 - Receive FIFO has at least 1 byte"]
     #[inline(always)]
     #[must_use]
-    pub fn data_ready(&mut self) -> DATA_READY_W<1> {
+    pub fn data_ready(&mut self) -> DATA_READY_W<IIR_SPEC, 1> {
         DATA_READY_W::new(self)
     }
     #[doc = "Bit 2 - Transmit FIFO is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ready(&mut self) -> TX_READY_W<2> {
+    pub fn tx_ready(&mut self) -> TX_READY_W<IIR_SPEC, 2> {
         TX_READY_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Identify\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [iir](index.html) module"]
+#[doc = "Interrupt Identify\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iir::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iir::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IIR_SPEC;
 impl crate::RegisterSpec for IIR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [iir::R](R) reader structure"]
-impl crate::Readable for IIR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [iir::W](W) writer structure"]
+#[doc = "`read()` method returns [`iir::R`](R) reader structure"]
+impl crate::Readable for IIR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`iir::W`](W) writer structure"]
 impl crate::Writable for IIR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

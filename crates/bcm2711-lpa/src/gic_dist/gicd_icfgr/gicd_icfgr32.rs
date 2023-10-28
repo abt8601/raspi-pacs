@@ -1,39 +1,7 @@
 #[doc = "Register `GICD_ICFGR32` reader"]
-pub struct R(crate::R<GICD_ICFGR32_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_ICFGR32_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_ICFGR32_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_ICFGR32_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_ICFGR32_SPEC>;
 #[doc = "Register `GICD_ICFGR32` writer"]
-pub struct W(crate::W<GICD_ICFGR32_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICD_ICFGR32_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICD_ICFGR32_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICD_ICFGR32_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICD_ICFGR32_SPEC>;
 #[doc = "Field `HDMI_CEC` reader - HDMI CEC"]
 pub type HDMI_CEC_R = crate::BitReader<HDMI_CEC_A>;
 #[doc = "HDMI CEC\n\nValue on reset: 0"]
@@ -53,34 +21,37 @@ impl From<HDMI_CEC_A> for bool {
 impl HDMI_CEC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDMI_CEC_A {
+    pub const fn variant(&self) -> HDMI_CEC_A {
         match self.bits {
             false => HDMI_CEC_A::LEVEL,
             true => HDMI_CEC_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == HDMI_CEC_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == HDMI_CEC_A::EDGE
     }
 }
 #[doc = "Field `HDMI_CEC` writer - HDMI CEC"]
-pub type HDMI_CEC_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, HDMI_CEC_A, O>;
-impl<'a, const O: u8> HDMI_CEC_W<'a, O> {
+pub type HDMI_CEC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDMI_CEC_A>;
+impl<'a, REG, const O: u8> HDMI_CEC_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(HDMI_CEC_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(HDMI_CEC_A::EDGE)
     }
 }
@@ -103,34 +74,37 @@ impl From<HVS_A> for bool {
 impl HVS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HVS_A {
+    pub const fn variant(&self) -> HVS_A {
         match self.bits {
             false => HVS_A::LEVEL,
             true => HVS_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == HVS_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == HVS_A::EDGE
     }
 }
 #[doc = "Field `HVS` writer - HVS"]
-pub type HVS_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, HVS_A, O>;
-impl<'a, const O: u8> HVS_W<'a, O> {
+pub type HVS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HVS_A>;
+impl<'a, REG, const O: u8> HVS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(HVS_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(HVS_A::EDGE)
     }
 }
@@ -153,34 +127,37 @@ impl From<RPIVID_A> for bool {
 impl RPIVID_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RPIVID_A {
+    pub const fn variant(&self) -> RPIVID_A {
         match self.bits {
             false => RPIVID_A::LEVEL,
             true => RPIVID_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == RPIVID_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == RPIVID_A::EDGE
     }
 }
 #[doc = "Field `RPIVID` writer - RPIVID"]
-pub type RPIVID_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, RPIVID_A, O>;
-impl<'a, const O: u8> RPIVID_W<'a, O> {
+pub type RPIVID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RPIVID_A>;
+impl<'a, REG, const O: u8> RPIVID_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(RPIVID_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(RPIVID_A::EDGE)
     }
 }
@@ -203,34 +180,37 @@ impl From<SDC_A> for bool {
 impl SDC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SDC_A {
+    pub const fn variant(&self) -> SDC_A {
         match self.bits {
             false => SDC_A::LEVEL,
             true => SDC_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == SDC_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == SDC_A::EDGE
     }
 }
 #[doc = "Field `SDC` writer - SDC"]
-pub type SDC_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, SDC_A, O>;
-impl<'a, const O: u8> SDC_W<'a, O> {
+pub type SDC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SDC_A>;
+impl<'a, REG, const O: u8> SDC_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(SDC_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(SDC_A::EDGE)
     }
 }
@@ -253,34 +233,37 @@ impl From<DSI_0_A> for bool {
 impl DSI_0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DSI_0_A {
+    pub const fn variant(&self) -> DSI_0_A {
         match self.bits {
             false => DSI_0_A::LEVEL,
             true => DSI_0_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DSI_0_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DSI_0_A::EDGE
     }
 }
 #[doc = "Field `DSI_0` writer - DSI 0"]
-pub type DSI_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, DSI_0_A, O>;
-impl<'a, const O: u8> DSI_0_W<'a, O> {
+pub type DSI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DSI_0_A>;
+impl<'a, REG, const O: u8> DSI_0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DSI_0_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DSI_0_A::EDGE)
     }
 }
@@ -303,35 +286,37 @@ impl From<PIXEL_VALVE_2_A> for bool {
 impl PIXEL_VALVE_2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PIXEL_VALVE_2_A {
+    pub const fn variant(&self) -> PIXEL_VALVE_2_A {
         match self.bits {
             false => PIXEL_VALVE_2_A::LEVEL,
             true => PIXEL_VALVE_2_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == PIXEL_VALVE_2_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == PIXEL_VALVE_2_A::EDGE
     }
 }
 #[doc = "Field `PIXEL_VALVE_2` writer - Pixel Valve 2"]
-pub type PIXEL_VALVE_2_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, PIXEL_VALVE_2_A, O>;
-impl<'a, const O: u8> PIXEL_VALVE_2_W<'a, O> {
+pub type PIXEL_VALVE_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_2_A>;
+impl<'a, REG, const O: u8> PIXEL_VALVE_2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_2_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_2_A::EDGE)
     }
 }
@@ -354,34 +339,37 @@ impl From<CAMERA_0_A> for bool {
 impl CAMERA_0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CAMERA_0_A {
+    pub const fn variant(&self) -> CAMERA_0_A {
         match self.bits {
             false => CAMERA_0_A::LEVEL,
             true => CAMERA_0_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == CAMERA_0_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == CAMERA_0_A::EDGE
     }
 }
 #[doc = "Field `CAMERA_0` writer - Camera 0"]
-pub type CAMERA_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, CAMERA_0_A, O>;
-impl<'a, const O: u8> CAMERA_0_W<'a, O> {
+pub type CAMERA_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CAMERA_0_A>;
+impl<'a, REG, const O: u8> CAMERA_0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(CAMERA_0_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(CAMERA_0_A::EDGE)
     }
 }
@@ -404,34 +392,37 @@ impl From<CAMERA_1_A> for bool {
 impl CAMERA_1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CAMERA_1_A {
+    pub const fn variant(&self) -> CAMERA_1_A {
         match self.bits {
             false => CAMERA_1_A::LEVEL,
             true => CAMERA_1_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == CAMERA_1_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == CAMERA_1_A::EDGE
     }
 }
 #[doc = "Field `CAMERA_1` writer - Camera 1"]
-pub type CAMERA_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, CAMERA_1_A, O>;
-impl<'a, const O: u8> CAMERA_1_W<'a, O> {
+pub type CAMERA_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CAMERA_1_A>;
+impl<'a, REG, const O: u8> CAMERA_1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(CAMERA_1_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(CAMERA_1_A::EDGE)
     }
 }
@@ -454,34 +445,37 @@ impl From<HDMI_0_A> for bool {
 impl HDMI_0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDMI_0_A {
+    pub const fn variant(&self) -> HDMI_0_A {
         match self.bits {
             false => HDMI_0_A::LEVEL,
             true => HDMI_0_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == HDMI_0_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == HDMI_0_A::EDGE
     }
 }
 #[doc = "Field `HDMI_0` writer - HDMI 0"]
-pub type HDMI_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, HDMI_0_A, O>;
-impl<'a, const O: u8> HDMI_0_W<'a, O> {
+pub type HDMI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDMI_0_A>;
+impl<'a, REG, const O: u8> HDMI_0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(HDMI_0_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(HDMI_0_A::EDGE)
     }
 }
@@ -504,34 +498,37 @@ impl From<HDMI_1_A> for bool {
 impl HDMI_1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDMI_1_A {
+    pub const fn variant(&self) -> HDMI_1_A {
         match self.bits {
             false => HDMI_1_A::LEVEL,
             true => HDMI_1_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == HDMI_1_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == HDMI_1_A::EDGE
     }
 }
 #[doc = "Field `HDMI_1` writer - HDMI 1"]
-pub type HDMI_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, HDMI_1_A, O>;
-impl<'a, const O: u8> HDMI_1_W<'a, O> {
+pub type HDMI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDMI_1_A>;
+impl<'a, REG, const O: u8> HDMI_1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(HDMI_1_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(HDMI_1_A::EDGE)
     }
 }
@@ -554,35 +551,37 @@ impl From<PIXEL_VALVE_3_A> for bool {
 impl PIXEL_VALVE_3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PIXEL_VALVE_3_A {
+    pub const fn variant(&self) -> PIXEL_VALVE_3_A {
         match self.bits {
             false => PIXEL_VALVE_3_A::LEVEL,
             true => PIXEL_VALVE_3_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == PIXEL_VALVE_3_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == PIXEL_VALVE_3_A::EDGE
     }
 }
 #[doc = "Field `PIXEL_VALVE_3` writer - Pixel Valve 3"]
-pub type PIXEL_VALVE_3_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, PIXEL_VALVE_3_A, O>;
-impl<'a, const O: u8> PIXEL_VALVE_3_W<'a, O> {
+pub type PIXEL_VALVE_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_3_A>;
+impl<'a, REG, const O: u8> PIXEL_VALVE_3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_3_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_3_A::EDGE)
     }
 }
@@ -605,35 +604,37 @@ impl From<SPI_BSC_SLAVE_A> for bool {
 impl SPI_BSC_SLAVE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SPI_BSC_SLAVE_A {
+    pub const fn variant(&self) -> SPI_BSC_SLAVE_A {
         match self.bits {
             false => SPI_BSC_SLAVE_A::LEVEL,
             true => SPI_BSC_SLAVE_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == SPI_BSC_SLAVE_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == SPI_BSC_SLAVE_A::EDGE
     }
 }
 #[doc = "Field `SPI_BSC_SLAVE` writer - SPI/BSC Slave"]
-pub type SPI_BSC_SLAVE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, SPI_BSC_SLAVE_A, O>;
-impl<'a, const O: u8> SPI_BSC_SLAVE_W<'a, O> {
+pub type SPI_BSC_SLAVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SPI_BSC_SLAVE_A>;
+impl<'a, REG, const O: u8> SPI_BSC_SLAVE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(SPI_BSC_SLAVE_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(SPI_BSC_SLAVE_A::EDGE)
     }
 }
@@ -656,34 +657,37 @@ impl From<DSI_1_A> for bool {
 impl DSI_1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DSI_1_A {
+    pub const fn variant(&self) -> DSI_1_A {
         match self.bits {
             false => DSI_1_A::LEVEL,
             true => DSI_1_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DSI_1_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DSI_1_A::EDGE
     }
 }
 #[doc = "Field `DSI_1` writer - DSI 1"]
-pub type DSI_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, DSI_1_A, O>;
-impl<'a, const O: u8> DSI_1_W<'a, O> {
+pub type DSI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DSI_1_A>;
+impl<'a, REG, const O: u8> DSI_1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DSI_1_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DSI_1_A::EDGE)
     }
 }
@@ -706,35 +710,37 @@ impl From<PIXEL_VALVE_0_A> for bool {
 impl PIXEL_VALVE_0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PIXEL_VALVE_0_A {
+    pub const fn variant(&self) -> PIXEL_VALVE_0_A {
         match self.bits {
             false => PIXEL_VALVE_0_A::LEVEL,
             true => PIXEL_VALVE_0_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == PIXEL_VALVE_0_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == PIXEL_VALVE_0_A::EDGE
     }
 }
 #[doc = "Field `PIXEL_VALVE_0` writer - Pixel Valve 0"]
-pub type PIXEL_VALVE_0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, PIXEL_VALVE_0_A, O>;
-impl<'a, const O: u8> PIXEL_VALVE_0_W<'a, O> {
+pub type PIXEL_VALVE_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_0_A>;
+impl<'a, REG, const O: u8> PIXEL_VALVE_0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_0_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_0_A::EDGE)
     }
 }
@@ -757,35 +763,37 @@ impl From<PIXEL_VALVE_1_2_A> for bool {
 impl PIXEL_VALVE_1_2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PIXEL_VALVE_1_2_A {
+    pub const fn variant(&self) -> PIXEL_VALVE_1_2_A {
         match self.bits {
             false => PIXEL_VALVE_1_2_A::LEVEL,
             true => PIXEL_VALVE_1_2_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == PIXEL_VALVE_1_2_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == PIXEL_VALVE_1_2_A::EDGE
     }
 }
 #[doc = "Field `PIXEL_VALVE_1_2` writer - OR of Pixel Valve 1 and 2"]
-pub type PIXEL_VALVE_1_2_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, PIXEL_VALVE_1_2_A, O>;
-impl<'a, const O: u8> PIXEL_VALVE_1_2_W<'a, O> {
+pub type PIXEL_VALVE_1_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_1_2_A>;
+impl<'a, REG, const O: u8> PIXEL_VALVE_1_2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_1_2_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(PIXEL_VALVE_1_2_A::EDGE)
     }
 }
@@ -808,34 +816,37 @@ impl From<CPR_A> for bool {
 impl CPR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CPR_A {
+    pub const fn variant(&self) -> CPR_A {
         match self.bits {
             false => CPR_A::LEVEL,
             true => CPR_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == CPR_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == CPR_A::EDGE
     }
 }
 #[doc = "Field `CPR` writer - CPR"]
-pub type CPR_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR32_SPEC, CPR_A, O>;
-impl<'a, const O: u8> CPR_W<'a, O> {
+pub type CPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CPR_A>;
+impl<'a, REG, const O: u8> CPR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(CPR_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(CPR_A::EDGE)
     }
 }
@@ -921,122 +932,165 @@ impl R {
         CPR_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_ICFGR32")
+            .field("hdmi_cec", &format_args!("{}", self.hdmi_cec().bit()))
+            .field("hvs", &format_args!("{}", self.hvs().bit()))
+            .field("rpivid", &format_args!("{}", self.rpivid().bit()))
+            .field("sdc", &format_args!("{}", self.sdc().bit()))
+            .field("dsi_0", &format_args!("{}", self.dsi_0().bit()))
+            .field(
+                "pixel_valve_2",
+                &format_args!("{}", self.pixel_valve_2().bit()),
+            )
+            .field("camera_0", &format_args!("{}", self.camera_0().bit()))
+            .field("camera_1", &format_args!("{}", self.camera_1().bit()))
+            .field("hdmi_0", &format_args!("{}", self.hdmi_0().bit()))
+            .field("hdmi_1", &format_args!("{}", self.hdmi_1().bit()))
+            .field(
+                "pixel_valve_3",
+                &format_args!("{}", self.pixel_valve_3().bit()),
+            )
+            .field(
+                "spi_bsc_slave",
+                &format_args!("{}", self.spi_bsc_slave().bit()),
+            )
+            .field("dsi_1", &format_args!("{}", self.dsi_1().bit()))
+            .field(
+                "pixel_valve_0",
+                &format_args!("{}", self.pixel_valve_0().bit()),
+            )
+            .field(
+                "pixel_valve_1_2",
+                &format_args!("{}", self.pixel_valve_1_2().bit()),
+            )
+            .field("cpr", &format_args!("{}", self.cpr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR32_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - HDMI CEC"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<1> {
+    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_ICFGR32_SPEC, 1> {
         HDMI_CEC_W::new(self)
     }
     #[doc = "Bit 3 - HVS"]
     #[inline(always)]
     #[must_use]
-    pub fn hvs(&mut self) -> HVS_W<3> {
+    pub fn hvs(&mut self) -> HVS_W<GICD_ICFGR32_SPEC, 3> {
         HVS_W::new(self)
     }
     #[doc = "Bit 5 - RPIVID"]
     #[inline(always)]
     #[must_use]
-    pub fn rpivid(&mut self) -> RPIVID_W<5> {
+    pub fn rpivid(&mut self) -> RPIVID_W<GICD_ICFGR32_SPEC, 5> {
         RPIVID_W::new(self)
     }
     #[doc = "Bit 7 - SDC"]
     #[inline(always)]
     #[must_use]
-    pub fn sdc(&mut self) -> SDC_W<7> {
+    pub fn sdc(&mut self) -> SDC_W<GICD_ICFGR32_SPEC, 7> {
         SDC_W::new(self)
     }
     #[doc = "Bit 9 - DSI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_0(&mut self) -> DSI_0_W<9> {
+    pub fn dsi_0(&mut self) -> DSI_0_W<GICD_ICFGR32_SPEC, 9> {
         DSI_0_W::new(self)
     }
     #[doc = "Bit 11 - Pixel Valve 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_2(&mut self) -> PIXEL_VALVE_2_W<11> {
+    pub fn pixel_valve_2(&mut self) -> PIXEL_VALVE_2_W<GICD_ICFGR32_SPEC, 11> {
         PIXEL_VALVE_2_W::new(self)
     }
     #[doc = "Bit 13 - Camera 0"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_0(&mut self) -> CAMERA_0_W<13> {
+    pub fn camera_0(&mut self) -> CAMERA_0_W<GICD_ICFGR32_SPEC, 13> {
         CAMERA_0_W::new(self)
     }
     #[doc = "Bit 15 - Camera 1"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_1(&mut self) -> CAMERA_1_W<15> {
+    pub fn camera_1(&mut self) -> CAMERA_1_W<GICD_ICFGR32_SPEC, 15> {
         CAMERA_1_W::new(self)
     }
     #[doc = "Bit 17 - HDMI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_0(&mut self) -> HDMI_0_W<17> {
+    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_ICFGR32_SPEC, 17> {
         HDMI_0_W::new(self)
     }
     #[doc = "Bit 19 - HDMI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_1(&mut self) -> HDMI_1_W<19> {
+    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_ICFGR32_SPEC, 19> {
         HDMI_1_W::new(self)
     }
     #[doc = "Bit 21 - Pixel Valve 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<21> {
+    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_ICFGR32_SPEC, 21> {
         PIXEL_VALVE_3_W::new(self)
     }
     #[doc = "Bit 23 - SPI/BSC Slave"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<23> {
+    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_ICFGR32_SPEC, 23> {
         SPI_BSC_SLAVE_W::new(self)
     }
     #[doc = "Bit 25 - DSI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_1(&mut self) -> DSI_1_W<25> {
+    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_ICFGR32_SPEC, 25> {
         DSI_1_W::new(self)
     }
     #[doc = "Bit 27 - Pixel Valve 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<27> {
+    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_ICFGR32_SPEC, 27> {
         PIXEL_VALVE_0_W::new(self)
     }
     #[doc = "Bit 29 - OR of Pixel Valve 1 and 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<29> {
+    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_ICFGR32_SPEC, 29> {
         PIXEL_VALVE_1_2_W::new(self)
     }
     #[doc = "Bit 31 - CPR"]
     #[inline(always)]
     #[must_use]
-    pub fn cpr(&mut self) -> CPR_W<31> {
+    pub fn cpr(&mut self) -> CPR_W<GICD_ICFGR32_SPEC, 31> {
         CPR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Configuration 128 - 143\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_icfgr32](index.html) module"]
+#[doc = "Interrupt Configuration 128 - 143\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icfgr32::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icfgr32::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_ICFGR32_SPEC;
 impl crate::RegisterSpec for GICD_ICFGR32_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_icfgr32::R](R) reader structure"]
-impl crate::Readable for GICD_ICFGR32_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicd_icfgr32::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicd_icfgr32::R`](R) reader structure"]
+impl crate::Readable for GICD_ICFGR32_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicd_icfgr32::W`](W) writer structure"]
 impl crate::Writable for GICD_ICFGR32_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

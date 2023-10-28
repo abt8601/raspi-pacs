@@ -1,47 +1,15 @@
 #[doc = "Register `DIEPTXF2` reader"]
-pub struct R(crate::R<DIEPTXF2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIEPTXF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIEPTXF2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIEPTXF2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIEPTXF2_SPEC>;
 #[doc = "Register `DIEPTXF2` writer"]
-pub struct W(crate::W<DIEPTXF2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIEPTXF2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIEPTXF2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIEPTXF2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIEPTXF2_SPEC>;
 #[doc = "Field `INEPTXSA` reader - IN endpoint FIFOx transmit RAM start address"]
-pub type INEPTXSA_R = crate::FieldReader<u16, u16>;
+pub type INEPTXSA_R = crate::FieldReader<u16>;
 #[doc = "Field `INEPTXSA` writer - IN endpoint FIFOx transmit RAM start address"]
-pub type INEPTXSA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEPTXF2_SPEC, u16, u16, 16, O>;
+pub type INEPTXSA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `INEPTXFD` reader - IN endpoint TxFIFO depth"]
-pub type INEPTXFD_R = crate::FieldReader<u16, u16>;
+pub type INEPTXFD_R = crate::FieldReader<u16>;
 #[doc = "Field `INEPTXFD` writer - IN endpoint TxFIFO depth"]
-pub type INEPTXFD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEPTXF2_SPEC, u16, u16, 16, O>;
+pub type INEPTXFD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - IN endpoint FIFOx transmit RAM start address"]
     #[inline(always)]
@@ -54,38 +22,52 @@ impl R {
         INEPTXFD_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPTXF2")
+            .field("ineptxsa", &format_args!("{}", self.ineptxsa().bits()))
+            .field("ineptxfd", &format_args!("{}", self.ineptxfd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIEPTXF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - IN endpoint FIFOx transmit RAM start address"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptxsa(&mut self) -> INEPTXSA_W<0> {
+    pub fn ineptxsa(&mut self) -> INEPTXSA_W<DIEPTXF2_SPEC, 0> {
         INEPTXSA_W::new(self)
     }
     #[doc = "Bits 16:31 - IN endpoint TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptxfd(&mut self) -> INEPTXFD_W<16> {
+    pub fn ineptxfd(&mut self) -> INEPTXFD_W<DIEPTXF2_SPEC, 16> {
         INEPTXFD_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS device IN endpoint transmit FIFO size register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dieptxf2](index.html) module"]
+#[doc = "OTG_HS device IN endpoint transmit FIFO size register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPTXF2_SPEC;
 impl crate::RegisterSpec for DIEPTXF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dieptxf2::R](R) reader structure"]
-impl crate::Readable for DIEPTXF2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dieptxf2::W](W) writer structure"]
+#[doc = "`read()` method returns [`dieptxf2::R`](R) reader structure"]
+impl crate::Readable for DIEPTXF2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dieptxf2::W`](W) writer structure"]
 impl crate::Writable for DIEPTXF2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,83 +1,51 @@
 #[doc = "Register `HPRT` reader"]
-pub struct R(crate::R<HPRT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HPRT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HPRT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HPRT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HPRT_SPEC>;
 #[doc = "Register `HPRT` writer"]
-pub struct W(crate::W<HPRT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HPRT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HPRT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HPRT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HPRT_SPEC>;
 #[doc = "Field `PCSTS` reader - Port connect status"]
-pub type PCSTS_R = crate::BitReader<bool>;
+pub type PCSTS_R = crate::BitReader;
 #[doc = "Field `PCDET` reader - Port connect detected"]
-pub type PCDET_R = crate::BitReader<bool>;
+pub type PCDET_R = crate::BitReader;
 #[doc = "Field `PCDET` writer - Port connect detected"]
-pub type PCDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PCDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PENA` reader - Port enable"]
-pub type PENA_R = crate::BitReader<bool>;
+pub type PENA_R = crate::BitReader;
 #[doc = "Field `PENA` writer - Port enable"]
-pub type PENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PENCHNG` reader - Port enable/disable change"]
-pub type PENCHNG_R = crate::BitReader<bool>;
+pub type PENCHNG_R = crate::BitReader;
 #[doc = "Field `PENCHNG` writer - Port enable/disable change"]
-pub type PENCHNG_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PENCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `POCA` reader - Port overcurrent active"]
-pub type POCA_R = crate::BitReader<bool>;
+pub type POCA_R = crate::BitReader;
 #[doc = "Field `POCCHNG` reader - Port overcurrent change"]
-pub type POCCHNG_R = crate::BitReader<bool>;
+pub type POCCHNG_R = crate::BitReader;
 #[doc = "Field `POCCHNG` writer - Port overcurrent change"]
-pub type POCCHNG_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type POCCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRES` reader - Port resume"]
-pub type PRES_R = crate::BitReader<bool>;
+pub type PRES_R = crate::BitReader;
 #[doc = "Field `PRES` writer - Port resume"]
-pub type PRES_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PSUSP` reader - Port suspend"]
-pub type PSUSP_R = crate::BitReader<bool>;
+pub type PSUSP_R = crate::BitReader;
 #[doc = "Field `PSUSP` writer - Port suspend"]
-pub type PSUSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PRST` reader - Port reset"]
-pub type PRST_R = crate::BitReader<bool>;
+pub type PRST_R = crate::BitReader;
 #[doc = "Field `PRST` writer - Port reset"]
-pub type PRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PLSTS` reader - Port line status"]
-pub type PLSTS_R = crate::FieldReader<u8, u8>;
+pub type PLSTS_R = crate::FieldReader;
 #[doc = "Field `PPWR` reader - Port power"]
-pub type PPWR_R = crate::BitReader<bool>;
+pub type PPWR_R = crate::BitReader;
 #[doc = "Field `PPWR` writer - Port power"]
-pub type PPWR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PPWR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PTCTL` reader - Port test control"]
-pub type PTCTL_R = crate::FieldReader<u8, u8>;
+pub type PTCTL_R = crate::FieldReader;
 #[doc = "Field `PTCTL` writer - Port test control"]
-pub type PTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HPRT_SPEC, u8, u8, 4, O>;
+pub type PTCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PSPD` reader - Port speed"]
-pub type PSPD_R = crate::FieldReader<u8, u8>;
+pub type PSPD_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Port connect status"]
     #[inline(always)]
@@ -145,80 +113,105 @@ impl R {
         PSPD_R::new(((self.bits >> 17) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPRT")
+            .field("pcsts", &format_args!("{}", self.pcsts().bit()))
+            .field("pcdet", &format_args!("{}", self.pcdet().bit()))
+            .field("pena", &format_args!("{}", self.pena().bit()))
+            .field("penchng", &format_args!("{}", self.penchng().bit()))
+            .field("poca", &format_args!("{}", self.poca().bit()))
+            .field("pocchng", &format_args!("{}", self.pocchng().bit()))
+            .field("pres", &format_args!("{}", self.pres().bit()))
+            .field("psusp", &format_args!("{}", self.psusp().bit()))
+            .field("prst", &format_args!("{}", self.prst().bit()))
+            .field("plsts", &format_args!("{}", self.plsts().bits()))
+            .field("ppwr", &format_args!("{}", self.ppwr().bit()))
+            .field("ptctl", &format_args!("{}", self.ptctl().bits()))
+            .field("pspd", &format_args!("{}", self.pspd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HPRT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Port connect detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pcdet(&mut self) -> PCDET_W<1> {
+    pub fn pcdet(&mut self) -> PCDET_W<HPRT_SPEC, 1> {
         PCDET_W::new(self)
     }
     #[doc = "Bit 2 - Port enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pena(&mut self) -> PENA_W<2> {
+    pub fn pena(&mut self) -> PENA_W<HPRT_SPEC, 2> {
         PENA_W::new(self)
     }
     #[doc = "Bit 3 - Port enable/disable change"]
     #[inline(always)]
     #[must_use]
-    pub fn penchng(&mut self) -> PENCHNG_W<3> {
+    pub fn penchng(&mut self) -> PENCHNG_W<HPRT_SPEC, 3> {
         PENCHNG_W::new(self)
     }
     #[doc = "Bit 5 - Port overcurrent change"]
     #[inline(always)]
     #[must_use]
-    pub fn pocchng(&mut self) -> POCCHNG_W<5> {
+    pub fn pocchng(&mut self) -> POCCHNG_W<HPRT_SPEC, 5> {
         POCCHNG_W::new(self)
     }
     #[doc = "Bit 6 - Port resume"]
     #[inline(always)]
     #[must_use]
-    pub fn pres(&mut self) -> PRES_W<6> {
+    pub fn pres(&mut self) -> PRES_W<HPRT_SPEC, 6> {
         PRES_W::new(self)
     }
     #[doc = "Bit 7 - Port suspend"]
     #[inline(always)]
     #[must_use]
-    pub fn psusp(&mut self) -> PSUSP_W<7> {
+    pub fn psusp(&mut self) -> PSUSP_W<HPRT_SPEC, 7> {
         PSUSP_W::new(self)
     }
     #[doc = "Bit 8 - Port reset"]
     #[inline(always)]
     #[must_use]
-    pub fn prst(&mut self) -> PRST_W<8> {
+    pub fn prst(&mut self) -> PRST_W<HPRT_SPEC, 8> {
         PRST_W::new(self)
     }
     #[doc = "Bit 12 - Port power"]
     #[inline(always)]
     #[must_use]
-    pub fn ppwr(&mut self) -> PPWR_W<12> {
+    pub fn ppwr(&mut self) -> PPWR_W<HPRT_SPEC, 12> {
         PPWR_W::new(self)
     }
     #[doc = "Bits 13:16 - Port test control"]
     #[inline(always)]
     #[must_use]
-    pub fn ptctl(&mut self) -> PTCTL_W<13> {
+    pub fn ptctl(&mut self) -> PTCTL_W<HPRT_SPEC, 13> {
         PTCTL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS host port control and status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hprt](index.html) module"]
+#[doc = "OTG_HS host port control and status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hprt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hprt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPRT_SPEC;
 impl crate::RegisterSpec for HPRT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hprt::R](R) reader structure"]
-impl crate::Readable for HPRT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hprt::W](W) writer structure"]
+#[doc = "`read()` method returns [`hprt::R`](R) reader structure"]
+impl crate::Readable for HPRT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hprt::W`](W) writer structure"]
 impl crate::Writable for HPRT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

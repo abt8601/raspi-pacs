@@ -1,63 +1,31 @@
 #[doc = "Register `GCCFG` reader"]
-pub struct R(crate::R<GCCFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GCCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GCCFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GCCFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GCCFG_SPEC>;
 #[doc = "Register `GCCFG` writer"]
-pub struct W(crate::W<GCCFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GCCFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GCCFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GCCFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GCCFG_SPEC>;
 #[doc = "Field `PWRDWN` reader - Power down"]
-pub type PWRDWN_R = crate::BitReader<bool>;
+pub type PWRDWN_R = crate::BitReader;
 #[doc = "Field `PWRDWN` writer - Power down"]
-pub type PWRDWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GCCFG_SPEC, bool, O>;
+pub type PWRDWN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2CPADEN` reader - Enable I2C bus connection for the external I2C PHY interface"]
-pub type I2CPADEN_R = crate::BitReader<bool>;
+pub type I2CPADEN_R = crate::BitReader;
 #[doc = "Field `I2CPADEN` writer - Enable I2C bus connection for the external I2C PHY interface"]
-pub type I2CPADEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GCCFG_SPEC, bool, O>;
+pub type I2CPADEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VBUSASEN` reader - Enable the VBUS sensing device"]
-pub type VBUSASEN_R = crate::BitReader<bool>;
+pub type VBUSASEN_R = crate::BitReader;
 #[doc = "Field `VBUSASEN` writer - Enable the VBUS sensing device"]
-pub type VBUSASEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GCCFG_SPEC, bool, O>;
+pub type VBUSASEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VBUSBSEN` reader - Enable the VBUS sensing device"]
-pub type VBUSBSEN_R = crate::BitReader<bool>;
+pub type VBUSBSEN_R = crate::BitReader;
 #[doc = "Field `VBUSBSEN` writer - Enable the VBUS sensing device"]
-pub type VBUSBSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GCCFG_SPEC, bool, O>;
+pub type VBUSBSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SOFOUTEN` reader - SOF output enable"]
-pub type SOFOUTEN_R = crate::BitReader<bool>;
+pub type SOFOUTEN_R = crate::BitReader;
 #[doc = "Field `SOFOUTEN` writer - SOF output enable"]
-pub type SOFOUTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GCCFG_SPEC, bool, O>;
+pub type SOFOUTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NOVBUSSENS` reader - VBUS sensing disable option"]
-pub type NOVBUSSENS_R = crate::BitReader<bool>;
+pub type NOVBUSSENS_R = crate::BitReader;
 #[doc = "Field `NOVBUSSENS` writer - VBUS sensing disable option"]
-pub type NOVBUSSENS_W<'a, const O: u8> = crate::BitWriter<'a, u32, GCCFG_SPEC, bool, O>;
+pub type NOVBUSSENS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
@@ -90,62 +58,80 @@ impl R {
         NOVBUSSENS_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GCCFG")
+            .field("pwrdwn", &format_args!("{}", self.pwrdwn().bit()))
+            .field("i2cpaden", &format_args!("{}", self.i2cpaden().bit()))
+            .field("vbusasen", &format_args!("{}", self.vbusasen().bit()))
+            .field("vbusbsen", &format_args!("{}", self.vbusbsen().bit()))
+            .field("sofouten", &format_args!("{}", self.sofouten().bit()))
+            .field("novbussens", &format_args!("{}", self.novbussens().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GCCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrdwn(&mut self) -> PWRDWN_W<16> {
+    pub fn pwrdwn(&mut self) -> PWRDWN_W<GCCFG_SPEC, 16> {
         PWRDWN_W::new(self)
     }
     #[doc = "Bit 17 - Enable I2C bus connection for the external I2C PHY interface"]
     #[inline(always)]
     #[must_use]
-    pub fn i2cpaden(&mut self) -> I2CPADEN_W<17> {
+    pub fn i2cpaden(&mut self) -> I2CPADEN_W<GCCFG_SPEC, 17> {
         I2CPADEN_W::new(self)
     }
     #[doc = "Bit 18 - Enable the VBUS sensing device"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusasen(&mut self) -> VBUSASEN_W<18> {
+    pub fn vbusasen(&mut self) -> VBUSASEN_W<GCCFG_SPEC, 18> {
         VBUSASEN_W::new(self)
     }
     #[doc = "Bit 19 - Enable the VBUS sensing device"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusbsen(&mut self) -> VBUSBSEN_W<19> {
+    pub fn vbusbsen(&mut self) -> VBUSBSEN_W<GCCFG_SPEC, 19> {
         VBUSBSEN_W::new(self)
     }
     #[doc = "Bit 20 - SOF output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<20> {
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC, 20> {
         SOFOUTEN_W::new(self)
     }
     #[doc = "Bit 21 - VBUS sensing disable option"]
     #[inline(always)]
     #[must_use]
-    pub fn novbussens(&mut self) -> NOVBUSSENS_W<21> {
+    pub fn novbussens(&mut self) -> NOVBUSSENS_W<GCCFG_SPEC, 21> {
         NOVBUSSENS_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS general core configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gccfg](index.html) module"]
+#[doc = "OTG_HS general core configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gccfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gccfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GCCFG_SPEC;
 impl crate::RegisterSpec for GCCFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gccfg::R](R) reader structure"]
-impl crate::Readable for GCCFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gccfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`gccfg::R`](R) reader structure"]
+impl crate::Readable for GCCFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gccfg::W`](W) writer structure"]
 impl crate::Writable for GCCFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

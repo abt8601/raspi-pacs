@@ -1,43 +1,11 @@
 #[doc = "Register `TUNE_STEP` reader"]
-pub struct R(crate::R<TUNE_STEP_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TUNE_STEP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TUNE_STEP_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TUNE_STEP_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TUNE_STEP_SPEC>;
 #[doc = "Register `TUNE_STEP` writer"]
-pub struct W(crate::W<TUNE_STEP_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TUNE_STEP_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TUNE_STEP_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TUNE_STEP_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TUNE_STEP_SPEC>;
 #[doc = "Field `DELAY` reader - "]
-pub type DELAY_R = crate::FieldReader<u8, u8>;
+pub type DELAY_R = crate::FieldReader;
 #[doc = "Field `DELAY` writer - "]
-pub type DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TUNE_STEP_SPEC, u8, u8, 3, O>;
+pub type DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -45,32 +13,45 @@ impl R {
         DELAY_R::new((self.bits & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TUNE_STEP")
+            .field("delay", &format_args!("{}", self.delay().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TUNE_STEP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn delay(&mut self) -> DELAY_W<0> {
+    pub fn delay(&mut self) -> DELAY_W<TUNE_STEP_SPEC, 0> {
         DELAY_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Sample clock delay step duration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tune_step](index.html) module"]
+#[doc = "Sample clock delay step duration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tune_step::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tune_step::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TUNE_STEP_SPEC;
 impl crate::RegisterSpec for TUNE_STEP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tune_step::R](R) reader structure"]
-impl crate::Readable for TUNE_STEP_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tune_step::W](W) writer structure"]
+#[doc = "`read()` method returns [`tune_step::R`](R) reader structure"]
+impl crate::Readable for TUNE_STEP_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tune_step::W`](W) writer structure"]
 impl crate::Writable for TUNE_STEP_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

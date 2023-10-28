@@ -1,55 +1,23 @@
 #[doc = "Register `DC` reader"]
-pub struct R(crate::R<DC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DC_SPEC>;
 #[doc = "Register `DC` writer"]
-pub struct W(crate::W<DC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DC_SPEC>;
 #[doc = "Field `TDREQ` reader - DMA Write request threshold"]
-pub type TDREQ_R = crate::FieldReader<u8, u8>;
+pub type TDREQ_R = crate::FieldReader;
 #[doc = "Field `TDREQ` writer - DMA Write request threshold"]
-pub type TDREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DC_SPEC, u8, u8, 8, O>;
+pub type TDREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `TPANIC` reader - DMA write panic threshold"]
-pub type TPANIC_R = crate::FieldReader<u8, u8>;
+pub type TPANIC_R = crate::FieldReader;
 #[doc = "Field `TPANIC` writer - DMA write panic threshold"]
-pub type TPANIC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DC_SPEC, u8, u8, 8, O>;
+pub type TPANIC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `RDREQ` reader - DMA read request threshold"]
-pub type RDREQ_R = crate::FieldReader<u8, u8>;
+pub type RDREQ_R = crate::FieldReader;
 #[doc = "Field `RDREQ` writer - DMA read request threshold"]
-pub type RDREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DC_SPEC, u8, u8, 8, O>;
+pub type RDREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `RPANIC` reader - DMA read panic threshold"]
-pub type RPANIC_R = crate::FieldReader<u8, u8>;
+pub type RPANIC_R = crate::FieldReader;
 #[doc = "Field `RPANIC` writer - DMA read panic threshold"]
-pub type RPANIC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DC_SPEC, u8, u8, 8, O>;
+pub type RPANIC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - DMA Write request threshold"]
     #[inline(always)]
@@ -72,50 +40,66 @@ impl R {
         RPANIC_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DC")
+            .field("rpanic", &format_args!("{}", self.rpanic().bits()))
+            .field("rdreq", &format_args!("{}", self.rdreq().bits()))
+            .field("tpanic", &format_args!("{}", self.tpanic().bits()))
+            .field("tdreq", &format_args!("{}", self.tdreq().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - DMA Write request threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn tdreq(&mut self) -> TDREQ_W<0> {
+    pub fn tdreq(&mut self) -> TDREQ_W<DC_SPEC, 0> {
         TDREQ_W::new(self)
     }
     #[doc = "Bits 8:15 - DMA write panic threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn tpanic(&mut self) -> TPANIC_W<8> {
+    pub fn tpanic(&mut self) -> TPANIC_W<DC_SPEC, 8> {
         TPANIC_W::new(self)
     }
     #[doc = "Bits 16:23 - DMA read request threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn rdreq(&mut self) -> RDREQ_W<16> {
+    pub fn rdreq(&mut self) -> RDREQ_W<DC_SPEC, 16> {
         RDREQ_W::new(self)
     }
     #[doc = "Bits 24:31 - DMA read panic threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn rpanic(&mut self) -> RPANIC_W<24> {
+    pub fn rpanic(&mut self) -> RPANIC_W<DC_SPEC, 24> {
         RPANIC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dc](index.html) module"]
+#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DC_SPEC;
 impl crate::RegisterSpec for DC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dc::R](R) reader structure"]
-impl crate::Readable for DC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dc::W](W) writer structure"]
+#[doc = "`read()` method returns [`dc::R`](R) reader structure"]
+impl crate::Readable for DC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dc::W`](W) writer structure"]
 impl crate::Writable for DC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

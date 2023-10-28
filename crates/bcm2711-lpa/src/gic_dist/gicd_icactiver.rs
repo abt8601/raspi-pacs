@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct GICD_ICACTIVER {
     #[doc = "0x00 - Interrupt Clear-Active"]
     pub gicd_icactiver0: GICD_ICACTIVER0,
@@ -16,31 +17,38 @@ pub struct GICD_ICACTIVER {
     #[doc = "0x18 - Interrupt Clear-Active"]
     pub gicd_icactiver6: GICD_ICACTIVER6,
 }
-#[doc = "GICD_ICACTIVER0 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER0_SPEC>`"]
+#[doc = "GICD_ICACTIVER0 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver0`]
+module"]
 pub type GICD_ICACTIVER0 = crate::Reg<gicd_icactiver0::GICD_ICACTIVER0_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver0;
-#[doc = "GICD_ICACTIVER1 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER1_SPEC>`"]
+#[doc = "GICD_ICACTIVER1 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver1`]
+module"]
 pub type GICD_ICACTIVER1 = crate::Reg<gicd_icactiver1::GICD_ICACTIVER1_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver1;
-#[doc = "GICD_ICACTIVER2 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER2_SPEC>`"]
+#[doc = "GICD_ICACTIVER2 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver2`]
+module"]
 pub type GICD_ICACTIVER2 = crate::Reg<gicd_icactiver2::GICD_ICACTIVER2_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver2;
-#[doc = "GICD_ICACTIVER3 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER3_SPEC>`"]
+#[doc = "GICD_ICACTIVER3 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver3`]
+module"]
 pub type GICD_ICACTIVER3 = crate::Reg<gicd_icactiver3::GICD_ICACTIVER3_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver3;
-#[doc = "GICD_ICACTIVER4 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER4_SPEC>`"]
+#[doc = "GICD_ICACTIVER4 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver4`]
+module"]
 pub type GICD_ICACTIVER4 = crate::Reg<gicd_icactiver4::GICD_ICACTIVER4_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver4;
-#[doc = "GICD_ICACTIVER5 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER5_SPEC>`"]
+#[doc = "GICD_ICACTIVER5 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver5`]
+module"]
 pub type GICD_ICACTIVER5 = crate::Reg<gicd_icactiver5::GICD_ICACTIVER5_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver5;
-#[doc = "GICD_ICACTIVER6 (rw) register accessor: an alias for `Reg<GICD_ICACTIVER6_SPEC>`"]
+#[doc = "GICD_ICACTIVER6 (rw) register accessor: Interrupt Clear-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icactiver6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icactiver6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icactiver6`]
+module"]
 pub type GICD_ICACTIVER6 = crate::Reg<gicd_icactiver6::GICD_ICACTIVER6_SPEC>;
 #[doc = "Interrupt Clear-Active"]
 pub mod gicd_icactiver6;

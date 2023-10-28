@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00 - OTG_HS device configuration register"]
     pub dcfg: DCFG,
@@ -107,63 +108,78 @@ pub struct RegisterBlock {
     #[doc = "0x460..0x478 - OUT Endpoint %s"]
     pub out_endpoint11: OUT_ENDPOINT,
 }
-#[doc = "DCFG (rw) register accessor: an alias for `Reg<DCFG_SPEC>`"]
+#[doc = "DCFG (rw) register accessor: OTG_HS device configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcfg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dcfg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcfg`]
+module"]
 pub type DCFG = crate::Reg<dcfg::DCFG_SPEC>;
 #[doc = "OTG_HS device configuration register"]
 pub mod dcfg;
-#[doc = "DCTL (rw) register accessor: an alias for `Reg<DCTL_SPEC>`"]
+#[doc = "DCTL (rw) register accessor: OTG_HS device control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dctl`]
+module"]
 pub type DCTL = crate::Reg<dctl::DCTL_SPEC>;
 #[doc = "OTG_HS device control register"]
 pub mod dctl;
-#[doc = "DSTS (r) register accessor: an alias for `Reg<DSTS_SPEC>`"]
+#[doc = "DSTS (r) register accessor: OTG_HS device status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsts::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dsts`]
+module"]
 pub type DSTS = crate::Reg<dsts::DSTS_SPEC>;
 #[doc = "OTG_HS device status register"]
 pub mod dsts;
-#[doc = "DIEPMSK (rw) register accessor: an alias for `Reg<DIEPMSK_SPEC>`"]
+#[doc = "DIEPMSK (rw) register accessor: OTG_HS device IN endpoint common interrupt mask register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepmsk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepmsk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepmsk`]
+module"]
 pub type DIEPMSK = crate::Reg<diepmsk::DIEPMSK_SPEC>;
 #[doc = "OTG_HS device IN endpoint common interrupt mask register"]
 pub mod diepmsk;
-#[doc = "DOEPMSK (rw) register accessor: an alias for `Reg<DOEPMSK_SPEC>`"]
+#[doc = "DOEPMSK (rw) register accessor: OTG_HS device OUT endpoint common interrupt mask register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepmsk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepmsk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepmsk`]
+module"]
 pub type DOEPMSK = crate::Reg<doepmsk::DOEPMSK_SPEC>;
 #[doc = "OTG_HS device OUT endpoint common interrupt mask register"]
 pub mod doepmsk;
-#[doc = "DAINT (r) register accessor: an alias for `Reg<DAINT_SPEC>`"]
+#[doc = "DAINT (r) register accessor: OTG_HS device all endpoints interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`daint::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@daint`]
+module"]
 pub type DAINT = crate::Reg<daint::DAINT_SPEC>;
 #[doc = "OTG_HS device all endpoints interrupt register"]
 pub mod daint;
-#[doc = "DAINTMSK (rw) register accessor: an alias for `Reg<DAINTMSK_SPEC>`"]
+#[doc = "DAINTMSK (rw) register accessor: OTG_HS all endpoints interrupt mask register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`daintmsk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`daintmsk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@daintmsk`]
+module"]
 pub type DAINTMSK = crate::Reg<daintmsk::DAINTMSK_SPEC>;
 #[doc = "OTG_HS all endpoints interrupt mask register"]
 pub mod daintmsk;
-#[doc = "DVBUSDIS (rw) register accessor: an alias for `Reg<DVBUSDIS_SPEC>`"]
+#[doc = "DVBUSDIS (rw) register accessor: OTG_HS device VBUS discharge time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dvbusdis::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dvbusdis::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dvbusdis`]
+module"]
 pub type DVBUSDIS = crate::Reg<dvbusdis::DVBUSDIS_SPEC>;
 #[doc = "OTG_HS device VBUS discharge time register"]
 pub mod dvbusdis;
-#[doc = "DVBUSPULSE (rw) register accessor: an alias for `Reg<DVBUSPULSE_SPEC>`"]
+#[doc = "DVBUSPULSE (rw) register accessor: OTG_HS device VBUS pulsing time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dvbuspulse::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dvbuspulse::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dvbuspulse`]
+module"]
 pub type DVBUSPULSE = crate::Reg<dvbuspulse::DVBUSPULSE_SPEC>;
 #[doc = "OTG_HS device VBUS pulsing time register"]
 pub mod dvbuspulse;
-#[doc = "DTHRCTL (rw) register accessor: an alias for `Reg<DTHRCTL_SPEC>`"]
+#[doc = "DTHRCTL (rw) register accessor: OTG_HS Device threshold control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dthrctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dthrctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dthrctl`]
+module"]
 pub type DTHRCTL = crate::Reg<dthrctl::DTHRCTL_SPEC>;
 #[doc = "OTG_HS Device threshold control register"]
 pub mod dthrctl;
-#[doc = "DIEPEMPMSK (rw) register accessor: an alias for `Reg<DIEPEMPMSK_SPEC>`"]
+#[doc = "DIEPEMPMSK (rw) register accessor: OTG_HS device IN endpoint FIFO empty interrupt mask register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepempmsk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepempmsk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepempmsk`]
+module"]
 pub type DIEPEMPMSK = crate::Reg<diepempmsk::DIEPEMPMSK_SPEC>;
 #[doc = "OTG_HS device IN endpoint FIFO empty interrupt mask register"]
 pub mod diepempmsk;
-#[doc = "DEACHINT (rw) register accessor: an alias for `Reg<DEACHINT_SPEC>`"]
+#[doc = "DEACHINT (rw) register accessor: OTG_HS device each endpoint interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`deachint::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`deachint::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@deachint`]
+module"]
 pub type DEACHINT = crate::Reg<deachint::DEACHINT_SPEC>;
 #[doc = "OTG_HS device each endpoint interrupt register"]
 pub mod deachint;
-#[doc = "DEACHINTMSK (rw) register accessor: an alias for `Reg<DEACHINTMSK_SPEC>`"]
+#[doc = "DEACHINTMSK (rw) register accessor: OTG_HS device each endpoint interrupt register mask\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`deachintmsk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`deachintmsk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@deachintmsk`]
+module"]
 pub type DEACHINTMSK = crate::Reg<deachintmsk::DEACHINTMSK_SPEC>;
 #[doc = "OTG_HS device each endpoint interrupt register mask"]
 pub mod deachintmsk;
-#[doc = "DIEPEACHMSK1 (rw) register accessor: an alias for `Reg<DIEPEACHMSK1_SPEC>`"]
+#[doc = "DIEPEACHMSK1 (rw) register accessor: OTG_HS device each in endpoint-1 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepeachmsk1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepeachmsk1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepeachmsk1`]
+module"]
 pub type DIEPEACHMSK1 = crate::Reg<diepeachmsk1::DIEPEACHMSK1_SPEC>;
 #[doc = "OTG_HS device each in endpoint-1 interrupt register"]
 pub mod diepeachmsk1;
-#[doc = "DOEPEACHMSK1 (rw) register accessor: an alias for `Reg<DOEPEACHMSK1_SPEC>`"]
+#[doc = "DOEPEACHMSK1 (rw) register accessor: OTG_HS device each OUT endpoint-1 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepeachmsk1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepeachmsk1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepeachmsk1`]
+module"]
 pub type DOEPEACHMSK1 = crate::Reg<doepeachmsk1::DOEPEACHMSK1_SPEC>;
 #[doc = "OTG_HS device each OUT endpoint-1 interrupt register"]
 pub mod doepeachmsk1;

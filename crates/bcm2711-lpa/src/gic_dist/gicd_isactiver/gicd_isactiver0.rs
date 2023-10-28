@@ -1,167 +1,135 @@
 #[doc = "Register `GICD_ISACTIVER0` reader"]
-pub struct R(crate::R<GICD_ISACTIVER0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_ISACTIVER0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_ISACTIVER0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_ISACTIVER0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_ISACTIVER0_SPEC>;
 #[doc = "Register `GICD_ISACTIVER0` writer"]
-pub struct W(crate::W<GICD_ISACTIVER0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICD_ISACTIVER0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICD_ISACTIVER0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICD_ISACTIVER0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICD_ISACTIVER0_SPEC>;
 #[doc = "Field `INT0` reader - Interrupt 0"]
-pub type INT0_R = crate::BitReader<bool>;
+pub type INT0_R = crate::BitReader;
 #[doc = "Field `INT0` writer - Interrupt 0"]
-pub type INT0_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT0_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT1` reader - Interrupt 1"]
-pub type INT1_R = crate::BitReader<bool>;
+pub type INT1_R = crate::BitReader;
 #[doc = "Field `INT1` writer - Interrupt 1"]
-pub type INT1_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT1_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT2` reader - Interrupt 2"]
-pub type INT2_R = crate::BitReader<bool>;
+pub type INT2_R = crate::BitReader;
 #[doc = "Field `INT2` writer - Interrupt 2"]
-pub type INT2_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT2_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT3` reader - Interrupt 3"]
-pub type INT3_R = crate::BitReader<bool>;
+pub type INT3_R = crate::BitReader;
 #[doc = "Field `INT3` writer - Interrupt 3"]
-pub type INT3_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT3_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT4` reader - Interrupt 4"]
-pub type INT4_R = crate::BitReader<bool>;
+pub type INT4_R = crate::BitReader;
 #[doc = "Field `INT4` writer - Interrupt 4"]
-pub type INT4_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT4_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT5` reader - Interrupt 5"]
-pub type INT5_R = crate::BitReader<bool>;
+pub type INT5_R = crate::BitReader;
 #[doc = "Field `INT5` writer - Interrupt 5"]
-pub type INT5_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT5_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT6` reader - Interrupt 6"]
-pub type INT6_R = crate::BitReader<bool>;
+pub type INT6_R = crate::BitReader;
 #[doc = "Field `INT6` writer - Interrupt 6"]
-pub type INT6_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT6_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT7` reader - Interrupt 7"]
-pub type INT7_R = crate::BitReader<bool>;
+pub type INT7_R = crate::BitReader;
 #[doc = "Field `INT7` writer - Interrupt 7"]
-pub type INT7_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT7_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT8` reader - Interrupt 8"]
-pub type INT8_R = crate::BitReader<bool>;
+pub type INT8_R = crate::BitReader;
 #[doc = "Field `INT8` writer - Interrupt 8"]
-pub type INT8_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT8_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT9` reader - Interrupt 9"]
-pub type INT9_R = crate::BitReader<bool>;
+pub type INT9_R = crate::BitReader;
 #[doc = "Field `INT9` writer - Interrupt 9"]
-pub type INT9_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT9_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT10` reader - Interrupt 10"]
-pub type INT10_R = crate::BitReader<bool>;
+pub type INT10_R = crate::BitReader;
 #[doc = "Field `INT10` writer - Interrupt 10"]
-pub type INT10_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT10_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT11` reader - Interrupt 11"]
-pub type INT11_R = crate::BitReader<bool>;
+pub type INT11_R = crate::BitReader;
 #[doc = "Field `INT11` writer - Interrupt 11"]
-pub type INT11_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT11_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT12` reader - Interrupt 12"]
-pub type INT12_R = crate::BitReader<bool>;
+pub type INT12_R = crate::BitReader;
 #[doc = "Field `INT12` writer - Interrupt 12"]
-pub type INT12_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT12_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT13` reader - Interrupt 13"]
-pub type INT13_R = crate::BitReader<bool>;
+pub type INT13_R = crate::BitReader;
 #[doc = "Field `INT13` writer - Interrupt 13"]
-pub type INT13_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT13_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT14` reader - Interrupt 14"]
-pub type INT14_R = crate::BitReader<bool>;
+pub type INT14_R = crate::BitReader;
 #[doc = "Field `INT14` writer - Interrupt 14"]
-pub type INT14_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT14_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT15` reader - Interrupt 15"]
-pub type INT15_R = crate::BitReader<bool>;
+pub type INT15_R = crate::BitReader;
 #[doc = "Field `INT15` writer - Interrupt 15"]
-pub type INT15_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT15_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT16` reader - Interrupt 16"]
-pub type INT16_R = crate::BitReader<bool>;
+pub type INT16_R = crate::BitReader;
 #[doc = "Field `INT16` writer - Interrupt 16"]
-pub type INT16_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT16_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT17` reader - Interrupt 17"]
-pub type INT17_R = crate::BitReader<bool>;
+pub type INT17_R = crate::BitReader;
 #[doc = "Field `INT17` writer - Interrupt 17"]
-pub type INT17_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT17_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT18` reader - Interrupt 18"]
-pub type INT18_R = crate::BitReader<bool>;
+pub type INT18_R = crate::BitReader;
 #[doc = "Field `INT18` writer - Interrupt 18"]
-pub type INT18_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT18_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT19` reader - Interrupt 19"]
-pub type INT19_R = crate::BitReader<bool>;
+pub type INT19_R = crate::BitReader;
 #[doc = "Field `INT19` writer - Interrupt 19"]
-pub type INT19_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT19_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT20` reader - Interrupt 20"]
-pub type INT20_R = crate::BitReader<bool>;
+pub type INT20_R = crate::BitReader;
 #[doc = "Field `INT20` writer - Interrupt 20"]
-pub type INT20_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT20_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT21` reader - Interrupt 21"]
-pub type INT21_R = crate::BitReader<bool>;
+pub type INT21_R = crate::BitReader;
 #[doc = "Field `INT21` writer - Interrupt 21"]
-pub type INT21_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT21_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT22` reader - Interrupt 22"]
-pub type INT22_R = crate::BitReader<bool>;
+pub type INT22_R = crate::BitReader;
 #[doc = "Field `INT22` writer - Interrupt 22"]
-pub type INT22_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT22_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT23` reader - Interrupt 23"]
-pub type INT23_R = crate::BitReader<bool>;
+pub type INT23_R = crate::BitReader;
 #[doc = "Field `INT23` writer - Interrupt 23"]
-pub type INT23_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT23_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT24` reader - Interrupt 24"]
-pub type INT24_R = crate::BitReader<bool>;
+pub type INT24_R = crate::BitReader;
 #[doc = "Field `INT24` writer - Interrupt 24"]
-pub type INT24_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT24_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT25` reader - Interrupt 25"]
-pub type INT25_R = crate::BitReader<bool>;
+pub type INT25_R = crate::BitReader;
 #[doc = "Field `INT25` writer - Interrupt 25"]
-pub type INT25_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT25_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT26` reader - Interrupt 26"]
-pub type INT26_R = crate::BitReader<bool>;
+pub type INT26_R = crate::BitReader;
 #[doc = "Field `INT26` writer - Interrupt 26"]
-pub type INT26_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT26_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT27` reader - Interrupt 27"]
-pub type INT27_R = crate::BitReader<bool>;
+pub type INT27_R = crate::BitReader;
 #[doc = "Field `INT27` writer - Interrupt 27"]
-pub type INT27_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT27_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT28` reader - Interrupt 28"]
-pub type INT28_R = crate::BitReader<bool>;
+pub type INT28_R = crate::BitReader;
 #[doc = "Field `INT28` writer - Interrupt 28"]
-pub type INT28_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT28_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT29` reader - Interrupt 29"]
-pub type INT29_R = crate::BitReader<bool>;
+pub type INT29_R = crate::BitReader;
 #[doc = "Field `INT29` writer - Interrupt 29"]
-pub type INT29_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT29_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT30` reader - Interrupt 30"]
-pub type INT30_R = crate::BitReader<bool>;
+pub type INT30_R = crate::BitReader;
 #[doc = "Field `INT30` writer - Interrupt 30"]
-pub type INT30_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT30_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 #[doc = "Field `INT31` reader - Interrupt 31"]
-pub type INT31_R = crate::BitReader<bool>;
+pub type INT31_R = crate::BitReader;
 #[doc = "Field `INT31` writer - Interrupt 31"]
-pub type INT31_W<'a, const O: u8> = crate::BitWriter1S<'a, u32, GICD_ISACTIVER0_SPEC, bool, O>;
+pub type INT31_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Interrupt 0"]
     #[inline(always)]
@@ -324,218 +292,262 @@ impl R {
         INT31_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_ISACTIVER0")
+            .field("int0", &format_args!("{}", self.int0().bit()))
+            .field("int1", &format_args!("{}", self.int1().bit()))
+            .field("int2", &format_args!("{}", self.int2().bit()))
+            .field("int3", &format_args!("{}", self.int3().bit()))
+            .field("int4", &format_args!("{}", self.int4().bit()))
+            .field("int5", &format_args!("{}", self.int5().bit()))
+            .field("int6", &format_args!("{}", self.int6().bit()))
+            .field("int7", &format_args!("{}", self.int7().bit()))
+            .field("int8", &format_args!("{}", self.int8().bit()))
+            .field("int9", &format_args!("{}", self.int9().bit()))
+            .field("int10", &format_args!("{}", self.int10().bit()))
+            .field("int11", &format_args!("{}", self.int11().bit()))
+            .field("int12", &format_args!("{}", self.int12().bit()))
+            .field("int13", &format_args!("{}", self.int13().bit()))
+            .field("int14", &format_args!("{}", self.int14().bit()))
+            .field("int15", &format_args!("{}", self.int15().bit()))
+            .field("int16", &format_args!("{}", self.int16().bit()))
+            .field("int17", &format_args!("{}", self.int17().bit()))
+            .field("int18", &format_args!("{}", self.int18().bit()))
+            .field("int19", &format_args!("{}", self.int19().bit()))
+            .field("int20", &format_args!("{}", self.int20().bit()))
+            .field("int21", &format_args!("{}", self.int21().bit()))
+            .field("int22", &format_args!("{}", self.int22().bit()))
+            .field("int23", &format_args!("{}", self.int23().bit()))
+            .field("int24", &format_args!("{}", self.int24().bit()))
+            .field("int25", &format_args!("{}", self.int25().bit()))
+            .field("int26", &format_args!("{}", self.int26().bit()))
+            .field("int27", &format_args!("{}", self.int27().bit()))
+            .field("int28", &format_args!("{}", self.int28().bit()))
+            .field("int29", &format_args!("{}", self.int29().bit()))
+            .field("int30", &format_args!("{}", self.int30().bit()))
+            .field("int31", &format_args!("{}", self.int31().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_ISACTIVER0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Interrupt 0"]
     #[inline(always)]
     #[must_use]
-    pub fn int0(&mut self) -> INT0_W<0> {
+    pub fn int0(&mut self) -> INT0_W<GICD_ISACTIVER0_SPEC, 0> {
         INT0_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt 1"]
     #[inline(always)]
     #[must_use]
-    pub fn int1(&mut self) -> INT1_W<1> {
+    pub fn int1(&mut self) -> INT1_W<GICD_ISACTIVER0_SPEC, 1> {
         INT1_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt 2"]
     #[inline(always)]
     #[must_use]
-    pub fn int2(&mut self) -> INT2_W<2> {
+    pub fn int2(&mut self) -> INT2_W<GICD_ISACTIVER0_SPEC, 2> {
         INT2_W::new(self)
     }
     #[doc = "Bit 3 - Interrupt 3"]
     #[inline(always)]
     #[must_use]
-    pub fn int3(&mut self) -> INT3_W<3> {
+    pub fn int3(&mut self) -> INT3_W<GICD_ISACTIVER0_SPEC, 3> {
         INT3_W::new(self)
     }
     #[doc = "Bit 4 - Interrupt 4"]
     #[inline(always)]
     #[must_use]
-    pub fn int4(&mut self) -> INT4_W<4> {
+    pub fn int4(&mut self) -> INT4_W<GICD_ISACTIVER0_SPEC, 4> {
         INT4_W::new(self)
     }
     #[doc = "Bit 5 - Interrupt 5"]
     #[inline(always)]
     #[must_use]
-    pub fn int5(&mut self) -> INT5_W<5> {
+    pub fn int5(&mut self) -> INT5_W<GICD_ISACTIVER0_SPEC, 5> {
         INT5_W::new(self)
     }
     #[doc = "Bit 6 - Interrupt 6"]
     #[inline(always)]
     #[must_use]
-    pub fn int6(&mut self) -> INT6_W<6> {
+    pub fn int6(&mut self) -> INT6_W<GICD_ISACTIVER0_SPEC, 6> {
         INT6_W::new(self)
     }
     #[doc = "Bit 7 - Interrupt 7"]
     #[inline(always)]
     #[must_use]
-    pub fn int7(&mut self) -> INT7_W<7> {
+    pub fn int7(&mut self) -> INT7_W<GICD_ISACTIVER0_SPEC, 7> {
         INT7_W::new(self)
     }
     #[doc = "Bit 8 - Interrupt 8"]
     #[inline(always)]
     #[must_use]
-    pub fn int8(&mut self) -> INT8_W<8> {
+    pub fn int8(&mut self) -> INT8_W<GICD_ISACTIVER0_SPEC, 8> {
         INT8_W::new(self)
     }
     #[doc = "Bit 9 - Interrupt 9"]
     #[inline(always)]
     #[must_use]
-    pub fn int9(&mut self) -> INT9_W<9> {
+    pub fn int9(&mut self) -> INT9_W<GICD_ISACTIVER0_SPEC, 9> {
         INT9_W::new(self)
     }
     #[doc = "Bit 10 - Interrupt 10"]
     #[inline(always)]
     #[must_use]
-    pub fn int10(&mut self) -> INT10_W<10> {
+    pub fn int10(&mut self) -> INT10_W<GICD_ISACTIVER0_SPEC, 10> {
         INT10_W::new(self)
     }
     #[doc = "Bit 11 - Interrupt 11"]
     #[inline(always)]
     #[must_use]
-    pub fn int11(&mut self) -> INT11_W<11> {
+    pub fn int11(&mut self) -> INT11_W<GICD_ISACTIVER0_SPEC, 11> {
         INT11_W::new(self)
     }
     #[doc = "Bit 12 - Interrupt 12"]
     #[inline(always)]
     #[must_use]
-    pub fn int12(&mut self) -> INT12_W<12> {
+    pub fn int12(&mut self) -> INT12_W<GICD_ISACTIVER0_SPEC, 12> {
         INT12_W::new(self)
     }
     #[doc = "Bit 13 - Interrupt 13"]
     #[inline(always)]
     #[must_use]
-    pub fn int13(&mut self) -> INT13_W<13> {
+    pub fn int13(&mut self) -> INT13_W<GICD_ISACTIVER0_SPEC, 13> {
         INT13_W::new(self)
     }
     #[doc = "Bit 14 - Interrupt 14"]
     #[inline(always)]
     #[must_use]
-    pub fn int14(&mut self) -> INT14_W<14> {
+    pub fn int14(&mut self) -> INT14_W<GICD_ISACTIVER0_SPEC, 14> {
         INT14_W::new(self)
     }
     #[doc = "Bit 15 - Interrupt 15"]
     #[inline(always)]
     #[must_use]
-    pub fn int15(&mut self) -> INT15_W<15> {
+    pub fn int15(&mut self) -> INT15_W<GICD_ISACTIVER0_SPEC, 15> {
         INT15_W::new(self)
     }
     #[doc = "Bit 16 - Interrupt 16"]
     #[inline(always)]
     #[must_use]
-    pub fn int16(&mut self) -> INT16_W<16> {
+    pub fn int16(&mut self) -> INT16_W<GICD_ISACTIVER0_SPEC, 16> {
         INT16_W::new(self)
     }
     #[doc = "Bit 17 - Interrupt 17"]
     #[inline(always)]
     #[must_use]
-    pub fn int17(&mut self) -> INT17_W<17> {
+    pub fn int17(&mut self) -> INT17_W<GICD_ISACTIVER0_SPEC, 17> {
         INT17_W::new(self)
     }
     #[doc = "Bit 18 - Interrupt 18"]
     #[inline(always)]
     #[must_use]
-    pub fn int18(&mut self) -> INT18_W<18> {
+    pub fn int18(&mut self) -> INT18_W<GICD_ISACTIVER0_SPEC, 18> {
         INT18_W::new(self)
     }
     #[doc = "Bit 19 - Interrupt 19"]
     #[inline(always)]
     #[must_use]
-    pub fn int19(&mut self) -> INT19_W<19> {
+    pub fn int19(&mut self) -> INT19_W<GICD_ISACTIVER0_SPEC, 19> {
         INT19_W::new(self)
     }
     #[doc = "Bit 20 - Interrupt 20"]
     #[inline(always)]
     #[must_use]
-    pub fn int20(&mut self) -> INT20_W<20> {
+    pub fn int20(&mut self) -> INT20_W<GICD_ISACTIVER0_SPEC, 20> {
         INT20_W::new(self)
     }
     #[doc = "Bit 21 - Interrupt 21"]
     #[inline(always)]
     #[must_use]
-    pub fn int21(&mut self) -> INT21_W<21> {
+    pub fn int21(&mut self) -> INT21_W<GICD_ISACTIVER0_SPEC, 21> {
         INT21_W::new(self)
     }
     #[doc = "Bit 22 - Interrupt 22"]
     #[inline(always)]
     #[must_use]
-    pub fn int22(&mut self) -> INT22_W<22> {
+    pub fn int22(&mut self) -> INT22_W<GICD_ISACTIVER0_SPEC, 22> {
         INT22_W::new(self)
     }
     #[doc = "Bit 23 - Interrupt 23"]
     #[inline(always)]
     #[must_use]
-    pub fn int23(&mut self) -> INT23_W<23> {
+    pub fn int23(&mut self) -> INT23_W<GICD_ISACTIVER0_SPEC, 23> {
         INT23_W::new(self)
     }
     #[doc = "Bit 24 - Interrupt 24"]
     #[inline(always)]
     #[must_use]
-    pub fn int24(&mut self) -> INT24_W<24> {
+    pub fn int24(&mut self) -> INT24_W<GICD_ISACTIVER0_SPEC, 24> {
         INT24_W::new(self)
     }
     #[doc = "Bit 25 - Interrupt 25"]
     #[inline(always)]
     #[must_use]
-    pub fn int25(&mut self) -> INT25_W<25> {
+    pub fn int25(&mut self) -> INT25_W<GICD_ISACTIVER0_SPEC, 25> {
         INT25_W::new(self)
     }
     #[doc = "Bit 26 - Interrupt 26"]
     #[inline(always)]
     #[must_use]
-    pub fn int26(&mut self) -> INT26_W<26> {
+    pub fn int26(&mut self) -> INT26_W<GICD_ISACTIVER0_SPEC, 26> {
         INT26_W::new(self)
     }
     #[doc = "Bit 27 - Interrupt 27"]
     #[inline(always)]
     #[must_use]
-    pub fn int27(&mut self) -> INT27_W<27> {
+    pub fn int27(&mut self) -> INT27_W<GICD_ISACTIVER0_SPEC, 27> {
         INT27_W::new(self)
     }
     #[doc = "Bit 28 - Interrupt 28"]
     #[inline(always)]
     #[must_use]
-    pub fn int28(&mut self) -> INT28_W<28> {
+    pub fn int28(&mut self) -> INT28_W<GICD_ISACTIVER0_SPEC, 28> {
         INT28_W::new(self)
     }
     #[doc = "Bit 29 - Interrupt 29"]
     #[inline(always)]
     #[must_use]
-    pub fn int29(&mut self) -> INT29_W<29> {
+    pub fn int29(&mut self) -> INT29_W<GICD_ISACTIVER0_SPEC, 29> {
         INT29_W::new(self)
     }
     #[doc = "Bit 30 - Interrupt 30"]
     #[inline(always)]
     #[must_use]
-    pub fn int30(&mut self) -> INT30_W<30> {
+    pub fn int30(&mut self) -> INT30_W<GICD_ISACTIVER0_SPEC, 30> {
         INT30_W::new(self)
     }
     #[doc = "Bit 31 - Interrupt 31"]
     #[inline(always)]
     #[must_use]
-    pub fn int31(&mut self) -> INT31_W<31> {
+    pub fn int31(&mut self) -> INT31_W<GICD_ISACTIVER0_SPEC, 31> {
         INT31_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Set-Active\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_isactiver0](index.html) module"]
+#[doc = "Interrupt Set-Active\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_isactiver0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_isactiver0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_ISACTIVER0_SPEC;
 impl crate::RegisterSpec for GICD_ISACTIVER0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_isactiver0::R](R) reader structure"]
-impl crate::Readable for GICD_ISACTIVER0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicd_isactiver0::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicd_isactiver0::R`](R) reader structure"]
+impl crate::Readable for GICD_ISACTIVER0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicd_isactiver0::W`](W) writer structure"]
 impl crate::Writable for GICD_ISACTIVER0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xffff_ffff;
 }

@@ -1,67 +1,35 @@
 #[doc = "Register `C` reader"]
-pub struct R(crate::R<C_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<C_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<C_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<C_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<C_SPEC>;
 #[doc = "Register `C` writer"]
-pub struct W(crate::W<C_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<C_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<C_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<C_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<C_SPEC>;
 #[doc = "Field `READ` reader - Transfer is read"]
-pub type READ_R = crate::BitReader<bool>;
+pub type READ_R = crate::BitReader;
 #[doc = "Field `READ` writer - Transfer is read"]
-pub type READ_W<'a, const O: u8> = crate::BitWriter<'a, u32, C_SPEC, bool, O>;
+pub type READ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLEAR` reader - Clear the FIFO"]
-pub type CLEAR_R = crate::FieldReader<u8, u8>;
+pub type CLEAR_R = crate::FieldReader;
 #[doc = "Field `CLEAR` writer - Clear the FIFO"]
-pub type CLEAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, C_SPEC, u8, u8, 2, O>;
+pub type CLEAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `ST` reader - Start transfer"]
-pub type ST_R = crate::BitReader<bool>;
+pub type ST_R = crate::BitReader;
 #[doc = "Field `ST` writer - Start transfer"]
-pub type ST_W<'a, const O: u8> = crate::BitWriter<'a, u32, C_SPEC, bool, O>;
+pub type ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTD` reader - Interrupt on done"]
-pub type INTD_R = crate::BitReader<bool>;
+pub type INTD_R = crate::BitReader;
 #[doc = "Field `INTD` writer - Interrupt on done"]
-pub type INTD_W<'a, const O: u8> = crate::BitWriter<'a, u32, C_SPEC, bool, O>;
+pub type INTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTT` reader - Interrupt on TX"]
-pub type INTT_R = crate::BitReader<bool>;
+pub type INTT_R = crate::BitReader;
 #[doc = "Field `INTT` writer - Interrupt on TX"]
-pub type INTT_W<'a, const O: u8> = crate::BitWriter<'a, u32, C_SPEC, bool, O>;
+pub type INTT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `INTR` reader - Interrupt on RX"]
-pub type INTR_R = crate::BitReader<bool>;
+pub type INTR_R = crate::BitReader;
 #[doc = "Field `INTR` writer - Interrupt on RX"]
-pub type INTR_W<'a, const O: u8> = crate::BitWriter<'a, u32, C_SPEC, bool, O>;
+pub type INTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `I2CEN` reader - I2C Enable"]
-pub type I2CEN_R = crate::BitReader<bool>;
+pub type I2CEN_R = crate::BitReader;
 #[doc = "Field `I2CEN` writer - I2C Enable"]
-pub type I2CEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, C_SPEC, bool, O>;
+pub type I2CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Transfer is read"]
     #[inline(always)]
@@ -99,68 +67,87 @@ impl R {
         I2CEN_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("C")
+            .field("i2cen", &format_args!("{}", self.i2cen().bit()))
+            .field("intr", &format_args!("{}", self.intr().bit()))
+            .field("intt", &format_args!("{}", self.intt().bit()))
+            .field("intd", &format_args!("{}", self.intd().bit()))
+            .field("st", &format_args!("{}", self.st().bit()))
+            .field("clear", &format_args!("{}", self.clear().bits()))
+            .field("read", &format_args!("{}", self.read().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<C_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer is read"]
     #[inline(always)]
     #[must_use]
-    pub fn read(&mut self) -> READ_W<0> {
+    pub fn read(&mut self) -> READ_W<C_SPEC, 0> {
         READ_W::new(self)
     }
     #[doc = "Bits 4:5 - Clear the FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn clear(&mut self) -> CLEAR_W<4> {
+    pub fn clear(&mut self) -> CLEAR_W<C_SPEC, 4> {
         CLEAR_W::new(self)
     }
     #[doc = "Bit 7 - Start transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn st(&mut self) -> ST_W<7> {
+    pub fn st(&mut self) -> ST_W<C_SPEC, 7> {
         ST_W::new(self)
     }
     #[doc = "Bit 8 - Interrupt on done"]
     #[inline(always)]
     #[must_use]
-    pub fn intd(&mut self) -> INTD_W<8> {
+    pub fn intd(&mut self) -> INTD_W<C_SPEC, 8> {
         INTD_W::new(self)
     }
     #[doc = "Bit 9 - Interrupt on TX"]
     #[inline(always)]
     #[must_use]
-    pub fn intt(&mut self) -> INTT_W<9> {
+    pub fn intt(&mut self) -> INTT_W<C_SPEC, 9> {
         INTT_W::new(self)
     }
     #[doc = "Bit 10 - Interrupt on RX"]
     #[inline(always)]
     #[must_use]
-    pub fn intr(&mut self) -> INTR_W<10> {
+    pub fn intr(&mut self) -> INTR_W<C_SPEC, 10> {
         INTR_W::new(self)
     }
     #[doc = "Bit 15 - I2C Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn i2cen(&mut self) -> I2CEN_W<15> {
+    pub fn i2cen(&mut self) -> I2CEN_W<C_SPEC, 15> {
         I2CEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [c](index.html) module"]
+#[doc = "Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct C_SPEC;
 impl crate::RegisterSpec for C_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [c::R](R) reader structure"]
-impl crate::Readable for C_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [c::W](W) writer structure"]
+#[doc = "`read()` method returns [`c::R`](R) reader structure"]
+impl crate::Readable for C_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`c::W`](W) writer structure"]
 impl crate::Writable for C_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,82 +1,69 @@
 #[doc = "Register `PENDING_1` reader"]
-pub struct R(crate::R<PENDING_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PENDING_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PENDING_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PENDING_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PENDING_1_SPEC>;
 #[doc = "Field `TIMER_0` reader - Timer 0"]
-pub type TIMER_0_R = crate::BitReader<bool>;
+pub type TIMER_0_R = crate::BitReader;
 #[doc = "Field `TIMER_1` reader - Timer 1"]
-pub type TIMER_1_R = crate::BitReader<bool>;
+pub type TIMER_1_R = crate::BitReader;
 #[doc = "Field `TIMER_2` reader - Timer 2"]
-pub type TIMER_2_R = crate::BitReader<bool>;
+pub type TIMER_2_R = crate::BitReader;
 #[doc = "Field `TIMER_3` reader - Timer 3"]
-pub type TIMER_3_R = crate::BitReader<bool>;
+pub type TIMER_3_R = crate::BitReader;
 #[doc = "Field `H264_0` reader - H264 0"]
-pub type H264_0_R = crate::BitReader<bool>;
+pub type H264_0_R = crate::BitReader;
 #[doc = "Field `H264_1` reader - H264 1"]
-pub type H264_1_R = crate::BitReader<bool>;
+pub type H264_1_R = crate::BitReader;
 #[doc = "Field `H264_2` reader - H264 2"]
-pub type H264_2_R = crate::BitReader<bool>;
+pub type H264_2_R = crate::BitReader;
 #[doc = "Field `JPEG` reader - JPEG"]
-pub type JPEG_R = crate::BitReader<bool>;
+pub type JPEG_R = crate::BitReader;
 #[doc = "Field `ISP` reader - ISP"]
-pub type ISP_R = crate::BitReader<bool>;
+pub type ISP_R = crate::BitReader;
 #[doc = "Field `USB` reader - USB"]
-pub type USB_R = crate::BitReader<bool>;
+pub type USB_R = crate::BitReader;
 #[doc = "Field `V3D` reader - V3D"]
-pub type V3D_R = crate::BitReader<bool>;
+pub type V3D_R = crate::BitReader;
 #[doc = "Field `TRANSPOSER` reader - Transposer"]
-pub type TRANSPOSER_R = crate::BitReader<bool>;
+pub type TRANSPOSER_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_0` reader - Multicore Sync 0"]
-pub type MULTICORE_SYNC_0_R = crate::BitReader<bool>;
+pub type MULTICORE_SYNC_0_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_1` reader - Multicore Sync 1"]
-pub type MULTICORE_SYNC_1_R = crate::BitReader<bool>;
+pub type MULTICORE_SYNC_1_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_2` reader - Multicore Sync 2"]
-pub type MULTICORE_SYNC_2_R = crate::BitReader<bool>;
+pub type MULTICORE_SYNC_2_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_3` reader - Multicore Sync 3"]
-pub type MULTICORE_SYNC_3_R = crate::BitReader<bool>;
+pub type MULTICORE_SYNC_3_R = crate::BitReader;
 #[doc = "Field `DMA_0` reader - DMA 0"]
-pub type DMA_0_R = crate::BitReader<bool>;
+pub type DMA_0_R = crate::BitReader;
 #[doc = "Field `DMA_1` reader - DMA 1"]
-pub type DMA_1_R = crate::BitReader<bool>;
+pub type DMA_1_R = crate::BitReader;
 #[doc = "Field `DMA_2` reader - DMA 2"]
-pub type DMA_2_R = crate::BitReader<bool>;
+pub type DMA_2_R = crate::BitReader;
 #[doc = "Field `DMA_3` reader - DMA 3"]
-pub type DMA_3_R = crate::BitReader<bool>;
+pub type DMA_3_R = crate::BitReader;
 #[doc = "Field `DMA_4` reader - DMA 4"]
-pub type DMA_4_R = crate::BitReader<bool>;
+pub type DMA_4_R = crate::BitReader;
 #[doc = "Field `DMA_5` reader - DMA 5"]
-pub type DMA_5_R = crate::BitReader<bool>;
+pub type DMA_5_R = crate::BitReader;
 #[doc = "Field `DMA_6` reader - DMA 6"]
-pub type DMA_6_R = crate::BitReader<bool>;
+pub type DMA_6_R = crate::BitReader;
 #[doc = "Field `DMA_7_8` reader - OR of DMA 7 and 8"]
-pub type DMA_7_8_R = crate::BitReader<bool>;
+pub type DMA_7_8_R = crate::BitReader;
 #[doc = "Field `DMA_9_10` reader - OR of DMA 9 and 10"]
-pub type DMA_9_10_R = crate::BitReader<bool>;
+pub type DMA_9_10_R = crate::BitReader;
 #[doc = "Field `DMA_11` reader - DMA 11"]
-pub type DMA_11_R = crate::BitReader<bool>;
+pub type DMA_11_R = crate::BitReader;
 #[doc = "Field `DMA_12` reader - DMA 12"]
-pub type DMA_12_R = crate::BitReader<bool>;
+pub type DMA_12_R = crate::BitReader;
 #[doc = "Field `DMA_13` reader - DMA 13"]
-pub type DMA_13_R = crate::BitReader<bool>;
+pub type DMA_13_R = crate::BitReader;
 #[doc = "Field `DMA_14` reader - DMA 14"]
-pub type DMA_14_R = crate::BitReader<bool>;
+pub type DMA_14_R = crate::BitReader;
 #[doc = "Field `AUX` reader - OR of UART1, SPI1 and SPI2"]
-pub type AUX_R = crate::BitReader<bool>;
+pub type AUX_R = crate::BitReader;
 #[doc = "Field `ARM` reader - ARM"]
-pub type ARM_R = crate::BitReader<bool>;
+pub type ARM_R = crate::BitReader;
 #[doc = "Field `DMA_15` reader - DMA 15"]
-pub type DMA_15_R = crate::BitReader<bool>;
+pub type DMA_15_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Timer 0"]
     #[inline(always)]
@@ -239,15 +226,68 @@ impl R {
         DMA_15_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Pending state for interrupts 1 - 31\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pending_1](index.html) module"]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PENDING_1")
+            .field("timer_0", &format_args!("{}", self.timer_0().bit()))
+            .field("timer_1", &format_args!("{}", self.timer_1().bit()))
+            .field("timer_2", &format_args!("{}", self.timer_2().bit()))
+            .field("timer_3", &format_args!("{}", self.timer_3().bit()))
+            .field("h264_0", &format_args!("{}", self.h264_0().bit()))
+            .field("h264_1", &format_args!("{}", self.h264_1().bit()))
+            .field("h264_2", &format_args!("{}", self.h264_2().bit()))
+            .field("jpeg", &format_args!("{}", self.jpeg().bit()))
+            .field("isp", &format_args!("{}", self.isp().bit()))
+            .field("usb", &format_args!("{}", self.usb().bit()))
+            .field("v3d", &format_args!("{}", self.v3d().bit()))
+            .field("transposer", &format_args!("{}", self.transposer().bit()))
+            .field(
+                "multicore_sync_0",
+                &format_args!("{}", self.multicore_sync_0().bit()),
+            )
+            .field(
+                "multicore_sync_1",
+                &format_args!("{}", self.multicore_sync_1().bit()),
+            )
+            .field(
+                "multicore_sync_2",
+                &format_args!("{}", self.multicore_sync_2().bit()),
+            )
+            .field(
+                "multicore_sync_3",
+                &format_args!("{}", self.multicore_sync_3().bit()),
+            )
+            .field("dma_0", &format_args!("{}", self.dma_0().bit()))
+            .field("dma_1", &format_args!("{}", self.dma_1().bit()))
+            .field("dma_2", &format_args!("{}", self.dma_2().bit()))
+            .field("dma_3", &format_args!("{}", self.dma_3().bit()))
+            .field("dma_4", &format_args!("{}", self.dma_4().bit()))
+            .field("dma_5", &format_args!("{}", self.dma_5().bit()))
+            .field("dma_6", &format_args!("{}", self.dma_6().bit()))
+            .field("dma_7_8", &format_args!("{}", self.dma_7_8().bit()))
+            .field("dma_9_10", &format_args!("{}", self.dma_9_10().bit()))
+            .field("dma_11", &format_args!("{}", self.dma_11().bit()))
+            .field("dma_12", &format_args!("{}", self.dma_12().bit()))
+            .field("dma_13", &format_args!("{}", self.dma_13().bit()))
+            .field("dma_14", &format_args!("{}", self.dma_14().bit()))
+            .field("aux", &format_args!("{}", self.aux().bit()))
+            .field("arm", &format_args!("{}", self.arm().bit()))
+            .field("dma_15", &format_args!("{}", self.dma_15().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PENDING_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
+#[doc = "Pending state for interrupts 1 - 31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pending_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PENDING_1_SPEC;
 impl crate::RegisterSpec for PENDING_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pending_1::R](R) reader structure"]
-impl crate::Readable for PENDING_1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`pending_1::R`](R) reader structure"]
+impl crate::Readable for PENDING_1_SPEC {}
 #[doc = "`reset()` method sets PENDING_1 to value 0"]
 impl crate::Resettable for PENDING_1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

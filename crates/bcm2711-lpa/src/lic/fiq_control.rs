@@ -1,41 +1,9 @@
 #[doc = "Register `FIQ_CONTROL` reader"]
-pub struct R(crate::R<FIQ_CONTROL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FIQ_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FIQ_CONTROL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FIQ_CONTROL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FIQ_CONTROL_SPEC>;
 #[doc = "Register `FIQ_CONTROL` writer"]
-pub struct W(crate::W<FIQ_CONTROL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FIQ_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FIQ_CONTROL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FIQ_CONTROL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FIQ_CONTROL_SPEC>;
 #[doc = "Field `SOURCE` reader - FIQ Source"]
-pub type SOURCE_R = crate::FieldReader<u8, SOURCE_A>;
+pub type SOURCE_R = crate::FieldReader<SOURCE_A>;
 #[doc = "FIQ Source\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -191,10 +159,13 @@ impl From<SOURCE_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for SOURCE_A {
+    type Ux = u8;
+}
 impl SOURCE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SOURCE_A> {
+    pub const fn variant(&self) -> Option<SOURCE_A> {
         match self.bits {
             0 => Some(SOURCE_A::INT0),
             1 => Some(SOURCE_A::INT1),
@@ -271,736 +242,739 @@ impl SOURCE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `INT0`"]
+    #[doc = "Interrupt 0"]
     #[inline(always)]
     pub fn is_int0(&self) -> bool {
         *self == SOURCE_A::INT0
     }
-    #[doc = "Checks if the value of the field is `INT1`"]
+    #[doc = "Interrupt 1"]
     #[inline(always)]
     pub fn is_int1(&self) -> bool {
         *self == SOURCE_A::INT1
     }
-    #[doc = "Checks if the value of the field is `INT2`"]
+    #[doc = "Interrupt 2"]
     #[inline(always)]
     pub fn is_int2(&self) -> bool {
         *self == SOURCE_A::INT2
     }
-    #[doc = "Checks if the value of the field is `INT3`"]
+    #[doc = "Interrupt 3"]
     #[inline(always)]
     pub fn is_int3(&self) -> bool {
         *self == SOURCE_A::INT3
     }
-    #[doc = "Checks if the value of the field is `INT4`"]
+    #[doc = "Interrupt 4"]
     #[inline(always)]
     pub fn is_int4(&self) -> bool {
         *self == SOURCE_A::INT4
     }
-    #[doc = "Checks if the value of the field is `INT5`"]
+    #[doc = "Interrupt 5"]
     #[inline(always)]
     pub fn is_int5(&self) -> bool {
         *self == SOURCE_A::INT5
     }
-    #[doc = "Checks if the value of the field is `INT6`"]
+    #[doc = "Interrupt 6"]
     #[inline(always)]
     pub fn is_int6(&self) -> bool {
         *self == SOURCE_A::INT6
     }
-    #[doc = "Checks if the value of the field is `INT7`"]
+    #[doc = "Interrupt 7"]
     #[inline(always)]
     pub fn is_int7(&self) -> bool {
         *self == SOURCE_A::INT7
     }
-    #[doc = "Checks if the value of the field is `INT8`"]
+    #[doc = "Interrupt 8"]
     #[inline(always)]
     pub fn is_int8(&self) -> bool {
         *self == SOURCE_A::INT8
     }
-    #[doc = "Checks if the value of the field is `INT9`"]
+    #[doc = "Interrupt 9"]
     #[inline(always)]
     pub fn is_int9(&self) -> bool {
         *self == SOURCE_A::INT9
     }
-    #[doc = "Checks if the value of the field is `INT10`"]
+    #[doc = "Interrupt 10"]
     #[inline(always)]
     pub fn is_int10(&self) -> bool {
         *self == SOURCE_A::INT10
     }
-    #[doc = "Checks if the value of the field is `INT11`"]
+    #[doc = "Interrupt 11"]
     #[inline(always)]
     pub fn is_int11(&self) -> bool {
         *self == SOURCE_A::INT11
     }
-    #[doc = "Checks if the value of the field is `INT12`"]
+    #[doc = "Interrupt 12"]
     #[inline(always)]
     pub fn is_int12(&self) -> bool {
         *self == SOURCE_A::INT12
     }
-    #[doc = "Checks if the value of the field is `INT13`"]
+    #[doc = "Interrupt 13"]
     #[inline(always)]
     pub fn is_int13(&self) -> bool {
         *self == SOURCE_A::INT13
     }
-    #[doc = "Checks if the value of the field is `INT14`"]
+    #[doc = "Interrupt 14"]
     #[inline(always)]
     pub fn is_int14(&self) -> bool {
         *self == SOURCE_A::INT14
     }
-    #[doc = "Checks if the value of the field is `INT15`"]
+    #[doc = "Interrupt 15"]
     #[inline(always)]
     pub fn is_int15(&self) -> bool {
         *self == SOURCE_A::INT15
     }
-    #[doc = "Checks if the value of the field is `INT16`"]
+    #[doc = "Interrupt 16"]
     #[inline(always)]
     pub fn is_int16(&self) -> bool {
         *self == SOURCE_A::INT16
     }
-    #[doc = "Checks if the value of the field is `INT17`"]
+    #[doc = "Interrupt 17"]
     #[inline(always)]
     pub fn is_int17(&self) -> bool {
         *self == SOURCE_A::INT17
     }
-    #[doc = "Checks if the value of the field is `INT18`"]
+    #[doc = "Interrupt 18"]
     #[inline(always)]
     pub fn is_int18(&self) -> bool {
         *self == SOURCE_A::INT18
     }
-    #[doc = "Checks if the value of the field is `INT19`"]
+    #[doc = "Interrupt 19"]
     #[inline(always)]
     pub fn is_int19(&self) -> bool {
         *self == SOURCE_A::INT19
     }
-    #[doc = "Checks if the value of the field is `INT20`"]
+    #[doc = "Interrupt 20"]
     #[inline(always)]
     pub fn is_int20(&self) -> bool {
         *self == SOURCE_A::INT20
     }
-    #[doc = "Checks if the value of the field is `INT21`"]
+    #[doc = "Interrupt 21"]
     #[inline(always)]
     pub fn is_int21(&self) -> bool {
         *self == SOURCE_A::INT21
     }
-    #[doc = "Checks if the value of the field is `INT22`"]
+    #[doc = "Interrupt 22"]
     #[inline(always)]
     pub fn is_int22(&self) -> bool {
         *self == SOURCE_A::INT22
     }
-    #[doc = "Checks if the value of the field is `INT23`"]
+    #[doc = "Interrupt 23"]
     #[inline(always)]
     pub fn is_int23(&self) -> bool {
         *self == SOURCE_A::INT23
     }
-    #[doc = "Checks if the value of the field is `INT24`"]
+    #[doc = "Interrupt 24"]
     #[inline(always)]
     pub fn is_int24(&self) -> bool {
         *self == SOURCE_A::INT24
     }
-    #[doc = "Checks if the value of the field is `INT25`"]
+    #[doc = "Interrupt 25"]
     #[inline(always)]
     pub fn is_int25(&self) -> bool {
         *self == SOURCE_A::INT25
     }
-    #[doc = "Checks if the value of the field is `INT26`"]
+    #[doc = "Interrupt 26"]
     #[inline(always)]
     pub fn is_int26(&self) -> bool {
         *self == SOURCE_A::INT26
     }
-    #[doc = "Checks if the value of the field is `INT27`"]
+    #[doc = "Interrupt 27"]
     #[inline(always)]
     pub fn is_int27(&self) -> bool {
         *self == SOURCE_A::INT27
     }
-    #[doc = "Checks if the value of the field is `INT28`"]
+    #[doc = "Interrupt 28"]
     #[inline(always)]
     pub fn is_int28(&self) -> bool {
         *self == SOURCE_A::INT28
     }
-    #[doc = "Checks if the value of the field is `INT29`"]
+    #[doc = "Interrupt 29"]
     #[inline(always)]
     pub fn is_int29(&self) -> bool {
         *self == SOURCE_A::INT29
     }
-    #[doc = "Checks if the value of the field is `INT30`"]
+    #[doc = "Interrupt 30"]
     #[inline(always)]
     pub fn is_int30(&self) -> bool {
         *self == SOURCE_A::INT30
     }
-    #[doc = "Checks if the value of the field is `INT31`"]
+    #[doc = "Interrupt 31"]
     #[inline(always)]
     pub fn is_int31(&self) -> bool {
         *self == SOURCE_A::INT31
     }
-    #[doc = "Checks if the value of the field is `INT32`"]
+    #[doc = "Interrupt 32"]
     #[inline(always)]
     pub fn is_int32(&self) -> bool {
         *self == SOURCE_A::INT32
     }
-    #[doc = "Checks if the value of the field is `INT33`"]
+    #[doc = "Interrupt 33"]
     #[inline(always)]
     pub fn is_int33(&self) -> bool {
         *self == SOURCE_A::INT33
     }
-    #[doc = "Checks if the value of the field is `INT34`"]
+    #[doc = "Interrupt 34"]
     #[inline(always)]
     pub fn is_int34(&self) -> bool {
         *self == SOURCE_A::INT34
     }
-    #[doc = "Checks if the value of the field is `INT35`"]
+    #[doc = "Interrupt 35"]
     #[inline(always)]
     pub fn is_int35(&self) -> bool {
         *self == SOURCE_A::INT35
     }
-    #[doc = "Checks if the value of the field is `INT36`"]
+    #[doc = "Interrupt 36"]
     #[inline(always)]
     pub fn is_int36(&self) -> bool {
         *self == SOURCE_A::INT36
     }
-    #[doc = "Checks if the value of the field is `INT37`"]
+    #[doc = "Interrupt 37"]
     #[inline(always)]
     pub fn is_int37(&self) -> bool {
         *self == SOURCE_A::INT37
     }
-    #[doc = "Checks if the value of the field is `INT38`"]
+    #[doc = "Interrupt 38"]
     #[inline(always)]
     pub fn is_int38(&self) -> bool {
         *self == SOURCE_A::INT38
     }
-    #[doc = "Checks if the value of the field is `INT39`"]
+    #[doc = "Interrupt 39"]
     #[inline(always)]
     pub fn is_int39(&self) -> bool {
         *self == SOURCE_A::INT39
     }
-    #[doc = "Checks if the value of the field is `INT40`"]
+    #[doc = "Interrupt 40"]
     #[inline(always)]
     pub fn is_int40(&self) -> bool {
         *self == SOURCE_A::INT40
     }
-    #[doc = "Checks if the value of the field is `INT41`"]
+    #[doc = "Interrupt 41"]
     #[inline(always)]
     pub fn is_int41(&self) -> bool {
         *self == SOURCE_A::INT41
     }
-    #[doc = "Checks if the value of the field is `INT42`"]
+    #[doc = "Interrupt 42"]
     #[inline(always)]
     pub fn is_int42(&self) -> bool {
         *self == SOURCE_A::INT42
     }
-    #[doc = "Checks if the value of the field is `INT43`"]
+    #[doc = "Interrupt 43"]
     #[inline(always)]
     pub fn is_int43(&self) -> bool {
         *self == SOURCE_A::INT43
     }
-    #[doc = "Checks if the value of the field is `INT44`"]
+    #[doc = "Interrupt 44"]
     #[inline(always)]
     pub fn is_int44(&self) -> bool {
         *self == SOURCE_A::INT44
     }
-    #[doc = "Checks if the value of the field is `INT45`"]
+    #[doc = "Interrupt 45"]
     #[inline(always)]
     pub fn is_int45(&self) -> bool {
         *self == SOURCE_A::INT45
     }
-    #[doc = "Checks if the value of the field is `INT46`"]
+    #[doc = "Interrupt 46"]
     #[inline(always)]
     pub fn is_int46(&self) -> bool {
         *self == SOURCE_A::INT46
     }
-    #[doc = "Checks if the value of the field is `INT47`"]
+    #[doc = "Interrupt 47"]
     #[inline(always)]
     pub fn is_int47(&self) -> bool {
         *self == SOURCE_A::INT47
     }
-    #[doc = "Checks if the value of the field is `INT48`"]
+    #[doc = "Interrupt 48"]
     #[inline(always)]
     pub fn is_int48(&self) -> bool {
         *self == SOURCE_A::INT48
     }
-    #[doc = "Checks if the value of the field is `INT49`"]
+    #[doc = "Interrupt 49"]
     #[inline(always)]
     pub fn is_int49(&self) -> bool {
         *self == SOURCE_A::INT49
     }
-    #[doc = "Checks if the value of the field is `INT50`"]
+    #[doc = "Interrupt 50"]
     #[inline(always)]
     pub fn is_int50(&self) -> bool {
         *self == SOURCE_A::INT50
     }
-    #[doc = "Checks if the value of the field is `INT51`"]
+    #[doc = "Interrupt 51"]
     #[inline(always)]
     pub fn is_int51(&self) -> bool {
         *self == SOURCE_A::INT51
     }
-    #[doc = "Checks if the value of the field is `INT52`"]
+    #[doc = "Interrupt 52"]
     #[inline(always)]
     pub fn is_int52(&self) -> bool {
         *self == SOURCE_A::INT52
     }
-    #[doc = "Checks if the value of the field is `INT53`"]
+    #[doc = "Interrupt 53"]
     #[inline(always)]
     pub fn is_int53(&self) -> bool {
         *self == SOURCE_A::INT53
     }
-    #[doc = "Checks if the value of the field is `INT54`"]
+    #[doc = "Interrupt 54"]
     #[inline(always)]
     pub fn is_int54(&self) -> bool {
         *self == SOURCE_A::INT54
     }
-    #[doc = "Checks if the value of the field is `INT55`"]
+    #[doc = "Interrupt 55"]
     #[inline(always)]
     pub fn is_int55(&self) -> bool {
         *self == SOURCE_A::INT55
     }
-    #[doc = "Checks if the value of the field is `INT56`"]
+    #[doc = "Interrupt 56"]
     #[inline(always)]
     pub fn is_int56(&self) -> bool {
         *self == SOURCE_A::INT56
     }
-    #[doc = "Checks if the value of the field is `INT57`"]
+    #[doc = "Interrupt 57"]
     #[inline(always)]
     pub fn is_int57(&self) -> bool {
         *self == SOURCE_A::INT57
     }
-    #[doc = "Checks if the value of the field is `INT58`"]
+    #[doc = "Interrupt 58"]
     #[inline(always)]
     pub fn is_int58(&self) -> bool {
         *self == SOURCE_A::INT58
     }
-    #[doc = "Checks if the value of the field is `INT59`"]
+    #[doc = "Interrupt 59"]
     #[inline(always)]
     pub fn is_int59(&self) -> bool {
         *self == SOURCE_A::INT59
     }
-    #[doc = "Checks if the value of the field is `INT60`"]
+    #[doc = "Interrupt 60"]
     #[inline(always)]
     pub fn is_int60(&self) -> bool {
         *self == SOURCE_A::INT60
     }
-    #[doc = "Checks if the value of the field is `INT61`"]
+    #[doc = "Interrupt 61"]
     #[inline(always)]
     pub fn is_int61(&self) -> bool {
         *self == SOURCE_A::INT61
     }
-    #[doc = "Checks if the value of the field is `INT62`"]
+    #[doc = "Interrupt 62"]
     #[inline(always)]
     pub fn is_int62(&self) -> bool {
         *self == SOURCE_A::INT62
     }
-    #[doc = "Checks if the value of the field is `INT63`"]
+    #[doc = "Interrupt 63"]
     #[inline(always)]
     pub fn is_int63(&self) -> bool {
         *self == SOURCE_A::INT63
     }
-    #[doc = "Checks if the value of the field is `TIMER`"]
+    #[doc = "ARMC Timer"]
     #[inline(always)]
     pub fn is_timer(&self) -> bool {
         *self == SOURCE_A::TIMER
     }
-    #[doc = "Checks if the value of the field is `MAILBOX`"]
+    #[doc = "Mailbox"]
     #[inline(always)]
     pub fn is_mailbox(&self) -> bool {
         *self == SOURCE_A::MAILBOX
     }
-    #[doc = "Checks if the value of the field is `DOORBELL0`"]
+    #[doc = "Doorbell 0"]
     #[inline(always)]
     pub fn is_doorbell0(&self) -> bool {
         *self == SOURCE_A::DOORBELL0
     }
-    #[doc = "Checks if the value of the field is `DOORBELL1`"]
+    #[doc = "Doorbell 1"]
     #[inline(always)]
     pub fn is_doorbell1(&self) -> bool {
         *self == SOURCE_A::DOORBELL1
     }
-    #[doc = "Checks if the value of the field is `VPU0_HALTED`"]
+    #[doc = "VPU0 halted"]
     #[inline(always)]
     pub fn is_vpu0_halted(&self) -> bool {
         *self == SOURCE_A::VPU0_HALTED
     }
-    #[doc = "Checks if the value of the field is `VPU1_HALTED`"]
+    #[doc = "VPU1 halted"]
     #[inline(always)]
     pub fn is_vpu1_halted(&self) -> bool {
         *self == SOURCE_A::VPU1_HALTED
     }
-    #[doc = "Checks if the value of the field is `ARM_ADDRESS_ERROR`"]
+    #[doc = "ARM address error"]
     #[inline(always)]
     pub fn is_arm_address_error(&self) -> bool {
         *self == SOURCE_A::ARM_ADDRESS_ERROR
     }
-    #[doc = "Checks if the value of the field is `ARM_AXI_ERROR`"]
+    #[doc = "ARM AXI error"]
     #[inline(always)]
     pub fn is_arm_axi_error(&self) -> bool {
         *self == SOURCE_A::ARM_AXI_ERROR
     }
 }
 #[doc = "Field `SOURCE` writer - FIQ Source"]
-pub type SOURCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FIQ_CONTROL_SPEC, u8, SOURCE_A, 7, O>;
-impl<'a, const O: u8> SOURCE_W<'a, O> {
+pub type SOURCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O, SOURCE_A>;
+impl<'a, REG, const O: u8> SOURCE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Interrupt 0"]
     #[inline(always)]
-    pub fn int0(self) -> &'a mut W {
+    pub fn int0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT0)
     }
     #[doc = "Interrupt 1"]
     #[inline(always)]
-    pub fn int1(self) -> &'a mut W {
+    pub fn int1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT1)
     }
     #[doc = "Interrupt 2"]
     #[inline(always)]
-    pub fn int2(self) -> &'a mut W {
+    pub fn int2(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT2)
     }
     #[doc = "Interrupt 3"]
     #[inline(always)]
-    pub fn int3(self) -> &'a mut W {
+    pub fn int3(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT3)
     }
     #[doc = "Interrupt 4"]
     #[inline(always)]
-    pub fn int4(self) -> &'a mut W {
+    pub fn int4(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT4)
     }
     #[doc = "Interrupt 5"]
     #[inline(always)]
-    pub fn int5(self) -> &'a mut W {
+    pub fn int5(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT5)
     }
     #[doc = "Interrupt 6"]
     #[inline(always)]
-    pub fn int6(self) -> &'a mut W {
+    pub fn int6(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT6)
     }
     #[doc = "Interrupt 7"]
     #[inline(always)]
-    pub fn int7(self) -> &'a mut W {
+    pub fn int7(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT7)
     }
     #[doc = "Interrupt 8"]
     #[inline(always)]
-    pub fn int8(self) -> &'a mut W {
+    pub fn int8(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT8)
     }
     #[doc = "Interrupt 9"]
     #[inline(always)]
-    pub fn int9(self) -> &'a mut W {
+    pub fn int9(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT9)
     }
     #[doc = "Interrupt 10"]
     #[inline(always)]
-    pub fn int10(self) -> &'a mut W {
+    pub fn int10(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT10)
     }
     #[doc = "Interrupt 11"]
     #[inline(always)]
-    pub fn int11(self) -> &'a mut W {
+    pub fn int11(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT11)
     }
     #[doc = "Interrupt 12"]
     #[inline(always)]
-    pub fn int12(self) -> &'a mut W {
+    pub fn int12(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT12)
     }
     #[doc = "Interrupt 13"]
     #[inline(always)]
-    pub fn int13(self) -> &'a mut W {
+    pub fn int13(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT13)
     }
     #[doc = "Interrupt 14"]
     #[inline(always)]
-    pub fn int14(self) -> &'a mut W {
+    pub fn int14(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT14)
     }
     #[doc = "Interrupt 15"]
     #[inline(always)]
-    pub fn int15(self) -> &'a mut W {
+    pub fn int15(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT15)
     }
     #[doc = "Interrupt 16"]
     #[inline(always)]
-    pub fn int16(self) -> &'a mut W {
+    pub fn int16(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT16)
     }
     #[doc = "Interrupt 17"]
     #[inline(always)]
-    pub fn int17(self) -> &'a mut W {
+    pub fn int17(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT17)
     }
     #[doc = "Interrupt 18"]
     #[inline(always)]
-    pub fn int18(self) -> &'a mut W {
+    pub fn int18(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT18)
     }
     #[doc = "Interrupt 19"]
     #[inline(always)]
-    pub fn int19(self) -> &'a mut W {
+    pub fn int19(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT19)
     }
     #[doc = "Interrupt 20"]
     #[inline(always)]
-    pub fn int20(self) -> &'a mut W {
+    pub fn int20(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT20)
     }
     #[doc = "Interrupt 21"]
     #[inline(always)]
-    pub fn int21(self) -> &'a mut W {
+    pub fn int21(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT21)
     }
     #[doc = "Interrupt 22"]
     #[inline(always)]
-    pub fn int22(self) -> &'a mut W {
+    pub fn int22(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT22)
     }
     #[doc = "Interrupt 23"]
     #[inline(always)]
-    pub fn int23(self) -> &'a mut W {
+    pub fn int23(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT23)
     }
     #[doc = "Interrupt 24"]
     #[inline(always)]
-    pub fn int24(self) -> &'a mut W {
+    pub fn int24(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT24)
     }
     #[doc = "Interrupt 25"]
     #[inline(always)]
-    pub fn int25(self) -> &'a mut W {
+    pub fn int25(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT25)
     }
     #[doc = "Interrupt 26"]
     #[inline(always)]
-    pub fn int26(self) -> &'a mut W {
+    pub fn int26(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT26)
     }
     #[doc = "Interrupt 27"]
     #[inline(always)]
-    pub fn int27(self) -> &'a mut W {
+    pub fn int27(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT27)
     }
     #[doc = "Interrupt 28"]
     #[inline(always)]
-    pub fn int28(self) -> &'a mut W {
+    pub fn int28(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT28)
     }
     #[doc = "Interrupt 29"]
     #[inline(always)]
-    pub fn int29(self) -> &'a mut W {
+    pub fn int29(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT29)
     }
     #[doc = "Interrupt 30"]
     #[inline(always)]
-    pub fn int30(self) -> &'a mut W {
+    pub fn int30(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT30)
     }
     #[doc = "Interrupt 31"]
     #[inline(always)]
-    pub fn int31(self) -> &'a mut W {
+    pub fn int31(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT31)
     }
     #[doc = "Interrupt 32"]
     #[inline(always)]
-    pub fn int32(self) -> &'a mut W {
+    pub fn int32(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT32)
     }
     #[doc = "Interrupt 33"]
     #[inline(always)]
-    pub fn int33(self) -> &'a mut W {
+    pub fn int33(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT33)
     }
     #[doc = "Interrupt 34"]
     #[inline(always)]
-    pub fn int34(self) -> &'a mut W {
+    pub fn int34(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT34)
     }
     #[doc = "Interrupt 35"]
     #[inline(always)]
-    pub fn int35(self) -> &'a mut W {
+    pub fn int35(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT35)
     }
     #[doc = "Interrupt 36"]
     #[inline(always)]
-    pub fn int36(self) -> &'a mut W {
+    pub fn int36(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT36)
     }
     #[doc = "Interrupt 37"]
     #[inline(always)]
-    pub fn int37(self) -> &'a mut W {
+    pub fn int37(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT37)
     }
     #[doc = "Interrupt 38"]
     #[inline(always)]
-    pub fn int38(self) -> &'a mut W {
+    pub fn int38(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT38)
     }
     #[doc = "Interrupt 39"]
     #[inline(always)]
-    pub fn int39(self) -> &'a mut W {
+    pub fn int39(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT39)
     }
     #[doc = "Interrupt 40"]
     #[inline(always)]
-    pub fn int40(self) -> &'a mut W {
+    pub fn int40(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT40)
     }
     #[doc = "Interrupt 41"]
     #[inline(always)]
-    pub fn int41(self) -> &'a mut W {
+    pub fn int41(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT41)
     }
     #[doc = "Interrupt 42"]
     #[inline(always)]
-    pub fn int42(self) -> &'a mut W {
+    pub fn int42(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT42)
     }
     #[doc = "Interrupt 43"]
     #[inline(always)]
-    pub fn int43(self) -> &'a mut W {
+    pub fn int43(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT43)
     }
     #[doc = "Interrupt 44"]
     #[inline(always)]
-    pub fn int44(self) -> &'a mut W {
+    pub fn int44(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT44)
     }
     #[doc = "Interrupt 45"]
     #[inline(always)]
-    pub fn int45(self) -> &'a mut W {
+    pub fn int45(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT45)
     }
     #[doc = "Interrupt 46"]
     #[inline(always)]
-    pub fn int46(self) -> &'a mut W {
+    pub fn int46(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT46)
     }
     #[doc = "Interrupt 47"]
     #[inline(always)]
-    pub fn int47(self) -> &'a mut W {
+    pub fn int47(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT47)
     }
     #[doc = "Interrupt 48"]
     #[inline(always)]
-    pub fn int48(self) -> &'a mut W {
+    pub fn int48(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT48)
     }
     #[doc = "Interrupt 49"]
     #[inline(always)]
-    pub fn int49(self) -> &'a mut W {
+    pub fn int49(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT49)
     }
     #[doc = "Interrupt 50"]
     #[inline(always)]
-    pub fn int50(self) -> &'a mut W {
+    pub fn int50(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT50)
     }
     #[doc = "Interrupt 51"]
     #[inline(always)]
-    pub fn int51(self) -> &'a mut W {
+    pub fn int51(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT51)
     }
     #[doc = "Interrupt 52"]
     #[inline(always)]
-    pub fn int52(self) -> &'a mut W {
+    pub fn int52(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT52)
     }
     #[doc = "Interrupt 53"]
     #[inline(always)]
-    pub fn int53(self) -> &'a mut W {
+    pub fn int53(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT53)
     }
     #[doc = "Interrupt 54"]
     #[inline(always)]
-    pub fn int54(self) -> &'a mut W {
+    pub fn int54(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT54)
     }
     #[doc = "Interrupt 55"]
     #[inline(always)]
-    pub fn int55(self) -> &'a mut W {
+    pub fn int55(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT55)
     }
     #[doc = "Interrupt 56"]
     #[inline(always)]
-    pub fn int56(self) -> &'a mut W {
+    pub fn int56(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT56)
     }
     #[doc = "Interrupt 57"]
     #[inline(always)]
-    pub fn int57(self) -> &'a mut W {
+    pub fn int57(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT57)
     }
     #[doc = "Interrupt 58"]
     #[inline(always)]
-    pub fn int58(self) -> &'a mut W {
+    pub fn int58(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT58)
     }
     #[doc = "Interrupt 59"]
     #[inline(always)]
-    pub fn int59(self) -> &'a mut W {
+    pub fn int59(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT59)
     }
     #[doc = "Interrupt 60"]
     #[inline(always)]
-    pub fn int60(self) -> &'a mut W {
+    pub fn int60(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT60)
     }
     #[doc = "Interrupt 61"]
     #[inline(always)]
-    pub fn int61(self) -> &'a mut W {
+    pub fn int61(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT61)
     }
     #[doc = "Interrupt 62"]
     #[inline(always)]
-    pub fn int62(self) -> &'a mut W {
+    pub fn int62(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT62)
     }
     #[doc = "Interrupt 63"]
     #[inline(always)]
-    pub fn int63(self) -> &'a mut W {
+    pub fn int63(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::INT63)
     }
     #[doc = "ARMC Timer"]
     #[inline(always)]
-    pub fn timer(self) -> &'a mut W {
+    pub fn timer(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::TIMER)
     }
     #[doc = "Mailbox"]
     #[inline(always)]
-    pub fn mailbox(self) -> &'a mut W {
+    pub fn mailbox(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::MAILBOX)
     }
     #[doc = "Doorbell 0"]
     #[inline(always)]
-    pub fn doorbell0(self) -> &'a mut W {
+    pub fn doorbell0(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DOORBELL0)
     }
     #[doc = "Doorbell 1"]
     #[inline(always)]
-    pub fn doorbell1(self) -> &'a mut W {
+    pub fn doorbell1(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::DOORBELL1)
     }
     #[doc = "VPU0 halted"]
     #[inline(always)]
-    pub fn vpu0_halted(self) -> &'a mut W {
+    pub fn vpu0_halted(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::VPU0_HALTED)
     }
     #[doc = "VPU1 halted"]
     #[inline(always)]
-    pub fn vpu1_halted(self) -> &'a mut W {
+    pub fn vpu1_halted(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::VPU1_HALTED)
     }
     #[doc = "ARM address error"]
     #[inline(always)]
-    pub fn arm_address_error(self) -> &'a mut W {
+    pub fn arm_address_error(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ARM_ADDRESS_ERROR)
     }
     #[doc = "ARM AXI error"]
     #[inline(always)]
-    pub fn arm_axi_error(self) -> &'a mut W {
+    pub fn arm_axi_error(self) -> &'a mut crate::W<REG> {
         self.variant(SOURCE_A::ARM_AXI_ERROR)
     }
 }
 #[doc = "Field `ENABLE` reader - FIQ Enable"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - FIQ Enable"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIQ_CONTROL_SPEC, bool, O>;
+pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:6 - FIQ Source"]
     #[inline(always)]
@@ -1013,38 +987,52 @@ impl R {
         ENABLE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIQ_CONTROL")
+            .field("enable", &format_args!("{}", self.enable().bit()))
+            .field("source", &format_args!("{}", self.source().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FIQ_CONTROL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - FIQ Source"]
     #[inline(always)]
     #[must_use]
-    pub fn source(&mut self) -> SOURCE_W<0> {
+    pub fn source(&mut self) -> SOURCE_W<FIQ_CONTROL_SPEC, 0> {
         SOURCE_W::new(self)
     }
     #[doc = "Bit 7 - FIQ Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<7> {
+    pub fn enable(&mut self) -> ENABLE_W<FIQ_CONTROL_SPEC, 7> {
         ENABLE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "FIQ control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fiq_control](index.html) module"]
+#[doc = "FIQ control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fiq_control::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fiq_control::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIQ_CONTROL_SPEC;
 impl crate::RegisterSpec for FIQ_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fiq_control::R](R) reader structure"]
-impl crate::Readable for FIQ_CONTROL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [fiq_control::W](W) writer structure"]
+#[doc = "`read()` method returns [`fiq_control::R`](R) reader structure"]
+impl crate::Readable for FIQ_CONTROL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`fiq_control::W`](W) writer structure"]
 impl crate::Writable for FIQ_CONTROL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

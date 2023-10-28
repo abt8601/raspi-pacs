@@ -1,43 +1,11 @@
 #[doc = "Register `EXRDFIFO_CFG` reader"]
-pub struct R(crate::R<EXRDFIFO_CFG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EXRDFIFO_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EXRDFIFO_CFG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EXRDFIFO_CFG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EXRDFIFO_CFG_SPEC>;
 #[doc = "Register `EXRDFIFO_CFG` writer"]
-pub struct W(crate::W<EXRDFIFO_CFG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EXRDFIFO_CFG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EXRDFIFO_CFG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EXRDFIFO_CFG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EXRDFIFO_CFG_SPEC>;
 #[doc = "Field `RD_THRSH` reader - Read threshold in 32 bit words"]
-pub type RD_THRSH_R = crate::FieldReader<u8, u8>;
+pub type RD_THRSH_R = crate::FieldReader;
 #[doc = "Field `RD_THRSH` writer - Read threshold in 32 bit words"]
-pub type RD_THRSH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXRDFIFO_CFG_SPEC, u8, u8, 3, O>;
+pub type RD_THRSH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - Read threshold in 32 bit words"]
     #[inline(always)]
@@ -45,32 +13,45 @@ impl R {
         RD_THRSH_R::new((self.bits & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXRDFIFO_CFG")
+            .field("rd_thrsh", &format_args!("{}", self.rd_thrsh().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EXRDFIFO_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - Read threshold in 32 bit words"]
     #[inline(always)]
     #[must_use]
-    pub fn rd_thrsh(&mut self) -> RD_THRSH_W<0> {
+    pub fn rd_thrsh(&mut self) -> RD_THRSH_W<EXRDFIFO_CFG_SPEC, 0> {
         RD_THRSH_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Fine tune DMA request generation\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [exrdfifo_cfg](index.html) module"]
+#[doc = "Fine tune DMA request generation\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exrdfifo_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`exrdfifo_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXRDFIFO_CFG_SPEC;
 impl crate::RegisterSpec for EXRDFIFO_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [exrdfifo_cfg::R](R) reader structure"]
-impl crate::Readable for EXRDFIFO_CFG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [exrdfifo_cfg::W](W) writer structure"]
+#[doc = "`read()` method returns [`exrdfifo_cfg::R`](R) reader structure"]
+impl crate::Readable for EXRDFIFO_CFG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`exrdfifo_cfg::W`](W) writer structure"]
 impl crate::Writable for EXRDFIFO_CFG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

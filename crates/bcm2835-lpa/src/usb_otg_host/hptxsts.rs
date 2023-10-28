@@ -1,47 +1,15 @@
 #[doc = "Register `HPTXSTS` reader"]
-pub struct R(crate::R<HPTXSTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HPTXSTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HPTXSTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HPTXSTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HPTXSTS_SPEC>;
 #[doc = "Register `HPTXSTS` writer"]
-pub struct W(crate::W<HPTXSTS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HPTXSTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HPTXSTS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HPTXSTS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HPTXSTS_SPEC>;
 #[doc = "Field `PTXFSAVL` reader - Periodic transmit data FIFO space available"]
-pub type PTXFSAVL_R = crate::FieldReader<u16, u16>;
+pub type PTXFSAVL_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSAVL` writer - Periodic transmit data FIFO space available"]
-pub type PTXFSAVL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HPTXSTS_SPEC, u16, u16, 16, O>;
+pub type PTXFSAVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `PTXQSAV` reader - Periodic transmit request queue space available"]
-pub type PTXQSAV_R = crate::FieldReader<u8, u8>;
+pub type PTXQSAV_R = crate::FieldReader;
 #[doc = "Field `PTXQTOP` reader - Top of the periodic transmit request queue"]
-pub type PTXQTOP_R = crate::FieldReader<u8, u8>;
+pub type PTXQTOP_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:15 - Periodic transmit data FIFO space available"]
     #[inline(always)]
@@ -59,32 +27,47 @@ impl R {
         PTXQTOP_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPTXSTS")
+            .field("ptxfsavl", &format_args!("{}", self.ptxfsavl().bits()))
+            .field("ptxqsav", &format_args!("{}", self.ptxqsav().bits()))
+            .field("ptxqtop", &format_args!("{}", self.ptxqtop().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HPTXSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Periodic transmit data FIFO space available"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfsavl(&mut self) -> PTXFSAVL_W<0> {
+    pub fn ptxfsavl(&mut self) -> PTXFSAVL_W<HPTXSTS_SPEC, 0> {
         PTXFSAVL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Host periodic transmit FIFO/queue status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hptxsts](index.html) module"]
+#[doc = "Host periodic transmit FIFO/queue status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hptxsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hptxsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPTXSTS_SPEC;
 impl crate::RegisterSpec for HPTXSTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hptxsts::R](R) reader structure"]
-impl crate::Readable for HPTXSTS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hptxsts::W](W) writer structure"]
+#[doc = "`read()` method returns [`hptxsts::R`](R) reader structure"]
+impl crate::Readable for HPTXSTS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hptxsts::W`](W) writer structure"]
 impl crate::Writable for HPTXSTS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

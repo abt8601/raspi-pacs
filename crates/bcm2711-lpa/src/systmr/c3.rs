@@ -1,59 +1,38 @@
 #[doc = "Register `C3` reader"]
-pub struct R(crate::R<C3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<C3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<C3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<C3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<C3_SPEC>;
 #[doc = "Register `C3` writer"]
-pub struct W(crate::W<C3_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<C3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+pub type W = crate::W<C3_SPEC>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
     }
 }
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<C3_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<C3_SPEC>) -> Self {
-        W(writer)
+impl core::fmt::Debug for crate::generic::Reg<C3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Compare channel 3\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [c3](index.html) module"]
+#[doc = "Compare channel 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct C3_SPEC;
 impl crate::RegisterSpec for C3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [c3::R](R) reader structure"]
-impl crate::Readable for C3_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [c3::W](W) writer structure"]
+#[doc = "`read()` method returns [`c3::R`](R) reader structure"]
+impl crate::Readable for C3_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`c3::W`](W) writer structure"]
 impl crate::Writable for C3_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

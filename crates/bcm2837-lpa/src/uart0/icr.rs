@@ -1,128 +1,117 @@
 #[doc = "Register `ICR` writer"]
-pub struct W(crate::W<ICR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ICR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ICR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ICR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ICR_SPEC>;
 #[doc = "Field `RIMIC` writer - RIMIC"]
-pub type RIMIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type RIMIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CTSMIC` writer - CTSMIC"]
-pub type CTSMIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type CTSMIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DCDMIC` writer - DCDMIC"]
-pub type DCDMIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type DCDMIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DSRMIC` writer - DSRMIC"]
-pub type DSRMIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type DSRMIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXIC` writer - RXIC"]
-pub type RXIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type RXIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TXIC` writer - TXIC"]
-pub type TXIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type TXIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RTIC` writer - RTIC"]
-pub type RTIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type RTIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FEIC` writer - FEIC"]
-pub type FEIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type FEIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PEIC` writer - PEIC"]
-pub type PEIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type PEIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `BEIC` writer - BEIC"]
-pub type BEIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type BEIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OEIC` writer - OEIC"]
-pub type OEIC_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICR_SPEC, bool, O>;
+pub type OEIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+impl core::fmt::Debug for crate::generic::Reg<ICR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - RIMIC"]
     #[inline(always)]
     #[must_use]
-    pub fn rimic(&mut self) -> RIMIC_W<0> {
+    pub fn rimic(&mut self) -> RIMIC_W<ICR_SPEC, 0> {
         RIMIC_W::new(self)
     }
     #[doc = "Bit 1 - CTSMIC"]
     #[inline(always)]
     #[must_use]
-    pub fn ctsmic(&mut self) -> CTSMIC_W<1> {
+    pub fn ctsmic(&mut self) -> CTSMIC_W<ICR_SPEC, 1> {
         CTSMIC_W::new(self)
     }
     #[doc = "Bit 2 - DCDMIC"]
     #[inline(always)]
     #[must_use]
-    pub fn dcdmic(&mut self) -> DCDMIC_W<2> {
+    pub fn dcdmic(&mut self) -> DCDMIC_W<ICR_SPEC, 2> {
         DCDMIC_W::new(self)
     }
     #[doc = "Bit 3 - DSRMIC"]
     #[inline(always)]
     #[must_use]
-    pub fn dsrmic(&mut self) -> DSRMIC_W<3> {
+    pub fn dsrmic(&mut self) -> DSRMIC_W<ICR_SPEC, 3> {
         DSRMIC_W::new(self)
     }
     #[doc = "Bit 4 - RXIC"]
     #[inline(always)]
     #[must_use]
-    pub fn rxic(&mut self) -> RXIC_W<4> {
+    pub fn rxic(&mut self) -> RXIC_W<ICR_SPEC, 4> {
         RXIC_W::new(self)
     }
     #[doc = "Bit 5 - TXIC"]
     #[inline(always)]
     #[must_use]
-    pub fn txic(&mut self) -> TXIC_W<5> {
+    pub fn txic(&mut self) -> TXIC_W<ICR_SPEC, 5> {
         TXIC_W::new(self)
     }
     #[doc = "Bit 6 - RTIC"]
     #[inline(always)]
     #[must_use]
-    pub fn rtic(&mut self) -> RTIC_W<6> {
+    pub fn rtic(&mut self) -> RTIC_W<ICR_SPEC, 6> {
         RTIC_W::new(self)
     }
     #[doc = "Bit 7 - FEIC"]
     #[inline(always)]
     #[must_use]
-    pub fn feic(&mut self) -> FEIC_W<7> {
+    pub fn feic(&mut self) -> FEIC_W<ICR_SPEC, 7> {
         FEIC_W::new(self)
     }
     #[doc = "Bit 8 - PEIC"]
     #[inline(always)]
     #[must_use]
-    pub fn peic(&mut self) -> PEIC_W<8> {
+    pub fn peic(&mut self) -> PEIC_W<ICR_SPEC, 8> {
         PEIC_W::new(self)
     }
     #[doc = "Bit 9 - BEIC"]
     #[inline(always)]
     #[must_use]
-    pub fn beic(&mut self) -> BEIC_W<9> {
+    pub fn beic(&mut self) -> BEIC_W<ICR_SPEC, 9> {
         BEIC_W::new(self)
     }
     #[doc = "Bit 10 - OEIC"]
     #[inline(always)]
     #[must_use]
-    pub fn oeic(&mut self) -> OEIC_W<10> {
+    pub fn oeic(&mut self) -> OEIC_W<ICR_SPEC, 10> {
         OEIC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Clear Register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icr](index.html) module"]
+#[doc = "Interrupt Clear Register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ICR_SPEC;
 impl crate::RegisterSpec for ICR_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [icr::W](W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [`icr::W`](W) writer structure"]
 impl crate::Writable for ICR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

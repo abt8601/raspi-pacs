@@ -1,53 +1,21 @@
 #[doc = "Register `CONTROL2` reader"]
-pub struct R(crate::R<CONTROL2_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONTROL2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CONTROL2_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CONTROL2_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CONTROL2_SPEC>;
 #[doc = "Register `CONTROL2` writer"]
-pub struct W(crate::W<CONTROL2_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CONTROL2_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CONTROL2_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CONTROL2_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CONTROL2_SPEC>;
 #[doc = "Field `ACNOX_ERR` reader - Auto command not executed due to an error"]
-pub type ACNOX_ERR_R = crate::BitReader<bool>;
+pub type ACNOX_ERR_R = crate::BitReader;
 #[doc = "Field `ACTO_ERR` reader - Auto command timeout"]
-pub type ACTO_ERR_R = crate::BitReader<bool>;
+pub type ACTO_ERR_R = crate::BitReader;
 #[doc = "Field `ACCRC_ERR` reader - Command CRC error during auto command"]
-pub type ACCRC_ERR_R = crate::BitReader<bool>;
+pub type ACCRC_ERR_R = crate::BitReader;
 #[doc = "Field `ACEND_ERR` reader - End bit is not 1 during auto command"]
-pub type ACEND_ERR_R = crate::BitReader<bool>;
+pub type ACEND_ERR_R = crate::BitReader;
 #[doc = "Field `ACBAD_ERR` reader - Command index error during auto command"]
-pub type ACBAD_ERR_R = crate::BitReader<bool>;
+pub type ACBAD_ERR_R = crate::BitReader;
 #[doc = "Field `NOTC12_ERR` reader - Error during auto CMD12"]
-pub type NOTC12_ERR_R = crate::BitReader<bool>;
+pub type NOTC12_ERR_R = crate::BitReader;
 #[doc = "Field `UHSMODE` reader - Select the speed of the SD card"]
-pub type UHSMODE_R = crate::FieldReader<u8, UHSMODE_A>;
+pub type UHSMODE_R = crate::FieldReader<UHSMODE_A>;
 #[doc = "Select the speed of the SD card\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -69,10 +37,13 @@ impl From<UHSMODE_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for UHSMODE_A {
+    type Ux = u8;
+}
 impl UHSMODE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<UHSMODE_A> {
+    pub const fn variant(&self) -> Option<UHSMODE_A> {
         match self.bits {
             0 => Some(UHSMODE_A::SDR12),
             1 => Some(UHSMODE_A::SDR25),
@@ -82,70 +53,73 @@ impl UHSMODE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `SDR12`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_sdr12(&self) -> bool {
         *self == UHSMODE_A::SDR12
     }
-    #[doc = "Checks if the value of the field is `SDR25`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_sdr25(&self) -> bool {
         *self == UHSMODE_A::SDR25
     }
-    #[doc = "Checks if the value of the field is `SDR50`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_sdr50(&self) -> bool {
         *self == UHSMODE_A::SDR50
     }
-    #[doc = "Checks if the value of the field is `SDR104`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_sdr104(&self) -> bool {
         *self == UHSMODE_A::SDR104
     }
-    #[doc = "Checks if the value of the field is `DDR50`"]
+    #[doc = "`100`"]
     #[inline(always)]
     pub fn is_ddr50(&self) -> bool {
         *self == UHSMODE_A::DDR50
     }
 }
 #[doc = "Field `UHSMODE` writer - Select the speed of the SD card"]
-pub type UHSMODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONTROL2_SPEC, u8, UHSMODE_A, 3, O>;
-impl<'a, const O: u8> UHSMODE_W<'a, O> {
+pub type UHSMODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, UHSMODE_A>;
+impl<'a, REG, const O: u8> UHSMODE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn sdr12(self) -> &'a mut W {
+    pub fn sdr12(self) -> &'a mut crate::W<REG> {
         self.variant(UHSMODE_A::SDR12)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn sdr25(self) -> &'a mut W {
+    pub fn sdr25(self) -> &'a mut crate::W<REG> {
         self.variant(UHSMODE_A::SDR25)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn sdr50(self) -> &'a mut W {
+    pub fn sdr50(self) -> &'a mut crate::W<REG> {
         self.variant(UHSMODE_A::SDR50)
     }
     #[doc = "`11`"]
     #[inline(always)]
-    pub fn sdr104(self) -> &'a mut W {
+    pub fn sdr104(self) -> &'a mut crate::W<REG> {
         self.variant(UHSMODE_A::SDR104)
     }
     #[doc = "`100`"]
     #[inline(always)]
-    pub fn ddr50(self) -> &'a mut W {
+    pub fn ddr50(self) -> &'a mut crate::W<REG> {
         self.variant(UHSMODE_A::DDR50)
     }
 }
 #[doc = "Field `TUNEON` reader - SD Clock tune in progress"]
-pub type TUNEON_R = crate::BitReader<bool>;
+pub type TUNEON_R = crate::BitReader;
 #[doc = "Field `TUNEON` writer - SD Clock tune in progress"]
-pub type TUNEON_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONTROL2_SPEC, bool, O>;
+pub type TUNEON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TUNED` reader - Tuned clock is used for sampling data"]
-pub type TUNED_R = crate::BitReader<bool>;
+pub type TUNED_R = crate::BitReader;
 #[doc = "Field `TUNED` writer - Tuned clock is used for sampling data"]
-pub type TUNED_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONTROL2_SPEC, bool, O>;
+pub type TUNED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Auto command not executed due to an error"]
     #[inline(always)]
@@ -193,44 +167,65 @@ impl R {
         TUNED_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONTROL2")
+            .field("tuned", &format_args!("{}", self.tuned().bit()))
+            .field("tuneon", &format_args!("{}", self.tuneon().bit()))
+            .field("uhsmode", &format_args!("{}", self.uhsmode().bits()))
+            .field("notc12_err", &format_args!("{}", self.notc12_err().bit()))
+            .field("acbad_err", &format_args!("{}", self.acbad_err().bit()))
+            .field("acend_err", &format_args!("{}", self.acend_err().bit()))
+            .field("accrc_err", &format_args!("{}", self.accrc_err().bit()))
+            .field("acto_err", &format_args!("{}", self.acto_err().bit()))
+            .field("acnox_err", &format_args!("{}", self.acnox_err().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CONTROL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 16:18 - Select the speed of the SD card"]
     #[inline(always)]
     #[must_use]
-    pub fn uhsmode(&mut self) -> UHSMODE_W<16> {
+    pub fn uhsmode(&mut self) -> UHSMODE_W<CONTROL2_SPEC, 16> {
         UHSMODE_W::new(self)
     }
     #[doc = "Bit 22 - SD Clock tune in progress"]
     #[inline(always)]
     #[must_use]
-    pub fn tuneon(&mut self) -> TUNEON_W<22> {
+    pub fn tuneon(&mut self) -> TUNEON_W<CONTROL2_SPEC, 22> {
         TUNEON_W::new(self)
     }
     #[doc = "Bit 23 - Tuned clock is used for sampling data"]
     #[inline(always)]
     #[must_use]
-    pub fn tuned(&mut self) -> TUNED_W<23> {
+    pub fn tuned(&mut self) -> TUNED_W<CONTROL2_SPEC, 23> {
         TUNED_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Control 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [control2](index.html) module"]
+#[doc = "Control 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`control2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`control2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONTROL2_SPEC;
 impl crate::RegisterSpec for CONTROL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [control2::R](R) reader structure"]
-impl crate::Readable for CONTROL2_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [control2::W](W) writer structure"]
+#[doc = "`read()` method returns [`control2::R`](R) reader structure"]
+impl crate::Readable for CONTROL2_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`control2::W`](W) writer structure"]
 impl crate::Writable for CONTROL2_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

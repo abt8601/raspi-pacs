@@ -1,43 +1,11 @@
 #[doc = "Register `FBRD` reader"]
-pub struct R(crate::R<FBRD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FBRD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FBRD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FBRD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FBRD_SPEC>;
 #[doc = "Register `FBRD` writer"]
-pub struct W(crate::W<FBRD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FBRD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FBRD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FBRD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FBRD_SPEC>;
 #[doc = "Field `BAUDDIVFRAC` reader - BAUDDIVFRAC"]
-pub type BAUDDIVFRAC_R = crate::FieldReader<u8, u8>;
+pub type BAUDDIVFRAC_R = crate::FieldReader;
 #[doc = "Field `BAUDDIVFRAC` writer - BAUDDIVFRAC"]
-pub type BAUDDIVFRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FBRD_SPEC, u8, u8, 6, O>;
+pub type BAUDDIVFRAC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - BAUDDIVFRAC"]
     #[inline(always)]
@@ -45,32 +13,48 @@ impl R {
         BAUDDIVFRAC_R::new((self.bits & 0x3f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FBRD")
+            .field(
+                "bauddivfrac",
+                &format_args!("{}", self.bauddivfrac().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FBRD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:5 - BAUDDIVFRAC"]
     #[inline(always)]
     #[must_use]
-    pub fn bauddivfrac(&mut self) -> BAUDDIVFRAC_W<0> {
+    pub fn bauddivfrac(&mut self) -> BAUDDIVFRAC_W<FBRD_SPEC, 0> {
         BAUDDIVFRAC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Fractional Baud Rate Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fbrd](index.html) module"]
+#[doc = "Fractional Baud Rate Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fbrd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fbrd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FBRD_SPEC;
 impl crate::RegisterSpec for FBRD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fbrd::R](R) reader structure"]
-impl crate::Readable for FBRD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [fbrd::W](W) writer structure"]
+#[doc = "`read()` method returns [`fbrd::R`](R) reader structure"]
+impl crate::Readable for FBRD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`fbrd::W`](W) writer structure"]
 impl crate::Writable for FBRD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

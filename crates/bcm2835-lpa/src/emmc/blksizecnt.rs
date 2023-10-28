@@ -1,47 +1,15 @@
 #[doc = "Register `BLKSIZECNT` reader"]
-pub struct R(crate::R<BLKSIZECNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BLKSIZECNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BLKSIZECNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BLKSIZECNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BLKSIZECNT_SPEC>;
 #[doc = "Register `BLKSIZECNT` writer"]
-pub struct W(crate::W<BLKSIZECNT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<BLKSIZECNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<BLKSIZECNT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<BLKSIZECNT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<BLKSIZECNT_SPEC>;
 #[doc = "Field `BLKSIZE` reader - Block size in bytes"]
-pub type BLKSIZE_R = crate::FieldReader<u16, u16>;
+pub type BLKSIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `BLKSIZE` writer - Block size in bytes"]
-pub type BLKSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLKSIZECNT_SPEC, u16, u16, 10, O>;
+pub type BLKSIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 #[doc = "Field `BLKCNT` reader - Number of blocks to be transferred"]
-pub type BLKCNT_R = crate::FieldReader<u16, u16>;
+pub type BLKCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `BLKCNT` writer - Number of blocks to be transferred"]
-pub type BLKCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLKSIZECNT_SPEC, u16, u16, 16, O>;
+pub type BLKCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - Block size in bytes"]
     #[inline(always)]
@@ -54,38 +22,52 @@ impl R {
         BLKCNT_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLKSIZECNT")
+            .field("blkcnt", &format_args!("{}", self.blkcnt().bits()))
+            .field("blksize", &format_args!("{}", self.blksize().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BLKSIZECNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:9 - Block size in bytes"]
     #[inline(always)]
     #[must_use]
-    pub fn blksize(&mut self) -> BLKSIZE_W<0> {
+    pub fn blksize(&mut self) -> BLKSIZE_W<BLKSIZECNT_SPEC, 0> {
         BLKSIZE_W::new(self)
     }
     #[doc = "Bits 16:31 - Number of blocks to be transferred"]
     #[inline(always)]
     #[must_use]
-    pub fn blkcnt(&mut self) -> BLKCNT_W<16> {
+    pub fn blkcnt(&mut self) -> BLKCNT_W<BLKSIZECNT_SPEC, 16> {
         BLKCNT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Numer and size in bytes for data block to be transferred\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blksizecnt](index.html) module"]
+#[doc = "Numer and size in bytes for data block to be transferred\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blksizecnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blksizecnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLKSIZECNT_SPEC;
 impl crate::RegisterSpec for BLKSIZECNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blksizecnt::R](R) reader structure"]
-impl crate::Readable for BLKSIZECNT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [blksizecnt::W](W) writer structure"]
+#[doc = "`read()` method returns [`blksizecnt::R`](R) reader structure"]
+impl crate::Readable for BLKSIZECNT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`blksizecnt::W`](W) writer structure"]
 impl crate::Writable for BLKSIZECNT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

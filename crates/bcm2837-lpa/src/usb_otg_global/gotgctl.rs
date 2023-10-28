@@ -1,67 +1,35 @@
 #[doc = "Register `GOTGCTL` reader"]
-pub struct R(crate::R<GOTGCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GOTGCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GOTGCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GOTGCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GOTGCTL_SPEC>;
 #[doc = "Register `GOTGCTL` writer"]
-pub struct W(crate::W<GOTGCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GOTGCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GOTGCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GOTGCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GOTGCTL_SPEC>;
 #[doc = "Field `SRQSCS` reader - Session request success"]
-pub type SRQSCS_R = crate::BitReader<bool>;
+pub type SRQSCS_R = crate::BitReader;
 #[doc = "Field `SRQ` reader - Session request"]
-pub type SRQ_R = crate::BitReader<bool>;
+pub type SRQ_R = crate::BitReader;
 #[doc = "Field `SRQ` writer - Session request"]
-pub type SRQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type SRQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HNGSCS` reader - Host negotiation success"]
-pub type HNGSCS_R = crate::BitReader<bool>;
+pub type HNGSCS_R = crate::BitReader;
 #[doc = "Field `HNPRQ` reader - HNP request"]
-pub type HNPRQ_R = crate::BitReader<bool>;
+pub type HNPRQ_R = crate::BitReader;
 #[doc = "Field `HNPRQ` writer - HNP request"]
-pub type HNPRQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type HNPRQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HSHNPEN` reader - Host set HNP enable"]
-pub type HSHNPEN_R = crate::BitReader<bool>;
+pub type HSHNPEN_R = crate::BitReader;
 #[doc = "Field `HSHNPEN` writer - Host set HNP enable"]
-pub type HSHNPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type HSHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DHNPEN` reader - Device HNP enabled"]
-pub type DHNPEN_R = crate::BitReader<bool>;
+pub type DHNPEN_R = crate::BitReader;
 #[doc = "Field `DHNPEN` writer - Device HNP enabled"]
-pub type DHNPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type DHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CIDSTS` reader - Connector ID status"]
-pub type CIDSTS_R = crate::BitReader<bool>;
+pub type CIDSTS_R = crate::BitReader;
 #[doc = "Field `DBCT` reader - Long/short debounce time"]
-pub type DBCT_R = crate::BitReader<bool>;
+pub type DBCT_R = crate::BitReader;
 #[doc = "Field `ASVLD` reader - A-session valid"]
-pub type ASVLD_R = crate::BitReader<bool>;
+pub type ASVLD_R = crate::BitReader;
 #[doc = "Field `BSVLD` reader - B-session valid"]
-pub type BSVLD_R = crate::BitReader<bool>;
+pub type BSVLD_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Session request success"]
     #[inline(always)]
@@ -114,50 +82,72 @@ impl R {
         BSVLD_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GOTGCTL")
+            .field("srqscs", &format_args!("{}", self.srqscs().bit()))
+            .field("srq", &format_args!("{}", self.srq().bit()))
+            .field("hngscs", &format_args!("{}", self.hngscs().bit()))
+            .field("hnprq", &format_args!("{}", self.hnprq().bit()))
+            .field("hshnpen", &format_args!("{}", self.hshnpen().bit()))
+            .field("dhnpen", &format_args!("{}", self.dhnpen().bit()))
+            .field("cidsts", &format_args!("{}", self.cidsts().bit()))
+            .field("dbct", &format_args!("{}", self.dbct().bit()))
+            .field("asvld", &format_args!("{}", self.asvld().bit()))
+            .field("bsvld", &format_args!("{}", self.bsvld().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GOTGCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Session request"]
     #[inline(always)]
     #[must_use]
-    pub fn srq(&mut self) -> SRQ_W<1> {
+    pub fn srq(&mut self) -> SRQ_W<GOTGCTL_SPEC, 1> {
         SRQ_W::new(self)
     }
     #[doc = "Bit 9 - HNP request"]
     #[inline(always)]
     #[must_use]
-    pub fn hnprq(&mut self) -> HNPRQ_W<9> {
+    pub fn hnprq(&mut self) -> HNPRQ_W<GOTGCTL_SPEC, 9> {
         HNPRQ_W::new(self)
     }
     #[doc = "Bit 10 - Host set HNP enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hshnpen(&mut self) -> HSHNPEN_W<10> {
+    pub fn hshnpen(&mut self) -> HSHNPEN_W<GOTGCTL_SPEC, 10> {
         HSHNPEN_W::new(self)
     }
     #[doc = "Bit 11 - Device HNP enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn dhnpen(&mut self) -> DHNPEN_W<11> {
+    pub fn dhnpen(&mut self) -> DHNPEN_W<GOTGCTL_SPEC, 11> {
         DHNPEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS control and status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gotgctl](index.html) module"]
+#[doc = "OTG_HS control and status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GOTGCTL_SPEC;
 impl crate::RegisterSpec for GOTGCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gotgctl::R](R) reader structure"]
-impl crate::Readable for GOTGCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gotgctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`gotgctl::R`](R) reader structure"]
+impl crate::Readable for GOTGCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gotgctl::W`](W) writer structure"]
 impl crate::Writable for GOTGCTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

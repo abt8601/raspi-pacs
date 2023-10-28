@@ -1,41 +1,9 @@
 #[doc = "Register `GPFSEL0` reader"]
-pub struct R(crate::R<GPFSEL0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPFSEL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPFSEL0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPFSEL0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPFSEL0_SPEC>;
 #[doc = "Register `GPFSEL0` writer"]
-pub struct W(crate::W<GPFSEL0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPFSEL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPFSEL0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPFSEL0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GPFSEL0_SPEC>;
 #[doc = "Field `FSEL0` reader - Function Select 0"]
-pub type FSEL0_R = crate::FieldReader<u8, FSEL0_A>;
+pub type FSEL0_R = crate::FieldReader<FSEL0_A>;
 #[doc = "Function Select 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -63,10 +31,13 @@ impl From<FSEL0_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL0_A {
+    type Ux = u8;
+}
 impl FSEL0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL0_A {
+    pub const fn variant(&self) -> FSEL0_A {
         match self.bits {
             0 => FSEL0_A::INPUT,
             1 => FSEL0_A::OUTPUT,
@@ -79,94 +50,97 @@ impl FSEL0_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL0_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL0_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SDA0`"]
+    #[doc = "Pin is connected to SDA0"]
     #[inline(always)]
     pub fn is_sda0(&self) -> bool {
         *self == FSEL0_A::SDA0
     }
-    #[doc = "Checks if the value of the field is `SA5`"]
+    #[doc = "Pin is connected to SA5"]
     #[inline(always)]
     pub fn is_sa5(&self) -> bool {
         *self == FSEL0_A::SA5
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL0_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL0_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL0_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL0_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL0` writer - Function Select 0"]
-pub type FSEL0_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL0_A, 3, O>;
-impl<'a, const O: u8> FSEL0_W<'a, O> {
+pub type FSEL0_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL0_A>;
+impl<'a, REG, const O: u8> FSEL0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::OUTPUT)
     }
     #[doc = "Pin is connected to SDA0"]
     #[inline(always)]
-    pub fn sda0(self) -> &'a mut W {
+    pub fn sda0(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::SDA0)
     }
     #[doc = "Pin is connected to SA5"]
     #[inline(always)]
-    pub fn sa5(self) -> &'a mut W {
+    pub fn sa5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::SA5)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL0_A::RESERVED5)
     }
 }
 #[doc = "Field `FSEL1` reader - Function Select 1"]
-pub type FSEL1_R = crate::FieldReader<u8, FSEL1_A>;
+pub type FSEL1_R = crate::FieldReader<FSEL1_A>;
 #[doc = "Function Select 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -194,10 +168,13 @@ impl From<FSEL1_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL1_A {
+    type Ux = u8;
+}
 impl FSEL1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL1_A {
+    pub const fn variant(&self) -> FSEL1_A {
         match self.bits {
             0 => FSEL1_A::INPUT,
             1 => FSEL1_A::OUTPUT,
@@ -210,94 +187,97 @@ impl FSEL1_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL1_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL1_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SCL0`"]
+    #[doc = "Pin is connected to SCL0"]
     #[inline(always)]
     pub fn is_scl0(&self) -> bool {
         *self == FSEL1_A::SCL0
     }
-    #[doc = "Checks if the value of the field is `SA4`"]
+    #[doc = "Pin is connected to SA4"]
     #[inline(always)]
     pub fn is_sa4(&self) -> bool {
         *self == FSEL1_A::SA4
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL1_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL1_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL1_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL1_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL1` writer - Function Select 1"]
-pub type FSEL1_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL1_A, 3, O>;
-impl<'a, const O: u8> FSEL1_W<'a, O> {
+pub type FSEL1_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL1_A>;
+impl<'a, REG, const O: u8> FSEL1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::OUTPUT)
     }
     #[doc = "Pin is connected to SCL0"]
     #[inline(always)]
-    pub fn scl0(self) -> &'a mut W {
+    pub fn scl0(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::SCL0)
     }
     #[doc = "Pin is connected to SA4"]
     #[inline(always)]
-    pub fn sa4(self) -> &'a mut W {
+    pub fn sa4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::SA4)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL1_A::RESERVED5)
     }
 }
 #[doc = "Field `FSEL2` reader - Function Select 2"]
-pub type FSEL2_R = crate::FieldReader<u8, FSEL2_A>;
+pub type FSEL2_R = crate::FieldReader<FSEL2_A>;
 #[doc = "Function Select 2"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -325,10 +305,13 @@ impl From<FSEL2_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL2_A {
+    type Ux = u8;
+}
 impl FSEL2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL2_A {
+    pub const fn variant(&self) -> FSEL2_A {
         match self.bits {
             0 => FSEL2_A::INPUT,
             1 => FSEL2_A::OUTPUT,
@@ -341,94 +324,97 @@ impl FSEL2_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL2_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL2_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SDA1`"]
+    #[doc = "Pin is connected to SDA1"]
     #[inline(always)]
     pub fn is_sda1(&self) -> bool {
         *self == FSEL2_A::SDA1
     }
-    #[doc = "Checks if the value of the field is `SA3`"]
+    #[doc = "Pin is connected to SA3"]
     #[inline(always)]
     pub fn is_sa3(&self) -> bool {
         *self == FSEL2_A::SA3
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL2_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL2_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL2_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL2_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL2` writer - Function Select 2"]
-pub type FSEL2_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL2_A, 3, O>;
-impl<'a, const O: u8> FSEL2_W<'a, O> {
+pub type FSEL2_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL2_A>;
+impl<'a, REG, const O: u8> FSEL2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::OUTPUT)
     }
     #[doc = "Pin is connected to SDA1"]
     #[inline(always)]
-    pub fn sda1(self) -> &'a mut W {
+    pub fn sda1(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::SDA1)
     }
     #[doc = "Pin is connected to SA3"]
     #[inline(always)]
-    pub fn sa3(self) -> &'a mut W {
+    pub fn sa3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::SA3)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL2_A::RESERVED5)
     }
 }
 #[doc = "Field `FSEL3` reader - Function Select 3"]
-pub type FSEL3_R = crate::FieldReader<u8, FSEL3_A>;
+pub type FSEL3_R = crate::FieldReader<FSEL3_A>;
 #[doc = "Function Select 3"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -456,10 +442,13 @@ impl From<FSEL3_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL3_A {
+    type Ux = u8;
+}
 impl FSEL3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL3_A {
+    pub const fn variant(&self) -> FSEL3_A {
         match self.bits {
             0 => FSEL3_A::INPUT,
             1 => FSEL3_A::OUTPUT,
@@ -472,94 +461,97 @@ impl FSEL3_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL3_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL3_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SCL1`"]
+    #[doc = "Pin is connected to SCL1"]
     #[inline(always)]
     pub fn is_scl1(&self) -> bool {
         *self == FSEL3_A::SCL1
     }
-    #[doc = "Checks if the value of the field is `SA2`"]
+    #[doc = "Pin is connected to SA2"]
     #[inline(always)]
     pub fn is_sa2(&self) -> bool {
         *self == FSEL3_A::SA2
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL3_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL3_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL3_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL3_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL3` writer - Function Select 3"]
-pub type FSEL3_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL3_A, 3, O>;
-impl<'a, const O: u8> FSEL3_W<'a, O> {
+pub type FSEL3_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL3_A>;
+impl<'a, REG, const O: u8> FSEL3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::OUTPUT)
     }
     #[doc = "Pin is connected to SCL1"]
     #[inline(always)]
-    pub fn scl1(self) -> &'a mut W {
+    pub fn scl1(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::SCL1)
     }
     #[doc = "Pin is connected to SA2"]
     #[inline(always)]
-    pub fn sa2(self) -> &'a mut W {
+    pub fn sa2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::SA2)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL3_A::RESERVED5)
     }
 }
 #[doc = "Field `FSEL4` reader - Function Select 4"]
-pub type FSEL4_R = crate::FieldReader<u8, FSEL4_A>;
+pub type FSEL4_R = crate::FieldReader<FSEL4_A>;
 #[doc = "Function Select 4"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -587,10 +579,13 @@ impl From<FSEL4_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL4_A {
+    type Ux = u8;
+}
 impl FSEL4_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL4_A {
+    pub const fn variant(&self) -> FSEL4_A {
         match self.bits {
             0 => FSEL4_A::INPUT,
             1 => FSEL4_A::OUTPUT,
@@ -603,94 +598,97 @@ impl FSEL4_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL4_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL4_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `GPCLK0`"]
+    #[doc = "Pin is connected to GPCLK0"]
     #[inline(always)]
     pub fn is_gpclk0(&self) -> bool {
         *self == FSEL4_A::GPCLK0
     }
-    #[doc = "Checks if the value of the field is `SA1`"]
+    #[doc = "Pin is connected to SA1"]
     #[inline(always)]
     pub fn is_sa1(&self) -> bool {
         *self == FSEL4_A::SA1
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL4_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL4_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL4_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `ARM_TDI`"]
+    #[doc = "Pin is connected to ARM_TDI"]
     #[inline(always)]
     pub fn is_arm_tdi(&self) -> bool {
         *self == FSEL4_A::ARM_TDI
     }
 }
 #[doc = "Field `FSEL4` writer - Function Select 4"]
-pub type FSEL4_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL4_A, 3, O>;
-impl<'a, const O: u8> FSEL4_W<'a, O> {
+pub type FSEL4_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL4_A>;
+impl<'a, REG, const O: u8> FSEL4_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::OUTPUT)
     }
     #[doc = "Pin is connected to GPCLK0"]
     #[inline(always)]
-    pub fn gpclk0(self) -> &'a mut W {
+    pub fn gpclk0(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::GPCLK0)
     }
     #[doc = "Pin is connected to SA1"]
     #[inline(always)]
-    pub fn sa1(self) -> &'a mut W {
+    pub fn sa1(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::SA1)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::RESERVED4)
     }
     #[doc = "Pin is connected to ARM_TDI"]
     #[inline(always)]
-    pub fn arm_tdi(self) -> &'a mut W {
+    pub fn arm_tdi(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL4_A::ARM_TDI)
     }
 }
 #[doc = "Field `FSEL5` reader - Function Select 5"]
-pub type FSEL5_R = crate::FieldReader<u8, FSEL5_A>;
+pub type FSEL5_R = crate::FieldReader<FSEL5_A>;
 #[doc = "Function Select 5"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -718,10 +716,13 @@ impl From<FSEL5_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL5_A {
+    type Ux = u8;
+}
 impl FSEL5_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL5_A {
+    pub const fn variant(&self) -> FSEL5_A {
         match self.bits {
             0 => FSEL5_A::INPUT,
             1 => FSEL5_A::OUTPUT,
@@ -734,94 +735,97 @@ impl FSEL5_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL5_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL5_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `GPCLK1`"]
+    #[doc = "Pin is connected to GPCLK1"]
     #[inline(always)]
     pub fn is_gpclk1(&self) -> bool {
         *self == FSEL5_A::GPCLK1
     }
-    #[doc = "Checks if the value of the field is `SA0`"]
+    #[doc = "Pin is connected to SA0"]
     #[inline(always)]
     pub fn is_sa0(&self) -> bool {
         *self == FSEL5_A::SA0
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL5_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL5_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL5_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `ARM_TDO`"]
+    #[doc = "Pin is connected to ARM_TDO"]
     #[inline(always)]
     pub fn is_arm_tdo(&self) -> bool {
         *self == FSEL5_A::ARM_TDO
     }
 }
 #[doc = "Field `FSEL5` writer - Function Select 5"]
-pub type FSEL5_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL5_A, 3, O>;
-impl<'a, const O: u8> FSEL5_W<'a, O> {
+pub type FSEL5_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL5_A>;
+impl<'a, REG, const O: u8> FSEL5_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::OUTPUT)
     }
     #[doc = "Pin is connected to GPCLK1"]
     #[inline(always)]
-    pub fn gpclk1(self) -> &'a mut W {
+    pub fn gpclk1(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::GPCLK1)
     }
     #[doc = "Pin is connected to SA0"]
     #[inline(always)]
-    pub fn sa0(self) -> &'a mut W {
+    pub fn sa0(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::SA0)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::RESERVED4)
     }
     #[doc = "Pin is connected to ARM_TDO"]
     #[inline(always)]
-    pub fn arm_tdo(self) -> &'a mut W {
+    pub fn arm_tdo(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL5_A::ARM_TDO)
     }
 }
 #[doc = "Field `FSEL6` reader - Function Select 6"]
-pub type FSEL6_R = crate::FieldReader<u8, FSEL6_A>;
+pub type FSEL6_R = crate::FieldReader<FSEL6_A>;
 #[doc = "Function Select 6"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -849,10 +853,13 @@ impl From<FSEL6_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL6_A {
+    type Ux = u8;
+}
 impl FSEL6_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL6_A {
+    pub const fn variant(&self) -> FSEL6_A {
         match self.bits {
             0 => FSEL6_A::INPUT,
             1 => FSEL6_A::OUTPUT,
@@ -865,94 +872,97 @@ impl FSEL6_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL6_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL6_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `GPCLK2`"]
+    #[doc = "Pin is connected to GPCLK2"]
     #[inline(always)]
     pub fn is_gpclk2(&self) -> bool {
         *self == FSEL6_A::GPCLK2
     }
-    #[doc = "Checks if the value of the field is `SOE_N`"]
+    #[doc = "Pin is connected to SOE_N"]
     #[inline(always)]
     pub fn is_soe_n(&self) -> bool {
         *self == FSEL6_A::SOE_N
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL6_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL6_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL6_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `ARM_RTCK`"]
+    #[doc = "Pin is connected to ARM_RTCK"]
     #[inline(always)]
     pub fn is_arm_rtck(&self) -> bool {
         *self == FSEL6_A::ARM_RTCK
     }
 }
 #[doc = "Field `FSEL6` writer - Function Select 6"]
-pub type FSEL6_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL6_A, 3, O>;
-impl<'a, const O: u8> FSEL6_W<'a, O> {
+pub type FSEL6_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL6_A>;
+impl<'a, REG, const O: u8> FSEL6_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::OUTPUT)
     }
     #[doc = "Pin is connected to GPCLK2"]
     #[inline(always)]
-    pub fn gpclk2(self) -> &'a mut W {
+    pub fn gpclk2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::GPCLK2)
     }
     #[doc = "Pin is connected to SOE_N"]
     #[inline(always)]
-    pub fn soe_n(self) -> &'a mut W {
+    pub fn soe_n(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::SOE_N)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::RESERVED4)
     }
     #[doc = "Pin is connected to ARM_RTCK"]
     #[inline(always)]
-    pub fn arm_rtck(self) -> &'a mut W {
+    pub fn arm_rtck(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL6_A::ARM_RTCK)
     }
 }
 #[doc = "Field `FSEL7` reader - Function Select 7"]
-pub type FSEL7_R = crate::FieldReader<u8, FSEL7_A>;
+pub type FSEL7_R = crate::FieldReader<FSEL7_A>;
 #[doc = "Function Select 7"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -980,10 +990,13 @@ impl From<FSEL7_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL7_A {
+    type Ux = u8;
+}
 impl FSEL7_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL7_A {
+    pub const fn variant(&self) -> FSEL7_A {
         match self.bits {
             0 => FSEL7_A::INPUT,
             1 => FSEL7_A::OUTPUT,
@@ -996,94 +1009,97 @@ impl FSEL7_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL7_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL7_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SPI0_CE1_N`"]
+    #[doc = "Pin is connected to SPI0_CE1_N"]
     #[inline(always)]
     pub fn is_spi0_ce1_n(&self) -> bool {
         *self == FSEL7_A::SPI0_CE1_N
     }
-    #[doc = "Checks if the value of the field is `SWE_N`"]
+    #[doc = "Pin is connected to SWE_N"]
     #[inline(always)]
     pub fn is_swe_n(&self) -> bool {
         *self == FSEL7_A::SWE_N
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL7_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL7_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL7_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL7_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL7` writer - Function Select 7"]
-pub type FSEL7_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL7_A, 3, O>;
-impl<'a, const O: u8> FSEL7_W<'a, O> {
+pub type FSEL7_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL7_A>;
+impl<'a, REG, const O: u8> FSEL7_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::OUTPUT)
     }
     #[doc = "Pin is connected to SPI0_CE1_N"]
     #[inline(always)]
-    pub fn spi0_ce1_n(self) -> &'a mut W {
+    pub fn spi0_ce1_n(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::SPI0_CE1_N)
     }
     #[doc = "Pin is connected to SWE_N"]
     #[inline(always)]
-    pub fn swe_n(self) -> &'a mut W {
+    pub fn swe_n(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::SWE_N)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL7_A::RESERVED5)
     }
 }
 #[doc = "Field `FSEL8` reader - Function Select 8"]
-pub type FSEL8_R = crate::FieldReader<u8, FSEL8_A>;
+pub type FSEL8_R = crate::FieldReader<FSEL8_A>;
 #[doc = "Function Select 8"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -1111,10 +1127,13 @@ impl From<FSEL8_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL8_A {
+    type Ux = u8;
+}
 impl FSEL8_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL8_A {
+    pub const fn variant(&self) -> FSEL8_A {
         match self.bits {
             0 => FSEL8_A::INPUT,
             1 => FSEL8_A::OUTPUT,
@@ -1127,94 +1146,97 @@ impl FSEL8_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL8_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL8_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SPI0_CE0_N`"]
+    #[doc = "Pin is connected to SPI0_CE0_N"]
     #[inline(always)]
     pub fn is_spi0_ce0_n(&self) -> bool {
         *self == FSEL8_A::SPI0_CE0_N
     }
-    #[doc = "Checks if the value of the field is `SD0`"]
+    #[doc = "Pin is connected to SD0"]
     #[inline(always)]
     pub fn is_sd0(&self) -> bool {
         *self == FSEL8_A::SD0
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL8_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL8_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL8_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL8_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL8` writer - Function Select 8"]
-pub type FSEL8_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL8_A, 3, O>;
-impl<'a, const O: u8> FSEL8_W<'a, O> {
+pub type FSEL8_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL8_A>;
+impl<'a, REG, const O: u8> FSEL8_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::OUTPUT)
     }
     #[doc = "Pin is connected to SPI0_CE0_N"]
     #[inline(always)]
-    pub fn spi0_ce0_n(self) -> &'a mut W {
+    pub fn spi0_ce0_n(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::SPI0_CE0_N)
     }
     #[doc = "Pin is connected to SD0"]
     #[inline(always)]
-    pub fn sd0(self) -> &'a mut W {
+    pub fn sd0(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::SD0)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL8_A::RESERVED5)
     }
 }
 #[doc = "Field `FSEL9` reader - Function Select 9"]
-pub type FSEL9_R = crate::FieldReader<u8, FSEL9_A>;
+pub type FSEL9_R = crate::FieldReader<FSEL9_A>;
 #[doc = "Function Select 9"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -1242,10 +1264,13 @@ impl From<FSEL9_A> for u8 {
         variant as _
     }
 }
+impl crate::FieldSpec for FSEL9_A {
+    type Ux = u8;
+}
 impl FSEL9_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FSEL9_A {
+    pub const fn variant(&self) -> FSEL9_A {
         match self.bits {
             0 => FSEL9_A::INPUT,
             1 => FSEL9_A::OUTPUT,
@@ -1258,89 +1283,92 @@ impl FSEL9_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `INPUT`"]
+    #[doc = "Pin is an input"]
     #[inline(always)]
     pub fn is_input(&self) -> bool {
         *self == FSEL9_A::INPUT
     }
-    #[doc = "Checks if the value of the field is `OUTPUT`"]
+    #[doc = "Pin is an output"]
     #[inline(always)]
     pub fn is_output(&self) -> bool {
         *self == FSEL9_A::OUTPUT
     }
-    #[doc = "Checks if the value of the field is `SPI0_MISO`"]
+    #[doc = "Pin is connected to SPI0_MISO"]
     #[inline(always)]
     pub fn is_spi0_miso(&self) -> bool {
         *self == FSEL9_A::SPI0_MISO
     }
-    #[doc = "Checks if the value of the field is `SD1`"]
+    #[doc = "Pin is connected to SD1"]
     #[inline(always)]
     pub fn is_sd1(&self) -> bool {
         *self == FSEL9_A::SD1
     }
-    #[doc = "Checks if the value of the field is `RESERVED2`"]
+    #[doc = "Alt function 2 reserved"]
     #[inline(always)]
     pub fn is_reserved2(&self) -> bool {
         *self == FSEL9_A::RESERVED2
     }
-    #[doc = "Checks if the value of the field is `RESERVED3`"]
+    #[doc = "Alt function 3 reserved"]
     #[inline(always)]
     pub fn is_reserved3(&self) -> bool {
         *self == FSEL9_A::RESERVED3
     }
-    #[doc = "Checks if the value of the field is `RESERVED4`"]
+    #[doc = "Alt function 4 reserved"]
     #[inline(always)]
     pub fn is_reserved4(&self) -> bool {
         *self == FSEL9_A::RESERVED4
     }
-    #[doc = "Checks if the value of the field is `RESERVED5`"]
+    #[doc = "Alt function 5 reserved"]
     #[inline(always)]
     pub fn is_reserved5(&self) -> bool {
         *self == FSEL9_A::RESERVED5
     }
 }
 #[doc = "Field `FSEL9` writer - Function Select 9"]
-pub type FSEL9_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPFSEL0_SPEC, u8, FSEL9_A, 3, O>;
-impl<'a, const O: u8> FSEL9_W<'a, O> {
+pub type FSEL9_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL9_A>;
+impl<'a, REG, const O: u8> FSEL9_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Pin is an input"]
     #[inline(always)]
-    pub fn input(self) -> &'a mut W {
+    pub fn input(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::INPUT)
     }
     #[doc = "Pin is an output"]
     #[inline(always)]
-    pub fn output(self) -> &'a mut W {
+    pub fn output(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::OUTPUT)
     }
     #[doc = "Pin is connected to SPI0_MISO"]
     #[inline(always)]
-    pub fn spi0_miso(self) -> &'a mut W {
+    pub fn spi0_miso(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::SPI0_MISO)
     }
     #[doc = "Pin is connected to SD1"]
     #[inline(always)]
-    pub fn sd1(self) -> &'a mut W {
+    pub fn sd1(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::SD1)
     }
     #[doc = "Alt function 2 reserved"]
     #[inline(always)]
-    pub fn reserved2(self) -> &'a mut W {
+    pub fn reserved2(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::RESERVED2)
     }
     #[doc = "Alt function 3 reserved"]
     #[inline(always)]
-    pub fn reserved3(self) -> &'a mut W {
+    pub fn reserved3(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::RESERVED3)
     }
     #[doc = "Alt function 4 reserved"]
     #[inline(always)]
-    pub fn reserved4(self) -> &'a mut W {
+    pub fn reserved4(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::RESERVED4)
     }
     #[doc = "Alt function 5 reserved"]
     #[inline(always)]
-    pub fn reserved5(self) -> &'a mut W {
+    pub fn reserved5(self) -> &'a mut crate::W<REG> {
         self.variant(FSEL9_A::RESERVED5)
     }
 }
@@ -1396,86 +1424,108 @@ impl R {
         FSEL9_R::new(((self.bits >> 27) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPFSEL0")
+            .field("fsel0", &format_args!("{}", self.fsel0().bits()))
+            .field("fsel1", &format_args!("{}", self.fsel1().bits()))
+            .field("fsel2", &format_args!("{}", self.fsel2().bits()))
+            .field("fsel3", &format_args!("{}", self.fsel3().bits()))
+            .field("fsel4", &format_args!("{}", self.fsel4().bits()))
+            .field("fsel5", &format_args!("{}", self.fsel5().bits()))
+            .field("fsel6", &format_args!("{}", self.fsel6().bits()))
+            .field("fsel7", &format_args!("{}", self.fsel7().bits()))
+            .field("fsel8", &format_args!("{}", self.fsel8().bits()))
+            .field("fsel9", &format_args!("{}", self.fsel9().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GPFSEL0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - Function Select 0"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel0(&mut self) -> FSEL0_W<0> {
+    pub fn fsel0(&mut self) -> FSEL0_W<GPFSEL0_SPEC, 0> {
         FSEL0_W::new(self)
     }
     #[doc = "Bits 3:5 - Function Select 1"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel1(&mut self) -> FSEL1_W<3> {
+    pub fn fsel1(&mut self) -> FSEL1_W<GPFSEL0_SPEC, 3> {
         FSEL1_W::new(self)
     }
     #[doc = "Bits 6:8 - Function Select 2"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel2(&mut self) -> FSEL2_W<6> {
+    pub fn fsel2(&mut self) -> FSEL2_W<GPFSEL0_SPEC, 6> {
         FSEL2_W::new(self)
     }
     #[doc = "Bits 9:11 - Function Select 3"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel3(&mut self) -> FSEL3_W<9> {
+    pub fn fsel3(&mut self) -> FSEL3_W<GPFSEL0_SPEC, 9> {
         FSEL3_W::new(self)
     }
     #[doc = "Bits 12:14 - Function Select 4"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel4(&mut self) -> FSEL4_W<12> {
+    pub fn fsel4(&mut self) -> FSEL4_W<GPFSEL0_SPEC, 12> {
         FSEL4_W::new(self)
     }
     #[doc = "Bits 15:17 - Function Select 5"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel5(&mut self) -> FSEL5_W<15> {
+    pub fn fsel5(&mut self) -> FSEL5_W<GPFSEL0_SPEC, 15> {
         FSEL5_W::new(self)
     }
     #[doc = "Bits 18:20 - Function Select 6"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel6(&mut self) -> FSEL6_W<18> {
+    pub fn fsel6(&mut self) -> FSEL6_W<GPFSEL0_SPEC, 18> {
         FSEL6_W::new(self)
     }
     #[doc = "Bits 21:23 - Function Select 7"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel7(&mut self) -> FSEL7_W<21> {
+    pub fn fsel7(&mut self) -> FSEL7_W<GPFSEL0_SPEC, 21> {
         FSEL7_W::new(self)
     }
     #[doc = "Bits 24:26 - Function Select 8"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel8(&mut self) -> FSEL8_W<24> {
+    pub fn fsel8(&mut self) -> FSEL8_W<GPFSEL0_SPEC, 24> {
         FSEL8_W::new(self)
     }
     #[doc = "Bits 27:29 - Function Select 9"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel9(&mut self) -> FSEL9_W<27> {
+    pub fn fsel9(&mut self) -> FSEL9_W<GPFSEL0_SPEC, 27> {
         FSEL9_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "GPIO Function Select 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpfsel0](index.html) module"]
+#[doc = "GPIO Function Select 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpfsel0::R`](R).  You can [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpfsel0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPFSEL0_SPEC;
 impl crate::RegisterSpec for GPFSEL0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpfsel0::R](R) reader structure"]
-impl crate::Readable for GPFSEL0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpfsel0::W](W) writer structure"]
+#[doc = "`read()` method returns [`gpfsel0::R`](R) reader structure"]
+impl crate::Readable for GPFSEL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gpfsel0::W`](W) writer structure"]
 impl crate::Writable for GPFSEL0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

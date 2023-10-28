@@ -1,59 +1,23 @@
 #[doc = "Register `GICD_ITARGETSR30` reader"]
-pub struct R(crate::R<GICD_ITARGETSR30_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_ITARGETSR30_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_ITARGETSR30_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_ITARGETSR30_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_ITARGETSR30_SPEC>;
 #[doc = "Register `GICD_ITARGETSR30` writer"]
-pub struct W(crate::W<GICD_ITARGETSR30_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICD_ITARGETSR30_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICD_ITARGETSR30_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICD_ITARGETSR30_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICD_ITARGETSR30_SPEC>;
 #[doc = "Field `DMA_9_10` reader - OR of DMA 9 and 10"]
-pub type DMA_9_10_R = crate::FieldReader<u8, u8>;
+pub type DMA_9_10_R = crate::FieldReader;
 #[doc = "Field `DMA_9_10` writer - OR of DMA 9 and 10"]
-pub type DMA_9_10_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_ITARGETSR30_SPEC, u8, u8, 8, O>;
+pub type DMA_9_10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DMA_11` reader - DMA 11"]
-pub type DMA_11_R = crate::FieldReader<u8, u8>;
+pub type DMA_11_R = crate::FieldReader;
 #[doc = "Field `DMA_11` writer - DMA 11"]
-pub type DMA_11_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_ITARGETSR30_SPEC, u8, u8, 8, O>;
+pub type DMA_11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DMA_12` reader - DMA 12"]
-pub type DMA_12_R = crate::FieldReader<u8, u8>;
+pub type DMA_12_R = crate::FieldReader;
 #[doc = "Field `DMA_12` writer - DMA 12"]
-pub type DMA_12_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_ITARGETSR30_SPEC, u8, u8, 8, O>;
+pub type DMA_12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `DMA_13` reader - DMA 13"]
-pub type DMA_13_R = crate::FieldReader<u8, u8>;
+pub type DMA_13_R = crate::FieldReader;
 #[doc = "Field `DMA_13` writer - DMA 13"]
-pub type DMA_13_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GICD_ITARGETSR30_SPEC, u8, u8, 8, O>;
+pub type DMA_13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - OR of DMA 9 and 10"]
     #[inline(always)]
@@ -76,50 +40,66 @@ impl R {
         DMA_13_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_ITARGETSR30")
+            .field("dma_9_10", &format_args!("{}", self.dma_9_10().bits()))
+            .field("dma_11", &format_args!("{}", self.dma_11().bits()))
+            .field("dma_12", &format_args!("{}", self.dma_12().bits()))
+            .field("dma_13", &format_args!("{}", self.dma_13().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR30_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - OR of DMA 9 and 10"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_9_10(&mut self) -> DMA_9_10_W<0> {
+    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_ITARGETSR30_SPEC, 0> {
         DMA_9_10_W::new(self)
     }
     #[doc = "Bits 8:15 - DMA 11"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_11(&mut self) -> DMA_11_W<8> {
+    pub fn dma_11(&mut self) -> DMA_11_W<GICD_ITARGETSR30_SPEC, 8> {
         DMA_11_W::new(self)
     }
     #[doc = "Bits 16:23 - DMA 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_12(&mut self) -> DMA_12_W<16> {
+    pub fn dma_12(&mut self) -> DMA_12_W<GICD_ITARGETSR30_SPEC, 16> {
         DMA_12_W::new(self)
     }
     #[doc = "Bits 24:31 - DMA 13"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_13(&mut self) -> DMA_13_W<24> {
+    pub fn dma_13(&mut self) -> DMA_13_W<GICD_ITARGETSR30_SPEC, 24> {
         DMA_13_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Processor Target 120 - 123\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_itargetsr30](index.html) module"]
+#[doc = "Interrupt Processor Target 120 - 123\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_itargetsr30::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_itargetsr30::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_ITARGETSR30_SPEC;
 impl crate::RegisterSpec for GICD_ITARGETSR30_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_itargetsr30::R](R) reader structure"]
-impl crate::Readable for GICD_ITARGETSR30_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicd_itargetsr30::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicd_itargetsr30::R`](R) reader structure"]
+impl crate::Readable for GICD_ITARGETSR30_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicd_itargetsr30::W`](W) writer structure"]
 impl crate::Writable for GICD_ITARGETSR30_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

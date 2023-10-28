@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Control and Status"]
     pub cs: CS,
@@ -14,27 +15,33 @@ pub struct RegisterBlock {
     #[doc = "0x14 - "]
     pub dc: DC,
 }
-#[doc = "CS (rw) register accessor: an alias for `Reg<CS_SPEC>`"]
+#[doc = "CS (rw) register accessor: Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cs`]
+module"]
 pub type CS = crate::Reg<cs::CS_SPEC>;
 #[doc = "Control and Status"]
 pub mod cs;
-#[doc = "FIFO (rw) register accessor: an alias for `Reg<FIFO_SPEC>`"]
+#[doc = "FIFO (rw) register accessor: FIFO access\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fifo::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fifo`]
+module"]
 pub type FIFO = crate::Reg<fifo::FIFO_SPEC>;
 #[doc = "FIFO access"]
 pub mod fifo;
-#[doc = "CLK (rw) register accessor: an alias for `Reg<CLK_SPEC>`"]
+#[doc = "CLK (rw) register accessor: Clock divider\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`]
+module"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "Clock divider"]
 pub mod clk;
-#[doc = "DLEN (rw) register accessor: an alias for `Reg<DLEN_SPEC>`"]
+#[doc = "DLEN (rw) register accessor: Data length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dlen::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dlen::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dlen`]
+module"]
 pub type DLEN = crate::Reg<dlen::DLEN_SPEC>;
 #[doc = "Data length"]
 pub mod dlen;
-#[doc = "LTOH (rw) register accessor: an alias for `Reg<LTOH_SPEC>`"]
+#[doc = "LTOH (rw) register accessor: LoSSI output hold delay\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ltoh::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ltoh::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ltoh`]
+module"]
 pub type LTOH = crate::Reg<ltoh::LTOH_SPEC>;
 #[doc = "LoSSI output hold delay"]
 pub mod ltoh;
-#[doc = "DC (rw) register accessor: an alias for `Reg<DC_SPEC>`"]
+#[doc = "DC (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dc`]
+module"]
 pub type DC = crate::Reg<dc::DC_SPEC>;
 #[doc = ""]
 pub mod dc;

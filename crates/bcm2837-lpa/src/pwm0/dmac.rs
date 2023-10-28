@@ -1,51 +1,19 @@
 #[doc = "Register `DMAC` reader"]
-pub struct R(crate::R<DMAC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMAC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMAC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMAC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMAC_SPEC>;
 #[doc = "Register `DMAC` writer"]
-pub struct W(crate::W<DMAC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMAC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMAC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMAC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMAC_SPEC>;
 #[doc = "Field `DREQ` reader - DMA threshold for DREQ signal"]
-pub type DREQ_R = crate::FieldReader<u8, u8>;
+pub type DREQ_R = crate::FieldReader;
 #[doc = "Field `DREQ` writer - DMA threshold for DREQ signal"]
-pub type DREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMAC_SPEC, u8, u8, 8, O>;
+pub type DREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `PANIC` reader - DMA threshold for panic signal"]
-pub type PANIC_R = crate::FieldReader<u8, u8>;
+pub type PANIC_R = crate::FieldReader;
 #[doc = "Field `PANIC` writer - DMA threshold for panic signal"]
-pub type PANIC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMAC_SPEC, u8, u8, 8, O>;
+pub type PANIC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `ENAB` reader - DMA enabled"]
-pub type ENAB_R = crate::BitReader<bool>;
+pub type ENAB_R = crate::BitReader;
 #[doc = "Field `ENAB` writer - DMA enabled"]
-pub type ENAB_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMAC_SPEC, bool, O>;
+pub type ENAB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:7 - DMA threshold for DREQ signal"]
     #[inline(always)]
@@ -63,44 +31,59 @@ impl R {
         ENAB_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMAC")
+            .field("enab", &format_args!("{}", self.enab().bit()))
+            .field("panic", &format_args!("{}", self.panic().bits()))
+            .field("dreq", &format_args!("{}", self.dreq().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMAC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - DMA threshold for DREQ signal"]
     #[inline(always)]
     #[must_use]
-    pub fn dreq(&mut self) -> DREQ_W<0> {
+    pub fn dreq(&mut self) -> DREQ_W<DMAC_SPEC, 0> {
         DREQ_W::new(self)
     }
     #[doc = "Bits 8:15 - DMA threshold for panic signal"]
     #[inline(always)]
     #[must_use]
-    pub fn panic(&mut self) -> PANIC_W<8> {
+    pub fn panic(&mut self) -> PANIC_W<DMAC_SPEC, 8> {
         PANIC_W::new(self)
     }
     #[doc = "Bit 31 - DMA enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn enab(&mut self) -> ENAB_W<31> {
+    pub fn enab(&mut self) -> ENAB_W<DMAC_SPEC, 31> {
         ENAB_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "DMA control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmac](index.html) module"]
+#[doc = "DMA control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmac::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmac::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMAC_SPEC;
 impl crate::RegisterSpec for DMAC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dmac::R](R) reader structure"]
-impl crate::Readable for DMAC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dmac::W](W) writer structure"]
+#[doc = "`read()` method returns [`dmac::R`](R) reader structure"]
+impl crate::Readable for DMAC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dmac::W`](W) writer structure"]
 impl crate::Writable for DMAC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

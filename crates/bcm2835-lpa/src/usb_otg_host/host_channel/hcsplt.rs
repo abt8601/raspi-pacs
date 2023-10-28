@@ -1,59 +1,27 @@
 #[doc = "Register `HCSPLT` reader"]
-pub struct R(crate::R<HCSPLT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HCSPLT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HCSPLT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HCSPLT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HCSPLT_SPEC>;
 #[doc = "Register `HCSPLT` writer"]
-pub struct W(crate::W<HCSPLT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HCSPLT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HCSPLT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HCSPLT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HCSPLT_SPEC>;
 #[doc = "Field `PRTADDR` reader - Port address"]
-pub type PRTADDR_R = crate::FieldReader<u8, u8>;
+pub type PRTADDR_R = crate::FieldReader;
 #[doc = "Field `PRTADDR` writer - Port address"]
-pub type PRTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCSPLT_SPEC, u8, u8, 7, O>;
+pub type PRTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `HUBADDR` reader - Hub address"]
-pub type HUBADDR_R = crate::FieldReader<u8, u8>;
+pub type HUBADDR_R = crate::FieldReader;
 #[doc = "Field `HUBADDR` writer - Hub address"]
-pub type HUBADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCSPLT_SPEC, u8, u8, 7, O>;
+pub type HUBADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `XACTPOS` reader - XACTPOS"]
-pub type XACTPOS_R = crate::FieldReader<u8, u8>;
+pub type XACTPOS_R = crate::FieldReader;
 #[doc = "Field `XACTPOS` writer - XACTPOS"]
-pub type XACTPOS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCSPLT_SPEC, u8, u8, 2, O>;
+pub type XACTPOS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `COMPLSPLT` reader - Do complete split"]
-pub type COMPLSPLT_R = crate::BitReader<bool>;
+pub type COMPLSPLT_R = crate::BitReader;
 #[doc = "Field `COMPLSPLT` writer - Do complete split"]
-pub type COMPLSPLT_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCSPLT_SPEC, bool, O>;
+pub type COMPLSPLT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SPLITEN` reader - Split enable"]
-pub type SPLITEN_R = crate::BitReader<bool>;
+pub type SPLITEN_R = crate::BitReader;
 #[doc = "Field `SPLITEN` writer - Split enable"]
-pub type SPLITEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCSPLT_SPEC, bool, O>;
+pub type SPLITEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:6 - Port address"]
     #[inline(always)]
@@ -81,56 +49,73 @@ impl R {
         SPLITEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCSPLT")
+            .field("prtaddr", &format_args!("{}", self.prtaddr().bits()))
+            .field("hubaddr", &format_args!("{}", self.hubaddr().bits()))
+            .field("xactpos", &format_args!("{}", self.xactpos().bits()))
+            .field("complsplt", &format_args!("{}", self.complsplt().bit()))
+            .field("spliten", &format_args!("{}", self.spliten().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCSPLT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - Port address"]
     #[inline(always)]
     #[must_use]
-    pub fn prtaddr(&mut self) -> PRTADDR_W<0> {
+    pub fn prtaddr(&mut self) -> PRTADDR_W<HCSPLT_SPEC, 0> {
         PRTADDR_W::new(self)
     }
     #[doc = "Bits 7:13 - Hub address"]
     #[inline(always)]
     #[must_use]
-    pub fn hubaddr(&mut self) -> HUBADDR_W<7> {
+    pub fn hubaddr(&mut self) -> HUBADDR_W<HCSPLT_SPEC, 7> {
         HUBADDR_W::new(self)
     }
     #[doc = "Bits 14:15 - XACTPOS"]
     #[inline(always)]
     #[must_use]
-    pub fn xactpos(&mut self) -> XACTPOS_W<14> {
+    pub fn xactpos(&mut self) -> XACTPOS_W<HCSPLT_SPEC, 14> {
         XACTPOS_W::new(self)
     }
     #[doc = "Bit 16 - Do complete split"]
     #[inline(always)]
     #[must_use]
-    pub fn complsplt(&mut self) -> COMPLSPLT_W<16> {
+    pub fn complsplt(&mut self) -> COMPLSPLT_W<HCSPLT_SPEC, 16> {
         COMPLSPLT_W::new(self)
     }
     #[doc = "Bit 31 - Split enable"]
     #[inline(always)]
     #[must_use]
-    pub fn spliten(&mut self) -> SPLITEN_W<31> {
+    pub fn spliten(&mut self) -> SPLITEN_W<HCSPLT_SPEC, 31> {
         SPLITEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Split control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcsplt](index.html) module"]
+#[doc = "Split control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcsplt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcsplt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCSPLT_SPEC;
 impl crate::RegisterSpec for HCSPLT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcsplt::R](R) reader structure"]
-impl crate::Readable for HCSPLT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hcsplt::W](W) writer structure"]
+#[doc = "`read()` method returns [`hcsplt::R`](R) reader structure"]
+impl crate::Readable for HCSPLT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`hcsplt::W`](W) writer structure"]
 impl crate::Writable for HCSPLT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

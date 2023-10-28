@@ -1,43 +1,11 @@
 #[doc = "Register `DLEN` reader"]
-pub struct R(crate::R<DLEN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DLEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DLEN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DLEN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DLEN_SPEC>;
 #[doc = "Register `DLEN` writer"]
-pub struct W(crate::W<DLEN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DLEN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DLEN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DLEN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DLEN_SPEC>;
 #[doc = "Field `DLEN` reader - Data length"]
-pub type DLEN_R = crate::FieldReader<u16, u16>;
+pub type DLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `DLEN` writer - Data length"]
-pub type DLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DLEN_SPEC, u16, u16, 16, O>;
+pub type DLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Data length"]
     #[inline(always)]
@@ -45,32 +13,45 @@ impl R {
         DLEN_R::new((self.bits & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DLEN")
+            .field("dlen", &format_args!("{}", self.dlen().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Data length"]
     #[inline(always)]
     #[must_use]
-    pub fn dlen(&mut self) -> DLEN_W<0> {
+    pub fn dlen(&mut self) -> DLEN_W<DLEN_SPEC, 0> {
         DLEN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Data length\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dlen](index.html) module"]
+#[doc = "Data length\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dlen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dlen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DLEN_SPEC;
 impl crate::RegisterSpec for DLEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dlen::R](R) reader structure"]
-impl crate::Readable for DLEN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dlen::W](W) writer structure"]
+#[doc = "`read()` method returns [`dlen::R`](R) reader structure"]
+impl crate::Readable for DLEN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dlen::W`](W) writer structure"]
 impl crate::Writable for DLEN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

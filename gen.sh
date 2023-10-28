@@ -14,7 +14,7 @@ mcu_name=$1
 cd "crates/${mcu_name}-lpa/"
 
 svd2rust -i "../../peripherals/svd/gen/${mcu_name}_lpa.svd" --target none \
-    --atomics
+    --atomics --impl_debug
 
 rm -rf src/
 form -i lib.rs -o src/

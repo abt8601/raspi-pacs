@@ -1,43 +1,11 @@
 #[doc = "Register `CTL` reader"]
-pub struct R(crate::R<CTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTL_SPEC>;
 #[doc = "Register `CTL` writer"]
-pub struct W(crate::W<CTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CTL_SPEC>;
 #[doc = "Field `PWEN1` reader - Enable channel 1"]
-pub type PWEN1_R = crate::BitReader<bool>;
+pub type PWEN1_R = crate::BitReader;
 #[doc = "Field `PWEN1` writer - Enable channel 1"]
-pub type PWEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type PWEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MODE1` reader - Channel 1 mode"]
 pub type MODE1_R = crate::BitReader<MODE1_A>;
 #[doc = "Channel 1 mode\n\nValue on reset: 0"]
@@ -57,65 +25,68 @@ impl From<MODE1_A> for bool {
 impl MODE1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MODE1_A {
+    pub const fn variant(&self) -> MODE1_A {
         match self.bits {
             false => MODE1_A::PWM,
             true => MODE1_A::SERIAL,
         }
     }
-    #[doc = "Checks if the value of the field is `PWM`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_pwm(&self) -> bool {
         *self == MODE1_A::PWM
     }
-    #[doc = "Checks if the value of the field is `SERIAL`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_serial(&self) -> bool {
         *self == MODE1_A::SERIAL
     }
 }
 #[doc = "Field `MODE1` writer - Channel 1 mode"]
-pub type MODE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, MODE1_A, O>;
-impl<'a, const O: u8> MODE1_W<'a, O> {
+pub type MODE1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MODE1_A>;
+impl<'a, REG, const O: u8> MODE1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn pwm(self) -> &'a mut W {
+    pub fn pwm(self) -> &'a mut crate::W<REG> {
         self.variant(MODE1_A::PWM)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn serial(self) -> &'a mut W {
+    pub fn serial(self) -> &'a mut crate::W<REG> {
         self.variant(MODE1_A::SERIAL)
     }
 }
 #[doc = "Field `RPTL1` reader - Repeat last value from FIFO for channel 1"]
-pub type RPTL1_R = crate::BitReader<bool>;
+pub type RPTL1_R = crate::BitReader;
 #[doc = "Field `RPTL1` writer - Repeat last value from FIFO for channel 1"]
-pub type RPTL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type RPTL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SBIT1` reader - State when not transmitting on channel 1"]
-pub type SBIT1_R = crate::BitReader<bool>;
+pub type SBIT1_R = crate::BitReader;
 #[doc = "Field `SBIT1` writer - State when not transmitting on channel 1"]
-pub type SBIT1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type SBIT1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `POLA1` reader - Channel 1 polarity inverted"]
-pub type POLA1_R = crate::BitReader<bool>;
+pub type POLA1_R = crate::BitReader;
 #[doc = "Field `POLA1` writer - Channel 1 polarity inverted"]
-pub type POLA1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type POLA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USEF1` reader - Use FIFO for channel 1"]
-pub type USEF1_R = crate::BitReader<bool>;
+pub type USEF1_R = crate::BitReader;
 #[doc = "Field `USEF1` writer - Use FIFO for channel 1"]
-pub type USEF1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type USEF1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CLRF1` reader - Clear FIFO"]
-pub type CLRF1_R = crate::BitReader<bool>;
+pub type CLRF1_R = crate::BitReader;
 #[doc = "Field `CLRF1` writer - Clear FIFO"]
-pub type CLRF1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type CLRF1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MSEN1` reader - M/S mode for channel 1"]
-pub type MSEN1_R = crate::BitReader<bool>;
+pub type MSEN1_R = crate::BitReader;
 #[doc = "Field `MSEN1` writer - M/S mode for channel 1"]
-pub type MSEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type MSEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PWEN2` reader - Enable channel 2"]
-pub type PWEN2_R = crate::BitReader<bool>;
+pub type PWEN2_R = crate::BitReader;
 #[doc = "Field `PWEN2` writer - Enable channel 2"]
-pub type PWEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type PWEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MODE2` reader - Channel 2 mode"]
 pub type MODE2_R = crate::BitReader<MODE2_A>;
 #[doc = "Channel 2 mode\n\nValue on reset: 0"]
@@ -135,57 +106,60 @@ impl From<MODE2_A> for bool {
 impl MODE2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MODE2_A {
+    pub const fn variant(&self) -> MODE2_A {
         match self.bits {
             false => MODE2_A::PWM,
             true => MODE2_A::SERIAL,
         }
     }
-    #[doc = "Checks if the value of the field is `PWM`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_pwm(&self) -> bool {
         *self == MODE2_A::PWM
     }
-    #[doc = "Checks if the value of the field is `SERIAL`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_serial(&self) -> bool {
         *self == MODE2_A::SERIAL
     }
 }
 #[doc = "Field `MODE2` writer - Channel 2 mode"]
-pub type MODE2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, MODE2_A, O>;
-impl<'a, const O: u8> MODE2_W<'a, O> {
+pub type MODE2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MODE2_A>;
+impl<'a, REG, const O: u8> MODE2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn pwm(self) -> &'a mut W {
+    pub fn pwm(self) -> &'a mut crate::W<REG> {
         self.variant(MODE2_A::PWM)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn serial(self) -> &'a mut W {
+    pub fn serial(self) -> &'a mut crate::W<REG> {
         self.variant(MODE2_A::SERIAL)
     }
 }
 #[doc = "Field `RPTL2` reader - Repeat last value from FIFO for channel 2"]
-pub type RPTL2_R = crate::BitReader<bool>;
+pub type RPTL2_R = crate::BitReader;
 #[doc = "Field `RPTL2` writer - Repeat last value from FIFO for channel 2"]
-pub type RPTL2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type RPTL2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SBIT2` reader - State when not transmitting on channel 2"]
-pub type SBIT2_R = crate::BitReader<bool>;
+pub type SBIT2_R = crate::BitReader;
 #[doc = "Field `SBIT2` writer - State when not transmitting on channel 2"]
-pub type SBIT2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type SBIT2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `POLA2` reader - Channel 2 polarity inverted"]
-pub type POLA2_R = crate::BitReader<bool>;
+pub type POLA2_R = crate::BitReader;
 #[doc = "Field `POLA2` writer - Channel 2 polarity inverted"]
-pub type POLA2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type POLA2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USEF2` reader - Use FIFO for channel 2"]
-pub type USEF2_R = crate::BitReader<bool>;
+pub type USEF2_R = crate::BitReader;
 #[doc = "Field `USEF2` writer - Use FIFO for channel 2"]
-pub type USEF2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type USEF2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `MSEN2` reader - M/S mode for channel 2"]
-pub type MSEN2_R = crate::BitReader<bool>;
+pub type MSEN2_R = crate::BitReader;
 #[doc = "Field `MSEN2` writer - M/S mode for channel 2"]
-pub type MSEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTL_SPEC, bool, O>;
+pub type MSEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Enable channel 1"]
     #[inline(always)]
@@ -263,116 +237,143 @@ impl R {
         MSEN2_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTL")
+            .field("msen2", &format_args!("{}", self.msen2().bit()))
+            .field("usef2", &format_args!("{}", self.usef2().bit()))
+            .field("pola2", &format_args!("{}", self.pola2().bit()))
+            .field("sbit2", &format_args!("{}", self.sbit2().bit()))
+            .field("rptl2", &format_args!("{}", self.rptl2().bit()))
+            .field("mode2", &format_args!("{}", self.mode2().bit()))
+            .field("pwen2", &format_args!("{}", self.pwen2().bit()))
+            .field("msen1", &format_args!("{}", self.msen1().bit()))
+            .field("clrf1", &format_args!("{}", self.clrf1().bit()))
+            .field("usef1", &format_args!("{}", self.usef1().bit()))
+            .field("pola1", &format_args!("{}", self.pola1().bit()))
+            .field("sbit1", &format_args!("{}", self.sbit1().bit()))
+            .field("rptl1", &format_args!("{}", self.rptl1().bit()))
+            .field("mode1", &format_args!("{}", self.mode1().bit()))
+            .field("pwen1", &format_args!("{}", self.pwen1().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Enable channel 1"]
     #[inline(always)]
     #[must_use]
-    pub fn pwen1(&mut self) -> PWEN1_W<0> {
+    pub fn pwen1(&mut self) -> PWEN1_W<CTL_SPEC, 0> {
         PWEN1_W::new(self)
     }
     #[doc = "Bit 1 - Channel 1 mode"]
     #[inline(always)]
     #[must_use]
-    pub fn mode1(&mut self) -> MODE1_W<1> {
+    pub fn mode1(&mut self) -> MODE1_W<CTL_SPEC, 1> {
         MODE1_W::new(self)
     }
     #[doc = "Bit 2 - Repeat last value from FIFO for channel 1"]
     #[inline(always)]
     #[must_use]
-    pub fn rptl1(&mut self) -> RPTL1_W<2> {
+    pub fn rptl1(&mut self) -> RPTL1_W<CTL_SPEC, 2> {
         RPTL1_W::new(self)
     }
     #[doc = "Bit 3 - State when not transmitting on channel 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sbit1(&mut self) -> SBIT1_W<3> {
+    pub fn sbit1(&mut self) -> SBIT1_W<CTL_SPEC, 3> {
         SBIT1_W::new(self)
     }
     #[doc = "Bit 4 - Channel 1 polarity inverted"]
     #[inline(always)]
     #[must_use]
-    pub fn pola1(&mut self) -> POLA1_W<4> {
+    pub fn pola1(&mut self) -> POLA1_W<CTL_SPEC, 4> {
         POLA1_W::new(self)
     }
     #[doc = "Bit 5 - Use FIFO for channel 1"]
     #[inline(always)]
     #[must_use]
-    pub fn usef1(&mut self) -> USEF1_W<5> {
+    pub fn usef1(&mut self) -> USEF1_W<CTL_SPEC, 5> {
         USEF1_W::new(self)
     }
     #[doc = "Bit 6 - Clear FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn clrf1(&mut self) -> CLRF1_W<6> {
+    pub fn clrf1(&mut self) -> CLRF1_W<CTL_SPEC, 6> {
         CLRF1_W::new(self)
     }
     #[doc = "Bit 7 - M/S mode for channel 1"]
     #[inline(always)]
     #[must_use]
-    pub fn msen1(&mut self) -> MSEN1_W<7> {
+    pub fn msen1(&mut self) -> MSEN1_W<CTL_SPEC, 7> {
         MSEN1_W::new(self)
     }
     #[doc = "Bit 8 - Enable channel 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pwen2(&mut self) -> PWEN2_W<8> {
+    pub fn pwen2(&mut self) -> PWEN2_W<CTL_SPEC, 8> {
         PWEN2_W::new(self)
     }
     #[doc = "Bit 9 - Channel 2 mode"]
     #[inline(always)]
     #[must_use]
-    pub fn mode2(&mut self) -> MODE2_W<9> {
+    pub fn mode2(&mut self) -> MODE2_W<CTL_SPEC, 9> {
         MODE2_W::new(self)
     }
     #[doc = "Bit 10 - Repeat last value from FIFO for channel 2"]
     #[inline(always)]
     #[must_use]
-    pub fn rptl2(&mut self) -> RPTL2_W<10> {
+    pub fn rptl2(&mut self) -> RPTL2_W<CTL_SPEC, 10> {
         RPTL2_W::new(self)
     }
     #[doc = "Bit 11 - State when not transmitting on channel 2"]
     #[inline(always)]
     #[must_use]
-    pub fn sbit2(&mut self) -> SBIT2_W<11> {
+    pub fn sbit2(&mut self) -> SBIT2_W<CTL_SPEC, 11> {
         SBIT2_W::new(self)
     }
     #[doc = "Bit 12 - Channel 2 polarity inverted"]
     #[inline(always)]
     #[must_use]
-    pub fn pola2(&mut self) -> POLA2_W<12> {
+    pub fn pola2(&mut self) -> POLA2_W<CTL_SPEC, 12> {
         POLA2_W::new(self)
     }
     #[doc = "Bit 13 - Use FIFO for channel 2"]
     #[inline(always)]
     #[must_use]
-    pub fn usef2(&mut self) -> USEF2_W<13> {
+    pub fn usef2(&mut self) -> USEF2_W<CTL_SPEC, 13> {
         USEF2_W::new(self)
     }
     #[doc = "Bit 15 - M/S mode for channel 2"]
     #[inline(always)]
     #[must_use]
-    pub fn msen2(&mut self) -> MSEN2_W<15> {
+    pub fn msen2(&mut self) -> MSEN2_W<CTL_SPEC, 15> {
         MSEN2_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctl](index.html) module"]
+#[doc = "Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTL_SPEC;
 impl crate::RegisterSpec for CTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctl::R](R) reader structure"]
-impl crate::Readable for CTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ctl::R`](R) reader structure"]
+impl crate::Readable for CTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ctl::W`](W) writer structure"]
 impl crate::Writable for CTL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

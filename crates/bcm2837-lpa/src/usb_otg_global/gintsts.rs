@@ -1,121 +1,89 @@
 #[doc = "Register `GINTSTS` reader"]
-pub struct R(crate::R<GINTSTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GINTSTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GINTSTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GINTSTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GINTSTS_SPEC>;
 #[doc = "Register `GINTSTS` writer"]
-pub struct W(crate::W<GINTSTS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GINTSTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GINTSTS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GINTSTS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GINTSTS_SPEC>;
 #[doc = "Field `CMOD` reader - Current mode of operation"]
-pub type CMOD_R = crate::BitReader<bool>;
+pub type CMOD_R = crate::BitReader;
 #[doc = "Field `MMIS` reader - Mode mismatch interrupt"]
-pub type MMIS_R = crate::BitReader<bool>;
+pub type MMIS_R = crate::BitReader;
 #[doc = "Field `MMIS` writer - Mode mismatch interrupt"]
-pub type MMIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type MMIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OTGINT` reader - OTG interrupt"]
-pub type OTGINT_R = crate::BitReader<bool>;
+pub type OTGINT_R = crate::BitReader;
 #[doc = "Field `SOF` reader - Start of frame"]
-pub type SOF_R = crate::BitReader<bool>;
+pub type SOF_R = crate::BitReader;
 #[doc = "Field `SOF` writer - Start of frame"]
-pub type SOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type SOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `RXFLVL` reader - RxFIFO nonempty"]
-pub type RXFLVL_R = crate::BitReader<bool>;
+pub type RXFLVL_R = crate::BitReader;
 #[doc = "Field `NPTXFE` reader - Nonperiodic TxFIFO empty"]
-pub type NPTXFE_R = crate::BitReader<bool>;
+pub type NPTXFE_R = crate::BitReader;
 #[doc = "Field `GINAKEFF` reader - Global IN nonperiodic NAK effective"]
-pub type GINAKEFF_R = crate::BitReader<bool>;
+pub type GINAKEFF_R = crate::BitReader;
 #[doc = "Field `BOUTNAKEFF` reader - Global OUT NAK effective"]
-pub type BOUTNAKEFF_R = crate::BitReader<bool>;
+pub type BOUTNAKEFF_R = crate::BitReader;
 #[doc = "Field `ESUSP` reader - Early suspend"]
-pub type ESUSP_R = crate::BitReader<bool>;
+pub type ESUSP_R = crate::BitReader;
 #[doc = "Field `ESUSP` writer - Early suspend"]
-pub type ESUSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type ESUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USBSUSP` reader - USB suspend"]
-pub type USBSUSP_R = crate::BitReader<bool>;
+pub type USBSUSP_R = crate::BitReader;
 #[doc = "Field `USBSUSP` writer - USB suspend"]
-pub type USBSUSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type USBSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USBRST` reader - USB reset"]
-pub type USBRST_R = crate::BitReader<bool>;
+pub type USBRST_R = crate::BitReader;
 #[doc = "Field `USBRST` writer - USB reset"]
-pub type USBRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type USBRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENUMDNE` reader - Enumeration done"]
-pub type ENUMDNE_R = crate::BitReader<bool>;
+pub type ENUMDNE_R = crate::BitReader;
 #[doc = "Field `ENUMDNE` writer - Enumeration done"]
-pub type ENUMDNE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type ENUMDNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ISOODRP` reader - Isochronous OUT packet dropped interrupt"]
-pub type ISOODRP_R = crate::BitReader<bool>;
+pub type ISOODRP_R = crate::BitReader;
 #[doc = "Field `ISOODRP` writer - Isochronous OUT packet dropped interrupt"]
-pub type ISOODRP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type ISOODRP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `EOPF` reader - End of periodic frame interrupt"]
-pub type EOPF_R = crate::BitReader<bool>;
+pub type EOPF_R = crate::BitReader;
 #[doc = "Field `EOPF` writer - End of periodic frame interrupt"]
-pub type EOPF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type EOPF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `IEPINT` reader - IN endpoint interrupt"]
-pub type IEPINT_R = crate::BitReader<bool>;
+pub type IEPINT_R = crate::BitReader;
 #[doc = "Field `OEPINT` reader - OUT endpoint interrupt"]
-pub type OEPINT_R = crate::BitReader<bool>;
+pub type OEPINT_R = crate::BitReader;
 #[doc = "Field `IISOIXFR` reader - Incomplete isochronous IN transfer"]
-pub type IISOIXFR_R = crate::BitReader<bool>;
+pub type IISOIXFR_R = crate::BitReader;
 #[doc = "Field `IISOIXFR` writer - Incomplete isochronous IN transfer"]
-pub type IISOIXFR_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type IISOIXFR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PXFR_INCOMPISOOUT` reader - Incomplete periodic transfer"]
-pub type PXFR_INCOMPISOOUT_R = crate::BitReader<bool>;
+pub type PXFR_INCOMPISOOUT_R = crate::BitReader;
 #[doc = "Field `PXFR_INCOMPISOOUT` writer - Incomplete periodic transfer"]
-pub type PXFR_INCOMPISOOUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type PXFR_INCOMPISOOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DATAFSUSP` reader - Data fetch suspended"]
-pub type DATAFSUSP_R = crate::BitReader<bool>;
+pub type DATAFSUSP_R = crate::BitReader;
 #[doc = "Field `DATAFSUSP` writer - Data fetch suspended"]
-pub type DATAFSUSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type DATAFSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `HPRTINT` reader - Host port interrupt"]
-pub type HPRTINT_R = crate::BitReader<bool>;
+pub type HPRTINT_R = crate::BitReader;
 #[doc = "Field `HCINT` reader - Host channels interrupt"]
-pub type HCINT_R = crate::BitReader<bool>;
+pub type HCINT_R = crate::BitReader;
 #[doc = "Field `PTXFE` reader - Periodic TxFIFO empty"]
-pub type PTXFE_R = crate::BitReader<bool>;
+pub type PTXFE_R = crate::BitReader;
 #[doc = "Field `CIDSCHG` reader - Connector ID status change"]
-pub type CIDSCHG_R = crate::BitReader<bool>;
+pub type CIDSCHG_R = crate::BitReader;
 #[doc = "Field `CIDSCHG` writer - Connector ID status change"]
-pub type CIDSCHG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type CIDSCHG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DISCINT` reader - Disconnect detected interrupt"]
-pub type DISCINT_R = crate::BitReader<bool>;
+pub type DISCINT_R = crate::BitReader;
 #[doc = "Field `DISCINT` writer - Disconnect detected interrupt"]
-pub type DISCINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type DISCINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRQINT` reader - Session request/new session detected interrupt"]
-pub type SRQINT_R = crate::BitReader<bool>;
+pub type SRQINT_R = crate::BitReader;
 #[doc = "Field `SRQINT` writer - Session request/new session detected interrupt"]
-pub type SRQINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type SRQINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `WKUINT` reader - Resume/remote wakeup detected interrupt"]
-pub type WKUINT_R = crate::BitReader<bool>;
+pub type WKUINT_R = crate::BitReader;
 #[doc = "Field `WKUINT` writer - Resume/remote wakeup detected interrupt"]
-pub type WKUINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTSTS_SPEC, bool, O>;
+pub type WKUINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - Current mode of operation"]
     #[inline(always)]
@@ -248,116 +216,157 @@ impl R {
         WKUINT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GINTSTS")
+            .field("cmod", &format_args!("{}", self.cmod().bit()))
+            .field("mmis", &format_args!("{}", self.mmis().bit()))
+            .field("otgint", &format_args!("{}", self.otgint().bit()))
+            .field("sof", &format_args!("{}", self.sof().bit()))
+            .field("rxflvl", &format_args!("{}", self.rxflvl().bit()))
+            .field("nptxfe", &format_args!("{}", self.nptxfe().bit()))
+            .field("ginakeff", &format_args!("{}", self.ginakeff().bit()))
+            .field("boutnakeff", &format_args!("{}", self.boutnakeff().bit()))
+            .field("esusp", &format_args!("{}", self.esusp().bit()))
+            .field("usbsusp", &format_args!("{}", self.usbsusp().bit()))
+            .field("usbrst", &format_args!("{}", self.usbrst().bit()))
+            .field("enumdne", &format_args!("{}", self.enumdne().bit()))
+            .field("isoodrp", &format_args!("{}", self.isoodrp().bit()))
+            .field("eopf", &format_args!("{}", self.eopf().bit()))
+            .field("iepint", &format_args!("{}", self.iepint().bit()))
+            .field("oepint", &format_args!("{}", self.oepint().bit()))
+            .field("iisoixfr", &format_args!("{}", self.iisoixfr().bit()))
+            .field(
+                "pxfr_incompisoout",
+                &format_args!("{}", self.pxfr_incompisoout().bit()),
+            )
+            .field("datafsusp", &format_args!("{}", self.datafsusp().bit()))
+            .field("hprtint", &format_args!("{}", self.hprtint().bit()))
+            .field("hcint", &format_args!("{}", self.hcint().bit()))
+            .field("ptxfe", &format_args!("{}", self.ptxfe().bit()))
+            .field("cidschg", &format_args!("{}", self.cidschg().bit()))
+            .field("discint", &format_args!("{}", self.discint().bit()))
+            .field("srqint", &format_args!("{}", self.srqint().bit()))
+            .field("wkuint", &format_args!("{}", self.wkuint().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GINTSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Mode mismatch interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn mmis(&mut self) -> MMIS_W<1> {
+    pub fn mmis(&mut self) -> MMIS_W<GINTSTS_SPEC, 1> {
         MMIS_W::new(self)
     }
     #[doc = "Bit 3 - Start of frame"]
     #[inline(always)]
     #[must_use]
-    pub fn sof(&mut self) -> SOF_W<3> {
+    pub fn sof(&mut self) -> SOF_W<GINTSTS_SPEC, 3> {
         SOF_W::new(self)
     }
     #[doc = "Bit 10 - Early suspend"]
     #[inline(always)]
     #[must_use]
-    pub fn esusp(&mut self) -> ESUSP_W<10> {
+    pub fn esusp(&mut self) -> ESUSP_W<GINTSTS_SPEC, 10> {
         ESUSP_W::new(self)
     }
     #[doc = "Bit 11 - USB suspend"]
     #[inline(always)]
     #[must_use]
-    pub fn usbsusp(&mut self) -> USBSUSP_W<11> {
+    pub fn usbsusp(&mut self) -> USBSUSP_W<GINTSTS_SPEC, 11> {
         USBSUSP_W::new(self)
     }
     #[doc = "Bit 12 - USB reset"]
     #[inline(always)]
     #[must_use]
-    pub fn usbrst(&mut self) -> USBRST_W<12> {
+    pub fn usbrst(&mut self) -> USBRST_W<GINTSTS_SPEC, 12> {
         USBRST_W::new(self)
     }
     #[doc = "Bit 13 - Enumeration done"]
     #[inline(always)]
     #[must_use]
-    pub fn enumdne(&mut self) -> ENUMDNE_W<13> {
+    pub fn enumdne(&mut self) -> ENUMDNE_W<GINTSTS_SPEC, 13> {
         ENUMDNE_W::new(self)
     }
     #[doc = "Bit 14 - Isochronous OUT packet dropped interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn isoodrp(&mut self) -> ISOODRP_W<14> {
+    pub fn isoodrp(&mut self) -> ISOODRP_W<GINTSTS_SPEC, 14> {
         ISOODRP_W::new(self)
     }
     #[doc = "Bit 15 - End of periodic frame interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn eopf(&mut self) -> EOPF_W<15> {
+    pub fn eopf(&mut self) -> EOPF_W<GINTSTS_SPEC, 15> {
         EOPF_W::new(self)
     }
     #[doc = "Bit 20 - Incomplete isochronous IN transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn iisoixfr(&mut self) -> IISOIXFR_W<20> {
+    pub fn iisoixfr(&mut self) -> IISOIXFR_W<GINTSTS_SPEC, 20> {
         IISOIXFR_W::new(self)
     }
     #[doc = "Bit 21 - Incomplete periodic transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn pxfr_incompisoout(&mut self) -> PXFR_INCOMPISOOUT_W<21> {
+    pub fn pxfr_incompisoout(&mut self) -> PXFR_INCOMPISOOUT_W<GINTSTS_SPEC, 21> {
         PXFR_INCOMPISOOUT_W::new(self)
     }
     #[doc = "Bit 22 - Data fetch suspended"]
     #[inline(always)]
     #[must_use]
-    pub fn datafsusp(&mut self) -> DATAFSUSP_W<22> {
+    pub fn datafsusp(&mut self) -> DATAFSUSP_W<GINTSTS_SPEC, 22> {
         DATAFSUSP_W::new(self)
     }
     #[doc = "Bit 28 - Connector ID status change"]
     #[inline(always)]
     #[must_use]
-    pub fn cidschg(&mut self) -> CIDSCHG_W<28> {
+    pub fn cidschg(&mut self) -> CIDSCHG_W<GINTSTS_SPEC, 28> {
         CIDSCHG_W::new(self)
     }
     #[doc = "Bit 29 - Disconnect detected interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn discint(&mut self) -> DISCINT_W<29> {
+    pub fn discint(&mut self) -> DISCINT_W<GINTSTS_SPEC, 29> {
         DISCINT_W::new(self)
     }
     #[doc = "Bit 30 - Session request/new session detected interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn srqint(&mut self) -> SRQINT_W<30> {
+    pub fn srqint(&mut self) -> SRQINT_W<GINTSTS_SPEC, 30> {
         SRQINT_W::new(self)
     }
     #[doc = "Bit 31 - Resume/remote wakeup detected interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn wkuint(&mut self) -> WKUINT_W<31> {
+    pub fn wkuint(&mut self) -> WKUINT_W<GINTSTS_SPEC, 31> {
         WKUINT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "OTG_HS core interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gintsts](index.html) module"]
+#[doc = "OTG_HS core interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gintsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gintsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GINTSTS_SPEC;
 impl crate::RegisterSpec for GINTSTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gintsts::R](R) reader structure"]
-impl crate::Readable for GINTSTS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gintsts::W](W) writer structure"]
+#[doc = "`read()` method returns [`gintsts::R`](R) reader structure"]
+impl crate::Readable for GINTSTS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gintsts::W`](W) writer structure"]
 impl crate::Writable for GINTSTS_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,39 +1,7 @@
 #[doc = "Register `GICD_ICFGR28` reader"]
-pub struct R(crate::R<GICD_ICFGR28_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GICD_ICFGR28_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GICD_ICFGR28_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GICD_ICFGR28_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GICD_ICFGR28_SPEC>;
 #[doc = "Register `GICD_ICFGR28` writer"]
-pub struct W(crate::W<GICD_ICFGR28_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GICD_ICFGR28_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GICD_ICFGR28_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GICD_ICFGR28_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GICD_ICFGR28_SPEC>;
 #[doc = "Field `DMA_0` reader - DMA 0"]
 pub type DMA_0_R = crate::BitReader<DMA_0_A>;
 #[doc = "DMA 0\n\nValue on reset: 0"]
@@ -53,34 +21,37 @@ impl From<DMA_0_A> for bool {
 impl DMA_0_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_0_A {
+    pub const fn variant(&self) -> DMA_0_A {
         match self.bits {
             false => DMA_0_A::LEVEL,
             true => DMA_0_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_0_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_0_A::EDGE
     }
 }
 #[doc = "Field `DMA_0` writer - DMA 0"]
-pub type DMA_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_0_A, O>;
-impl<'a, const O: u8> DMA_0_W<'a, O> {
+pub type DMA_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_0_A>;
+impl<'a, REG, const O: u8> DMA_0_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_0_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_0_A::EDGE)
     }
 }
@@ -103,34 +74,37 @@ impl From<DMA_1_A> for bool {
 impl DMA_1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_1_A {
+    pub const fn variant(&self) -> DMA_1_A {
         match self.bits {
             false => DMA_1_A::LEVEL,
             true => DMA_1_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_1_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_1_A::EDGE
     }
 }
 #[doc = "Field `DMA_1` writer - DMA 1"]
-pub type DMA_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_1_A, O>;
-impl<'a, const O: u8> DMA_1_W<'a, O> {
+pub type DMA_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_1_A>;
+impl<'a, REG, const O: u8> DMA_1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_1_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_1_A::EDGE)
     }
 }
@@ -153,34 +127,37 @@ impl From<DMA_2_A> for bool {
 impl DMA_2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_2_A {
+    pub const fn variant(&self) -> DMA_2_A {
         match self.bits {
             false => DMA_2_A::LEVEL,
             true => DMA_2_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_2_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_2_A::EDGE
     }
 }
 #[doc = "Field `DMA_2` writer - DMA 2"]
-pub type DMA_2_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_2_A, O>;
-impl<'a, const O: u8> DMA_2_W<'a, O> {
+pub type DMA_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_2_A>;
+impl<'a, REG, const O: u8> DMA_2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_2_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_2_A::EDGE)
     }
 }
@@ -203,34 +180,37 @@ impl From<DMA_3_A> for bool {
 impl DMA_3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_3_A {
+    pub const fn variant(&self) -> DMA_3_A {
         match self.bits {
             false => DMA_3_A::LEVEL,
             true => DMA_3_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_3_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_3_A::EDGE
     }
 }
 #[doc = "Field `DMA_3` writer - DMA 3"]
-pub type DMA_3_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_3_A, O>;
-impl<'a, const O: u8> DMA_3_W<'a, O> {
+pub type DMA_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_3_A>;
+impl<'a, REG, const O: u8> DMA_3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_3_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_3_A::EDGE)
     }
 }
@@ -253,34 +233,37 @@ impl From<DMA_4_A> for bool {
 impl DMA_4_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_4_A {
+    pub const fn variant(&self) -> DMA_4_A {
         match self.bits {
             false => DMA_4_A::LEVEL,
             true => DMA_4_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_4_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_4_A::EDGE
     }
 }
 #[doc = "Field `DMA_4` writer - DMA 4"]
-pub type DMA_4_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_4_A, O>;
-impl<'a, const O: u8> DMA_4_W<'a, O> {
+pub type DMA_4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_4_A>;
+impl<'a, REG, const O: u8> DMA_4_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_4_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_4_A::EDGE)
     }
 }
@@ -303,34 +286,37 @@ impl From<DMA_5_A> for bool {
 impl DMA_5_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_5_A {
+    pub const fn variant(&self) -> DMA_5_A {
         match self.bits {
             false => DMA_5_A::LEVEL,
             true => DMA_5_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_5_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_5_A::EDGE
     }
 }
 #[doc = "Field `DMA_5` writer - DMA 5"]
-pub type DMA_5_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_5_A, O>;
-impl<'a, const O: u8> DMA_5_W<'a, O> {
+pub type DMA_5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_5_A>;
+impl<'a, REG, const O: u8> DMA_5_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_5_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_5_A::EDGE)
     }
 }
@@ -353,34 +339,37 @@ impl From<DMA_6_A> for bool {
 impl DMA_6_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_6_A {
+    pub const fn variant(&self) -> DMA_6_A {
         match self.bits {
             false => DMA_6_A::LEVEL,
             true => DMA_6_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_6_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_6_A::EDGE
     }
 }
 #[doc = "Field `DMA_6` writer - DMA 6"]
-pub type DMA_6_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_6_A, O>;
-impl<'a, const O: u8> DMA_6_W<'a, O> {
+pub type DMA_6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_6_A>;
+impl<'a, REG, const O: u8> DMA_6_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_6_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_6_A::EDGE)
     }
 }
@@ -403,34 +392,37 @@ impl From<DMA_7_8_A> for bool {
 impl DMA_7_8_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_7_8_A {
+    pub const fn variant(&self) -> DMA_7_8_A {
         match self.bits {
             false => DMA_7_8_A::LEVEL,
             true => DMA_7_8_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_7_8_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_7_8_A::EDGE
     }
 }
 #[doc = "Field `DMA_7_8` writer - OR of DMA 7 and 8"]
-pub type DMA_7_8_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_7_8_A, O>;
-impl<'a, const O: u8> DMA_7_8_W<'a, O> {
+pub type DMA_7_8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_7_8_A>;
+impl<'a, REG, const O: u8> DMA_7_8_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_7_8_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_7_8_A::EDGE)
     }
 }
@@ -453,34 +445,37 @@ impl From<DMA_9_10_A> for bool {
 impl DMA_9_10_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_9_10_A {
+    pub const fn variant(&self) -> DMA_9_10_A {
         match self.bits {
             false => DMA_9_10_A::LEVEL,
             true => DMA_9_10_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_9_10_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_9_10_A::EDGE
     }
 }
 #[doc = "Field `DMA_9_10` writer - OR of DMA 9 and 10"]
-pub type DMA_9_10_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_9_10_A, O>;
-impl<'a, const O: u8> DMA_9_10_W<'a, O> {
+pub type DMA_9_10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_9_10_A>;
+impl<'a, REG, const O: u8> DMA_9_10_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_9_10_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_9_10_A::EDGE)
     }
 }
@@ -503,34 +498,37 @@ impl From<DMA_11_A> for bool {
 impl DMA_11_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_11_A {
+    pub const fn variant(&self) -> DMA_11_A {
         match self.bits {
             false => DMA_11_A::LEVEL,
             true => DMA_11_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_11_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_11_A::EDGE
     }
 }
 #[doc = "Field `DMA_11` writer - DMA 11"]
-pub type DMA_11_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_11_A, O>;
-impl<'a, const O: u8> DMA_11_W<'a, O> {
+pub type DMA_11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_11_A>;
+impl<'a, REG, const O: u8> DMA_11_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_11_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_11_A::EDGE)
     }
 }
@@ -553,34 +551,37 @@ impl From<DMA_12_A> for bool {
 impl DMA_12_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_12_A {
+    pub const fn variant(&self) -> DMA_12_A {
         match self.bits {
             false => DMA_12_A::LEVEL,
             true => DMA_12_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_12_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_12_A::EDGE
     }
 }
 #[doc = "Field `DMA_12` writer - DMA 12"]
-pub type DMA_12_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_12_A, O>;
-impl<'a, const O: u8> DMA_12_W<'a, O> {
+pub type DMA_12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_12_A>;
+impl<'a, REG, const O: u8> DMA_12_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_12_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_12_A::EDGE)
     }
 }
@@ -603,34 +604,37 @@ impl From<DMA_13_A> for bool {
 impl DMA_13_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_13_A {
+    pub const fn variant(&self) -> DMA_13_A {
         match self.bits {
             false => DMA_13_A::LEVEL,
             true => DMA_13_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_13_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_13_A::EDGE
     }
 }
 #[doc = "Field `DMA_13` writer - DMA 13"]
-pub type DMA_13_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_13_A, O>;
-impl<'a, const O: u8> DMA_13_W<'a, O> {
+pub type DMA_13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_13_A>;
+impl<'a, REG, const O: u8> DMA_13_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_13_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_13_A::EDGE)
     }
 }
@@ -653,34 +657,37 @@ impl From<DMA_14_A> for bool {
 impl DMA_14_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_14_A {
+    pub const fn variant(&self) -> DMA_14_A {
         match self.bits {
             false => DMA_14_A::LEVEL,
             true => DMA_14_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_14_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_14_A::EDGE
     }
 }
 #[doc = "Field `DMA_14` writer - DMA 14"]
-pub type DMA_14_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_14_A, O>;
-impl<'a, const O: u8> DMA_14_W<'a, O> {
+pub type DMA_14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_14_A>;
+impl<'a, REG, const O: u8> DMA_14_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_14_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_14_A::EDGE)
     }
 }
@@ -703,34 +710,37 @@ impl From<AUX_A> for bool {
 impl AUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AUX_A {
+    pub const fn variant(&self) -> AUX_A {
         match self.bits {
             false => AUX_A::LEVEL,
             true => AUX_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == AUX_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == AUX_A::EDGE
     }
 }
 #[doc = "Field `AUX` writer - OR of UART1, SPI1 and SPI2"]
-pub type AUX_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, AUX_A, O>;
-impl<'a, const O: u8> AUX_W<'a, O> {
+pub type AUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AUX_A>;
+impl<'a, REG, const O: u8> AUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(AUX_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(AUX_A::EDGE)
     }
 }
@@ -753,34 +763,37 @@ impl From<ARM_A> for bool {
 impl ARM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ARM_A {
+    pub const fn variant(&self) -> ARM_A {
         match self.bits {
             false => ARM_A::LEVEL,
             true => ARM_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == ARM_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == ARM_A::EDGE
     }
 }
 #[doc = "Field `ARM` writer - ARM"]
-pub type ARM_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, ARM_A, O>;
-impl<'a, const O: u8> ARM_W<'a, O> {
+pub type ARM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ARM_A>;
+impl<'a, REG, const O: u8> ARM_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(ARM_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(ARM_A::EDGE)
     }
 }
@@ -803,34 +816,37 @@ impl From<DMA_15_A> for bool {
 impl DMA_15_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMA_15_A {
+    pub const fn variant(&self) -> DMA_15_A {
         match self.bits {
             false => DMA_15_A::LEVEL,
             true => DMA_15_A::EDGE,
         }
     }
-    #[doc = "Checks if the value of the field is `LEVEL`"]
+    #[doc = "Level sensitive"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
         *self == DMA_15_A::LEVEL
     }
-    #[doc = "Checks if the value of the field is `EDGE`"]
+    #[doc = "Edge triggered"]
     #[inline(always)]
     pub fn is_edge(&self) -> bool {
         *self == DMA_15_A::EDGE
     }
 }
 #[doc = "Field `DMA_15` writer - DMA 15"]
-pub type DMA_15_W<'a, const O: u8> = crate::BitWriter<'a, u32, GICD_ICFGR28_SPEC, DMA_15_A, O>;
-impl<'a, const O: u8> DMA_15_W<'a, O> {
+pub type DMA_15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_15_A>;
+impl<'a, REG, const O: u8> DMA_15_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Level sensitive"]
     #[inline(always)]
-    pub fn level(self) -> &'a mut W {
+    pub fn level(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_15_A::LEVEL)
     }
     #[doc = "Edge triggered"]
     #[inline(always)]
-    pub fn edge(self) -> &'a mut W {
+    pub fn edge(self) -> &'a mut crate::W<REG> {
         self.variant(DMA_15_A::EDGE)
     }
 }
@@ -916,122 +932,150 @@ impl R {
         DMA_15_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GICD_ICFGR28")
+            .field("dma_0", &format_args!("{}", self.dma_0().bit()))
+            .field("dma_1", &format_args!("{}", self.dma_1().bit()))
+            .field("dma_2", &format_args!("{}", self.dma_2().bit()))
+            .field("dma_3", &format_args!("{}", self.dma_3().bit()))
+            .field("dma_4", &format_args!("{}", self.dma_4().bit()))
+            .field("dma_5", &format_args!("{}", self.dma_5().bit()))
+            .field("dma_6", &format_args!("{}", self.dma_6().bit()))
+            .field("dma_7_8", &format_args!("{}", self.dma_7_8().bit()))
+            .field("dma_9_10", &format_args!("{}", self.dma_9_10().bit()))
+            .field("dma_11", &format_args!("{}", self.dma_11().bit()))
+            .field("dma_12", &format_args!("{}", self.dma_12().bit()))
+            .field("dma_13", &format_args!("{}", self.dma_13().bit()))
+            .field("dma_14", &format_args!("{}", self.dma_14().bit()))
+            .field("aux", &format_args!("{}", self.aux().bit()))
+            .field("arm", &format_args!("{}", self.arm().bit()))
+            .field("dma_15", &format_args!("{}", self.dma_15().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR28_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - DMA 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_0(&mut self) -> DMA_0_W<1> {
+    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ICFGR28_SPEC, 1> {
         DMA_0_W::new(self)
     }
     #[doc = "Bit 3 - DMA 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_1(&mut self) -> DMA_1_W<3> {
+    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ICFGR28_SPEC, 3> {
         DMA_1_W::new(self)
     }
     #[doc = "Bit 5 - DMA 2"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_2(&mut self) -> DMA_2_W<5> {
+    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ICFGR28_SPEC, 5> {
         DMA_2_W::new(self)
     }
     #[doc = "Bit 7 - DMA 3"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_3(&mut self) -> DMA_3_W<7> {
+    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ICFGR28_SPEC, 7> {
         DMA_3_W::new(self)
     }
     #[doc = "Bit 9 - DMA 4"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_4(&mut self) -> DMA_4_W<9> {
+    pub fn dma_4(&mut self) -> DMA_4_W<GICD_ICFGR28_SPEC, 9> {
         DMA_4_W::new(self)
     }
     #[doc = "Bit 11 - DMA 5"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_5(&mut self) -> DMA_5_W<11> {
+    pub fn dma_5(&mut self) -> DMA_5_W<GICD_ICFGR28_SPEC, 11> {
         DMA_5_W::new(self)
     }
     #[doc = "Bit 13 - DMA 6"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_6(&mut self) -> DMA_6_W<13> {
+    pub fn dma_6(&mut self) -> DMA_6_W<GICD_ICFGR28_SPEC, 13> {
         DMA_6_W::new(self)
     }
     #[doc = "Bit 15 - OR of DMA 7 and 8"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_7_8(&mut self) -> DMA_7_8_W<15> {
+    pub fn dma_7_8(&mut self) -> DMA_7_8_W<GICD_ICFGR28_SPEC, 15> {
         DMA_7_8_W::new(self)
     }
     #[doc = "Bit 17 - OR of DMA 9 and 10"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_9_10(&mut self) -> DMA_9_10_W<17> {
+    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_ICFGR28_SPEC, 17> {
         DMA_9_10_W::new(self)
     }
     #[doc = "Bit 19 - DMA 11"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_11(&mut self) -> DMA_11_W<19> {
+    pub fn dma_11(&mut self) -> DMA_11_W<GICD_ICFGR28_SPEC, 19> {
         DMA_11_W::new(self)
     }
     #[doc = "Bit 21 - DMA 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_12(&mut self) -> DMA_12_W<21> {
+    pub fn dma_12(&mut self) -> DMA_12_W<GICD_ICFGR28_SPEC, 21> {
         DMA_12_W::new(self)
     }
     #[doc = "Bit 23 - DMA 13"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_13(&mut self) -> DMA_13_W<23> {
+    pub fn dma_13(&mut self) -> DMA_13_W<GICD_ICFGR28_SPEC, 23> {
         DMA_13_W::new(self)
     }
     #[doc = "Bit 25 - DMA 14"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_14(&mut self) -> DMA_14_W<25> {
+    pub fn dma_14(&mut self) -> DMA_14_W<GICD_ICFGR28_SPEC, 25> {
         DMA_14_W::new(self)
     }
     #[doc = "Bit 27 - OR of UART1, SPI1 and SPI2"]
     #[inline(always)]
     #[must_use]
-    pub fn aux(&mut self) -> AUX_W<27> {
+    pub fn aux(&mut self) -> AUX_W<GICD_ICFGR28_SPEC, 27> {
         AUX_W::new(self)
     }
     #[doc = "Bit 29 - ARM"]
     #[inline(always)]
     #[must_use]
-    pub fn arm(&mut self) -> ARM_W<29> {
+    pub fn arm(&mut self) -> ARM_W<GICD_ICFGR28_SPEC, 29> {
         ARM_W::new(self)
     }
     #[doc = "Bit 31 - DMA 15"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_15(&mut self) -> DMA_15_W<31> {
+    pub fn dma_15(&mut self) -> DMA_15_W<GICD_ICFGR28_SPEC, 31> {
         DMA_15_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Interrupt Configuration 112 - 127\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gicd_icfgr28](index.html) module"]
+#[doc = "Interrupt Configuration 112 - 127\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icfgr28::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icfgr28::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GICD_ICFGR28_SPEC;
 impl crate::RegisterSpec for GICD_ICFGR28_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gicd_icfgr28::R](R) reader structure"]
-impl crate::Readable for GICD_ICFGR28_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gicd_icfgr28::W](W) writer structure"]
+#[doc = "`read()` method returns [`gicd_icfgr28::R`](R) reader structure"]
+impl crate::Readable for GICD_ICFGR28_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gicd_icfgr28::W`](W) writer structure"]
 impl crate::Writable for GICD_ICFGR28_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
