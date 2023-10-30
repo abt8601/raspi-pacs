@@ -35,6 +35,7 @@ save that those in the former has the missing tags required by `svd2rust`.)
 - Rust toolchain with `cargo` and `rustfmt`
 - [`svd2rust`](https://crates.io/crates/svd2rust)
 - [`form`](https://crates.io/crates/form)
+  (≥ 0.11 is required for the generated crates to be compilable on Windows.)
 
 Also, the submodule `peripherals` must be checked out.
 
