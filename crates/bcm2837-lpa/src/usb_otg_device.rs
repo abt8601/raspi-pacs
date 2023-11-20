@@ -36,76 +36,76 @@ pub struct RegisterBlock {
     #[doc = "0x80 - OTG_HS device each OUT endpoint-1 interrupt register"]
     pub doepeachmsk1: DOEPEACHMSK1,
     _reserved15: [u8; 0x7c],
-    #[doc = "0x100..0x11c - IN Endpoint %s"]
+    #[doc = "0x100..0x11c - IN Endpoint 0"]
     pub in_endpoint0: IN_ENDPOINT,
     _reserved16: [u8; 0x04],
-    #[doc = "0x120..0x13c - IN Endpoint %s"]
+    #[doc = "0x120..0x13c - IN Endpoint 1"]
     pub in_endpoint1: IN_ENDPOINT,
     _reserved17: [u8; 0x04],
-    #[doc = "0x140..0x15c - IN Endpoint %s"]
+    #[doc = "0x140..0x15c - IN Endpoint 2"]
     pub in_endpoint2: IN_ENDPOINT,
     _reserved18: [u8; 0x04],
-    #[doc = "0x160..0x17c - IN Endpoint %s"]
+    #[doc = "0x160..0x17c - IN Endpoint 3"]
     pub in_endpoint3: IN_ENDPOINT,
     _reserved19: [u8; 0x04],
-    #[doc = "0x180..0x19c - IN Endpoint %s"]
+    #[doc = "0x180..0x19c - IN Endpoint 4"]
     pub in_endpoint4: IN_ENDPOINT,
     _reserved20: [u8; 0x04],
-    #[doc = "0x1a0..0x1bc - IN Endpoint %s"]
+    #[doc = "0x1a0..0x1bc - IN Endpoint 5"]
     pub in_endpoint5: IN_ENDPOINT,
     _reserved21: [u8; 0x04],
-    #[doc = "0x1c0..0x1dc - IN Endpoint %s"]
+    #[doc = "0x1c0..0x1dc - IN Endpoint 6"]
     pub in_endpoint6: IN_ENDPOINT,
     _reserved22: [u8; 0x04],
-    #[doc = "0x1e0..0x1fc - IN Endpoint %s"]
+    #[doc = "0x1e0..0x1fc - IN Endpoint 7"]
     pub in_endpoint7: IN_ENDPOINT,
     _reserved23: [u8; 0x04],
-    #[doc = "0x200..0x21c - IN Endpoint %s"]
+    #[doc = "0x200..0x21c - IN Endpoint 8"]
     pub in_endpoint8: IN_ENDPOINT,
     _reserved24: [u8; 0x04],
-    #[doc = "0x220..0x23c - IN Endpoint %s"]
+    #[doc = "0x220..0x23c - IN Endpoint 9"]
     pub in_endpoint9: IN_ENDPOINT,
     _reserved25: [u8; 0x04],
-    #[doc = "0x240..0x25c - IN Endpoint %s"]
+    #[doc = "0x240..0x25c - IN Endpoint 10"]
     pub in_endpoint10: IN_ENDPOINT,
     _reserved26: [u8; 0x04],
-    #[doc = "0x260..0x27c - IN Endpoint %s"]
+    #[doc = "0x260..0x27c - IN Endpoint 11"]
     pub in_endpoint11: IN_ENDPOINT,
     _reserved27: [u8; 0x84],
-    #[doc = "0x300..0x318 - OUT Endpoint %s"]
+    #[doc = "0x300..0x318 - OUT Endpoint 0"]
     pub out_endpoint0: OUT_ENDPOINT,
     _reserved28: [u8; 0x08],
-    #[doc = "0x320..0x338 - OUT Endpoint %s"]
+    #[doc = "0x320..0x338 - OUT Endpoint 1"]
     pub out_endpoint1: OUT_ENDPOINT,
     _reserved29: [u8; 0x08],
-    #[doc = "0x340..0x358 - OUT Endpoint %s"]
+    #[doc = "0x340..0x358 - OUT Endpoint 2"]
     pub out_endpoint2: OUT_ENDPOINT,
     _reserved30: [u8; 0x08],
-    #[doc = "0x360..0x378 - OUT Endpoint %s"]
+    #[doc = "0x360..0x378 - OUT Endpoint 3"]
     pub out_endpoint3: OUT_ENDPOINT,
     _reserved31: [u8; 0x08],
-    #[doc = "0x380..0x398 - OUT Endpoint %s"]
+    #[doc = "0x380..0x398 - OUT Endpoint 4"]
     pub out_endpoint4: OUT_ENDPOINT,
     _reserved32: [u8; 0x08],
-    #[doc = "0x3a0..0x3b8 - OUT Endpoint %s"]
+    #[doc = "0x3a0..0x3b8 - OUT Endpoint 5"]
     pub out_endpoint5: OUT_ENDPOINT,
     _reserved33: [u8; 0x08],
-    #[doc = "0x3c0..0x3d8 - OUT Endpoint %s"]
+    #[doc = "0x3c0..0x3d8 - OUT Endpoint 6"]
     pub out_endpoint6: OUT_ENDPOINT,
     _reserved34: [u8; 0x08],
-    #[doc = "0x3e0..0x3f8 - OUT Endpoint %s"]
+    #[doc = "0x3e0..0x3f8 - OUT Endpoint 7"]
     pub out_endpoint7: OUT_ENDPOINT,
     _reserved35: [u8; 0x08],
-    #[doc = "0x400..0x418 - OUT Endpoint %s"]
+    #[doc = "0x400..0x418 - OUT Endpoint 8"]
     pub out_endpoint8: OUT_ENDPOINT,
     _reserved36: [u8; 0x08],
-    #[doc = "0x420..0x438 - OUT Endpoint %s"]
+    #[doc = "0x420..0x438 - OUT Endpoint 9"]
     pub out_endpoint9: OUT_ENDPOINT,
     _reserved37: [u8; 0x08],
-    #[doc = "0x440..0x458 - OUT Endpoint %s"]
+    #[doc = "0x440..0x458 - OUT Endpoint 10"]
     pub out_endpoint10: OUT_ENDPOINT,
     _reserved38: [u8; 0x08],
-    #[doc = "0x460..0x478 - OUT Endpoint %s"]
+    #[doc = "0x460..0x478 - OUT Endpoint 11"]
     pub out_endpoint11: OUT_ENDPOINT,
 }
 #[doc = "DCFG (rw) register accessor: OTG_HS device configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dcfg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dcfg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dcfg`]
