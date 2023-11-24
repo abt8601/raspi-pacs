@@ -39,8 +39,8 @@ impl SELECT_R {
     }
 }
 #[doc = "Field `SELECT` writer - "]
-pub type SELECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SELECT_A>;
-impl<'a, REG, const O: u8> SELECT_W<'a, REG, O>
+pub type SELECT_W<'a, REG> = crate::BitWriter<'a, REG, SELECT_A>;
+impl<'a, REG> SELECT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -71,15 +71,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DBG_SEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn select(&mut self) -> SELECT_W<DBG_SEL_SPEC, 0> {
-        SELECT_W::new(self)
+    pub fn select(&mut self) -> SELECT_W<DBG_SEL_SPEC> {
+        SELECT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

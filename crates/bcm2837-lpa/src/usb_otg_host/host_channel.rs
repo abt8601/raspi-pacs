@@ -2,18 +2,44 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct HOST_CHANNEL {
+    hcchar: HCCHAR,
+    hcsplt: HCSPLT,
+    hcint: HCINT,
+    hcintmsk: HCINTMSK,
+    hctsiz: HCTSIZ,
+    hcdma: HCDMA,
+}
+impl HOST_CHANNEL {
     #[doc = "0x00 - Characteristics register"]
-    pub hcchar: HCCHAR,
+    #[inline(always)]
+    pub const fn hcchar(&self) -> &HCCHAR {
+        &self.hcchar
+    }
     #[doc = "0x04 - Split control register"]
-    pub hcsplt: HCSPLT,
+    #[inline(always)]
+    pub const fn hcsplt(&self) -> &HCSPLT {
+        &self.hcsplt
+    }
     #[doc = "0x08 - Interrupt register"]
-    pub hcint: HCINT,
+    #[inline(always)]
+    pub const fn hcint(&self) -> &HCINT {
+        &self.hcint
+    }
     #[doc = "0x0c - Interrupt mask"]
-    pub hcintmsk: HCINTMSK,
+    #[inline(always)]
+    pub const fn hcintmsk(&self) -> &HCINTMSK {
+        &self.hcintmsk
+    }
     #[doc = "0x10 - Transfer size"]
-    pub hctsiz: HCTSIZ,
+    #[inline(always)]
+    pub const fn hctsiz(&self) -> &HCTSIZ {
+        &self.hctsiz
+    }
     #[doc = "0x14 - DMA address"]
-    pub hcdma: HCDMA,
+    #[inline(always)]
+    pub const fn hcdma(&self) -> &HCDMA {
+        &self.hcdma
+    }
 }
 #[doc = "HCCHAR (rw) register accessor: Characteristics register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcchar::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcchar::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hcchar`]
 module"]

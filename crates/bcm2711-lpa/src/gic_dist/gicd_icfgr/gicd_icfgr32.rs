@@ -39,8 +39,8 @@ impl HDMI_CEC_R {
     }
 }
 #[doc = "Field `HDMI_CEC` writer - HDMI CEC"]
-pub type HDMI_CEC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDMI_CEC_A>;
-impl<'a, REG, const O: u8> HDMI_CEC_W<'a, REG, O>
+pub type HDMI_CEC_W<'a, REG> = crate::BitWriter<'a, REG, HDMI_CEC_A>;
+impl<'a, REG> HDMI_CEC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl HVS_R {
     }
 }
 #[doc = "Field `HVS` writer - HVS"]
-pub type HVS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HVS_A>;
-impl<'a, REG, const O: u8> HVS_W<'a, REG, O>
+pub type HVS_W<'a, REG> = crate::BitWriter<'a, REG, HVS_A>;
+impl<'a, REG> HVS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl RPIVID_R {
     }
 }
 #[doc = "Field `RPIVID` writer - RPIVID"]
-pub type RPIVID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RPIVID_A>;
-impl<'a, REG, const O: u8> RPIVID_W<'a, REG, O>
+pub type RPIVID_W<'a, REG> = crate::BitWriter<'a, REG, RPIVID_A>;
+impl<'a, REG> RPIVID_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl SDC_R {
     }
 }
 #[doc = "Field `SDC` writer - SDC"]
-pub type SDC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SDC_A>;
-impl<'a, REG, const O: u8> SDC_W<'a, REG, O>
+pub type SDC_W<'a, REG> = crate::BitWriter<'a, REG, SDC_A>;
+impl<'a, REG> SDC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -251,8 +251,8 @@ impl DSI_0_R {
     }
 }
 #[doc = "Field `DSI_0` writer - DSI 0"]
-pub type DSI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DSI_0_A>;
-impl<'a, REG, const O: u8> DSI_0_W<'a, REG, O>
+pub type DSI_0_W<'a, REG> = crate::BitWriter<'a, REG, DSI_0_A>;
+impl<'a, REG> DSI_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -304,8 +304,8 @@ impl PIXEL_VALVE_2_R {
     }
 }
 #[doc = "Field `PIXEL_VALVE_2` writer - Pixel Valve 2"]
-pub type PIXEL_VALVE_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_2_A>;
-impl<'a, REG, const O: u8> PIXEL_VALVE_2_W<'a, REG, O>
+pub type PIXEL_VALVE_2_W<'a, REG> = crate::BitWriter<'a, REG, PIXEL_VALVE_2_A>;
+impl<'a, REG> PIXEL_VALVE_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -357,8 +357,8 @@ impl CAMERA_0_R {
     }
 }
 #[doc = "Field `CAMERA_0` writer - Camera 0"]
-pub type CAMERA_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CAMERA_0_A>;
-impl<'a, REG, const O: u8> CAMERA_0_W<'a, REG, O>
+pub type CAMERA_0_W<'a, REG> = crate::BitWriter<'a, REG, CAMERA_0_A>;
+impl<'a, REG> CAMERA_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -410,8 +410,8 @@ impl CAMERA_1_R {
     }
 }
 #[doc = "Field `CAMERA_1` writer - Camera 1"]
-pub type CAMERA_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CAMERA_1_A>;
-impl<'a, REG, const O: u8> CAMERA_1_W<'a, REG, O>
+pub type CAMERA_1_W<'a, REG> = crate::BitWriter<'a, REG, CAMERA_1_A>;
+impl<'a, REG> CAMERA_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -463,8 +463,8 @@ impl HDMI_0_R {
     }
 }
 #[doc = "Field `HDMI_0` writer - HDMI 0"]
-pub type HDMI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDMI_0_A>;
-impl<'a, REG, const O: u8> HDMI_0_W<'a, REG, O>
+pub type HDMI_0_W<'a, REG> = crate::BitWriter<'a, REG, HDMI_0_A>;
+impl<'a, REG> HDMI_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -516,8 +516,8 @@ impl HDMI_1_R {
     }
 }
 #[doc = "Field `HDMI_1` writer - HDMI 1"]
-pub type HDMI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDMI_1_A>;
-impl<'a, REG, const O: u8> HDMI_1_W<'a, REG, O>
+pub type HDMI_1_W<'a, REG> = crate::BitWriter<'a, REG, HDMI_1_A>;
+impl<'a, REG> HDMI_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -569,8 +569,8 @@ impl PIXEL_VALVE_3_R {
     }
 }
 #[doc = "Field `PIXEL_VALVE_3` writer - Pixel Valve 3"]
-pub type PIXEL_VALVE_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_3_A>;
-impl<'a, REG, const O: u8> PIXEL_VALVE_3_W<'a, REG, O>
+pub type PIXEL_VALVE_3_W<'a, REG> = crate::BitWriter<'a, REG, PIXEL_VALVE_3_A>;
+impl<'a, REG> PIXEL_VALVE_3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -622,8 +622,8 @@ impl SPI_BSC_SLAVE_R {
     }
 }
 #[doc = "Field `SPI_BSC_SLAVE` writer - SPI/BSC Slave"]
-pub type SPI_BSC_SLAVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SPI_BSC_SLAVE_A>;
-impl<'a, REG, const O: u8> SPI_BSC_SLAVE_W<'a, REG, O>
+pub type SPI_BSC_SLAVE_W<'a, REG> = crate::BitWriter<'a, REG, SPI_BSC_SLAVE_A>;
+impl<'a, REG> SPI_BSC_SLAVE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -675,8 +675,8 @@ impl DSI_1_R {
     }
 }
 #[doc = "Field `DSI_1` writer - DSI 1"]
-pub type DSI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DSI_1_A>;
-impl<'a, REG, const O: u8> DSI_1_W<'a, REG, O>
+pub type DSI_1_W<'a, REG> = crate::BitWriter<'a, REG, DSI_1_A>;
+impl<'a, REG> DSI_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -728,8 +728,8 @@ impl PIXEL_VALVE_0_R {
     }
 }
 #[doc = "Field `PIXEL_VALVE_0` writer - Pixel Valve 0"]
-pub type PIXEL_VALVE_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_0_A>;
-impl<'a, REG, const O: u8> PIXEL_VALVE_0_W<'a, REG, O>
+pub type PIXEL_VALVE_0_W<'a, REG> = crate::BitWriter<'a, REG, PIXEL_VALVE_0_A>;
+impl<'a, REG> PIXEL_VALVE_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -781,8 +781,8 @@ impl PIXEL_VALVE_1_2_R {
     }
 }
 #[doc = "Field `PIXEL_VALVE_1_2` writer - OR of Pixel Valve 1 and 2"]
-pub type PIXEL_VALVE_1_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PIXEL_VALVE_1_2_A>;
-impl<'a, REG, const O: u8> PIXEL_VALVE_1_2_W<'a, REG, O>
+pub type PIXEL_VALVE_1_2_W<'a, REG> = crate::BitWriter<'a, REG, PIXEL_VALVE_1_2_A>;
+impl<'a, REG> PIXEL_VALVE_1_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -834,8 +834,8 @@ impl CPR_R {
     }
 }
 #[doc = "Field `CPR` writer - CPR"]
-pub type CPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CPR_A>;
-impl<'a, REG, const O: u8> CPR_W<'a, REG, O>
+pub type CPR_W<'a, REG> = crate::BitWriter<'a, REG, CPR_A>;
+impl<'a, REG> CPR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -971,105 +971,105 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR32_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - HDMI CEC"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_ICFGR32_SPEC, 1> {
-        HDMI_CEC_W::new(self)
+    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_ICFGR32_SPEC> {
+        HDMI_CEC_W::new(self, 1)
     }
     #[doc = "Bit 3 - HVS"]
     #[inline(always)]
     #[must_use]
-    pub fn hvs(&mut self) -> HVS_W<GICD_ICFGR32_SPEC, 3> {
-        HVS_W::new(self)
+    pub fn hvs(&mut self) -> HVS_W<GICD_ICFGR32_SPEC> {
+        HVS_W::new(self, 3)
     }
     #[doc = "Bit 5 - RPIVID"]
     #[inline(always)]
     #[must_use]
-    pub fn rpivid(&mut self) -> RPIVID_W<GICD_ICFGR32_SPEC, 5> {
-        RPIVID_W::new(self)
+    pub fn rpivid(&mut self) -> RPIVID_W<GICD_ICFGR32_SPEC> {
+        RPIVID_W::new(self, 5)
     }
     #[doc = "Bit 7 - SDC"]
     #[inline(always)]
     #[must_use]
-    pub fn sdc(&mut self) -> SDC_W<GICD_ICFGR32_SPEC, 7> {
-        SDC_W::new(self)
+    pub fn sdc(&mut self) -> SDC_W<GICD_ICFGR32_SPEC> {
+        SDC_W::new(self, 7)
     }
     #[doc = "Bit 9 - DSI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_0(&mut self) -> DSI_0_W<GICD_ICFGR32_SPEC, 9> {
-        DSI_0_W::new(self)
+    pub fn dsi_0(&mut self) -> DSI_0_W<GICD_ICFGR32_SPEC> {
+        DSI_0_W::new(self, 9)
     }
     #[doc = "Bit 11 - Pixel Valve 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_2(&mut self) -> PIXEL_VALVE_2_W<GICD_ICFGR32_SPEC, 11> {
-        PIXEL_VALVE_2_W::new(self)
+    pub fn pixel_valve_2(&mut self) -> PIXEL_VALVE_2_W<GICD_ICFGR32_SPEC> {
+        PIXEL_VALVE_2_W::new(self, 11)
     }
     #[doc = "Bit 13 - Camera 0"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_0(&mut self) -> CAMERA_0_W<GICD_ICFGR32_SPEC, 13> {
-        CAMERA_0_W::new(self)
+    pub fn camera_0(&mut self) -> CAMERA_0_W<GICD_ICFGR32_SPEC> {
+        CAMERA_0_W::new(self, 13)
     }
     #[doc = "Bit 15 - Camera 1"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_1(&mut self) -> CAMERA_1_W<GICD_ICFGR32_SPEC, 15> {
-        CAMERA_1_W::new(self)
+    pub fn camera_1(&mut self) -> CAMERA_1_W<GICD_ICFGR32_SPEC> {
+        CAMERA_1_W::new(self, 15)
     }
     #[doc = "Bit 17 - HDMI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_ICFGR32_SPEC, 17> {
-        HDMI_0_W::new(self)
+    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_ICFGR32_SPEC> {
+        HDMI_0_W::new(self, 17)
     }
     #[doc = "Bit 19 - HDMI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_ICFGR32_SPEC, 19> {
-        HDMI_1_W::new(self)
+    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_ICFGR32_SPEC> {
+        HDMI_1_W::new(self, 19)
     }
     #[doc = "Bit 21 - Pixel Valve 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_ICFGR32_SPEC, 21> {
-        PIXEL_VALVE_3_W::new(self)
+    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_ICFGR32_SPEC> {
+        PIXEL_VALVE_3_W::new(self, 21)
     }
     #[doc = "Bit 23 - SPI/BSC Slave"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_ICFGR32_SPEC, 23> {
-        SPI_BSC_SLAVE_W::new(self)
+    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_ICFGR32_SPEC> {
+        SPI_BSC_SLAVE_W::new(self, 23)
     }
     #[doc = "Bit 25 - DSI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_ICFGR32_SPEC, 25> {
-        DSI_1_W::new(self)
+    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_ICFGR32_SPEC> {
+        DSI_1_W::new(self, 25)
     }
     #[doc = "Bit 27 - Pixel Valve 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_ICFGR32_SPEC, 27> {
-        PIXEL_VALVE_0_W::new(self)
+    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_ICFGR32_SPEC> {
+        PIXEL_VALVE_0_W::new(self, 27)
     }
     #[doc = "Bit 29 - OR of Pixel Valve 1 and 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_ICFGR32_SPEC, 29> {
-        PIXEL_VALVE_1_2_W::new(self)
+    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_ICFGR32_SPEC> {
+        PIXEL_VALVE_1_2_W::new(self, 29)
     }
     #[doc = "Bit 31 - CPR"]
     #[inline(always)]
     #[must_use]
-    pub fn cpr(&mut self) -> CPR_W<GICD_ICFGR32_SPEC, 31> {
-        CPR_W::new(self)
+    pub fn cpr(&mut self) -> CPR_W<GICD_ICFGR32_SPEC> {
+        CPR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

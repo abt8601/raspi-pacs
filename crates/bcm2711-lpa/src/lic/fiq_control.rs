@@ -604,8 +604,8 @@ impl SOURCE_R {
     }
 }
 #[doc = "Field `SOURCE` writer - FIQ Source"]
-pub type SOURCE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O, SOURCE_A>;
-impl<'a, REG, const O: u8> SOURCE_W<'a, REG, O>
+pub type SOURCE_W<'a, REG> = crate::FieldWriter<'a, REG, 7, SOURCE_A>;
+impl<'a, REG> SOURCE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -974,7 +974,7 @@ where
 #[doc = "Field `ENABLE` reader - FIQ Enable"]
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - FIQ Enable"]
-pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - FIQ Source"]
     #[inline(always)]
@@ -997,21 +997,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<FIQ_CONTROL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - FIQ Source"]
     #[inline(always)]
     #[must_use]
-    pub fn source(&mut self) -> SOURCE_W<FIQ_CONTROL_SPEC, 0> {
-        SOURCE_W::new(self)
+    pub fn source(&mut self) -> SOURCE_W<FIQ_CONTROL_SPEC> {
+        SOURCE_W::new(self, 0)
     }
     #[doc = "Bit 7 - FIQ Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<FIQ_CONTROL_SPEC, 7> {
-        ENABLE_W::new(self)
+    pub fn enable(&mut self) -> ENABLE_W<FIQ_CONTROL_SPEC> {
+        ENABLE_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

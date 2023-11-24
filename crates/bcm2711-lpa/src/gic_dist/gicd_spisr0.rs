@@ -5,131 +5,131 @@ pub type W = crate::W<GICD_SPISR0_SPEC>;
 #[doc = "Field `SPI32` reader - Shared interrupt 32"]
 pub type SPI32_R = crate::BitReader;
 #[doc = "Field `SPI32` writer - Shared interrupt 32"]
-pub type SPI32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI33` reader - Shared interrupt 33"]
 pub type SPI33_R = crate::BitReader;
 #[doc = "Field `SPI33` writer - Shared interrupt 33"]
-pub type SPI33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI34` reader - Shared interrupt 34"]
 pub type SPI34_R = crate::BitReader;
 #[doc = "Field `SPI34` writer - Shared interrupt 34"]
-pub type SPI34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI35` reader - Shared interrupt 35"]
 pub type SPI35_R = crate::BitReader;
 #[doc = "Field `SPI35` writer - Shared interrupt 35"]
-pub type SPI35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI36` reader - Shared interrupt 36"]
 pub type SPI36_R = crate::BitReader;
 #[doc = "Field `SPI36` writer - Shared interrupt 36"]
-pub type SPI36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI37` reader - Shared interrupt 37"]
 pub type SPI37_R = crate::BitReader;
 #[doc = "Field `SPI37` writer - Shared interrupt 37"]
-pub type SPI37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI38` reader - Shared interrupt 38"]
 pub type SPI38_R = crate::BitReader;
 #[doc = "Field `SPI38` writer - Shared interrupt 38"]
-pub type SPI38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI39` reader - Shared interrupt 39"]
 pub type SPI39_R = crate::BitReader;
 #[doc = "Field `SPI39` writer - Shared interrupt 39"]
-pub type SPI39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI40` reader - Shared interrupt 40"]
 pub type SPI40_R = crate::BitReader;
 #[doc = "Field `SPI40` writer - Shared interrupt 40"]
-pub type SPI40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI41` reader - Shared interrupt 41"]
 pub type SPI41_R = crate::BitReader;
 #[doc = "Field `SPI41` writer - Shared interrupt 41"]
-pub type SPI41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI42` reader - Shared interrupt 42"]
 pub type SPI42_R = crate::BitReader;
 #[doc = "Field `SPI42` writer - Shared interrupt 42"]
-pub type SPI42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI43` reader - Shared interrupt 43"]
 pub type SPI43_R = crate::BitReader;
 #[doc = "Field `SPI43` writer - Shared interrupt 43"]
-pub type SPI43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI44` reader - Shared interrupt 44"]
 pub type SPI44_R = crate::BitReader;
 #[doc = "Field `SPI44` writer - Shared interrupt 44"]
-pub type SPI44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI45` reader - Shared interrupt 45"]
 pub type SPI45_R = crate::BitReader;
 #[doc = "Field `SPI45` writer - Shared interrupt 45"]
-pub type SPI45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI46` reader - Shared interrupt 46"]
 pub type SPI46_R = crate::BitReader;
 #[doc = "Field `SPI46` writer - Shared interrupt 46"]
-pub type SPI46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI47` reader - Shared interrupt 47"]
 pub type SPI47_R = crate::BitReader;
 #[doc = "Field `SPI47` writer - Shared interrupt 47"]
-pub type SPI47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI48` reader - Shared interrupt 48"]
 pub type SPI48_R = crate::BitReader;
 #[doc = "Field `SPI48` writer - Shared interrupt 48"]
-pub type SPI48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI49` reader - Shared interrupt 49"]
 pub type SPI49_R = crate::BitReader;
 #[doc = "Field `SPI49` writer - Shared interrupt 49"]
-pub type SPI49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI49_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI50` reader - Shared interrupt 50"]
 pub type SPI50_R = crate::BitReader;
 #[doc = "Field `SPI50` writer - Shared interrupt 50"]
-pub type SPI50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI51` reader - Shared interrupt 51"]
 pub type SPI51_R = crate::BitReader;
 #[doc = "Field `SPI51` writer - Shared interrupt 51"]
-pub type SPI51_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI51_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI52` reader - Shared interrupt 52"]
 pub type SPI52_R = crate::BitReader;
 #[doc = "Field `SPI52` writer - Shared interrupt 52"]
-pub type SPI52_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI52_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI53` reader - Shared interrupt 53"]
 pub type SPI53_R = crate::BitReader;
 #[doc = "Field `SPI53` writer - Shared interrupt 53"]
-pub type SPI53_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI53_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI54` reader - Shared interrupt 54"]
 pub type SPI54_R = crate::BitReader;
 #[doc = "Field `SPI54` writer - Shared interrupt 54"]
-pub type SPI54_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI54_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI55` reader - Shared interrupt 55"]
 pub type SPI55_R = crate::BitReader;
 #[doc = "Field `SPI55` writer - Shared interrupt 55"]
-pub type SPI55_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI55_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI56` reader - Shared interrupt 56"]
 pub type SPI56_R = crate::BitReader;
 #[doc = "Field `SPI56` writer - Shared interrupt 56"]
-pub type SPI56_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI56_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI57` reader - Shared interrupt 57"]
 pub type SPI57_R = crate::BitReader;
 #[doc = "Field `SPI57` writer - Shared interrupt 57"]
-pub type SPI57_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI57_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI58` reader - Shared interrupt 58"]
 pub type SPI58_R = crate::BitReader;
 #[doc = "Field `SPI58` writer - Shared interrupt 58"]
-pub type SPI58_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI58_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI59` reader - Shared interrupt 59"]
 pub type SPI59_R = crate::BitReader;
 #[doc = "Field `SPI59` writer - Shared interrupt 59"]
-pub type SPI59_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI59_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI60` reader - Shared interrupt 60"]
 pub type SPI60_R = crate::BitReader;
 #[doc = "Field `SPI60` writer - Shared interrupt 60"]
-pub type SPI60_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI60_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI61` reader - Shared interrupt 61"]
 pub type SPI61_R = crate::BitReader;
 #[doc = "Field `SPI61` writer - Shared interrupt 61"]
-pub type SPI61_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI61_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI62` reader - Shared interrupt 62"]
 pub type SPI62_R = crate::BitReader;
 #[doc = "Field `SPI62` writer - Shared interrupt 62"]
-pub type SPI62_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI62_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI63` reader - Shared interrupt 63"]
 pub type SPI63_R = crate::BitReader;
 #[doc = "Field `SPI63` writer - Shared interrupt 63"]
-pub type SPI63_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI63_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Shared interrupt 32"]
     #[inline(always)]
@@ -332,201 +332,201 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_SPISR0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Shared interrupt 32"]
     #[inline(always)]
     #[must_use]
-    pub fn spi32(&mut self) -> SPI32_W<GICD_SPISR0_SPEC, 0> {
-        SPI32_W::new(self)
+    pub fn spi32(&mut self) -> SPI32_W<GICD_SPISR0_SPEC> {
+        SPI32_W::new(self, 0)
     }
     #[doc = "Bit 1 - Shared interrupt 33"]
     #[inline(always)]
     #[must_use]
-    pub fn spi33(&mut self) -> SPI33_W<GICD_SPISR0_SPEC, 1> {
-        SPI33_W::new(self)
+    pub fn spi33(&mut self) -> SPI33_W<GICD_SPISR0_SPEC> {
+        SPI33_W::new(self, 1)
     }
     #[doc = "Bit 2 - Shared interrupt 34"]
     #[inline(always)]
     #[must_use]
-    pub fn spi34(&mut self) -> SPI34_W<GICD_SPISR0_SPEC, 2> {
-        SPI34_W::new(self)
+    pub fn spi34(&mut self) -> SPI34_W<GICD_SPISR0_SPEC> {
+        SPI34_W::new(self, 2)
     }
     #[doc = "Bit 3 - Shared interrupt 35"]
     #[inline(always)]
     #[must_use]
-    pub fn spi35(&mut self) -> SPI35_W<GICD_SPISR0_SPEC, 3> {
-        SPI35_W::new(self)
+    pub fn spi35(&mut self) -> SPI35_W<GICD_SPISR0_SPEC> {
+        SPI35_W::new(self, 3)
     }
     #[doc = "Bit 4 - Shared interrupt 36"]
     #[inline(always)]
     #[must_use]
-    pub fn spi36(&mut self) -> SPI36_W<GICD_SPISR0_SPEC, 4> {
-        SPI36_W::new(self)
+    pub fn spi36(&mut self) -> SPI36_W<GICD_SPISR0_SPEC> {
+        SPI36_W::new(self, 4)
     }
     #[doc = "Bit 5 - Shared interrupt 37"]
     #[inline(always)]
     #[must_use]
-    pub fn spi37(&mut self) -> SPI37_W<GICD_SPISR0_SPEC, 5> {
-        SPI37_W::new(self)
+    pub fn spi37(&mut self) -> SPI37_W<GICD_SPISR0_SPEC> {
+        SPI37_W::new(self, 5)
     }
     #[doc = "Bit 6 - Shared interrupt 38"]
     #[inline(always)]
     #[must_use]
-    pub fn spi38(&mut self) -> SPI38_W<GICD_SPISR0_SPEC, 6> {
-        SPI38_W::new(self)
+    pub fn spi38(&mut self) -> SPI38_W<GICD_SPISR0_SPEC> {
+        SPI38_W::new(self, 6)
     }
     #[doc = "Bit 7 - Shared interrupt 39"]
     #[inline(always)]
     #[must_use]
-    pub fn spi39(&mut self) -> SPI39_W<GICD_SPISR0_SPEC, 7> {
-        SPI39_W::new(self)
+    pub fn spi39(&mut self) -> SPI39_W<GICD_SPISR0_SPEC> {
+        SPI39_W::new(self, 7)
     }
     #[doc = "Bit 8 - Shared interrupt 40"]
     #[inline(always)]
     #[must_use]
-    pub fn spi40(&mut self) -> SPI40_W<GICD_SPISR0_SPEC, 8> {
-        SPI40_W::new(self)
+    pub fn spi40(&mut self) -> SPI40_W<GICD_SPISR0_SPEC> {
+        SPI40_W::new(self, 8)
     }
     #[doc = "Bit 9 - Shared interrupt 41"]
     #[inline(always)]
     #[must_use]
-    pub fn spi41(&mut self) -> SPI41_W<GICD_SPISR0_SPEC, 9> {
-        SPI41_W::new(self)
+    pub fn spi41(&mut self) -> SPI41_W<GICD_SPISR0_SPEC> {
+        SPI41_W::new(self, 9)
     }
     #[doc = "Bit 10 - Shared interrupt 42"]
     #[inline(always)]
     #[must_use]
-    pub fn spi42(&mut self) -> SPI42_W<GICD_SPISR0_SPEC, 10> {
-        SPI42_W::new(self)
+    pub fn spi42(&mut self) -> SPI42_W<GICD_SPISR0_SPEC> {
+        SPI42_W::new(self, 10)
     }
     #[doc = "Bit 11 - Shared interrupt 43"]
     #[inline(always)]
     #[must_use]
-    pub fn spi43(&mut self) -> SPI43_W<GICD_SPISR0_SPEC, 11> {
-        SPI43_W::new(self)
+    pub fn spi43(&mut self) -> SPI43_W<GICD_SPISR0_SPEC> {
+        SPI43_W::new(self, 11)
     }
     #[doc = "Bit 12 - Shared interrupt 44"]
     #[inline(always)]
     #[must_use]
-    pub fn spi44(&mut self) -> SPI44_W<GICD_SPISR0_SPEC, 12> {
-        SPI44_W::new(self)
+    pub fn spi44(&mut self) -> SPI44_W<GICD_SPISR0_SPEC> {
+        SPI44_W::new(self, 12)
     }
     #[doc = "Bit 13 - Shared interrupt 45"]
     #[inline(always)]
     #[must_use]
-    pub fn spi45(&mut self) -> SPI45_W<GICD_SPISR0_SPEC, 13> {
-        SPI45_W::new(self)
+    pub fn spi45(&mut self) -> SPI45_W<GICD_SPISR0_SPEC> {
+        SPI45_W::new(self, 13)
     }
     #[doc = "Bit 14 - Shared interrupt 46"]
     #[inline(always)]
     #[must_use]
-    pub fn spi46(&mut self) -> SPI46_W<GICD_SPISR0_SPEC, 14> {
-        SPI46_W::new(self)
+    pub fn spi46(&mut self) -> SPI46_W<GICD_SPISR0_SPEC> {
+        SPI46_W::new(self, 14)
     }
     #[doc = "Bit 15 - Shared interrupt 47"]
     #[inline(always)]
     #[must_use]
-    pub fn spi47(&mut self) -> SPI47_W<GICD_SPISR0_SPEC, 15> {
-        SPI47_W::new(self)
+    pub fn spi47(&mut self) -> SPI47_W<GICD_SPISR0_SPEC> {
+        SPI47_W::new(self, 15)
     }
     #[doc = "Bit 16 - Shared interrupt 48"]
     #[inline(always)]
     #[must_use]
-    pub fn spi48(&mut self) -> SPI48_W<GICD_SPISR0_SPEC, 16> {
-        SPI48_W::new(self)
+    pub fn spi48(&mut self) -> SPI48_W<GICD_SPISR0_SPEC> {
+        SPI48_W::new(self, 16)
     }
     #[doc = "Bit 17 - Shared interrupt 49"]
     #[inline(always)]
     #[must_use]
-    pub fn spi49(&mut self) -> SPI49_W<GICD_SPISR0_SPEC, 17> {
-        SPI49_W::new(self)
+    pub fn spi49(&mut self) -> SPI49_W<GICD_SPISR0_SPEC> {
+        SPI49_W::new(self, 17)
     }
     #[doc = "Bit 18 - Shared interrupt 50"]
     #[inline(always)]
     #[must_use]
-    pub fn spi50(&mut self) -> SPI50_W<GICD_SPISR0_SPEC, 18> {
-        SPI50_W::new(self)
+    pub fn spi50(&mut self) -> SPI50_W<GICD_SPISR0_SPEC> {
+        SPI50_W::new(self, 18)
     }
     #[doc = "Bit 19 - Shared interrupt 51"]
     #[inline(always)]
     #[must_use]
-    pub fn spi51(&mut self) -> SPI51_W<GICD_SPISR0_SPEC, 19> {
-        SPI51_W::new(self)
+    pub fn spi51(&mut self) -> SPI51_W<GICD_SPISR0_SPEC> {
+        SPI51_W::new(self, 19)
     }
     #[doc = "Bit 20 - Shared interrupt 52"]
     #[inline(always)]
     #[must_use]
-    pub fn spi52(&mut self) -> SPI52_W<GICD_SPISR0_SPEC, 20> {
-        SPI52_W::new(self)
+    pub fn spi52(&mut self) -> SPI52_W<GICD_SPISR0_SPEC> {
+        SPI52_W::new(self, 20)
     }
     #[doc = "Bit 21 - Shared interrupt 53"]
     #[inline(always)]
     #[must_use]
-    pub fn spi53(&mut self) -> SPI53_W<GICD_SPISR0_SPEC, 21> {
-        SPI53_W::new(self)
+    pub fn spi53(&mut self) -> SPI53_W<GICD_SPISR0_SPEC> {
+        SPI53_W::new(self, 21)
     }
     #[doc = "Bit 22 - Shared interrupt 54"]
     #[inline(always)]
     #[must_use]
-    pub fn spi54(&mut self) -> SPI54_W<GICD_SPISR0_SPEC, 22> {
-        SPI54_W::new(self)
+    pub fn spi54(&mut self) -> SPI54_W<GICD_SPISR0_SPEC> {
+        SPI54_W::new(self, 22)
     }
     #[doc = "Bit 23 - Shared interrupt 55"]
     #[inline(always)]
     #[must_use]
-    pub fn spi55(&mut self) -> SPI55_W<GICD_SPISR0_SPEC, 23> {
-        SPI55_W::new(self)
+    pub fn spi55(&mut self) -> SPI55_W<GICD_SPISR0_SPEC> {
+        SPI55_W::new(self, 23)
     }
     #[doc = "Bit 24 - Shared interrupt 56"]
     #[inline(always)]
     #[must_use]
-    pub fn spi56(&mut self) -> SPI56_W<GICD_SPISR0_SPEC, 24> {
-        SPI56_W::new(self)
+    pub fn spi56(&mut self) -> SPI56_W<GICD_SPISR0_SPEC> {
+        SPI56_W::new(self, 24)
     }
     #[doc = "Bit 25 - Shared interrupt 57"]
     #[inline(always)]
     #[must_use]
-    pub fn spi57(&mut self) -> SPI57_W<GICD_SPISR0_SPEC, 25> {
-        SPI57_W::new(self)
+    pub fn spi57(&mut self) -> SPI57_W<GICD_SPISR0_SPEC> {
+        SPI57_W::new(self, 25)
     }
     #[doc = "Bit 26 - Shared interrupt 58"]
     #[inline(always)]
     #[must_use]
-    pub fn spi58(&mut self) -> SPI58_W<GICD_SPISR0_SPEC, 26> {
-        SPI58_W::new(self)
+    pub fn spi58(&mut self) -> SPI58_W<GICD_SPISR0_SPEC> {
+        SPI58_W::new(self, 26)
     }
     #[doc = "Bit 27 - Shared interrupt 59"]
     #[inline(always)]
     #[must_use]
-    pub fn spi59(&mut self) -> SPI59_W<GICD_SPISR0_SPEC, 27> {
-        SPI59_W::new(self)
+    pub fn spi59(&mut self) -> SPI59_W<GICD_SPISR0_SPEC> {
+        SPI59_W::new(self, 27)
     }
     #[doc = "Bit 28 - Shared interrupt 60"]
     #[inline(always)]
     #[must_use]
-    pub fn spi60(&mut self) -> SPI60_W<GICD_SPISR0_SPEC, 28> {
-        SPI60_W::new(self)
+    pub fn spi60(&mut self) -> SPI60_W<GICD_SPISR0_SPEC> {
+        SPI60_W::new(self, 28)
     }
     #[doc = "Bit 29 - Shared interrupt 61"]
     #[inline(always)]
     #[must_use]
-    pub fn spi61(&mut self) -> SPI61_W<GICD_SPISR0_SPEC, 29> {
-        SPI61_W::new(self)
+    pub fn spi61(&mut self) -> SPI61_W<GICD_SPISR0_SPEC> {
+        SPI61_W::new(self, 29)
     }
     #[doc = "Bit 30 - Shared interrupt 62"]
     #[inline(always)]
     #[must_use]
-    pub fn spi62(&mut self) -> SPI62_W<GICD_SPISR0_SPEC, 30> {
-        SPI62_W::new(self)
+    pub fn spi62(&mut self) -> SPI62_W<GICD_SPISR0_SPEC> {
+        SPI62_W::new(self, 30)
     }
     #[doc = "Bit 31 - Shared interrupt 63"]
     #[inline(always)]
     #[must_use]
-    pub fn spi63(&mut self) -> SPI63_W<GICD_SPISR0_SPEC, 31> {
-        SPI63_W::new(self)
+    pub fn spi63(&mut self) -> SPI63_W<GICD_SPISR0_SPEC> {
+        SPI63_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

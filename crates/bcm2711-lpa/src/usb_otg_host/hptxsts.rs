@@ -5,7 +5,7 @@ pub type W = crate::W<HPTXSTS_SPEC>;
 #[doc = "Field `PTXFSAVL` reader - Periodic transmit data FIFO space available"]
 pub type PTXFSAVL_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSAVL` writer - Periodic transmit data FIFO space available"]
-pub type PTXFSAVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXFSAVL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `PTXQSAV` reader - Periodic transmit request queue space available"]
 pub type PTXQSAV_R = crate::FieldReader;
 #[doc = "Field `PTXQTOP` reader - Top of the periodic transmit request queue"]
@@ -38,15 +38,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HPTXSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Periodic transmit data FIFO space available"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfsavl(&mut self) -> PTXFSAVL_W<HPTXSTS_SPEC, 0> {
-        PTXFSAVL_W::new(self)
+    pub fn ptxfsavl(&mut self) -> PTXFSAVL_W<HPTXSTS_SPEC> {
+        PTXFSAVL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

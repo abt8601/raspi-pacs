@@ -2,91 +2,233 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Distributor Control Register"]
-    pub gicd_ctlr: GICD_CTLR,
-    #[doc = "0x04 - Interrupt Controller Type Register"]
-    pub gicd_typer: GICD_TYPER,
-    #[doc = "0x08 - Distributor Implementer Identification Register"]
-    pub gicd_iidr: GICD_IIDR,
+    gicd_ctlr: GICD_CTLR,
+    gicd_typer: GICD_TYPER,
+    gicd_iidr: GICD_IIDR,
     _reserved3: [u8; 0x74],
-    #[doc = "0x80..0x9c - Interrupt Group Registers"]
-    pub gicd_igroupr: GICD_IGROUPR,
+    gicd_igroupr: GICD_IGROUPR,
     _reserved4: [u8; 0x64],
-    #[doc = "0x100..0x11c - Interrupt Set-Enable Registers"]
-    pub gicd_isenabler: GICD_ISENABLER,
+    gicd_isenabler: GICD_ISENABLER,
     _reserved5: [u8; 0x64],
-    #[doc = "0x180..0x19c - Interrupt Clear-Enable Registers"]
-    pub gicd_icenabler: GICD_ICENABLER,
+    gicd_icenabler: GICD_ICENABLER,
     _reserved6: [u8; 0x64],
-    #[doc = "0x200..0x21c - Interrupt Set-Pending Registers"]
-    pub gicd_ispendr: GICD_ISPENDR,
+    gicd_ispendr: GICD_ISPENDR,
     _reserved7: [u8; 0x64],
-    #[doc = "0x280..0x29c - Interrupt Clear-Pending Registers"]
-    pub gicd_icpendr: GICD_ICPENDR,
+    gicd_icpendr: GICD_ICPENDR,
     _reserved8: [u8; 0x64],
-    #[doc = "0x300..0x31c - Interrupt Set-Active Registers"]
-    pub gicd_isactiver: GICD_ISACTIVER,
+    gicd_isactiver: GICD_ISACTIVER,
     _reserved9: [u8; 0x64],
-    #[doc = "0x380..0x39c - Interrupt Clear-Active Registers"]
-    pub gicd_icactiver: GICD_ICACTIVER,
+    gicd_icactiver: GICD_ICACTIVER,
     _reserved10: [u8; 0x64],
-    #[doc = "0x400..0x4e0 - Interrupt Priority"]
-    pub gicd_ipriorityr: GICD_IPRIORITYR,
+    gicd_ipriorityr: GICD_IPRIORITYR,
     _reserved11: [u8; 0x0320],
-    #[doc = "0x800..0x8e0 - Interrupt Processor Targets"]
-    pub gicd_itargetsr: GICD_ITARGETSR,
+    gicd_itargetsr: GICD_ITARGETSR,
     _reserved12: [u8; 0x0320],
-    #[doc = "0xc00..0xc38 - Interrupt Configuration"]
-    pub gicd_icfgr: GICD_ICFGR,
+    gicd_icfgr: GICD_ICFGR,
     _reserved13: [u8; 0xc8],
-    #[doc = "0xd00 - Private Peripheral Interrupt Status Register"]
-    pub gicd_ppisr: GICD_PPISR,
-    #[doc = "0xd04 - Shared Peripheral Interrupt Status Registers"]
-    pub gicd_spisr0: GICD_SPISR0,
-    #[doc = "0xd08 - Shared Peripheral Interrupt Status Registers"]
-    pub gicd_spisr1: GICD_SPISR1,
-    #[doc = "0xd0c - Shared Peripheral Interrupt Status Registers"]
-    pub gicd_spisr2: GICD_SPISR2,
-    #[doc = "0xd10 - Shared Peripheral Interrupt Status Registers"]
-    pub gicd_spisr3: GICD_SPISR3,
-    #[doc = "0xd14 - Shared Peripheral Interrupt Status Registers"]
-    pub gicd_spisr4: GICD_SPISR4,
-    #[doc = "0xd18 - Shared Peripheral Interrupt Status Registers"]
-    pub gicd_spisr5: GICD_SPISR5,
+    gicd_ppisr: GICD_PPISR,
+    gicd_spisr0: GICD_SPISR0,
+    gicd_spisr1: GICD_SPISR1,
+    gicd_spisr2: GICD_SPISR2,
+    gicd_spisr3: GICD_SPISR3,
+    gicd_spisr4: GICD_SPISR4,
+    gicd_spisr5: GICD_SPISR5,
     _reserved20: [u8; 0x01e4],
-    #[doc = "0xf00 - Software Generated Interrupt Register"]
-    pub gicd_sgir: GICD_SGIR,
+    gicd_sgir: GICD_SGIR,
     _reserved21: [u8; 0x0c],
-    #[doc = "0xf10 - SGI Clear-Pending Registers"]
-    pub gicd_cpendsgirn: GICD_CPENDSGIRN,
+    gicd_cpendsgirn: GICD_CPENDSGIRN,
     _reserved22: [u8; 0x0c],
-    #[doc = "0xf20 - SGI Set-Pending Registers"]
-    pub gicd_spendsgirn: GICD_SPENDSGIRN,
+    gicd_spendsgirn: GICD_SPENDSGIRN,
     _reserved23: [u8; 0xac],
+    gicd_pidr4: GICD_PIDR4,
+    gicd_pidr5: GICD_PIDR5,
+    gicd_pidr6: GICD_PIDR6,
+    gicd_pidr7: GICD_PIDR7,
+    gicd_pidr0: GICD_PIDR0,
+    gicd_pidr1: GICD_PIDR1,
+    gicd_pidr2: GICD_PIDR2,
+    gicd_pidr3: GICD_PIDR3,
+    gicd_cidr0: GICD_CIDR0,
+    gicd_cidr1: GICD_CIDR1,
+    gicd_cidr2: GICD_CIDR2,
+    gicd_cidr3: GICD_CIDR3,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Distributor Control Register"]
+    #[inline(always)]
+    pub const fn gicd_ctlr(&self) -> &GICD_CTLR {
+        &self.gicd_ctlr
+    }
+    #[doc = "0x04 - Interrupt Controller Type Register"]
+    #[inline(always)]
+    pub const fn gicd_typer(&self) -> &GICD_TYPER {
+        &self.gicd_typer
+    }
+    #[doc = "0x08 - Distributor Implementer Identification Register"]
+    #[inline(always)]
+    pub const fn gicd_iidr(&self) -> &GICD_IIDR {
+        &self.gicd_iidr
+    }
+    #[doc = "0x80..0x9c - Interrupt Group Registers"]
+    #[inline(always)]
+    pub const fn gicd_igroupr(&self) -> &GICD_IGROUPR {
+        &self.gicd_igroupr
+    }
+    #[doc = "0x100..0x11c - Interrupt Set-Enable Registers"]
+    #[inline(always)]
+    pub const fn gicd_isenabler(&self) -> &GICD_ISENABLER {
+        &self.gicd_isenabler
+    }
+    #[doc = "0x180..0x19c - Interrupt Clear-Enable Registers"]
+    #[inline(always)]
+    pub const fn gicd_icenabler(&self) -> &GICD_ICENABLER {
+        &self.gicd_icenabler
+    }
+    #[doc = "0x200..0x21c - Interrupt Set-Pending Registers"]
+    #[inline(always)]
+    pub const fn gicd_ispendr(&self) -> &GICD_ISPENDR {
+        &self.gicd_ispendr
+    }
+    #[doc = "0x280..0x29c - Interrupt Clear-Pending Registers"]
+    #[inline(always)]
+    pub const fn gicd_icpendr(&self) -> &GICD_ICPENDR {
+        &self.gicd_icpendr
+    }
+    #[doc = "0x300..0x31c - Interrupt Set-Active Registers"]
+    #[inline(always)]
+    pub const fn gicd_isactiver(&self) -> &GICD_ISACTIVER {
+        &self.gicd_isactiver
+    }
+    #[doc = "0x380..0x39c - Interrupt Clear-Active Registers"]
+    #[inline(always)]
+    pub const fn gicd_icactiver(&self) -> &GICD_ICACTIVER {
+        &self.gicd_icactiver
+    }
+    #[doc = "0x400..0x4e0 - Interrupt Priority"]
+    #[inline(always)]
+    pub const fn gicd_ipriorityr(&self) -> &GICD_IPRIORITYR {
+        &self.gicd_ipriorityr
+    }
+    #[doc = "0x800..0x8e0 - Interrupt Processor Targets"]
+    #[inline(always)]
+    pub const fn gicd_itargetsr(&self) -> &GICD_ITARGETSR {
+        &self.gicd_itargetsr
+    }
+    #[doc = "0xc00..0xc38 - Interrupt Configuration"]
+    #[inline(always)]
+    pub const fn gicd_icfgr(&self) -> &GICD_ICFGR {
+        &self.gicd_icfgr
+    }
+    #[doc = "0xd00 - Private Peripheral Interrupt Status Register"]
+    #[inline(always)]
+    pub const fn gicd_ppisr(&self) -> &GICD_PPISR {
+        &self.gicd_ppisr
+    }
+    #[doc = "0xd04 - Shared Peripheral Interrupt Status Registers"]
+    #[inline(always)]
+    pub const fn gicd_spisr0(&self) -> &GICD_SPISR0 {
+        &self.gicd_spisr0
+    }
+    #[doc = "0xd08 - Shared Peripheral Interrupt Status Registers"]
+    #[inline(always)]
+    pub const fn gicd_spisr1(&self) -> &GICD_SPISR1 {
+        &self.gicd_spisr1
+    }
+    #[doc = "0xd0c - Shared Peripheral Interrupt Status Registers"]
+    #[inline(always)]
+    pub const fn gicd_spisr2(&self) -> &GICD_SPISR2 {
+        &self.gicd_spisr2
+    }
+    #[doc = "0xd10 - Shared Peripheral Interrupt Status Registers"]
+    #[inline(always)]
+    pub const fn gicd_spisr3(&self) -> &GICD_SPISR3 {
+        &self.gicd_spisr3
+    }
+    #[doc = "0xd14 - Shared Peripheral Interrupt Status Registers"]
+    #[inline(always)]
+    pub const fn gicd_spisr4(&self) -> &GICD_SPISR4 {
+        &self.gicd_spisr4
+    }
+    #[doc = "0xd18 - Shared Peripheral Interrupt Status Registers"]
+    #[inline(always)]
+    pub const fn gicd_spisr5(&self) -> &GICD_SPISR5 {
+        &self.gicd_spisr5
+    }
+    #[doc = "0xf00 - Software Generated Interrupt Register"]
+    #[inline(always)]
+    pub const fn gicd_sgir(&self) -> &GICD_SGIR {
+        &self.gicd_sgir
+    }
+    #[doc = "0xf10 - SGI Clear-Pending Registers"]
+    #[inline(always)]
+    pub const fn gicd_cpendsgirn(&self) -> &GICD_CPENDSGIRN {
+        &self.gicd_cpendsgirn
+    }
+    #[doc = "0xf20 - SGI Set-Pending Registers"]
+    #[inline(always)]
+    pub const fn gicd_spendsgirn(&self) -> &GICD_SPENDSGIRN {
+        &self.gicd_spendsgirn
+    }
     #[doc = "0xfd0 - Peripheral ID 4"]
-    pub gicd_pidr4: GICD_PIDR4,
+    #[inline(always)]
+    pub const fn gicd_pidr4(&self) -> &GICD_PIDR4 {
+        &self.gicd_pidr4
+    }
     #[doc = "0xfd4 - Peripheral ID 5"]
-    pub gicd_pidr5: GICD_PIDR5,
+    #[inline(always)]
+    pub const fn gicd_pidr5(&self) -> &GICD_PIDR5 {
+        &self.gicd_pidr5
+    }
     #[doc = "0xfd8 - Peripheral ID 6"]
-    pub gicd_pidr6: GICD_PIDR6,
+    #[inline(always)]
+    pub const fn gicd_pidr6(&self) -> &GICD_PIDR6 {
+        &self.gicd_pidr6
+    }
     #[doc = "0xfdc - Peripheral ID 7"]
-    pub gicd_pidr7: GICD_PIDR7,
+    #[inline(always)]
+    pub const fn gicd_pidr7(&self) -> &GICD_PIDR7 {
+        &self.gicd_pidr7
+    }
     #[doc = "0xfe0 - Peripheral ID 0"]
-    pub gicd_pidr0: GICD_PIDR0,
+    #[inline(always)]
+    pub const fn gicd_pidr0(&self) -> &GICD_PIDR0 {
+        &self.gicd_pidr0
+    }
     #[doc = "0xfe4 - Peripheral ID 1"]
-    pub gicd_pidr1: GICD_PIDR1,
+    #[inline(always)]
+    pub const fn gicd_pidr1(&self) -> &GICD_PIDR1 {
+        &self.gicd_pidr1
+    }
     #[doc = "0xfe8 - Peripheral ID 2"]
-    pub gicd_pidr2: GICD_PIDR2,
+    #[inline(always)]
+    pub const fn gicd_pidr2(&self) -> &GICD_PIDR2 {
+        &self.gicd_pidr2
+    }
     #[doc = "0xfec - Peripheral ID 3"]
-    pub gicd_pidr3: GICD_PIDR3,
+    #[inline(always)]
+    pub const fn gicd_pidr3(&self) -> &GICD_PIDR3 {
+        &self.gicd_pidr3
+    }
     #[doc = "0xff0 - Component ID 0"]
-    pub gicd_cidr0: GICD_CIDR0,
+    #[inline(always)]
+    pub const fn gicd_cidr0(&self) -> &GICD_CIDR0 {
+        &self.gicd_cidr0
+    }
     #[doc = "0xff4 - Component ID 1"]
-    pub gicd_cidr1: GICD_CIDR1,
+    #[inline(always)]
+    pub const fn gicd_cidr1(&self) -> &GICD_CIDR1 {
+        &self.gicd_cidr1
+    }
     #[doc = "0xff8 - Component ID 2"]
-    pub gicd_cidr2: GICD_CIDR2,
+    #[inline(always)]
+    pub const fn gicd_cidr2(&self) -> &GICD_CIDR2 {
+        &self.gicd_cidr2
+    }
     #[doc = "0xffc - Component ID 3"]
-    pub gicd_cidr3: GICD_CIDR3,
+    #[inline(always)]
+    pub const fn gicd_cidr3(&self) -> &GICD_CIDR3 {
+        &self.gicd_cidr3
+    }
 }
 #[doc = "GICD_CTLR (rw) register accessor: Distributor Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_ctlr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_ctlr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_ctlr`]
 module"]

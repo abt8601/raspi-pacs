@@ -22,6 +22,8 @@ pub enum SRC_A {
     PLLC = 6,
     #[doc = "7: `111`"]
     HDMI = 7,
+    #[doc = "0: `0`"]
+    GND = 0,
 }
 impl From<SRC_A> for u8 {
     #[inline(always)]
@@ -35,16 +37,16 @@ impl crate::FieldSpec for SRC_A {
 impl SRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<SRC_A> {
+    pub const fn variant(&self) -> SRC_A {
         match self.bits {
-            1 => Some(SRC_A::XOSC),
-            2 => Some(SRC_A::TEST0),
-            3 => Some(SRC_A::TEST1),
-            4 => Some(SRC_A::PLLA),
-            5 => Some(SRC_A::PLLB),
-            6 => Some(SRC_A::PLLC),
-            7 => Some(SRC_A::HDMI),
-            _ => None,
+            1 => SRC_A::XOSC,
+            2 => SRC_A::TEST0,
+            3 => SRC_A::TEST1,
+            4 => SRC_A::PLLA,
+            5 => SRC_A::PLLB,
+            6 => SRC_A::PLLC,
+            7 => SRC_A::HDMI,
+            _ => SRC_A::GND,
         }
     }
     #[doc = "`1`"]
@@ -82,10 +84,15 @@ impl SRC_R {
     pub fn is_hdmi(&self) -> bool {
         *self == SRC_A::HDMI
     }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn is_gnd(&self) -> bool {
+        matches!(self.variant(), SRC_A::GND)
+    }
 }
 #[doc = "Field `SRC` writer - Clock source"]
-pub type SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, SRC_A>;
-impl<'a, REG, const O: u8> SRC_W<'a, REG, O>
+pub type SRC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, SRC_A>;
+impl<'a, REG> SRC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -125,25 +132,30 @@ where
     pub fn hdmi(self) -> &'a mut crate::W<REG> {
         self.variant(SRC_A::HDMI)
     }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn gnd(self) -> &'a mut crate::W<REG> {
+        self.variant(SRC_A::GND)
+    }
 }
 #[doc = "Field `ENAB` reader - Enable the clock generator. (Switch SRC first.)"]
 pub type ENAB_R = crate::BitReader;
 #[doc = "Field `ENAB` writer - Enable the clock generator. (Switch SRC first.)"]
-pub type ENAB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENAB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KILL` reader - Stop and reset the generator"]
 pub type KILL_R = crate::BitReader;
 #[doc = "Field `KILL` writer - Stop and reset the generator"]
-pub type KILL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type KILL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSY` reader - Indicates the clock generator is running"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `FLIP` reader - Generate an edge on output. (For testing)"]
 pub type FLIP_R = crate::BitReader;
 #[doc = "Field `FLIP` writer - Generate an edge on output. (For testing)"]
-pub type FLIP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLIP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MASH` reader - MASH control, stage count"]
 pub type MASH_R = crate::FieldReader;
 #[doc = "Field `MASH` writer - MASH control, stage count"]
-pub type MASH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MASH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Password. Always 0x5a\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -161,8 +173,8 @@ impl crate::FieldSpec for PASSWD_AW {
     type Ux = u8;
 }
 #[doc = "Field `PASSWD` writer - Password. Always 0x5a"]
-pub type PASSWD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O, PASSWD_AW>;
-impl<'a, REG, const O: u8> PASSWD_W<'a, REG, O>
+pub type PASSWD_W<'a, REG> = crate::FieldWriter<'a, REG, 8, PASSWD_AW>;
+impl<'a, REG> PASSWD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -219,45 +231,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - Clock source"]
     #[inline(always)]
     #[must_use]
-    pub fn src(&mut self) -> SRC_W<CS_SPEC, 0> {
-        SRC_W::new(self)
+    pub fn src(&mut self) -> SRC_W<CS_SPEC> {
+        SRC_W::new(self, 0)
     }
     #[doc = "Bit 4 - Enable the clock generator. (Switch SRC first.)"]
     #[inline(always)]
     #[must_use]
-    pub fn enab(&mut self) -> ENAB_W<CS_SPEC, 4> {
-        ENAB_W::new(self)
+    pub fn enab(&mut self) -> ENAB_W<CS_SPEC> {
+        ENAB_W::new(self, 4)
     }
     #[doc = "Bit 5 - Stop and reset the generator"]
     #[inline(always)]
     #[must_use]
-    pub fn kill(&mut self) -> KILL_W<CS_SPEC, 5> {
-        KILL_W::new(self)
+    pub fn kill(&mut self) -> KILL_W<CS_SPEC> {
+        KILL_W::new(self, 5)
     }
     #[doc = "Bit 8 - Generate an edge on output. (For testing)"]
     #[inline(always)]
     #[must_use]
-    pub fn flip(&mut self) -> FLIP_W<CS_SPEC, 8> {
-        FLIP_W::new(self)
+    pub fn flip(&mut self) -> FLIP_W<CS_SPEC> {
+        FLIP_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - MASH control, stage count"]
     #[inline(always)]
     #[must_use]
-    pub fn mash(&mut self) -> MASH_W<CS_SPEC, 9> {
-        MASH_W::new(self)
+    pub fn mash(&mut self) -> MASH_W<CS_SPEC> {
+        MASH_W::new(self, 9)
     }
     #[doc = "Bits 24:31 - Password. Always 0x5a"]
     #[inline(always)]
     #[must_use]
-    pub fn passwd(&mut self) -> PASSWD_W<CS_SPEC, 24> {
-        PASSWD_W::new(self)
+    pub fn passwd(&mut self) -> PASSWD_W<CS_SPEC> {
+        PASSWD_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

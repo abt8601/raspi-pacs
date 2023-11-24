@@ -5,11 +5,11 @@ pub type W = crate::W<DEL_SPEC>;
 #[doc = "Field `REDL` reader - Delay before reading after a rising edge"]
 pub type REDL_R = crate::FieldReader<u16>;
 #[doc = "Field `REDL` writer - Delay before reading after a rising edge"]
-pub type REDL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type REDL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `FEDL` reader - Delay before reading after a falling edge"]
 pub type FEDL_R = crate::FieldReader<u16>;
 #[doc = "Field `FEDL` writer - Delay before reading after a falling edge"]
-pub type FEDL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type FEDL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Delay before reading after a rising edge"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Delay before reading after a rising edge"]
     #[inline(always)]
     #[must_use]
-    pub fn redl(&mut self) -> REDL_W<DEL_SPEC, 0> {
-        REDL_W::new(self)
+    pub fn redl(&mut self) -> REDL_W<DEL_SPEC> {
+        REDL_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Delay before reading after a falling edge"]
     #[inline(always)]
     #[must_use]
-    pub fn fedl(&mut self) -> FEDL_W<DEL_SPEC, 16> {
-        FEDL_W::new(self)
+    pub fn fedl(&mut self) -> FEDL_W<DEL_SPEC> {
+        FEDL_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

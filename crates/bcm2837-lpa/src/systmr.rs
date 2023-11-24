@@ -2,20 +2,50 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
+    cs: CS,
+    clo: CLO,
+    chi: CHI,
+    c0: C0,
+    c1: C1,
+    c2: C2,
+    c3: C3,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Control / Status"]
-    pub cs: CS,
+    #[inline(always)]
+    pub const fn cs(&self) -> &CS {
+        &self.cs
+    }
     #[doc = "0x04 - Lower 32 bits for the free running counter"]
-    pub clo: CLO,
+    #[inline(always)]
+    pub const fn clo(&self) -> &CLO {
+        &self.clo
+    }
     #[doc = "0x08 - Higher 32 bits for the free running counter"]
-    pub chi: CHI,
+    #[inline(always)]
+    pub const fn chi(&self) -> &CHI {
+        &self.chi
+    }
     #[doc = "0x0c - Compare channel 0"]
-    pub c0: C0,
+    #[inline(always)]
+    pub const fn c0(&self) -> &C0 {
+        &self.c0
+    }
     #[doc = "0x10 - Compare channel 1"]
-    pub c1: C1,
+    #[inline(always)]
+    pub const fn c1(&self) -> &C1 {
+        &self.c1
+    }
     #[doc = "0x14 - Compare channel 2"]
-    pub c2: C2,
+    #[inline(always)]
+    pub const fn c2(&self) -> &C2 {
+        &self.c2
+    }
     #[doc = "0x18 - Compare channel 3"]
-    pub c3: C3,
+    #[inline(always)]
+    pub const fn c3(&self) -> &C3 {
+        &self.c3
+    }
 }
 #[doc = "CS (rw) register accessor: Control / Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cs`]
 module"]

@@ -8,6 +8,8 @@ pub type GICD_CIDR3_R = crate::FieldReader<GICD_CIDR3_A>;
 pub enum GICD_CIDR3_A {
     #[doc = "177: Valid"]
     VALID = 177,
+    #[doc = "0: Invalid ID"]
+    INVALID = 0,
 }
 impl From<GICD_CIDR3_A> for u32 {
     #[inline(always)]
@@ -21,16 +23,21 @@ impl crate::FieldSpec for GICD_CIDR3_A {
 impl GICD_CIDR3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<GICD_CIDR3_A> {
+    pub const fn variant(&self) -> GICD_CIDR3_A {
         match self.bits {
-            177 => Some(GICD_CIDR3_A::VALID),
-            _ => None,
+            177 => GICD_CIDR3_A::VALID,
+            _ => GICD_CIDR3_A::INVALID,
         }
     }
     #[doc = "Valid"]
     #[inline(always)]
     pub fn is_valid(&self) -> bool {
         *self == GICD_CIDR3_A::VALID
+    }
+    #[doc = "Invalid ID"]
+    #[inline(always)]
+    pub fn is_invalid(&self) -> bool {
+        matches!(self.variant(), GICD_CIDR3_A::INVALID)
     }
 }
 impl R {
@@ -49,7 +56,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_CIDR3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Component ID 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_cidr3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

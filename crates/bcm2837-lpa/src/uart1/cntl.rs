@@ -5,19 +5,19 @@ pub type W = crate::W<CNTL_SPEC>;
 #[doc = "Field `RX_ENABLE` reader - Enable receive"]
 pub type RX_ENABLE_R = crate::BitReader;
 #[doc = "Field `RX_ENABLE` writer - Enable receive"]
-pub type RX_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_ENABLE` reader - Enable transmit"]
 pub type TX_ENABLE_R = crate::BitReader;
 #[doc = "Field `TX_ENABLE` writer - Enable transmit"]
-pub type TX_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTS_ENABLE` reader - Enable auto receive flow control with RTS"]
 pub type RTS_ENABLE_R = crate::BitReader;
 #[doc = "Field `RTS_ENABLE` writer - Enable auto receive flow control with RTS"]
-pub type RTS_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTS_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTS_ENABLE` reader - Enable auto transmit flow control with CTS"]
 pub type CTS_ENABLE_R = crate::BitReader;
 #[doc = "Field `CTS_ENABLE` writer - Enable auto transmit flow control with CTS"]
-pub type CTS_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTS_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTS_FIFO_LEVEL` reader - FIFO level to de-assert RTS"]
 pub type RTS_FIFO_LEVEL_R = crate::FieldReader<FIFO_LEVEL_A>;
 #[doc = "FIFO level to de-assert RTS\n\nValue on reset: 0"]
@@ -76,9 +76,8 @@ impl RTS_FIFO_LEVEL_R {
     }
 }
 #[doc = "Field `RTS_FIFO_LEVEL` writer - FIFO level to de-assert RTS"]
-pub type RTS_FIFO_LEVEL_W<'a, REG, const O: u8> =
-    crate::FieldWriterSafe<'a, REG, 2, O, FIFO_LEVEL_A>;
-impl<'a, REG, const O: u8> RTS_FIFO_LEVEL_W<'a, REG, O>
+pub type RTS_FIFO_LEVEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, FIFO_LEVEL_A>;
+impl<'a, REG> RTS_FIFO_LEVEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -145,8 +144,8 @@ impl CTS_ASSERT_R {
     }
 }
 #[doc = "Field `CTS_ASSERT` writer - CTS assert level"]
-pub type CTS_ASSERT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ASSERT_LEVEL_A>;
-impl<'a, REG, const O: u8> CTS_ASSERT_W<'a, REG, O>
+pub type CTS_ASSERT_W<'a, REG> = crate::BitWriter<'a, REG, ASSERT_LEVEL_A>;
+impl<'a, REG> CTS_ASSERT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -216,51 +215,51 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CNTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable receive"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_enable(&mut self) -> RX_ENABLE_W<CNTL_SPEC, 0> {
-        RX_ENABLE_W::new(self)
+    pub fn rx_enable(&mut self) -> RX_ENABLE_W<CNTL_SPEC> {
+        RX_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable transmit"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_enable(&mut self) -> TX_ENABLE_W<CNTL_SPEC, 1> {
-        TX_ENABLE_W::new(self)
+    pub fn tx_enable(&mut self) -> TX_ENABLE_W<CNTL_SPEC> {
+        TX_ENABLE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable auto receive flow control with RTS"]
     #[inline(always)]
     #[must_use]
-    pub fn rts_enable(&mut self) -> RTS_ENABLE_W<CNTL_SPEC, 2> {
-        RTS_ENABLE_W::new(self)
+    pub fn rts_enable(&mut self) -> RTS_ENABLE_W<CNTL_SPEC> {
+        RTS_ENABLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable auto transmit flow control with CTS"]
     #[inline(always)]
     #[must_use]
-    pub fn cts_enable(&mut self) -> CTS_ENABLE_W<CNTL_SPEC, 3> {
-        CTS_ENABLE_W::new(self)
+    pub fn cts_enable(&mut self) -> CTS_ENABLE_W<CNTL_SPEC> {
+        CTS_ENABLE_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - FIFO level to de-assert RTS"]
     #[inline(always)]
     #[must_use]
-    pub fn rts_fifo_level(&mut self) -> RTS_FIFO_LEVEL_W<CNTL_SPEC, 4> {
-        RTS_FIFO_LEVEL_W::new(self)
+    pub fn rts_fifo_level(&mut self) -> RTS_FIFO_LEVEL_W<CNTL_SPEC> {
+        RTS_FIFO_LEVEL_W::new(self, 4)
     }
     #[doc = "Bit 6 - RTS assert level"]
     #[inline(always)]
     #[must_use]
-    pub fn rts_assert(&mut self) -> RTS_ASSERT_W<CNTL_SPEC, 6> {
-        RTS_ASSERT_W::new(self)
+    pub fn rts_assert(&mut self) -> RTS_ASSERT_W<CNTL_SPEC> {
+        RTS_ASSERT_W::new(self, 6)
     }
     #[doc = "Bit 7 - CTS assert level"]
     #[inline(always)]
     #[must_use]
-    pub fn cts_assert(&mut self) -> CTS_ASSERT_W<CNTL_SPEC, 7> {
-        CTS_ASSERT_W::new(self)
+    pub fn cts_assert(&mut self) -> CTS_ASSERT_W<CNTL_SPEC> {
+        CTS_ASSERT_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

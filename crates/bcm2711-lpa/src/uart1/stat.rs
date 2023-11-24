@@ -5,51 +5,51 @@ pub type W = crate::W<STAT_SPEC>;
 #[doc = "Field `DATA_READY` reader - Receive FIFO has at least one symbol"]
 pub type DATA_READY_R = crate::BitReader;
 #[doc = "Field `DATA_READY` writer - Receive FIFO has at least one symbol"]
-pub type DATA_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_READY` reader - Transmit FIFO has space for at least one symbol"]
 pub type TX_READY_R = crate::BitReader;
 #[doc = "Field `TX_READY` writer - Transmit FIFO has space for at least one symbol"]
-pub type TX_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_IDLE` reader - Receiver is idle"]
 pub type RX_IDLE_R = crate::BitReader;
 #[doc = "Field `RX_IDLE` writer - Receiver is idle"]
-pub type RX_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_IDLE` reader - Transmitter is idle"]
 pub type TX_IDLE_R = crate::BitReader;
 #[doc = "Field `TX_IDLE` writer - Transmitter is idle"]
-pub type TX_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_OVERRUN` reader - Receive FIFO overrun"]
 pub type RX_OVERRUN_R = crate::BitReader;
 #[doc = "Field `RX_OVERRUN` writer - Receive FIFO overrun"]
-pub type RX_OVERRUN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_OVERRUN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FULL` reader - Transmit FIFO is full"]
 pub type TX_FULL_R = crate::BitReader;
 #[doc = "Field `TX_FULL` writer - Transmit FIFO is full"]
-pub type TX_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTS_STATUS` reader - RTS state"]
 pub type RTS_STATUS_R = crate::BitReader;
 #[doc = "Field `RTS_STATUS` writer - RTS state"]
-pub type RTS_STATUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTS_STATUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTS_STATUS` reader - CTS state"]
 pub type CTS_STATUS_R = crate::BitReader;
 #[doc = "Field `CTS_STATUS` writer - CTS state"]
-pub type CTS_STATUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTS_STATUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EMPTY` reader - Transmit FIFO is completely empty"]
 pub type TX_EMPTY_R = crate::BitReader;
 #[doc = "Field `TX_EMPTY` writer - Transmit FIFO is completely empty"]
-pub type TX_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_DONE` reader - Transmit FIFO is empty and transmitter is idle"]
 pub type TX_DONE_R = crate::BitReader;
 #[doc = "Field `TX_DONE` writer - Transmit FIFO is empty and transmitter is idle"]
-pub type TX_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FIFO_LEVEL` reader - How many entries are filled in the RX FIFO"]
 pub type RX_FIFO_LEVEL_R = crate::FieldReader;
 #[doc = "Field `RX_FIFO_LEVEL` writer - How many entries are filled in the RX FIFO"]
-pub type RX_FIFO_LEVEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RX_FIFO_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TX_FIFO_LEVEL` reader - How many entries are filled in the TX FIFO"]
 pub type TX_FIFO_LEVEL_R = crate::FieldReader;
 #[doc = "Field `TX_FIFO_LEVEL` writer - How many entries are filled in the TX FIFO"]
-pub type TX_FIFO_LEVEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TX_FIFO_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0 - Receive FIFO has at least one symbol"]
     #[inline(always)]
@@ -138,81 +138,81 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STAT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Receive FIFO has at least one symbol"]
     #[inline(always)]
     #[must_use]
-    pub fn data_ready(&mut self) -> DATA_READY_W<STAT_SPEC, 0> {
-        DATA_READY_W::new(self)
+    pub fn data_ready(&mut self) -> DATA_READY_W<STAT_SPEC> {
+        DATA_READY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit FIFO has space for at least one symbol"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ready(&mut self) -> TX_READY_W<STAT_SPEC, 1> {
-        TX_READY_W::new(self)
+    pub fn tx_ready(&mut self) -> TX_READY_W<STAT_SPEC> {
+        TX_READY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Receiver is idle"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_idle(&mut self) -> RX_IDLE_W<STAT_SPEC, 2> {
-        RX_IDLE_W::new(self)
+    pub fn rx_idle(&mut self) -> RX_IDLE_W<STAT_SPEC> {
+        RX_IDLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmitter is idle"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_idle(&mut self) -> TX_IDLE_W<STAT_SPEC, 3> {
-        TX_IDLE_W::new(self)
+    pub fn tx_idle(&mut self) -> TX_IDLE_W<STAT_SPEC> {
+        TX_IDLE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_overrun(&mut self) -> RX_OVERRUN_W<STAT_SPEC, 4> {
-        RX_OVERRUN_W::new(self)
+    pub fn rx_overrun(&mut self) -> RX_OVERRUN_W<STAT_SPEC> {
+        RX_OVERRUN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Transmit FIFO is full"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_full(&mut self) -> TX_FULL_W<STAT_SPEC, 5> {
-        TX_FULL_W::new(self)
+    pub fn tx_full(&mut self) -> TX_FULL_W<STAT_SPEC> {
+        TX_FULL_W::new(self, 5)
     }
     #[doc = "Bit 6 - RTS state"]
     #[inline(always)]
     #[must_use]
-    pub fn rts_status(&mut self) -> RTS_STATUS_W<STAT_SPEC, 6> {
-        RTS_STATUS_W::new(self)
+    pub fn rts_status(&mut self) -> RTS_STATUS_W<STAT_SPEC> {
+        RTS_STATUS_W::new(self, 6)
     }
     #[doc = "Bit 7 - CTS state"]
     #[inline(always)]
     #[must_use]
-    pub fn cts_status(&mut self) -> CTS_STATUS_W<STAT_SPEC, 7> {
-        CTS_STATUS_W::new(self)
+    pub fn cts_status(&mut self) -> CTS_STATUS_W<STAT_SPEC> {
+        CTS_STATUS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Transmit FIFO is completely empty"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_empty(&mut self) -> TX_EMPTY_W<STAT_SPEC, 8> {
-        TX_EMPTY_W::new(self)
+    pub fn tx_empty(&mut self) -> TX_EMPTY_W<STAT_SPEC> {
+        TX_EMPTY_W::new(self, 8)
     }
     #[doc = "Bit 9 - Transmit FIFO is empty and transmitter is idle"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_done(&mut self) -> TX_DONE_W<STAT_SPEC, 9> {
-        TX_DONE_W::new(self)
+    pub fn tx_done(&mut self) -> TX_DONE_W<STAT_SPEC> {
+        TX_DONE_W::new(self, 9)
     }
     #[doc = "Bits 16:19 - How many entries are filled in the RX FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_level(&mut self) -> RX_FIFO_LEVEL_W<STAT_SPEC, 16> {
-        RX_FIFO_LEVEL_W::new(self)
+    pub fn rx_fifo_level(&mut self) -> RX_FIFO_LEVEL_W<STAT_SPEC> {
+        RX_FIFO_LEVEL_W::new(self, 16)
     }
     #[doc = "Bits 24:27 - How many entries are filled in the TX FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_fifo_level(&mut self) -> TX_FIFO_LEVEL_W<STAT_SPEC, 24> {
-        TX_FIFO_LEVEL_W::new(self)
+    pub fn tx_fifo_level(&mut self) -> TX_FIFO_LEVEL_W<STAT_SPEC> {
+        TX_FIFO_LEVEL_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -39,8 +39,8 @@ impl INT32_R {
     }
 }
 #[doc = "Field `INT32` writer - Interrupt 32"]
-pub type INT32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT32_A>;
-impl<'a, REG, const O: u8> INT32_W<'a, REG, O>
+pub type INT32_W<'a, REG> = crate::BitWriter<'a, REG, INT32_A>;
+impl<'a, REG> INT32_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl INT33_R {
     }
 }
 #[doc = "Field `INT33` writer - Interrupt 33"]
-pub type INT33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT33_A>;
-impl<'a, REG, const O: u8> INT33_W<'a, REG, O>
+pub type INT33_W<'a, REG> = crate::BitWriter<'a, REG, INT33_A>;
+impl<'a, REG> INT33_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl INT34_R {
     }
 }
 #[doc = "Field `INT34` writer - Interrupt 34"]
-pub type INT34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT34_A>;
-impl<'a, REG, const O: u8> INT34_W<'a, REG, O>
+pub type INT34_W<'a, REG> = crate::BitWriter<'a, REG, INT34_A>;
+impl<'a, REG> INT34_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl INT35_R {
     }
 }
 #[doc = "Field `INT35` writer - Interrupt 35"]
-pub type INT35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT35_A>;
-impl<'a, REG, const O: u8> INT35_W<'a, REG, O>
+pub type INT35_W<'a, REG> = crate::BitWriter<'a, REG, INT35_A>;
+impl<'a, REG> INT35_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -251,8 +251,8 @@ impl INT36_R {
     }
 }
 #[doc = "Field `INT36` writer - Interrupt 36"]
-pub type INT36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT36_A>;
-impl<'a, REG, const O: u8> INT36_W<'a, REG, O>
+pub type INT36_W<'a, REG> = crate::BitWriter<'a, REG, INT36_A>;
+impl<'a, REG> INT36_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -304,8 +304,8 @@ impl INT37_R {
     }
 }
 #[doc = "Field `INT37` writer - Interrupt 37"]
-pub type INT37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT37_A>;
-impl<'a, REG, const O: u8> INT37_W<'a, REG, O>
+pub type INT37_W<'a, REG> = crate::BitWriter<'a, REG, INT37_A>;
+impl<'a, REG> INT37_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -357,8 +357,8 @@ impl INT38_R {
     }
 }
 #[doc = "Field `INT38` writer - Interrupt 38"]
-pub type INT38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT38_A>;
-impl<'a, REG, const O: u8> INT38_W<'a, REG, O>
+pub type INT38_W<'a, REG> = crate::BitWriter<'a, REG, INT38_A>;
+impl<'a, REG> INT38_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -410,8 +410,8 @@ impl INT39_R {
     }
 }
 #[doc = "Field `INT39` writer - Interrupt 39"]
-pub type INT39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT39_A>;
-impl<'a, REG, const O: u8> INT39_W<'a, REG, O>
+pub type INT39_W<'a, REG> = crate::BitWriter<'a, REG, INT39_A>;
+impl<'a, REG> INT39_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -463,8 +463,8 @@ impl INT40_R {
     }
 }
 #[doc = "Field `INT40` writer - Interrupt 40"]
-pub type INT40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT40_A>;
-impl<'a, REG, const O: u8> INT40_W<'a, REG, O>
+pub type INT40_W<'a, REG> = crate::BitWriter<'a, REG, INT40_A>;
+impl<'a, REG> INT40_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -516,8 +516,8 @@ impl INT41_R {
     }
 }
 #[doc = "Field `INT41` writer - Interrupt 41"]
-pub type INT41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT41_A>;
-impl<'a, REG, const O: u8> INT41_W<'a, REG, O>
+pub type INT41_W<'a, REG> = crate::BitWriter<'a, REG, INT41_A>;
+impl<'a, REG> INT41_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -569,8 +569,8 @@ impl INT42_R {
     }
 }
 #[doc = "Field `INT42` writer - Interrupt 42"]
-pub type INT42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT42_A>;
-impl<'a, REG, const O: u8> INT42_W<'a, REG, O>
+pub type INT42_W<'a, REG> = crate::BitWriter<'a, REG, INT42_A>;
+impl<'a, REG> INT42_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -622,8 +622,8 @@ impl INT43_R {
     }
 }
 #[doc = "Field `INT43` writer - Interrupt 43"]
-pub type INT43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT43_A>;
-impl<'a, REG, const O: u8> INT43_W<'a, REG, O>
+pub type INT43_W<'a, REG> = crate::BitWriter<'a, REG, INT43_A>;
+impl<'a, REG> INT43_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -675,8 +675,8 @@ impl INT44_R {
     }
 }
 #[doc = "Field `INT44` writer - Interrupt 44"]
-pub type INT44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT44_A>;
-impl<'a, REG, const O: u8> INT44_W<'a, REG, O>
+pub type INT44_W<'a, REG> = crate::BitWriter<'a, REG, INT44_A>;
+impl<'a, REG> INT44_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -728,8 +728,8 @@ impl INT45_R {
     }
 }
 #[doc = "Field `INT45` writer - Interrupt 45"]
-pub type INT45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT45_A>;
-impl<'a, REG, const O: u8> INT45_W<'a, REG, O>
+pub type INT45_W<'a, REG> = crate::BitWriter<'a, REG, INT45_A>;
+impl<'a, REG> INT45_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -781,8 +781,8 @@ impl INT46_R {
     }
 }
 #[doc = "Field `INT46` writer - Interrupt 46"]
-pub type INT46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT46_A>;
-impl<'a, REG, const O: u8> INT46_W<'a, REG, O>
+pub type INT46_W<'a, REG> = crate::BitWriter<'a, REG, INT46_A>;
+impl<'a, REG> INT46_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -834,8 +834,8 @@ impl INT47_R {
     }
 }
 #[doc = "Field `INT47` writer - Interrupt 47"]
-pub type INT47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, INT47_A>;
-impl<'a, REG, const O: u8> INT47_W<'a, REG, O>
+pub type INT47_W<'a, REG> = crate::BitWriter<'a, REG, INT47_A>;
+impl<'a, REG> INT47_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -956,105 +956,105 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR8_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Interrupt 32"]
     #[inline(always)]
     #[must_use]
-    pub fn int32(&mut self) -> INT32_W<GICD_ICFGR8_SPEC, 1> {
-        INT32_W::new(self)
+    pub fn int32(&mut self) -> INT32_W<GICD_ICFGR8_SPEC> {
+        INT32_W::new(self, 1)
     }
     #[doc = "Bit 3 - Interrupt 33"]
     #[inline(always)]
     #[must_use]
-    pub fn int33(&mut self) -> INT33_W<GICD_ICFGR8_SPEC, 3> {
-        INT33_W::new(self)
+    pub fn int33(&mut self) -> INT33_W<GICD_ICFGR8_SPEC> {
+        INT33_W::new(self, 3)
     }
     #[doc = "Bit 5 - Interrupt 34"]
     #[inline(always)]
     #[must_use]
-    pub fn int34(&mut self) -> INT34_W<GICD_ICFGR8_SPEC, 5> {
-        INT34_W::new(self)
+    pub fn int34(&mut self) -> INT34_W<GICD_ICFGR8_SPEC> {
+        INT34_W::new(self, 5)
     }
     #[doc = "Bit 7 - Interrupt 35"]
     #[inline(always)]
     #[must_use]
-    pub fn int35(&mut self) -> INT35_W<GICD_ICFGR8_SPEC, 7> {
-        INT35_W::new(self)
+    pub fn int35(&mut self) -> INT35_W<GICD_ICFGR8_SPEC> {
+        INT35_W::new(self, 7)
     }
     #[doc = "Bit 9 - Interrupt 36"]
     #[inline(always)]
     #[must_use]
-    pub fn int36(&mut self) -> INT36_W<GICD_ICFGR8_SPEC, 9> {
-        INT36_W::new(self)
+    pub fn int36(&mut self) -> INT36_W<GICD_ICFGR8_SPEC> {
+        INT36_W::new(self, 9)
     }
     #[doc = "Bit 11 - Interrupt 37"]
     #[inline(always)]
     #[must_use]
-    pub fn int37(&mut self) -> INT37_W<GICD_ICFGR8_SPEC, 11> {
-        INT37_W::new(self)
+    pub fn int37(&mut self) -> INT37_W<GICD_ICFGR8_SPEC> {
+        INT37_W::new(self, 11)
     }
     #[doc = "Bit 13 - Interrupt 38"]
     #[inline(always)]
     #[must_use]
-    pub fn int38(&mut self) -> INT38_W<GICD_ICFGR8_SPEC, 13> {
-        INT38_W::new(self)
+    pub fn int38(&mut self) -> INT38_W<GICD_ICFGR8_SPEC> {
+        INT38_W::new(self, 13)
     }
     #[doc = "Bit 15 - Interrupt 39"]
     #[inline(always)]
     #[must_use]
-    pub fn int39(&mut self) -> INT39_W<GICD_ICFGR8_SPEC, 15> {
-        INT39_W::new(self)
+    pub fn int39(&mut self) -> INT39_W<GICD_ICFGR8_SPEC> {
+        INT39_W::new(self, 15)
     }
     #[doc = "Bit 17 - Interrupt 40"]
     #[inline(always)]
     #[must_use]
-    pub fn int40(&mut self) -> INT40_W<GICD_ICFGR8_SPEC, 17> {
-        INT40_W::new(self)
+    pub fn int40(&mut self) -> INT40_W<GICD_ICFGR8_SPEC> {
+        INT40_W::new(self, 17)
     }
     #[doc = "Bit 19 - Interrupt 41"]
     #[inline(always)]
     #[must_use]
-    pub fn int41(&mut self) -> INT41_W<GICD_ICFGR8_SPEC, 19> {
-        INT41_W::new(self)
+    pub fn int41(&mut self) -> INT41_W<GICD_ICFGR8_SPEC> {
+        INT41_W::new(self, 19)
     }
     #[doc = "Bit 21 - Interrupt 42"]
     #[inline(always)]
     #[must_use]
-    pub fn int42(&mut self) -> INT42_W<GICD_ICFGR8_SPEC, 21> {
-        INT42_W::new(self)
+    pub fn int42(&mut self) -> INT42_W<GICD_ICFGR8_SPEC> {
+        INT42_W::new(self, 21)
     }
     #[doc = "Bit 23 - Interrupt 43"]
     #[inline(always)]
     #[must_use]
-    pub fn int43(&mut self) -> INT43_W<GICD_ICFGR8_SPEC, 23> {
-        INT43_W::new(self)
+    pub fn int43(&mut self) -> INT43_W<GICD_ICFGR8_SPEC> {
+        INT43_W::new(self, 23)
     }
     #[doc = "Bit 25 - Interrupt 44"]
     #[inline(always)]
     #[must_use]
-    pub fn int44(&mut self) -> INT44_W<GICD_ICFGR8_SPEC, 25> {
-        INT44_W::new(self)
+    pub fn int44(&mut self) -> INT44_W<GICD_ICFGR8_SPEC> {
+        INT44_W::new(self, 25)
     }
     #[doc = "Bit 27 - Interrupt 45"]
     #[inline(always)]
     #[must_use]
-    pub fn int45(&mut self) -> INT45_W<GICD_ICFGR8_SPEC, 27> {
-        INT45_W::new(self)
+    pub fn int45(&mut self) -> INT45_W<GICD_ICFGR8_SPEC> {
+        INT45_W::new(self, 27)
     }
     #[doc = "Bit 29 - Interrupt 46"]
     #[inline(always)]
     #[must_use]
-    pub fn int46(&mut self) -> INT46_W<GICD_ICFGR8_SPEC, 29> {
-        INT46_W::new(self)
+    pub fn int46(&mut self) -> INT46_W<GICD_ICFGR8_SPEC> {
+        INT46_W::new(self, 29)
     }
     #[doc = "Bit 31 - Interrupt 47"]
     #[inline(always)]
     #[must_use]
-    pub fn int47(&mut self) -> INT47_W<GICD_ICFGR8_SPEC, 31> {
-        INT47_W::new(self)
+    pub fn int47(&mut self) -> INT47_W<GICD_ICFGR8_SPEC> {
+        INT47_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

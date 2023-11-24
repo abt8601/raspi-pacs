@@ -5,7 +5,7 @@ pub type W = crate::W<GUSBCFG_SPEC>;
 #[doc = "Field `TOCAL` reader - FS timeout calibration"]
 pub type TOCAL_R = crate::FieldReader;
 #[doc = "Field `TOCAL` writer - FS timeout calibration"]
-pub type TOCAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOCAL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PHYIF` reader - PHY Interface width"]
 pub type PHYIF_R = crate::BitReader<PHYIF_A>;
 #[doc = "PHY Interface width\n\nValue on reset: 0"]
@@ -43,8 +43,8 @@ impl PHYIF_R {
     }
 }
 #[doc = "Field `PHYIF` writer - PHY Interface width"]
-pub type PHYIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PHYIF_A>;
-impl<'a, REG, const O: u8> PHYIF_W<'a, REG, O>
+pub type PHYIF_W<'a, REG> = crate::BitWriter<'a, REG, PHYIF_A>;
+impl<'a, REG> PHYIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -96,8 +96,8 @@ impl PHYTYPE_R {
     }
 }
 #[doc = "Field `PHYTYPE` writer - PHY Type"]
-pub type PHYTYPE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PHYTYPE_A>;
-impl<'a, REG, const O: u8> PHYTYPE_W<'a, REG, O>
+pub type PHYTYPE_W<'a, REG> = crate::BitWriter<'a, REG, PHYTYPE_A>;
+impl<'a, REG> PHYTYPE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -149,8 +149,8 @@ impl FSIF_R {
     }
 }
 #[doc = "Field `FSIF` writer - Full speed interface"]
-pub type FSIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FSIF_A>;
-impl<'a, REG, const O: u8> FSIF_W<'a, REG, O>
+pub type FSIF_W<'a, REG> = crate::BitWriter<'a, REG, FSIF_A>;
+impl<'a, REG> FSIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -202,8 +202,8 @@ impl PHYSEL_R {
     }
 }
 #[doc = "Field `PHYSEL` writer - Transceiver select"]
-pub type PHYSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PHYSEL_A>;
-impl<'a, REG, const O: u8> PHYSEL_W<'a, REG, O>
+pub type PHYSEL_W<'a, REG> = crate::BitWriter<'a, REG, PHYSEL_A>;
+impl<'a, REG> PHYSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -255,8 +255,8 @@ impl DDRSEL_R {
     }
 }
 #[doc = "Field `DDRSEL` writer - ULPI data rate"]
-pub type DDRSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DDRSEL_A>;
-impl<'a, REG, const O: u8> DDRSEL_W<'a, REG, O>
+pub type DDRSEL_W<'a, REG> = crate::BitWriter<'a, REG, DDRSEL_A>;
+impl<'a, REG> DDRSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -274,67 +274,67 @@ where
 #[doc = "Field `SRPCAP` reader - SRP-capable"]
 pub type SRPCAP_R = crate::BitReader;
 #[doc = "Field `SRPCAP` writer - SRP-capable"]
-pub type SRPCAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRPCAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNPCAP` reader - HNP-capable"]
 pub type HNPCAP_R = crate::BitReader;
 #[doc = "Field `HNPCAP` writer - HNP-capable"]
-pub type HNPCAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNPCAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRDT` reader - USB turnaround time"]
 pub type TRDT_R = crate::FieldReader;
 #[doc = "Field `TRDT` writer - USB turnaround time"]
-pub type TRDT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TRDT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PHYLPCS` reader - PHY Low-power clock select"]
 pub type PHYLPCS_R = crate::BitReader;
 #[doc = "Field `PHYLPCS` writer - PHY Low-power clock select"]
-pub type PHYLPCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PHYLPCS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPIFSLS` reader - ULPI FS/LS select"]
 pub type ULPIFSLS_R = crate::BitReader;
 #[doc = "Field `ULPIFSLS` writer - ULPI FS/LS select"]
-pub type ULPIFSLS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULPIFSLS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPIAR` reader - ULPI Auto-resume"]
 pub type ULPIAR_R = crate::BitReader;
 #[doc = "Field `ULPIAR` writer - ULPI Auto-resume"]
-pub type ULPIAR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULPIAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPICSM` reader - ULPI Clock SuspendM"]
 pub type ULPICSM_R = crate::BitReader;
 #[doc = "Field `ULPICSM` writer - ULPI Clock SuspendM"]
-pub type ULPICSM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULPICSM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPIEVBUSD` reader - ULPI External VBUS Drive"]
 pub type ULPIEVBUSD_R = crate::BitReader;
 #[doc = "Field `ULPIEVBUSD` writer - ULPI External VBUS Drive"]
-pub type ULPIEVBUSD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULPIEVBUSD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPIEVBUSI` reader - ULPI external VBUS indicator"]
 pub type ULPIEVBUSI_R = crate::BitReader;
 #[doc = "Field `ULPIEVBUSI` writer - ULPI external VBUS indicator"]
-pub type ULPIEVBUSI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULPIEVBUSI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSDPS` reader - TermSel DLine pulsing selection"]
 pub type TSDPS_R = crate::BitReader;
 #[doc = "Field `TSDPS` writer - TermSel DLine pulsing selection"]
-pub type TSDPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSDPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCCI` reader - Indicator complement"]
 pub type PCCI_R = crate::BitReader;
 #[doc = "Field `PCCI` writer - Indicator complement"]
-pub type PCCI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCCI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTCI` reader - Indicator pass through"]
 pub type PTCI_R = crate::BitReader;
 #[doc = "Field `PTCI` writer - Indicator pass through"]
-pub type PTCI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PTCI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ULPIIPD` reader - ULPI interface protect disable"]
 pub type ULPIIPD_R = crate::BitReader;
 #[doc = "Field `ULPIIPD` writer - ULPI interface protect disable"]
-pub type ULPIIPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ULPIIPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FHMOD` reader - Forced host mode"]
 pub type FHMOD_R = crate::BitReader;
 #[doc = "Field `FHMOD` writer - Forced host mode"]
-pub type FHMOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FHMOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDMOD` reader - Forced peripheral mode"]
 pub type FDMOD_R = crate::BitReader;
 #[doc = "Field `FDMOD` writer - Forced peripheral mode"]
-pub type FDMOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDMOD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTXPKT` reader - Corrupt Tx packet"]
 pub type CTXPKT_R = crate::BitReader;
 #[doc = "Field `CTXPKT` writer - Corrupt Tx packet"]
-pub type CTXPKT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTXPKT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - FS timeout calibration"]
     #[inline(always)]
@@ -477,141 +477,141 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GUSBCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - FS timeout calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn tocal(&mut self) -> TOCAL_W<GUSBCFG_SPEC, 0> {
-        TOCAL_W::new(self)
+    pub fn tocal(&mut self) -> TOCAL_W<GUSBCFG_SPEC> {
+        TOCAL_W::new(self, 0)
     }
     #[doc = "Bit 3 - PHY Interface width"]
     #[inline(always)]
     #[must_use]
-    pub fn phyif(&mut self) -> PHYIF_W<GUSBCFG_SPEC, 3> {
-        PHYIF_W::new(self)
+    pub fn phyif(&mut self) -> PHYIF_W<GUSBCFG_SPEC> {
+        PHYIF_W::new(self, 3)
     }
     #[doc = "Bit 4 - PHY Type"]
     #[inline(always)]
     #[must_use]
-    pub fn phytype(&mut self) -> PHYTYPE_W<GUSBCFG_SPEC, 4> {
-        PHYTYPE_W::new(self)
+    pub fn phytype(&mut self) -> PHYTYPE_W<GUSBCFG_SPEC> {
+        PHYTYPE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Full speed interface"]
     #[inline(always)]
     #[must_use]
-    pub fn fsif(&mut self) -> FSIF_W<GUSBCFG_SPEC, 5> {
-        FSIF_W::new(self)
+    pub fn fsif(&mut self) -> FSIF_W<GUSBCFG_SPEC> {
+        FSIF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transceiver select"]
     #[inline(always)]
     #[must_use]
-    pub fn physel(&mut self) -> PHYSEL_W<GUSBCFG_SPEC, 6> {
-        PHYSEL_W::new(self)
+    pub fn physel(&mut self) -> PHYSEL_W<GUSBCFG_SPEC> {
+        PHYSEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - ULPI data rate"]
     #[inline(always)]
     #[must_use]
-    pub fn ddrsel(&mut self) -> DDRSEL_W<GUSBCFG_SPEC, 7> {
-        DDRSEL_W::new(self)
+    pub fn ddrsel(&mut self) -> DDRSEL_W<GUSBCFG_SPEC> {
+        DDRSEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - SRP-capable"]
     #[inline(always)]
     #[must_use]
-    pub fn srpcap(&mut self) -> SRPCAP_W<GUSBCFG_SPEC, 8> {
-        SRPCAP_W::new(self)
+    pub fn srpcap(&mut self) -> SRPCAP_W<GUSBCFG_SPEC> {
+        SRPCAP_W::new(self, 8)
     }
     #[doc = "Bit 9 - HNP-capable"]
     #[inline(always)]
     #[must_use]
-    pub fn hnpcap(&mut self) -> HNPCAP_W<GUSBCFG_SPEC, 9> {
-        HNPCAP_W::new(self)
+    pub fn hnpcap(&mut self) -> HNPCAP_W<GUSBCFG_SPEC> {
+        HNPCAP_W::new(self, 9)
     }
     #[doc = "Bits 10:13 - USB turnaround time"]
     #[inline(always)]
     #[must_use]
-    pub fn trdt(&mut self) -> TRDT_W<GUSBCFG_SPEC, 10> {
-        TRDT_W::new(self)
+    pub fn trdt(&mut self) -> TRDT_W<GUSBCFG_SPEC> {
+        TRDT_W::new(self, 10)
     }
     #[doc = "Bit 15 - PHY Low-power clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn phylpcs(&mut self) -> PHYLPCS_W<GUSBCFG_SPEC, 15> {
-        PHYLPCS_W::new(self)
+    pub fn phylpcs(&mut self) -> PHYLPCS_W<GUSBCFG_SPEC> {
+        PHYLPCS_W::new(self, 15)
     }
     #[doc = "Bit 17 - ULPI FS/LS select"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpifsls(&mut self) -> ULPIFSLS_W<GUSBCFG_SPEC, 17> {
-        ULPIFSLS_W::new(self)
+    pub fn ulpifsls(&mut self) -> ULPIFSLS_W<GUSBCFG_SPEC> {
+        ULPIFSLS_W::new(self, 17)
     }
     #[doc = "Bit 18 - ULPI Auto-resume"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpiar(&mut self) -> ULPIAR_W<GUSBCFG_SPEC, 18> {
-        ULPIAR_W::new(self)
+    pub fn ulpiar(&mut self) -> ULPIAR_W<GUSBCFG_SPEC> {
+        ULPIAR_W::new(self, 18)
     }
     #[doc = "Bit 19 - ULPI Clock SuspendM"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpicsm(&mut self) -> ULPICSM_W<GUSBCFG_SPEC, 19> {
-        ULPICSM_W::new(self)
+    pub fn ulpicsm(&mut self) -> ULPICSM_W<GUSBCFG_SPEC> {
+        ULPICSM_W::new(self, 19)
     }
     #[doc = "Bit 20 - ULPI External VBUS Drive"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpievbusd(&mut self) -> ULPIEVBUSD_W<GUSBCFG_SPEC, 20> {
-        ULPIEVBUSD_W::new(self)
+    pub fn ulpievbusd(&mut self) -> ULPIEVBUSD_W<GUSBCFG_SPEC> {
+        ULPIEVBUSD_W::new(self, 20)
     }
     #[doc = "Bit 21 - ULPI external VBUS indicator"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpievbusi(&mut self) -> ULPIEVBUSI_W<GUSBCFG_SPEC, 21> {
-        ULPIEVBUSI_W::new(self)
+    pub fn ulpievbusi(&mut self) -> ULPIEVBUSI_W<GUSBCFG_SPEC> {
+        ULPIEVBUSI_W::new(self, 21)
     }
     #[doc = "Bit 22 - TermSel DLine pulsing selection"]
     #[inline(always)]
     #[must_use]
-    pub fn tsdps(&mut self) -> TSDPS_W<GUSBCFG_SPEC, 22> {
-        TSDPS_W::new(self)
+    pub fn tsdps(&mut self) -> TSDPS_W<GUSBCFG_SPEC> {
+        TSDPS_W::new(self, 22)
     }
     #[doc = "Bit 23 - Indicator complement"]
     #[inline(always)]
     #[must_use]
-    pub fn pcci(&mut self) -> PCCI_W<GUSBCFG_SPEC, 23> {
-        PCCI_W::new(self)
+    pub fn pcci(&mut self) -> PCCI_W<GUSBCFG_SPEC> {
+        PCCI_W::new(self, 23)
     }
     #[doc = "Bit 24 - Indicator pass through"]
     #[inline(always)]
     #[must_use]
-    pub fn ptci(&mut self) -> PTCI_W<GUSBCFG_SPEC, 24> {
-        PTCI_W::new(self)
+    pub fn ptci(&mut self) -> PTCI_W<GUSBCFG_SPEC> {
+        PTCI_W::new(self, 24)
     }
     #[doc = "Bit 25 - ULPI interface protect disable"]
     #[inline(always)]
     #[must_use]
-    pub fn ulpiipd(&mut self) -> ULPIIPD_W<GUSBCFG_SPEC, 25> {
-        ULPIIPD_W::new(self)
+    pub fn ulpiipd(&mut self) -> ULPIIPD_W<GUSBCFG_SPEC> {
+        ULPIIPD_W::new(self, 25)
     }
     #[doc = "Bit 29 - Forced host mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fhmod(&mut self) -> FHMOD_W<GUSBCFG_SPEC, 29> {
-        FHMOD_W::new(self)
+    pub fn fhmod(&mut self) -> FHMOD_W<GUSBCFG_SPEC> {
+        FHMOD_W::new(self, 29)
     }
     #[doc = "Bit 30 - Forced peripheral mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fdmod(&mut self) -> FDMOD_W<GUSBCFG_SPEC, 30> {
-        FDMOD_W::new(self)
+    pub fn fdmod(&mut self) -> FDMOD_W<GUSBCFG_SPEC> {
+        FDMOD_W::new(self, 30)
     }
     #[doc = "Bit 31 - Corrupt Tx packet"]
     #[inline(always)]
     #[must_use]
-    pub fn ctxpkt(&mut self) -> CTXPKT_W<GUSBCFG_SPEC, 31> {
-        CTXPKT_W::new(self)
+    pub fn ctxpkt(&mut self) -> CTXPKT_W<GUSBCFG_SPEC> {
+        CTXPKT_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

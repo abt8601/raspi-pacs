@@ -2,44 +2,92 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Data Register"]
-    pub dr: DR,
+    dr: DR,
     _reserved_1_ecr: [u8; 0x04],
     _reserved2: [u8; 0x10],
-    #[doc = "0x18 - Flag Register"]
-    pub fr: FR,
+    fr: FR,
     _reserved3: [u8; 0x08],
-    #[doc = "0x24 - Integer Baud Rate Register"]
-    pub ibrd: IBRD,
-    #[doc = "0x28 - Fractional Baud Rate Register"]
-    pub fbrd: FBRD,
-    #[doc = "0x2c - Line Control Register"]
-    pub lcr_h: LCR_H,
-    #[doc = "0x30 - Control Register"]
-    pub cr: CR,
-    #[doc = "0x34 - Interrupt FIFO Level Select Register"]
-    pub ifls: IFLS,
-    #[doc = "0x38 - Interrupt Mask set_Clear Register"]
-    pub imsc: IMSC,
-    #[doc = "0x3c - Raw Interrupt Status Register"]
-    pub ris: RIS,
-    #[doc = "0x40 - Masked Interrupt Status Register"]
-    pub mis: MIS,
-    #[doc = "0x44 - Interrupt Clear Register"]
-    pub icr: ICR,
-    #[doc = "0x48 - DMA Control Register"]
-    pub dmacr: DMACR,
+    ibrd: IBRD,
+    fbrd: FBRD,
+    lcr_h: LCR_H,
+    cr: CR,
+    ifls: IFLS,
+    imsc: IMSC,
+    ris: RIS,
+    mis: MIS,
+    icr: ICR,
+    dmacr: DMACR,
 }
 impl RegisterBlock {
+    #[doc = "0x00 - Data Register"]
+    #[inline(always)]
+    pub const fn dr(&self) -> &DR {
+        &self.dr
+    }
     #[doc = "0x04 - Error Clear Register"]
     #[inline(always)]
     pub const fn ecr(&self) -> &ECR {
-        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(4).cast() }
     }
     #[doc = "0x04 - Receive Status Register"]
     #[inline(always)]
     pub const fn rsr(&self) -> &RSR {
-        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(4).cast() }
+    }
+    #[doc = "0x18 - Flag Register"]
+    #[inline(always)]
+    pub const fn fr(&self) -> &FR {
+        &self.fr
+    }
+    #[doc = "0x24 - Integer Baud Rate Register"]
+    #[inline(always)]
+    pub const fn ibrd(&self) -> &IBRD {
+        &self.ibrd
+    }
+    #[doc = "0x28 - Fractional Baud Rate Register"]
+    #[inline(always)]
+    pub const fn fbrd(&self) -> &FBRD {
+        &self.fbrd
+    }
+    #[doc = "0x2c - Line Control Register"]
+    #[inline(always)]
+    pub const fn lcr_h(&self) -> &LCR_H {
+        &self.lcr_h
+    }
+    #[doc = "0x30 - Control Register"]
+    #[inline(always)]
+    pub const fn cr(&self) -> &CR {
+        &self.cr
+    }
+    #[doc = "0x34 - Interrupt FIFO Level Select Register"]
+    #[inline(always)]
+    pub const fn ifls(&self) -> &IFLS {
+        &self.ifls
+    }
+    #[doc = "0x38 - Interrupt Mask set_Clear Register"]
+    #[inline(always)]
+    pub const fn imsc(&self) -> &IMSC {
+        &self.imsc
+    }
+    #[doc = "0x3c - Raw Interrupt Status Register"]
+    #[inline(always)]
+    pub const fn ris(&self) -> &RIS {
+        &self.ris
+    }
+    #[doc = "0x40 - Masked Interrupt Status Register"]
+    #[inline(always)]
+    pub const fn mis(&self) -> &MIS {
+        &self.mis
+    }
+    #[doc = "0x44 - Interrupt Clear Register"]
+    #[inline(always)]
+    pub const fn icr(&self) -> &ICR {
+        &self.icr
+    }
+    #[doc = "0x48 - DMA Control Register"]
+    #[inline(always)]
+    pub const fn dmacr(&self) -> &DMACR {
+        &self.dmacr
     }
 }
 #[doc = "DR (rw) register accessor: Data Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dr`]

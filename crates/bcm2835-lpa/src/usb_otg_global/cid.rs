@@ -5,7 +5,7 @@ pub type W = crate::W<CID_SPEC>;
 #[doc = "Field `PRODUCT_ID` reader - Product ID field"]
 pub type PRODUCT_ID_R = crate::FieldReader<u32>;
 #[doc = "Field `PRODUCT_ID` writer - Product ID field"]
-pub type PRODUCT_ID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type PRODUCT_ID_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Product ID field"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CID_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Product ID field"]
     #[inline(always)]
     #[must_use]
-    pub fn product_id(&mut self) -> PRODUCT_ID_W<CID_SPEC, 0> {
-        PRODUCT_ID_W::new(self)
+    pub fn product_id(&mut self) -> PRODUCT_ID_W<CID_SPEC> {
+        PRODUCT_ID_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

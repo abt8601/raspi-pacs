@@ -5,7 +5,7 @@ pub type W = crate::W<HFIR_SPEC>;
 #[doc = "Field `FRIVL` reader - Frame interval"]
 pub type FRIVL_R = crate::FieldReader<u16>;
 #[doc = "Field `FRIVL` writer - Frame interval"]
-pub type FRIVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type FRIVL_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Frame interval"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HFIR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Frame interval"]
     #[inline(always)]
     #[must_use]
-    pub fn frivl(&mut self) -> FRIVL_W<HFIR_SPEC, 0> {
-        FRIVL_W::new(self)
+    pub fn frivl(&mut self) -> FRIVL_W<HFIR_SPEC> {
+        FRIVL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

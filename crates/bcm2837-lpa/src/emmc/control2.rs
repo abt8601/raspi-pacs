@@ -80,8 +80,8 @@ impl UHSMODE_R {
     }
 }
 #[doc = "Field `UHSMODE` writer - Select the speed of the SD card"]
-pub type UHSMODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, UHSMODE_A>;
-impl<'a, REG, const O: u8> UHSMODE_W<'a, REG, O>
+pub type UHSMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3, UHSMODE_A>;
+impl<'a, REG> UHSMODE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -115,11 +115,11 @@ where
 #[doc = "Field `TUNEON` reader - SD Clock tune in progress"]
 pub type TUNEON_R = crate::BitReader;
 #[doc = "Field `TUNEON` writer - SD Clock tune in progress"]
-pub type TUNEON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TUNEON_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TUNED` reader - Tuned clock is used for sampling data"]
 pub type TUNED_R = crate::BitReader;
 #[doc = "Field `TUNED` writer - Tuned clock is used for sampling data"]
-pub type TUNED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TUNED_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Auto command not executed due to an error"]
     #[inline(always)]
@@ -184,27 +184,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CONTROL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 16:18 - Select the speed of the SD card"]
     #[inline(always)]
     #[must_use]
-    pub fn uhsmode(&mut self) -> UHSMODE_W<CONTROL2_SPEC, 16> {
-        UHSMODE_W::new(self)
+    pub fn uhsmode(&mut self) -> UHSMODE_W<CONTROL2_SPEC> {
+        UHSMODE_W::new(self, 16)
     }
     #[doc = "Bit 22 - SD Clock tune in progress"]
     #[inline(always)]
     #[must_use]
-    pub fn tuneon(&mut self) -> TUNEON_W<CONTROL2_SPEC, 22> {
-        TUNEON_W::new(self)
+    pub fn tuneon(&mut self) -> TUNEON_W<CONTROL2_SPEC> {
+        TUNEON_W::new(self, 22)
     }
     #[doc = "Bit 23 - Tuned clock is used for sampling data"]
     #[inline(always)]
     #[must_use]
-    pub fn tuned(&mut self) -> TUNED_W<CONTROL2_SPEC, 23> {
-        TUNED_W::new(self)
+    pub fn tuned(&mut self) -> TUNED_W<CONTROL2_SPEC> {
+        TUNED_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

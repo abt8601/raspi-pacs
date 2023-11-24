@@ -5,39 +5,39 @@ pub type W = crate::W<FR_SPEC>;
 #[doc = "Field `CTS` reader - CTS"]
 pub type CTS_R = crate::BitReader;
 #[doc = "Field `CTS` writer - CTS"]
-pub type CTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSR` reader - DSR"]
 pub type DSR_R = crate::BitReader;
 #[doc = "Field `DSR` writer - DSR"]
-pub type DSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCD` reader - DCD"]
 pub type DCD_R = crate::BitReader;
 #[doc = "Field `DCD` writer - DCD"]
-pub type DCD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSY` reader - BUSY"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `BUSY` writer - BUSY"]
-pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFE` reader - RXFE"]
 pub type RXFE_R = crate::BitReader;
 #[doc = "Field `RXFE` writer - RXFE"]
-pub type RXFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFF` reader - TXFF"]
 pub type TXFF_R = crate::BitReader;
 #[doc = "Field `TXFF` writer - TXFF"]
-pub type TXFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFF` reader - RXFF"]
 pub type RXFF_R = crate::BitReader;
 #[doc = "Field `RXFF` writer - RXFF"]
-pub type RXFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFE` reader - TXFE"]
 pub type TXFE_R = crate::BitReader;
 #[doc = "Field `TXFE` writer - TXFE"]
-pub type TXFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RI` reader - RI"]
 pub type RI_R = crate::BitReader;
 #[doc = "Field `RI` writer - RI"]
-pub type RI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RI_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - CTS"]
     #[inline(always)]
@@ -102,63 +102,63 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<FR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - CTS"]
     #[inline(always)]
     #[must_use]
-    pub fn cts(&mut self) -> CTS_W<FR_SPEC, 0> {
-        CTS_W::new(self)
+    pub fn cts(&mut self) -> CTS_W<FR_SPEC> {
+        CTS_W::new(self, 0)
     }
     #[doc = "Bit 1 - DSR"]
     #[inline(always)]
     #[must_use]
-    pub fn dsr(&mut self) -> DSR_W<FR_SPEC, 1> {
-        DSR_W::new(self)
+    pub fn dsr(&mut self) -> DSR_W<FR_SPEC> {
+        DSR_W::new(self, 1)
     }
     #[doc = "Bit 2 - DCD"]
     #[inline(always)]
     #[must_use]
-    pub fn dcd(&mut self) -> DCD_W<FR_SPEC, 2> {
-        DCD_W::new(self)
+    pub fn dcd(&mut self) -> DCD_W<FR_SPEC> {
+        DCD_W::new(self, 2)
     }
     #[doc = "Bit 3 - BUSY"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<FR_SPEC, 3> {
-        BUSY_W::new(self)
+    pub fn busy(&mut self) -> BUSY_W<FR_SPEC> {
+        BUSY_W::new(self, 3)
     }
     #[doc = "Bit 4 - RXFE"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfe(&mut self) -> RXFE_W<FR_SPEC, 4> {
-        RXFE_W::new(self)
+    pub fn rxfe(&mut self) -> RXFE_W<FR_SPEC> {
+        RXFE_W::new(self, 4)
     }
     #[doc = "Bit 5 - TXFF"]
     #[inline(always)]
     #[must_use]
-    pub fn txff(&mut self) -> TXFF_W<FR_SPEC, 5> {
-        TXFF_W::new(self)
+    pub fn txff(&mut self) -> TXFF_W<FR_SPEC> {
+        TXFF_W::new(self, 5)
     }
     #[doc = "Bit 6 - RXFF"]
     #[inline(always)]
     #[must_use]
-    pub fn rxff(&mut self) -> RXFF_W<FR_SPEC, 6> {
-        RXFF_W::new(self)
+    pub fn rxff(&mut self) -> RXFF_W<FR_SPEC> {
+        RXFF_W::new(self, 6)
     }
     #[doc = "Bit 7 - TXFE"]
     #[inline(always)]
     #[must_use]
-    pub fn txfe(&mut self) -> TXFE_W<FR_SPEC, 7> {
-        TXFE_W::new(self)
+    pub fn txfe(&mut self) -> TXFE_W<FR_SPEC> {
+        TXFE_W::new(self, 7)
     }
     #[doc = "Bit 8 - RI"]
     #[inline(always)]
     #[must_use]
-    pub fn ri(&mut self) -> RI_W<FR_SPEC, 8> {
-        RI_W::new(self)
+    pub fn ri(&mut self) -> RI_W<FR_SPEC> {
+        RI_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

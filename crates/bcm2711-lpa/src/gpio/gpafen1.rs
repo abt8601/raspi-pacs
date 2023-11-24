@@ -5,107 +5,107 @@ pub type W = crate::W<GPAFEN1_SPEC>;
 #[doc = "Field `AFEN32` reader - Async falling enabled 32"]
 pub type AFEN32_R = crate::BitReader;
 #[doc = "Field `AFEN32` writer - Async falling enabled 32"]
-pub type AFEN32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN33` reader - Async falling enabled 33"]
 pub type AFEN33_R = crate::BitReader;
 #[doc = "Field `AFEN33` writer - Async falling enabled 33"]
-pub type AFEN33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN34` reader - Async falling enabled 34"]
 pub type AFEN34_R = crate::BitReader;
 #[doc = "Field `AFEN34` writer - Async falling enabled 34"]
-pub type AFEN34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN35` reader - Async falling enabled 35"]
 pub type AFEN35_R = crate::BitReader;
 #[doc = "Field `AFEN35` writer - Async falling enabled 35"]
-pub type AFEN35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN36` reader - Async falling enabled 36"]
 pub type AFEN36_R = crate::BitReader;
 #[doc = "Field `AFEN36` writer - Async falling enabled 36"]
-pub type AFEN36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN37` reader - Async falling enabled 37"]
 pub type AFEN37_R = crate::BitReader;
 #[doc = "Field `AFEN37` writer - Async falling enabled 37"]
-pub type AFEN37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN38` reader - Async falling enabled 38"]
 pub type AFEN38_R = crate::BitReader;
 #[doc = "Field `AFEN38` writer - Async falling enabled 38"]
-pub type AFEN38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN39` reader - Async falling enabled 39"]
 pub type AFEN39_R = crate::BitReader;
 #[doc = "Field `AFEN39` writer - Async falling enabled 39"]
-pub type AFEN39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN40` reader - Async falling enabled 40"]
 pub type AFEN40_R = crate::BitReader;
 #[doc = "Field `AFEN40` writer - Async falling enabled 40"]
-pub type AFEN40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN41` reader - Async falling enabled 41"]
 pub type AFEN41_R = crate::BitReader;
 #[doc = "Field `AFEN41` writer - Async falling enabled 41"]
-pub type AFEN41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN42` reader - Async falling enabled 42"]
 pub type AFEN42_R = crate::BitReader;
 #[doc = "Field `AFEN42` writer - Async falling enabled 42"]
-pub type AFEN42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN43` reader - Async falling enabled 43"]
 pub type AFEN43_R = crate::BitReader;
 #[doc = "Field `AFEN43` writer - Async falling enabled 43"]
-pub type AFEN43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN44` reader - Async falling enabled 44"]
 pub type AFEN44_R = crate::BitReader;
 #[doc = "Field `AFEN44` writer - Async falling enabled 44"]
-pub type AFEN44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN45` reader - Async falling enabled 45"]
 pub type AFEN45_R = crate::BitReader;
 #[doc = "Field `AFEN45` writer - Async falling enabled 45"]
-pub type AFEN45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN46` reader - Async falling enabled 46"]
 pub type AFEN46_R = crate::BitReader;
 #[doc = "Field `AFEN46` writer - Async falling enabled 46"]
-pub type AFEN46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN47` reader - Async falling enabled 47"]
 pub type AFEN47_R = crate::BitReader;
 #[doc = "Field `AFEN47` writer - Async falling enabled 47"]
-pub type AFEN47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN48` reader - Async falling enabled 48"]
 pub type AFEN48_R = crate::BitReader;
 #[doc = "Field `AFEN48` writer - Async falling enabled 48"]
-pub type AFEN48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN49` reader - Async falling enabled 49"]
 pub type AFEN49_R = crate::BitReader;
 #[doc = "Field `AFEN49` writer - Async falling enabled 49"]
-pub type AFEN49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN49_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN50` reader - Async falling enabled 50"]
 pub type AFEN50_R = crate::BitReader;
 #[doc = "Field `AFEN50` writer - Async falling enabled 50"]
-pub type AFEN50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN51` reader - Async falling enabled 51"]
 pub type AFEN51_R = crate::BitReader;
 #[doc = "Field `AFEN51` writer - Async falling enabled 51"]
-pub type AFEN51_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN51_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN52` reader - Async falling enabled 52"]
 pub type AFEN52_R = crate::BitReader;
 #[doc = "Field `AFEN52` writer - Async falling enabled 52"]
-pub type AFEN52_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN52_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN53` reader - Async falling enabled 53"]
 pub type AFEN53_R = crate::BitReader;
 #[doc = "Field `AFEN53` writer - Async falling enabled 53"]
-pub type AFEN53_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN53_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN54` reader - Async falling enabled 54"]
 pub type AFEN54_R = crate::BitReader;
 #[doc = "Field `AFEN54` writer - Async falling enabled 54"]
-pub type AFEN54_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN54_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN55` reader - Async falling enabled 55"]
 pub type AFEN55_R = crate::BitReader;
 #[doc = "Field `AFEN55` writer - Async falling enabled 55"]
-pub type AFEN55_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN55_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN56` reader - Async falling enabled 56"]
 pub type AFEN56_R = crate::BitReader;
 #[doc = "Field `AFEN56` writer - Async falling enabled 56"]
-pub type AFEN56_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN56_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AFEN57` reader - Async falling enabled 57"]
 pub type AFEN57_R = crate::BitReader;
 #[doc = "Field `AFEN57` writer - Async falling enabled 57"]
-pub type AFEN57_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AFEN57_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Async falling enabled 32"]
     #[inline(always)]
@@ -272,165 +272,165 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPAFEN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Async falling enabled 32"]
     #[inline(always)]
     #[must_use]
-    pub fn afen32(&mut self) -> AFEN32_W<GPAFEN1_SPEC, 0> {
-        AFEN32_W::new(self)
+    pub fn afen32(&mut self) -> AFEN32_W<GPAFEN1_SPEC> {
+        AFEN32_W::new(self, 0)
     }
     #[doc = "Bit 1 - Async falling enabled 33"]
     #[inline(always)]
     #[must_use]
-    pub fn afen33(&mut self) -> AFEN33_W<GPAFEN1_SPEC, 1> {
-        AFEN33_W::new(self)
+    pub fn afen33(&mut self) -> AFEN33_W<GPAFEN1_SPEC> {
+        AFEN33_W::new(self, 1)
     }
     #[doc = "Bit 2 - Async falling enabled 34"]
     #[inline(always)]
     #[must_use]
-    pub fn afen34(&mut self) -> AFEN34_W<GPAFEN1_SPEC, 2> {
-        AFEN34_W::new(self)
+    pub fn afen34(&mut self) -> AFEN34_W<GPAFEN1_SPEC> {
+        AFEN34_W::new(self, 2)
     }
     #[doc = "Bit 3 - Async falling enabled 35"]
     #[inline(always)]
     #[must_use]
-    pub fn afen35(&mut self) -> AFEN35_W<GPAFEN1_SPEC, 3> {
-        AFEN35_W::new(self)
+    pub fn afen35(&mut self) -> AFEN35_W<GPAFEN1_SPEC> {
+        AFEN35_W::new(self, 3)
     }
     #[doc = "Bit 4 - Async falling enabled 36"]
     #[inline(always)]
     #[must_use]
-    pub fn afen36(&mut self) -> AFEN36_W<GPAFEN1_SPEC, 4> {
-        AFEN36_W::new(self)
+    pub fn afen36(&mut self) -> AFEN36_W<GPAFEN1_SPEC> {
+        AFEN36_W::new(self, 4)
     }
     #[doc = "Bit 5 - Async falling enabled 37"]
     #[inline(always)]
     #[must_use]
-    pub fn afen37(&mut self) -> AFEN37_W<GPAFEN1_SPEC, 5> {
-        AFEN37_W::new(self)
+    pub fn afen37(&mut self) -> AFEN37_W<GPAFEN1_SPEC> {
+        AFEN37_W::new(self, 5)
     }
     #[doc = "Bit 6 - Async falling enabled 38"]
     #[inline(always)]
     #[must_use]
-    pub fn afen38(&mut self) -> AFEN38_W<GPAFEN1_SPEC, 6> {
-        AFEN38_W::new(self)
+    pub fn afen38(&mut self) -> AFEN38_W<GPAFEN1_SPEC> {
+        AFEN38_W::new(self, 6)
     }
     #[doc = "Bit 7 - Async falling enabled 39"]
     #[inline(always)]
     #[must_use]
-    pub fn afen39(&mut self) -> AFEN39_W<GPAFEN1_SPEC, 7> {
-        AFEN39_W::new(self)
+    pub fn afen39(&mut self) -> AFEN39_W<GPAFEN1_SPEC> {
+        AFEN39_W::new(self, 7)
     }
     #[doc = "Bit 8 - Async falling enabled 40"]
     #[inline(always)]
     #[must_use]
-    pub fn afen40(&mut self) -> AFEN40_W<GPAFEN1_SPEC, 8> {
-        AFEN40_W::new(self)
+    pub fn afen40(&mut self) -> AFEN40_W<GPAFEN1_SPEC> {
+        AFEN40_W::new(self, 8)
     }
     #[doc = "Bit 9 - Async falling enabled 41"]
     #[inline(always)]
     #[must_use]
-    pub fn afen41(&mut self) -> AFEN41_W<GPAFEN1_SPEC, 9> {
-        AFEN41_W::new(self)
+    pub fn afen41(&mut self) -> AFEN41_W<GPAFEN1_SPEC> {
+        AFEN41_W::new(self, 9)
     }
     #[doc = "Bit 10 - Async falling enabled 42"]
     #[inline(always)]
     #[must_use]
-    pub fn afen42(&mut self) -> AFEN42_W<GPAFEN1_SPEC, 10> {
-        AFEN42_W::new(self)
+    pub fn afen42(&mut self) -> AFEN42_W<GPAFEN1_SPEC> {
+        AFEN42_W::new(self, 10)
     }
     #[doc = "Bit 11 - Async falling enabled 43"]
     #[inline(always)]
     #[must_use]
-    pub fn afen43(&mut self) -> AFEN43_W<GPAFEN1_SPEC, 11> {
-        AFEN43_W::new(self)
+    pub fn afen43(&mut self) -> AFEN43_W<GPAFEN1_SPEC> {
+        AFEN43_W::new(self, 11)
     }
     #[doc = "Bit 12 - Async falling enabled 44"]
     #[inline(always)]
     #[must_use]
-    pub fn afen44(&mut self) -> AFEN44_W<GPAFEN1_SPEC, 12> {
-        AFEN44_W::new(self)
+    pub fn afen44(&mut self) -> AFEN44_W<GPAFEN1_SPEC> {
+        AFEN44_W::new(self, 12)
     }
     #[doc = "Bit 13 - Async falling enabled 45"]
     #[inline(always)]
     #[must_use]
-    pub fn afen45(&mut self) -> AFEN45_W<GPAFEN1_SPEC, 13> {
-        AFEN45_W::new(self)
+    pub fn afen45(&mut self) -> AFEN45_W<GPAFEN1_SPEC> {
+        AFEN45_W::new(self, 13)
     }
     #[doc = "Bit 14 - Async falling enabled 46"]
     #[inline(always)]
     #[must_use]
-    pub fn afen46(&mut self) -> AFEN46_W<GPAFEN1_SPEC, 14> {
-        AFEN46_W::new(self)
+    pub fn afen46(&mut self) -> AFEN46_W<GPAFEN1_SPEC> {
+        AFEN46_W::new(self, 14)
     }
     #[doc = "Bit 15 - Async falling enabled 47"]
     #[inline(always)]
     #[must_use]
-    pub fn afen47(&mut self) -> AFEN47_W<GPAFEN1_SPEC, 15> {
-        AFEN47_W::new(self)
+    pub fn afen47(&mut self) -> AFEN47_W<GPAFEN1_SPEC> {
+        AFEN47_W::new(self, 15)
     }
     #[doc = "Bit 16 - Async falling enabled 48"]
     #[inline(always)]
     #[must_use]
-    pub fn afen48(&mut self) -> AFEN48_W<GPAFEN1_SPEC, 16> {
-        AFEN48_W::new(self)
+    pub fn afen48(&mut self) -> AFEN48_W<GPAFEN1_SPEC> {
+        AFEN48_W::new(self, 16)
     }
     #[doc = "Bit 17 - Async falling enabled 49"]
     #[inline(always)]
     #[must_use]
-    pub fn afen49(&mut self) -> AFEN49_W<GPAFEN1_SPEC, 17> {
-        AFEN49_W::new(self)
+    pub fn afen49(&mut self) -> AFEN49_W<GPAFEN1_SPEC> {
+        AFEN49_W::new(self, 17)
     }
     #[doc = "Bit 18 - Async falling enabled 50"]
     #[inline(always)]
     #[must_use]
-    pub fn afen50(&mut self) -> AFEN50_W<GPAFEN1_SPEC, 18> {
-        AFEN50_W::new(self)
+    pub fn afen50(&mut self) -> AFEN50_W<GPAFEN1_SPEC> {
+        AFEN50_W::new(self, 18)
     }
     #[doc = "Bit 19 - Async falling enabled 51"]
     #[inline(always)]
     #[must_use]
-    pub fn afen51(&mut self) -> AFEN51_W<GPAFEN1_SPEC, 19> {
-        AFEN51_W::new(self)
+    pub fn afen51(&mut self) -> AFEN51_W<GPAFEN1_SPEC> {
+        AFEN51_W::new(self, 19)
     }
     #[doc = "Bit 20 - Async falling enabled 52"]
     #[inline(always)]
     #[must_use]
-    pub fn afen52(&mut self) -> AFEN52_W<GPAFEN1_SPEC, 20> {
-        AFEN52_W::new(self)
+    pub fn afen52(&mut self) -> AFEN52_W<GPAFEN1_SPEC> {
+        AFEN52_W::new(self, 20)
     }
     #[doc = "Bit 21 - Async falling enabled 53"]
     #[inline(always)]
     #[must_use]
-    pub fn afen53(&mut self) -> AFEN53_W<GPAFEN1_SPEC, 21> {
-        AFEN53_W::new(self)
+    pub fn afen53(&mut self) -> AFEN53_W<GPAFEN1_SPEC> {
+        AFEN53_W::new(self, 21)
     }
     #[doc = "Bit 22 - Async falling enabled 54"]
     #[inline(always)]
     #[must_use]
-    pub fn afen54(&mut self) -> AFEN54_W<GPAFEN1_SPEC, 22> {
-        AFEN54_W::new(self)
+    pub fn afen54(&mut self) -> AFEN54_W<GPAFEN1_SPEC> {
+        AFEN54_W::new(self, 22)
     }
     #[doc = "Bit 23 - Async falling enabled 55"]
     #[inline(always)]
     #[must_use]
-    pub fn afen55(&mut self) -> AFEN55_W<GPAFEN1_SPEC, 23> {
-        AFEN55_W::new(self)
+    pub fn afen55(&mut self) -> AFEN55_W<GPAFEN1_SPEC> {
+        AFEN55_W::new(self, 23)
     }
     #[doc = "Bit 24 - Async falling enabled 56"]
     #[inline(always)]
     #[must_use]
-    pub fn afen56(&mut self) -> AFEN56_W<GPAFEN1_SPEC, 24> {
-        AFEN56_W::new(self)
+    pub fn afen56(&mut self) -> AFEN56_W<GPAFEN1_SPEC> {
+        AFEN56_W::new(self, 24)
     }
     #[doc = "Bit 25 - Async falling enabled 57"]
     #[inline(always)]
     #[must_use]
-    pub fn afen57(&mut self) -> AFEN57_W<GPAFEN1_SPEC, 25> {
-        AFEN57_W::new(self)
+    pub fn afen57(&mut self) -> AFEN57_W<GPAFEN1_SPEC> {
+        AFEN57_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

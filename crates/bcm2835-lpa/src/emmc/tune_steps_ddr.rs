@@ -5,7 +5,7 @@ pub type W = crate::W<TUNE_STEPS_DDR_SPEC>;
 #[doc = "Field `STEPS` reader - "]
 pub type STEPS_R = crate::FieldReader;
 #[doc = "Field `STEPS` writer - "]
-pub type STEPS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type STEPS_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TUNE_STEPS_DDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     #[must_use]
-    pub fn steps(&mut self) -> STEPS_W<TUNE_STEPS_DDR_SPEC, 0> {
-        STEPS_W::new(self)
+    pub fn steps(&mut self) -> STEPS_W<TUNE_STEPS_DDR_SPEC> {
+        STEPS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

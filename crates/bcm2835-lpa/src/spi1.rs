@@ -2,18 +2,44 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
+    cntl0: CNTL0,
+    cntl1: CNTL1,
+    stat: STAT,
+    peek: PEEK,
+    io: [IO; 4],
+    txhold: [TXHOLD; 4],
+}
+impl RegisterBlock {
     #[doc = "0x00 - Control 0"]
-    pub cntl0: CNTL0,
+    #[inline(always)]
+    pub const fn cntl0(&self) -> &CNTL0 {
+        &self.cntl0
+    }
     #[doc = "0x04 - Control 1"]
-    pub cntl1: CNTL1,
+    #[inline(always)]
+    pub const fn cntl1(&self) -> &CNTL1 {
+        &self.cntl1
+    }
     #[doc = "0x08 - Status"]
-    pub stat: STAT,
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
     #[doc = "0x0c - Read the RXFIFO without removing an entry"]
-    pub peek: PEEK,
+    #[inline(always)]
+    pub const fn peek(&self) -> &PEEK {
+        &self.peek
+    }
     #[doc = "0x10..0x20 - Writing to the FIFO will deassert CS at the end of the access"]
-    pub io: [IO; 4],
+    #[inline(always)]
+    pub const fn io(&self, n: usize) -> &IO {
+        &self.io[n]
+    }
     #[doc = "0x20..0x30 - Writing to the FIFO will maintain CS at the end of the access"]
-    pub txhold: [TXHOLD; 4],
+    #[inline(always)]
+    pub const fn txhold(&self, n: usize) -> &TXHOLD {
+        &self.txhold[n]
+    }
 }
 #[doc = "CNTL0 (rw) register accessor: Control 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cntl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cntl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cntl0`]
 module"]

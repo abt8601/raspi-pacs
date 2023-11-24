@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR35_SPEC>;
 #[doc = "Field `DSI_1` reader - DSI 1"]
 pub type DSI_1_R = crate::FieldReader;
 #[doc = "Field `DSI_1` writer - DSI 1"]
-pub type DSI_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DSI_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PIXEL_VALVE_0` reader - Pixel Valve 0"]
 pub type PIXEL_VALVE_0_R = crate::FieldReader;
 #[doc = "Field `PIXEL_VALVE_0` writer - Pixel Valve 0"]
-pub type PIXEL_VALVE_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PIXEL_VALVE_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PIXEL_VALVE_1_2` reader - OR of Pixel Valve 1 and 2"]
 pub type PIXEL_VALVE_1_2_R = crate::FieldReader;
 #[doc = "Field `PIXEL_VALVE_1_2` writer - OR of Pixel Valve 1 and 2"]
-pub type PIXEL_VALVE_1_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PIXEL_VALVE_1_2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CPR` reader - CPR"]
 pub type CPR_R = crate::FieldReader;
 #[doc = "Field `CPR` writer - CPR"]
-pub type CPR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CPR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - DSI 1"]
     #[inline(always)]
@@ -58,33 +58,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR35_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - DSI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_ITARGETSR35_SPEC, 0> {
-        DSI_1_W::new(self)
+    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_ITARGETSR35_SPEC> {
+        DSI_1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Pixel Valve 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_ITARGETSR35_SPEC, 8> {
-        PIXEL_VALVE_0_W::new(self)
+    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_ITARGETSR35_SPEC> {
+        PIXEL_VALVE_0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - OR of Pixel Valve 1 and 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_ITARGETSR35_SPEC, 16> {
-        PIXEL_VALVE_1_2_W::new(self)
+    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_ITARGETSR35_SPEC> {
+        PIXEL_VALVE_1_2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - CPR"]
     #[inline(always)]
     #[must_use]
-    pub fn cpr(&mut self) -> CPR_W<GICD_ITARGETSR35_SPEC, 24> {
-        CPR_W::new(self)
+    pub fn cpr(&mut self) -> CPR_W<GICD_ITARGETSR35_SPEC> {
+        CPR_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

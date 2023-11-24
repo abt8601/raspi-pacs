@@ -5,15 +5,15 @@ pub type W = crate::W<DMAC_SPEC>;
 #[doc = "Field `DREQ` reader - DMA threshold for DREQ signal"]
 pub type DREQ_R = crate::FieldReader;
 #[doc = "Field `DREQ` writer - DMA threshold for DREQ signal"]
-pub type DREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PANIC` reader - DMA threshold for panic signal"]
 pub type PANIC_R = crate::FieldReader;
 #[doc = "Field `PANIC` writer - DMA threshold for panic signal"]
-pub type PANIC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PANIC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ENAB` reader - DMA enabled"]
 pub type ENAB_R = crate::BitReader;
 #[doc = "Field `ENAB` writer - DMA enabled"]
-pub type ENAB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENAB_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - DMA threshold for DREQ signal"]
     #[inline(always)]
@@ -42,27 +42,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DMAC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - DMA threshold for DREQ signal"]
     #[inline(always)]
     #[must_use]
-    pub fn dreq(&mut self) -> DREQ_W<DMAC_SPEC, 0> {
-        DREQ_W::new(self)
+    pub fn dreq(&mut self) -> DREQ_W<DMAC_SPEC> {
+        DREQ_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DMA threshold for panic signal"]
     #[inline(always)]
     #[must_use]
-    pub fn panic(&mut self) -> PANIC_W<DMAC_SPEC, 8> {
-        PANIC_W::new(self)
+    pub fn panic(&mut self) -> PANIC_W<DMAC_SPEC> {
+        PANIC_W::new(self, 8)
     }
     #[doc = "Bit 31 - DMA enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn enab(&mut self) -> ENAB_W<DMAC_SPEC, 31> {
-        ENAB_W::new(self)
+    pub fn enab(&mut self) -> ENAB_W<DMAC_SPEC> {
+        ENAB_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

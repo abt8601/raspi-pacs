@@ -5,7 +5,7 @@ pub type W = crate::W<CONFIG0_SPEC>;
 #[doc = "Field `IRQEN` reader - Enable the interrupt when data is available"]
 pub type IRQEN_R = crate::BitReader;
 #[doc = "Field `IRQEN` writer - Enable the interrupt when data is available"]
-pub type IRQEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRQEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable the interrupt when data is available"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CONFIG0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable the interrupt when data is available"]
     #[inline(always)]
     #[must_use]
-    pub fn irqen(&mut self) -> IRQEN_W<CONFIG0_SPEC, 0> {
-        IRQEN_W::new(self)
+    pub fn irqen(&mut self) -> IRQEN_W<CONFIG0_SPEC> {
+        IRQEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

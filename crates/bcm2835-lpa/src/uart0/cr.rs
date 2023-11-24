@@ -5,39 +5,39 @@ pub type W = crate::W<CR_SPEC>;
 #[doc = "Field `UARTEN` reader - UARTEN"]
 pub type UARTEN_R = crate::BitReader;
 #[doc = "Field `UARTEN` writer - UARTEN"]
-pub type UARTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UARTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SIREN` reader - SIREN"]
 pub type SIREN_R = crate::BitReader;
 #[doc = "Field `SIREN` writer - SIREN"]
-pub type SIREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SIREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SIRLP` reader - SIRLP"]
 pub type SIRLP_R = crate::BitReader;
 #[doc = "Field `SIRLP` writer - SIRLP"]
-pub type SIRLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SIRLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXE` reader - TXE"]
 pub type TXE_R = crate::BitReader;
 #[doc = "Field `TXE` writer - TXE"]
-pub type TXE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXE` reader - RXE"]
 pub type RXE_R = crate::BitReader;
 #[doc = "Field `RXE` writer - RXE"]
-pub type RXE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTR` reader - DTR"]
 pub type DTR_R = crate::BitReader;
 #[doc = "Field `DTR` writer - DTR"]
-pub type DTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTS` reader - RTS"]
 pub type RTS_R = crate::BitReader;
 #[doc = "Field `RTS` writer - RTS"]
-pub type RTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTSEN` reader - RTSEN"]
 pub type RTSEN_R = crate::BitReader;
 #[doc = "Field `RTSEN` writer - RTSEN"]
-pub type RTSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTSEN` reader - CTSEN"]
 pub type CTSEN_R = crate::BitReader;
 #[doc = "Field `CTSEN` writer - CTSEN"]
-pub type CTSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - UARTEN"]
     #[inline(always)]
@@ -102,63 +102,63 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - UARTEN"]
     #[inline(always)]
     #[must_use]
-    pub fn uarten(&mut self) -> UARTEN_W<CR_SPEC, 0> {
-        UARTEN_W::new(self)
+    pub fn uarten(&mut self) -> UARTEN_W<CR_SPEC> {
+        UARTEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - SIREN"]
     #[inline(always)]
     #[must_use]
-    pub fn siren(&mut self) -> SIREN_W<CR_SPEC, 1> {
-        SIREN_W::new(self)
+    pub fn siren(&mut self) -> SIREN_W<CR_SPEC> {
+        SIREN_W::new(self, 1)
     }
     #[doc = "Bit 2 - SIRLP"]
     #[inline(always)]
     #[must_use]
-    pub fn sirlp(&mut self) -> SIRLP_W<CR_SPEC, 2> {
-        SIRLP_W::new(self)
+    pub fn sirlp(&mut self) -> SIRLP_W<CR_SPEC> {
+        SIRLP_W::new(self, 2)
     }
     #[doc = "Bit 8 - TXE"]
     #[inline(always)]
     #[must_use]
-    pub fn txe(&mut self) -> TXE_W<CR_SPEC, 8> {
-        TXE_W::new(self)
+    pub fn txe(&mut self) -> TXE_W<CR_SPEC> {
+        TXE_W::new(self, 8)
     }
     #[doc = "Bit 9 - RXE"]
     #[inline(always)]
     #[must_use]
-    pub fn rxe(&mut self) -> RXE_W<CR_SPEC, 9> {
-        RXE_W::new(self)
+    pub fn rxe(&mut self) -> RXE_W<CR_SPEC> {
+        RXE_W::new(self, 9)
     }
     #[doc = "Bit 10 - DTR"]
     #[inline(always)]
     #[must_use]
-    pub fn dtr(&mut self) -> DTR_W<CR_SPEC, 10> {
-        DTR_W::new(self)
+    pub fn dtr(&mut self) -> DTR_W<CR_SPEC> {
+        DTR_W::new(self, 10)
     }
     #[doc = "Bit 11 - RTS"]
     #[inline(always)]
     #[must_use]
-    pub fn rts(&mut self) -> RTS_W<CR_SPEC, 11> {
-        RTS_W::new(self)
+    pub fn rts(&mut self) -> RTS_W<CR_SPEC> {
+        RTS_W::new(self, 11)
     }
     #[doc = "Bit 14 - RTSEN"]
     #[inline(always)]
     #[must_use]
-    pub fn rtsen(&mut self) -> RTSEN_W<CR_SPEC, 14> {
-        RTSEN_W::new(self)
+    pub fn rtsen(&mut self) -> RTSEN_W<CR_SPEC> {
+        RTSEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - CTSEN"]
     #[inline(always)]
     #[must_use]
-    pub fn ctsen(&mut self) -> CTSEN_W<CR_SPEC, 15> {
-        CTSEN_W::new(self)
+    pub fn ctsen(&mut self) -> CTSEN_W<CR_SPEC> {
+        CTSEN_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,83 +5,83 @@ pub type W = crate::W<CS_SPEC>;
 #[doc = "Field `SPI_0` reader - SPI0 interrupt active"]
 pub type SPI_0_R = crate::BitReader;
 #[doc = "Field `SPI_0` writer - SPI0 interrupt active"]
-pub type SPI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_1` reader - SPI1 interrupt active"]
 pub type SPI_1_R = crate::BitReader;
 #[doc = "Field `SPI_1` writer - SPI1 interrupt active"]
-pub type SPI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_2` reader - SPI2 interrupt active"]
 pub type SPI_2_R = crate::BitReader;
 #[doc = "Field `SPI_2` writer - SPI2 interrupt active"]
-pub type SPI_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_3` reader - SPI3 interrupt active"]
 pub type SPI_3_R = crate::BitReader;
 #[doc = "Field `SPI_3` writer - SPI3 interrupt active"]
-pub type SPI_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_4` reader - SPI4 interrupt active"]
 pub type SPI_4_R = crate::BitReader;
 #[doc = "Field `SPI_4` writer - SPI4 interrupt active"]
-pub type SPI_4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_5` reader - SPI5 interrupt active"]
 pub type SPI_5_R = crate::BitReader;
 #[doc = "Field `SPI_5` writer - SPI5 interrupt active"]
-pub type SPI_5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_6` reader - SPI6 interrupt active"]
 pub type SPI_6_R = crate::BitReader;
 #[doc = "Field `SPI_6` writer - SPI6 interrupt active"]
-pub type SPI_6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_0` reader - I2C0 interrupt active"]
 pub type I2C_0_R = crate::BitReader;
 #[doc = "Field `I2C_0` writer - I2C0 interrupt active"]
-pub type I2C_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_1` reader - I2C1 interrupt active"]
 pub type I2C_1_R = crate::BitReader;
 #[doc = "Field `I2C_1` writer - I2C1 interrupt active"]
-pub type I2C_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_2` reader - I2C2 interrupt active"]
 pub type I2C_2_R = crate::BitReader;
 #[doc = "Field `I2C_2` writer - I2C2 interrupt active"]
-pub type I2C_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_3` reader - I2C3 interrupt active"]
 pub type I2C_3_R = crate::BitReader;
 #[doc = "Field `I2C_3` writer - I2C3 interrupt active"]
-pub type I2C_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_4` reader - I2C4 interrupt active"]
 pub type I2C_4_R = crate::BitReader;
 #[doc = "Field `I2C_4` writer - I2C4 interrupt active"]
-pub type I2C_4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_5` reader - I2C5 interrupt active"]
 pub type I2C_5_R = crate::BitReader;
 #[doc = "Field `I2C_5` writer - I2C5 interrupt active"]
-pub type I2C_5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_6` reader - I2C6 interrupt active"]
 pub type I2C_6_R = crate::BitReader;
 #[doc = "Field `I2C_6` writer - I2C6 interrupt active"]
-pub type I2C_6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C_7` reader - I2C7 interrupt active"]
 pub type I2C_7_R = crate::BitReader;
 #[doc = "Field `I2C_7` writer - I2C7 interrupt active"]
-pub type I2C_7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_5` reader - UART5 interrupt active"]
 pub type UART_5_R = crate::BitReader;
 #[doc = "Field `UART_5` writer - UART5 interrupt active"]
-pub type UART_5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_4` reader - UART4 interrupt active"]
 pub type UART_4_R = crate::BitReader;
 #[doc = "Field `UART_4` writer - UART4 interrupt active"]
-pub type UART_4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_3` reader - UART3 interrupt active"]
 pub type UART_3_R = crate::BitReader;
 #[doc = "Field `UART_3` writer - UART3 interrupt active"]
-pub type UART_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_2` reader - UART2 interrupt active"]
 pub type UART_2_R = crate::BitReader;
 #[doc = "Field `UART_2` writer - UART2 interrupt active"]
-pub type UART_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART_0` reader - UART0 interrupt active"]
 pub type UART_0_R = crate::BitReader;
 #[doc = "Field `UART_0` writer - UART0 interrupt active"]
-pub type UART_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SPI0 interrupt active"]
     #[inline(always)]
@@ -212,129 +212,129 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - SPI0 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_0(&mut self) -> SPI_0_W<CS_SPEC, 0> {
-        SPI_0_W::new(self)
+    pub fn spi_0(&mut self) -> SPI_0_W<CS_SPEC> {
+        SPI_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI1 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_1(&mut self) -> SPI_1_W<CS_SPEC, 1> {
-        SPI_1_W::new(self)
+    pub fn spi_1(&mut self) -> SPI_1_W<CS_SPEC> {
+        SPI_1_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI2 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_2(&mut self) -> SPI_2_W<CS_SPEC, 2> {
-        SPI_2_W::new(self)
+    pub fn spi_2(&mut self) -> SPI_2_W<CS_SPEC> {
+        SPI_2_W::new(self, 2)
     }
     #[doc = "Bit 3 - SPI3 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_3(&mut self) -> SPI_3_W<CS_SPEC, 3> {
-        SPI_3_W::new(self)
+    pub fn spi_3(&mut self) -> SPI_3_W<CS_SPEC> {
+        SPI_3_W::new(self, 3)
     }
     #[doc = "Bit 4 - SPI4 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_4(&mut self) -> SPI_4_W<CS_SPEC, 4> {
-        SPI_4_W::new(self)
+    pub fn spi_4(&mut self) -> SPI_4_W<CS_SPEC> {
+        SPI_4_W::new(self, 4)
     }
     #[doc = "Bit 5 - SPI5 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_5(&mut self) -> SPI_5_W<CS_SPEC, 5> {
-        SPI_5_W::new(self)
+    pub fn spi_5(&mut self) -> SPI_5_W<CS_SPEC> {
+        SPI_5_W::new(self, 5)
     }
     #[doc = "Bit 6 - SPI6 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_6(&mut self) -> SPI_6_W<CS_SPEC, 6> {
-        SPI_6_W::new(self)
+    pub fn spi_6(&mut self) -> SPI_6_W<CS_SPEC> {
+        SPI_6_W::new(self, 6)
     }
     #[doc = "Bit 8 - I2C0 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_0(&mut self) -> I2C_0_W<CS_SPEC, 8> {
-        I2C_0_W::new(self)
+    pub fn i2c_0(&mut self) -> I2C_0_W<CS_SPEC> {
+        I2C_0_W::new(self, 8)
     }
     #[doc = "Bit 9 - I2C1 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_1(&mut self) -> I2C_1_W<CS_SPEC, 9> {
-        I2C_1_W::new(self)
+    pub fn i2c_1(&mut self) -> I2C_1_W<CS_SPEC> {
+        I2C_1_W::new(self, 9)
     }
     #[doc = "Bit 10 - I2C2 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_2(&mut self) -> I2C_2_W<CS_SPEC, 10> {
-        I2C_2_W::new(self)
+    pub fn i2c_2(&mut self) -> I2C_2_W<CS_SPEC> {
+        I2C_2_W::new(self, 10)
     }
     #[doc = "Bit 11 - I2C3 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_3(&mut self) -> I2C_3_W<CS_SPEC, 11> {
-        I2C_3_W::new(self)
+    pub fn i2c_3(&mut self) -> I2C_3_W<CS_SPEC> {
+        I2C_3_W::new(self, 11)
     }
     #[doc = "Bit 12 - I2C4 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_4(&mut self) -> I2C_4_W<CS_SPEC, 12> {
-        I2C_4_W::new(self)
+    pub fn i2c_4(&mut self) -> I2C_4_W<CS_SPEC> {
+        I2C_4_W::new(self, 12)
     }
     #[doc = "Bit 13 - I2C5 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_5(&mut self) -> I2C_5_W<CS_SPEC, 13> {
-        I2C_5_W::new(self)
+    pub fn i2c_5(&mut self) -> I2C_5_W<CS_SPEC> {
+        I2C_5_W::new(self, 13)
     }
     #[doc = "Bit 14 - I2C6 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_6(&mut self) -> I2C_6_W<CS_SPEC, 14> {
-        I2C_6_W::new(self)
+    pub fn i2c_6(&mut self) -> I2C_6_W<CS_SPEC> {
+        I2C_6_W::new(self, 14)
     }
     #[doc = "Bit 15 - I2C7 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_7(&mut self) -> I2C_7_W<CS_SPEC, 15> {
-        I2C_7_W::new(self)
+    pub fn i2c_7(&mut self) -> I2C_7_W<CS_SPEC> {
+        I2C_7_W::new(self, 15)
     }
     #[doc = "Bit 16 - UART5 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_5(&mut self) -> UART_5_W<CS_SPEC, 16> {
-        UART_5_W::new(self)
+    pub fn uart_5(&mut self) -> UART_5_W<CS_SPEC> {
+        UART_5_W::new(self, 16)
     }
     #[doc = "Bit 17 - UART4 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_4(&mut self) -> UART_4_W<CS_SPEC, 17> {
-        UART_4_W::new(self)
+    pub fn uart_4(&mut self) -> UART_4_W<CS_SPEC> {
+        UART_4_W::new(self, 17)
     }
     #[doc = "Bit 18 - UART3 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_3(&mut self) -> UART_3_W<CS_SPEC, 18> {
-        UART_3_W::new(self)
+    pub fn uart_3(&mut self) -> UART_3_W<CS_SPEC> {
+        UART_3_W::new(self, 18)
     }
     #[doc = "Bit 19 - UART2 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_2(&mut self) -> UART_2_W<CS_SPEC, 19> {
-        UART_2_W::new(self)
+    pub fn uart_2(&mut self) -> UART_2_W<CS_SPEC> {
+        UART_2_W::new(self, 19)
     }
     #[doc = "Bit 20 - UART0 interrupt active"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_0(&mut self) -> UART_0_W<CS_SPEC, 20> {
-        UART_0_W::new(self)
+    pub fn uart_0(&mut self) -> UART_0_W<CS_SPEC> {
+        UART_0_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

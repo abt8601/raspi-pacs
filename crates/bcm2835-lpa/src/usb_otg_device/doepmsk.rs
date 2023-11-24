@@ -5,31 +5,31 @@ pub type W = crate::W<DOEPMSK_SPEC>;
 #[doc = "Field `XFRCM` reader - Transfer completed interrupt mask"]
 pub type XFRCM_R = crate::BitReader;
 #[doc = "Field `XFRCM` writer - Transfer completed interrupt mask"]
-pub type XFRCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFRCM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDM` reader - Endpoint disabled interrupt mask"]
 pub type EPDM_R = crate::BitReader;
 #[doc = "Field `EPDM` writer - Endpoint disabled interrupt mask"]
-pub type EPDM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STUPM` reader - SETUP phase done mask"]
 pub type STUPM_R = crate::BitReader;
 #[doc = "Field `STUPM` writer - SETUP phase done mask"]
-pub type STUPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STUPM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTEPDM` reader - OUT token received when endpoint disabled mask"]
 pub type OTEPDM_R = crate::BitReader;
 #[doc = "Field `OTEPDM` writer - OUT token received when endpoint disabled mask"]
-pub type OTEPDM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTEPDM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `B2BSTUP` reader - Back-to-back SETUP packets received mask"]
 pub type B2BSTUP_R = crate::BitReader;
 #[doc = "Field `B2BSTUP` writer - Back-to-back SETUP packets received mask"]
-pub type B2BSTUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type B2BSTUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPEM` reader - OUT packet error mask"]
 pub type OPEM_R = crate::BitReader;
 #[doc = "Field `OPEM` writer - OUT packet error mask"]
-pub type OPEM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OPEM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOIM` reader - BNA interrupt mask"]
 pub type BOIM_R = crate::BitReader;
 #[doc = "Field `BOIM` writer - BNA interrupt mask"]
-pub type BOIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
@@ -82,51 +82,51 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DOEPMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrcm(&mut self) -> XFRCM_W<DOEPMSK_SPEC, 0> {
-        XFRCM_W::new(self)
+    pub fn xfrcm(&mut self) -> XFRCM_W<DOEPMSK_SPEC> {
+        XFRCM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn epdm(&mut self) -> EPDM_W<DOEPMSK_SPEC, 1> {
-        EPDM_W::new(self)
+    pub fn epdm(&mut self) -> EPDM_W<DOEPMSK_SPEC> {
+        EPDM_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase done mask"]
     #[inline(always)]
     #[must_use]
-    pub fn stupm(&mut self) -> STUPM_W<DOEPMSK_SPEC, 3> {
-        STUPM_W::new(self)
+    pub fn stupm(&mut self) -> STUPM_W<DOEPMSK_SPEC> {
+        STUPM_W::new(self, 3)
     }
     #[doc = "Bit 4 - OUT token received when endpoint disabled mask"]
     #[inline(always)]
     #[must_use]
-    pub fn otepdm(&mut self) -> OTEPDM_W<DOEPMSK_SPEC, 4> {
-        OTEPDM_W::new(self)
+    pub fn otepdm(&mut self) -> OTEPDM_W<DOEPMSK_SPEC> {
+        OTEPDM_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets received mask"]
     #[inline(always)]
     #[must_use]
-    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPMSK_SPEC, 6> {
-        B2BSTUP_W::new(self)
+    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPMSK_SPEC> {
+        B2BSTUP_W::new(self, 6)
     }
     #[doc = "Bit 8 - OUT packet error mask"]
     #[inline(always)]
     #[must_use]
-    pub fn opem(&mut self) -> OPEM_W<DOEPMSK_SPEC, 8> {
-        OPEM_W::new(self)
+    pub fn opem(&mut self) -> OPEM_W<DOEPMSK_SPEC> {
+        OPEM_W::new(self, 8)
     }
     #[doc = "Bit 9 - BNA interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn boim(&mut self) -> BOIM_W<DOEPMSK_SPEC, 9> {
-        BOIM_W::new(self)
+    pub fn boim(&mut self) -> BOIM_W<DOEPMSK_SPEC> {
+        BOIM_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

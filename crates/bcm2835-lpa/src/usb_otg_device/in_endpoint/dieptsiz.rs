@@ -5,11 +5,11 @@ pub type W = crate::W<DIEPTSIZ_SPEC>;
 #[doc = "Field `XFRSIZ` reader - Transfer size"]
 pub type XFRSIZ_R = crate::FieldReader;
 #[doc = "Field `XFRSIZ` writer - Transfer size"]
-pub type XFRSIZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type XFRSIZ_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PKTCNT` reader - Packet count"]
 pub type PKTCNT_R = crate::FieldReader;
 #[doc = "Field `PKTCNT` writer - Packet count"]
-pub type PKTCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PKTCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:6 - Transfer size"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DIEPTSIZ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - Transfer size"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrsiz(&mut self) -> XFRSIZ_W<DIEPTSIZ_SPEC, 0> {
-        XFRSIZ_W::new(self)
+    pub fn xfrsiz(&mut self) -> XFRSIZ_W<DIEPTSIZ_SPEC> {
+        XFRSIZ_W::new(self, 0)
     }
     #[doc = "Bits 19:20 - Packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn pktcnt(&mut self) -> PKTCNT_W<DIEPTSIZ_SPEC, 19> {
-        PKTCNT_W::new(self)
+    pub fn pktcnt(&mut self) -> PKTCNT_W<DIEPTSIZ_SPEC> {
+        PKTCNT_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

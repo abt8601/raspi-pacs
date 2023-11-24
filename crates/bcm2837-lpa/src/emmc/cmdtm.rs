@@ -5,7 +5,7 @@ pub type W = crate::W<CMDTM_SPEC>;
 #[doc = "Field `TM_BLKCNT_EN` reader - Enable block counter"]
 pub type TM_BLKCNT_EN_R = crate::BitReader;
 #[doc = "Field `TM_BLKCNT_EN` writer - Enable block counter"]
-pub type TM_BLKCNT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TM_BLKCNT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TM_AUTO_CMD_EN` reader - Command after completion"]
 pub type TM_AUTO_CMD_EN_R = crate::FieldReader<TM_AUTO_CMD_EN_A>;
 #[doc = "Command after completion\n\nValue on reset: 0"]
@@ -56,9 +56,8 @@ impl TM_AUTO_CMD_EN_R {
     }
 }
 #[doc = "Field `TM_AUTO_CMD_EN` writer - Command after completion"]
-pub type TM_AUTO_CMD_EN_W<'a, REG, const O: u8> =
-    crate::FieldWriter<'a, REG, 2, O, TM_AUTO_CMD_EN_A>;
-impl<'a, REG, const O: u8> TM_AUTO_CMD_EN_W<'a, REG, O>
+pub type TM_AUTO_CMD_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TM_AUTO_CMD_EN_A>;
+impl<'a, REG> TM_AUTO_CMD_EN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -116,8 +115,8 @@ impl TM_DAT_DIR_R {
     }
 }
 #[doc = "Field `TM_DAT_DIR` writer - Direction of data transfer"]
-pub type TM_DAT_DIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TM_DAT_DIR_A>;
-impl<'a, REG, const O: u8> TM_DAT_DIR_W<'a, REG, O>
+pub type TM_DAT_DIR_W<'a, REG> = crate::BitWriter<'a, REG, TM_DAT_DIR_A>;
+impl<'a, REG> TM_DAT_DIR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -169,8 +168,8 @@ impl TM_MULTI_BLOCK_R {
     }
 }
 #[doc = "Field `TM_MULTI_BLOCK` writer - Type of data transfer"]
-pub type TM_MULTI_BLOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TM_MULTI_BLOCK_A>;
-impl<'a, REG, const O: u8> TM_MULTI_BLOCK_W<'a, REG, O>
+pub type TM_MULTI_BLOCK_W<'a, REG> = crate::BitWriter<'a, REG, TM_MULTI_BLOCK_A>;
+impl<'a, REG> TM_MULTI_BLOCK_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -243,8 +242,8 @@ impl CMD_RSPNS_TYPE_R {
     }
 }
 #[doc = "Field `CMD_RSPNS_TYPE` writer - Type of expected response"]
-pub type CMD_RSPNS_TYPE_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, RESPONSE_A>;
-impl<'a, REG, const O: u8> CMD_RSPNS_TYPE_W<'a, REG, O>
+pub type CMD_RSPNS_TYPE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, RESPONSE_A>;
+impl<'a, REG> CMD_RSPNS_TYPE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -273,15 +272,15 @@ where
 #[doc = "Field `CMD_CRCCHK_EN` reader - Check the responses CRC"]
 pub type CMD_CRCCHK_EN_R = crate::BitReader;
 #[doc = "Field `CMD_CRCCHK_EN` writer - Check the responses CRC"]
-pub type CMD_CRCCHK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_CRCCHK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMD_IXCHK_EN` reader - Check that the response has the same command index"]
 pub type CMD_IXCHK_EN_R = crate::BitReader;
 #[doc = "Field `CMD_IXCHK_EN` writer - Check that the response has the same command index"]
-pub type CMD_IXCHK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_IXCHK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMD_ISDATA` reader - Command involves data"]
 pub type CMD_ISDATA_R = crate::BitReader;
 #[doc = "Field `CMD_ISDATA` writer - Command involves data"]
-pub type CMD_ISDATA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_ISDATA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMD_TYPE` reader - Type of command to be issued"]
 pub type CMD_TYPE_R = crate::FieldReader<CMD_TYPE_A>;
 #[doc = "Type of command to be issued\n\nValue on reset: 0"]
@@ -340,8 +339,8 @@ impl CMD_TYPE_R {
     }
 }
 #[doc = "Field `CMD_TYPE` writer - Type of command to be issued"]
-pub type CMD_TYPE_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, CMD_TYPE_A>;
-impl<'a, REG, const O: u8> CMD_TYPE_W<'a, REG, O>
+pub type CMD_TYPE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CMD_TYPE_A>;
+impl<'a, REG> CMD_TYPE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -370,7 +369,7 @@ where
 #[doc = "Field `CMD_INDEX` reader - Command index to be issued"]
 pub type CMD_INDEX_R = crate::FieldReader;
 #[doc = "Field `CMD_INDEX` writer - Command index to be issued"]
-pub type CMD_INDEX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CMD_INDEX_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bit 1 - Enable block counter"]
     #[inline(always)]
@@ -459,69 +458,69 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CMDTM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Enable block counter"]
     #[inline(always)]
     #[must_use]
-    pub fn tm_blkcnt_en(&mut self) -> TM_BLKCNT_EN_W<CMDTM_SPEC, 1> {
-        TM_BLKCNT_EN_W::new(self)
+    pub fn tm_blkcnt_en(&mut self) -> TM_BLKCNT_EN_W<CMDTM_SPEC> {
+        TM_BLKCNT_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Command after completion"]
     #[inline(always)]
     #[must_use]
-    pub fn tm_auto_cmd_en(&mut self) -> TM_AUTO_CMD_EN_W<CMDTM_SPEC, 2> {
-        TM_AUTO_CMD_EN_W::new(self)
+    pub fn tm_auto_cmd_en(&mut self) -> TM_AUTO_CMD_EN_W<CMDTM_SPEC> {
+        TM_AUTO_CMD_EN_W::new(self, 2)
     }
     #[doc = "Bit 4 - Direction of data transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn tm_dat_dir(&mut self) -> TM_DAT_DIR_W<CMDTM_SPEC, 4> {
-        TM_DAT_DIR_W::new(self)
+    pub fn tm_dat_dir(&mut self) -> TM_DAT_DIR_W<CMDTM_SPEC> {
+        TM_DAT_DIR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Type of data transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn tm_multi_block(&mut self) -> TM_MULTI_BLOCK_W<CMDTM_SPEC, 5> {
-        TM_MULTI_BLOCK_W::new(self)
+    pub fn tm_multi_block(&mut self) -> TM_MULTI_BLOCK_W<CMDTM_SPEC> {
+        TM_MULTI_BLOCK_W::new(self, 5)
     }
     #[doc = "Bits 16:17 - Type of expected response"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_rspns_type(&mut self) -> CMD_RSPNS_TYPE_W<CMDTM_SPEC, 16> {
-        CMD_RSPNS_TYPE_W::new(self)
+    pub fn cmd_rspns_type(&mut self) -> CMD_RSPNS_TYPE_W<CMDTM_SPEC> {
+        CMD_RSPNS_TYPE_W::new(self, 16)
     }
     #[doc = "Bit 19 - Check the responses CRC"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_crcchk_en(&mut self) -> CMD_CRCCHK_EN_W<CMDTM_SPEC, 19> {
-        CMD_CRCCHK_EN_W::new(self)
+    pub fn cmd_crcchk_en(&mut self) -> CMD_CRCCHK_EN_W<CMDTM_SPEC> {
+        CMD_CRCCHK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Check that the response has the same command index"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_ixchk_en(&mut self) -> CMD_IXCHK_EN_W<CMDTM_SPEC, 20> {
-        CMD_IXCHK_EN_W::new(self)
+    pub fn cmd_ixchk_en(&mut self) -> CMD_IXCHK_EN_W<CMDTM_SPEC> {
+        CMD_IXCHK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Command involves data"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_isdata(&mut self) -> CMD_ISDATA_W<CMDTM_SPEC, 21> {
-        CMD_ISDATA_W::new(self)
+    pub fn cmd_isdata(&mut self) -> CMD_ISDATA_W<CMDTM_SPEC> {
+        CMD_ISDATA_W::new(self, 21)
     }
     #[doc = "Bits 22:23 - Type of command to be issued"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_type(&mut self) -> CMD_TYPE_W<CMDTM_SPEC, 22> {
-        CMD_TYPE_W::new(self)
+    pub fn cmd_type(&mut self) -> CMD_TYPE_W<CMDTM_SPEC> {
+        CMD_TYPE_W::new(self, 22)
     }
     #[doc = "Bits 24:29 - Command index to be issued"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_index(&mut self) -> CMD_INDEX_W<CMDTM_SPEC, 24> {
-        CMD_INDEX_W::new(self)
+    pub fn cmd_index(&mut self) -> CMD_INDEX_W<CMDTM_SPEC> {
+        CMD_INDEX_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,35 +5,35 @@ pub type W = crate::W<STAT_SPEC>;
 #[doc = "Field `BIT_COUNT` reader - Number of bits left to be processed."]
 pub type BIT_COUNT_R = crate::FieldReader;
 #[doc = "Field `BIT_COUNT` writer - Number of bits left to be processed."]
-pub type BIT_COUNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type BIT_COUNT_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `BUSY` reader - Indicates a transfer is ongoing"]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `BUSY` writer - Indicates a transfer is ongoing"]
-pub type BUSY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_EMPTY` reader - RX FIFO is empty"]
 pub type RX_EMPTY_R = crate::BitReader;
 #[doc = "Field `RX_EMPTY` writer - RX FIFO is empty"]
-pub type RX_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_FULL` reader - RX FIFO is full"]
 pub type RX_FULL_R = crate::BitReader;
 #[doc = "Field `RX_FULL` writer - RX FIFO is full"]
-pub type RX_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EMPTY` reader - TX FIFO is empty"]
 pub type TX_EMPTY_R = crate::BitReader;
 #[doc = "Field `TX_EMPTY` writer - TX FIFO is empty"]
-pub type TX_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_FULL` reader - TX FIFO is full"]
 pub type TX_FULL_R = crate::BitReader;
 #[doc = "Field `TX_FULL` writer - TX FIFO is full"]
-pub type TX_FULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_FULL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_LEVEL` reader - Number of entries in RX FIFO"]
 pub type RX_LEVEL_R = crate::FieldReader;
 #[doc = "Field `RX_LEVEL` writer - Number of entries in RX FIFO"]
-pub type RX_LEVEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type RX_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TX_LEVEL` reader - Number of entries in TX FIFO"]
 pub type TX_LEVEL_R = crate::FieldReader;
 #[doc = "Field `TX_LEVEL` writer - Number of entries in TX FIFO"]
-pub type TX_LEVEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TX_LEVEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:5 - Number of bits left to be processed."]
     #[inline(always)]
@@ -92,57 +92,57 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STAT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - Number of bits left to be processed."]
     #[inline(always)]
     #[must_use]
-    pub fn bit_count(&mut self) -> BIT_COUNT_W<STAT_SPEC, 0> {
-        BIT_COUNT_W::new(self)
+    pub fn bit_count(&mut self) -> BIT_COUNT_W<STAT_SPEC> {
+        BIT_COUNT_W::new(self, 0)
     }
     #[doc = "Bit 6 - Indicates a transfer is ongoing"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<STAT_SPEC, 6> {
-        BUSY_W::new(self)
+    pub fn busy(&mut self) -> BUSY_W<STAT_SPEC> {
+        BUSY_W::new(self, 6)
     }
     #[doc = "Bit 7 - RX FIFO is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_empty(&mut self) -> RX_EMPTY_W<STAT_SPEC, 7> {
-        RX_EMPTY_W::new(self)
+    pub fn rx_empty(&mut self) -> RX_EMPTY_W<STAT_SPEC> {
+        RX_EMPTY_W::new(self, 7)
     }
     #[doc = "Bit 8 - RX FIFO is full"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_full(&mut self) -> RX_FULL_W<STAT_SPEC, 8> {
-        RX_FULL_W::new(self)
+    pub fn rx_full(&mut self) -> RX_FULL_W<STAT_SPEC> {
+        RX_FULL_W::new(self, 8)
     }
     #[doc = "Bit 9 - TX FIFO is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_empty(&mut self) -> TX_EMPTY_W<STAT_SPEC, 9> {
-        TX_EMPTY_W::new(self)
+    pub fn tx_empty(&mut self) -> TX_EMPTY_W<STAT_SPEC> {
+        TX_EMPTY_W::new(self, 9)
     }
     #[doc = "Bit 10 - TX FIFO is full"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_full(&mut self) -> TX_FULL_W<STAT_SPEC, 10> {
-        TX_FULL_W::new(self)
+    pub fn tx_full(&mut self) -> TX_FULL_W<STAT_SPEC> {
+        TX_FULL_W::new(self, 10)
     }
     #[doc = "Bits 16:19 - Number of entries in RX FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_level(&mut self) -> RX_LEVEL_W<STAT_SPEC, 16> {
-        RX_LEVEL_W::new(self)
+    pub fn rx_level(&mut self) -> RX_LEVEL_W<STAT_SPEC> {
+        RX_LEVEL_W::new(self, 16)
     }
     #[doc = "Bits 24:27 - Number of entries in TX FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_level(&mut self) -> TX_LEVEL_W<STAT_SPEC, 24> {
-        TX_LEVEL_W::new(self)
+    pub fn tx_level(&mut self) -> TX_LEVEL_W<STAT_SPEC> {
+        TX_LEVEL_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

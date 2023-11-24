@@ -5,7 +5,7 @@ pub type W = crate::W<HCFG_SPEC>;
 #[doc = "Field `FSLSPCS` reader - FS/LS PHY clock select"]
 pub type FSLSPCS_R = crate::FieldReader;
 #[doc = "Field `FSLSPCS` writer - FS/LS PHY clock select"]
-pub type FSLSPCS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FSLSPCS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FSLSS` reader - FS- and LS-only support"]
 pub type FSLSS_R = crate::BitReader;
 impl R {
@@ -30,15 +30,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - FS/LS PHY clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn fslspcs(&mut self) -> FSLSPCS_W<HCFG_SPEC, 0> {
-        FSLSPCS_W::new(self)
+    pub fn fslspcs(&mut self) -> FSLSPCS_W<HCFG_SPEC> {
+        FSLSPCS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

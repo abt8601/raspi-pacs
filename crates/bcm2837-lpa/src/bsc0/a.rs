@@ -5,7 +5,7 @@ pub type W = crate::W<A_SPEC>;
 #[doc = "Field `ADDR` reader - Slave address"]
 pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - Slave address"]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - Slave address"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<A_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - Slave address"]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<A_SPEC, 0> {
-        ADDR_W::new(self)
+    pub fn addr(&mut self) -> ADDR_W<A_SPEC> {
+        ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<DAINTMSK_SPEC>;
 #[doc = "Field `IEPM` reader - IN EP interrupt mask bits"]
 pub type IEPM_R = crate::FieldReader<u16>;
 #[doc = "Field `IEPM` writer - IN EP interrupt mask bits"]
-pub type IEPM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type IEPM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `OEPM` reader - OUT EP interrupt mask bits"]
 pub type OEPM_R = crate::FieldReader<u16>;
 #[doc = "Field `OEPM` writer - OUT EP interrupt mask bits"]
-pub type OEPM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type OEPM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - IN EP interrupt mask bits"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DAINTMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - IN EP interrupt mask bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iepm(&mut self) -> IEPM_W<DAINTMSK_SPEC, 0> {
-        IEPM_W::new(self)
+    pub fn iepm(&mut self) -> IEPM_W<DAINTMSK_SPEC> {
+        IEPM_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - OUT EP interrupt mask bits"]
     #[inline(always)]
     #[must_use]
-    pub fn oepm(&mut self) -> OEPM_W<DAINTMSK_SPEC, 16> {
-        OEPM_W::new(self)
+    pub fn oepm(&mut self) -> OEPM_W<DAINTMSK_SPEC> {
+        OEPM_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<GICD_CTLR_SPEC>;
 #[doc = "Field `ENABLE_GROUP0` reader - Enable group 0 interrupts"]
 pub type ENABLE_GROUP0_R = crate::BitReader;
 #[doc = "Field `ENABLE_GROUP0` writer - Enable group 0 interrupts"]
-pub type ENABLE_GROUP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_GROUP0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENABLE_GROUP1` reader - Enable group 1 interrupts"]
 pub type ENABLE_GROUP1_R = crate::BitReader;
 #[doc = "Field `ENABLE_GROUP1` writer - Enable group 1 interrupts"]
-pub type ENABLE_GROUP1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_GROUP1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable group 0 interrupts"]
     #[inline(always)]
@@ -38,21 +38,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_CTLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable group 0 interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_group0(&mut self) -> ENABLE_GROUP0_W<GICD_CTLR_SPEC, 0> {
-        ENABLE_GROUP0_W::new(self)
+    pub fn enable_group0(&mut self) -> ENABLE_GROUP0_W<GICD_CTLR_SPEC> {
+        ENABLE_GROUP0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable group 1 interrupts"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_group1(&mut self) -> ENABLE_GROUP1_W<GICD_CTLR_SPEC, 1> {
-        ENABLE_GROUP1_W::new(self)
+    pub fn enable_group1(&mut self) -> ENABLE_GROUP1_W<GICD_CTLR_SPEC> {
+        ENABLE_GROUP1_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

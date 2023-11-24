@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR38_SPEC>;
 #[doc = "Field `SDHOST` reader - SDHOST"]
 pub type SDHOST_R = crate::FieldReader;
 #[doc = "Field `SDHOST` writer - SDHOST"]
-pub type SDHOST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SDHOST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `UART` reader - OR of all PL011 UARTs"]
 pub type UART_R = crate::FieldReader;
 #[doc = "Field `UART` writer - OR of all PL011 UARTs"]
-pub type UART_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type UART_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ETH_PCIE` reader - OR of all ETH_PCIe L2"]
 pub type ETH_PCIE_R = crate::FieldReader;
 #[doc = "Field `ETH_PCIE` writer - OR of all ETH_PCIe L2"]
-pub type ETH_PCIE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ETH_PCIE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `VEC` reader - VEC"]
 pub type VEC_R = crate::FieldReader;
 #[doc = "Field `VEC` writer - VEC"]
-pub type VEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type VEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - SDHOST"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR38_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - SDHOST"]
     #[inline(always)]
     #[must_use]
-    pub fn sdhost(&mut self) -> SDHOST_W<GICD_ITARGETSR38_SPEC, 0> {
-        SDHOST_W::new(self)
+    pub fn sdhost(&mut self) -> SDHOST_W<GICD_ITARGETSR38_SPEC> {
+        SDHOST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - OR of all PL011 UARTs"]
     #[inline(always)]
     #[must_use]
-    pub fn uart(&mut self) -> UART_W<GICD_ITARGETSR38_SPEC, 8> {
-        UART_W::new(self)
+    pub fn uart(&mut self) -> UART_W<GICD_ITARGETSR38_SPEC> {
+        UART_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - OR of all ETH_PCIe L2"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_ITARGETSR38_SPEC, 16> {
-        ETH_PCIE_W::new(self)
+    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_ITARGETSR38_SPEC> {
+        ETH_PCIE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - VEC"]
     #[inline(always)]
     #[must_use]
-    pub fn vec(&mut self) -> VEC_W<GICD_ITARGETSR38_SPEC, 24> {
-        VEC_W::new(self)
+    pub fn vec(&mut self) -> VEC_W<GICD_ITARGETSR38_SPEC> {
+        VEC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

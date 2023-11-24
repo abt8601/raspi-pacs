@@ -5,43 +5,43 @@ pub type W = crate::W<STATUS_SPEC>;
 #[doc = "Field `CMD_INHIBIT` reader - Command line still in use"]
 pub type CMD_INHIBIT_R = crate::BitReader;
 #[doc = "Field `CMD_INHIBIT` writer - Command line still in use"]
-pub type CMD_INHIBIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_INHIBIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAT_INHIBIT` reader - Data lines still in use"]
 pub type DAT_INHIBIT_R = crate::BitReader;
 #[doc = "Field `DAT_INHIBIT` writer - Data lines still in use"]
-pub type DAT_INHIBIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAT_INHIBIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAT_ACTIVE` reader - At least one data line is active"]
 pub type DAT_ACTIVE_R = crate::BitReader;
 #[doc = "Field `DAT_ACTIVE` writer - At least one data line is active"]
-pub type DAT_ACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAT_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WRITE_TRANSFER` reader - Write transfer is active"]
 pub type WRITE_TRANSFER_R = crate::BitReader;
 #[doc = "Field `WRITE_TRANSFER` writer - Write transfer is active"]
-pub type WRITE_TRANSFER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRITE_TRANSFER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `READ_TRANSFER` reader - Read transfer is active"]
 pub type READ_TRANSFER_R = crate::BitReader;
 #[doc = "Field `READ_TRANSFER` writer - Read transfer is active"]
-pub type READ_TRANSFER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READ_TRANSFER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUFFER_WRITE_ENABLE` reader - The buffer has space for new data"]
 pub type BUFFER_WRITE_ENABLE_R = crate::BitReader;
 #[doc = "Field `BUFFER_WRITE_ENABLE` writer - The buffer has space for new data"]
-pub type BUFFER_WRITE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUFFER_WRITE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUFFER_READ_ENABLE` reader - New data is available to read"]
 pub type BUFFER_READ_ENABLE_R = crate::BitReader;
 #[doc = "Field `BUFFER_READ_ENABLE` writer - New data is available to read"]
-pub type BUFFER_READ_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUFFER_READ_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAT_LEVEL0` reader - Value of DAT\\[3:0\\]"]
 pub type DAT_LEVEL0_R = crate::FieldReader;
 #[doc = "Field `DAT_LEVEL0` writer - Value of DAT\\[3:0\\]"]
-pub type DAT_LEVEL0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DAT_LEVEL0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CMD_LEVEL` reader - Value of CMD"]
 pub type CMD_LEVEL_R = crate::BitReader;
 #[doc = "Field `CMD_LEVEL` writer - Value of CMD"]
-pub type CMD_LEVEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_LEVEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAT_LEVEL1` reader - Value of DAT\\[7:4\\]"]
 pub type DAT_LEVEL1_R = crate::FieldReader;
 #[doc = "Field `DAT_LEVEL1` writer - Value of DAT\\[7:4\\]"]
-pub type DAT_LEVEL1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DAT_LEVEL1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0 - Command line still in use"]
     #[inline(always)]
@@ -124,69 +124,69 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Command line still in use"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_inhibit(&mut self) -> CMD_INHIBIT_W<STATUS_SPEC, 0> {
-        CMD_INHIBIT_W::new(self)
+    pub fn cmd_inhibit(&mut self) -> CMD_INHIBIT_W<STATUS_SPEC> {
+        CMD_INHIBIT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data lines still in use"]
     #[inline(always)]
     #[must_use]
-    pub fn dat_inhibit(&mut self) -> DAT_INHIBIT_W<STATUS_SPEC, 1> {
-        DAT_INHIBIT_W::new(self)
+    pub fn dat_inhibit(&mut self) -> DAT_INHIBIT_W<STATUS_SPEC> {
+        DAT_INHIBIT_W::new(self, 1)
     }
     #[doc = "Bit 2 - At least one data line is active"]
     #[inline(always)]
     #[must_use]
-    pub fn dat_active(&mut self) -> DAT_ACTIVE_W<STATUS_SPEC, 2> {
-        DAT_ACTIVE_W::new(self)
+    pub fn dat_active(&mut self) -> DAT_ACTIVE_W<STATUS_SPEC> {
+        DAT_ACTIVE_W::new(self, 2)
     }
     #[doc = "Bit 8 - Write transfer is active"]
     #[inline(always)]
     #[must_use]
-    pub fn write_transfer(&mut self) -> WRITE_TRANSFER_W<STATUS_SPEC, 8> {
-        WRITE_TRANSFER_W::new(self)
+    pub fn write_transfer(&mut self) -> WRITE_TRANSFER_W<STATUS_SPEC> {
+        WRITE_TRANSFER_W::new(self, 8)
     }
     #[doc = "Bit 9 - Read transfer is active"]
     #[inline(always)]
     #[must_use]
-    pub fn read_transfer(&mut self) -> READ_TRANSFER_W<STATUS_SPEC, 9> {
-        READ_TRANSFER_W::new(self)
+    pub fn read_transfer(&mut self) -> READ_TRANSFER_W<STATUS_SPEC> {
+        READ_TRANSFER_W::new(self, 9)
     }
     #[doc = "Bit 10 - The buffer has space for new data"]
     #[inline(always)]
     #[must_use]
-    pub fn buffer_write_enable(&mut self) -> BUFFER_WRITE_ENABLE_W<STATUS_SPEC, 10> {
-        BUFFER_WRITE_ENABLE_W::new(self)
+    pub fn buffer_write_enable(&mut self) -> BUFFER_WRITE_ENABLE_W<STATUS_SPEC> {
+        BUFFER_WRITE_ENABLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - New data is available to read"]
     #[inline(always)]
     #[must_use]
-    pub fn buffer_read_enable(&mut self) -> BUFFER_READ_ENABLE_W<STATUS_SPEC, 11> {
-        BUFFER_READ_ENABLE_W::new(self)
+    pub fn buffer_read_enable(&mut self) -> BUFFER_READ_ENABLE_W<STATUS_SPEC> {
+        BUFFER_READ_ENABLE_W::new(self, 11)
     }
     #[doc = "Bits 20:23 - Value of DAT\\[3:0\\]"]
     #[inline(always)]
     #[must_use]
-    pub fn dat_level0(&mut self) -> DAT_LEVEL0_W<STATUS_SPEC, 20> {
-        DAT_LEVEL0_W::new(self)
+    pub fn dat_level0(&mut self) -> DAT_LEVEL0_W<STATUS_SPEC> {
+        DAT_LEVEL0_W::new(self, 20)
     }
     #[doc = "Bit 24 - Value of CMD"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_level(&mut self) -> CMD_LEVEL_W<STATUS_SPEC, 24> {
-        CMD_LEVEL_W::new(self)
+    pub fn cmd_level(&mut self) -> CMD_LEVEL_W<STATUS_SPEC> {
+        CMD_LEVEL_W::new(self, 24)
     }
     #[doc = "Bits 25:28 - Value of DAT\\[7:4\\]"]
     #[inline(always)]
     #[must_use]
-    pub fn dat_level1(&mut self) -> DAT_LEVEL1_W<STATUS_SPEC, 25> {
-        DAT_LEVEL1_W::new(self)
+    pub fn dat_level1(&mut self) -> DAT_LEVEL1_W<STATUS_SPEC> {
+        DAT_LEVEL1_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

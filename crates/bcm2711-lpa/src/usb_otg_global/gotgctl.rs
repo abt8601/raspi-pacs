@@ -7,21 +7,21 @@ pub type SRQSCS_R = crate::BitReader;
 #[doc = "Field `SRQ` reader - Session request"]
 pub type SRQ_R = crate::BitReader;
 #[doc = "Field `SRQ` writer - Session request"]
-pub type SRQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNGSCS` reader - Host negotiation success"]
 pub type HNGSCS_R = crate::BitReader;
 #[doc = "Field `HNPRQ` reader - HNP request"]
 pub type HNPRQ_R = crate::BitReader;
 #[doc = "Field `HNPRQ` writer - HNP request"]
-pub type HNPRQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNPRQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSHNPEN` reader - Host set HNP enable"]
 pub type HSHNPEN_R = crate::BitReader;
 #[doc = "Field `HSHNPEN` writer - Host set HNP enable"]
-pub type HSHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSHNPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DHNPEN` reader - Device HNP enabled"]
 pub type DHNPEN_R = crate::BitReader;
 #[doc = "Field `DHNPEN` writer - Device HNP enabled"]
-pub type DHNPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DHNPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CIDSTS` reader - Connector ID status"]
 pub type CIDSTS_R = crate::BitReader;
 #[doc = "Field `DBCT` reader - Long/short debounce time"]
@@ -100,33 +100,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GOTGCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Session request"]
     #[inline(always)]
     #[must_use]
-    pub fn srq(&mut self) -> SRQ_W<GOTGCTL_SPEC, 1> {
-        SRQ_W::new(self)
+    pub fn srq(&mut self) -> SRQ_W<GOTGCTL_SPEC> {
+        SRQ_W::new(self, 1)
     }
     #[doc = "Bit 9 - HNP request"]
     #[inline(always)]
     #[must_use]
-    pub fn hnprq(&mut self) -> HNPRQ_W<GOTGCTL_SPEC, 9> {
-        HNPRQ_W::new(self)
+    pub fn hnprq(&mut self) -> HNPRQ_W<GOTGCTL_SPEC> {
+        HNPRQ_W::new(self, 9)
     }
     #[doc = "Bit 10 - Host set HNP enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hshnpen(&mut self) -> HSHNPEN_W<GOTGCTL_SPEC, 10> {
-        HSHNPEN_W::new(self)
+    pub fn hshnpen(&mut self) -> HSHNPEN_W<GOTGCTL_SPEC> {
+        HSHNPEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Device HNP enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn dhnpen(&mut self) -> DHNPEN_W<GOTGCTL_SPEC, 11> {
-        DHNPEN_W::new(self)
+    pub fn dhnpen(&mut self) -> DHNPEN_W<GOTGCTL_SPEC> {
+        DHNPEN_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

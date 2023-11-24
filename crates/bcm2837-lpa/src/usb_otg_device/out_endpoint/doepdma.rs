@@ -5,7 +5,7 @@ pub type W = crate::W<DOEPDMA_SPEC>;
 #[doc = "Field `DMAADDR` reader - DMA address"]
 pub type DMAADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMAADDR` writer - DMA address"]
-pub type DMAADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type DMAADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - DMA address"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DOEPDMA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - DMA address"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaaddr(&mut self) -> DMAADDR_W<DOEPDMA_SPEC, 0> {
-        DMAADDR_W::new(self)
+    pub fn dmaaddr(&mut self) -> DMAADDR_W<DOEPDMA_SPEC> {
+        DMAADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

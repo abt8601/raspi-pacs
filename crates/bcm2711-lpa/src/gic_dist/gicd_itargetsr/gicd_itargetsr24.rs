@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR24_SPEC>;
 #[doc = "Field `TIMER_0` reader - Timer 0"]
 pub type TIMER_0_R = crate::FieldReader;
 #[doc = "Field `TIMER_0` writer - Timer 0"]
-pub type TIMER_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER_1` reader - Timer 1"]
 pub type TIMER_1_R = crate::FieldReader;
 #[doc = "Field `TIMER_1` writer - Timer 1"]
-pub type TIMER_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER_2` reader - Timer 2"]
 pub type TIMER_2_R = crate::FieldReader;
 #[doc = "Field `TIMER_2` writer - Timer 2"]
-pub type TIMER_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TIMER_3` reader - Timer 3"]
 pub type TIMER_3_R = crate::FieldReader;
 #[doc = "Field `TIMER_3` writer - Timer 3"]
-pub type TIMER_3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Timer 0"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR24_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Timer 0"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ITARGETSR24_SPEC, 0> {
-        TIMER_0_W::new(self)
+    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ITARGETSR24_SPEC> {
+        TIMER_0_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Timer 1"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ITARGETSR24_SPEC, 8> {
-        TIMER_1_W::new(self)
+    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ITARGETSR24_SPEC> {
+        TIMER_1_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Timer 2"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ITARGETSR24_SPEC, 16> {
-        TIMER_2_W::new(self)
+    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ITARGETSR24_SPEC> {
+        TIMER_2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Timer 3"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ITARGETSR24_SPEC, 24> {
-        TIMER_3_W::new(self)
+    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ITARGETSR24_SPEC> {
+        TIMER_3_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,47 +5,47 @@ pub type W = crate::W<IMSC_SPEC>;
 #[doc = "Field `RIMIM` reader - RIMIM"]
 pub type RIMIM_R = crate::BitReader;
 #[doc = "Field `RIMIM` writer - RIMIM"]
-pub type RIMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RIMIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTSMIM` reader - CTSMIM"]
 pub type CTSMIM_R = crate::BitReader;
 #[doc = "Field `CTSMIM` writer - CTSMIM"]
-pub type CTSMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTSMIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCDMIM` reader - DCDMIM"]
 pub type DCDMIM_R = crate::BitReader;
 #[doc = "Field `DCDMIM` writer - DCDMIM"]
-pub type DCDMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCDMIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSRMIM` reader - DSRMIM"]
 pub type DSRMIM_R = crate::BitReader;
 #[doc = "Field `DSRMIM` writer - DSRMIM"]
-pub type DSRMIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DSRMIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXIM` reader - RXIM"]
 pub type RXIM_R = crate::BitReader;
 #[doc = "Field `RXIM` writer - RXIM"]
-pub type RXIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXIM` reader - TXIM"]
 pub type TXIM_R = crate::BitReader;
 #[doc = "Field `TXIM` writer - TXIM"]
-pub type TXIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTIM` reader - RTIM"]
 pub type RTIM_R = crate::BitReader;
 #[doc = "Field `RTIM` writer - RTIM"]
-pub type RTIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEIM` reader - FEIM"]
 pub type FEIM_R = crate::BitReader;
 #[doc = "Field `FEIM` writer - FEIM"]
-pub type FEIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PEIM` reader - PEIM"]
 pub type PEIM_R = crate::BitReader;
 #[doc = "Field `PEIM` writer - PEIM"]
-pub type PEIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PEIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BEIM` reader - BEIM"]
 pub type BEIM_R = crate::BitReader;
 #[doc = "Field `BEIM` writer - BEIM"]
-pub type BEIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BEIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OEIM` reader - OEIM"]
 pub type OEIM_R = crate::BitReader;
 #[doc = "Field `OEIM` writer - OEIM"]
-pub type OEIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OEIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - RIMIM"]
     #[inline(always)]
@@ -122,75 +122,75 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IMSC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - RIMIM"]
     #[inline(always)]
     #[must_use]
-    pub fn rimim(&mut self) -> RIMIM_W<IMSC_SPEC, 0> {
-        RIMIM_W::new(self)
+    pub fn rimim(&mut self) -> RIMIM_W<IMSC_SPEC> {
+        RIMIM_W::new(self, 0)
     }
     #[doc = "Bit 1 - CTSMIM"]
     #[inline(always)]
     #[must_use]
-    pub fn ctsmim(&mut self) -> CTSMIM_W<IMSC_SPEC, 1> {
-        CTSMIM_W::new(self)
+    pub fn ctsmim(&mut self) -> CTSMIM_W<IMSC_SPEC> {
+        CTSMIM_W::new(self, 1)
     }
     #[doc = "Bit 2 - DCDMIM"]
     #[inline(always)]
     #[must_use]
-    pub fn dcdmim(&mut self) -> DCDMIM_W<IMSC_SPEC, 2> {
-        DCDMIM_W::new(self)
+    pub fn dcdmim(&mut self) -> DCDMIM_W<IMSC_SPEC> {
+        DCDMIM_W::new(self, 2)
     }
     #[doc = "Bit 3 - DSRMIM"]
     #[inline(always)]
     #[must_use]
-    pub fn dsrmim(&mut self) -> DSRMIM_W<IMSC_SPEC, 3> {
-        DSRMIM_W::new(self)
+    pub fn dsrmim(&mut self) -> DSRMIM_W<IMSC_SPEC> {
+        DSRMIM_W::new(self, 3)
     }
     #[doc = "Bit 4 - RXIM"]
     #[inline(always)]
     #[must_use]
-    pub fn rxim(&mut self) -> RXIM_W<IMSC_SPEC, 4> {
-        RXIM_W::new(self)
+    pub fn rxim(&mut self) -> RXIM_W<IMSC_SPEC> {
+        RXIM_W::new(self, 4)
     }
     #[doc = "Bit 5 - TXIM"]
     #[inline(always)]
     #[must_use]
-    pub fn txim(&mut self) -> TXIM_W<IMSC_SPEC, 5> {
-        TXIM_W::new(self)
+    pub fn txim(&mut self) -> TXIM_W<IMSC_SPEC> {
+        TXIM_W::new(self, 5)
     }
     #[doc = "Bit 6 - RTIM"]
     #[inline(always)]
     #[must_use]
-    pub fn rtim(&mut self) -> RTIM_W<IMSC_SPEC, 6> {
-        RTIM_W::new(self)
+    pub fn rtim(&mut self) -> RTIM_W<IMSC_SPEC> {
+        RTIM_W::new(self, 6)
     }
     #[doc = "Bit 7 - FEIM"]
     #[inline(always)]
     #[must_use]
-    pub fn feim(&mut self) -> FEIM_W<IMSC_SPEC, 7> {
-        FEIM_W::new(self)
+    pub fn feim(&mut self) -> FEIM_W<IMSC_SPEC> {
+        FEIM_W::new(self, 7)
     }
     #[doc = "Bit 8 - PEIM"]
     #[inline(always)]
     #[must_use]
-    pub fn peim(&mut self) -> PEIM_W<IMSC_SPEC, 8> {
-        PEIM_W::new(self)
+    pub fn peim(&mut self) -> PEIM_W<IMSC_SPEC> {
+        PEIM_W::new(self, 8)
     }
     #[doc = "Bit 9 - BEIM"]
     #[inline(always)]
     #[must_use]
-    pub fn beim(&mut self) -> BEIM_W<IMSC_SPEC, 9> {
-        BEIM_W::new(self)
+    pub fn beim(&mut self) -> BEIM_W<IMSC_SPEC> {
+        BEIM_W::new(self, 9)
     }
     #[doc = "Bit 10 - OEIM"]
     #[inline(always)]
     #[must_use]
-    pub fn oeim(&mut self) -> OEIM_W<IMSC_SPEC, 10> {
-        OEIM_W::new(self)
+    pub fn oeim(&mut self) -> OEIM_W<IMSC_SPEC> {
+        OEIM_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

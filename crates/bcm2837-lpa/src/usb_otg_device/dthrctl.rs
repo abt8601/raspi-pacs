@@ -5,27 +5,27 @@ pub type W = crate::W<DTHRCTL_SPEC>;
 #[doc = "Field `NONISOTHREN` reader - Nonisochronous IN endpoints threshold enable"]
 pub type NONISOTHREN_R = crate::BitReader;
 #[doc = "Field `NONISOTHREN` writer - Nonisochronous IN endpoints threshold enable"]
-pub type NONISOTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NONISOTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ISOTHREN` reader - ISO IN endpoint threshold enable"]
 pub type ISOTHREN_R = crate::BitReader;
 #[doc = "Field `ISOTHREN` writer - ISO IN endpoint threshold enable"]
-pub type ISOTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ISOTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXTHRLEN` reader - Transmit threshold length"]
 pub type TXTHRLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TXTHRLEN` writer - Transmit threshold length"]
-pub type TXTHRLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type TXTHRLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `RXTHREN` reader - Receive threshold enable"]
 pub type RXTHREN_R = crate::BitReader;
 #[doc = "Field `RXTHREN` writer - Receive threshold enable"]
-pub type RXTHREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXTHREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXTHRLEN` reader - Receive threshold length"]
 pub type RXTHRLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `RXTHRLEN` writer - Receive threshold length"]
-pub type RXTHRLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type RXTHRLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `ARPEN` reader - Arbiter parking enable"]
 pub type ARPEN_R = crate::BitReader;
 #[doc = "Field `ARPEN` writer - Arbiter parking enable"]
-pub type ARPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Nonisochronous IN endpoints threshold enable"]
     #[inline(always)]
@@ -72,45 +72,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DTHRCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Nonisochronous IN endpoints threshold enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nonisothren(&mut self) -> NONISOTHREN_W<DTHRCTL_SPEC, 0> {
-        NONISOTHREN_W::new(self)
+    pub fn nonisothren(&mut self) -> NONISOTHREN_W<DTHRCTL_SPEC> {
+        NONISOTHREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - ISO IN endpoint threshold enable"]
     #[inline(always)]
     #[must_use]
-    pub fn isothren(&mut self) -> ISOTHREN_W<DTHRCTL_SPEC, 1> {
-        ISOTHREN_W::new(self)
+    pub fn isothren(&mut self) -> ISOTHREN_W<DTHRCTL_SPEC> {
+        ISOTHREN_W::new(self, 1)
     }
     #[doc = "Bits 2:10 - Transmit threshold length"]
     #[inline(always)]
     #[must_use]
-    pub fn txthrlen(&mut self) -> TXTHRLEN_W<DTHRCTL_SPEC, 2> {
-        TXTHRLEN_W::new(self)
+    pub fn txthrlen(&mut self) -> TXTHRLEN_W<DTHRCTL_SPEC> {
+        TXTHRLEN_W::new(self, 2)
     }
     #[doc = "Bit 16 - Receive threshold enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rxthren(&mut self) -> RXTHREN_W<DTHRCTL_SPEC, 16> {
-        RXTHREN_W::new(self)
+    pub fn rxthren(&mut self) -> RXTHREN_W<DTHRCTL_SPEC> {
+        RXTHREN_W::new(self, 16)
     }
     #[doc = "Bits 17:25 - Receive threshold length"]
     #[inline(always)]
     #[must_use]
-    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<DTHRCTL_SPEC, 17> {
-        RXTHRLEN_W::new(self)
+    pub fn rxthrlen(&mut self) -> RXTHRLEN_W<DTHRCTL_SPEC> {
+        RXTHRLEN_W::new(self, 17)
     }
     #[doc = "Bit 27 - Arbiter parking enable"]
     #[inline(always)]
     #[must_use]
-    pub fn arpen(&mut self) -> ARPEN_W<DTHRCTL_SPEC, 27> {
-        ARPEN_W::new(self)
+    pub fn arpen(&mut self) -> ARPEN_W<DTHRCTL_SPEC> {
+        ARPEN_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

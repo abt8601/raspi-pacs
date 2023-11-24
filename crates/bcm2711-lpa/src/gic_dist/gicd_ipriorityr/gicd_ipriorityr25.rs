@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR25_SPEC>;
 #[doc = "Field `H264_0` reader - H264 0"]
 pub type H264_0_R = crate::FieldReader;
 #[doc = "Field `H264_0` writer - H264 0"]
-pub type H264_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type H264_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `H264_1` reader - H264 1"]
 pub type H264_1_R = crate::FieldReader;
 #[doc = "Field `H264_1` writer - H264 1"]
-pub type H264_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type H264_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `H264_2` reader - H264 2"]
 pub type H264_2_R = crate::FieldReader;
 #[doc = "Field `H264_2` writer - H264 2"]
-pub type H264_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type H264_2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `JPEG` reader - JPEG"]
 pub type JPEG_R = crate::FieldReader;
 #[doc = "Field `JPEG` writer - JPEG"]
-pub type JPEG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type JPEG_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - H264 0"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR25_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - H264 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_0(&mut self) -> H264_0_W<GICD_IPRIORITYR25_SPEC, 0> {
-        H264_0_W::new(self)
+    pub fn h264_0(&mut self) -> H264_0_W<GICD_IPRIORITYR25_SPEC> {
+        H264_0_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - H264 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_1(&mut self) -> H264_1_W<GICD_IPRIORITYR25_SPEC, 8> {
-        H264_1_W::new(self)
+    pub fn h264_1(&mut self) -> H264_1_W<GICD_IPRIORITYR25_SPEC> {
+        H264_1_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - H264 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_2(&mut self) -> H264_2_W<GICD_IPRIORITYR25_SPEC, 16> {
-        H264_2_W::new(self)
+    pub fn h264_2(&mut self) -> H264_2_W<GICD_IPRIORITYR25_SPEC> {
+        H264_2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - JPEG"]
     #[inline(always)]
     #[must_use]
-    pub fn jpeg(&mut self) -> JPEG_W<GICD_IPRIORITYR25_SPEC, 24> {
-        JPEG_W::new(self)
+    pub fn jpeg(&mut self) -> JPEG_W<GICD_IPRIORITYR25_SPEC> {
+        JPEG_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

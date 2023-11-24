@@ -39,8 +39,8 @@ impl SMI_R {
     }
 }
 #[doc = "Field `SMI` writer - SMI"]
-pub type SMI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SMI_A>;
-impl<'a, REG, const O: u8> SMI_W<'a, REG, O>
+pub type SMI_W<'a, REG> = crate::BitWriter<'a, REG, SMI_A>;
+impl<'a, REG> SMI_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl GPIO_0_R {
     }
 }
 #[doc = "Field `GPIO_0` writer - GPIO 0"]
-pub type GPIO_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, GPIO_0_A>;
-impl<'a, REG, const O: u8> GPIO_0_W<'a, REG, O>
+pub type GPIO_0_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_0_A>;
+impl<'a, REG> GPIO_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl GPIO_1_R {
     }
 }
 #[doc = "Field `GPIO_1` writer - GPIO 1"]
-pub type GPIO_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, GPIO_1_A>;
-impl<'a, REG, const O: u8> GPIO_1_W<'a, REG, O>
+pub type GPIO_1_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_1_A>;
+impl<'a, REG> GPIO_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl GPIO_2_R {
     }
 }
 #[doc = "Field `GPIO_2` writer - GPIO 2"]
-pub type GPIO_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, GPIO_2_A>;
-impl<'a, REG, const O: u8> GPIO_2_W<'a, REG, O>
+pub type GPIO_2_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_2_A>;
+impl<'a, REG> GPIO_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -251,8 +251,8 @@ impl GPIO_3_R {
     }
 }
 #[doc = "Field `GPIO_3` writer - GPIO 3"]
-pub type GPIO_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, GPIO_3_A>;
-impl<'a, REG, const O: u8> GPIO_3_W<'a, REG, O>
+pub type GPIO_3_W<'a, REG> = crate::BitWriter<'a, REG, GPIO_3_A>;
+impl<'a, REG> GPIO_3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -304,8 +304,8 @@ impl I2C_R {
     }
 }
 #[doc = "Field `I2C` writer - OR of all I2C"]
-pub type I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, I2C_A>;
-impl<'a, REG, const O: u8> I2C_W<'a, REG, O>
+pub type I2C_W<'a, REG> = crate::BitWriter<'a, REG, I2C_A>;
+impl<'a, REG> I2C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -357,8 +357,8 @@ impl SPI_R {
     }
 }
 #[doc = "Field `SPI` writer - OR of all SPI"]
-pub type SPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SPI_A>;
-impl<'a, REG, const O: u8> SPI_W<'a, REG, O>
+pub type SPI_W<'a, REG> = crate::BitWriter<'a, REG, SPI_A>;
+impl<'a, REG> SPI_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -410,8 +410,8 @@ impl PCM_I2S_R {
     }
 }
 #[doc = "Field `PCM_I2S` writer - PCM/I2S"]
-pub type PCM_I2S_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PCM_I2S_A>;
-impl<'a, REG, const O: u8> PCM_I2S_W<'a, REG, O>
+pub type PCM_I2S_W<'a, REG> = crate::BitWriter<'a, REG, PCM_I2S_A>;
+impl<'a, REG> PCM_I2S_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -463,8 +463,8 @@ impl SDHOST_R {
     }
 }
 #[doc = "Field `SDHOST` writer - SDHOST"]
-pub type SDHOST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SDHOST_A>;
-impl<'a, REG, const O: u8> SDHOST_W<'a, REG, O>
+pub type SDHOST_W<'a, REG> = crate::BitWriter<'a, REG, SDHOST_A>;
+impl<'a, REG> SDHOST_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -516,8 +516,8 @@ impl UART_R {
     }
 }
 #[doc = "Field `UART` writer - OR of all PL011 UARTs"]
-pub type UART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, UART_A>;
-impl<'a, REG, const O: u8> UART_W<'a, REG, O>
+pub type UART_W<'a, REG> = crate::BitWriter<'a, REG, UART_A>;
+impl<'a, REG> UART_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -569,8 +569,8 @@ impl ETH_PCIE_R {
     }
 }
 #[doc = "Field `ETH_PCIE` writer - OR of all ETH_PCIe L2"]
-pub type ETH_PCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ETH_PCIE_A>;
-impl<'a, REG, const O: u8> ETH_PCIE_W<'a, REG, O>
+pub type ETH_PCIE_W<'a, REG> = crate::BitWriter<'a, REG, ETH_PCIE_A>;
+impl<'a, REG> ETH_PCIE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -622,8 +622,8 @@ impl VEC_R {
     }
 }
 #[doc = "Field `VEC` writer - VEC"]
-pub type VEC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, VEC_A>;
-impl<'a, REG, const O: u8> VEC_W<'a, REG, O>
+pub type VEC_W<'a, REG> = crate::BitWriter<'a, REG, VEC_A>;
+impl<'a, REG> VEC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -675,8 +675,8 @@ impl CPG_R {
     }
 }
 #[doc = "Field `CPG` writer - CPG"]
-pub type CPG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CPG_A>;
-impl<'a, REG, const O: u8> CPG_W<'a, REG, O>
+pub type CPG_W<'a, REG> = crate::BitWriter<'a, REG, CPG_A>;
+impl<'a, REG> CPG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -728,8 +728,8 @@ impl RNG_R {
     }
 }
 #[doc = "Field `RNG` writer - RNG"]
-pub type RNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RNG_A>;
-impl<'a, REG, const O: u8> RNG_W<'a, REG, O>
+pub type RNG_W<'a, REG> = crate::BitWriter<'a, REG, RNG_A>;
+impl<'a, REG> RNG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -781,8 +781,8 @@ impl EMMC_R {
     }
 }
 #[doc = "Field `EMMC` writer - OR of EMMC and EMMC2"]
-pub type EMMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EMMC_A>;
-impl<'a, REG, const O: u8> EMMC_W<'a, REG, O>
+pub type EMMC_W<'a, REG> = crate::BitWriter<'a, REG, EMMC_A>;
+impl<'a, REG> EMMC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -834,8 +834,8 @@ impl ETH_PCIE_SECURE_R {
     }
 }
 #[doc = "Field `ETH_PCIE_SECURE` writer - ETH_PCIe secure"]
-pub type ETH_PCIE_SECURE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ETH_PCIE_SECURE_A>;
-impl<'a, REG, const O: u8> ETH_PCIE_SECURE_W<'a, REG, O>
+pub type ETH_PCIE_SECURE_W<'a, REG> = crate::BitWriter<'a, REG, ETH_PCIE_SECURE_A>;
+impl<'a, REG> ETH_PCIE_SECURE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -959,105 +959,105 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR36_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - SMI"]
     #[inline(always)]
     #[must_use]
-    pub fn smi(&mut self) -> SMI_W<GICD_ICFGR36_SPEC, 1> {
-        SMI_W::new(self)
+    pub fn smi(&mut self) -> SMI_W<GICD_ICFGR36_SPEC> {
+        SMI_W::new(self, 1)
     }
     #[doc = "Bit 3 - GPIO 0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_ICFGR36_SPEC, 3> {
-        GPIO_0_W::new(self)
+    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_ICFGR36_SPEC> {
+        GPIO_0_W::new(self, 3)
     }
     #[doc = "Bit 5 - GPIO 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_ICFGR36_SPEC, 5> {
-        GPIO_1_W::new(self)
+    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_ICFGR36_SPEC> {
+        GPIO_1_W::new(self, 5)
     }
     #[doc = "Bit 7 - GPIO 2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_ICFGR36_SPEC, 7> {
-        GPIO_2_W::new(self)
+    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_ICFGR36_SPEC> {
+        GPIO_2_W::new(self, 7)
     }
     #[doc = "Bit 9 - GPIO 3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_ICFGR36_SPEC, 9> {
-        GPIO_3_W::new(self)
+    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_ICFGR36_SPEC> {
+        GPIO_3_W::new(self, 9)
     }
     #[doc = "Bit 11 - OR of all I2C"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c(&mut self) -> I2C_W<GICD_ICFGR36_SPEC, 11> {
-        I2C_W::new(self)
+    pub fn i2c(&mut self) -> I2C_W<GICD_ICFGR36_SPEC> {
+        I2C_W::new(self, 11)
     }
     #[doc = "Bit 13 - OR of all SPI"]
     #[inline(always)]
     #[must_use]
-    pub fn spi(&mut self) -> SPI_W<GICD_ICFGR36_SPEC, 13> {
-        SPI_W::new(self)
+    pub fn spi(&mut self) -> SPI_W<GICD_ICFGR36_SPEC> {
+        SPI_W::new(self, 13)
     }
     #[doc = "Bit 15 - PCM/I2S"]
     #[inline(always)]
     #[must_use]
-    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_ICFGR36_SPEC, 15> {
-        PCM_I2S_W::new(self)
+    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_ICFGR36_SPEC> {
+        PCM_I2S_W::new(self, 15)
     }
     #[doc = "Bit 17 - SDHOST"]
     #[inline(always)]
     #[must_use]
-    pub fn sdhost(&mut self) -> SDHOST_W<GICD_ICFGR36_SPEC, 17> {
-        SDHOST_W::new(self)
+    pub fn sdhost(&mut self) -> SDHOST_W<GICD_ICFGR36_SPEC> {
+        SDHOST_W::new(self, 17)
     }
     #[doc = "Bit 19 - OR of all PL011 UARTs"]
     #[inline(always)]
     #[must_use]
-    pub fn uart(&mut self) -> UART_W<GICD_ICFGR36_SPEC, 19> {
-        UART_W::new(self)
+    pub fn uart(&mut self) -> UART_W<GICD_ICFGR36_SPEC> {
+        UART_W::new(self, 19)
     }
     #[doc = "Bit 21 - OR of all ETH_PCIe L2"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_ICFGR36_SPEC, 21> {
-        ETH_PCIE_W::new(self)
+    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_ICFGR36_SPEC> {
+        ETH_PCIE_W::new(self, 21)
     }
     #[doc = "Bit 23 - VEC"]
     #[inline(always)]
     #[must_use]
-    pub fn vec(&mut self) -> VEC_W<GICD_ICFGR36_SPEC, 23> {
-        VEC_W::new(self)
+    pub fn vec(&mut self) -> VEC_W<GICD_ICFGR36_SPEC> {
+        VEC_W::new(self, 23)
     }
     #[doc = "Bit 25 - CPG"]
     #[inline(always)]
     #[must_use]
-    pub fn cpg(&mut self) -> CPG_W<GICD_ICFGR36_SPEC, 25> {
-        CPG_W::new(self)
+    pub fn cpg(&mut self) -> CPG_W<GICD_ICFGR36_SPEC> {
+        CPG_W::new(self, 25)
     }
     #[doc = "Bit 27 - RNG"]
     #[inline(always)]
     #[must_use]
-    pub fn rng(&mut self) -> RNG_W<GICD_ICFGR36_SPEC, 27> {
-        RNG_W::new(self)
+    pub fn rng(&mut self) -> RNG_W<GICD_ICFGR36_SPEC> {
+        RNG_W::new(self, 27)
     }
     #[doc = "Bit 29 - OR of EMMC and EMMC2"]
     #[inline(always)]
     #[must_use]
-    pub fn emmc(&mut self) -> EMMC_W<GICD_ICFGR36_SPEC, 29> {
-        EMMC_W::new(self)
+    pub fn emmc(&mut self) -> EMMC_W<GICD_ICFGR36_SPEC> {
+        EMMC_W::new(self, 29)
     }
     #[doc = "Bit 31 - ETH_PCIe secure"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_ICFGR36_SPEC, 31> {
-        ETH_PCIE_SECURE_W::new(self)
+    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_ICFGR36_SPEC> {
+        ETH_PCIE_SECURE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

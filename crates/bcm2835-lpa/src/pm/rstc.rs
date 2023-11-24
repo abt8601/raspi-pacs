@@ -36,8 +36,8 @@ impl WRCFG_R {
     }
 }
 #[doc = "Field `WRCFG` writer - Watchdog reset config"]
-pub type WRCFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, WRCFG_A>;
-impl<'a, REG, const O: u8> WRCFG_W<'a, REG, O>
+pub type WRCFG_W<'a, REG> = crate::FieldWriter<'a, REG, 2, WRCFG_A>;
+impl<'a, REG> WRCFG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -65,8 +65,8 @@ impl crate::FieldSpec for PASSWD_AW {
     type Ux = u8;
 }
 #[doc = "Field `PASSWD` writer - Password. Always 0x5a"]
-pub type PASSWD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O, PASSWD_AW>;
-impl<'a, REG, const O: u8> PASSWD_W<'a, REG, O>
+pub type PASSWD_W<'a, REG> = crate::FieldWriter<'a, REG, 8, PASSWD_AW>;
+impl<'a, REG> PASSWD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -93,21 +93,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<RSTC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 4:5 - Watchdog reset config"]
     #[inline(always)]
     #[must_use]
-    pub fn wrcfg(&mut self) -> WRCFG_W<RSTC_SPEC, 4> {
-        WRCFG_W::new(self)
+    pub fn wrcfg(&mut self) -> WRCFG_W<RSTC_SPEC> {
+        WRCFG_W::new(self, 4)
     }
     #[doc = "Bits 24:31 - Password. Always 0x5a"]
     #[inline(always)]
     #[must_use]
-    pub fn passwd(&mut self) -> PASSWD_W<RSTC_SPEC, 24> {
-        PASSWD_W::new(self)
+    pub fn passwd(&mut self) -> PASSWD_W<RSTC_SPEC> {
+        PASSWD_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,20 +2,50 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct GICD_IGROUPR {
+    gicd_igroupr0: GICD_IGROUPR0,
+    gicd_igroupr1: GICD_IGROUPR1,
+    gicd_igroupr2: GICD_IGROUPR2,
+    gicd_igroupr3: GICD_IGROUPR3,
+    gicd_igroupr4: GICD_IGROUPR4,
+    gicd_igroupr5: GICD_IGROUPR5,
+    gicd_igroupr6: GICD_IGROUPR6,
+}
+impl GICD_IGROUPR {
     #[doc = "0x00 - Interrupt Group"]
-    pub gicd_igroupr0: GICD_IGROUPR0,
+    #[inline(always)]
+    pub const fn gicd_igroupr0(&self) -> &GICD_IGROUPR0 {
+        &self.gicd_igroupr0
+    }
     #[doc = "0x04 - Interrupt Group"]
-    pub gicd_igroupr1: GICD_IGROUPR1,
+    #[inline(always)]
+    pub const fn gicd_igroupr1(&self) -> &GICD_IGROUPR1 {
+        &self.gicd_igroupr1
+    }
     #[doc = "0x08 - Interrupt Group"]
-    pub gicd_igroupr2: GICD_IGROUPR2,
+    #[inline(always)]
+    pub const fn gicd_igroupr2(&self) -> &GICD_IGROUPR2 {
+        &self.gicd_igroupr2
+    }
     #[doc = "0x0c - Interrupt Group"]
-    pub gicd_igroupr3: GICD_IGROUPR3,
+    #[inline(always)]
+    pub const fn gicd_igroupr3(&self) -> &GICD_IGROUPR3 {
+        &self.gicd_igroupr3
+    }
     #[doc = "0x10 - Interrupt Group"]
-    pub gicd_igroupr4: GICD_IGROUPR4,
+    #[inline(always)]
+    pub const fn gicd_igroupr4(&self) -> &GICD_IGROUPR4 {
+        &self.gicd_igroupr4
+    }
     #[doc = "0x14 - Interrupt Group"]
-    pub gicd_igroupr5: GICD_IGROUPR5,
+    #[inline(always)]
+    pub const fn gicd_igroupr5(&self) -> &GICD_IGROUPR5 {
+        &self.gicd_igroupr5
+    }
     #[doc = "0x18 - Interrupt Group"]
-    pub gicd_igroupr6: GICD_IGROUPR6,
+    #[inline(always)]
+    pub const fn gicd_igroupr6(&self) -> &GICD_IGROUPR6 {
+        &self.gicd_igroupr6
+    }
 }
 #[doc = "GICD_IGROUPR0 (rw) register accessor: Interrupt Group\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_igroupr0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_igroupr0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_igroupr0`]
 module"]

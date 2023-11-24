@@ -7,7 +7,7 @@ pub type TA_R = crate::BitReader;
 #[doc = "Field `DONE` reader - Transfer done"]
 pub type DONE_R = crate::BitReader;
 #[doc = "Field `DONE` writer - Transfer done"]
-pub type DONE_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DONE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TXW` reader - FIFO needs to be written"]
 pub type TXW_R = crate::BitReader;
 #[doc = "Field `RXR` reader - FIFO needs to be read"]
@@ -23,11 +23,11 @@ pub type RXF_R = crate::BitReader;
 #[doc = "Field `ERR` reader - Error: No ack"]
 pub type ERR_R = crate::BitReader;
 #[doc = "Field `ERR` writer - Error: No ack"]
-pub type ERR_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `CLKT` reader - Clock stretch timeout"]
 pub type CLKT_R = crate::BitReader;
 #[doc = "Field `CLKT` writer - Clock stretch timeout"]
-pub type CLKT_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type CLKT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer active"]
     #[inline(always)]
@@ -98,27 +98,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<S_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Transfer done"]
     #[inline(always)]
     #[must_use]
-    pub fn done(&mut self) -> DONE_W<S_SPEC, 1> {
-        DONE_W::new(self)
+    pub fn done(&mut self) -> DONE_W<S_SPEC> {
+        DONE_W::new(self, 1)
     }
     #[doc = "Bit 8 - Error: No ack"]
     #[inline(always)]
     #[must_use]
-    pub fn err(&mut self) -> ERR_W<S_SPEC, 8> {
-        ERR_W::new(self)
+    pub fn err(&mut self) -> ERR_W<S_SPEC> {
+        ERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clock stretch timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn clkt(&mut self) -> CLKT_W<S_SPEC, 9> {
-        CLKT_W::new(self)
+    pub fn clkt(&mut self) -> CLKT_W<S_SPEC> {
+        CLKT_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

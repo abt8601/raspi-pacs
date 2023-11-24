@@ -5,7 +5,7 @@ pub type W = crate::W<GAHBCFG_SPEC>;
 #[doc = "Field `GINT` reader - Global interrupt mask"]
 pub type GINT_R = crate::BitReader;
 #[doc = "Field `GINT` writer - Global interrupt mask"]
-pub type GINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GINT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AXI_BURST` reader - Maximum AXI burst length"]
 pub type AXI_BURST_R = crate::FieldReader<BURST_A>;
 #[doc = "Maximum AXI burst length\n\nValue on reset: 0"]
@@ -64,8 +64,8 @@ impl AXI_BURST_R {
     }
 }
 #[doc = "Field `AXI_BURST` writer - Maximum AXI burst length"]
-pub type AXI_BURST_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, BURST_A>;
-impl<'a, REG, const O: u8> AXI_BURST_W<'a, REG, O>
+pub type AXI_BURST_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, BURST_A>;
+impl<'a, REG> AXI_BURST_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -94,19 +94,19 @@ where
 #[doc = "Field `AXI_WAIT` reader - Wait for all AXI writes before signaling DMA"]
 pub type AXI_WAIT_R = crate::BitReader;
 #[doc = "Field `AXI_WAIT` writer - Wait for all AXI writes before signaling DMA"]
-pub type AXI_WAIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AXI_WAIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMAEN` reader - DMA enable"]
 pub type DMAEN_R = crate::BitReader;
 #[doc = "Field `DMAEN` writer - DMA enable"]
-pub type DMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFELVL` reader - TxFIFO empty level"]
 pub type TXFELVL_R = crate::BitReader;
 #[doc = "Field `TXFELVL` writer - TxFIFO empty level"]
-pub type TXFELVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFELVL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTXFELVL` reader - Periodic TxFIFO empty level"]
 pub type PTXFELVL_R = crate::BitReader;
 #[doc = "Field `PTXFELVL` writer - Periodic TxFIFO empty level"]
-pub type PTXFELVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PTXFELVL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Global interrupt mask"]
     #[inline(always)]
@@ -153,45 +153,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GAHBCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Global interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn gint(&mut self) -> GINT_W<GAHBCFG_SPEC, 0> {
-        GINT_W::new(self)
+    pub fn gint(&mut self) -> GINT_W<GAHBCFG_SPEC> {
+        GINT_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Maximum AXI burst length"]
     #[inline(always)]
     #[must_use]
-    pub fn axi_burst(&mut self) -> AXI_BURST_W<GAHBCFG_SPEC, 1> {
-        AXI_BURST_W::new(self)
+    pub fn axi_burst(&mut self) -> AXI_BURST_W<GAHBCFG_SPEC> {
+        AXI_BURST_W::new(self, 1)
     }
     #[doc = "Bit 4 - Wait for all AXI writes before signaling DMA"]
     #[inline(always)]
     #[must_use]
-    pub fn axi_wait(&mut self) -> AXI_WAIT_W<GAHBCFG_SPEC, 4> {
-        AXI_WAIT_W::new(self)
+    pub fn axi_wait(&mut self) -> AXI_WAIT_W<GAHBCFG_SPEC> {
+        AXI_WAIT_W::new(self, 4)
     }
     #[doc = "Bit 5 - DMA enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<GAHBCFG_SPEC, 5> {
-        DMAEN_W::new(self)
+    pub fn dmaen(&mut self) -> DMAEN_W<GAHBCFG_SPEC> {
+        DMAEN_W::new(self, 5)
     }
     #[doc = "Bit 7 - TxFIFO empty level"]
     #[inline(always)]
     #[must_use]
-    pub fn txfelvl(&mut self) -> TXFELVL_W<GAHBCFG_SPEC, 7> {
-        TXFELVL_W::new(self)
+    pub fn txfelvl(&mut self) -> TXFELVL_W<GAHBCFG_SPEC> {
+        TXFELVL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Periodic TxFIFO empty level"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfelvl(&mut self) -> PTXFELVL_W<GAHBCFG_SPEC, 8> {
-        PTXFELVL_W::new(self)
+    pub fn ptxfelvl(&mut self) -> PTXFELVL_W<GAHBCFG_SPEC> {
+        PTXFELVL_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

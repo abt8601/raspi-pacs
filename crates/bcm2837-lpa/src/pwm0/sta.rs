@@ -5,55 +5,55 @@ pub type W = crate::W<STA_SPEC>;
 #[doc = "Field `FULL1` reader - FIFO full"]
 pub type FULL1_R = crate::BitReader;
 #[doc = "Field `FULL1` writer - FIFO full"]
-pub type FULL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FULL1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMPT1` reader - FIFO empty"]
 pub type EMPT1_R = crate::BitReader;
 #[doc = "Field `EMPT1` writer - FIFO empty"]
-pub type EMPT1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMPT1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WERR1` reader - FIFO write error"]
 pub type WERR1_R = crate::BitReader;
 #[doc = "Field `WERR1` writer - FIFO write error"]
-pub type WERR1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WERR1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RERR1` reader - FIFO read error"]
 pub type RERR1_R = crate::BitReader;
 #[doc = "Field `RERR1` writer - FIFO read error"]
-pub type RERR1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RERR1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAPO1` reader - Channel 1 gap occurred"]
 pub type GAPO1_R = crate::BitReader;
 #[doc = "Field `GAPO1` writer - Channel 1 gap occurred"]
-pub type GAPO1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAPO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAPO2` reader - Channel 2 gap occurred"]
 pub type GAPO2_R = crate::BitReader;
 #[doc = "Field `GAPO2` writer - Channel 2 gap occurred"]
-pub type GAPO2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAPO2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAPO3` reader - Channel 3 gap occurred"]
 pub type GAPO3_R = crate::BitReader;
 #[doc = "Field `GAPO3` writer - Channel 3 gap occurred"]
-pub type GAPO3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAPO3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAPO4` reader - Channel 4 gap occurred"]
 pub type GAPO4_R = crate::BitReader;
 #[doc = "Field `GAPO4` writer - Channel 4 gap occurred"]
-pub type GAPO4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAPO4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BERR` reader - Bus error"]
 pub type BERR_R = crate::BitReader;
 #[doc = "Field `BERR` writer - Bus error"]
-pub type BERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STA1` reader - Channel 1 state"]
 pub type STA1_R = crate::BitReader;
 #[doc = "Field `STA1` writer - Channel 1 state"]
-pub type STA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STA1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STA2` reader - Channel 2 state"]
 pub type STA2_R = crate::BitReader;
 #[doc = "Field `STA2` writer - Channel 2 state"]
-pub type STA2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STA2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STA3` reader - Channel 3 state"]
 pub type STA3_R = crate::BitReader;
 #[doc = "Field `STA3` writer - Channel 3 state"]
-pub type STA3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STA3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STA4` reader - Channel 4 state"]
 pub type STA4_R = crate::BitReader;
 #[doc = "Field `STA4` writer - Channel 4 state"]
-pub type STA4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STA4_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - FIFO full"]
     #[inline(always)]
@@ -142,87 +142,87 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - FIFO full"]
     #[inline(always)]
     #[must_use]
-    pub fn full1(&mut self) -> FULL1_W<STA_SPEC, 0> {
-        FULL1_W::new(self)
+    pub fn full1(&mut self) -> FULL1_W<STA_SPEC> {
+        FULL1_W::new(self, 0)
     }
     #[doc = "Bit 1 - FIFO empty"]
     #[inline(always)]
     #[must_use]
-    pub fn empt1(&mut self) -> EMPT1_W<STA_SPEC, 1> {
-        EMPT1_W::new(self)
+    pub fn empt1(&mut self) -> EMPT1_W<STA_SPEC> {
+        EMPT1_W::new(self, 1)
     }
     #[doc = "Bit 2 - FIFO write error"]
     #[inline(always)]
     #[must_use]
-    pub fn werr1(&mut self) -> WERR1_W<STA_SPEC, 2> {
-        WERR1_W::new(self)
+    pub fn werr1(&mut self) -> WERR1_W<STA_SPEC> {
+        WERR1_W::new(self, 2)
     }
     #[doc = "Bit 3 - FIFO read error"]
     #[inline(always)]
     #[must_use]
-    pub fn rerr1(&mut self) -> RERR1_W<STA_SPEC, 3> {
-        RERR1_W::new(self)
+    pub fn rerr1(&mut self) -> RERR1_W<STA_SPEC> {
+        RERR1_W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 1 gap occurred"]
     #[inline(always)]
     #[must_use]
-    pub fn gapo1(&mut self) -> GAPO1_W<STA_SPEC, 4> {
-        GAPO1_W::new(self)
+    pub fn gapo1(&mut self) -> GAPO1_W<STA_SPEC> {
+        GAPO1_W::new(self, 4)
     }
     #[doc = "Bit 5 - Channel 2 gap occurred"]
     #[inline(always)]
     #[must_use]
-    pub fn gapo2(&mut self) -> GAPO2_W<STA_SPEC, 5> {
-        GAPO2_W::new(self)
+    pub fn gapo2(&mut self) -> GAPO2_W<STA_SPEC> {
+        GAPO2_W::new(self, 5)
     }
     #[doc = "Bit 6 - Channel 3 gap occurred"]
     #[inline(always)]
     #[must_use]
-    pub fn gapo3(&mut self) -> GAPO3_W<STA_SPEC, 6> {
-        GAPO3_W::new(self)
+    pub fn gapo3(&mut self) -> GAPO3_W<STA_SPEC> {
+        GAPO3_W::new(self, 6)
     }
     #[doc = "Bit 7 - Channel 4 gap occurred"]
     #[inline(always)]
     #[must_use]
-    pub fn gapo4(&mut self) -> GAPO4_W<STA_SPEC, 7> {
-        GAPO4_W::new(self)
+    pub fn gapo4(&mut self) -> GAPO4_W<STA_SPEC> {
+        GAPO4_W::new(self, 7)
     }
     #[doc = "Bit 8 - Bus error"]
     #[inline(always)]
     #[must_use]
-    pub fn berr(&mut self) -> BERR_W<STA_SPEC, 8> {
-        BERR_W::new(self)
+    pub fn berr(&mut self) -> BERR_W<STA_SPEC> {
+        BERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Channel 1 state"]
     #[inline(always)]
     #[must_use]
-    pub fn sta1(&mut self) -> STA1_W<STA_SPEC, 9> {
-        STA1_W::new(self)
+    pub fn sta1(&mut self) -> STA1_W<STA_SPEC> {
+        STA1_W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 2 state"]
     #[inline(always)]
     #[must_use]
-    pub fn sta2(&mut self) -> STA2_W<STA_SPEC, 10> {
-        STA2_W::new(self)
+    pub fn sta2(&mut self) -> STA2_W<STA_SPEC> {
+        STA2_W::new(self, 10)
     }
     #[doc = "Bit 11 - Channel 3 state"]
     #[inline(always)]
     #[must_use]
-    pub fn sta3(&mut self) -> STA3_W<STA_SPEC, 11> {
-        STA3_W::new(self)
+    pub fn sta3(&mut self) -> STA3_W<STA_SPEC> {
+        STA3_W::new(self, 11)
     }
     #[doc = "Bit 12 - Channel 4 state"]
     #[inline(always)]
     #[must_use]
-    pub fn sta4(&mut self) -> STA4_W<STA_SPEC, 12> {
-        STA4_W::new(self)
+    pub fn sta4(&mut self) -> STA4_W<STA_SPEC> {
+        STA4_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

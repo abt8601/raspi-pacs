@@ -5,47 +5,47 @@ pub type W = crate::W<HCINT_SPEC>;
 #[doc = "Field `XFRC` reader - Transfer completed"]
 pub type XFRC_R = crate::BitReader;
 #[doc = "Field `XFRC` writer - Transfer completed"]
-pub type XFRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHH` reader - Channel halted"]
 pub type CHH_R = crate::BitReader;
 #[doc = "Field `CHH` writer - Channel halted"]
-pub type CHH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBERR` reader - AHB error"]
 pub type AHBERR_R = crate::BitReader;
 #[doc = "Field `AHBERR` writer - AHB error"]
-pub type AHBERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL` reader - STALL response received interrupt"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL response received interrupt"]
-pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAK` reader - NAK response received interrupt"]
 pub type NAK_R = crate::BitReader;
 #[doc = "Field `NAK` writer - NAK response received interrupt"]
-pub type NAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK` reader - ACK response received/transmitted interrupt"]
 pub type ACK_R = crate::BitReader;
 #[doc = "Field `ACK` writer - ACK response received/transmitted interrupt"]
-pub type ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NYET` reader - Response received interrupt"]
 pub type NYET_R = crate::BitReader;
 #[doc = "Field `NYET` writer - Response received interrupt"]
-pub type NYET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NYET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXERR` reader - Transaction error"]
 pub type TXERR_R = crate::BitReader;
 #[doc = "Field `TXERR` writer - Transaction error"]
-pub type TXERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBERR` reader - Babble error"]
 pub type BBERR_R = crate::BitReader;
 #[doc = "Field `BBERR` writer - Babble error"]
-pub type BBERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BBERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FRMOR` reader - Frame overrun"]
 pub type FRMOR_R = crate::BitReader;
 #[doc = "Field `FRMOR` writer - Frame overrun"]
-pub type FRMOR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FRMOR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERR` reader - Data toggle error"]
 pub type DTERR_R = crate::BitReader;
 #[doc = "Field `DTERR` writer - Data toggle error"]
-pub type DTERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]
@@ -122,75 +122,75 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HCINT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrc(&mut self) -> XFRC_W<HCINT_SPEC, 0> {
-        XFRC_W::new(self)
+    pub fn xfrc(&mut self) -> XFRC_W<HCINT_SPEC> {
+        XFRC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel halted"]
     #[inline(always)]
     #[must_use]
-    pub fn chh(&mut self) -> CHH_W<HCINT_SPEC, 1> {
-        CHH_W::new(self)
+    pub fn chh(&mut self) -> CHH_W<HCINT_SPEC> {
+        CHH_W::new(self, 1)
     }
     #[doc = "Bit 2 - AHB error"]
     #[inline(always)]
     #[must_use]
-    pub fn ahberr(&mut self) -> AHBERR_W<HCINT_SPEC, 2> {
-        AHBERR_W::new(self)
+    pub fn ahberr(&mut self) -> AHBERR_W<HCINT_SPEC> {
+        AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - STALL response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<HCINT_SPEC, 3> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<HCINT_SPEC> {
+        STALL_W::new(self, 3)
     }
     #[doc = "Bit 4 - NAK response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nak(&mut self) -> NAK_W<HCINT_SPEC, 4> {
-        NAK_W::new(self)
+    pub fn nak(&mut self) -> NAK_W<HCINT_SPEC> {
+        NAK_W::new(self, 4)
     }
     #[doc = "Bit 5 - ACK response received/transmitted interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ack(&mut self) -> ACK_W<HCINT_SPEC, 5> {
-        ACK_W::new(self)
+    pub fn ack(&mut self) -> ACK_W<HCINT_SPEC> {
+        ACK_W::new(self, 5)
     }
     #[doc = "Bit 6 - Response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nyet(&mut self) -> NYET_W<HCINT_SPEC, 6> {
-        NYET_W::new(self)
+    pub fn nyet(&mut self) -> NYET_W<HCINT_SPEC> {
+        NYET_W::new(self, 6)
     }
     #[doc = "Bit 7 - Transaction error"]
     #[inline(always)]
     #[must_use]
-    pub fn txerr(&mut self) -> TXERR_W<HCINT_SPEC, 7> {
-        TXERR_W::new(self)
+    pub fn txerr(&mut self) -> TXERR_W<HCINT_SPEC> {
+        TXERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Babble error"]
     #[inline(always)]
     #[must_use]
-    pub fn bberr(&mut self) -> BBERR_W<HCINT_SPEC, 8> {
-        BBERR_W::new(self)
+    pub fn bberr(&mut self) -> BBERR_W<HCINT_SPEC> {
+        BBERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Frame overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn frmor(&mut self) -> FRMOR_W<HCINT_SPEC, 9> {
-        FRMOR_W::new(self)
+    pub fn frmor(&mut self) -> FRMOR_W<HCINT_SPEC> {
+        FRMOR_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data toggle error"]
     #[inline(always)]
     #[must_use]
-    pub fn dterr(&mut self) -> DTERR_W<HCINT_SPEC, 10> {
-        DTERR_W::new(self)
+    pub fn dterr(&mut self) -> DTERR_W<HCINT_SPEC> {
+        DTERR_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

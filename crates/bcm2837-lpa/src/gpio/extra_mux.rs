@@ -39,8 +39,8 @@ impl SDIO_R {
     }
 }
 #[doc = "Field `SDIO` writer - Switch peripheral connection to undocumented SDIO pins used on Pi 4"]
-pub type SDIO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SDIO_A>;
-impl<'a, REG, const O: u8> SDIO_W<'a, REG, O>
+pub type SDIO_W<'a, REG> = crate::BitWriter<'a, REG, SDIO_A>;
+impl<'a, REG> SDIO_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -71,15 +71,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<EXTRA_MUX_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Switch peripheral connection to undocumented SDIO pins used on Pi 4"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio(&mut self) -> SDIO_W<EXTRA_MUX_SPEC, 1> {
-        SDIO_W::new(self)
+    pub fn sdio(&mut self) -> SDIO_W<EXTRA_MUX_SPEC> {
+        SDIO_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

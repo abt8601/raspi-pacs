@@ -5,131 +5,131 @@ pub type W = crate::W<GPREN0_SPEC>;
 #[doc = "Field `REN0` reader - Rising edge enabled 0"]
 pub type REN0_R = crate::BitReader;
 #[doc = "Field `REN0` writer - Rising edge enabled 0"]
-pub type REN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN1` reader - Rising edge enabled 1"]
 pub type REN1_R = crate::BitReader;
 #[doc = "Field `REN1` writer - Rising edge enabled 1"]
-pub type REN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN2` reader - Rising edge enabled 2"]
 pub type REN2_R = crate::BitReader;
 #[doc = "Field `REN2` writer - Rising edge enabled 2"]
-pub type REN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN3` reader - Rising edge enabled 3"]
 pub type REN3_R = crate::BitReader;
 #[doc = "Field `REN3` writer - Rising edge enabled 3"]
-pub type REN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN4` reader - Rising edge enabled 4"]
 pub type REN4_R = crate::BitReader;
 #[doc = "Field `REN4` writer - Rising edge enabled 4"]
-pub type REN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN5` reader - Rising edge enabled 5"]
 pub type REN5_R = crate::BitReader;
 #[doc = "Field `REN5` writer - Rising edge enabled 5"]
-pub type REN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN6` reader - Rising edge enabled 6"]
 pub type REN6_R = crate::BitReader;
 #[doc = "Field `REN6` writer - Rising edge enabled 6"]
-pub type REN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN7` reader - Rising edge enabled 7"]
 pub type REN7_R = crate::BitReader;
 #[doc = "Field `REN7` writer - Rising edge enabled 7"]
-pub type REN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN8` reader - Rising edge enabled 8"]
 pub type REN8_R = crate::BitReader;
 #[doc = "Field `REN8` writer - Rising edge enabled 8"]
-pub type REN8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN9` reader - Rising edge enabled 9"]
 pub type REN9_R = crate::BitReader;
 #[doc = "Field `REN9` writer - Rising edge enabled 9"]
-pub type REN9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN10` reader - Rising edge enabled 10"]
 pub type REN10_R = crate::BitReader;
 #[doc = "Field `REN10` writer - Rising edge enabled 10"]
-pub type REN10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN11` reader - Rising edge enabled 11"]
 pub type REN11_R = crate::BitReader;
 #[doc = "Field `REN11` writer - Rising edge enabled 11"]
-pub type REN11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN12` reader - Rising edge enabled 12"]
 pub type REN12_R = crate::BitReader;
 #[doc = "Field `REN12` writer - Rising edge enabled 12"]
-pub type REN12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN13` reader - Rising edge enabled 13"]
 pub type REN13_R = crate::BitReader;
 #[doc = "Field `REN13` writer - Rising edge enabled 13"]
-pub type REN13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN14` reader - Rising edge enabled 14"]
 pub type REN14_R = crate::BitReader;
 #[doc = "Field `REN14` writer - Rising edge enabled 14"]
-pub type REN14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN15` reader - Rising edge enabled 15"]
 pub type REN15_R = crate::BitReader;
 #[doc = "Field `REN15` writer - Rising edge enabled 15"]
-pub type REN15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN15_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN16` reader - Rising edge enabled 16"]
 pub type REN16_R = crate::BitReader;
 #[doc = "Field `REN16` writer - Rising edge enabled 16"]
-pub type REN16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN16_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN17` reader - Rising edge enabled 17"]
 pub type REN17_R = crate::BitReader;
 #[doc = "Field `REN17` writer - Rising edge enabled 17"]
-pub type REN17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN17_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN18` reader - Rising edge enabled 18"]
 pub type REN18_R = crate::BitReader;
 #[doc = "Field `REN18` writer - Rising edge enabled 18"]
-pub type REN18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN18_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN19` reader - Rising edge enabled 19"]
 pub type REN19_R = crate::BitReader;
 #[doc = "Field `REN19` writer - Rising edge enabled 19"]
-pub type REN19_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN19_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN20` reader - Rising edge enabled 20"]
 pub type REN20_R = crate::BitReader;
 #[doc = "Field `REN20` writer - Rising edge enabled 20"]
-pub type REN20_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN20_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN21` reader - Rising edge enabled 21"]
 pub type REN21_R = crate::BitReader;
 #[doc = "Field `REN21` writer - Rising edge enabled 21"]
-pub type REN21_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN21_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN22` reader - Rising edge enabled 22"]
 pub type REN22_R = crate::BitReader;
 #[doc = "Field `REN22` writer - Rising edge enabled 22"]
-pub type REN22_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN22_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN23` reader - Rising edge enabled 23"]
 pub type REN23_R = crate::BitReader;
 #[doc = "Field `REN23` writer - Rising edge enabled 23"]
-pub type REN23_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN23_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN24` reader - Rising edge enabled 24"]
 pub type REN24_R = crate::BitReader;
 #[doc = "Field `REN24` writer - Rising edge enabled 24"]
-pub type REN24_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN24_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN25` reader - Rising edge enabled 25"]
 pub type REN25_R = crate::BitReader;
 #[doc = "Field `REN25` writer - Rising edge enabled 25"]
-pub type REN25_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN25_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN26` reader - Rising edge enabled 26"]
 pub type REN26_R = crate::BitReader;
 #[doc = "Field `REN26` writer - Rising edge enabled 26"]
-pub type REN26_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN26_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN27` reader - Rising edge enabled 27"]
 pub type REN27_R = crate::BitReader;
 #[doc = "Field `REN27` writer - Rising edge enabled 27"]
-pub type REN27_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN27_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN28` reader - Rising edge enabled 28"]
 pub type REN28_R = crate::BitReader;
 #[doc = "Field `REN28` writer - Rising edge enabled 28"]
-pub type REN28_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN28_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN29` reader - Rising edge enabled 29"]
 pub type REN29_R = crate::BitReader;
 #[doc = "Field `REN29` writer - Rising edge enabled 29"]
-pub type REN29_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN29_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN30` reader - Rising edge enabled 30"]
 pub type REN30_R = crate::BitReader;
 #[doc = "Field `REN30` writer - Rising edge enabled 30"]
-pub type REN30_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN30_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN31` reader - Rising edge enabled 31"]
 pub type REN31_R = crate::BitReader;
 #[doc = "Field `REN31` writer - Rising edge enabled 31"]
-pub type REN31_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN31_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Rising edge enabled 0"]
     #[inline(always)]
@@ -332,201 +332,201 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPREN0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Rising edge enabled 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ren0(&mut self) -> REN0_W<GPREN0_SPEC, 0> {
-        REN0_W::new(self)
+    pub fn ren0(&mut self) -> REN0_W<GPREN0_SPEC> {
+        REN0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Rising edge enabled 1"]
     #[inline(always)]
     #[must_use]
-    pub fn ren1(&mut self) -> REN1_W<GPREN0_SPEC, 1> {
-        REN1_W::new(self)
+    pub fn ren1(&mut self) -> REN1_W<GPREN0_SPEC> {
+        REN1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Rising edge enabled 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ren2(&mut self) -> REN2_W<GPREN0_SPEC, 2> {
-        REN2_W::new(self)
+    pub fn ren2(&mut self) -> REN2_W<GPREN0_SPEC> {
+        REN2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Rising edge enabled 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ren3(&mut self) -> REN3_W<GPREN0_SPEC, 3> {
-        REN3_W::new(self)
+    pub fn ren3(&mut self) -> REN3_W<GPREN0_SPEC> {
+        REN3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Rising edge enabled 4"]
     #[inline(always)]
     #[must_use]
-    pub fn ren4(&mut self) -> REN4_W<GPREN0_SPEC, 4> {
-        REN4_W::new(self)
+    pub fn ren4(&mut self) -> REN4_W<GPREN0_SPEC> {
+        REN4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Rising edge enabled 5"]
     #[inline(always)]
     #[must_use]
-    pub fn ren5(&mut self) -> REN5_W<GPREN0_SPEC, 5> {
-        REN5_W::new(self)
+    pub fn ren5(&mut self) -> REN5_W<GPREN0_SPEC> {
+        REN5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Rising edge enabled 6"]
     #[inline(always)]
     #[must_use]
-    pub fn ren6(&mut self) -> REN6_W<GPREN0_SPEC, 6> {
-        REN6_W::new(self)
+    pub fn ren6(&mut self) -> REN6_W<GPREN0_SPEC> {
+        REN6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Rising edge enabled 7"]
     #[inline(always)]
     #[must_use]
-    pub fn ren7(&mut self) -> REN7_W<GPREN0_SPEC, 7> {
-        REN7_W::new(self)
+    pub fn ren7(&mut self) -> REN7_W<GPREN0_SPEC> {
+        REN7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Rising edge enabled 8"]
     #[inline(always)]
     #[must_use]
-    pub fn ren8(&mut self) -> REN8_W<GPREN0_SPEC, 8> {
-        REN8_W::new(self)
+    pub fn ren8(&mut self) -> REN8_W<GPREN0_SPEC> {
+        REN8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Rising edge enabled 9"]
     #[inline(always)]
     #[must_use]
-    pub fn ren9(&mut self) -> REN9_W<GPREN0_SPEC, 9> {
-        REN9_W::new(self)
+    pub fn ren9(&mut self) -> REN9_W<GPREN0_SPEC> {
+        REN9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Rising edge enabled 10"]
     #[inline(always)]
     #[must_use]
-    pub fn ren10(&mut self) -> REN10_W<GPREN0_SPEC, 10> {
-        REN10_W::new(self)
+    pub fn ren10(&mut self) -> REN10_W<GPREN0_SPEC> {
+        REN10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Rising edge enabled 11"]
     #[inline(always)]
     #[must_use]
-    pub fn ren11(&mut self) -> REN11_W<GPREN0_SPEC, 11> {
-        REN11_W::new(self)
+    pub fn ren11(&mut self) -> REN11_W<GPREN0_SPEC> {
+        REN11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Rising edge enabled 12"]
     #[inline(always)]
     #[must_use]
-    pub fn ren12(&mut self) -> REN12_W<GPREN0_SPEC, 12> {
-        REN12_W::new(self)
+    pub fn ren12(&mut self) -> REN12_W<GPREN0_SPEC> {
+        REN12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Rising edge enabled 13"]
     #[inline(always)]
     #[must_use]
-    pub fn ren13(&mut self) -> REN13_W<GPREN0_SPEC, 13> {
-        REN13_W::new(self)
+    pub fn ren13(&mut self) -> REN13_W<GPREN0_SPEC> {
+        REN13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Rising edge enabled 14"]
     #[inline(always)]
     #[must_use]
-    pub fn ren14(&mut self) -> REN14_W<GPREN0_SPEC, 14> {
-        REN14_W::new(self)
+    pub fn ren14(&mut self) -> REN14_W<GPREN0_SPEC> {
+        REN14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Rising edge enabled 15"]
     #[inline(always)]
     #[must_use]
-    pub fn ren15(&mut self) -> REN15_W<GPREN0_SPEC, 15> {
-        REN15_W::new(self)
+    pub fn ren15(&mut self) -> REN15_W<GPREN0_SPEC> {
+        REN15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Rising edge enabled 16"]
     #[inline(always)]
     #[must_use]
-    pub fn ren16(&mut self) -> REN16_W<GPREN0_SPEC, 16> {
-        REN16_W::new(self)
+    pub fn ren16(&mut self) -> REN16_W<GPREN0_SPEC> {
+        REN16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Rising edge enabled 17"]
     #[inline(always)]
     #[must_use]
-    pub fn ren17(&mut self) -> REN17_W<GPREN0_SPEC, 17> {
-        REN17_W::new(self)
+    pub fn ren17(&mut self) -> REN17_W<GPREN0_SPEC> {
+        REN17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Rising edge enabled 18"]
     #[inline(always)]
     #[must_use]
-    pub fn ren18(&mut self) -> REN18_W<GPREN0_SPEC, 18> {
-        REN18_W::new(self)
+    pub fn ren18(&mut self) -> REN18_W<GPREN0_SPEC> {
+        REN18_W::new(self, 18)
     }
     #[doc = "Bit 19 - Rising edge enabled 19"]
     #[inline(always)]
     #[must_use]
-    pub fn ren19(&mut self) -> REN19_W<GPREN0_SPEC, 19> {
-        REN19_W::new(self)
+    pub fn ren19(&mut self) -> REN19_W<GPREN0_SPEC> {
+        REN19_W::new(self, 19)
     }
     #[doc = "Bit 20 - Rising edge enabled 20"]
     #[inline(always)]
     #[must_use]
-    pub fn ren20(&mut self) -> REN20_W<GPREN0_SPEC, 20> {
-        REN20_W::new(self)
+    pub fn ren20(&mut self) -> REN20_W<GPREN0_SPEC> {
+        REN20_W::new(self, 20)
     }
     #[doc = "Bit 21 - Rising edge enabled 21"]
     #[inline(always)]
     #[must_use]
-    pub fn ren21(&mut self) -> REN21_W<GPREN0_SPEC, 21> {
-        REN21_W::new(self)
+    pub fn ren21(&mut self) -> REN21_W<GPREN0_SPEC> {
+        REN21_W::new(self, 21)
     }
     #[doc = "Bit 22 - Rising edge enabled 22"]
     #[inline(always)]
     #[must_use]
-    pub fn ren22(&mut self) -> REN22_W<GPREN0_SPEC, 22> {
-        REN22_W::new(self)
+    pub fn ren22(&mut self) -> REN22_W<GPREN0_SPEC> {
+        REN22_W::new(self, 22)
     }
     #[doc = "Bit 23 - Rising edge enabled 23"]
     #[inline(always)]
     #[must_use]
-    pub fn ren23(&mut self) -> REN23_W<GPREN0_SPEC, 23> {
-        REN23_W::new(self)
+    pub fn ren23(&mut self) -> REN23_W<GPREN0_SPEC> {
+        REN23_W::new(self, 23)
     }
     #[doc = "Bit 24 - Rising edge enabled 24"]
     #[inline(always)]
     #[must_use]
-    pub fn ren24(&mut self) -> REN24_W<GPREN0_SPEC, 24> {
-        REN24_W::new(self)
+    pub fn ren24(&mut self) -> REN24_W<GPREN0_SPEC> {
+        REN24_W::new(self, 24)
     }
     #[doc = "Bit 25 - Rising edge enabled 25"]
     #[inline(always)]
     #[must_use]
-    pub fn ren25(&mut self) -> REN25_W<GPREN0_SPEC, 25> {
-        REN25_W::new(self)
+    pub fn ren25(&mut self) -> REN25_W<GPREN0_SPEC> {
+        REN25_W::new(self, 25)
     }
     #[doc = "Bit 26 - Rising edge enabled 26"]
     #[inline(always)]
     #[must_use]
-    pub fn ren26(&mut self) -> REN26_W<GPREN0_SPEC, 26> {
-        REN26_W::new(self)
+    pub fn ren26(&mut self) -> REN26_W<GPREN0_SPEC> {
+        REN26_W::new(self, 26)
     }
     #[doc = "Bit 27 - Rising edge enabled 27"]
     #[inline(always)]
     #[must_use]
-    pub fn ren27(&mut self) -> REN27_W<GPREN0_SPEC, 27> {
-        REN27_W::new(self)
+    pub fn ren27(&mut self) -> REN27_W<GPREN0_SPEC> {
+        REN27_W::new(self, 27)
     }
     #[doc = "Bit 28 - Rising edge enabled 28"]
     #[inline(always)]
     #[must_use]
-    pub fn ren28(&mut self) -> REN28_W<GPREN0_SPEC, 28> {
-        REN28_W::new(self)
+    pub fn ren28(&mut self) -> REN28_W<GPREN0_SPEC> {
+        REN28_W::new(self, 28)
     }
     #[doc = "Bit 29 - Rising edge enabled 29"]
     #[inline(always)]
     #[must_use]
-    pub fn ren29(&mut self) -> REN29_W<GPREN0_SPEC, 29> {
-        REN29_W::new(self)
+    pub fn ren29(&mut self) -> REN29_W<GPREN0_SPEC> {
+        REN29_W::new(self, 29)
     }
     #[doc = "Bit 30 - Rising edge enabled 30"]
     #[inline(always)]
     #[must_use]
-    pub fn ren30(&mut self) -> REN30_W<GPREN0_SPEC, 30> {
-        REN30_W::new(self)
+    pub fn ren30(&mut self) -> REN30_W<GPREN0_SPEC> {
+        REN30_W::new(self, 30)
     }
     #[doc = "Bit 31 - Rising edge enabled 31"]
     #[inline(always)]
     #[must_use]
-    pub fn ren31(&mut self) -> REN31_W<GPREN0_SPEC, 31> {
-        REN31_W::new(self)
+    pub fn ren31(&mut self) -> REN31_W<GPREN0_SPEC> {
+        REN31_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

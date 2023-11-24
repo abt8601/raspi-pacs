@@ -5,131 +5,131 @@ pub type W = crate::W<GPEDS0_SPEC>;
 #[doc = "Field `EDS0` reader - Event detected 0"]
 pub type EDS0_R = crate::BitReader;
 #[doc = "Field `EDS0` writer - Event detected 0"]
-pub type EDS0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS1` reader - Event detected 1"]
 pub type EDS1_R = crate::BitReader;
 #[doc = "Field `EDS1` writer - Event detected 1"]
-pub type EDS1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS2` reader - Event detected 2"]
 pub type EDS2_R = crate::BitReader;
 #[doc = "Field `EDS2` writer - Event detected 2"]
-pub type EDS2_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS2_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS3` reader - Event detected 3"]
 pub type EDS3_R = crate::BitReader;
 #[doc = "Field `EDS3` writer - Event detected 3"]
-pub type EDS3_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS4` reader - Event detected 4"]
 pub type EDS4_R = crate::BitReader;
 #[doc = "Field `EDS4` writer - Event detected 4"]
-pub type EDS4_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS4_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS5` reader - Event detected 5"]
 pub type EDS5_R = crate::BitReader;
 #[doc = "Field `EDS5` writer - Event detected 5"]
-pub type EDS5_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS5_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS6` reader - Event detected 6"]
 pub type EDS6_R = crate::BitReader;
 #[doc = "Field `EDS6` writer - Event detected 6"]
-pub type EDS6_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS6_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS7` reader - Event detected 7"]
 pub type EDS7_R = crate::BitReader;
 #[doc = "Field `EDS7` writer - Event detected 7"]
-pub type EDS7_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS7_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS8` reader - Event detected 8"]
 pub type EDS8_R = crate::BitReader;
 #[doc = "Field `EDS8` writer - Event detected 8"]
-pub type EDS8_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS8_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS9` reader - Event detected 9"]
 pub type EDS9_R = crate::BitReader;
 #[doc = "Field `EDS9` writer - Event detected 9"]
-pub type EDS9_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS9_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS10` reader - Event detected 10"]
 pub type EDS10_R = crate::BitReader;
 #[doc = "Field `EDS10` writer - Event detected 10"]
-pub type EDS10_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS10_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS11` reader - Event detected 11"]
 pub type EDS11_R = crate::BitReader;
 #[doc = "Field `EDS11` writer - Event detected 11"]
-pub type EDS11_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS11_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS12` reader - Event detected 12"]
 pub type EDS12_R = crate::BitReader;
 #[doc = "Field `EDS12` writer - Event detected 12"]
-pub type EDS12_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS12_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS13` reader - Event detected 13"]
 pub type EDS13_R = crate::BitReader;
 #[doc = "Field `EDS13` writer - Event detected 13"]
-pub type EDS13_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS13_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS14` reader - Event detected 14"]
 pub type EDS14_R = crate::BitReader;
 #[doc = "Field `EDS14` writer - Event detected 14"]
-pub type EDS14_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS14_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS15` reader - Event detected 15"]
 pub type EDS15_R = crate::BitReader;
 #[doc = "Field `EDS15` writer - Event detected 15"]
-pub type EDS15_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS15_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS16` reader - Event detected 16"]
 pub type EDS16_R = crate::BitReader;
 #[doc = "Field `EDS16` writer - Event detected 16"]
-pub type EDS16_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS16_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS17` reader - Event detected 17"]
 pub type EDS17_R = crate::BitReader;
 #[doc = "Field `EDS17` writer - Event detected 17"]
-pub type EDS17_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS17_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS18` reader - Event detected 18"]
 pub type EDS18_R = crate::BitReader;
 #[doc = "Field `EDS18` writer - Event detected 18"]
-pub type EDS18_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS18_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS19` reader - Event detected 19"]
 pub type EDS19_R = crate::BitReader;
 #[doc = "Field `EDS19` writer - Event detected 19"]
-pub type EDS19_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS19_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS20` reader - Event detected 20"]
 pub type EDS20_R = crate::BitReader;
 #[doc = "Field `EDS20` writer - Event detected 20"]
-pub type EDS20_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS20_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS21` reader - Event detected 21"]
 pub type EDS21_R = crate::BitReader;
 #[doc = "Field `EDS21` writer - Event detected 21"]
-pub type EDS21_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS21_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS22` reader - Event detected 22"]
 pub type EDS22_R = crate::BitReader;
 #[doc = "Field `EDS22` writer - Event detected 22"]
-pub type EDS22_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS22_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS23` reader - Event detected 23"]
 pub type EDS23_R = crate::BitReader;
 #[doc = "Field `EDS23` writer - Event detected 23"]
-pub type EDS23_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS23_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS24` reader - Event detected 24"]
 pub type EDS24_R = crate::BitReader;
 #[doc = "Field `EDS24` writer - Event detected 24"]
-pub type EDS24_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS24_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS25` reader - Event detected 25"]
 pub type EDS25_R = crate::BitReader;
 #[doc = "Field `EDS25` writer - Event detected 25"]
-pub type EDS25_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS25_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS26` reader - Event detected 26"]
 pub type EDS26_R = crate::BitReader;
 #[doc = "Field `EDS26` writer - Event detected 26"]
-pub type EDS26_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS26_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS27` reader - Event detected 27"]
 pub type EDS27_R = crate::BitReader;
 #[doc = "Field `EDS27` writer - Event detected 27"]
-pub type EDS27_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS27_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS28` reader - Event detected 28"]
 pub type EDS28_R = crate::BitReader;
 #[doc = "Field `EDS28` writer - Event detected 28"]
-pub type EDS28_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS28_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS29` reader - Event detected 29"]
 pub type EDS29_R = crate::BitReader;
 #[doc = "Field `EDS29` writer - Event detected 29"]
-pub type EDS29_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS29_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS30` reader - Event detected 30"]
 pub type EDS30_R = crate::BitReader;
 #[doc = "Field `EDS30` writer - Event detected 30"]
-pub type EDS30_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS30_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `EDS31` reader - Event detected 31"]
 pub type EDS31_R = crate::BitReader;
 #[doc = "Field `EDS31` writer - Event detected 31"]
-pub type EDS31_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type EDS31_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Event detected 0"]
     #[inline(always)]
@@ -332,201 +332,201 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPEDS0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Event detected 0"]
     #[inline(always)]
     #[must_use]
-    pub fn eds0(&mut self) -> EDS0_W<GPEDS0_SPEC, 0> {
-        EDS0_W::new(self)
+    pub fn eds0(&mut self) -> EDS0_W<GPEDS0_SPEC> {
+        EDS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Event detected 1"]
     #[inline(always)]
     #[must_use]
-    pub fn eds1(&mut self) -> EDS1_W<GPEDS0_SPEC, 1> {
-        EDS1_W::new(self)
+    pub fn eds1(&mut self) -> EDS1_W<GPEDS0_SPEC> {
+        EDS1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Event detected 2"]
     #[inline(always)]
     #[must_use]
-    pub fn eds2(&mut self) -> EDS2_W<GPEDS0_SPEC, 2> {
-        EDS2_W::new(self)
+    pub fn eds2(&mut self) -> EDS2_W<GPEDS0_SPEC> {
+        EDS2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Event detected 3"]
     #[inline(always)]
     #[must_use]
-    pub fn eds3(&mut self) -> EDS3_W<GPEDS0_SPEC, 3> {
-        EDS3_W::new(self)
+    pub fn eds3(&mut self) -> EDS3_W<GPEDS0_SPEC> {
+        EDS3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Event detected 4"]
     #[inline(always)]
     #[must_use]
-    pub fn eds4(&mut self) -> EDS4_W<GPEDS0_SPEC, 4> {
-        EDS4_W::new(self)
+    pub fn eds4(&mut self) -> EDS4_W<GPEDS0_SPEC> {
+        EDS4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Event detected 5"]
     #[inline(always)]
     #[must_use]
-    pub fn eds5(&mut self) -> EDS5_W<GPEDS0_SPEC, 5> {
-        EDS5_W::new(self)
+    pub fn eds5(&mut self) -> EDS5_W<GPEDS0_SPEC> {
+        EDS5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Event detected 6"]
     #[inline(always)]
     #[must_use]
-    pub fn eds6(&mut self) -> EDS6_W<GPEDS0_SPEC, 6> {
-        EDS6_W::new(self)
+    pub fn eds6(&mut self) -> EDS6_W<GPEDS0_SPEC> {
+        EDS6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Event detected 7"]
     #[inline(always)]
     #[must_use]
-    pub fn eds7(&mut self) -> EDS7_W<GPEDS0_SPEC, 7> {
-        EDS7_W::new(self)
+    pub fn eds7(&mut self) -> EDS7_W<GPEDS0_SPEC> {
+        EDS7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Event detected 8"]
     #[inline(always)]
     #[must_use]
-    pub fn eds8(&mut self) -> EDS8_W<GPEDS0_SPEC, 8> {
-        EDS8_W::new(self)
+    pub fn eds8(&mut self) -> EDS8_W<GPEDS0_SPEC> {
+        EDS8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Event detected 9"]
     #[inline(always)]
     #[must_use]
-    pub fn eds9(&mut self) -> EDS9_W<GPEDS0_SPEC, 9> {
-        EDS9_W::new(self)
+    pub fn eds9(&mut self) -> EDS9_W<GPEDS0_SPEC> {
+        EDS9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Event detected 10"]
     #[inline(always)]
     #[must_use]
-    pub fn eds10(&mut self) -> EDS10_W<GPEDS0_SPEC, 10> {
-        EDS10_W::new(self)
+    pub fn eds10(&mut self) -> EDS10_W<GPEDS0_SPEC> {
+        EDS10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Event detected 11"]
     #[inline(always)]
     #[must_use]
-    pub fn eds11(&mut self) -> EDS11_W<GPEDS0_SPEC, 11> {
-        EDS11_W::new(self)
+    pub fn eds11(&mut self) -> EDS11_W<GPEDS0_SPEC> {
+        EDS11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Event detected 12"]
     #[inline(always)]
     #[must_use]
-    pub fn eds12(&mut self) -> EDS12_W<GPEDS0_SPEC, 12> {
-        EDS12_W::new(self)
+    pub fn eds12(&mut self) -> EDS12_W<GPEDS0_SPEC> {
+        EDS12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Event detected 13"]
     #[inline(always)]
     #[must_use]
-    pub fn eds13(&mut self) -> EDS13_W<GPEDS0_SPEC, 13> {
-        EDS13_W::new(self)
+    pub fn eds13(&mut self) -> EDS13_W<GPEDS0_SPEC> {
+        EDS13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Event detected 14"]
     #[inline(always)]
     #[must_use]
-    pub fn eds14(&mut self) -> EDS14_W<GPEDS0_SPEC, 14> {
-        EDS14_W::new(self)
+    pub fn eds14(&mut self) -> EDS14_W<GPEDS0_SPEC> {
+        EDS14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Event detected 15"]
     #[inline(always)]
     #[must_use]
-    pub fn eds15(&mut self) -> EDS15_W<GPEDS0_SPEC, 15> {
-        EDS15_W::new(self)
+    pub fn eds15(&mut self) -> EDS15_W<GPEDS0_SPEC> {
+        EDS15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Event detected 16"]
     #[inline(always)]
     #[must_use]
-    pub fn eds16(&mut self) -> EDS16_W<GPEDS0_SPEC, 16> {
-        EDS16_W::new(self)
+    pub fn eds16(&mut self) -> EDS16_W<GPEDS0_SPEC> {
+        EDS16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Event detected 17"]
     #[inline(always)]
     #[must_use]
-    pub fn eds17(&mut self) -> EDS17_W<GPEDS0_SPEC, 17> {
-        EDS17_W::new(self)
+    pub fn eds17(&mut self) -> EDS17_W<GPEDS0_SPEC> {
+        EDS17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Event detected 18"]
     #[inline(always)]
     #[must_use]
-    pub fn eds18(&mut self) -> EDS18_W<GPEDS0_SPEC, 18> {
-        EDS18_W::new(self)
+    pub fn eds18(&mut self) -> EDS18_W<GPEDS0_SPEC> {
+        EDS18_W::new(self, 18)
     }
     #[doc = "Bit 19 - Event detected 19"]
     #[inline(always)]
     #[must_use]
-    pub fn eds19(&mut self) -> EDS19_W<GPEDS0_SPEC, 19> {
-        EDS19_W::new(self)
+    pub fn eds19(&mut self) -> EDS19_W<GPEDS0_SPEC> {
+        EDS19_W::new(self, 19)
     }
     #[doc = "Bit 20 - Event detected 20"]
     #[inline(always)]
     #[must_use]
-    pub fn eds20(&mut self) -> EDS20_W<GPEDS0_SPEC, 20> {
-        EDS20_W::new(self)
+    pub fn eds20(&mut self) -> EDS20_W<GPEDS0_SPEC> {
+        EDS20_W::new(self, 20)
     }
     #[doc = "Bit 21 - Event detected 21"]
     #[inline(always)]
     #[must_use]
-    pub fn eds21(&mut self) -> EDS21_W<GPEDS0_SPEC, 21> {
-        EDS21_W::new(self)
+    pub fn eds21(&mut self) -> EDS21_W<GPEDS0_SPEC> {
+        EDS21_W::new(self, 21)
     }
     #[doc = "Bit 22 - Event detected 22"]
     #[inline(always)]
     #[must_use]
-    pub fn eds22(&mut self) -> EDS22_W<GPEDS0_SPEC, 22> {
-        EDS22_W::new(self)
+    pub fn eds22(&mut self) -> EDS22_W<GPEDS0_SPEC> {
+        EDS22_W::new(self, 22)
     }
     #[doc = "Bit 23 - Event detected 23"]
     #[inline(always)]
     #[must_use]
-    pub fn eds23(&mut self) -> EDS23_W<GPEDS0_SPEC, 23> {
-        EDS23_W::new(self)
+    pub fn eds23(&mut self) -> EDS23_W<GPEDS0_SPEC> {
+        EDS23_W::new(self, 23)
     }
     #[doc = "Bit 24 - Event detected 24"]
     #[inline(always)]
     #[must_use]
-    pub fn eds24(&mut self) -> EDS24_W<GPEDS0_SPEC, 24> {
-        EDS24_W::new(self)
+    pub fn eds24(&mut self) -> EDS24_W<GPEDS0_SPEC> {
+        EDS24_W::new(self, 24)
     }
     #[doc = "Bit 25 - Event detected 25"]
     #[inline(always)]
     #[must_use]
-    pub fn eds25(&mut self) -> EDS25_W<GPEDS0_SPEC, 25> {
-        EDS25_W::new(self)
+    pub fn eds25(&mut self) -> EDS25_W<GPEDS0_SPEC> {
+        EDS25_W::new(self, 25)
     }
     #[doc = "Bit 26 - Event detected 26"]
     #[inline(always)]
     #[must_use]
-    pub fn eds26(&mut self) -> EDS26_W<GPEDS0_SPEC, 26> {
-        EDS26_W::new(self)
+    pub fn eds26(&mut self) -> EDS26_W<GPEDS0_SPEC> {
+        EDS26_W::new(self, 26)
     }
     #[doc = "Bit 27 - Event detected 27"]
     #[inline(always)]
     #[must_use]
-    pub fn eds27(&mut self) -> EDS27_W<GPEDS0_SPEC, 27> {
-        EDS27_W::new(self)
+    pub fn eds27(&mut self) -> EDS27_W<GPEDS0_SPEC> {
+        EDS27_W::new(self, 27)
     }
     #[doc = "Bit 28 - Event detected 28"]
     #[inline(always)]
     #[must_use]
-    pub fn eds28(&mut self) -> EDS28_W<GPEDS0_SPEC, 28> {
-        EDS28_W::new(self)
+    pub fn eds28(&mut self) -> EDS28_W<GPEDS0_SPEC> {
+        EDS28_W::new(self, 28)
     }
     #[doc = "Bit 29 - Event detected 29"]
     #[inline(always)]
     #[must_use]
-    pub fn eds29(&mut self) -> EDS29_W<GPEDS0_SPEC, 29> {
-        EDS29_W::new(self)
+    pub fn eds29(&mut self) -> EDS29_W<GPEDS0_SPEC> {
+        EDS29_W::new(self, 29)
     }
     #[doc = "Bit 30 - Event detected 30"]
     #[inline(always)]
     #[must_use]
-    pub fn eds30(&mut self) -> EDS30_W<GPEDS0_SPEC, 30> {
-        EDS30_W::new(self)
+    pub fn eds30(&mut self) -> EDS30_W<GPEDS0_SPEC> {
+        EDS30_W::new(self, 30)
     }
     #[doc = "Bit 31 - Event detected 31"]
     #[inline(always)]
     #[must_use]
-    pub fn eds31(&mut self) -> EDS31_W<GPEDS0_SPEC, 31> {
-        EDS31_W::new(self)
+    pub fn eds31(&mut self) -> EDS31_W<GPEDS0_SPEC> {
+        EDS31_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

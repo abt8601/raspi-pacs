@@ -5,63 +5,63 @@ pub type W = crate::W<PCGCCTL_SPEC>;
 #[doc = "Field `STPPCLK` reader - Stop PHY clock"]
 pub type STPPCLK_R = crate::BitReader;
 #[doc = "Field `STPPCLK` writer - Stop PHY clock"]
-pub type STPPCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STPPCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GATEHCLK` reader - Gate HCLK"]
 pub type GATEHCLK_R = crate::BitReader;
 #[doc = "Field `GATEHCLK` writer - Gate HCLK"]
-pub type GATEHCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GATEHCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWRCLMP` reader - Power clamp"]
 pub type PWRCLMP_R = crate::BitReader;
 #[doc = "Field `PWRCLMP` writer - Power clamp"]
-pub type PWRCLMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWRCLMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSTPDWNMODULE` reader - Power down modules"]
 pub type RSTPDWNMODULE_R = crate::BitReader;
 #[doc = "Field `RSTPDWNMODULE` writer - Power down modules"]
-pub type RSTPDWNMODULE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTPDWNMODULE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PHYSUSP` reader - PHY Suspended"]
 pub type PHYSUSP_R = crate::BitReader;
 #[doc = "Field `PHYSUSP` writer - PHY Suspended"]
-pub type PHYSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PHYSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENABLE_L1GATING` reader - Enable sleep clock gating"]
 pub type ENABLE_L1GATING_R = crate::BitReader;
 #[doc = "Field `ENABLE_L1GATING` writer - Enable sleep clock gating"]
-pub type ENABLE_L1GATING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_L1GATING_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PHYSLEEP` reader - PHY is in sleep mode"]
 pub type PHYSLEEP_R = crate::BitReader;
 #[doc = "Field `PHYSLEEP` writer - PHY is in sleep mode"]
-pub type PHYSLEEP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PHYSLEEP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEEPSLEEP` reader - PHY is in deep sleep"]
 pub type DEEPSLEEP_R = crate::BitReader;
 #[doc = "Field `DEEPSLEEP` writer - PHY is in deep sleep"]
-pub type DEEPSLEEP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEEPSLEEP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESETAFTERSUSP` reader - Reset after suspend"]
 pub type RESETAFTERSUSP_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` writer - Reset after suspend"]
-pub type RESETAFTERSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESETAFTERSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESTOREMODE` reader - Restore mode"]
 pub type RESTOREMODE_R = crate::BitReader;
 #[doc = "Field `RESTOREMODE` writer - Restore mode"]
-pub type RESTOREMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RESTOREMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENEXTNDEDHIBER` reader - Enable extended hibernation"]
 pub type ENEXTNDEDHIBER_R = crate::BitReader;
 #[doc = "Field `ENEXTNDEDHIBER` writer - Enable extended hibernation"]
-pub type ENEXTNDEDHIBER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENEXTNDEDHIBER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXTNDEDHIBERNATIONCLAMP` reader - Extended hibernation clamp"]
 pub type EXTNDEDHIBERNATIONCLAMP_R = crate::BitReader;
 #[doc = "Field `EXTNDEDHIBERNATIONCLAMP` writer - Extended hibernation clamp"]
-pub type EXTNDEDHIBERNATIONCLAMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTNDEDHIBERNATIONCLAMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXTNDEDHIBERNATIONSWITCH` reader - Extended hibernation switch"]
 pub type EXTNDEDHIBERNATIONSWITCH_R = crate::BitReader;
 #[doc = "Field `EXTNDEDHIBERNATIONSWITCH` writer - Extended hibernation switch"]
-pub type EXTNDEDHIBERNATIONSWITCH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXTNDEDHIBERNATIONSWITCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESSREGRESTORED` reader - Essential register values restored"]
 pub type ESSREGRESTORED_R = crate::BitReader;
 #[doc = "Field `ESSREGRESTORED` writer - Essential register values restored"]
-pub type ESSREGRESTORED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESSREGRESTORED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RESTORE_VALUE` reader - Restore value"]
 pub type RESTORE_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `RESTORE_VALUE` writer - Restore value"]
-pub type RESTORE_VALUE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 18, O, u32>;
+pub type RESTORE_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 impl R {
     #[doc = "Bit 0 - Stop PHY clock"]
     #[inline(always)]
@@ -186,99 +186,99 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<PCGCCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Stop PHY clock"]
     #[inline(always)]
     #[must_use]
-    pub fn stppclk(&mut self) -> STPPCLK_W<PCGCCTL_SPEC, 0> {
-        STPPCLK_W::new(self)
+    pub fn stppclk(&mut self) -> STPPCLK_W<PCGCCTL_SPEC> {
+        STPPCLK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Gate HCLK"]
     #[inline(always)]
     #[must_use]
-    pub fn gatehclk(&mut self) -> GATEHCLK_W<PCGCCTL_SPEC, 1> {
-        GATEHCLK_W::new(self)
+    pub fn gatehclk(&mut self) -> GATEHCLK_W<PCGCCTL_SPEC> {
+        GATEHCLK_W::new(self, 1)
     }
     #[doc = "Bit 2 - Power clamp"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrclmp(&mut self) -> PWRCLMP_W<PCGCCTL_SPEC, 2> {
-        PWRCLMP_W::new(self)
+    pub fn pwrclmp(&mut self) -> PWRCLMP_W<PCGCCTL_SPEC> {
+        PWRCLMP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Power down modules"]
     #[inline(always)]
     #[must_use]
-    pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<PCGCCTL_SPEC, 3> {
-        RSTPDWNMODULE_W::new(self)
+    pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<PCGCCTL_SPEC> {
+        RSTPDWNMODULE_W::new(self, 3)
     }
     #[doc = "Bit 4 - PHY Suspended"]
     #[inline(always)]
     #[must_use]
-    pub fn physusp(&mut self) -> PHYSUSP_W<PCGCCTL_SPEC, 4> {
-        PHYSUSP_W::new(self)
+    pub fn physusp(&mut self) -> PHYSUSP_W<PCGCCTL_SPEC> {
+        PHYSUSP_W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable sleep clock gating"]
     #[inline(always)]
     #[must_use]
-    pub fn enable_l1gating(&mut self) -> ENABLE_L1GATING_W<PCGCCTL_SPEC, 5> {
-        ENABLE_L1GATING_W::new(self)
+    pub fn enable_l1gating(&mut self) -> ENABLE_L1GATING_W<PCGCCTL_SPEC> {
+        ENABLE_L1GATING_W::new(self, 5)
     }
     #[doc = "Bit 6 - PHY is in sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn physleep(&mut self) -> PHYSLEEP_W<PCGCCTL_SPEC, 6> {
-        PHYSLEEP_W::new(self)
+    pub fn physleep(&mut self) -> PHYSLEEP_W<PCGCCTL_SPEC> {
+        PHYSLEEP_W::new(self, 6)
     }
     #[doc = "Bit 7 - PHY is in deep sleep"]
     #[inline(always)]
     #[must_use]
-    pub fn deepsleep(&mut self) -> DEEPSLEEP_W<PCGCCTL_SPEC, 7> {
-        DEEPSLEEP_W::new(self)
+    pub fn deepsleep(&mut self) -> DEEPSLEEP_W<PCGCCTL_SPEC> {
+        DEEPSLEEP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reset after suspend"]
     #[inline(always)]
     #[must_use]
-    pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<PCGCCTL_SPEC, 8> {
-        RESETAFTERSUSP_W::new(self)
+    pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<PCGCCTL_SPEC> {
+        RESETAFTERSUSP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Restore mode"]
     #[inline(always)]
     #[must_use]
-    pub fn restoremode(&mut self) -> RESTOREMODE_W<PCGCCTL_SPEC, 9> {
-        RESTOREMODE_W::new(self)
+    pub fn restoremode(&mut self) -> RESTOREMODE_W<PCGCCTL_SPEC> {
+        RESTOREMODE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable extended hibernation"]
     #[inline(always)]
     #[must_use]
-    pub fn enextndedhiber(&mut self) -> ENEXTNDEDHIBER_W<PCGCCTL_SPEC, 10> {
-        ENEXTNDEDHIBER_W::new(self)
+    pub fn enextndedhiber(&mut self) -> ENEXTNDEDHIBER_W<PCGCCTL_SPEC> {
+        ENEXTNDEDHIBER_W::new(self, 10)
     }
     #[doc = "Bit 11 - Extended hibernation clamp"]
     #[inline(always)]
     #[must_use]
-    pub fn extndedhibernationclamp(&mut self) -> EXTNDEDHIBERNATIONCLAMP_W<PCGCCTL_SPEC, 11> {
-        EXTNDEDHIBERNATIONCLAMP_W::new(self)
+    pub fn extndedhibernationclamp(&mut self) -> EXTNDEDHIBERNATIONCLAMP_W<PCGCCTL_SPEC> {
+        EXTNDEDHIBERNATIONCLAMP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Extended hibernation switch"]
     #[inline(always)]
     #[must_use]
-    pub fn extndedhibernationswitch(&mut self) -> EXTNDEDHIBERNATIONSWITCH_W<PCGCCTL_SPEC, 12> {
-        EXTNDEDHIBERNATIONSWITCH_W::new(self)
+    pub fn extndedhibernationswitch(&mut self) -> EXTNDEDHIBERNATIONSWITCH_W<PCGCCTL_SPEC> {
+        EXTNDEDHIBERNATIONSWITCH_W::new(self, 12)
     }
     #[doc = "Bit 13 - Essential register values restored"]
     #[inline(always)]
     #[must_use]
-    pub fn essregrestored(&mut self) -> ESSREGRESTORED_W<PCGCCTL_SPEC, 13> {
-        ESSREGRESTORED_W::new(self)
+    pub fn essregrestored(&mut self) -> ESSREGRESTORED_W<PCGCCTL_SPEC> {
+        ESSREGRESTORED_W::new(self, 13)
     }
     #[doc = "Bits 14:31 - Restore value"]
     #[inline(always)]
     #[must_use]
-    pub fn restore_value(&mut self) -> RESTORE_VALUE_W<PCGCCTL_SPEC, 14> {
-        RESTORE_VALUE_W::new(self)
+    pub fn restore_value(&mut self) -> RESTORE_VALUE_W<PCGCCTL_SPEC> {
+        RESTORE_VALUE_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

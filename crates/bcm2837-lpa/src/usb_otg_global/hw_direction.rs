@@ -50,9 +50,11 @@ impl DIRECTION_R {
     }
 }
 impl R {
-    #[doc = "Direction [0-15]"]
+    #[doc = "Direction [0-15]\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `DIRECTION0` field"]
     #[inline(always)]
-    pub unsafe fn direction(&self, n: u8) -> DIRECTION_R {
+    pub fn direction(&self, n: u8) -> DIRECTION_R {
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         DIRECTION_R::new(((self.bits >> (n * 2)) & 3) as u8)
     }
     #[doc = "Bits 0:1 - Direction 0"]
@@ -178,7 +180,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HW_DIRECTION_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Direction\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hw_direction::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

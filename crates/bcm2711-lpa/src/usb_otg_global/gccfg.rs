@@ -5,27 +5,27 @@ pub type W = crate::W<GCCFG_SPEC>;
 #[doc = "Field `PWRDWN` reader - Power down"]
 pub type PWRDWN_R = crate::BitReader;
 #[doc = "Field `PWRDWN` writer - Power down"]
-pub type PWRDWN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWRDWN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2CPADEN` reader - Enable I2C bus connection for the external I2C PHY interface"]
 pub type I2CPADEN_R = crate::BitReader;
 #[doc = "Field `I2CPADEN` writer - Enable I2C bus connection for the external I2C PHY interface"]
-pub type I2CPADEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2CPADEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VBUSASEN` reader - Enable the VBUS sensing device"]
 pub type VBUSASEN_R = crate::BitReader;
 #[doc = "Field `VBUSASEN` writer - Enable the VBUS sensing device"]
-pub type VBUSASEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VBUSASEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VBUSBSEN` reader - Enable the VBUS sensing device"]
 pub type VBUSBSEN_R = crate::BitReader;
 #[doc = "Field `VBUSBSEN` writer - Enable the VBUS sensing device"]
-pub type VBUSBSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VBUSBSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOFOUTEN` reader - SOF output enable"]
 pub type SOFOUTEN_R = crate::BitReader;
 #[doc = "Field `SOFOUTEN` writer - SOF output enable"]
-pub type SOFOUTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOFOUTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NOVBUSSENS` reader - VBUS sensing disable option"]
 pub type NOVBUSSENS_R = crate::BitReader;
 #[doc = "Field `NOVBUSSENS` writer - VBUS sensing disable option"]
-pub type NOVBUSSENS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NOVBUSSENS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
@@ -72,45 +72,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GCCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrdwn(&mut self) -> PWRDWN_W<GCCFG_SPEC, 16> {
-        PWRDWN_W::new(self)
+    pub fn pwrdwn(&mut self) -> PWRDWN_W<GCCFG_SPEC> {
+        PWRDWN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable I2C bus connection for the external I2C PHY interface"]
     #[inline(always)]
     #[must_use]
-    pub fn i2cpaden(&mut self) -> I2CPADEN_W<GCCFG_SPEC, 17> {
-        I2CPADEN_W::new(self)
+    pub fn i2cpaden(&mut self) -> I2CPADEN_W<GCCFG_SPEC> {
+        I2CPADEN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable the VBUS sensing device"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusasen(&mut self) -> VBUSASEN_W<GCCFG_SPEC, 18> {
-        VBUSASEN_W::new(self)
+    pub fn vbusasen(&mut self) -> VBUSASEN_W<GCCFG_SPEC> {
+        VBUSASEN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable the VBUS sensing device"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusbsen(&mut self) -> VBUSBSEN_W<GCCFG_SPEC, 19> {
-        VBUSBSEN_W::new(self)
+    pub fn vbusbsen(&mut self) -> VBUSBSEN_W<GCCFG_SPEC> {
+        VBUSBSEN_W::new(self, 19)
     }
     #[doc = "Bit 20 - SOF output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC, 20> {
-        SOFOUTEN_W::new(self)
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC> {
+        SOFOUTEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - VBUS sensing disable option"]
     #[inline(always)]
     #[must_use]
-    pub fn novbussens(&mut self) -> NOVBUSSENS_W<GCCFG_SPEC, 21> {
-        NOVBUSSENS_W::new(self)
+    pub fn novbussens(&mut self) -> NOVBUSSENS_W<GCCFG_SPEC> {
+        NOVBUSSENS_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

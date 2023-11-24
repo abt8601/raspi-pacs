@@ -5,131 +5,131 @@ pub type W = crate::W<GICD_ICPENDR3_SPEC>;
 #[doc = "Field `TIMER_0` reader - Timer 0"]
 pub type TIMER_0_R = crate::BitReader;
 #[doc = "Field `TIMER_0` writer - Timer 0"]
-pub type TIMER_0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type TIMER_0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TIMER_1` reader - Timer 1"]
 pub type TIMER_1_R = crate::BitReader;
 #[doc = "Field `TIMER_1` writer - Timer 1"]
-pub type TIMER_1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type TIMER_1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TIMER_2` reader - Timer 2"]
 pub type TIMER_2_R = crate::BitReader;
 #[doc = "Field `TIMER_2` writer - Timer 2"]
-pub type TIMER_2_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type TIMER_2_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TIMER_3` reader - Timer 3"]
 pub type TIMER_3_R = crate::BitReader;
 #[doc = "Field `TIMER_3` writer - Timer 3"]
-pub type TIMER_3_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type TIMER_3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `H264_0` reader - H264 0"]
 pub type H264_0_R = crate::BitReader;
 #[doc = "Field `H264_0` writer - H264 0"]
-pub type H264_0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type H264_0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `H264_1` reader - H264 1"]
 pub type H264_1_R = crate::BitReader;
 #[doc = "Field `H264_1` writer - H264 1"]
-pub type H264_1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type H264_1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `H264_2` reader - H264 2"]
 pub type H264_2_R = crate::BitReader;
 #[doc = "Field `H264_2` writer - H264 2"]
-pub type H264_2_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type H264_2_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `JPEG` reader - JPEG"]
 pub type JPEG_R = crate::BitReader;
 #[doc = "Field `JPEG` writer - JPEG"]
-pub type JPEG_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type JPEG_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `ISP` reader - ISP"]
 pub type ISP_R = crate::BitReader;
 #[doc = "Field `ISP` writer - ISP"]
-pub type ISP_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type ISP_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `USB` reader - USB"]
 pub type USB_R = crate::BitReader;
 #[doc = "Field `USB` writer - USB"]
-pub type USB_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type USB_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `V3D` reader - V3D"]
 pub type V3D_R = crate::BitReader;
 #[doc = "Field `V3D` writer - V3D"]
-pub type V3D_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type V3D_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TRANSPOSER` reader - Transposer"]
 pub type TRANSPOSER_R = crate::BitReader;
 #[doc = "Field `TRANSPOSER` writer - Transposer"]
-pub type TRANSPOSER_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type TRANSPOSER_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `MULTICORE_SYNC_0` reader - Multicore Sync 0"]
 pub type MULTICORE_SYNC_0_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_0` writer - Multicore Sync 0"]
-pub type MULTICORE_SYNC_0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type MULTICORE_SYNC_0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `MULTICORE_SYNC_1` reader - Multicore Sync 1"]
 pub type MULTICORE_SYNC_1_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_1` writer - Multicore Sync 1"]
-pub type MULTICORE_SYNC_1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type MULTICORE_SYNC_1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `MULTICORE_SYNC_2` reader - Multicore Sync 2"]
 pub type MULTICORE_SYNC_2_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_2` writer - Multicore Sync 2"]
-pub type MULTICORE_SYNC_2_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type MULTICORE_SYNC_2_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `MULTICORE_SYNC_3` reader - Multicore Sync 3"]
 pub type MULTICORE_SYNC_3_R = crate::BitReader;
 #[doc = "Field `MULTICORE_SYNC_3` writer - Multicore Sync 3"]
-pub type MULTICORE_SYNC_3_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type MULTICORE_SYNC_3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_0` reader - DMA 0"]
 pub type DMA_0_R = crate::BitReader;
 #[doc = "Field `DMA_0` writer - DMA 0"]
-pub type DMA_0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_1` reader - DMA 1"]
 pub type DMA_1_R = crate::BitReader;
 #[doc = "Field `DMA_1` writer - DMA 1"]
-pub type DMA_1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_2` reader - DMA 2"]
 pub type DMA_2_R = crate::BitReader;
 #[doc = "Field `DMA_2` writer - DMA 2"]
-pub type DMA_2_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_2_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_3` reader - DMA 3"]
 pub type DMA_3_R = crate::BitReader;
 #[doc = "Field `DMA_3` writer - DMA 3"]
-pub type DMA_3_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_4` reader - DMA 4"]
 pub type DMA_4_R = crate::BitReader;
 #[doc = "Field `DMA_4` writer - DMA 4"]
-pub type DMA_4_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_4_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_5` reader - DMA 5"]
 pub type DMA_5_R = crate::BitReader;
 #[doc = "Field `DMA_5` writer - DMA 5"]
-pub type DMA_5_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_5_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_6` reader - DMA 6"]
 pub type DMA_6_R = crate::BitReader;
 #[doc = "Field `DMA_6` writer - DMA 6"]
-pub type DMA_6_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_6_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_7_8` reader - OR of DMA 7 and 8"]
 pub type DMA_7_8_R = crate::BitReader;
 #[doc = "Field `DMA_7_8` writer - OR of DMA 7 and 8"]
-pub type DMA_7_8_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_7_8_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_9_10` reader - OR of DMA 9 and 10"]
 pub type DMA_9_10_R = crate::BitReader;
 #[doc = "Field `DMA_9_10` writer - OR of DMA 9 and 10"]
-pub type DMA_9_10_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_9_10_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_11` reader - DMA 11"]
 pub type DMA_11_R = crate::BitReader;
 #[doc = "Field `DMA_11` writer - DMA 11"]
-pub type DMA_11_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_11_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_12` reader - DMA 12"]
 pub type DMA_12_R = crate::BitReader;
 #[doc = "Field `DMA_12` writer - DMA 12"]
-pub type DMA_12_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_12_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_13` reader - DMA 13"]
 pub type DMA_13_R = crate::BitReader;
 #[doc = "Field `DMA_13` writer - DMA 13"]
-pub type DMA_13_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_13_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_14` reader - DMA 14"]
 pub type DMA_14_R = crate::BitReader;
 #[doc = "Field `DMA_14` writer - DMA 14"]
-pub type DMA_14_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_14_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `AUX` reader - OR of UART1, SPI1 and SPI2"]
 pub type AUX_R = crate::BitReader;
 #[doc = "Field `AUX` writer - OR of UART1, SPI1 and SPI2"]
-pub type AUX_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type AUX_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `ARM` reader - ARM"]
 pub type ARM_R = crate::BitReader;
 #[doc = "Field `ARM` writer - ARM"]
-pub type ARM_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type ARM_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DMA_15` reader - DMA 15"]
 pub type DMA_15_R = crate::BitReader;
 #[doc = "Field `DMA_15` writer - DMA 15"]
-pub type DMA_15_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DMA_15_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Timer 0"]
     #[inline(always)]
@@ -344,201 +344,201 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICPENDR3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Timer 0"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ICPENDR3_SPEC, 0> {
-        TIMER_0_W::new(self)
+    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ICPENDR3_SPEC> {
+        TIMER_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timer 1"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ICPENDR3_SPEC, 1> {
-        TIMER_1_W::new(self)
+    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ICPENDR3_SPEC> {
+        TIMER_1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timer 2"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ICPENDR3_SPEC, 2> {
-        TIMER_2_W::new(self)
+    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ICPENDR3_SPEC> {
+        TIMER_2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timer 3"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ICPENDR3_SPEC, 3> {
-        TIMER_3_W::new(self)
+    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ICPENDR3_SPEC> {
+        TIMER_3_W::new(self, 3)
     }
     #[doc = "Bit 4 - H264 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_0(&mut self) -> H264_0_W<GICD_ICPENDR3_SPEC, 4> {
-        H264_0_W::new(self)
+    pub fn h264_0(&mut self) -> H264_0_W<GICD_ICPENDR3_SPEC> {
+        H264_0_W::new(self, 4)
     }
     #[doc = "Bit 5 - H264 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_1(&mut self) -> H264_1_W<GICD_ICPENDR3_SPEC, 5> {
-        H264_1_W::new(self)
+    pub fn h264_1(&mut self) -> H264_1_W<GICD_ICPENDR3_SPEC> {
+        H264_1_W::new(self, 5)
     }
     #[doc = "Bit 6 - H264 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_2(&mut self) -> H264_2_W<GICD_ICPENDR3_SPEC, 6> {
-        H264_2_W::new(self)
+    pub fn h264_2(&mut self) -> H264_2_W<GICD_ICPENDR3_SPEC> {
+        H264_2_W::new(self, 6)
     }
     #[doc = "Bit 7 - JPEG"]
     #[inline(always)]
     #[must_use]
-    pub fn jpeg(&mut self) -> JPEG_W<GICD_ICPENDR3_SPEC, 7> {
-        JPEG_W::new(self)
+    pub fn jpeg(&mut self) -> JPEG_W<GICD_ICPENDR3_SPEC> {
+        JPEG_W::new(self, 7)
     }
     #[doc = "Bit 8 - ISP"]
     #[inline(always)]
     #[must_use]
-    pub fn isp(&mut self) -> ISP_W<GICD_ICPENDR3_SPEC, 8> {
-        ISP_W::new(self)
+    pub fn isp(&mut self) -> ISP_W<GICD_ICPENDR3_SPEC> {
+        ISP_W::new(self, 8)
     }
     #[doc = "Bit 9 - USB"]
     #[inline(always)]
     #[must_use]
-    pub fn usb(&mut self) -> USB_W<GICD_ICPENDR3_SPEC, 9> {
-        USB_W::new(self)
+    pub fn usb(&mut self) -> USB_W<GICD_ICPENDR3_SPEC> {
+        USB_W::new(self, 9)
     }
     #[doc = "Bit 10 - V3D"]
     #[inline(always)]
     #[must_use]
-    pub fn v3d(&mut self) -> V3D_W<GICD_ICPENDR3_SPEC, 10> {
-        V3D_W::new(self)
+    pub fn v3d(&mut self) -> V3D_W<GICD_ICPENDR3_SPEC> {
+        V3D_W::new(self, 10)
     }
     #[doc = "Bit 11 - Transposer"]
     #[inline(always)]
     #[must_use]
-    pub fn transposer(&mut self) -> TRANSPOSER_W<GICD_ICPENDR3_SPEC, 11> {
-        TRANSPOSER_W::new(self)
+    pub fn transposer(&mut self) -> TRANSPOSER_W<GICD_ICPENDR3_SPEC> {
+        TRANSPOSER_W::new(self, 11)
     }
     #[doc = "Bit 12 - Multicore Sync 0"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_0(&mut self) -> MULTICORE_SYNC_0_W<GICD_ICPENDR3_SPEC, 12> {
-        MULTICORE_SYNC_0_W::new(self)
+    pub fn multicore_sync_0(&mut self) -> MULTICORE_SYNC_0_W<GICD_ICPENDR3_SPEC> {
+        MULTICORE_SYNC_0_W::new(self, 12)
     }
     #[doc = "Bit 13 - Multicore Sync 1"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_1(&mut self) -> MULTICORE_SYNC_1_W<GICD_ICPENDR3_SPEC, 13> {
-        MULTICORE_SYNC_1_W::new(self)
+    pub fn multicore_sync_1(&mut self) -> MULTICORE_SYNC_1_W<GICD_ICPENDR3_SPEC> {
+        MULTICORE_SYNC_1_W::new(self, 13)
     }
     #[doc = "Bit 14 - Multicore Sync 2"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_2(&mut self) -> MULTICORE_SYNC_2_W<GICD_ICPENDR3_SPEC, 14> {
-        MULTICORE_SYNC_2_W::new(self)
+    pub fn multicore_sync_2(&mut self) -> MULTICORE_SYNC_2_W<GICD_ICPENDR3_SPEC> {
+        MULTICORE_SYNC_2_W::new(self, 14)
     }
     #[doc = "Bit 15 - Multicore Sync 3"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_3(&mut self) -> MULTICORE_SYNC_3_W<GICD_ICPENDR3_SPEC, 15> {
-        MULTICORE_SYNC_3_W::new(self)
+    pub fn multicore_sync_3(&mut self) -> MULTICORE_SYNC_3_W<GICD_ICPENDR3_SPEC> {
+        MULTICORE_SYNC_3_W::new(self, 15)
     }
     #[doc = "Bit 16 - DMA 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ICPENDR3_SPEC, 16> {
-        DMA_0_W::new(self)
+    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ICPENDR3_SPEC> {
+        DMA_0_W::new(self, 16)
     }
     #[doc = "Bit 17 - DMA 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ICPENDR3_SPEC, 17> {
-        DMA_1_W::new(self)
+    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ICPENDR3_SPEC> {
+        DMA_1_W::new(self, 17)
     }
     #[doc = "Bit 18 - DMA 2"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ICPENDR3_SPEC, 18> {
-        DMA_2_W::new(self)
+    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ICPENDR3_SPEC> {
+        DMA_2_W::new(self, 18)
     }
     #[doc = "Bit 19 - DMA 3"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ICPENDR3_SPEC, 19> {
-        DMA_3_W::new(self)
+    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ICPENDR3_SPEC> {
+        DMA_3_W::new(self, 19)
     }
     #[doc = "Bit 20 - DMA 4"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_4(&mut self) -> DMA_4_W<GICD_ICPENDR3_SPEC, 20> {
-        DMA_4_W::new(self)
+    pub fn dma_4(&mut self) -> DMA_4_W<GICD_ICPENDR3_SPEC> {
+        DMA_4_W::new(self, 20)
     }
     #[doc = "Bit 21 - DMA 5"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_5(&mut self) -> DMA_5_W<GICD_ICPENDR3_SPEC, 21> {
-        DMA_5_W::new(self)
+    pub fn dma_5(&mut self) -> DMA_5_W<GICD_ICPENDR3_SPEC> {
+        DMA_5_W::new(self, 21)
     }
     #[doc = "Bit 22 - DMA 6"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_6(&mut self) -> DMA_6_W<GICD_ICPENDR3_SPEC, 22> {
-        DMA_6_W::new(self)
+    pub fn dma_6(&mut self) -> DMA_6_W<GICD_ICPENDR3_SPEC> {
+        DMA_6_W::new(self, 22)
     }
     #[doc = "Bit 23 - OR of DMA 7 and 8"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_7_8(&mut self) -> DMA_7_8_W<GICD_ICPENDR3_SPEC, 23> {
-        DMA_7_8_W::new(self)
+    pub fn dma_7_8(&mut self) -> DMA_7_8_W<GICD_ICPENDR3_SPEC> {
+        DMA_7_8_W::new(self, 23)
     }
     #[doc = "Bit 24 - OR of DMA 9 and 10"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_ICPENDR3_SPEC, 24> {
-        DMA_9_10_W::new(self)
+    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_ICPENDR3_SPEC> {
+        DMA_9_10_W::new(self, 24)
     }
     #[doc = "Bit 25 - DMA 11"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_11(&mut self) -> DMA_11_W<GICD_ICPENDR3_SPEC, 25> {
-        DMA_11_W::new(self)
+    pub fn dma_11(&mut self) -> DMA_11_W<GICD_ICPENDR3_SPEC> {
+        DMA_11_W::new(self, 25)
     }
     #[doc = "Bit 26 - DMA 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_12(&mut self) -> DMA_12_W<GICD_ICPENDR3_SPEC, 26> {
-        DMA_12_W::new(self)
+    pub fn dma_12(&mut self) -> DMA_12_W<GICD_ICPENDR3_SPEC> {
+        DMA_12_W::new(self, 26)
     }
     #[doc = "Bit 27 - DMA 13"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_13(&mut self) -> DMA_13_W<GICD_ICPENDR3_SPEC, 27> {
-        DMA_13_W::new(self)
+    pub fn dma_13(&mut self) -> DMA_13_W<GICD_ICPENDR3_SPEC> {
+        DMA_13_W::new(self, 27)
     }
     #[doc = "Bit 28 - DMA 14"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_14(&mut self) -> DMA_14_W<GICD_ICPENDR3_SPEC, 28> {
-        DMA_14_W::new(self)
+    pub fn dma_14(&mut self) -> DMA_14_W<GICD_ICPENDR3_SPEC> {
+        DMA_14_W::new(self, 28)
     }
     #[doc = "Bit 29 - OR of UART1, SPI1 and SPI2"]
     #[inline(always)]
     #[must_use]
-    pub fn aux(&mut self) -> AUX_W<GICD_ICPENDR3_SPEC, 29> {
-        AUX_W::new(self)
+    pub fn aux(&mut self) -> AUX_W<GICD_ICPENDR3_SPEC> {
+        AUX_W::new(self, 29)
     }
     #[doc = "Bit 30 - ARM"]
     #[inline(always)]
     #[must_use]
-    pub fn arm(&mut self) -> ARM_W<GICD_ICPENDR3_SPEC, 30> {
-        ARM_W::new(self)
+    pub fn arm(&mut self) -> ARM_W<GICD_ICPENDR3_SPEC> {
+        ARM_W::new(self, 30)
     }
     #[doc = "Bit 31 - DMA 15"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_15(&mut self) -> DMA_15_W<GICD_ICPENDR3_SPEC, 31> {
-        DMA_15_W::new(self)
+    pub fn dma_15(&mut self) -> DMA_15_W<GICD_ICPENDR3_SPEC> {
+        DMA_15_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

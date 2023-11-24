@@ -5,19 +5,19 @@ pub type W = crate::W<LSR_SPEC>;
 #[doc = "Field `DATA_READY` reader - Receive FIFO has at least one byte"]
 pub type DATA_READY_R = crate::BitReader;
 #[doc = "Field `DATA_READY` writer - Receive FIFO has at least one byte"]
-pub type DATA_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_OVERRUN` reader - Receive FIFO overrun"]
 pub type RX_OVERRUN_R = crate::BitReader;
 #[doc = "Field `RX_OVERRUN` writer - Receive FIFO overrun"]
-pub type RX_OVERRUN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RX_OVERRUN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_EMPTY` reader - Transmit FIFO has room for at least one byte"]
 pub type TX_EMPTY_R = crate::BitReader;
 #[doc = "Field `TX_EMPTY` writer - Transmit FIFO has room for at least one byte"]
-pub type TX_EMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_EMPTY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_IDLE` reader - Transmit FIFO empty and all bits shifted out"]
 pub type TX_IDLE_R = crate::BitReader;
 #[doc = "Field `TX_IDLE` writer - Transmit FIFO empty and all bits shifted out"]
-pub type TX_IDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_IDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Receive FIFO has at least one byte"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<LSR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Receive FIFO has at least one byte"]
     #[inline(always)]
     #[must_use]
-    pub fn data_ready(&mut self) -> DATA_READY_W<LSR_SPEC, 0> {
-        DATA_READY_W::new(self)
+    pub fn data_ready(&mut self) -> DATA_READY_W<LSR_SPEC> {
+        DATA_READY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receive FIFO overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn rx_overrun(&mut self) -> RX_OVERRUN_W<LSR_SPEC, 1> {
-        RX_OVERRUN_W::new(self)
+    pub fn rx_overrun(&mut self) -> RX_OVERRUN_W<LSR_SPEC> {
+        RX_OVERRUN_W::new(self, 1)
     }
     #[doc = "Bit 5 - Transmit FIFO has room for at least one byte"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_empty(&mut self) -> TX_EMPTY_W<LSR_SPEC, 5> {
-        TX_EMPTY_W::new(self)
+    pub fn tx_empty(&mut self) -> TX_EMPTY_W<LSR_SPEC> {
+        TX_EMPTY_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transmit FIFO empty and all bits shifted out"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_idle(&mut self) -> TX_IDLE_W<LSR_SPEC, 6> {
-        TX_IDLE_W::new(self)
+    pub fn tx_idle(&mut self) -> TX_IDLE_W<LSR_SPEC> {
+        TX_IDLE_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

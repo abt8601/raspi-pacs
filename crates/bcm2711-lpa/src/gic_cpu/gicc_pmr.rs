@@ -5,7 +5,7 @@ pub type W = crate::W<GICC_PMR_SPEC>;
 #[doc = "Field `PRIORITY` reader - Interrupts with a higher number are not signaled"]
 pub type PRIORITY_R = crate::FieldReader;
 #[doc = "Field `PRIORITY` writer - Interrupts with a higher number are not signaled"]
-pub type PRIORITY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PRIORITY_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Interrupts with a higher number are not signaled"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICC_PMR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Interrupts with a higher number are not signaled"]
     #[inline(always)]
     #[must_use]
-    pub fn priority(&mut self) -> PRIORITY_W<GICC_PMR_SPEC, 0> {
-        PRIORITY_W::new(self)
+    pub fn priority(&mut self) -> PRIORITY_W<GICC_PMR_SPEC> {
+        PRIORITY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

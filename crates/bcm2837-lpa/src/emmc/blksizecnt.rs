@@ -5,11 +5,11 @@ pub type W = crate::W<BLKSIZECNT_SPEC>;
 #[doc = "Field `BLKSIZE` reader - Block size in bytes"]
 pub type BLKSIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `BLKSIZE` writer - Block size in bytes"]
-pub type BLKSIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type BLKSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `BLKCNT` reader - Number of blocks to be transferred"]
 pub type BLKCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `BLKCNT` writer - Number of blocks to be transferred"]
-pub type BLKCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type BLKCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:9 - Block size in bytes"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<BLKSIZECNT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - Block size in bytes"]
     #[inline(always)]
     #[must_use]
-    pub fn blksize(&mut self) -> BLKSIZE_W<BLKSIZECNT_SPEC, 0> {
-        BLKSIZE_W::new(self)
+    pub fn blksize(&mut self) -> BLKSIZE_W<BLKSIZECNT_SPEC> {
+        BLKSIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Number of blocks to be transferred"]
     #[inline(always)]
     #[must_use]
-    pub fn blkcnt(&mut self) -> BLKCNT_W<BLKSIZECNT_SPEC, 16> {
-        BLKCNT_W::new(self)
+    pub fn blkcnt(&mut self) -> BLKCNT_W<BLKSIZECNT_SPEC> {
+        BLKCNT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

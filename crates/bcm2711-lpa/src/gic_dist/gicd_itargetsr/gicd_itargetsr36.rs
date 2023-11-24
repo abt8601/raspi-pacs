@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR36_SPEC>;
 #[doc = "Field `SMI` reader - SMI"]
 pub type SMI_R = crate::FieldReader;
 #[doc = "Field `SMI` writer - SMI"]
-pub type SMI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SMI_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `GPIO_0` reader - GPIO 0"]
 pub type GPIO_0_R = crate::FieldReader;
 #[doc = "Field `GPIO_0` writer - GPIO 0"]
-pub type GPIO_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GPIO_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `GPIO_1` reader - GPIO 1"]
 pub type GPIO_1_R = crate::FieldReader;
 #[doc = "Field `GPIO_1` writer - GPIO 1"]
-pub type GPIO_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GPIO_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `GPIO_2` reader - GPIO 2"]
 pub type GPIO_2_R = crate::FieldReader;
 #[doc = "Field `GPIO_2` writer - GPIO 2"]
-pub type GPIO_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GPIO_2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - SMI"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR36_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - SMI"]
     #[inline(always)]
     #[must_use]
-    pub fn smi(&mut self) -> SMI_W<GICD_ITARGETSR36_SPEC, 0> {
-        SMI_W::new(self)
+    pub fn smi(&mut self) -> SMI_W<GICD_ITARGETSR36_SPEC> {
+        SMI_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - GPIO 0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_ITARGETSR36_SPEC, 8> {
-        GPIO_0_W::new(self)
+    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_ITARGETSR36_SPEC> {
+        GPIO_0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - GPIO 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_ITARGETSR36_SPEC, 16> {
-        GPIO_1_W::new(self)
+    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_ITARGETSR36_SPEC> {
+        GPIO_1_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - GPIO 2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_ITARGETSR36_SPEC, 24> {
-        GPIO_2_W::new(self)
+    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_ITARGETSR36_SPEC> {
+        GPIO_2_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<DLEN_SPEC>;
 #[doc = "Field `DLEN` reader - Data length"]
 pub type DLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `DLEN` writer - Data length"]
-pub type DLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Data length"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DLEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Data length"]
     #[inline(always)]
     #[must_use]
-    pub fn dlen(&mut self) -> DLEN_W<DLEN_SPEC, 0> {
-        DLEN_W::new(self)
+    pub fn dlen(&mut self) -> DLEN_W<DLEN_SPEC> {
+        DLEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

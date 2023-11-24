@@ -5,27 +5,27 @@ pub type W = crate::W<GOTGINT_SPEC>;
 #[doc = "Field `SEDET` reader - Session end detected"]
 pub type SEDET_R = crate::BitReader;
 #[doc = "Field `SEDET` writer - Session end detected"]
-pub type SEDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SEDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRSSCHG` reader - Session request success status change"]
 pub type SRSSCHG_R = crate::BitReader;
 #[doc = "Field `SRSSCHG` writer - Session request success status change"]
-pub type SRSSCHG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRSSCHG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNSSCHG` reader - Host negotiation success status change"]
 pub type HNSSCHG_R = crate::BitReader;
 #[doc = "Field `HNSSCHG` writer - Host negotiation success status change"]
-pub type HNSSCHG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNSSCHG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HNGDET` reader - Host negotiation detected"]
 pub type HNGDET_R = crate::BitReader;
 #[doc = "Field `HNGDET` writer - Host negotiation detected"]
-pub type HNGDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HNGDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADTOCHG` reader - A-device timeout change"]
 pub type ADTOCHG_R = crate::BitReader;
 #[doc = "Field `ADTOCHG` writer - A-device timeout change"]
-pub type ADTOCHG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADTOCHG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DBCDNE` reader - Debounce done"]
 pub type DBCDNE_R = crate::BitReader;
 #[doc = "Field `DBCDNE` writer - Debounce done"]
-pub type DBCDNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DBCDNE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - Session end detected"]
     #[inline(always)]
@@ -72,45 +72,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GOTGINT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 2 - Session end detected"]
     #[inline(always)]
     #[must_use]
-    pub fn sedet(&mut self) -> SEDET_W<GOTGINT_SPEC, 2> {
-        SEDET_W::new(self)
+    pub fn sedet(&mut self) -> SEDET_W<GOTGINT_SPEC> {
+        SEDET_W::new(self, 2)
     }
     #[doc = "Bit 8 - Session request success status change"]
     #[inline(always)]
     #[must_use]
-    pub fn srsschg(&mut self) -> SRSSCHG_W<GOTGINT_SPEC, 8> {
-        SRSSCHG_W::new(self)
+    pub fn srsschg(&mut self) -> SRSSCHG_W<GOTGINT_SPEC> {
+        SRSSCHG_W::new(self, 8)
     }
     #[doc = "Bit 9 - Host negotiation success status change"]
     #[inline(always)]
     #[must_use]
-    pub fn hnsschg(&mut self) -> HNSSCHG_W<GOTGINT_SPEC, 9> {
-        HNSSCHG_W::new(self)
+    pub fn hnsschg(&mut self) -> HNSSCHG_W<GOTGINT_SPEC> {
+        HNSSCHG_W::new(self, 9)
     }
     #[doc = "Bit 17 - Host negotiation detected"]
     #[inline(always)]
     #[must_use]
-    pub fn hngdet(&mut self) -> HNGDET_W<GOTGINT_SPEC, 17> {
-        HNGDET_W::new(self)
+    pub fn hngdet(&mut self) -> HNGDET_W<GOTGINT_SPEC> {
+        HNGDET_W::new(self, 17)
     }
     #[doc = "Bit 18 - A-device timeout change"]
     #[inline(always)]
     #[must_use]
-    pub fn adtochg(&mut self) -> ADTOCHG_W<GOTGINT_SPEC, 18> {
-        ADTOCHG_W::new(self)
+    pub fn adtochg(&mut self) -> ADTOCHG_W<GOTGINT_SPEC> {
+        ADTOCHG_W::new(self, 18)
     }
     #[doc = "Bit 19 - Debounce done"]
     #[inline(always)]
     #[must_use]
-    pub fn dbcdne(&mut self) -> DBCDNE_W<GOTGINT_SPEC, 19> {
-        DBCDNE_W::new(self)
+    pub fn dbcdne(&mut self) -> DBCDNE_W<GOTGINT_SPEC> {
+        DBCDNE_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

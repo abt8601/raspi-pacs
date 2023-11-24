@@ -5,31 +5,31 @@ pub type W = crate::W<LCR_H_SPEC>;
 #[doc = "Field `BRK` reader - BRK"]
 pub type BRK_R = crate::BitReader;
 #[doc = "Field `BRK` writer - BRK"]
-pub type BRK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BRK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PEN` reader - PEN"]
 pub type PEN_R = crate::BitReader;
 #[doc = "Field `PEN` writer - PEN"]
-pub type PEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPS` reader - EPS"]
 pub type EPS_R = crate::BitReader;
 #[doc = "Field `EPS` writer - EPS"]
-pub type EPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STP2` reader - STP2"]
 pub type STP2_R = crate::BitReader;
 #[doc = "Field `STP2` writer - STP2"]
-pub type STP2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STP2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN` reader - FEN"]
 pub type FEN_R = crate::BitReader;
 #[doc = "Field `FEN` writer - FEN"]
-pub type FEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WLEN` reader - WLEN"]
 pub type WLEN_R = crate::FieldReader;
 #[doc = "Field `WLEN` writer - WLEN"]
-pub type WLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type WLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SPS` reader - SPS"]
 pub type SPS_R = crate::BitReader;
 #[doc = "Field `SPS` writer - SPS"]
-pub type SPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - BRK"]
     #[inline(always)]
@@ -82,51 +82,51 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<LCR_H_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - BRK"]
     #[inline(always)]
     #[must_use]
-    pub fn brk(&mut self) -> BRK_W<LCR_H_SPEC, 0> {
-        BRK_W::new(self)
+    pub fn brk(&mut self) -> BRK_W<LCR_H_SPEC> {
+        BRK_W::new(self, 0)
     }
     #[doc = "Bit 1 - PEN"]
     #[inline(always)]
     #[must_use]
-    pub fn pen(&mut self) -> PEN_W<LCR_H_SPEC, 1> {
-        PEN_W::new(self)
+    pub fn pen(&mut self) -> PEN_W<LCR_H_SPEC> {
+        PEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - EPS"]
     #[inline(always)]
     #[must_use]
-    pub fn eps(&mut self) -> EPS_W<LCR_H_SPEC, 2> {
-        EPS_W::new(self)
+    pub fn eps(&mut self) -> EPS_W<LCR_H_SPEC> {
+        EPS_W::new(self, 2)
     }
     #[doc = "Bit 3 - STP2"]
     #[inline(always)]
     #[must_use]
-    pub fn stp2(&mut self) -> STP2_W<LCR_H_SPEC, 3> {
-        STP2_W::new(self)
+    pub fn stp2(&mut self) -> STP2_W<LCR_H_SPEC> {
+        STP2_W::new(self, 3)
     }
     #[doc = "Bit 4 - FEN"]
     #[inline(always)]
     #[must_use]
-    pub fn fen(&mut self) -> FEN_W<LCR_H_SPEC, 4> {
-        FEN_W::new(self)
+    pub fn fen(&mut self) -> FEN_W<LCR_H_SPEC> {
+        FEN_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - WLEN"]
     #[inline(always)]
     #[must_use]
-    pub fn wlen(&mut self) -> WLEN_W<LCR_H_SPEC, 5> {
-        WLEN_W::new(self)
+    pub fn wlen(&mut self) -> WLEN_W<LCR_H_SPEC> {
+        WLEN_W::new(self, 5)
     }
     #[doc = "Bit 7 - SPS"]
     #[inline(always)]
     #[must_use]
-    pub fn sps(&mut self) -> SPS_W<LCR_H_SPEC, 7> {
-        SPS_W::new(self)
+    pub fn sps(&mut self) -> SPS_W<LCR_H_SPEC> {
+        SPS_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

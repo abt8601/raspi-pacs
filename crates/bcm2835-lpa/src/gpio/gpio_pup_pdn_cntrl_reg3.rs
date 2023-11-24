@@ -92,57 +92,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Resistor select for 48"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pup_pdn_cntrl48(
-        &mut self,
-    ) -> GPIO_PUP_PDN_CNTRL48_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC, 0> {
-        GPIO_PUP_PDN_CNTRL48_W::new(self)
+    pub fn gpio_pup_pdn_cntrl48(&mut self) -> GPIO_PUP_PDN_CNTRL48_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
+        GPIO_PUP_PDN_CNTRL48_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Resistor select for 49"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pup_pdn_cntrl49(
-        &mut self,
-    ) -> GPIO_PUP_PDN_CNTRL49_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC, 2> {
-        GPIO_PUP_PDN_CNTRL49_W::new(self)
+    pub fn gpio_pup_pdn_cntrl49(&mut self) -> GPIO_PUP_PDN_CNTRL49_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
+        GPIO_PUP_PDN_CNTRL49_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Resistor select for 50"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pup_pdn_cntrl50(
-        &mut self,
-    ) -> GPIO_PUP_PDN_CNTRL50_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC, 4> {
-        GPIO_PUP_PDN_CNTRL50_W::new(self)
+    pub fn gpio_pup_pdn_cntrl50(&mut self) -> GPIO_PUP_PDN_CNTRL50_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
+        GPIO_PUP_PDN_CNTRL50_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Resistor select for 51"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pup_pdn_cntrl51(
-        &mut self,
-    ) -> GPIO_PUP_PDN_CNTRL51_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC, 6> {
-        GPIO_PUP_PDN_CNTRL51_W::new(self)
+    pub fn gpio_pup_pdn_cntrl51(&mut self) -> GPIO_PUP_PDN_CNTRL51_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
+        GPIO_PUP_PDN_CNTRL51_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Resistor select for 52"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pup_pdn_cntrl52(
-        &mut self,
-    ) -> GPIO_PUP_PDN_CNTRL52_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC, 8> {
-        GPIO_PUP_PDN_CNTRL52_W::new(self)
+    pub fn gpio_pup_pdn_cntrl52(&mut self) -> GPIO_PUP_PDN_CNTRL52_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
+        GPIO_PUP_PDN_CNTRL52_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Resistor select for 53"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_pup_pdn_cntrl53(
-        &mut self,
-    ) -> GPIO_PUP_PDN_CNTRL53_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC, 10> {
-        GPIO_PUP_PDN_CNTRL53_W::new(self)
+    pub fn gpio_pup_pdn_cntrl53(&mut self) -> GPIO_PUP_PDN_CNTRL53_W<GPIO_PUP_PDN_CNTRL_REG3_SPEC> {
+        GPIO_PUP_PDN_CNTRL53_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

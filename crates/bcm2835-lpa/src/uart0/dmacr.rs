@@ -5,15 +5,15 @@ pub type W = crate::W<DMACR_SPEC>;
 #[doc = "Field `RXDMAE` reader - RXDMAE"]
 pub type RXDMAE_R = crate::BitReader;
 #[doc = "Field `RXDMAE` writer - RXDMAE"]
-pub type RXDMAE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXDMAE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXDMAE` reader - TXDMAE"]
 pub type TXDMAE_R = crate::BitReader;
 #[doc = "Field `TXDMAE` writer - TXDMAE"]
-pub type TXDMAE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXDMAE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMAONERR` reader - DMAONERR"]
 pub type DMAONERR_R = crate::BitReader;
 #[doc = "Field `DMAONERR` writer - DMAONERR"]
-pub type DMAONERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAONERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - RXDMAE"]
     #[inline(always)]
@@ -42,27 +42,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DMACR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - RXDMAE"]
     #[inline(always)]
     #[must_use]
-    pub fn rxdmae(&mut self) -> RXDMAE_W<DMACR_SPEC, 0> {
-        RXDMAE_W::new(self)
+    pub fn rxdmae(&mut self) -> RXDMAE_W<DMACR_SPEC> {
+        RXDMAE_W::new(self, 0)
     }
     #[doc = "Bit 1 - TXDMAE"]
     #[inline(always)]
     #[must_use]
-    pub fn txdmae(&mut self) -> TXDMAE_W<DMACR_SPEC, 1> {
-        TXDMAE_W::new(self)
+    pub fn txdmae(&mut self) -> TXDMAE_W<DMACR_SPEC> {
+        TXDMAE_W::new(self, 1)
     }
     #[doc = "Bit 2 - DMAONERR"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaonerr(&mut self) -> DMAONERR_W<DMACR_SPEC, 2> {
-        DMAONERR_W::new(self)
+    pub fn dmaonerr(&mut self) -> DMAONERR_W<DMACR_SPEC> {
+        DMAONERR_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

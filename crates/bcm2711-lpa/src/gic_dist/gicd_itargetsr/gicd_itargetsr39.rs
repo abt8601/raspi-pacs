@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR39_SPEC>;
 #[doc = "Field `CPG` reader - CPG"]
 pub type CPG_R = crate::FieldReader;
 #[doc = "Field `CPG` writer - CPG"]
-pub type CPG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CPG_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RNG` reader - RNG"]
 pub type RNG_R = crate::FieldReader;
 #[doc = "Field `RNG` writer - RNG"]
-pub type RNG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RNG_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `EMMC` reader - OR of EMMC and EMMC2"]
 pub type EMMC_R = crate::FieldReader;
 #[doc = "Field `EMMC` writer - OR of EMMC and EMMC2"]
-pub type EMMC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type EMMC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ETH_PCIE_SECURE` reader - ETH_PCIe secure"]
 pub type ETH_PCIE_SECURE_R = crate::FieldReader;
 #[doc = "Field `ETH_PCIE_SECURE` writer - ETH_PCIe secure"]
-pub type ETH_PCIE_SECURE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ETH_PCIE_SECURE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - CPG"]
     #[inline(always)]
@@ -55,33 +55,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR39_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - CPG"]
     #[inline(always)]
     #[must_use]
-    pub fn cpg(&mut self) -> CPG_W<GICD_ITARGETSR39_SPEC, 0> {
-        CPG_W::new(self)
+    pub fn cpg(&mut self) -> CPG_W<GICD_ITARGETSR39_SPEC> {
+        CPG_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - RNG"]
     #[inline(always)]
     #[must_use]
-    pub fn rng(&mut self) -> RNG_W<GICD_ITARGETSR39_SPEC, 8> {
-        RNG_W::new(self)
+    pub fn rng(&mut self) -> RNG_W<GICD_ITARGETSR39_SPEC> {
+        RNG_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - OR of EMMC and EMMC2"]
     #[inline(always)]
     #[must_use]
-    pub fn emmc(&mut self) -> EMMC_W<GICD_ITARGETSR39_SPEC, 16> {
-        EMMC_W::new(self)
+    pub fn emmc(&mut self) -> EMMC_W<GICD_ITARGETSR39_SPEC> {
+        EMMC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - ETH_PCIe secure"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_ITARGETSR39_SPEC, 24> {
-        ETH_PCIE_SECURE_W::new(self)
+    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_ITARGETSR39_SPEC> {
+        ETH_PCIE_SECURE_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

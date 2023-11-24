@@ -5,11 +5,11 @@ pub type W = crate::W<IFLS_SPEC>;
 #[doc = "Field `TXIFLSEL` reader - TXIFLSEL"]
 pub type TXIFLSEL_R = crate::FieldReader;
 #[doc = "Field `TXIFLSEL` writer - TXIFLSEL"]
-pub type TXIFLSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TXIFLSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `RXIFLSEL` reader - RXIFLSEL"]
 pub type RXIFLSEL_R = crate::FieldReader;
 #[doc = "Field `RXIFLSEL` writer - RXIFLSEL"]
-pub type RXIFLSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type RXIFLSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - TXIFLSEL"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IFLS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - TXIFLSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn txiflsel(&mut self) -> TXIFLSEL_W<IFLS_SPEC, 0> {
-        TXIFLSEL_W::new(self)
+    pub fn txiflsel(&mut self) -> TXIFLSEL_W<IFLS_SPEC> {
+        TXIFLSEL_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - RXIFLSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn rxiflsel(&mut self) -> RXIFLSEL_W<IFLS_SPEC, 3> {
-        RXIFLSEL_W::new(self)
+    pub fn rxiflsel(&mut self) -> RXIFLSEL_W<IFLS_SPEC> {
+        RXIFLSEL_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

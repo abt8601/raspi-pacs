@@ -5,11 +5,11 @@ pub type W = crate::W<TX0FSIZ_PERIPHERAL_SPEC>;
 #[doc = "Field `TX0FSA` reader - Endpoint 0 transmit RAM start address"]
 pub type TX0FSA_R = crate::FieldReader<u16>;
 #[doc = "Field `TX0FSA` writer - Endpoint 0 transmit RAM start address"]
-pub type TX0FSA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TX0FSA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `TX0FD` reader - Endpoint 0 TxFIFO depth"]
 pub type TX0FD_R = crate::FieldReader<u16>;
 #[doc = "Field `TX0FD` writer - Endpoint 0 TxFIFO depth"]
-pub type TX0FD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TX0FD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Endpoint 0 transmit RAM start address"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TX0FSIZ_PERIPHERAL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Endpoint 0 transmit RAM start address"]
     #[inline(always)]
     #[must_use]
-    pub fn tx0fsa(&mut self) -> TX0FSA_W<TX0FSIZ_PERIPHERAL_SPEC, 0> {
-        TX0FSA_W::new(self)
+    pub fn tx0fsa(&mut self) -> TX0FSA_W<TX0FSIZ_PERIPHERAL_SPEC> {
+        TX0FSA_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Endpoint 0 TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn tx0fd(&mut self) -> TX0FD_W<TX0FSIZ_PERIPHERAL_SPEC, 16> {
-        TX0FD_W::new(self)
+    pub fn tx0fd(&mut self) -> TX0FD_W<TX0FSIZ_PERIPHERAL_SPEC> {
+        TX0FD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

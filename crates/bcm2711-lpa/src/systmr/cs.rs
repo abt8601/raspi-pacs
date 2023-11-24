@@ -5,19 +5,19 @@ pub type W = crate::W<CS_SPEC>;
 #[doc = "Field `M0` reader - System timer match 0"]
 pub type M0_R = crate::BitReader;
 #[doc = "Field `M0` writer - System timer match 0"]
-pub type M0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type M0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `M1` reader - System timer match 1"]
 pub type M1_R = crate::BitReader;
 #[doc = "Field `M1` writer - System timer match 1"]
-pub type M1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type M1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `M2` reader - System timer match 2"]
 pub type M2_R = crate::BitReader;
 #[doc = "Field `M2` writer - System timer match 2"]
-pub type M2_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type M2_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `M3` reader - System timer match 3"]
 pub type M3_R = crate::BitReader;
 #[doc = "Field `M3` writer - System timer match 3"]
-pub type M3_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type M3_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - System timer match 0"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - System timer match 0"]
     #[inline(always)]
     #[must_use]
-    pub fn m0(&mut self) -> M0_W<CS_SPEC, 0> {
-        M0_W::new(self)
+    pub fn m0(&mut self) -> M0_W<CS_SPEC> {
+        M0_W::new(self, 0)
     }
     #[doc = "Bit 1 - System timer match 1"]
     #[inline(always)]
     #[must_use]
-    pub fn m1(&mut self) -> M1_W<CS_SPEC, 1> {
-        M1_W::new(self)
+    pub fn m1(&mut self) -> M1_W<CS_SPEC> {
+        M1_W::new(self, 1)
     }
     #[doc = "Bit 2 - System timer match 2"]
     #[inline(always)]
     #[must_use]
-    pub fn m2(&mut self) -> M2_W<CS_SPEC, 2> {
-        M2_W::new(self)
+    pub fn m2(&mut self) -> M2_W<CS_SPEC> {
+        M2_W::new(self, 2)
     }
     #[doc = "Bit 3 - System timer match 3"]
     #[inline(always)]
     #[must_use]
-    pub fn m3(&mut self) -> M3_W<CS_SPEC, 3> {
-        M3_W::new(self)
+    pub fn m3(&mut self) -> M3_W<CS_SPEC> {
+        M3_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

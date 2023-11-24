@@ -2,63 +2,169 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Argument for ACMD23 command"]
-    pub arg2: ARG2,
-    #[doc = "0x04 - Numer and size in bytes for data block to be transferred"]
-    pub blksizecnt: BLKSIZECNT,
-    #[doc = "0x08 - Argument for everything but ACMD23"]
-    pub arg1: ARG1,
-    #[doc = "0x0c - Issue commands to the card"]
-    pub cmdtm: CMDTM,
-    #[doc = "0x10 - Status bits of the response"]
-    pub resp0: RESP0,
-    #[doc = "0x14 - Bits 63:32 of CMD2 and CMD10 responses"]
-    pub resp1: RESP1,
-    #[doc = "0x18 - Bits 95:64 of CMD2 and CMD10 responses"]
-    pub resp2: RESP2,
-    #[doc = "0x1c - Bits 127:96 of CMD2 and CMD10 responses"]
-    pub resp3: RESP3,
-    #[doc = "0x20 - Data to/from the card"]
-    pub data: DATA,
-    #[doc = "0x24 - Status info for debugging"]
-    pub status: STATUS,
-    #[doc = "0x28 - Control"]
-    pub control0: CONTROL0,
-    #[doc = "0x2c - Configure"]
-    pub control1: CONTROL1,
-    #[doc = "0x30 - Interrupt flags"]
-    pub interrupt: INTERRUPT,
-    #[doc = "0x34 - Mask interrupts that change in INTERRUPT"]
-    pub irpt_mask: IRPT_MASK,
-    #[doc = "0x38 - Enable interrupt to core"]
-    pub irpt_en: IRPT_EN,
-    #[doc = "0x3c - Control 2"]
-    pub control2: CONTROL2,
+    arg2: ARG2,
+    blksizecnt: BLKSIZECNT,
+    arg1: ARG1,
+    cmdtm: CMDTM,
+    resp0: RESP0,
+    resp1: RESP1,
+    resp2: RESP2,
+    resp3: RESP3,
+    data: DATA,
+    status: STATUS,
+    control0: CONTROL0,
+    control1: CONTROL1,
+    interrupt: INTERRUPT,
+    irpt_mask: IRPT_MASK,
+    irpt_en: IRPT_EN,
+    control2: CONTROL2,
     _reserved16: [u8; 0x10],
-    #[doc = "0x50 - Force an interrupt"]
-    pub force_irpt: FORCE_IRPT,
+    force_irpt: FORCE_IRPT,
     _reserved17: [u8; 0x1c],
-    #[doc = "0x70 - Number of SD clock cycles to wait for boot"]
-    pub boot_timeout: BOOT_TIMEOUT,
-    #[doc = "0x74 - What submodules are accessed by the debug bus"]
-    pub dbg_sel: DBG_SEL,
+    boot_timeout: BOOT_TIMEOUT,
+    dbg_sel: DBG_SEL,
     _reserved19: [u8; 0x08],
-    #[doc = "0x80 - Fine tune DMA request generation"]
-    pub exrdfifo_cfg: EXRDFIFO_CFG,
-    #[doc = "0x84 - Enable the extension data register"]
-    pub exrdfifo_en: EXRDFIFO_EN,
-    #[doc = "0x88 - Sample clock delay step duration"]
-    pub tune_step: TUNE_STEP,
-    #[doc = "0x8c - Sample clock delay step count for SDR"]
-    pub tune_steps_std: TUNE_STEPS_STD,
-    #[doc = "0x90 - Sample clock delay step count for DDR"]
-    pub tune_steps_ddr: TUNE_STEPS_DDR,
+    exrdfifo_cfg: EXRDFIFO_CFG,
+    exrdfifo_en: EXRDFIFO_EN,
+    tune_step: TUNE_STEP,
+    tune_steps_std: TUNE_STEPS_STD,
+    tune_steps_ddr: TUNE_STEPS_DDR,
     _reserved24: [u8; 0x5c],
-    #[doc = "0xf0 - Interrupts in SPI mode depend on CS"]
-    pub spi_int_spt: SPI_INT_SPT,
+    spi_int_spt: SPI_INT_SPT,
     _reserved25: [u8; 0x08],
+    slotisr_ver: SLOTISR_VER,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Argument for ACMD23 command"]
+    #[inline(always)]
+    pub const fn arg2(&self) -> &ARG2 {
+        &self.arg2
+    }
+    #[doc = "0x04 - Numer and size in bytes for data block to be transferred"]
+    #[inline(always)]
+    pub const fn blksizecnt(&self) -> &BLKSIZECNT {
+        &self.blksizecnt
+    }
+    #[doc = "0x08 - Argument for everything but ACMD23"]
+    #[inline(always)]
+    pub const fn arg1(&self) -> &ARG1 {
+        &self.arg1
+    }
+    #[doc = "0x0c - Issue commands to the card"]
+    #[inline(always)]
+    pub const fn cmdtm(&self) -> &CMDTM {
+        &self.cmdtm
+    }
+    #[doc = "0x10 - Status bits of the response"]
+    #[inline(always)]
+    pub const fn resp0(&self) -> &RESP0 {
+        &self.resp0
+    }
+    #[doc = "0x14 - Bits 63:32 of CMD2 and CMD10 responses"]
+    #[inline(always)]
+    pub const fn resp1(&self) -> &RESP1 {
+        &self.resp1
+    }
+    #[doc = "0x18 - Bits 95:64 of CMD2 and CMD10 responses"]
+    #[inline(always)]
+    pub const fn resp2(&self) -> &RESP2 {
+        &self.resp2
+    }
+    #[doc = "0x1c - Bits 127:96 of CMD2 and CMD10 responses"]
+    #[inline(always)]
+    pub const fn resp3(&self) -> &RESP3 {
+        &self.resp3
+    }
+    #[doc = "0x20 - Data to/from the card"]
+    #[inline(always)]
+    pub const fn data(&self) -> &DATA {
+        &self.data
+    }
+    #[doc = "0x24 - Status info for debugging"]
+    #[inline(always)]
+    pub const fn status(&self) -> &STATUS {
+        &self.status
+    }
+    #[doc = "0x28 - Control"]
+    #[inline(always)]
+    pub const fn control0(&self) -> &CONTROL0 {
+        &self.control0
+    }
+    #[doc = "0x2c - Configure"]
+    #[inline(always)]
+    pub const fn control1(&self) -> &CONTROL1 {
+        &self.control1
+    }
+    #[doc = "0x30 - Interrupt flags"]
+    #[inline(always)]
+    pub const fn interrupt(&self) -> &INTERRUPT {
+        &self.interrupt
+    }
+    #[doc = "0x34 - Mask interrupts that change in INTERRUPT"]
+    #[inline(always)]
+    pub const fn irpt_mask(&self) -> &IRPT_MASK {
+        &self.irpt_mask
+    }
+    #[doc = "0x38 - Enable interrupt to core"]
+    #[inline(always)]
+    pub const fn irpt_en(&self) -> &IRPT_EN {
+        &self.irpt_en
+    }
+    #[doc = "0x3c - Control 2"]
+    #[inline(always)]
+    pub const fn control2(&self) -> &CONTROL2 {
+        &self.control2
+    }
+    #[doc = "0x50 - Force an interrupt"]
+    #[inline(always)]
+    pub const fn force_irpt(&self) -> &FORCE_IRPT {
+        &self.force_irpt
+    }
+    #[doc = "0x70 - Number of SD clock cycles to wait for boot"]
+    #[inline(always)]
+    pub const fn boot_timeout(&self) -> &BOOT_TIMEOUT {
+        &self.boot_timeout
+    }
+    #[doc = "0x74 - What submodules are accessed by the debug bus"]
+    #[inline(always)]
+    pub const fn dbg_sel(&self) -> &DBG_SEL {
+        &self.dbg_sel
+    }
+    #[doc = "0x80 - Fine tune DMA request generation"]
+    #[inline(always)]
+    pub const fn exrdfifo_cfg(&self) -> &EXRDFIFO_CFG {
+        &self.exrdfifo_cfg
+    }
+    #[doc = "0x84 - Enable the extension data register"]
+    #[inline(always)]
+    pub const fn exrdfifo_en(&self) -> &EXRDFIFO_EN {
+        &self.exrdfifo_en
+    }
+    #[doc = "0x88 - Sample clock delay step duration"]
+    #[inline(always)]
+    pub const fn tune_step(&self) -> &TUNE_STEP {
+        &self.tune_step
+    }
+    #[doc = "0x8c - Sample clock delay step count for SDR"]
+    #[inline(always)]
+    pub const fn tune_steps_std(&self) -> &TUNE_STEPS_STD {
+        &self.tune_steps_std
+    }
+    #[doc = "0x90 - Sample clock delay step count for DDR"]
+    #[inline(always)]
+    pub const fn tune_steps_ddr(&self) -> &TUNE_STEPS_DDR {
+        &self.tune_steps_ddr
+    }
+    #[doc = "0xf0 - Interrupts in SPI mode depend on CS"]
+    #[inline(always)]
+    pub const fn spi_int_spt(&self) -> &SPI_INT_SPT {
+        &self.spi_int_spt
+    }
     #[doc = "0xfc - Version information and slot interrupt status"]
-    pub slotisr_ver: SLOTISR_VER,
+    #[inline(always)]
+    pub const fn slotisr_ver(&self) -> &SLOTISR_VER {
+        &self.slotisr_ver
+    }
 }
 #[doc = "ARG2 (rw) register accessor: Argument for ACMD23 command\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`arg2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`arg2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@arg2`]
 module"]

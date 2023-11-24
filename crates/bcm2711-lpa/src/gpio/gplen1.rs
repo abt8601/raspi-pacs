@@ -5,107 +5,107 @@ pub type W = crate::W<GPLEN1_SPEC>;
 #[doc = "Field `LEN32` reader - Low detect enabled 32"]
 pub type LEN32_R = crate::BitReader;
 #[doc = "Field `LEN32` writer - Low detect enabled 32"]
-pub type LEN32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN33` reader - Low detect enabled 33"]
 pub type LEN33_R = crate::BitReader;
 #[doc = "Field `LEN33` writer - Low detect enabled 33"]
-pub type LEN33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN34` reader - Low detect enabled 34"]
 pub type LEN34_R = crate::BitReader;
 #[doc = "Field `LEN34` writer - Low detect enabled 34"]
-pub type LEN34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN35` reader - Low detect enabled 35"]
 pub type LEN35_R = crate::BitReader;
 #[doc = "Field `LEN35` writer - Low detect enabled 35"]
-pub type LEN35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN36` reader - Low detect enabled 36"]
 pub type LEN36_R = crate::BitReader;
 #[doc = "Field `LEN36` writer - Low detect enabled 36"]
-pub type LEN36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN37` reader - Low detect enabled 37"]
 pub type LEN37_R = crate::BitReader;
 #[doc = "Field `LEN37` writer - Low detect enabled 37"]
-pub type LEN37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN38` reader - Low detect enabled 38"]
 pub type LEN38_R = crate::BitReader;
 #[doc = "Field `LEN38` writer - Low detect enabled 38"]
-pub type LEN38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN39` reader - Low detect enabled 39"]
 pub type LEN39_R = crate::BitReader;
 #[doc = "Field `LEN39` writer - Low detect enabled 39"]
-pub type LEN39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN40` reader - Low detect enabled 40"]
 pub type LEN40_R = crate::BitReader;
 #[doc = "Field `LEN40` writer - Low detect enabled 40"]
-pub type LEN40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN41` reader - Low detect enabled 41"]
 pub type LEN41_R = crate::BitReader;
 #[doc = "Field `LEN41` writer - Low detect enabled 41"]
-pub type LEN41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN42` reader - Low detect enabled 42"]
 pub type LEN42_R = crate::BitReader;
 #[doc = "Field `LEN42` writer - Low detect enabled 42"]
-pub type LEN42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN43` reader - Low detect enabled 43"]
 pub type LEN43_R = crate::BitReader;
 #[doc = "Field `LEN43` writer - Low detect enabled 43"]
-pub type LEN43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN44` reader - Low detect enabled 44"]
 pub type LEN44_R = crate::BitReader;
 #[doc = "Field `LEN44` writer - Low detect enabled 44"]
-pub type LEN44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN45` reader - Low detect enabled 45"]
 pub type LEN45_R = crate::BitReader;
 #[doc = "Field `LEN45` writer - Low detect enabled 45"]
-pub type LEN45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN46` reader - Low detect enabled 46"]
 pub type LEN46_R = crate::BitReader;
 #[doc = "Field `LEN46` writer - Low detect enabled 46"]
-pub type LEN46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN47` reader - Low detect enabled 47"]
 pub type LEN47_R = crate::BitReader;
 #[doc = "Field `LEN47` writer - Low detect enabled 47"]
-pub type LEN47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN48` reader - Low detect enabled 48"]
 pub type LEN48_R = crate::BitReader;
 #[doc = "Field `LEN48` writer - Low detect enabled 48"]
-pub type LEN48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN49` reader - Low detect enabled 49"]
 pub type LEN49_R = crate::BitReader;
 #[doc = "Field `LEN49` writer - Low detect enabled 49"]
-pub type LEN49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN49_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN50` reader - Low detect enabled 50"]
 pub type LEN50_R = crate::BitReader;
 #[doc = "Field `LEN50` writer - Low detect enabled 50"]
-pub type LEN50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN51` reader - Low detect enabled 51"]
 pub type LEN51_R = crate::BitReader;
 #[doc = "Field `LEN51` writer - Low detect enabled 51"]
-pub type LEN51_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN51_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN52` reader - Low detect enabled 52"]
 pub type LEN52_R = crate::BitReader;
 #[doc = "Field `LEN52` writer - Low detect enabled 52"]
-pub type LEN52_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN52_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN53` reader - Low detect enabled 53"]
 pub type LEN53_R = crate::BitReader;
 #[doc = "Field `LEN53` writer - Low detect enabled 53"]
-pub type LEN53_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN53_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN54` reader - Low detect enabled 54"]
 pub type LEN54_R = crate::BitReader;
 #[doc = "Field `LEN54` writer - Low detect enabled 54"]
-pub type LEN54_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN54_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN55` reader - Low detect enabled 55"]
 pub type LEN55_R = crate::BitReader;
 #[doc = "Field `LEN55` writer - Low detect enabled 55"]
-pub type LEN55_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN55_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN56` reader - Low detect enabled 56"]
 pub type LEN56_R = crate::BitReader;
 #[doc = "Field `LEN56` writer - Low detect enabled 56"]
-pub type LEN56_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN56_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN57` reader - Low detect enabled 57"]
 pub type LEN57_R = crate::BitReader;
 #[doc = "Field `LEN57` writer - Low detect enabled 57"]
-pub type LEN57_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN57_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Low detect enabled 32"]
     #[inline(always)]
@@ -272,165 +272,165 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPLEN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Low detect enabled 32"]
     #[inline(always)]
     #[must_use]
-    pub fn len32(&mut self) -> LEN32_W<GPLEN1_SPEC, 0> {
-        LEN32_W::new(self)
+    pub fn len32(&mut self) -> LEN32_W<GPLEN1_SPEC> {
+        LEN32_W::new(self, 0)
     }
     #[doc = "Bit 1 - Low detect enabled 33"]
     #[inline(always)]
     #[must_use]
-    pub fn len33(&mut self) -> LEN33_W<GPLEN1_SPEC, 1> {
-        LEN33_W::new(self)
+    pub fn len33(&mut self) -> LEN33_W<GPLEN1_SPEC> {
+        LEN33_W::new(self, 1)
     }
     #[doc = "Bit 2 - Low detect enabled 34"]
     #[inline(always)]
     #[must_use]
-    pub fn len34(&mut self) -> LEN34_W<GPLEN1_SPEC, 2> {
-        LEN34_W::new(self)
+    pub fn len34(&mut self) -> LEN34_W<GPLEN1_SPEC> {
+        LEN34_W::new(self, 2)
     }
     #[doc = "Bit 3 - Low detect enabled 35"]
     #[inline(always)]
     #[must_use]
-    pub fn len35(&mut self) -> LEN35_W<GPLEN1_SPEC, 3> {
-        LEN35_W::new(self)
+    pub fn len35(&mut self) -> LEN35_W<GPLEN1_SPEC> {
+        LEN35_W::new(self, 3)
     }
     #[doc = "Bit 4 - Low detect enabled 36"]
     #[inline(always)]
     #[must_use]
-    pub fn len36(&mut self) -> LEN36_W<GPLEN1_SPEC, 4> {
-        LEN36_W::new(self)
+    pub fn len36(&mut self) -> LEN36_W<GPLEN1_SPEC> {
+        LEN36_W::new(self, 4)
     }
     #[doc = "Bit 5 - Low detect enabled 37"]
     #[inline(always)]
     #[must_use]
-    pub fn len37(&mut self) -> LEN37_W<GPLEN1_SPEC, 5> {
-        LEN37_W::new(self)
+    pub fn len37(&mut self) -> LEN37_W<GPLEN1_SPEC> {
+        LEN37_W::new(self, 5)
     }
     #[doc = "Bit 6 - Low detect enabled 38"]
     #[inline(always)]
     #[must_use]
-    pub fn len38(&mut self) -> LEN38_W<GPLEN1_SPEC, 6> {
-        LEN38_W::new(self)
+    pub fn len38(&mut self) -> LEN38_W<GPLEN1_SPEC> {
+        LEN38_W::new(self, 6)
     }
     #[doc = "Bit 7 - Low detect enabled 39"]
     #[inline(always)]
     #[must_use]
-    pub fn len39(&mut self) -> LEN39_W<GPLEN1_SPEC, 7> {
-        LEN39_W::new(self)
+    pub fn len39(&mut self) -> LEN39_W<GPLEN1_SPEC> {
+        LEN39_W::new(self, 7)
     }
     #[doc = "Bit 8 - Low detect enabled 40"]
     #[inline(always)]
     #[must_use]
-    pub fn len40(&mut self) -> LEN40_W<GPLEN1_SPEC, 8> {
-        LEN40_W::new(self)
+    pub fn len40(&mut self) -> LEN40_W<GPLEN1_SPEC> {
+        LEN40_W::new(self, 8)
     }
     #[doc = "Bit 9 - Low detect enabled 41"]
     #[inline(always)]
     #[must_use]
-    pub fn len41(&mut self) -> LEN41_W<GPLEN1_SPEC, 9> {
-        LEN41_W::new(self)
+    pub fn len41(&mut self) -> LEN41_W<GPLEN1_SPEC> {
+        LEN41_W::new(self, 9)
     }
     #[doc = "Bit 10 - Low detect enabled 42"]
     #[inline(always)]
     #[must_use]
-    pub fn len42(&mut self) -> LEN42_W<GPLEN1_SPEC, 10> {
-        LEN42_W::new(self)
+    pub fn len42(&mut self) -> LEN42_W<GPLEN1_SPEC> {
+        LEN42_W::new(self, 10)
     }
     #[doc = "Bit 11 - Low detect enabled 43"]
     #[inline(always)]
     #[must_use]
-    pub fn len43(&mut self) -> LEN43_W<GPLEN1_SPEC, 11> {
-        LEN43_W::new(self)
+    pub fn len43(&mut self) -> LEN43_W<GPLEN1_SPEC> {
+        LEN43_W::new(self, 11)
     }
     #[doc = "Bit 12 - Low detect enabled 44"]
     #[inline(always)]
     #[must_use]
-    pub fn len44(&mut self) -> LEN44_W<GPLEN1_SPEC, 12> {
-        LEN44_W::new(self)
+    pub fn len44(&mut self) -> LEN44_W<GPLEN1_SPEC> {
+        LEN44_W::new(self, 12)
     }
     #[doc = "Bit 13 - Low detect enabled 45"]
     #[inline(always)]
     #[must_use]
-    pub fn len45(&mut self) -> LEN45_W<GPLEN1_SPEC, 13> {
-        LEN45_W::new(self)
+    pub fn len45(&mut self) -> LEN45_W<GPLEN1_SPEC> {
+        LEN45_W::new(self, 13)
     }
     #[doc = "Bit 14 - Low detect enabled 46"]
     #[inline(always)]
     #[must_use]
-    pub fn len46(&mut self) -> LEN46_W<GPLEN1_SPEC, 14> {
-        LEN46_W::new(self)
+    pub fn len46(&mut self) -> LEN46_W<GPLEN1_SPEC> {
+        LEN46_W::new(self, 14)
     }
     #[doc = "Bit 15 - Low detect enabled 47"]
     #[inline(always)]
     #[must_use]
-    pub fn len47(&mut self) -> LEN47_W<GPLEN1_SPEC, 15> {
-        LEN47_W::new(self)
+    pub fn len47(&mut self) -> LEN47_W<GPLEN1_SPEC> {
+        LEN47_W::new(self, 15)
     }
     #[doc = "Bit 16 - Low detect enabled 48"]
     #[inline(always)]
     #[must_use]
-    pub fn len48(&mut self) -> LEN48_W<GPLEN1_SPEC, 16> {
-        LEN48_W::new(self)
+    pub fn len48(&mut self) -> LEN48_W<GPLEN1_SPEC> {
+        LEN48_W::new(self, 16)
     }
     #[doc = "Bit 17 - Low detect enabled 49"]
     #[inline(always)]
     #[must_use]
-    pub fn len49(&mut self) -> LEN49_W<GPLEN1_SPEC, 17> {
-        LEN49_W::new(self)
+    pub fn len49(&mut self) -> LEN49_W<GPLEN1_SPEC> {
+        LEN49_W::new(self, 17)
     }
     #[doc = "Bit 18 - Low detect enabled 50"]
     #[inline(always)]
     #[must_use]
-    pub fn len50(&mut self) -> LEN50_W<GPLEN1_SPEC, 18> {
-        LEN50_W::new(self)
+    pub fn len50(&mut self) -> LEN50_W<GPLEN1_SPEC> {
+        LEN50_W::new(self, 18)
     }
     #[doc = "Bit 19 - Low detect enabled 51"]
     #[inline(always)]
     #[must_use]
-    pub fn len51(&mut self) -> LEN51_W<GPLEN1_SPEC, 19> {
-        LEN51_W::new(self)
+    pub fn len51(&mut self) -> LEN51_W<GPLEN1_SPEC> {
+        LEN51_W::new(self, 19)
     }
     #[doc = "Bit 20 - Low detect enabled 52"]
     #[inline(always)]
     #[must_use]
-    pub fn len52(&mut self) -> LEN52_W<GPLEN1_SPEC, 20> {
-        LEN52_W::new(self)
+    pub fn len52(&mut self) -> LEN52_W<GPLEN1_SPEC> {
+        LEN52_W::new(self, 20)
     }
     #[doc = "Bit 21 - Low detect enabled 53"]
     #[inline(always)]
     #[must_use]
-    pub fn len53(&mut self) -> LEN53_W<GPLEN1_SPEC, 21> {
-        LEN53_W::new(self)
+    pub fn len53(&mut self) -> LEN53_W<GPLEN1_SPEC> {
+        LEN53_W::new(self, 21)
     }
     #[doc = "Bit 22 - Low detect enabled 54"]
     #[inline(always)]
     #[must_use]
-    pub fn len54(&mut self) -> LEN54_W<GPLEN1_SPEC, 22> {
-        LEN54_W::new(self)
+    pub fn len54(&mut self) -> LEN54_W<GPLEN1_SPEC> {
+        LEN54_W::new(self, 22)
     }
     #[doc = "Bit 23 - Low detect enabled 55"]
     #[inline(always)]
     #[must_use]
-    pub fn len55(&mut self) -> LEN55_W<GPLEN1_SPEC, 23> {
-        LEN55_W::new(self)
+    pub fn len55(&mut self) -> LEN55_W<GPLEN1_SPEC> {
+        LEN55_W::new(self, 23)
     }
     #[doc = "Bit 24 - Low detect enabled 56"]
     #[inline(always)]
     #[must_use]
-    pub fn len56(&mut self) -> LEN56_W<GPLEN1_SPEC, 24> {
-        LEN56_W::new(self)
+    pub fn len56(&mut self) -> LEN56_W<GPLEN1_SPEC> {
+        LEN56_W::new(self, 24)
     }
     #[doc = "Bit 25 - Low detect enabled 57"]
     #[inline(always)]
     #[must_use]
-    pub fn len57(&mut self) -> LEN57_W<GPLEN1_SPEC, 25> {
-        LEN57_W::new(self)
+    pub fn len57(&mut self) -> LEN57_W<GPLEN1_SPEC> {
+        LEN57_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

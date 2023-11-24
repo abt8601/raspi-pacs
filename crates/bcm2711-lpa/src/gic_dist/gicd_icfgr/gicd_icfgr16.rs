@@ -39,8 +39,8 @@ impl TIMER_R {
     }
 }
 #[doc = "Field `TIMER` writer - ARMC Timer"]
-pub type TIMER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TIMER_A>;
-impl<'a, REG, const O: u8> TIMER_W<'a, REG, O>
+pub type TIMER_W<'a, REG> = crate::BitWriter<'a, REG, TIMER_A>;
+impl<'a, REG> TIMER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl MAILBOX_R {
     }
 }
 #[doc = "Field `MAILBOX` writer - Mailbox"]
-pub type MAILBOX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MAILBOX_A>;
-impl<'a, REG, const O: u8> MAILBOX_W<'a, REG, O>
+pub type MAILBOX_W<'a, REG> = crate::BitWriter<'a, REG, MAILBOX_A>;
+impl<'a, REG> MAILBOX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl DOORBELL0_R {
     }
 }
 #[doc = "Field `DOORBELL0` writer - Doorbell 0"]
-pub type DOORBELL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DOORBELL0_A>;
-impl<'a, REG, const O: u8> DOORBELL0_W<'a, REG, O>
+pub type DOORBELL0_W<'a, REG> = crate::BitWriter<'a, REG, DOORBELL0_A>;
+impl<'a, REG> DOORBELL0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl DOORBELL1_R {
     }
 }
 #[doc = "Field `DOORBELL1` writer - Doorbell 1"]
-pub type DOORBELL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DOORBELL1_A>;
-impl<'a, REG, const O: u8> DOORBELL1_W<'a, REG, O>
+pub type DOORBELL1_W<'a, REG> = crate::BitWriter<'a, REG, DOORBELL1_A>;
+impl<'a, REG> DOORBELL1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -251,8 +251,8 @@ impl VPU0_HALTED_R {
     }
 }
 #[doc = "Field `VPU0_HALTED` writer - VPU0 halted"]
-pub type VPU0_HALTED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, VPU0_HALTED_A>;
-impl<'a, REG, const O: u8> VPU0_HALTED_W<'a, REG, O>
+pub type VPU0_HALTED_W<'a, REG> = crate::BitWriter<'a, REG, VPU0_HALTED_A>;
+impl<'a, REG> VPU0_HALTED_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -304,8 +304,8 @@ impl VPU1_HALTED_R {
     }
 }
 #[doc = "Field `VPU1_HALTED` writer - VPU1 halted"]
-pub type VPU1_HALTED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, VPU1_HALTED_A>;
-impl<'a, REG, const O: u8> VPU1_HALTED_W<'a, REG, O>
+pub type VPU1_HALTED_W<'a, REG> = crate::BitWriter<'a, REG, VPU1_HALTED_A>;
+impl<'a, REG> VPU1_HALTED_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -357,9 +357,8 @@ impl ARM_ADDRESS_ERROR_R {
     }
 }
 #[doc = "Field `ARM_ADDRESS_ERROR` writer - ARM address error"]
-pub type ARM_ADDRESS_ERROR_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, ARM_ADDRESS_ERROR_A>;
-impl<'a, REG, const O: u8> ARM_ADDRESS_ERROR_W<'a, REG, O>
+pub type ARM_ADDRESS_ERROR_W<'a, REG> = crate::BitWriter<'a, REG, ARM_ADDRESS_ERROR_A>;
+impl<'a, REG> ARM_ADDRESS_ERROR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -411,8 +410,8 @@ impl ARM_AXI_ERROR_R {
     }
 }
 #[doc = "Field `ARM_AXI_ERROR` writer - ARM AXI error"]
-pub type ARM_AXI_ERROR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ARM_AXI_ERROR_A>;
-impl<'a, REG, const O: u8> ARM_AXI_ERROR_W<'a, REG, O>
+pub type ARM_AXI_ERROR_W<'a, REG> = crate::BitWriter<'a, REG, ARM_AXI_ERROR_A>;
+impl<'a, REG> ARM_AXI_ERROR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -464,8 +463,8 @@ impl SWI0_R {
     }
 }
 #[doc = "Field `SWI0` writer - Software interrupt 0"]
-pub type SWI0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI0_A>;
-impl<'a, REG, const O: u8> SWI0_W<'a, REG, O>
+pub type SWI0_W<'a, REG> = crate::BitWriter<'a, REG, SWI0_A>;
+impl<'a, REG> SWI0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -517,8 +516,8 @@ impl SWI1_R {
     }
 }
 #[doc = "Field `SWI1` writer - Software interrupt 1"]
-pub type SWI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI1_A>;
-impl<'a, REG, const O: u8> SWI1_W<'a, REG, O>
+pub type SWI1_W<'a, REG> = crate::BitWriter<'a, REG, SWI1_A>;
+impl<'a, REG> SWI1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -570,8 +569,8 @@ impl SWI2_R {
     }
 }
 #[doc = "Field `SWI2` writer - Software interrupt 2"]
-pub type SWI2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI2_A>;
-impl<'a, REG, const O: u8> SWI2_W<'a, REG, O>
+pub type SWI2_W<'a, REG> = crate::BitWriter<'a, REG, SWI2_A>;
+impl<'a, REG> SWI2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -623,8 +622,8 @@ impl SWI3_R {
     }
 }
 #[doc = "Field `SWI3` writer - Software interrupt 3"]
-pub type SWI3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI3_A>;
-impl<'a, REG, const O: u8> SWI3_W<'a, REG, O>
+pub type SWI3_W<'a, REG> = crate::BitWriter<'a, REG, SWI3_A>;
+impl<'a, REG> SWI3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -676,8 +675,8 @@ impl SWI4_R {
     }
 }
 #[doc = "Field `SWI4` writer - Software interrupt 4"]
-pub type SWI4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI4_A>;
-impl<'a, REG, const O: u8> SWI4_W<'a, REG, O>
+pub type SWI4_W<'a, REG> = crate::BitWriter<'a, REG, SWI4_A>;
+impl<'a, REG> SWI4_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -729,8 +728,8 @@ impl SWI5_R {
     }
 }
 #[doc = "Field `SWI5` writer - Software interrupt 5"]
-pub type SWI5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI5_A>;
-impl<'a, REG, const O: u8> SWI5_W<'a, REG, O>
+pub type SWI5_W<'a, REG> = crate::BitWriter<'a, REG, SWI5_A>;
+impl<'a, REG> SWI5_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -782,8 +781,8 @@ impl SWI6_R {
     }
 }
 #[doc = "Field `SWI6` writer - Software interrupt 6"]
-pub type SWI6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI6_A>;
-impl<'a, REG, const O: u8> SWI6_W<'a, REG, O>
+pub type SWI6_W<'a, REG> = crate::BitWriter<'a, REG, SWI6_A>;
+impl<'a, REG> SWI6_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -835,8 +834,8 @@ impl SWI7_R {
     }
 }
 #[doc = "Field `SWI7` writer - Software interrupt 7"]
-pub type SWI7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWI7_A>;
-impl<'a, REG, const O: u8> SWI7_W<'a, REG, O>
+pub type SWI7_W<'a, REG> = crate::BitWriter<'a, REG, SWI7_A>;
+impl<'a, REG> SWI7_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -963,105 +962,105 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR16_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - ARMC Timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timer(&mut self) -> TIMER_W<GICD_ICFGR16_SPEC, 1> {
-        TIMER_W::new(self)
+    pub fn timer(&mut self) -> TIMER_W<GICD_ICFGR16_SPEC> {
+        TIMER_W::new(self, 1)
     }
     #[doc = "Bit 3 - Mailbox"]
     #[inline(always)]
     #[must_use]
-    pub fn mailbox(&mut self) -> MAILBOX_W<GICD_ICFGR16_SPEC, 3> {
-        MAILBOX_W::new(self)
+    pub fn mailbox(&mut self) -> MAILBOX_W<GICD_ICFGR16_SPEC> {
+        MAILBOX_W::new(self, 3)
     }
     #[doc = "Bit 5 - Doorbell 0"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell0(&mut self) -> DOORBELL0_W<GICD_ICFGR16_SPEC, 5> {
-        DOORBELL0_W::new(self)
+    pub fn doorbell0(&mut self) -> DOORBELL0_W<GICD_ICFGR16_SPEC> {
+        DOORBELL0_W::new(self, 5)
     }
     #[doc = "Bit 7 - Doorbell 1"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell1(&mut self) -> DOORBELL1_W<GICD_ICFGR16_SPEC, 7> {
-        DOORBELL1_W::new(self)
+    pub fn doorbell1(&mut self) -> DOORBELL1_W<GICD_ICFGR16_SPEC> {
+        DOORBELL1_W::new(self, 7)
     }
     #[doc = "Bit 9 - VPU0 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<GICD_ICFGR16_SPEC, 9> {
-        VPU0_HALTED_W::new(self)
+    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<GICD_ICFGR16_SPEC> {
+        VPU0_HALTED_W::new(self, 9)
     }
     #[doc = "Bit 11 - VPU1 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<GICD_ICFGR16_SPEC, 11> {
-        VPU1_HALTED_W::new(self)
+    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<GICD_ICFGR16_SPEC> {
+        VPU1_HALTED_W::new(self, 11)
     }
     #[doc = "Bit 13 - ARM address error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<GICD_ICFGR16_SPEC, 13> {
-        ARM_ADDRESS_ERROR_W::new(self)
+    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<GICD_ICFGR16_SPEC> {
+        ARM_ADDRESS_ERROR_W::new(self, 13)
     }
     #[doc = "Bit 15 - ARM AXI error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<GICD_ICFGR16_SPEC, 15> {
-        ARM_AXI_ERROR_W::new(self)
+    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<GICD_ICFGR16_SPEC> {
+        ARM_AXI_ERROR_W::new(self, 15)
     }
     #[doc = "Bit 17 - Software interrupt 0"]
     #[inline(always)]
     #[must_use]
-    pub fn swi0(&mut self) -> SWI0_W<GICD_ICFGR16_SPEC, 17> {
-        SWI0_W::new(self)
+    pub fn swi0(&mut self) -> SWI0_W<GICD_ICFGR16_SPEC> {
+        SWI0_W::new(self, 17)
     }
     #[doc = "Bit 19 - Software interrupt 1"]
     #[inline(always)]
     #[must_use]
-    pub fn swi1(&mut self) -> SWI1_W<GICD_ICFGR16_SPEC, 19> {
-        SWI1_W::new(self)
+    pub fn swi1(&mut self) -> SWI1_W<GICD_ICFGR16_SPEC> {
+        SWI1_W::new(self, 19)
     }
     #[doc = "Bit 21 - Software interrupt 2"]
     #[inline(always)]
     #[must_use]
-    pub fn swi2(&mut self) -> SWI2_W<GICD_ICFGR16_SPEC, 21> {
-        SWI2_W::new(self)
+    pub fn swi2(&mut self) -> SWI2_W<GICD_ICFGR16_SPEC> {
+        SWI2_W::new(self, 21)
     }
     #[doc = "Bit 23 - Software interrupt 3"]
     #[inline(always)]
     #[must_use]
-    pub fn swi3(&mut self) -> SWI3_W<GICD_ICFGR16_SPEC, 23> {
-        SWI3_W::new(self)
+    pub fn swi3(&mut self) -> SWI3_W<GICD_ICFGR16_SPEC> {
+        SWI3_W::new(self, 23)
     }
     #[doc = "Bit 25 - Software interrupt 4"]
     #[inline(always)]
     #[must_use]
-    pub fn swi4(&mut self) -> SWI4_W<GICD_ICFGR16_SPEC, 25> {
-        SWI4_W::new(self)
+    pub fn swi4(&mut self) -> SWI4_W<GICD_ICFGR16_SPEC> {
+        SWI4_W::new(self, 25)
     }
     #[doc = "Bit 27 - Software interrupt 5"]
     #[inline(always)]
     #[must_use]
-    pub fn swi5(&mut self) -> SWI5_W<GICD_ICFGR16_SPEC, 27> {
-        SWI5_W::new(self)
+    pub fn swi5(&mut self) -> SWI5_W<GICD_ICFGR16_SPEC> {
+        SWI5_W::new(self, 27)
     }
     #[doc = "Bit 29 - Software interrupt 6"]
     #[inline(always)]
     #[must_use]
-    pub fn swi6(&mut self) -> SWI6_W<GICD_ICFGR16_SPEC, 29> {
-        SWI6_W::new(self)
+    pub fn swi6(&mut self) -> SWI6_W<GICD_ICFGR16_SPEC> {
+        SWI6_W::new(self, 29)
     }
     #[doc = "Bit 31 - Software interrupt 7"]
     #[inline(always)]
     #[must_use]
-    pub fn swi7(&mut self) -> SWI7_W<GICD_ICFGR16_SPEC, 31> {
-        SWI7_W::new(self)
+    pub fn swi7(&mut self) -> SWI7_W<GICD_ICFGR16_SPEC> {
+        SWI7_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

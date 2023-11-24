@@ -5,7 +5,7 @@ pub type W = crate::W<DVBUSDIS_SPEC>;
 #[doc = "Field `VBUSDT` reader - Device VBUS discharge time"]
 pub type VBUSDT_R = crate::FieldReader<u16>;
 #[doc = "Field `VBUSDT` writer - Device VBUS discharge time"]
-pub type VBUSDT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type VBUSDT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Device VBUS discharge time"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DVBUSDIS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Device VBUS discharge time"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusdt(&mut self) -> VBUSDT_W<DVBUSDIS_SPEC, 0> {
-        VBUSDT_W::new(self)
+    pub fn vbusdt(&mut self) -> VBUSDT_W<DVBUSDIS_SPEC> {
+        VBUSDT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

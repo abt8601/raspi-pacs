@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR32_SPEC>;
 #[doc = "Field `HDMI_CEC` reader - HDMI CEC"]
 pub type HDMI_CEC_R = crate::FieldReader;
 #[doc = "Field `HDMI_CEC` writer - HDMI CEC"]
-pub type HDMI_CEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HDMI_CEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HVS` reader - HVS"]
 pub type HVS_R = crate::FieldReader;
 #[doc = "Field `HVS` writer - HVS"]
-pub type HVS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HVS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RPIVID` reader - RPIVID"]
 pub type RPIVID_R = crate::FieldReader;
 #[doc = "Field `RPIVID` writer - RPIVID"]
-pub type RPIVID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RPIVID_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SDC` reader - SDC"]
 pub type SDC_R = crate::FieldReader;
 #[doc = "Field `SDC` writer - SDC"]
-pub type SDC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SDC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - HDMI CEC"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR32_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - HDMI CEC"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_IPRIORITYR32_SPEC, 0> {
-        HDMI_CEC_W::new(self)
+    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_IPRIORITYR32_SPEC> {
+        HDMI_CEC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - HVS"]
     #[inline(always)]
     #[must_use]
-    pub fn hvs(&mut self) -> HVS_W<GICD_IPRIORITYR32_SPEC, 8> {
-        HVS_W::new(self)
+    pub fn hvs(&mut self) -> HVS_W<GICD_IPRIORITYR32_SPEC> {
+        HVS_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - RPIVID"]
     #[inline(always)]
     #[must_use]
-    pub fn rpivid(&mut self) -> RPIVID_W<GICD_IPRIORITYR32_SPEC, 16> {
-        RPIVID_W::new(self)
+    pub fn rpivid(&mut self) -> RPIVID_W<GICD_IPRIORITYR32_SPEC> {
+        RPIVID_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - SDC"]
     #[inline(always)]
     #[must_use]
-    pub fn sdc(&mut self) -> SDC_W<GICD_IPRIORITYR32_SPEC, 24> {
-        SDC_W::new(self)
+    pub fn sdc(&mut self) -> SDC_W<GICD_IPRIORITYR32_SPEC> {
+        SDC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

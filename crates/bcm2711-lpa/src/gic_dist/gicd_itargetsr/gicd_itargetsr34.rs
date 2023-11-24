@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR34_SPEC>;
 #[doc = "Field `HDMI_0` reader - HDMI 0"]
 pub type HDMI_0_R = crate::FieldReader;
 #[doc = "Field `HDMI_0` writer - HDMI 0"]
-pub type HDMI_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HDMI_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HDMI_1` reader - HDMI 1"]
 pub type HDMI_1_R = crate::FieldReader;
 #[doc = "Field `HDMI_1` writer - HDMI 1"]
-pub type HDMI_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HDMI_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PIXEL_VALVE_3` reader - Pixel Valve 3"]
 pub type PIXEL_VALVE_3_R = crate::FieldReader;
 #[doc = "Field `PIXEL_VALVE_3` writer - Pixel Valve 3"]
-pub type PIXEL_VALVE_3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PIXEL_VALVE_3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SPI_BSC_SLAVE` reader - SPI/BSC Slave"]
 pub type SPI_BSC_SLAVE_R = crate::FieldReader;
 #[doc = "Field `SPI_BSC_SLAVE` writer - SPI/BSC Slave"]
-pub type SPI_BSC_SLAVE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPI_BSC_SLAVE_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - HDMI 0"]
     #[inline(always)]
@@ -58,33 +58,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR34_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - HDMI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_ITARGETSR34_SPEC, 0> {
-        HDMI_0_W::new(self)
+    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_ITARGETSR34_SPEC> {
+        HDMI_0_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - HDMI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_ITARGETSR34_SPEC, 8> {
-        HDMI_1_W::new(self)
+    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_ITARGETSR34_SPEC> {
+        HDMI_1_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Pixel Valve 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_ITARGETSR34_SPEC, 16> {
-        PIXEL_VALVE_3_W::new(self)
+    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_ITARGETSR34_SPEC> {
+        PIXEL_VALVE_3_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - SPI/BSC Slave"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_ITARGETSR34_SPEC, 24> {
-        SPI_BSC_SLAVE_W::new(self)
+    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_ITARGETSR34_SPEC> {
+        SPI_BSC_SLAVE_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

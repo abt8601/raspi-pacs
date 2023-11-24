@@ -2,18 +2,40 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct IN_ENDPOINT {
-    #[doc = "0x00 - Control"]
-    pub diepctl0: DIEPCTL0,
+    diepctl0: DIEPCTL0,
     _reserved1: [u8; 0x04],
-    #[doc = "0x08 - Interrupt"]
-    pub diepint: DIEPINT,
+    diepint: DIEPINT,
     _reserved2: [u8; 0x04],
+    dieptsiz: DIEPTSIZ,
+    diepdma: DIEPDMA,
+    dtxfsts: DTXFSTS,
+}
+impl IN_ENDPOINT {
+    #[doc = "0x00 - Control"]
+    #[inline(always)]
+    pub const fn diepctl0(&self) -> &DIEPCTL0 {
+        &self.diepctl0
+    }
+    #[doc = "0x08 - Interrupt"]
+    #[inline(always)]
+    pub const fn diepint(&self) -> &DIEPINT {
+        &self.diepint
+    }
     #[doc = "0x10 - Transfer size"]
-    pub dieptsiz: DIEPTSIZ,
+    #[inline(always)]
+    pub const fn dieptsiz(&self) -> &DIEPTSIZ {
+        &self.dieptsiz
+    }
     #[doc = "0x14 - DMA address"]
-    pub diepdma: DIEPDMA,
+    #[inline(always)]
+    pub const fn diepdma(&self) -> &DIEPDMA {
+        &self.diepdma
+    }
     #[doc = "0x18 - Transmit FIFO status"]
-    pub dtxfsts: DTXFSTS,
+    #[inline(always)]
+    pub const fn dtxfsts(&self) -> &DTXFSTS {
+        &self.dtxfsts
+    }
 }
 #[doc = "DIEPCTL0 (rw) register accessor: Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl0`]
 module"]

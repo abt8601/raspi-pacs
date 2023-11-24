@@ -5,27 +5,27 @@ pub type W = crate::W<DOEPINT_SPEC>;
 #[doc = "Field `XFRC` reader - Transfer completed interrupt"]
 pub type XFRC_R = crate::BitReader;
 #[doc = "Field `XFRC` writer - Transfer completed interrupt"]
-pub type XFRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDISD` reader - Endpoint disabled interrupt"]
 pub type EPDISD_R = crate::BitReader;
 #[doc = "Field `EPDISD` writer - Endpoint disabled interrupt"]
-pub type EPDISD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDISD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STUP` reader - SETUP phase done"]
 pub type STUP_R = crate::BitReader;
 #[doc = "Field `STUP` writer - SETUP phase done"]
-pub type STUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTEPDIS` reader - OUT token received when endpoint disabled"]
 pub type OTEPDIS_R = crate::BitReader;
 #[doc = "Field `OTEPDIS` writer - OUT token received when endpoint disabled"]
-pub type OTEPDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTEPDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `B2BSTUP` reader - Back-to-back SETUP packets received"]
 pub type B2BSTUP_R = crate::BitReader;
 #[doc = "Field `B2BSTUP` writer - Back-to-back SETUP packets received"]
-pub type B2BSTUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type B2BSTUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NYET` reader - NYET interrupt"]
 pub type NYET_R = crate::BitReader;
 #[doc = "Field `NYET` writer - NYET interrupt"]
-pub type NYET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NYET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
@@ -72,45 +72,45 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DOEPINT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrc(&mut self) -> XFRC_W<DOEPINT_SPEC, 0> {
-        XFRC_W::new(self)
+    pub fn xfrc(&mut self) -> XFRC_W<DOEPINT_SPEC> {
+        XFRC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn epdisd(&mut self) -> EPDISD_W<DOEPINT_SPEC, 1> {
-        EPDISD_W::new(self)
+    pub fn epdisd(&mut self) -> EPDISD_W<DOEPINT_SPEC> {
+        EPDISD_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase done"]
     #[inline(always)]
     #[must_use]
-    pub fn stup(&mut self) -> STUP_W<DOEPINT_SPEC, 3> {
-        STUP_W::new(self)
+    pub fn stup(&mut self) -> STUP_W<DOEPINT_SPEC> {
+        STUP_W::new(self, 3)
     }
     #[doc = "Bit 4 - OUT token received when endpoint disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn otepdis(&mut self) -> OTEPDIS_W<DOEPINT_SPEC, 4> {
-        OTEPDIS_W::new(self)
+    pub fn otepdis(&mut self) -> OTEPDIS_W<DOEPINT_SPEC> {
+        OTEPDIS_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets received"]
     #[inline(always)]
     #[must_use]
-    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPINT_SPEC, 6> {
-        B2BSTUP_W::new(self)
+    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPINT_SPEC> {
+        B2BSTUP_W::new(self, 6)
     }
     #[doc = "Bit 14 - NYET interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nyet(&mut self) -> NYET_W<DOEPINT_SPEC, 14> {
-        NYET_W::new(self)
+    pub fn nyet(&mut self) -> NYET_W<DOEPINT_SPEC> {
+        NYET_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

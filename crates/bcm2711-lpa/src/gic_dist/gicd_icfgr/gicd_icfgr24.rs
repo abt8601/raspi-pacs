@@ -39,8 +39,8 @@ impl TIMER_0_R {
     }
 }
 #[doc = "Field `TIMER_0` writer - Timer 0"]
-pub type TIMER_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TIMER_0_A>;
-impl<'a, REG, const O: u8> TIMER_0_W<'a, REG, O>
+pub type TIMER_0_W<'a, REG> = crate::BitWriter<'a, REG, TIMER_0_A>;
+impl<'a, REG> TIMER_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl TIMER_1_R {
     }
 }
 #[doc = "Field `TIMER_1` writer - Timer 1"]
-pub type TIMER_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TIMER_1_A>;
-impl<'a, REG, const O: u8> TIMER_1_W<'a, REG, O>
+pub type TIMER_1_W<'a, REG> = crate::BitWriter<'a, REG, TIMER_1_A>;
+impl<'a, REG> TIMER_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl TIMER_2_R {
     }
 }
 #[doc = "Field `TIMER_2` writer - Timer 2"]
-pub type TIMER_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TIMER_2_A>;
-impl<'a, REG, const O: u8> TIMER_2_W<'a, REG, O>
+pub type TIMER_2_W<'a, REG> = crate::BitWriter<'a, REG, TIMER_2_A>;
+impl<'a, REG> TIMER_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl TIMER_3_R {
     }
 }
 #[doc = "Field `TIMER_3` writer - Timer 3"]
-pub type TIMER_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TIMER_3_A>;
-impl<'a, REG, const O: u8> TIMER_3_W<'a, REG, O>
+pub type TIMER_3_W<'a, REG> = crate::BitWriter<'a, REG, TIMER_3_A>;
+impl<'a, REG> TIMER_3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -251,8 +251,8 @@ impl H264_0_R {
     }
 }
 #[doc = "Field `H264_0` writer - H264 0"]
-pub type H264_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, H264_0_A>;
-impl<'a, REG, const O: u8> H264_0_W<'a, REG, O>
+pub type H264_0_W<'a, REG> = crate::BitWriter<'a, REG, H264_0_A>;
+impl<'a, REG> H264_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -304,8 +304,8 @@ impl H264_1_R {
     }
 }
 #[doc = "Field `H264_1` writer - H264 1"]
-pub type H264_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, H264_1_A>;
-impl<'a, REG, const O: u8> H264_1_W<'a, REG, O>
+pub type H264_1_W<'a, REG> = crate::BitWriter<'a, REG, H264_1_A>;
+impl<'a, REG> H264_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -357,8 +357,8 @@ impl H264_2_R {
     }
 }
 #[doc = "Field `H264_2` writer - H264 2"]
-pub type H264_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, H264_2_A>;
-impl<'a, REG, const O: u8> H264_2_W<'a, REG, O>
+pub type H264_2_W<'a, REG> = crate::BitWriter<'a, REG, H264_2_A>;
+impl<'a, REG> H264_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -410,8 +410,8 @@ impl JPEG_R {
     }
 }
 #[doc = "Field `JPEG` writer - JPEG"]
-pub type JPEG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, JPEG_A>;
-impl<'a, REG, const O: u8> JPEG_W<'a, REG, O>
+pub type JPEG_W<'a, REG> = crate::BitWriter<'a, REG, JPEG_A>;
+impl<'a, REG> JPEG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -463,8 +463,8 @@ impl ISP_R {
     }
 }
 #[doc = "Field `ISP` writer - ISP"]
-pub type ISP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ISP_A>;
-impl<'a, REG, const O: u8> ISP_W<'a, REG, O>
+pub type ISP_W<'a, REG> = crate::BitWriter<'a, REG, ISP_A>;
+impl<'a, REG> ISP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -516,8 +516,8 @@ impl USB_R {
     }
 }
 #[doc = "Field `USB` writer - USB"]
-pub type USB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, USB_A>;
-impl<'a, REG, const O: u8> USB_W<'a, REG, O>
+pub type USB_W<'a, REG> = crate::BitWriter<'a, REG, USB_A>;
+impl<'a, REG> USB_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -569,8 +569,8 @@ impl V3D_R {
     }
 }
 #[doc = "Field `V3D` writer - V3D"]
-pub type V3D_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, V3D_A>;
-impl<'a, REG, const O: u8> V3D_W<'a, REG, O>
+pub type V3D_W<'a, REG> = crate::BitWriter<'a, REG, V3D_A>;
+impl<'a, REG> V3D_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -622,8 +622,8 @@ impl TRANSPOSER_R {
     }
 }
 #[doc = "Field `TRANSPOSER` writer - Transposer"]
-pub type TRANSPOSER_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TRANSPOSER_A>;
-impl<'a, REG, const O: u8> TRANSPOSER_W<'a, REG, O>
+pub type TRANSPOSER_W<'a, REG> = crate::BitWriter<'a, REG, TRANSPOSER_A>;
+impl<'a, REG> TRANSPOSER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -675,9 +675,8 @@ impl MULTICORE_SYNC_0_R {
     }
 }
 #[doc = "Field `MULTICORE_SYNC_0` writer - Multicore Sync 0"]
-pub type MULTICORE_SYNC_0_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, MULTICORE_SYNC_0_A>;
-impl<'a, REG, const O: u8> MULTICORE_SYNC_0_W<'a, REG, O>
+pub type MULTICORE_SYNC_0_W<'a, REG> = crate::BitWriter<'a, REG, MULTICORE_SYNC_0_A>;
+impl<'a, REG> MULTICORE_SYNC_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -729,9 +728,8 @@ impl MULTICORE_SYNC_1_R {
     }
 }
 #[doc = "Field `MULTICORE_SYNC_1` writer - Multicore Sync 1"]
-pub type MULTICORE_SYNC_1_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, MULTICORE_SYNC_1_A>;
-impl<'a, REG, const O: u8> MULTICORE_SYNC_1_W<'a, REG, O>
+pub type MULTICORE_SYNC_1_W<'a, REG> = crate::BitWriter<'a, REG, MULTICORE_SYNC_1_A>;
+impl<'a, REG> MULTICORE_SYNC_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -783,9 +781,8 @@ impl MULTICORE_SYNC_2_R {
     }
 }
 #[doc = "Field `MULTICORE_SYNC_2` writer - Multicore Sync 2"]
-pub type MULTICORE_SYNC_2_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, MULTICORE_SYNC_2_A>;
-impl<'a, REG, const O: u8> MULTICORE_SYNC_2_W<'a, REG, O>
+pub type MULTICORE_SYNC_2_W<'a, REG> = crate::BitWriter<'a, REG, MULTICORE_SYNC_2_A>;
+impl<'a, REG> MULTICORE_SYNC_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -837,9 +834,8 @@ impl MULTICORE_SYNC_3_R {
     }
 }
 #[doc = "Field `MULTICORE_SYNC_3` writer - Multicore Sync 3"]
-pub type MULTICORE_SYNC_3_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, MULTICORE_SYNC_3_A>;
-impl<'a, REG, const O: u8> MULTICORE_SYNC_3_W<'a, REG, O>
+pub type MULTICORE_SYNC_3_W<'a, REG> = crate::BitWriter<'a, REG, MULTICORE_SYNC_3_A>;
+impl<'a, REG> MULTICORE_SYNC_3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -972,105 +968,105 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR24_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Timer 0"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ICFGR24_SPEC, 1> {
-        TIMER_0_W::new(self)
+    pub fn timer_0(&mut self) -> TIMER_0_W<GICD_ICFGR24_SPEC> {
+        TIMER_0_W::new(self, 1)
     }
     #[doc = "Bit 3 - Timer 1"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ICFGR24_SPEC, 3> {
-        TIMER_1_W::new(self)
+    pub fn timer_1(&mut self) -> TIMER_1_W<GICD_ICFGR24_SPEC> {
+        TIMER_1_W::new(self, 3)
     }
     #[doc = "Bit 5 - Timer 2"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ICFGR24_SPEC, 5> {
-        TIMER_2_W::new(self)
+    pub fn timer_2(&mut self) -> TIMER_2_W<GICD_ICFGR24_SPEC> {
+        TIMER_2_W::new(self, 5)
     }
     #[doc = "Bit 7 - Timer 3"]
     #[inline(always)]
     #[must_use]
-    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ICFGR24_SPEC, 7> {
-        TIMER_3_W::new(self)
+    pub fn timer_3(&mut self) -> TIMER_3_W<GICD_ICFGR24_SPEC> {
+        TIMER_3_W::new(self, 7)
     }
     #[doc = "Bit 9 - H264 0"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_0(&mut self) -> H264_0_W<GICD_ICFGR24_SPEC, 9> {
-        H264_0_W::new(self)
+    pub fn h264_0(&mut self) -> H264_0_W<GICD_ICFGR24_SPEC> {
+        H264_0_W::new(self, 9)
     }
     #[doc = "Bit 11 - H264 1"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_1(&mut self) -> H264_1_W<GICD_ICFGR24_SPEC, 11> {
-        H264_1_W::new(self)
+    pub fn h264_1(&mut self) -> H264_1_W<GICD_ICFGR24_SPEC> {
+        H264_1_W::new(self, 11)
     }
     #[doc = "Bit 13 - H264 2"]
     #[inline(always)]
     #[must_use]
-    pub fn h264_2(&mut self) -> H264_2_W<GICD_ICFGR24_SPEC, 13> {
-        H264_2_W::new(self)
+    pub fn h264_2(&mut self) -> H264_2_W<GICD_ICFGR24_SPEC> {
+        H264_2_W::new(self, 13)
     }
     #[doc = "Bit 15 - JPEG"]
     #[inline(always)]
     #[must_use]
-    pub fn jpeg(&mut self) -> JPEG_W<GICD_ICFGR24_SPEC, 15> {
-        JPEG_W::new(self)
+    pub fn jpeg(&mut self) -> JPEG_W<GICD_ICFGR24_SPEC> {
+        JPEG_W::new(self, 15)
     }
     #[doc = "Bit 17 - ISP"]
     #[inline(always)]
     #[must_use]
-    pub fn isp(&mut self) -> ISP_W<GICD_ICFGR24_SPEC, 17> {
-        ISP_W::new(self)
+    pub fn isp(&mut self) -> ISP_W<GICD_ICFGR24_SPEC> {
+        ISP_W::new(self, 17)
     }
     #[doc = "Bit 19 - USB"]
     #[inline(always)]
     #[must_use]
-    pub fn usb(&mut self) -> USB_W<GICD_ICFGR24_SPEC, 19> {
-        USB_W::new(self)
+    pub fn usb(&mut self) -> USB_W<GICD_ICFGR24_SPEC> {
+        USB_W::new(self, 19)
     }
     #[doc = "Bit 21 - V3D"]
     #[inline(always)]
     #[must_use]
-    pub fn v3d(&mut self) -> V3D_W<GICD_ICFGR24_SPEC, 21> {
-        V3D_W::new(self)
+    pub fn v3d(&mut self) -> V3D_W<GICD_ICFGR24_SPEC> {
+        V3D_W::new(self, 21)
     }
     #[doc = "Bit 23 - Transposer"]
     #[inline(always)]
     #[must_use]
-    pub fn transposer(&mut self) -> TRANSPOSER_W<GICD_ICFGR24_SPEC, 23> {
-        TRANSPOSER_W::new(self)
+    pub fn transposer(&mut self) -> TRANSPOSER_W<GICD_ICFGR24_SPEC> {
+        TRANSPOSER_W::new(self, 23)
     }
     #[doc = "Bit 25 - Multicore Sync 0"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_0(&mut self) -> MULTICORE_SYNC_0_W<GICD_ICFGR24_SPEC, 25> {
-        MULTICORE_SYNC_0_W::new(self)
+    pub fn multicore_sync_0(&mut self) -> MULTICORE_SYNC_0_W<GICD_ICFGR24_SPEC> {
+        MULTICORE_SYNC_0_W::new(self, 25)
     }
     #[doc = "Bit 27 - Multicore Sync 1"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_1(&mut self) -> MULTICORE_SYNC_1_W<GICD_ICFGR24_SPEC, 27> {
-        MULTICORE_SYNC_1_W::new(self)
+    pub fn multicore_sync_1(&mut self) -> MULTICORE_SYNC_1_W<GICD_ICFGR24_SPEC> {
+        MULTICORE_SYNC_1_W::new(self, 27)
     }
     #[doc = "Bit 29 - Multicore Sync 2"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_2(&mut self) -> MULTICORE_SYNC_2_W<GICD_ICFGR24_SPEC, 29> {
-        MULTICORE_SYNC_2_W::new(self)
+    pub fn multicore_sync_2(&mut self) -> MULTICORE_SYNC_2_W<GICD_ICFGR24_SPEC> {
+        MULTICORE_SYNC_2_W::new(self, 29)
     }
     #[doc = "Bit 31 - Multicore Sync 3"]
     #[inline(always)]
     #[must_use]
-    pub fn multicore_sync_3(&mut self) -> MULTICORE_SYNC_3_W<GICD_ICFGR24_SPEC, 31> {
-        MULTICORE_SYNC_3_W::new(self)
+    pub fn multicore_sync_3(&mut self) -> MULTICORE_SYNC_3_W<GICD_ICFGR24_SPEC> {
+        MULTICORE_SYNC_3_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

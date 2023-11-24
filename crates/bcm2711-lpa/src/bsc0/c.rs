@@ -5,31 +5,31 @@ pub type W = crate::W<C_SPEC>;
 #[doc = "Field `READ` reader - Transfer is read"]
 pub type READ_R = crate::BitReader;
 #[doc = "Field `READ` writer - Transfer is read"]
-pub type READ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLEAR` reader - Clear the FIFO"]
 pub type CLEAR_R = crate::FieldReader;
 #[doc = "Field `CLEAR` writer - Clear the FIFO"]
-pub type CLEAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLEAR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ST` reader - Start transfer"]
 pub type ST_R = crate::BitReader;
 #[doc = "Field `ST` writer - Start transfer"]
-pub type ST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTD` reader - Interrupt on done"]
 pub type INTD_R = crate::BitReader;
 #[doc = "Field `INTD` writer - Interrupt on done"]
-pub type INTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTT` reader - Interrupt on TX"]
 pub type INTT_R = crate::BitReader;
 #[doc = "Field `INTT` writer - Interrupt on TX"]
-pub type INTT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTR` reader - Interrupt on RX"]
 pub type INTR_R = crate::BitReader;
 #[doc = "Field `INTR` writer - Interrupt on RX"]
-pub type INTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2CEN` reader - I2C Enable"]
 pub type I2CEN_R = crate::BitReader;
 #[doc = "Field `I2CEN` writer - I2C Enable"]
-pub type I2CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2CEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer is read"]
     #[inline(always)]
@@ -82,51 +82,51 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<C_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Transfer is read"]
     #[inline(always)]
     #[must_use]
-    pub fn read(&mut self) -> READ_W<C_SPEC, 0> {
-        READ_W::new(self)
+    pub fn read(&mut self) -> READ_W<C_SPEC> {
+        READ_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Clear the FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn clear(&mut self) -> CLEAR_W<C_SPEC, 4> {
-        CLEAR_W::new(self)
+    pub fn clear(&mut self) -> CLEAR_W<C_SPEC> {
+        CLEAR_W::new(self, 4)
     }
     #[doc = "Bit 7 - Start transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn st(&mut self) -> ST_W<C_SPEC, 7> {
-        ST_W::new(self)
+    pub fn st(&mut self) -> ST_W<C_SPEC> {
+        ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Interrupt on done"]
     #[inline(always)]
     #[must_use]
-    pub fn intd(&mut self) -> INTD_W<C_SPEC, 8> {
-        INTD_W::new(self)
+    pub fn intd(&mut self) -> INTD_W<C_SPEC> {
+        INTD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt on TX"]
     #[inline(always)]
     #[must_use]
-    pub fn intt(&mut self) -> INTT_W<C_SPEC, 9> {
-        INTT_W::new(self)
+    pub fn intt(&mut self) -> INTT_W<C_SPEC> {
+        INTT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt on RX"]
     #[inline(always)]
     #[must_use]
-    pub fn intr(&mut self) -> INTR_W<C_SPEC, 10> {
-        INTR_W::new(self)
+    pub fn intr(&mut self) -> INTR_W<C_SPEC> {
+        INTR_W::new(self, 10)
     }
     #[doc = "Bit 15 - I2C Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn i2cen(&mut self) -> I2CEN_W<C_SPEC, 15> {
-        I2CEN_W::new(self)
+    pub fn i2cen(&mut self) -> I2CEN_W<C_SPEC> {
+        I2CEN_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

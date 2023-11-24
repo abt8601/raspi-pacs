@@ -5,7 +5,7 @@ pub type W = crate::W<DVBUSPULSE_SPEC>;
 #[doc = "Field `DVBUSP` reader - Device VBUS pulsing time"]
 pub type DVBUSP_R = crate::FieldReader<u16>;
 #[doc = "Field `DVBUSP` writer - Device VBUS pulsing time"]
-pub type DVBUSP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type DVBUSP_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - Device VBUS pulsing time"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DVBUSPULSE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - Device VBUS pulsing time"]
     #[inline(always)]
     #[must_use]
-    pub fn dvbusp(&mut self) -> DVBUSP_W<DVBUSPULSE_SPEC, 0> {
-        DVBUSP_W::new(self)
+    pub fn dvbusp(&mut self) -> DVBUSP_W<DVBUSPULSE_SPEC> {
+        DVBUSP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

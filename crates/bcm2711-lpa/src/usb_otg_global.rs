@@ -2,87 +2,175 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - OTG_HS control and status register"]
-    pub gotgctl: GOTGCTL,
-    #[doc = "0x04 - OTG_HS interrupt register"]
-    pub gotgint: GOTGINT,
-    #[doc = "0x08 - OTG_HS AHB configuration register"]
-    pub gahbcfg: GAHBCFG,
-    #[doc = "0x0c - OTG_HS USB configuration register"]
-    pub gusbcfg: GUSBCFG,
-    #[doc = "0x10 - OTG_HS reset register"]
-    pub grstctl: GRSTCTL,
-    #[doc = "0x14 - OTG_HS core interrupt register"]
-    pub gintsts: GINTSTS,
-    #[doc = "0x18 - OTG_HS interrupt mask register"]
-    pub gintmsk: GINTMSK,
+    gotgctl: GOTGCTL,
+    gotgint: GOTGINT,
+    gahbcfg: GAHBCFG,
+    gusbcfg: GUSBCFG,
+    grstctl: GRSTCTL,
+    gintsts: GINTSTS,
+    gintmsk: GINTMSK,
     _reserved_7_grxstsr: [u8; 0x04],
     _reserved_8_grxstsp: [u8; 0x04],
-    #[doc = "0x24 - OTG_HS Receive FIFO size register"]
-    pub grxfsiz: GRXFSIZ,
+    grxfsiz: GRXFSIZ,
     _reserved_10_gnptxfsiz_host: [u8; 0x04],
-    #[doc = "0x2c - OTG_HS nonperiodic transmit FIFO/queue status register"]
-    pub gnptxsts: GNPTXSTS,
+    gnptxsts: GNPTXSTS,
     _reserved12: [u8; 0x08],
-    #[doc = "0x38 - OTG_HS general core configuration register"]
-    pub gccfg: GCCFG,
-    #[doc = "0x3c - OTG_HS core ID register"]
-    pub cid: CID,
-    #[doc = "0x40 - OTG_HS vendor ID register"]
-    pub vid: VID,
-    #[doc = "0x44 - Direction"]
-    pub hw_direction: HW_DIRECTION,
-    #[doc = "0x48 - Hardware Config 0"]
-    pub hw_config0: HW_CONFIG0,
+    gccfg: GCCFG,
+    cid: CID,
+    vid: VID,
+    hw_direction: HW_DIRECTION,
+    hw_config0: HW_CONFIG0,
     _reserved17: [u8; 0xb4],
-    #[doc = "0x100 - OTG_HS Host periodic transmit FIFO size register"]
-    pub hptxfsiz: HPTXFSIZ,
-    #[doc = "0x104 - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf1: DIEPTXF1,
-    #[doc = "0x108 - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf2: DIEPTXF2,
+    hptxfsiz: HPTXFSIZ,
+    dieptxf1: DIEPTXF1,
+    dieptxf2: DIEPTXF2,
     _reserved20: [u8; 0x10],
-    #[doc = "0x11c - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf3: DIEPTXF3,
-    #[doc = "0x120 - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf4: DIEPTXF4,
-    #[doc = "0x124 - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf5: DIEPTXF5,
-    #[doc = "0x128 - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf6: DIEPTXF6,
-    #[doc = "0x12c - OTG_HS device IN endpoint transmit FIFO size register"]
-    pub dieptxf7: DIEPTXF7,
+    dieptxf3: DIEPTXF3,
+    dieptxf4: DIEPTXF4,
+    dieptxf5: DIEPTXF5,
+    dieptxf6: DIEPTXF6,
+    dieptxf7: DIEPTXF7,
 }
 impl RegisterBlock {
+    #[doc = "0x00 - OTG_HS control and status register"]
+    #[inline(always)]
+    pub const fn gotgctl(&self) -> &GOTGCTL {
+        &self.gotgctl
+    }
+    #[doc = "0x04 - OTG_HS interrupt register"]
+    #[inline(always)]
+    pub const fn gotgint(&self) -> &GOTGINT {
+        &self.gotgint
+    }
+    #[doc = "0x08 - OTG_HS AHB configuration register"]
+    #[inline(always)]
+    pub const fn gahbcfg(&self) -> &GAHBCFG {
+        &self.gahbcfg
+    }
+    #[doc = "0x0c - OTG_HS USB configuration register"]
+    #[inline(always)]
+    pub const fn gusbcfg(&self) -> &GUSBCFG {
+        &self.gusbcfg
+    }
+    #[doc = "0x10 - OTG_HS reset register"]
+    #[inline(always)]
+    pub const fn grstctl(&self) -> &GRSTCTL {
+        &self.grstctl
+    }
+    #[doc = "0x14 - OTG_HS core interrupt register"]
+    #[inline(always)]
+    pub const fn gintsts(&self) -> &GINTSTS {
+        &self.gintsts
+    }
+    #[doc = "0x18 - OTG_HS interrupt mask register"]
+    #[inline(always)]
+    pub const fn gintmsk(&self) -> &GINTMSK {
+        &self.gintmsk
+    }
     #[doc = "0x1c - OTG_HS Receive status debug read register (peripheral mode mode)"]
     #[inline(always)]
     pub const fn grxstsr_peripheral(&self) -> &GRXSTSR_PERIPHERAL {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1c - OTG_HS Receive status debug read register (host mode)"]
     #[inline(always)]
     pub const fn grxstsr_host(&self) -> &GRXSTSR_HOST {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x20 - OTG_HS status read and pop register (peripheral mode)"]
     #[inline(always)]
     pub const fn grxstsp_peripheral(&self) -> &GRXSTSP_PERIPHERAL {
-        unsafe { &*(self as *const Self).cast::<u8>().add(32usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(32).cast() }
     }
     #[doc = "0x20 - OTG_HS status read and pop register (host mode)"]
     #[inline(always)]
     pub const fn grxstsp_host(&self) -> &GRXSTSP_HOST {
-        unsafe { &*(self as *const Self).cast::<u8>().add(32usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(32).cast() }
+    }
+    #[doc = "0x24 - OTG_HS Receive FIFO size register"]
+    #[inline(always)]
+    pub const fn grxfsiz(&self) -> &GRXFSIZ {
+        &self.grxfsiz
     }
     #[doc = "0x28 - Endpoint 0 transmit FIFO size (peripheral mode)"]
     #[inline(always)]
     pub const fn tx0fsiz_peripheral(&self) -> &TX0FSIZ_PERIPHERAL {
-        unsafe { &*(self as *const Self).cast::<u8>().add(40usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(40).cast() }
     }
     #[doc = "0x28 - OTG_HS nonperiodic transmit FIFO size register (host mode)"]
     #[inline(always)]
     pub const fn gnptxfsiz_host(&self) -> &GNPTXFSIZ_HOST {
-        unsafe { &*(self as *const Self).cast::<u8>().add(40usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(40).cast() }
+    }
+    #[doc = "0x2c - OTG_HS nonperiodic transmit FIFO/queue status register"]
+    #[inline(always)]
+    pub const fn gnptxsts(&self) -> &GNPTXSTS {
+        &self.gnptxsts
+    }
+    #[doc = "0x38 - OTG_HS general core configuration register"]
+    #[inline(always)]
+    pub const fn gccfg(&self) -> &GCCFG {
+        &self.gccfg
+    }
+    #[doc = "0x3c - OTG_HS core ID register"]
+    #[inline(always)]
+    pub const fn cid(&self) -> &CID {
+        &self.cid
+    }
+    #[doc = "0x40 - OTG_HS vendor ID register"]
+    #[inline(always)]
+    pub const fn vid(&self) -> &VID {
+        &self.vid
+    }
+    #[doc = "0x44 - Direction"]
+    #[inline(always)]
+    pub const fn hw_direction(&self) -> &HW_DIRECTION {
+        &self.hw_direction
+    }
+    #[doc = "0x48 - Hardware Config 0"]
+    #[inline(always)]
+    pub const fn hw_config0(&self) -> &HW_CONFIG0 {
+        &self.hw_config0
+    }
+    #[doc = "0x100 - OTG_HS Host periodic transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn hptxfsiz(&self) -> &HPTXFSIZ {
+        &self.hptxfsiz
+    }
+    #[doc = "0x104 - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf1(&self) -> &DIEPTXF1 {
+        &self.dieptxf1
+    }
+    #[doc = "0x108 - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf2(&self) -> &DIEPTXF2 {
+        &self.dieptxf2
+    }
+    #[doc = "0x11c - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf3(&self) -> &DIEPTXF3 {
+        &self.dieptxf3
+    }
+    #[doc = "0x120 - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf4(&self) -> &DIEPTXF4 {
+        &self.dieptxf4
+    }
+    #[doc = "0x124 - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf5(&self) -> &DIEPTXF5 {
+        &self.dieptxf5
+    }
+    #[doc = "0x128 - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf6(&self) -> &DIEPTXF6 {
+        &self.dieptxf6
+    }
+    #[doc = "0x12c - OTG_HS device IN endpoint transmit FIFO size register"]
+    #[inline(always)]
+    pub const fn dieptxf7(&self) -> &DIEPTXF7 {
+        &self.dieptxf7
     }
 }
 #[doc = "GOTGCTL (rw) register accessor: OTG_HS control and status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gotgctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gotgctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gotgctl`]

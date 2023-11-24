@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR17_SPEC>;
 #[doc = "Field `VPU0_HALTED` reader - VPU0 halted"]
 pub type VPU0_HALTED_R = crate::FieldReader;
 #[doc = "Field `VPU0_HALTED` writer - VPU0 halted"]
-pub type VPU0_HALTED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type VPU0_HALTED_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `VPU1_HALTED` reader - VPU1 halted"]
 pub type VPU1_HALTED_R = crate::FieldReader;
 #[doc = "Field `VPU1_HALTED` writer - VPU1 halted"]
-pub type VPU1_HALTED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type VPU1_HALTED_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ARM_ADDRESS_ERROR` reader - ARM address error"]
 pub type ARM_ADDRESS_ERROR_R = crate::FieldReader;
 #[doc = "Field `ARM_ADDRESS_ERROR` writer - ARM address error"]
-pub type ARM_ADDRESS_ERROR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ARM_ADDRESS_ERROR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ARM_AXI_ERROR` reader - ARM AXI error"]
 pub type ARM_AXI_ERROR_R = crate::FieldReader;
 #[doc = "Field `ARM_AXI_ERROR` writer - ARM AXI error"]
-pub type ARM_AXI_ERROR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ARM_AXI_ERROR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - VPU0 halted"]
     #[inline(always)]
@@ -64,33 +64,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR17_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - VPU0 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<GICD_IPRIORITYR17_SPEC, 0> {
-        VPU0_HALTED_W::new(self)
+    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<GICD_IPRIORITYR17_SPEC> {
+        VPU0_HALTED_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - VPU1 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<GICD_IPRIORITYR17_SPEC, 8> {
-        VPU1_HALTED_W::new(self)
+    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<GICD_IPRIORITYR17_SPEC> {
+        VPU1_HALTED_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - ARM address error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<GICD_IPRIORITYR17_SPEC, 16> {
-        ARM_ADDRESS_ERROR_W::new(self)
+    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<GICD_IPRIORITYR17_SPEC> {
+        ARM_ADDRESS_ERROR_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - ARM AXI error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<GICD_IPRIORITYR17_SPEC, 24> {
-        ARM_AXI_ERROR_W::new(self)
+    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<GICD_IPRIORITYR17_SPEC> {
+        ARM_AXI_ERROR_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

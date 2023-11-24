@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR16_SPEC>;
 #[doc = "Field `TIMER` reader - ARMC Timer"]
 pub type TIMER_R = crate::FieldReader;
 #[doc = "Field `TIMER` writer - ARMC Timer"]
-pub type TIMER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TIMER_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `MAILBOX` reader - Mailbox"]
 pub type MAILBOX_R = crate::FieldReader;
 #[doc = "Field `MAILBOX` writer - Mailbox"]
-pub type MAILBOX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MAILBOX_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DOORBELL0` reader - Doorbell 0"]
 pub type DOORBELL0_R = crate::FieldReader;
 #[doc = "Field `DOORBELL0` writer - Doorbell 0"]
-pub type DOORBELL0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DOORBELL0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DOORBELL1` reader - Doorbell 1"]
 pub type DOORBELL1_R = crate::FieldReader;
 #[doc = "Field `DOORBELL1` writer - Doorbell 1"]
-pub type DOORBELL1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DOORBELL1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - ARMC Timer"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR16_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - ARMC Timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timer(&mut self) -> TIMER_W<GICD_IPRIORITYR16_SPEC, 0> {
-        TIMER_W::new(self)
+    pub fn timer(&mut self) -> TIMER_W<GICD_IPRIORITYR16_SPEC> {
+        TIMER_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Mailbox"]
     #[inline(always)]
     #[must_use]
-    pub fn mailbox(&mut self) -> MAILBOX_W<GICD_IPRIORITYR16_SPEC, 8> {
-        MAILBOX_W::new(self)
+    pub fn mailbox(&mut self) -> MAILBOX_W<GICD_IPRIORITYR16_SPEC> {
+        MAILBOX_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Doorbell 0"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell0(&mut self) -> DOORBELL0_W<GICD_IPRIORITYR16_SPEC, 16> {
-        DOORBELL0_W::new(self)
+    pub fn doorbell0(&mut self) -> DOORBELL0_W<GICD_IPRIORITYR16_SPEC> {
+        DOORBELL0_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Doorbell 1"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell1(&mut self) -> DOORBELL1_W<GICD_IPRIORITYR16_SPEC, 24> {
-        DOORBELL1_W::new(self)
+    pub fn doorbell1(&mut self) -> DOORBELL1_W<GICD_IPRIORITYR16_SPEC> {
+        DOORBELL1_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

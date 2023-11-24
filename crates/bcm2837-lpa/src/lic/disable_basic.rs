@@ -5,35 +5,35 @@ pub type W = crate::W<DISABLE_BASIC_SPEC>;
 #[doc = "Field `TIMER` reader - ARMC Timer"]
 pub type TIMER_R = crate::BitReader;
 #[doc = "Field `TIMER` writer - ARMC Timer"]
-pub type TIMER_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type TIMER_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `MAILBOX` reader - Mailbox"]
 pub type MAILBOX_R = crate::BitReader;
 #[doc = "Field `MAILBOX` writer - Mailbox"]
-pub type MAILBOX_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type MAILBOX_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DOORBELL0` reader - Doorbell 0"]
 pub type DOORBELL0_R = crate::BitReader;
 #[doc = "Field `DOORBELL0` writer - Doorbell 0"]
-pub type DOORBELL0_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DOORBELL0_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DOORBELL1` reader - Doorbell 1"]
 pub type DOORBELL1_R = crate::BitReader;
 #[doc = "Field `DOORBELL1` writer - Doorbell 1"]
-pub type DOORBELL1_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type DOORBELL1_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `VPU0_HALTED` reader - VPU0 halted"]
 pub type VPU0_HALTED_R = crate::BitReader;
 #[doc = "Field `VPU0_HALTED` writer - VPU0 halted"]
-pub type VPU0_HALTED_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type VPU0_HALTED_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `VPU1_HALTED` reader - VPU1 halted"]
 pub type VPU1_HALTED_R = crate::BitReader;
 #[doc = "Field `VPU1_HALTED` writer - VPU1 halted"]
-pub type VPU1_HALTED_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type VPU1_HALTED_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `ARM_ADDRESS_ERROR` reader - ARM address error"]
 pub type ARM_ADDRESS_ERROR_R = crate::BitReader;
 #[doc = "Field `ARM_ADDRESS_ERROR` writer - ARM address error"]
-pub type ARM_ADDRESS_ERROR_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type ARM_ADDRESS_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `ARM_AXI_ERROR` reader - ARM AXI error"]
 pub type ARM_AXI_ERROR_R = crate::BitReader;
 #[doc = "Field `ARM_AXI_ERROR` writer - ARM AXI error"]
-pub type ARM_AXI_ERROR_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O>;
+pub type ARM_AXI_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - ARMC Timer"]
     #[inline(always)]
@@ -98,57 +98,57 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DISABLE_BASIC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - ARMC Timer"]
     #[inline(always)]
     #[must_use]
-    pub fn timer(&mut self) -> TIMER_W<DISABLE_BASIC_SPEC, 0> {
-        TIMER_W::new(self)
+    pub fn timer(&mut self) -> TIMER_W<DISABLE_BASIC_SPEC> {
+        TIMER_W::new(self, 0)
     }
     #[doc = "Bit 1 - Mailbox"]
     #[inline(always)]
     #[must_use]
-    pub fn mailbox(&mut self) -> MAILBOX_W<DISABLE_BASIC_SPEC, 1> {
-        MAILBOX_W::new(self)
+    pub fn mailbox(&mut self) -> MAILBOX_W<DISABLE_BASIC_SPEC> {
+        MAILBOX_W::new(self, 1)
     }
     #[doc = "Bit 2 - Doorbell 0"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell0(&mut self) -> DOORBELL0_W<DISABLE_BASIC_SPEC, 2> {
-        DOORBELL0_W::new(self)
+    pub fn doorbell0(&mut self) -> DOORBELL0_W<DISABLE_BASIC_SPEC> {
+        DOORBELL0_W::new(self, 2)
     }
     #[doc = "Bit 3 - Doorbell 1"]
     #[inline(always)]
     #[must_use]
-    pub fn doorbell1(&mut self) -> DOORBELL1_W<DISABLE_BASIC_SPEC, 3> {
-        DOORBELL1_W::new(self)
+    pub fn doorbell1(&mut self) -> DOORBELL1_W<DISABLE_BASIC_SPEC> {
+        DOORBELL1_W::new(self, 3)
     }
     #[doc = "Bit 4 - VPU0 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<DISABLE_BASIC_SPEC, 4> {
-        VPU0_HALTED_W::new(self)
+    pub fn vpu0_halted(&mut self) -> VPU0_HALTED_W<DISABLE_BASIC_SPEC> {
+        VPU0_HALTED_W::new(self, 4)
     }
     #[doc = "Bit 5 - VPU1 halted"]
     #[inline(always)]
     #[must_use]
-    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<DISABLE_BASIC_SPEC, 5> {
-        VPU1_HALTED_W::new(self)
+    pub fn vpu1_halted(&mut self) -> VPU1_HALTED_W<DISABLE_BASIC_SPEC> {
+        VPU1_HALTED_W::new(self, 5)
     }
     #[doc = "Bit 6 - ARM address error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<DISABLE_BASIC_SPEC, 6> {
-        ARM_ADDRESS_ERROR_W::new(self)
+    pub fn arm_address_error(&mut self) -> ARM_ADDRESS_ERROR_W<DISABLE_BASIC_SPEC> {
+        ARM_ADDRESS_ERROR_W::new(self, 6)
     }
     #[doc = "Bit 7 - ARM AXI error"]
     #[inline(always)]
     #[must_use]
-    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<DISABLE_BASIC_SPEC, 7> {
-        ARM_AXI_ERROR_W::new(self)
+    pub fn arm_axi_error(&mut self) -> ARM_AXI_ERROR_W<DISABLE_BASIC_SPEC> {
+        ARM_AXI_ERROR_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

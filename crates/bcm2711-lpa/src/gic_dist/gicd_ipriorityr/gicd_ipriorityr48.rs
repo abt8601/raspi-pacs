@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR48_SPEC>;
 #[doc = "Field `INT192` reader - Interrupt 192"]
 pub type INT192_R = crate::FieldReader;
 #[doc = "Field `INT192` writer - Interrupt 192"]
-pub type INT192_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type INT192_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INT193` reader - Interrupt 193"]
 pub type INT193_R = crate::FieldReader;
 #[doc = "Field `INT193` writer - Interrupt 193"]
-pub type INT193_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type INT193_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INT194` reader - Interrupt 194"]
 pub type INT194_R = crate::FieldReader;
 #[doc = "Field `INT194` writer - Interrupt 194"]
-pub type INT194_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type INT194_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INT195` reader - Interrupt 195"]
 pub type INT195_R = crate::FieldReader;
 #[doc = "Field `INT195` writer - Interrupt 195"]
-pub type INT195_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type INT195_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Interrupt 192"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR48_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Interrupt 192"]
     #[inline(always)]
     #[must_use]
-    pub fn int192(&mut self) -> INT192_W<GICD_IPRIORITYR48_SPEC, 0> {
-        INT192_W::new(self)
+    pub fn int192(&mut self) -> INT192_W<GICD_IPRIORITYR48_SPEC> {
+        INT192_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Interrupt 193"]
     #[inline(always)]
     #[must_use]
-    pub fn int193(&mut self) -> INT193_W<GICD_IPRIORITYR48_SPEC, 8> {
-        INT193_W::new(self)
+    pub fn int193(&mut self) -> INT193_W<GICD_IPRIORITYR48_SPEC> {
+        INT193_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Interrupt 194"]
     #[inline(always)]
     #[must_use]
-    pub fn int194(&mut self) -> INT194_W<GICD_IPRIORITYR48_SPEC, 16> {
-        INT194_W::new(self)
+    pub fn int194(&mut self) -> INT194_W<GICD_IPRIORITYR48_SPEC> {
+        INT194_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Interrupt 195"]
     #[inline(always)]
     #[must_use]
-    pub fn int195(&mut self) -> INT195_W<GICD_IPRIORITYR48_SPEC, 24> {
-        INT195_W::new(self)
+    pub fn int195(&mut self) -> INT195_W<GICD_IPRIORITYR48_SPEC> {
+        INT195_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

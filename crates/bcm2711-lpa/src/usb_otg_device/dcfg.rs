@@ -5,23 +5,23 @@ pub type W = crate::W<DCFG_SPEC>;
 #[doc = "Field `DSPD` reader - Device speed"]
 pub type DSPD_R = crate::FieldReader;
 #[doc = "Field `DSPD` writer - Device speed"]
-pub type DSPD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DSPD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NZLSOHSK` reader - Nonzero-length status OUT handshake"]
 pub type NZLSOHSK_R = crate::BitReader;
 #[doc = "Field `NZLSOHSK` writer - Nonzero-length status OUT handshake"]
-pub type NZLSOHSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NZLSOHSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAD` reader - Device address"]
 pub type DAD_R = crate::FieldReader;
 #[doc = "Field `DAD` writer - Device address"]
-pub type DAD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type DAD_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PFIVL` reader - Periodic (micro)frame interval"]
 pub type PFIVL_R = crate::FieldReader;
 #[doc = "Field `PFIVL` writer - Periodic (micro)frame interval"]
-pub type PFIVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PFIVL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PERSCHIVL` reader - Periodic scheduling interval"]
 pub type PERSCHIVL_R = crate::FieldReader;
 #[doc = "Field `PERSCHIVL` writer - Periodic scheduling interval"]
-pub type PERSCHIVL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PERSCHIVL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
@@ -62,39 +62,39 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DCFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
     #[must_use]
-    pub fn dspd(&mut self) -> DSPD_W<DCFG_SPEC, 0> {
-        DSPD_W::new(self)
+    pub fn dspd(&mut self) -> DSPD_W<DCFG_SPEC> {
+        DSPD_W::new(self, 0)
     }
     #[doc = "Bit 2 - Nonzero-length status OUT handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn nzlsohsk(&mut self) -> NZLSOHSK_W<DCFG_SPEC, 2> {
-        NZLSOHSK_W::new(self)
+    pub fn nzlsohsk(&mut self) -> NZLSOHSK_W<DCFG_SPEC> {
+        NZLSOHSK_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Device address"]
     #[inline(always)]
     #[must_use]
-    pub fn dad(&mut self) -> DAD_W<DCFG_SPEC, 4> {
-        DAD_W::new(self)
+    pub fn dad(&mut self) -> DAD_W<DCFG_SPEC> {
+        DAD_W::new(self, 4)
     }
     #[doc = "Bits 11:12 - Periodic (micro)frame interval"]
     #[inline(always)]
     #[must_use]
-    pub fn pfivl(&mut self) -> PFIVL_W<DCFG_SPEC, 11> {
-        PFIVL_W::new(self)
+    pub fn pfivl(&mut self) -> PFIVL_W<DCFG_SPEC> {
+        PFIVL_W::new(self, 11)
     }
     #[doc = "Bits 24:25 - Periodic scheduling interval"]
     #[inline(always)]
     #[must_use]
-    pub fn perschivl(&mut self) -> PERSCHIVL_W<DCFG_SPEC, 24> {
-        PERSCHIVL_W::new(self)
+    pub fn perschivl(&mut self) -> PERSCHIVL_W<DCFG_SPEC> {
+        PERSCHIVL_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,118 +2,344 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct GICD_IPRIORITYR {
+    gicd_ipriorityr0: GICD_IPRIORITYR0,
+    gicd_ipriorityr1: GICD_IPRIORITYR1,
+    gicd_ipriorityr2: GICD_IPRIORITYR2,
+    gicd_ipriorityr3: GICD_IPRIORITYR3,
+    gicd_ipriorityr4: GICD_IPRIORITYR4,
+    gicd_ipriorityr5: GICD_IPRIORITYR5,
+    gicd_ipriorityr6: GICD_IPRIORITYR6,
+    gicd_ipriorityr7: GICD_IPRIORITYR7,
+    gicd_ipriorityr8: GICD_IPRIORITYR8,
+    gicd_ipriorityr9: GICD_IPRIORITYR9,
+    gicd_ipriorityr10: GICD_IPRIORITYR10,
+    gicd_ipriorityr11: GICD_IPRIORITYR11,
+    gicd_ipriorityr12: GICD_IPRIORITYR12,
+    gicd_ipriorityr13: GICD_IPRIORITYR13,
+    gicd_ipriorityr14: GICD_IPRIORITYR14,
+    gicd_ipriorityr15: GICD_IPRIORITYR15,
+    gicd_ipriorityr16: GICD_IPRIORITYR16,
+    gicd_ipriorityr17: GICD_IPRIORITYR17,
+    gicd_ipriorityr18: GICD_IPRIORITYR18,
+    gicd_ipriorityr19: GICD_IPRIORITYR19,
+    gicd_ipriorityr20: GICD_IPRIORITYR20,
+    gicd_ipriorityr21: GICD_IPRIORITYR21,
+    gicd_ipriorityr22: GICD_IPRIORITYR22,
+    gicd_ipriorityr23: GICD_IPRIORITYR23,
+    gicd_ipriorityr24: GICD_IPRIORITYR24,
+    gicd_ipriorityr25: GICD_IPRIORITYR25,
+    gicd_ipriorityr26: GICD_IPRIORITYR26,
+    gicd_ipriorityr27: GICD_IPRIORITYR27,
+    gicd_ipriorityr28: GICD_IPRIORITYR28,
+    gicd_ipriorityr29: GICD_IPRIORITYR29,
+    gicd_ipriorityr30: GICD_IPRIORITYR30,
+    gicd_ipriorityr31: GICD_IPRIORITYR31,
+    gicd_ipriorityr32: GICD_IPRIORITYR32,
+    gicd_ipriorityr33: GICD_IPRIORITYR33,
+    gicd_ipriorityr34: GICD_IPRIORITYR34,
+    gicd_ipriorityr35: GICD_IPRIORITYR35,
+    gicd_ipriorityr36: GICD_IPRIORITYR36,
+    gicd_ipriorityr37: GICD_IPRIORITYR37,
+    gicd_ipriorityr38: GICD_IPRIORITYR38,
+    gicd_ipriorityr39: GICD_IPRIORITYR39,
+    gicd_ipriorityr40: GICD_IPRIORITYR40,
+    gicd_ipriorityr41: GICD_IPRIORITYR41,
+    gicd_ipriorityr42: GICD_IPRIORITYR42,
+    gicd_ipriorityr43: GICD_IPRIORITYR43,
+    gicd_ipriorityr44: GICD_IPRIORITYR44,
+    gicd_ipriorityr45: GICD_IPRIORITYR45,
+    gicd_ipriorityr46: GICD_IPRIORITYR46,
+    gicd_ipriorityr47: GICD_IPRIORITYR47,
+    gicd_ipriorityr48: GICD_IPRIORITYR48,
+    gicd_ipriorityr49: GICD_IPRIORITYR49,
+    gicd_ipriorityr50: GICD_IPRIORITYR50,
+    gicd_ipriorityr51: GICD_IPRIORITYR51,
+    gicd_ipriorityr52: GICD_IPRIORITYR52,
+    gicd_ipriorityr53: GICD_IPRIORITYR53,
+    gicd_ipriorityr54: GICD_IPRIORITYR54,
+    gicd_ipriorityr55: GICD_IPRIORITYR55,
+}
+impl GICD_IPRIORITYR {
     #[doc = "0x00 - Interrupt Priority 0 - 3 (Lower is first)"]
-    pub gicd_ipriorityr0: GICD_IPRIORITYR0,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr0(&self) -> &GICD_IPRIORITYR0 {
+        &self.gicd_ipriorityr0
+    }
     #[doc = "0x04 - Interrupt Priority 4 - 7 (Lower is first)"]
-    pub gicd_ipriorityr1: GICD_IPRIORITYR1,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr1(&self) -> &GICD_IPRIORITYR1 {
+        &self.gicd_ipriorityr1
+    }
     #[doc = "0x08 - Interrupt Priority 8 - 11 (Lower is first)"]
-    pub gicd_ipriorityr2: GICD_IPRIORITYR2,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr2(&self) -> &GICD_IPRIORITYR2 {
+        &self.gicd_ipriorityr2
+    }
     #[doc = "0x0c - Interrupt Priority 12 - 15 (Lower is first)"]
-    pub gicd_ipriorityr3: GICD_IPRIORITYR3,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr3(&self) -> &GICD_IPRIORITYR3 {
+        &self.gicd_ipriorityr3
+    }
     #[doc = "0x10 - Interrupt Priority 16 - 19 (Lower is first)"]
-    pub gicd_ipriorityr4: GICD_IPRIORITYR4,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr4(&self) -> &GICD_IPRIORITYR4 {
+        &self.gicd_ipriorityr4
+    }
     #[doc = "0x14 - Interrupt Priority 20 - 23 (Lower is first)"]
-    pub gicd_ipriorityr5: GICD_IPRIORITYR5,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr5(&self) -> &GICD_IPRIORITYR5 {
+        &self.gicd_ipriorityr5
+    }
     #[doc = "0x18 - Interrupt Priority 24 - 27 (Lower is first)"]
-    pub gicd_ipriorityr6: GICD_IPRIORITYR6,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr6(&self) -> &GICD_IPRIORITYR6 {
+        &self.gicd_ipriorityr6
+    }
     #[doc = "0x1c - Interrupt Priority 28 - 31 (Lower is first)"]
-    pub gicd_ipriorityr7: GICD_IPRIORITYR7,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr7(&self) -> &GICD_IPRIORITYR7 {
+        &self.gicd_ipriorityr7
+    }
     #[doc = "0x20 - Interrupt Priority 32 - 35 (Lower is first)"]
-    pub gicd_ipriorityr8: GICD_IPRIORITYR8,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr8(&self) -> &GICD_IPRIORITYR8 {
+        &self.gicd_ipriorityr8
+    }
     #[doc = "0x24 - Interrupt Priority 36 - 39 (Lower is first)"]
-    pub gicd_ipriorityr9: GICD_IPRIORITYR9,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr9(&self) -> &GICD_IPRIORITYR9 {
+        &self.gicd_ipriorityr9
+    }
     #[doc = "0x28 - Interrupt Priority 40 - 43 (Lower is first)"]
-    pub gicd_ipriorityr10: GICD_IPRIORITYR10,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr10(&self) -> &GICD_IPRIORITYR10 {
+        &self.gicd_ipriorityr10
+    }
     #[doc = "0x2c - Interrupt Priority 44 - 47 (Lower is first)"]
-    pub gicd_ipriorityr11: GICD_IPRIORITYR11,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr11(&self) -> &GICD_IPRIORITYR11 {
+        &self.gicd_ipriorityr11
+    }
     #[doc = "0x30 - Interrupt Priority 48 - 51 (Lower is first)"]
-    pub gicd_ipriorityr12: GICD_IPRIORITYR12,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr12(&self) -> &GICD_IPRIORITYR12 {
+        &self.gicd_ipriorityr12
+    }
     #[doc = "0x34 - Interrupt Priority 52 - 55 (Lower is first)"]
-    pub gicd_ipriorityr13: GICD_IPRIORITYR13,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr13(&self) -> &GICD_IPRIORITYR13 {
+        &self.gicd_ipriorityr13
+    }
     #[doc = "0x38 - Interrupt Priority 56 - 59 (Lower is first)"]
-    pub gicd_ipriorityr14: GICD_IPRIORITYR14,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr14(&self) -> &GICD_IPRIORITYR14 {
+        &self.gicd_ipriorityr14
+    }
     #[doc = "0x3c - Interrupt Priority 60 - 63 (Lower is first)"]
-    pub gicd_ipriorityr15: GICD_IPRIORITYR15,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr15(&self) -> &GICD_IPRIORITYR15 {
+        &self.gicd_ipriorityr15
+    }
     #[doc = "0x40 - Interrupt Priority 64 - 67 (Lower is first)"]
-    pub gicd_ipriorityr16: GICD_IPRIORITYR16,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr16(&self) -> &GICD_IPRIORITYR16 {
+        &self.gicd_ipriorityr16
+    }
     #[doc = "0x44 - Interrupt Priority 68 - 71 (Lower is first)"]
-    pub gicd_ipriorityr17: GICD_IPRIORITYR17,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr17(&self) -> &GICD_IPRIORITYR17 {
+        &self.gicd_ipriorityr17
+    }
     #[doc = "0x48 - Interrupt Priority 72 - 75 (Lower is first)"]
-    pub gicd_ipriorityr18: GICD_IPRIORITYR18,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr18(&self) -> &GICD_IPRIORITYR18 {
+        &self.gicd_ipriorityr18
+    }
     #[doc = "0x4c - Interrupt Priority 76 - 79 (Lower is first)"]
-    pub gicd_ipriorityr19: GICD_IPRIORITYR19,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr19(&self) -> &GICD_IPRIORITYR19 {
+        &self.gicd_ipriorityr19
+    }
     #[doc = "0x50 - Interrupt Priority 80 - 83 (Lower is first)"]
-    pub gicd_ipriorityr20: GICD_IPRIORITYR20,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr20(&self) -> &GICD_IPRIORITYR20 {
+        &self.gicd_ipriorityr20
+    }
     #[doc = "0x54 - Interrupt Priority 84 - 87 (Lower is first)"]
-    pub gicd_ipriorityr21: GICD_IPRIORITYR21,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr21(&self) -> &GICD_IPRIORITYR21 {
+        &self.gicd_ipriorityr21
+    }
     #[doc = "0x58 - Interrupt Priority 88 - 91 (Lower is first)"]
-    pub gicd_ipriorityr22: GICD_IPRIORITYR22,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr22(&self) -> &GICD_IPRIORITYR22 {
+        &self.gicd_ipriorityr22
+    }
     #[doc = "0x5c - Interrupt Priority 92 - 95 (Lower is first)"]
-    pub gicd_ipriorityr23: GICD_IPRIORITYR23,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr23(&self) -> &GICD_IPRIORITYR23 {
+        &self.gicd_ipriorityr23
+    }
     #[doc = "0x60 - Interrupt Priority 96 - 99 (Lower is first)"]
-    pub gicd_ipriorityr24: GICD_IPRIORITYR24,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr24(&self) -> &GICD_IPRIORITYR24 {
+        &self.gicd_ipriorityr24
+    }
     #[doc = "0x64 - Interrupt Priority 100 - 103 (Lower is first)"]
-    pub gicd_ipriorityr25: GICD_IPRIORITYR25,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr25(&self) -> &GICD_IPRIORITYR25 {
+        &self.gicd_ipriorityr25
+    }
     #[doc = "0x68 - Interrupt Priority 104 - 107 (Lower is first)"]
-    pub gicd_ipriorityr26: GICD_IPRIORITYR26,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr26(&self) -> &GICD_IPRIORITYR26 {
+        &self.gicd_ipriorityr26
+    }
     #[doc = "0x6c - Interrupt Priority 108 - 111 (Lower is first)"]
-    pub gicd_ipriorityr27: GICD_IPRIORITYR27,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr27(&self) -> &GICD_IPRIORITYR27 {
+        &self.gicd_ipriorityr27
+    }
     #[doc = "0x70 - Interrupt Priority 112 - 115 (Lower is first)"]
-    pub gicd_ipriorityr28: GICD_IPRIORITYR28,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr28(&self) -> &GICD_IPRIORITYR28 {
+        &self.gicd_ipriorityr28
+    }
     #[doc = "0x74 - Interrupt Priority 116 - 119 (Lower is first)"]
-    pub gicd_ipriorityr29: GICD_IPRIORITYR29,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr29(&self) -> &GICD_IPRIORITYR29 {
+        &self.gicd_ipriorityr29
+    }
     #[doc = "0x78 - Interrupt Priority 120 - 123 (Lower is first)"]
-    pub gicd_ipriorityr30: GICD_IPRIORITYR30,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr30(&self) -> &GICD_IPRIORITYR30 {
+        &self.gicd_ipriorityr30
+    }
     #[doc = "0x7c - Interrupt Priority 124 - 127 (Lower is first)"]
-    pub gicd_ipriorityr31: GICD_IPRIORITYR31,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr31(&self) -> &GICD_IPRIORITYR31 {
+        &self.gicd_ipriorityr31
+    }
     #[doc = "0x80 - Interrupt Priority 128 - 131 (Lower is first)"]
-    pub gicd_ipriorityr32: GICD_IPRIORITYR32,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr32(&self) -> &GICD_IPRIORITYR32 {
+        &self.gicd_ipriorityr32
+    }
     #[doc = "0x84 - Interrupt Priority 132 - 135 (Lower is first)"]
-    pub gicd_ipriorityr33: GICD_IPRIORITYR33,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr33(&self) -> &GICD_IPRIORITYR33 {
+        &self.gicd_ipriorityr33
+    }
     #[doc = "0x88 - Interrupt Priority 136 - 139 (Lower is first)"]
-    pub gicd_ipriorityr34: GICD_IPRIORITYR34,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr34(&self) -> &GICD_IPRIORITYR34 {
+        &self.gicd_ipriorityr34
+    }
     #[doc = "0x8c - Interrupt Priority 140 - 143 (Lower is first)"]
-    pub gicd_ipriorityr35: GICD_IPRIORITYR35,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr35(&self) -> &GICD_IPRIORITYR35 {
+        &self.gicd_ipriorityr35
+    }
     #[doc = "0x90 - Interrupt Priority 144 - 147 (Lower is first)"]
-    pub gicd_ipriorityr36: GICD_IPRIORITYR36,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr36(&self) -> &GICD_IPRIORITYR36 {
+        &self.gicd_ipriorityr36
+    }
     #[doc = "0x94 - Interrupt Priority 148 - 151 (Lower is first)"]
-    pub gicd_ipriorityr37: GICD_IPRIORITYR37,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr37(&self) -> &GICD_IPRIORITYR37 {
+        &self.gicd_ipriorityr37
+    }
     #[doc = "0x98 - Interrupt Priority 152 - 155 (Lower is first)"]
-    pub gicd_ipriorityr38: GICD_IPRIORITYR38,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr38(&self) -> &GICD_IPRIORITYR38 {
+        &self.gicd_ipriorityr38
+    }
     #[doc = "0x9c - Interrupt Priority 156 - 159 (Lower is first)"]
-    pub gicd_ipriorityr39: GICD_IPRIORITYR39,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr39(&self) -> &GICD_IPRIORITYR39 {
+        &self.gicd_ipriorityr39
+    }
     #[doc = "0xa0 - Interrupt Priority 160 - 163 (Lower is first)"]
-    pub gicd_ipriorityr40: GICD_IPRIORITYR40,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr40(&self) -> &GICD_IPRIORITYR40 {
+        &self.gicd_ipriorityr40
+    }
     #[doc = "0xa4 - Interrupt Priority 164 - 167 (Lower is first)"]
-    pub gicd_ipriorityr41: GICD_IPRIORITYR41,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr41(&self) -> &GICD_IPRIORITYR41 {
+        &self.gicd_ipriorityr41
+    }
     #[doc = "0xa8 - Interrupt Priority 168 - 171 (Lower is first)"]
-    pub gicd_ipriorityr42: GICD_IPRIORITYR42,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr42(&self) -> &GICD_IPRIORITYR42 {
+        &self.gicd_ipriorityr42
+    }
     #[doc = "0xac - Interrupt Priority 172 - 175 (Lower is first)"]
-    pub gicd_ipriorityr43: GICD_IPRIORITYR43,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr43(&self) -> &GICD_IPRIORITYR43 {
+        &self.gicd_ipriorityr43
+    }
     #[doc = "0xb0 - Interrupt Priority 176 - 179 (Lower is first)"]
-    pub gicd_ipriorityr44: GICD_IPRIORITYR44,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr44(&self) -> &GICD_IPRIORITYR44 {
+        &self.gicd_ipriorityr44
+    }
     #[doc = "0xb4 - Interrupt Priority 180 - 183 (Lower is first)"]
-    pub gicd_ipriorityr45: GICD_IPRIORITYR45,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr45(&self) -> &GICD_IPRIORITYR45 {
+        &self.gicd_ipriorityr45
+    }
     #[doc = "0xb8 - Interrupt Priority 184 - 187 (Lower is first)"]
-    pub gicd_ipriorityr46: GICD_IPRIORITYR46,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr46(&self) -> &GICD_IPRIORITYR46 {
+        &self.gicd_ipriorityr46
+    }
     #[doc = "0xbc - Interrupt Priority 188 - 191 (Lower is first)"]
-    pub gicd_ipriorityr47: GICD_IPRIORITYR47,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr47(&self) -> &GICD_IPRIORITYR47 {
+        &self.gicd_ipriorityr47
+    }
     #[doc = "0xc0 - Interrupt Priority 192 - 195 (Lower is first)"]
-    pub gicd_ipriorityr48: GICD_IPRIORITYR48,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr48(&self) -> &GICD_IPRIORITYR48 {
+        &self.gicd_ipriorityr48
+    }
     #[doc = "0xc4 - Interrupt Priority 196 - 199 (Lower is first)"]
-    pub gicd_ipriorityr49: GICD_IPRIORITYR49,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr49(&self) -> &GICD_IPRIORITYR49 {
+        &self.gicd_ipriorityr49
+    }
     #[doc = "0xc8 - Interrupt Priority 200 - 203 (Lower is first)"]
-    pub gicd_ipriorityr50: GICD_IPRIORITYR50,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr50(&self) -> &GICD_IPRIORITYR50 {
+        &self.gicd_ipriorityr50
+    }
     #[doc = "0xcc - Interrupt Priority 204 - 207 (Lower is first)"]
-    pub gicd_ipriorityr51: GICD_IPRIORITYR51,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr51(&self) -> &GICD_IPRIORITYR51 {
+        &self.gicd_ipriorityr51
+    }
     #[doc = "0xd0 - Interrupt Priority 208 - 211 (Lower is first)"]
-    pub gicd_ipriorityr52: GICD_IPRIORITYR52,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr52(&self) -> &GICD_IPRIORITYR52 {
+        &self.gicd_ipriorityr52
+    }
     #[doc = "0xd4 - Interrupt Priority 212 - 215 (Lower is first)"]
-    pub gicd_ipriorityr53: GICD_IPRIORITYR53,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr53(&self) -> &GICD_IPRIORITYR53 {
+        &self.gicd_ipriorityr53
+    }
     #[doc = "0xd8 - Interrupt Priority 216 - 219 (Lower is first)"]
-    pub gicd_ipriorityr54: GICD_IPRIORITYR54,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr54(&self) -> &GICD_IPRIORITYR54 {
+        &self.gicd_ipriorityr54
+    }
     #[doc = "0xdc - Interrupt Priority 220 - 223 (Lower is first)"]
-    pub gicd_ipriorityr55: GICD_IPRIORITYR55,
+    #[inline(always)]
+    pub const fn gicd_ipriorityr55(&self) -> &GICD_IPRIORITYR55 {
+        &self.gicd_ipriorityr55
+    }
 }
 #[doc = "GICD_IPRIORITYR0 (rw) register accessor: Interrupt Priority 0 - 3 (Lower is first)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_ipriorityr0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_ipriorityr0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_ipriorityr0`]
 module"]

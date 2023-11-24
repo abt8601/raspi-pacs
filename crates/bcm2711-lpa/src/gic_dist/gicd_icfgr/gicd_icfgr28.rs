@@ -39,8 +39,8 @@ impl DMA_0_R {
     }
 }
 #[doc = "Field `DMA_0` writer - DMA 0"]
-pub type DMA_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_0_A>;
-impl<'a, REG, const O: u8> DMA_0_W<'a, REG, O>
+pub type DMA_0_W<'a, REG> = crate::BitWriter<'a, REG, DMA_0_A>;
+impl<'a, REG> DMA_0_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl DMA_1_R {
     }
 }
 #[doc = "Field `DMA_1` writer - DMA 1"]
-pub type DMA_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_1_A>;
-impl<'a, REG, const O: u8> DMA_1_W<'a, REG, O>
+pub type DMA_1_W<'a, REG> = crate::BitWriter<'a, REG, DMA_1_A>;
+impl<'a, REG> DMA_1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl DMA_2_R {
     }
 }
 #[doc = "Field `DMA_2` writer - DMA 2"]
-pub type DMA_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_2_A>;
-impl<'a, REG, const O: u8> DMA_2_W<'a, REG, O>
+pub type DMA_2_W<'a, REG> = crate::BitWriter<'a, REG, DMA_2_A>;
+impl<'a, REG> DMA_2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -198,8 +198,8 @@ impl DMA_3_R {
     }
 }
 #[doc = "Field `DMA_3` writer - DMA 3"]
-pub type DMA_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_3_A>;
-impl<'a, REG, const O: u8> DMA_3_W<'a, REG, O>
+pub type DMA_3_W<'a, REG> = crate::BitWriter<'a, REG, DMA_3_A>;
+impl<'a, REG> DMA_3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -251,8 +251,8 @@ impl DMA_4_R {
     }
 }
 #[doc = "Field `DMA_4` writer - DMA 4"]
-pub type DMA_4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_4_A>;
-impl<'a, REG, const O: u8> DMA_4_W<'a, REG, O>
+pub type DMA_4_W<'a, REG> = crate::BitWriter<'a, REG, DMA_4_A>;
+impl<'a, REG> DMA_4_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -304,8 +304,8 @@ impl DMA_5_R {
     }
 }
 #[doc = "Field `DMA_5` writer - DMA 5"]
-pub type DMA_5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_5_A>;
-impl<'a, REG, const O: u8> DMA_5_W<'a, REG, O>
+pub type DMA_5_W<'a, REG> = crate::BitWriter<'a, REG, DMA_5_A>;
+impl<'a, REG> DMA_5_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -357,8 +357,8 @@ impl DMA_6_R {
     }
 }
 #[doc = "Field `DMA_6` writer - DMA 6"]
-pub type DMA_6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_6_A>;
-impl<'a, REG, const O: u8> DMA_6_W<'a, REG, O>
+pub type DMA_6_W<'a, REG> = crate::BitWriter<'a, REG, DMA_6_A>;
+impl<'a, REG> DMA_6_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -410,8 +410,8 @@ impl DMA_7_8_R {
     }
 }
 #[doc = "Field `DMA_7_8` writer - OR of DMA 7 and 8"]
-pub type DMA_7_8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_7_8_A>;
-impl<'a, REG, const O: u8> DMA_7_8_W<'a, REG, O>
+pub type DMA_7_8_W<'a, REG> = crate::BitWriter<'a, REG, DMA_7_8_A>;
+impl<'a, REG> DMA_7_8_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -463,8 +463,8 @@ impl DMA_9_10_R {
     }
 }
 #[doc = "Field `DMA_9_10` writer - OR of DMA 9 and 10"]
-pub type DMA_9_10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_9_10_A>;
-impl<'a, REG, const O: u8> DMA_9_10_W<'a, REG, O>
+pub type DMA_9_10_W<'a, REG> = crate::BitWriter<'a, REG, DMA_9_10_A>;
+impl<'a, REG> DMA_9_10_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -516,8 +516,8 @@ impl DMA_11_R {
     }
 }
 #[doc = "Field `DMA_11` writer - DMA 11"]
-pub type DMA_11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_11_A>;
-impl<'a, REG, const O: u8> DMA_11_W<'a, REG, O>
+pub type DMA_11_W<'a, REG> = crate::BitWriter<'a, REG, DMA_11_A>;
+impl<'a, REG> DMA_11_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -569,8 +569,8 @@ impl DMA_12_R {
     }
 }
 #[doc = "Field `DMA_12` writer - DMA 12"]
-pub type DMA_12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_12_A>;
-impl<'a, REG, const O: u8> DMA_12_W<'a, REG, O>
+pub type DMA_12_W<'a, REG> = crate::BitWriter<'a, REG, DMA_12_A>;
+impl<'a, REG> DMA_12_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -622,8 +622,8 @@ impl DMA_13_R {
     }
 }
 #[doc = "Field `DMA_13` writer - DMA 13"]
-pub type DMA_13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_13_A>;
-impl<'a, REG, const O: u8> DMA_13_W<'a, REG, O>
+pub type DMA_13_W<'a, REG> = crate::BitWriter<'a, REG, DMA_13_A>;
+impl<'a, REG> DMA_13_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -675,8 +675,8 @@ impl DMA_14_R {
     }
 }
 #[doc = "Field `DMA_14` writer - DMA 14"]
-pub type DMA_14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_14_A>;
-impl<'a, REG, const O: u8> DMA_14_W<'a, REG, O>
+pub type DMA_14_W<'a, REG> = crate::BitWriter<'a, REG, DMA_14_A>;
+impl<'a, REG> DMA_14_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -728,8 +728,8 @@ impl AUX_R {
     }
 }
 #[doc = "Field `AUX` writer - OR of UART1, SPI1 and SPI2"]
-pub type AUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AUX_A>;
-impl<'a, REG, const O: u8> AUX_W<'a, REG, O>
+pub type AUX_W<'a, REG> = crate::BitWriter<'a, REG, AUX_A>;
+impl<'a, REG> AUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -781,8 +781,8 @@ impl ARM_R {
     }
 }
 #[doc = "Field `ARM` writer - ARM"]
-pub type ARM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ARM_A>;
-impl<'a, REG, const O: u8> ARM_W<'a, REG, O>
+pub type ARM_W<'a, REG> = crate::BitWriter<'a, REG, ARM_A>;
+impl<'a, REG> ARM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -834,8 +834,8 @@ impl DMA_15_R {
     }
 }
 #[doc = "Field `DMA_15` writer - DMA 15"]
-pub type DMA_15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMA_15_A>;
-impl<'a, REG, const O: u8> DMA_15_W<'a, REG, O>
+pub type DMA_15_W<'a, REG> = crate::BitWriter<'a, REG, DMA_15_A>;
+impl<'a, REG> DMA_15_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -956,105 +956,105 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ICFGR28_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - DMA 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ICFGR28_SPEC, 1> {
-        DMA_0_W::new(self)
+    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ICFGR28_SPEC> {
+        DMA_0_W::new(self, 1)
     }
     #[doc = "Bit 3 - DMA 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ICFGR28_SPEC, 3> {
-        DMA_1_W::new(self)
+    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ICFGR28_SPEC> {
+        DMA_1_W::new(self, 3)
     }
     #[doc = "Bit 5 - DMA 2"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ICFGR28_SPEC, 5> {
-        DMA_2_W::new(self)
+    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ICFGR28_SPEC> {
+        DMA_2_W::new(self, 5)
     }
     #[doc = "Bit 7 - DMA 3"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ICFGR28_SPEC, 7> {
-        DMA_3_W::new(self)
+    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ICFGR28_SPEC> {
+        DMA_3_W::new(self, 7)
     }
     #[doc = "Bit 9 - DMA 4"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_4(&mut self) -> DMA_4_W<GICD_ICFGR28_SPEC, 9> {
-        DMA_4_W::new(self)
+    pub fn dma_4(&mut self) -> DMA_4_W<GICD_ICFGR28_SPEC> {
+        DMA_4_W::new(self, 9)
     }
     #[doc = "Bit 11 - DMA 5"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_5(&mut self) -> DMA_5_W<GICD_ICFGR28_SPEC, 11> {
-        DMA_5_W::new(self)
+    pub fn dma_5(&mut self) -> DMA_5_W<GICD_ICFGR28_SPEC> {
+        DMA_5_W::new(self, 11)
     }
     #[doc = "Bit 13 - DMA 6"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_6(&mut self) -> DMA_6_W<GICD_ICFGR28_SPEC, 13> {
-        DMA_6_W::new(self)
+    pub fn dma_6(&mut self) -> DMA_6_W<GICD_ICFGR28_SPEC> {
+        DMA_6_W::new(self, 13)
     }
     #[doc = "Bit 15 - OR of DMA 7 and 8"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_7_8(&mut self) -> DMA_7_8_W<GICD_ICFGR28_SPEC, 15> {
-        DMA_7_8_W::new(self)
+    pub fn dma_7_8(&mut self) -> DMA_7_8_W<GICD_ICFGR28_SPEC> {
+        DMA_7_8_W::new(self, 15)
     }
     #[doc = "Bit 17 - OR of DMA 9 and 10"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_ICFGR28_SPEC, 17> {
-        DMA_9_10_W::new(self)
+    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_ICFGR28_SPEC> {
+        DMA_9_10_W::new(self, 17)
     }
     #[doc = "Bit 19 - DMA 11"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_11(&mut self) -> DMA_11_W<GICD_ICFGR28_SPEC, 19> {
-        DMA_11_W::new(self)
+    pub fn dma_11(&mut self) -> DMA_11_W<GICD_ICFGR28_SPEC> {
+        DMA_11_W::new(self, 19)
     }
     #[doc = "Bit 21 - DMA 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_12(&mut self) -> DMA_12_W<GICD_ICFGR28_SPEC, 21> {
-        DMA_12_W::new(self)
+    pub fn dma_12(&mut self) -> DMA_12_W<GICD_ICFGR28_SPEC> {
+        DMA_12_W::new(self, 21)
     }
     #[doc = "Bit 23 - DMA 13"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_13(&mut self) -> DMA_13_W<GICD_ICFGR28_SPEC, 23> {
-        DMA_13_W::new(self)
+    pub fn dma_13(&mut self) -> DMA_13_W<GICD_ICFGR28_SPEC> {
+        DMA_13_W::new(self, 23)
     }
     #[doc = "Bit 25 - DMA 14"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_14(&mut self) -> DMA_14_W<GICD_ICFGR28_SPEC, 25> {
-        DMA_14_W::new(self)
+    pub fn dma_14(&mut self) -> DMA_14_W<GICD_ICFGR28_SPEC> {
+        DMA_14_W::new(self, 25)
     }
     #[doc = "Bit 27 - OR of UART1, SPI1 and SPI2"]
     #[inline(always)]
     #[must_use]
-    pub fn aux(&mut self) -> AUX_W<GICD_ICFGR28_SPEC, 27> {
-        AUX_W::new(self)
+    pub fn aux(&mut self) -> AUX_W<GICD_ICFGR28_SPEC> {
+        AUX_W::new(self, 27)
     }
     #[doc = "Bit 29 - ARM"]
     #[inline(always)]
     #[must_use]
-    pub fn arm(&mut self) -> ARM_W<GICD_ICFGR28_SPEC, 29> {
-        ARM_W::new(self)
+    pub fn arm(&mut self) -> ARM_W<GICD_ICFGR28_SPEC> {
+        ARM_W::new(self, 29)
     }
     #[doc = "Bit 31 - DMA 15"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_15(&mut self) -> DMA_15_W<GICD_ICFGR28_SPEC, 31> {
-        DMA_15_W::new(self)
+    pub fn dma_15(&mut self) -> DMA_15_W<GICD_ICFGR28_SPEC> {
+        DMA_15_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

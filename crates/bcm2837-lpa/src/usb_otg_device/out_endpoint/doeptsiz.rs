@@ -5,15 +5,15 @@ pub type W = crate::W<DOEPTSIZ_SPEC>;
 #[doc = "Field `XFRSIZ` reader - Transfer size"]
 pub type XFRSIZ_R = crate::FieldReader;
 #[doc = "Field `XFRSIZ` writer - Transfer size"]
-pub type XFRSIZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type XFRSIZ_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PKTCNT` reader - Packet count"]
 pub type PKTCNT_R = crate::BitReader;
 #[doc = "Field `PKTCNT` writer - Packet count"]
-pub type PKTCNT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PKTCNT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STUPCNT` reader - SETUP packet count"]
 pub type STUPCNT_R = crate::FieldReader;
 #[doc = "Field `STUPCNT` writer - SETUP packet count"]
-pub type STUPCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type STUPCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:6 - Transfer size"]
     #[inline(always)]
@@ -42,27 +42,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - Transfer size"]
     #[inline(always)]
     #[must_use]
-    pub fn xfrsiz(&mut self) -> XFRSIZ_W<DOEPTSIZ_SPEC, 0> {
-        XFRSIZ_W::new(self)
+    pub fn xfrsiz(&mut self) -> XFRSIZ_W<DOEPTSIZ_SPEC> {
+        XFRSIZ_W::new(self, 0)
     }
     #[doc = "Bit 19 - Packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn pktcnt(&mut self) -> PKTCNT_W<DOEPTSIZ_SPEC, 19> {
-        PKTCNT_W::new(self)
+    pub fn pktcnt(&mut self) -> PKTCNT_W<DOEPTSIZ_SPEC> {
+        PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30 - SETUP packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn stupcnt(&mut self) -> STUPCNT_W<DOEPTSIZ_SPEC, 29> {
-        STUPCNT_W::new(self)
+    pub fn stupcnt(&mut self) -> STUPCNT_W<DOEPTSIZ_SPEC> {
+        STUPCNT_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

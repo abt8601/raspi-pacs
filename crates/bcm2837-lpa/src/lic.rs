@@ -3,26 +3,68 @@
 #[derive(Debug)]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x0200],
+    basic_pending: BASIC_PENDING,
+    pending_1: PENDING_1,
+    pending_2: PENDING_2,
+    fiq_control: FIQ_CONTROL,
+    enable_1: ENABLE_1,
+    enable_2: ENABLE_2,
+    enable_basic: ENABLE_BASIC,
+    disable_1: DISABLE_1,
+    disable_2: DISABLE_2,
+    disable_basic: DISABLE_BASIC,
+}
+impl RegisterBlock {
     #[doc = "0x200 - Basic pending info"]
-    pub basic_pending: BASIC_PENDING,
+    #[inline(always)]
+    pub const fn basic_pending(&self) -> &BASIC_PENDING {
+        &self.basic_pending
+    }
     #[doc = "0x204 - Pending state for interrupts 1 - 31"]
-    pub pending_1: PENDING_1,
+    #[inline(always)]
+    pub const fn pending_1(&self) -> &PENDING_1 {
+        &self.pending_1
+    }
     #[doc = "0x208 - Pending state for interrupts 32 - 63"]
-    pub pending_2: PENDING_2,
+    #[inline(always)]
+    pub const fn pending_2(&self) -> &PENDING_2 {
+        &self.pending_2
+    }
     #[doc = "0x20c - FIQ control"]
-    pub fiq_control: FIQ_CONTROL,
+    #[inline(always)]
+    pub const fn fiq_control(&self) -> &FIQ_CONTROL {
+        &self.fiq_control
+    }
     #[doc = "0x210 - Enable interrupts 1 - 31"]
-    pub enable_1: ENABLE_1,
+    #[inline(always)]
+    pub const fn enable_1(&self) -> &ENABLE_1 {
+        &self.enable_1
+    }
     #[doc = "0x214 - Enable interrupts 32 - 63"]
-    pub enable_2: ENABLE_2,
+    #[inline(always)]
+    pub const fn enable_2(&self) -> &ENABLE_2 {
+        &self.enable_2
+    }
     #[doc = "0x218 - Enable basic interrupts"]
-    pub enable_basic: ENABLE_BASIC,
+    #[inline(always)]
+    pub const fn enable_basic(&self) -> &ENABLE_BASIC {
+        &self.enable_basic
+    }
     #[doc = "0x21c - Disable interrupts 1 - 31"]
-    pub disable_1: DISABLE_1,
+    #[inline(always)]
+    pub const fn disable_1(&self) -> &DISABLE_1 {
+        &self.disable_1
+    }
     #[doc = "0x220 - Disable interrupts 32 - 63"]
-    pub disable_2: DISABLE_2,
+    #[inline(always)]
+    pub const fn disable_2(&self) -> &DISABLE_2 {
+        &self.disable_2
+    }
     #[doc = "0x224 - Disable basic interrupts"]
-    pub disable_basic: DISABLE_BASIC,
+    #[inline(always)]
+    pub const fn disable_basic(&self) -> &DISABLE_BASIC {
+        &self.disable_basic
+    }
 }
 #[doc = "BASIC_PENDING (r) register accessor: Basic pending info\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`basic_pending::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@basic_pending`]
 module"]

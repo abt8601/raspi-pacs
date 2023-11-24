@@ -2,20 +2,50 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct GICD_ISPENDR {
+    gicd_ispendr0: GICD_ISPENDR0,
+    gicd_ispendr1: GICD_ISPENDR1,
+    gicd_ispendr2: GICD_ISPENDR2,
+    gicd_ispendr3: GICD_ISPENDR3,
+    gicd_ispendr4: GICD_ISPENDR4,
+    gicd_ispendr5: GICD_ISPENDR5,
+    gicd_ispendr6: GICD_ISPENDR6,
+}
+impl GICD_ISPENDR {
     #[doc = "0x00 - Interrupt Set-Pending"]
-    pub gicd_ispendr0: GICD_ISPENDR0,
+    #[inline(always)]
+    pub const fn gicd_ispendr0(&self) -> &GICD_ISPENDR0 {
+        &self.gicd_ispendr0
+    }
     #[doc = "0x04 - Interrupt Set-Pending"]
-    pub gicd_ispendr1: GICD_ISPENDR1,
+    #[inline(always)]
+    pub const fn gicd_ispendr1(&self) -> &GICD_ISPENDR1 {
+        &self.gicd_ispendr1
+    }
     #[doc = "0x08 - Interrupt Set-Pending"]
-    pub gicd_ispendr2: GICD_ISPENDR2,
+    #[inline(always)]
+    pub const fn gicd_ispendr2(&self) -> &GICD_ISPENDR2 {
+        &self.gicd_ispendr2
+    }
     #[doc = "0x0c - Interrupt Set-Pending"]
-    pub gicd_ispendr3: GICD_ISPENDR3,
+    #[inline(always)]
+    pub const fn gicd_ispendr3(&self) -> &GICD_ISPENDR3 {
+        &self.gicd_ispendr3
+    }
     #[doc = "0x10 - Interrupt Set-Pending"]
-    pub gicd_ispendr4: GICD_ISPENDR4,
+    #[inline(always)]
+    pub const fn gicd_ispendr4(&self) -> &GICD_ISPENDR4 {
+        &self.gicd_ispendr4
+    }
     #[doc = "0x14 - Interrupt Set-Pending"]
-    pub gicd_ispendr5: GICD_ISPENDR5,
+    #[inline(always)]
+    pub const fn gicd_ispendr5(&self) -> &GICD_ISPENDR5 {
+        &self.gicd_ispendr5
+    }
     #[doc = "0x18 - Interrupt Set-Pending"]
-    pub gicd_ispendr6: GICD_ISPENDR6,
+    #[inline(always)]
+    pub const fn gicd_ispendr6(&self) -> &GICD_ISPENDR6 {
+        &self.gicd_ispendr6
+    }
 }
 #[doc = "GICD_ISPENDR0 (rw) register accessor: Interrupt Set-Pending\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_ispendr0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_ispendr0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_ispendr0`]
 module"]

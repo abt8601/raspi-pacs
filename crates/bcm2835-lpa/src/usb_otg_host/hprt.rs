@@ -7,43 +7,43 @@ pub type PCSTS_R = crate::BitReader;
 #[doc = "Field `PCDET` reader - Port connect detected"]
 pub type PCDET_R = crate::BitReader;
 #[doc = "Field `PCDET` writer - Port connect detected"]
-pub type PCDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PENA` reader - Port enable"]
 pub type PENA_R = crate::BitReader;
 #[doc = "Field `PENA` writer - Port enable"]
-pub type PENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PENCHNG` reader - Port enable/disable change"]
 pub type PENCHNG_R = crate::BitReader;
 #[doc = "Field `PENCHNG` writer - Port enable/disable change"]
-pub type PENCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PENCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POCA` reader - Port overcurrent active"]
 pub type POCA_R = crate::BitReader;
 #[doc = "Field `POCCHNG` reader - Port overcurrent change"]
 pub type POCCHNG_R = crate::BitReader;
 #[doc = "Field `POCCHNG` writer - Port overcurrent change"]
-pub type POCCHNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POCCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRES` reader - Port resume"]
 pub type PRES_R = crate::BitReader;
 #[doc = "Field `PRES` writer - Port resume"]
-pub type PRES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PSUSP` reader - Port suspend"]
 pub type PSUSP_R = crate::BitReader;
 #[doc = "Field `PSUSP` writer - Port suspend"]
-pub type PSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PRST` reader - Port reset"]
 pub type PRST_R = crate::BitReader;
 #[doc = "Field `PRST` writer - Port reset"]
-pub type PRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLSTS` reader - Port line status"]
 pub type PLSTS_R = crate::FieldReader;
 #[doc = "Field `PPWR` reader - Port power"]
 pub type PPWR_R = crate::BitReader;
 #[doc = "Field `PPWR` writer - Port power"]
-pub type PPWR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PPWR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTCTL` reader - Port test control"]
 pub type PTCTL_R = crate::FieldReader;
 #[doc = "Field `PTCTL` writer - Port test control"]
-pub type PTCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PTCTL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PSPD` reader - Port speed"]
 pub type PSPD_R = crate::FieldReader;
 impl R {
@@ -134,63 +134,63 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HPRT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Port connect detected"]
     #[inline(always)]
     #[must_use]
-    pub fn pcdet(&mut self) -> PCDET_W<HPRT_SPEC, 1> {
-        PCDET_W::new(self)
+    pub fn pcdet(&mut self) -> PCDET_W<HPRT_SPEC> {
+        PCDET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pena(&mut self) -> PENA_W<HPRT_SPEC, 2> {
-        PENA_W::new(self)
+    pub fn pena(&mut self) -> PENA_W<HPRT_SPEC> {
+        PENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port enable/disable change"]
     #[inline(always)]
     #[must_use]
-    pub fn penchng(&mut self) -> PENCHNG_W<HPRT_SPEC, 3> {
-        PENCHNG_W::new(self)
+    pub fn penchng(&mut self) -> PENCHNG_W<HPRT_SPEC> {
+        PENCHNG_W::new(self, 3)
     }
     #[doc = "Bit 5 - Port overcurrent change"]
     #[inline(always)]
     #[must_use]
-    pub fn pocchng(&mut self) -> POCCHNG_W<HPRT_SPEC, 5> {
-        POCCHNG_W::new(self)
+    pub fn pocchng(&mut self) -> POCCHNG_W<HPRT_SPEC> {
+        POCCHNG_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port resume"]
     #[inline(always)]
     #[must_use]
-    pub fn pres(&mut self) -> PRES_W<HPRT_SPEC, 6> {
-        PRES_W::new(self)
+    pub fn pres(&mut self) -> PRES_W<HPRT_SPEC> {
+        PRES_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port suspend"]
     #[inline(always)]
     #[must_use]
-    pub fn psusp(&mut self) -> PSUSP_W<HPRT_SPEC, 7> {
-        PSUSP_W::new(self)
+    pub fn psusp(&mut self) -> PSUSP_W<HPRT_SPEC> {
+        PSUSP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port reset"]
     #[inline(always)]
     #[must_use]
-    pub fn prst(&mut self) -> PRST_W<HPRT_SPEC, 8> {
-        PRST_W::new(self)
+    pub fn prst(&mut self) -> PRST_W<HPRT_SPEC> {
+        PRST_W::new(self, 8)
     }
     #[doc = "Bit 12 - Port power"]
     #[inline(always)]
     #[must_use]
-    pub fn ppwr(&mut self) -> PPWR_W<HPRT_SPEC, 12> {
-        PPWR_W::new(self)
+    pub fn ppwr(&mut self) -> PPWR_W<HPRT_SPEC> {
+        PPWR_W::new(self, 12)
     }
     #[doc = "Bits 13:16 - Port test control"]
     #[inline(always)]
     #[must_use]
-    pub fn ptctl(&mut self) -> PTCTL_W<HPRT_SPEC, 13> {
-        PTCTL_W::new(self)
+    pub fn ptctl(&mut self) -> PTCTL_W<HPRT_SPEC> {
+        PTCTL_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

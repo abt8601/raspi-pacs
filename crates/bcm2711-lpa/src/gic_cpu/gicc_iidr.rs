@@ -10,6 +10,8 @@ pub type ID_R = crate::FieldReader<ID_A>;
 pub enum ID_A {
     #[doc = "33690683: ID is valid"]
     VALID = 33690683,
+    #[doc = "0: ID is *NOT* valid"]
+    INVALID = 0,
 }
 impl From<ID_A> for u32 {
     #[inline(always)]
@@ -23,10 +25,10 @@ impl crate::FieldSpec for ID_A {
 impl ID_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<ID_A> {
+    pub const fn variant(&self) -> ID_A {
         match self.bits {
-            33690683 => Some(ID_A::VALID),
-            _ => None,
+            33690683 => ID_A::VALID,
+            _ => ID_A::INVALID,
         }
     }
     #[doc = "ID is valid"]
@@ -34,10 +36,15 @@ impl ID_R {
     pub fn is_valid(&self) -> bool {
         *self == ID_A::VALID
     }
+    #[doc = "ID is *NOT* valid"]
+    #[inline(always)]
+    pub fn is_invalid(&self) -> bool {
+        matches!(self.variant(), ID_A::INVALID)
+    }
 }
 #[doc = "Field `ID` writer - ID"]
-pub type ID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, ID_A>;
-impl<'a, REG, const O: u8> ID_W<'a, REG, O>
+pub type ID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 32, ID_A>;
+impl<'a, REG> ID_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u32>,
@@ -46,6 +53,11 @@ where
     #[inline(always)]
     pub fn valid(self) -> &'a mut crate::W<REG> {
         self.variant(ID_A::VALID)
+    }
+    #[doc = "ID is *NOT* valid"]
+    #[inline(always)]
+    pub fn invalid(self) -> &'a mut crate::W<REG> {
+        self.variant(ID_A::INVALID)
     }
 }
 impl R {
@@ -64,15 +76,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICC_IIDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - ID"]
     #[inline(always)]
     #[must_use]
-    pub fn id(&mut self) -> ID_W<GICC_IIDR_SPEC, 0> {
-        ID_W::new(self)
+    pub fn id(&mut self) -> ID_W<GICC_IIDR_SPEC> {
+        ID_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

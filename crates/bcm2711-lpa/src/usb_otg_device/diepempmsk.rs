@@ -5,7 +5,7 @@ pub type W = crate::W<DIEPEMPMSK_SPEC>;
 #[doc = "Field `INEPTXFEM` reader - IN EP Tx FIFO empty interrupt mask bits"]
 pub type INEPTXFEM_R = crate::FieldReader<u16>;
 #[doc = "Field `INEPTXFEM` writer - IN EP Tx FIFO empty interrupt mask bits"]
-pub type INEPTXFEM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type INEPTXFEM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - IN EP Tx FIFO empty interrupt mask bits"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DIEPEMPMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - IN EP Tx FIFO empty interrupt mask bits"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptxfem(&mut self) -> INEPTXFEM_W<DIEPEMPMSK_SPEC, 0> {
-        INEPTXFEM_W::new(self)
+    pub fn ineptxfem(&mut self) -> INEPTXFEM_W<DIEPEMPMSK_SPEC> {
+        INEPTXFEM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

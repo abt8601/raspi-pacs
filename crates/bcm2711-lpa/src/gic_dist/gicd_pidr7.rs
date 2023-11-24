@@ -8,6 +8,8 @@ pub type GICD_PIDR7_R = crate::FieldReader<GICD_PIDR7_A>;
 pub enum GICD_PIDR7_A {
     #[doc = "0: Valid"]
     VALID = 0,
+    #[doc = "1: Invalid"]
+    INVALID = 1,
 }
 impl From<GICD_PIDR7_A> for u32 {
     #[inline(always)]
@@ -21,16 +23,21 @@ impl crate::FieldSpec for GICD_PIDR7_A {
 impl GICD_PIDR7_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<GICD_PIDR7_A> {
+    pub const fn variant(&self) -> GICD_PIDR7_A {
         match self.bits {
-            0 => Some(GICD_PIDR7_A::VALID),
-            _ => None,
+            0 => GICD_PIDR7_A::VALID,
+            _ => GICD_PIDR7_A::INVALID,
         }
     }
     #[doc = "Valid"]
     #[inline(always)]
     pub fn is_valid(&self) -> bool {
         *self == GICD_PIDR7_A::VALID
+    }
+    #[doc = "Invalid"]
+    #[inline(always)]
+    pub fn is_invalid(&self) -> bool {
+        matches!(self.variant(), GICD_PIDR7_A::INVALID)
     }
 }
 impl R {
@@ -49,7 +56,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_PIDR7_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Peripheral ID 7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_pidr7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

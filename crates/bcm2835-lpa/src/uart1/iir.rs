@@ -5,15 +5,15 @@ pub type W = crate::W<IIR_SPEC>;
 #[doc = "Field `nPENDING` reader - No pending interrupt"]
 pub type N_PENDING_R = crate::BitReader;
 #[doc = "Field `nPENDING` writer - No pending interrupt"]
-pub type N_PENDING_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type N_PENDING_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_READY` reader - Receive FIFO has at least 1 byte"]
 pub type DATA_READY_R = crate::BitReader;
 #[doc = "Field `DATA_READY` writer - Receive FIFO has at least 1 byte"]
-pub type DATA_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_READY` reader - Transmit FIFO is empty"]
 pub type TX_READY_R = crate::BitReader;
 #[doc = "Field `TX_READY` writer - Transmit FIFO is empty"]
-pub type TX_READY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TX_READY_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - No pending interrupt"]
     #[inline(always)]
@@ -42,27 +42,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IIR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - No pending interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn n_pending(&mut self) -> N_PENDING_W<IIR_SPEC, 0> {
-        N_PENDING_W::new(self)
+    pub fn n_pending(&mut self) -> N_PENDING_W<IIR_SPEC> {
+        N_PENDING_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receive FIFO has at least 1 byte"]
     #[inline(always)]
     #[must_use]
-    pub fn data_ready(&mut self) -> DATA_READY_W<IIR_SPEC, 1> {
-        DATA_READY_W::new(self)
+    pub fn data_ready(&mut self) -> DATA_READY_W<IIR_SPEC> {
+        DATA_READY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit FIFO is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_ready(&mut self) -> TX_READY_W<IIR_SPEC, 2> {
-        TX_READY_W::new(self)
+    pub fn tx_ready(&mut self) -> TX_READY_W<IIR_SPEC> {
+        TX_READY_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

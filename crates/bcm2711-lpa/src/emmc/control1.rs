@@ -5,13 +5,13 @@ pub type W = crate::W<CONTROL1_SPEC>;
 #[doc = "Field `CLK_INTLEN` reader - Enable internal clock"]
 pub type CLK_INTLEN_R = crate::BitReader;
 #[doc = "Field `CLK_INTLEN` writer - Enable internal clock"]
-pub type CLK_INTLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_INTLEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_STABLE` reader - SD Clock stable"]
 pub type CLK_STABLE_R = crate::BitReader;
 #[doc = "Field `CLK_EN` reader - SD Clock enable"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - SD Clock enable"]
-pub type CLK_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLK_GENSEL` reader - Mode of clock generation"]
 pub type CLK_GENSEL_R = crate::BitReader<CLK_GENSEL_A>;
 #[doc = "Mode of clock generation\n\nValue on reset: 0"]
@@ -49,8 +49,8 @@ impl CLK_GENSEL_R {
     }
 }
 #[doc = "Field `CLK_GENSEL` writer - Mode of clock generation"]
-pub type CLK_GENSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CLK_GENSEL_A>;
-impl<'a, REG, const O: u8> CLK_GENSEL_W<'a, REG, O>
+pub type CLK_GENSEL_W<'a, REG> = crate::BitWriter<'a, REG, CLK_GENSEL_A>;
+impl<'a, REG> CLK_GENSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -68,27 +68,27 @@ where
 #[doc = "Field `CLK_FREQ_MS2` reader - Clock base divider MSBs"]
 pub type CLK_FREQ_MS2_R = crate::FieldReader;
 #[doc = "Field `CLK_FREQ_MS2` writer - Clock base divider MSBs"]
-pub type CLK_FREQ_MS2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLK_FREQ_MS2_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLK_FREQ8` reader - Clock base divider LSB"]
 pub type CLK_FREQ8_R = crate::FieldReader;
 #[doc = "Field `CLK_FREQ8` writer - Clock base divider LSB"]
-pub type CLK_FREQ8_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLK_FREQ8_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DATA_TOUNIT` reader - Data timeout exponent (TMCLK * 2 ** (x + 13)) 1111 disabled"]
 pub type DATA_TOUNIT_R = crate::FieldReader;
 #[doc = "Field `DATA_TOUNIT` writer - Data timeout exponent (TMCLK * 2 ** (x + 13)) 1111 disabled"]
-pub type DATA_TOUNIT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DATA_TOUNIT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SRST_HC` reader - Reset the complete host circuit"]
 pub type SRST_HC_R = crate::BitReader;
 #[doc = "Field `SRST_HC` writer - Reset the complete host circuit"]
-pub type SRST_HC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRST_HC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRST_CMD` reader - Reset the command handling circuit"]
 pub type SRST_CMD_R = crate::BitReader;
 #[doc = "Field `SRST_CMD` writer - Reset the command handling circuit"]
-pub type SRST_CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRST_CMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRST_DATA` reader - Reset the data handling circuit"]
 pub type SRST_DATA_R = crate::BitReader;
 #[doc = "Field `SRST_DATA` writer - Reset the data handling circuit"]
-pub type SRST_DATA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRST_DATA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable internal clock"]
     #[inline(always)]
@@ -165,63 +165,63 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CONTROL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable internal clock"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_intlen(&mut self) -> CLK_INTLEN_W<CONTROL1_SPEC, 0> {
-        CLK_INTLEN_W::new(self)
+    pub fn clk_intlen(&mut self) -> CLK_INTLEN_W<CONTROL1_SPEC> {
+        CLK_INTLEN_W::new(self, 0)
     }
     #[doc = "Bit 2 - SD Clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONTROL1_SPEC, 2> {
-        CLK_EN_W::new(self)
+    pub fn clk_en(&mut self) -> CLK_EN_W<CONTROL1_SPEC> {
+        CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Mode of clock generation"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_gensel(&mut self) -> CLK_GENSEL_W<CONTROL1_SPEC, 5> {
-        CLK_GENSEL_W::new(self)
+    pub fn clk_gensel(&mut self) -> CLK_GENSEL_W<CONTROL1_SPEC> {
+        CLK_GENSEL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Clock base divider MSBs"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_freq_ms2(&mut self) -> CLK_FREQ_MS2_W<CONTROL1_SPEC, 6> {
-        CLK_FREQ_MS2_W::new(self)
+    pub fn clk_freq_ms2(&mut self) -> CLK_FREQ_MS2_W<CONTROL1_SPEC> {
+        CLK_FREQ_MS2_W::new(self, 6)
     }
     #[doc = "Bits 8:15 - Clock base divider LSB"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_freq8(&mut self) -> CLK_FREQ8_W<CONTROL1_SPEC, 8> {
-        CLK_FREQ8_W::new(self)
+    pub fn clk_freq8(&mut self) -> CLK_FREQ8_W<CONTROL1_SPEC> {
+        CLK_FREQ8_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - Data timeout exponent (TMCLK * 2 ** (x + 13)) 1111 disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn data_tounit(&mut self) -> DATA_TOUNIT_W<CONTROL1_SPEC, 16> {
-        DATA_TOUNIT_W::new(self)
+    pub fn data_tounit(&mut self) -> DATA_TOUNIT_W<CONTROL1_SPEC> {
+        DATA_TOUNIT_W::new(self, 16)
     }
     #[doc = "Bit 24 - Reset the complete host circuit"]
     #[inline(always)]
     #[must_use]
-    pub fn srst_hc(&mut self) -> SRST_HC_W<CONTROL1_SPEC, 24> {
-        SRST_HC_W::new(self)
+    pub fn srst_hc(&mut self) -> SRST_HC_W<CONTROL1_SPEC> {
+        SRST_HC_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reset the command handling circuit"]
     #[inline(always)]
     #[must_use]
-    pub fn srst_cmd(&mut self) -> SRST_CMD_W<CONTROL1_SPEC, 25> {
-        SRST_CMD_W::new(self)
+    pub fn srst_cmd(&mut self) -> SRST_CMD_W<CONTROL1_SPEC> {
+        SRST_CMD_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reset the data handling circuit"]
     #[inline(always)]
     #[must_use]
-    pub fn srst_data(&mut self) -> SRST_DATA_W<CONTROL1_SPEC, 26> {
-        SRST_DATA_W::new(self)
+    pub fn srst_data(&mut self) -> SRST_DATA_W<CONTROL1_SPEC> {
+        SRST_DATA_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

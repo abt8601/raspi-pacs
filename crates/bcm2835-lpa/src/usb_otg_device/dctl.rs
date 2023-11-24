@@ -5,11 +5,11 @@ pub type W = crate::W<DCTL_SPEC>;
 #[doc = "Field `RWUSIG` reader - Remote wakeup signaling"]
 pub type RWUSIG_R = crate::BitReader;
 #[doc = "Field `RWUSIG` writer - Remote wakeup signaling"]
-pub type RWUSIG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWUSIG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIS` reader - Soft disconnect"]
 pub type SDIS_R = crate::BitReader;
 #[doc = "Field `SDIS` writer - Soft disconnect"]
-pub type SDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GINSTS` reader - Global IN NAK status"]
 pub type GINSTS_R = crate::BitReader;
 #[doc = "Field `GONSTS` reader - Global OUT NAK status"]
@@ -17,19 +17,19 @@ pub type GONSTS_R = crate::BitReader;
 #[doc = "Field `TCTL` reader - Test control"]
 pub type TCTL_R = crate::FieldReader;
 #[doc = "Field `TCTL` writer - Test control"]
-pub type TCTL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TCTL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SGINAK` writer - Set global IN NAK"]
-pub type SGINAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SGINAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CGINAK` writer - Clear global IN NAK"]
-pub type CGINAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CGINAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SGONAK` writer - Set global OUT NAK"]
-pub type SGONAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SGONAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CGONAK` writer - Clear global OUT NAK"]
-pub type CGONAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CGONAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POPRGDNE` reader - Power-on programming done"]
 pub type POPRGDNE_R = crate::BitReader;
 #[doc = "Field `POPRGDNE` writer - Power-on programming done"]
-pub type POPRGDNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type POPRGDNE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Remote wakeup signaling"]
     #[inline(always)]
@@ -76,57 +76,57 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DCTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Remote wakeup signaling"]
     #[inline(always)]
     #[must_use]
-    pub fn rwusig(&mut self) -> RWUSIG_W<DCTL_SPEC, 0> {
-        RWUSIG_W::new(self)
+    pub fn rwusig(&mut self) -> RWUSIG_W<DCTL_SPEC> {
+        RWUSIG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Soft disconnect"]
     #[inline(always)]
     #[must_use]
-    pub fn sdis(&mut self) -> SDIS_W<DCTL_SPEC, 1> {
-        SDIS_W::new(self)
+    pub fn sdis(&mut self) -> SDIS_W<DCTL_SPEC> {
+        SDIS_W::new(self, 1)
     }
     #[doc = "Bits 4:6 - Test control"]
     #[inline(always)]
     #[must_use]
-    pub fn tctl(&mut self) -> TCTL_W<DCTL_SPEC, 4> {
-        TCTL_W::new(self)
+    pub fn tctl(&mut self) -> TCTL_W<DCTL_SPEC> {
+        TCTL_W::new(self, 4)
     }
     #[doc = "Bit 7 - Set global IN NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn sginak(&mut self) -> SGINAK_W<DCTL_SPEC, 7> {
-        SGINAK_W::new(self)
+    pub fn sginak(&mut self) -> SGINAK_W<DCTL_SPEC> {
+        SGINAK_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear global IN NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cginak(&mut self) -> CGINAK_W<DCTL_SPEC, 8> {
-        CGINAK_W::new(self)
+    pub fn cginak(&mut self) -> CGINAK_W<DCTL_SPEC> {
+        CGINAK_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set global OUT NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn sgonak(&mut self) -> SGONAK_W<DCTL_SPEC, 9> {
-        SGONAK_W::new(self)
+    pub fn sgonak(&mut self) -> SGONAK_W<DCTL_SPEC> {
+        SGONAK_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear global OUT NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cgonak(&mut self) -> CGONAK_W<DCTL_SPEC, 10> {
-        CGONAK_W::new(self)
+    pub fn cgonak(&mut self) -> CGONAK_W<DCTL_SPEC> {
+        CGONAK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Power-on programming done"]
     #[inline(always)]
     #[must_use]
-    pub fn poprgdne(&mut self) -> POPRGDNE_W<DCTL_SPEC, 11> {
-        POPRGDNE_W::new(self)
+    pub fn poprgdne(&mut self) -> POPRGDNE_W<DCTL_SPEC> {
+        POPRGDNE_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

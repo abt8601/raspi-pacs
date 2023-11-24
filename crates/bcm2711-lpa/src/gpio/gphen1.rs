@@ -5,107 +5,107 @@ pub type W = crate::W<GPHEN1_SPEC>;
 #[doc = "Field `HEN32` reader - High detect enabled 32"]
 pub type HEN32_R = crate::BitReader;
 #[doc = "Field `HEN32` writer - High detect enabled 32"]
-pub type HEN32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN33` reader - High detect enabled 33"]
 pub type HEN33_R = crate::BitReader;
 #[doc = "Field `HEN33` writer - High detect enabled 33"]
-pub type HEN33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN34` reader - High detect enabled 34"]
 pub type HEN34_R = crate::BitReader;
 #[doc = "Field `HEN34` writer - High detect enabled 34"]
-pub type HEN34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN35` reader - High detect enabled 35"]
 pub type HEN35_R = crate::BitReader;
 #[doc = "Field `HEN35` writer - High detect enabled 35"]
-pub type HEN35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN36` reader - High detect enabled 36"]
 pub type HEN36_R = crate::BitReader;
 #[doc = "Field `HEN36` writer - High detect enabled 36"]
-pub type HEN36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN37` reader - High detect enabled 37"]
 pub type HEN37_R = crate::BitReader;
 #[doc = "Field `HEN37` writer - High detect enabled 37"]
-pub type HEN37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN38` reader - High detect enabled 38"]
 pub type HEN38_R = crate::BitReader;
 #[doc = "Field `HEN38` writer - High detect enabled 38"]
-pub type HEN38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN39` reader - High detect enabled 39"]
 pub type HEN39_R = crate::BitReader;
 #[doc = "Field `HEN39` writer - High detect enabled 39"]
-pub type HEN39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN40` reader - High detect enabled 40"]
 pub type HEN40_R = crate::BitReader;
 #[doc = "Field `HEN40` writer - High detect enabled 40"]
-pub type HEN40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN41` reader - High detect enabled 41"]
 pub type HEN41_R = crate::BitReader;
 #[doc = "Field `HEN41` writer - High detect enabled 41"]
-pub type HEN41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN42` reader - High detect enabled 42"]
 pub type HEN42_R = crate::BitReader;
 #[doc = "Field `HEN42` writer - High detect enabled 42"]
-pub type HEN42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN43` reader - High detect enabled 43"]
 pub type HEN43_R = crate::BitReader;
 #[doc = "Field `HEN43` writer - High detect enabled 43"]
-pub type HEN43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN44` reader - High detect enabled 44"]
 pub type HEN44_R = crate::BitReader;
 #[doc = "Field `HEN44` writer - High detect enabled 44"]
-pub type HEN44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN45` reader - High detect enabled 45"]
 pub type HEN45_R = crate::BitReader;
 #[doc = "Field `HEN45` writer - High detect enabled 45"]
-pub type HEN45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN46` reader - High detect enabled 46"]
 pub type HEN46_R = crate::BitReader;
 #[doc = "Field `HEN46` writer - High detect enabled 46"]
-pub type HEN46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN47` reader - High detect enabled 47"]
 pub type HEN47_R = crate::BitReader;
 #[doc = "Field `HEN47` writer - High detect enabled 47"]
-pub type HEN47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN48` reader - High detect enabled 48"]
 pub type HEN48_R = crate::BitReader;
 #[doc = "Field `HEN48` writer - High detect enabled 48"]
-pub type HEN48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN49` reader - High detect enabled 49"]
 pub type HEN49_R = crate::BitReader;
 #[doc = "Field `HEN49` writer - High detect enabled 49"]
-pub type HEN49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN49_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN50` reader - High detect enabled 50"]
 pub type HEN50_R = crate::BitReader;
 #[doc = "Field `HEN50` writer - High detect enabled 50"]
-pub type HEN50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN51` reader - High detect enabled 51"]
 pub type HEN51_R = crate::BitReader;
 #[doc = "Field `HEN51` writer - High detect enabled 51"]
-pub type HEN51_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN51_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN52` reader - High detect enabled 52"]
 pub type HEN52_R = crate::BitReader;
 #[doc = "Field `HEN52` writer - High detect enabled 52"]
-pub type HEN52_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN52_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN53` reader - High detect enabled 53"]
 pub type HEN53_R = crate::BitReader;
 #[doc = "Field `HEN53` writer - High detect enabled 53"]
-pub type HEN53_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN53_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN54` reader - High detect enabled 54"]
 pub type HEN54_R = crate::BitReader;
 #[doc = "Field `HEN54` writer - High detect enabled 54"]
-pub type HEN54_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN54_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN55` reader - High detect enabled 55"]
 pub type HEN55_R = crate::BitReader;
 #[doc = "Field `HEN55` writer - High detect enabled 55"]
-pub type HEN55_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN55_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN56` reader - High detect enabled 56"]
 pub type HEN56_R = crate::BitReader;
 #[doc = "Field `HEN56` writer - High detect enabled 56"]
-pub type HEN56_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN56_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEN57` reader - High detect enabled 57"]
 pub type HEN57_R = crate::BitReader;
 #[doc = "Field `HEN57` writer - High detect enabled 57"]
-pub type HEN57_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEN57_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - High detect enabled 32"]
     #[inline(always)]
@@ -272,165 +272,165 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPHEN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - High detect enabled 32"]
     #[inline(always)]
     #[must_use]
-    pub fn hen32(&mut self) -> HEN32_W<GPHEN1_SPEC, 0> {
-        HEN32_W::new(self)
+    pub fn hen32(&mut self) -> HEN32_W<GPHEN1_SPEC> {
+        HEN32_W::new(self, 0)
     }
     #[doc = "Bit 1 - High detect enabled 33"]
     #[inline(always)]
     #[must_use]
-    pub fn hen33(&mut self) -> HEN33_W<GPHEN1_SPEC, 1> {
-        HEN33_W::new(self)
+    pub fn hen33(&mut self) -> HEN33_W<GPHEN1_SPEC> {
+        HEN33_W::new(self, 1)
     }
     #[doc = "Bit 2 - High detect enabled 34"]
     #[inline(always)]
     #[must_use]
-    pub fn hen34(&mut self) -> HEN34_W<GPHEN1_SPEC, 2> {
-        HEN34_W::new(self)
+    pub fn hen34(&mut self) -> HEN34_W<GPHEN1_SPEC> {
+        HEN34_W::new(self, 2)
     }
     #[doc = "Bit 3 - High detect enabled 35"]
     #[inline(always)]
     #[must_use]
-    pub fn hen35(&mut self) -> HEN35_W<GPHEN1_SPEC, 3> {
-        HEN35_W::new(self)
+    pub fn hen35(&mut self) -> HEN35_W<GPHEN1_SPEC> {
+        HEN35_W::new(self, 3)
     }
     #[doc = "Bit 4 - High detect enabled 36"]
     #[inline(always)]
     #[must_use]
-    pub fn hen36(&mut self) -> HEN36_W<GPHEN1_SPEC, 4> {
-        HEN36_W::new(self)
+    pub fn hen36(&mut self) -> HEN36_W<GPHEN1_SPEC> {
+        HEN36_W::new(self, 4)
     }
     #[doc = "Bit 5 - High detect enabled 37"]
     #[inline(always)]
     #[must_use]
-    pub fn hen37(&mut self) -> HEN37_W<GPHEN1_SPEC, 5> {
-        HEN37_W::new(self)
+    pub fn hen37(&mut self) -> HEN37_W<GPHEN1_SPEC> {
+        HEN37_W::new(self, 5)
     }
     #[doc = "Bit 6 - High detect enabled 38"]
     #[inline(always)]
     #[must_use]
-    pub fn hen38(&mut self) -> HEN38_W<GPHEN1_SPEC, 6> {
-        HEN38_W::new(self)
+    pub fn hen38(&mut self) -> HEN38_W<GPHEN1_SPEC> {
+        HEN38_W::new(self, 6)
     }
     #[doc = "Bit 7 - High detect enabled 39"]
     #[inline(always)]
     #[must_use]
-    pub fn hen39(&mut self) -> HEN39_W<GPHEN1_SPEC, 7> {
-        HEN39_W::new(self)
+    pub fn hen39(&mut self) -> HEN39_W<GPHEN1_SPEC> {
+        HEN39_W::new(self, 7)
     }
     #[doc = "Bit 8 - High detect enabled 40"]
     #[inline(always)]
     #[must_use]
-    pub fn hen40(&mut self) -> HEN40_W<GPHEN1_SPEC, 8> {
-        HEN40_W::new(self)
+    pub fn hen40(&mut self) -> HEN40_W<GPHEN1_SPEC> {
+        HEN40_W::new(self, 8)
     }
     #[doc = "Bit 9 - High detect enabled 41"]
     #[inline(always)]
     #[must_use]
-    pub fn hen41(&mut self) -> HEN41_W<GPHEN1_SPEC, 9> {
-        HEN41_W::new(self)
+    pub fn hen41(&mut self) -> HEN41_W<GPHEN1_SPEC> {
+        HEN41_W::new(self, 9)
     }
     #[doc = "Bit 10 - High detect enabled 42"]
     #[inline(always)]
     #[must_use]
-    pub fn hen42(&mut self) -> HEN42_W<GPHEN1_SPEC, 10> {
-        HEN42_W::new(self)
+    pub fn hen42(&mut self) -> HEN42_W<GPHEN1_SPEC> {
+        HEN42_W::new(self, 10)
     }
     #[doc = "Bit 11 - High detect enabled 43"]
     #[inline(always)]
     #[must_use]
-    pub fn hen43(&mut self) -> HEN43_W<GPHEN1_SPEC, 11> {
-        HEN43_W::new(self)
+    pub fn hen43(&mut self) -> HEN43_W<GPHEN1_SPEC> {
+        HEN43_W::new(self, 11)
     }
     #[doc = "Bit 12 - High detect enabled 44"]
     #[inline(always)]
     #[must_use]
-    pub fn hen44(&mut self) -> HEN44_W<GPHEN1_SPEC, 12> {
-        HEN44_W::new(self)
+    pub fn hen44(&mut self) -> HEN44_W<GPHEN1_SPEC> {
+        HEN44_W::new(self, 12)
     }
     #[doc = "Bit 13 - High detect enabled 45"]
     #[inline(always)]
     #[must_use]
-    pub fn hen45(&mut self) -> HEN45_W<GPHEN1_SPEC, 13> {
-        HEN45_W::new(self)
+    pub fn hen45(&mut self) -> HEN45_W<GPHEN1_SPEC> {
+        HEN45_W::new(self, 13)
     }
     #[doc = "Bit 14 - High detect enabled 46"]
     #[inline(always)]
     #[must_use]
-    pub fn hen46(&mut self) -> HEN46_W<GPHEN1_SPEC, 14> {
-        HEN46_W::new(self)
+    pub fn hen46(&mut self) -> HEN46_W<GPHEN1_SPEC> {
+        HEN46_W::new(self, 14)
     }
     #[doc = "Bit 15 - High detect enabled 47"]
     #[inline(always)]
     #[must_use]
-    pub fn hen47(&mut self) -> HEN47_W<GPHEN1_SPEC, 15> {
-        HEN47_W::new(self)
+    pub fn hen47(&mut self) -> HEN47_W<GPHEN1_SPEC> {
+        HEN47_W::new(self, 15)
     }
     #[doc = "Bit 16 - High detect enabled 48"]
     #[inline(always)]
     #[must_use]
-    pub fn hen48(&mut self) -> HEN48_W<GPHEN1_SPEC, 16> {
-        HEN48_W::new(self)
+    pub fn hen48(&mut self) -> HEN48_W<GPHEN1_SPEC> {
+        HEN48_W::new(self, 16)
     }
     #[doc = "Bit 17 - High detect enabled 49"]
     #[inline(always)]
     #[must_use]
-    pub fn hen49(&mut self) -> HEN49_W<GPHEN1_SPEC, 17> {
-        HEN49_W::new(self)
+    pub fn hen49(&mut self) -> HEN49_W<GPHEN1_SPEC> {
+        HEN49_W::new(self, 17)
     }
     #[doc = "Bit 18 - High detect enabled 50"]
     #[inline(always)]
     #[must_use]
-    pub fn hen50(&mut self) -> HEN50_W<GPHEN1_SPEC, 18> {
-        HEN50_W::new(self)
+    pub fn hen50(&mut self) -> HEN50_W<GPHEN1_SPEC> {
+        HEN50_W::new(self, 18)
     }
     #[doc = "Bit 19 - High detect enabled 51"]
     #[inline(always)]
     #[must_use]
-    pub fn hen51(&mut self) -> HEN51_W<GPHEN1_SPEC, 19> {
-        HEN51_W::new(self)
+    pub fn hen51(&mut self) -> HEN51_W<GPHEN1_SPEC> {
+        HEN51_W::new(self, 19)
     }
     #[doc = "Bit 20 - High detect enabled 52"]
     #[inline(always)]
     #[must_use]
-    pub fn hen52(&mut self) -> HEN52_W<GPHEN1_SPEC, 20> {
-        HEN52_W::new(self)
+    pub fn hen52(&mut self) -> HEN52_W<GPHEN1_SPEC> {
+        HEN52_W::new(self, 20)
     }
     #[doc = "Bit 21 - High detect enabled 53"]
     #[inline(always)]
     #[must_use]
-    pub fn hen53(&mut self) -> HEN53_W<GPHEN1_SPEC, 21> {
-        HEN53_W::new(self)
+    pub fn hen53(&mut self) -> HEN53_W<GPHEN1_SPEC> {
+        HEN53_W::new(self, 21)
     }
     #[doc = "Bit 22 - High detect enabled 54"]
     #[inline(always)]
     #[must_use]
-    pub fn hen54(&mut self) -> HEN54_W<GPHEN1_SPEC, 22> {
-        HEN54_W::new(self)
+    pub fn hen54(&mut self) -> HEN54_W<GPHEN1_SPEC> {
+        HEN54_W::new(self, 22)
     }
     #[doc = "Bit 23 - High detect enabled 55"]
     #[inline(always)]
     #[must_use]
-    pub fn hen55(&mut self) -> HEN55_W<GPHEN1_SPEC, 23> {
-        HEN55_W::new(self)
+    pub fn hen55(&mut self) -> HEN55_W<GPHEN1_SPEC> {
+        HEN55_W::new(self, 23)
     }
     #[doc = "Bit 24 - High detect enabled 56"]
     #[inline(always)]
     #[must_use]
-    pub fn hen56(&mut self) -> HEN56_W<GPHEN1_SPEC, 24> {
-        HEN56_W::new(self)
+    pub fn hen56(&mut self) -> HEN56_W<GPHEN1_SPEC> {
+        HEN56_W::new(self, 24)
     }
     #[doc = "Bit 25 - High detect enabled 57"]
     #[inline(always)]
     #[must_use]
-    pub fn hen57(&mut self) -> HEN57_W<GPHEN1_SPEC, 25> {
-        HEN57_W::new(self)
+    pub fn hen57(&mut self) -> HEN57_W<GPHEN1_SPEC> {
+        HEN57_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

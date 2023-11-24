@@ -5,11 +5,11 @@ pub type W = crate::W<DEACHINTMSK_SPEC>;
 #[doc = "Field `IEP1INTM` reader - IN Endpoint 1 interrupt mask bit"]
 pub type IEP1INTM_R = crate::BitReader;
 #[doc = "Field `IEP1INTM` writer - IN Endpoint 1 interrupt mask bit"]
-pub type IEP1INTM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IEP1INTM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OEP1INTM` reader - OUT Endpoint 1 interrupt mask bit"]
 pub type OEP1INTM_R = crate::BitReader;
 #[doc = "Field `OEP1INTM` writer - OUT Endpoint 1 interrupt mask bit"]
-pub type OEP1INTM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OEP1INTM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - IN Endpoint 1 interrupt mask bit"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DEACHINTMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - IN Endpoint 1 interrupt mask bit"]
     #[inline(always)]
     #[must_use]
-    pub fn iep1intm(&mut self) -> IEP1INTM_W<DEACHINTMSK_SPEC, 1> {
-        IEP1INTM_W::new(self)
+    pub fn iep1intm(&mut self) -> IEP1INTM_W<DEACHINTMSK_SPEC> {
+        IEP1INTM_W::new(self, 1)
     }
     #[doc = "Bit 17 - OUT Endpoint 1 interrupt mask bit"]
     #[inline(always)]
     #[must_use]
-    pub fn oep1intm(&mut self) -> OEP1INTM_W<DEACHINTMSK_SPEC, 17> {
-        OEP1INTM_W::new(self)
+    pub fn oep1intm(&mut self) -> OEP1INTM_W<DEACHINTMSK_SPEC> {
+        OEP1INTM_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

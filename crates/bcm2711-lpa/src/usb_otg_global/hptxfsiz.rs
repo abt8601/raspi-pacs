@@ -5,11 +5,11 @@ pub type W = crate::W<HPTXFSIZ_SPEC>;
 #[doc = "Field `PTXSA` reader - Host periodic TxFIFO start address"]
 pub type PTXSA_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXSA` writer - Host periodic TxFIFO start address"]
-pub type PTXSA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXSA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `PTXFD` reader - Host periodic TxFIFO depth"]
 pub type PTXFD_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFD` writer - Host periodic TxFIFO depth"]
-pub type PTXFD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXFD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Host periodic TxFIFO start address"]
     #[inline(always)]
@@ -32,21 +32,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HPTXFSIZ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Host periodic TxFIFO start address"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxsa(&mut self) -> PTXSA_W<HPTXFSIZ_SPEC, 0> {
-        PTXSA_W::new(self)
+    pub fn ptxsa(&mut self) -> PTXSA_W<HPTXFSIZ_SPEC> {
+        PTXSA_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Host periodic TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfd(&mut self) -> PTXFD_W<HPTXFSIZ_SPEC, 16> {
-        PTXFD_W::new(self)
+    pub fn ptxfd(&mut self) -> PTXFD_W<HPTXFSIZ_SPEC> {
+        PTXFD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

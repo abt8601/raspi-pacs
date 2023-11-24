@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR19_SPEC>;
 #[doc = "Field `SWI4` reader - Software interrupt 4"]
 pub type SWI4_R = crate::FieldReader;
 #[doc = "Field `SWI4` writer - Software interrupt 4"]
-pub type SWI4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SWI4_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SWI5` reader - Software interrupt 5"]
 pub type SWI5_R = crate::FieldReader;
 #[doc = "Field `SWI5` writer - Software interrupt 5"]
-pub type SWI5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SWI5_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SWI6` reader - Software interrupt 6"]
 pub type SWI6_R = crate::FieldReader;
 #[doc = "Field `SWI6` writer - Software interrupt 6"]
-pub type SWI6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SWI6_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SWI7` reader - Software interrupt 7"]
 pub type SWI7_R = crate::FieldReader;
 #[doc = "Field `SWI7` writer - Software interrupt 7"]
-pub type SWI7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SWI7_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Software interrupt 4"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR19_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Software interrupt 4"]
     #[inline(always)]
     #[must_use]
-    pub fn swi4(&mut self) -> SWI4_W<GICD_IPRIORITYR19_SPEC, 0> {
-        SWI4_W::new(self)
+    pub fn swi4(&mut self) -> SWI4_W<GICD_IPRIORITYR19_SPEC> {
+        SWI4_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Software interrupt 5"]
     #[inline(always)]
     #[must_use]
-    pub fn swi5(&mut self) -> SWI5_W<GICD_IPRIORITYR19_SPEC, 8> {
-        SWI5_W::new(self)
+    pub fn swi5(&mut self) -> SWI5_W<GICD_IPRIORITYR19_SPEC> {
+        SWI5_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Software interrupt 6"]
     #[inline(always)]
     #[must_use]
-    pub fn swi6(&mut self) -> SWI6_W<GICD_IPRIORITYR19_SPEC, 16> {
-        SWI6_W::new(self)
+    pub fn swi6(&mut self) -> SWI6_W<GICD_IPRIORITYR19_SPEC> {
+        SWI6_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Software interrupt 7"]
     #[inline(always)]
     #[must_use]
-    pub fn swi7(&mut self) -> SWI7_W<GICD_IPRIORITYR19_SPEC, 24> {
-        SWI7_W::new(self)
+    pub fn swi7(&mut self) -> SWI7_W<GICD_IPRIORITYR19_SPEC> {
+        SWI7_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

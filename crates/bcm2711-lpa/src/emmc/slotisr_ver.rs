@@ -5,15 +5,15 @@ pub type W = crate::W<SLOTISR_VER_SPEC>;
 #[doc = "Field `SLOT_STATUS` reader - OR of interrupt and wakeup signals for each slot"]
 pub type SLOT_STATUS_R = crate::FieldReader;
 #[doc = "Field `SLOT_STATUS` writer - OR of interrupt and wakeup signals for each slot"]
-pub type SLOT_STATUS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SLOT_STATUS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SDVERSION` reader - Host controller specification version"]
 pub type SDVERSION_R = crate::FieldReader;
 #[doc = "Field `SDVERSION` writer - Host controller specification version"]
-pub type SDVERSION_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SDVERSION_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `VENDOR` reader - Vendor version number"]
 pub type VENDOR_R = crate::FieldReader;
 #[doc = "Field `VENDOR` writer - Vendor version number"]
-pub type VENDOR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type VENDOR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - OR of interrupt and wakeup signals for each slot"]
     #[inline(always)]
@@ -45,27 +45,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<SLOTISR_VER_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - OR of interrupt and wakeup signals for each slot"]
     #[inline(always)]
     #[must_use]
-    pub fn slot_status(&mut self) -> SLOT_STATUS_W<SLOTISR_VER_SPEC, 0> {
-        SLOT_STATUS_W::new(self)
+    pub fn slot_status(&mut self) -> SLOT_STATUS_W<SLOTISR_VER_SPEC> {
+        SLOT_STATUS_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Host controller specification version"]
     #[inline(always)]
     #[must_use]
-    pub fn sdversion(&mut self) -> SDVERSION_W<SLOTISR_VER_SPEC, 16> {
-        SDVERSION_W::new(self)
+    pub fn sdversion(&mut self) -> SDVERSION_W<SLOTISR_VER_SPEC> {
+        SDVERSION_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Vendor version number"]
     #[inline(always)]
     #[must_use]
-    pub fn vendor(&mut self) -> VENDOR_W<SLOTISR_VER_SPEC, 24> {
-        VENDOR_W::new(self)
+    pub fn vendor(&mut self) -> VENDOR_W<SLOTISR_VER_SPEC> {
+        VENDOR_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

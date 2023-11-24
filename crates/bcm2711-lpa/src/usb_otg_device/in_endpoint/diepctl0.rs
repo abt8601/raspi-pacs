@@ -5,11 +5,11 @@ pub type W = crate::W<DIEPCTL0_SPEC>;
 #[doc = "Field `MPSIZ` reader - Maximum packet size"]
 pub type MPSIZ_R = crate::FieldReader<u16>;
 #[doc = "Field `MPSIZ` writer - Maximum packet size"]
-pub type MPSIZ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type MPSIZ_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `USBAEP` reader - USB active endpoint"]
 pub type USBAEP_R = crate::BitReader;
 #[doc = "Field `USBAEP` writer - USB active endpoint"]
-pub type USBAEP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBAEP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EONUM_DPID` reader - Even/odd frame"]
 pub type EONUM_DPID_R = crate::BitReader;
 #[doc = "Field `NAKSTS` reader - NAK status"]
@@ -17,31 +17,31 @@ pub type NAKSTS_R = crate::BitReader;
 #[doc = "Field `EPTYP` reader - Endpoint type"]
 pub type EPTYP_R = crate::FieldReader;
 #[doc = "Field `EPTYP` writer - Endpoint type"]
-pub type EPTYP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type EPTYP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `Stall` reader - STALL handshake"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `Stall` writer - STALL handshake"]
-pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFNUM` reader - TxFIFO number"]
 pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - TxFIFO number"]
-pub type TXFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TXFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CNAK` writer - Clear NAK"]
-pub type CNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SNAK` writer - Set NAK"]
-pub type SNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SD0PID_SEVNFRM` writer - Set DATA0 PID"]
-pub type SD0PID_SEVNFRM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SD0PID_SEVNFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SODDFRM` writer - Set odd frame"]
-pub type SODDFRM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SODDFRM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPDIS` reader - Endpoint disable"]
 pub type EPDIS_R = crate::BitReader;
 #[doc = "Field `EPDIS` writer - Endpoint disable"]
-pub type EPDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPENA` reader - Endpoint enable"]
 pub type EPENA_R = crate::BitReader;
 #[doc = "Field `EPENA` writer - Endpoint enable"]
-pub type EPENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
@@ -106,75 +106,75 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DIEPCTL0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
     #[must_use]
-    pub fn mpsiz(&mut self) -> MPSIZ_W<DIEPCTL0_SPEC, 0> {
-        MPSIZ_W::new(self)
+    pub fn mpsiz(&mut self) -> MPSIZ_W<DIEPCTL0_SPEC> {
+        MPSIZ_W::new(self, 0)
     }
     #[doc = "Bit 15 - USB active endpoint"]
     #[inline(always)]
     #[must_use]
-    pub fn usbaep(&mut self) -> USBAEP_W<DIEPCTL0_SPEC, 15> {
-        USBAEP_W::new(self)
+    pub fn usbaep(&mut self) -> USBAEP_W<DIEPCTL0_SPEC> {
+        USBAEP_W::new(self, 15)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
     #[must_use]
-    pub fn eptyp(&mut self) -> EPTYP_W<DIEPCTL0_SPEC, 18> {
-        EPTYP_W::new(self)
+    pub fn eptyp(&mut self) -> EPTYP_W<DIEPCTL0_SPEC> {
+        EPTYP_W::new(self, 18)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<DIEPCTL0_SPEC, 21> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<DIEPCTL0_SPEC> {
+        STALL_W::new(self, 21)
     }
     #[doc = "Bits 22:25 - TxFIFO number"]
     #[inline(always)]
     #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<DIEPCTL0_SPEC, 22> {
-        TXFNUM_W::new(self)
+    pub fn txfnum(&mut self) -> TXFNUM_W<DIEPCTL0_SPEC> {
+        TXFNUM_W::new(self, 22)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<DIEPCTL0_SPEC, 26> {
-        CNAK_W::new(self)
+    pub fn cnak(&mut self) -> CNAK_W<DIEPCTL0_SPEC> {
+        CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<DIEPCTL0_SPEC, 27> {
-        SNAK_W::new(self)
+    pub fn snak(&mut self) -> SNAK_W<DIEPCTL0_SPEC> {
+        SNAK_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set DATA0 PID"]
     #[inline(always)]
     #[must_use]
-    pub fn sd0pid_sevnfrm(&mut self) -> SD0PID_SEVNFRM_W<DIEPCTL0_SPEC, 28> {
-        SD0PID_SEVNFRM_W::new(self)
+    pub fn sd0pid_sevnfrm(&mut self) -> SD0PID_SEVNFRM_W<DIEPCTL0_SPEC> {
+        SD0PID_SEVNFRM_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set odd frame"]
     #[inline(always)]
     #[must_use]
-    pub fn soddfrm(&mut self) -> SODDFRM_W<DIEPCTL0_SPEC, 29> {
-        SODDFRM_W::new(self)
+    pub fn soddfrm(&mut self) -> SODDFRM_W<DIEPCTL0_SPEC> {
+        SODDFRM_W::new(self, 29)
     }
     #[doc = "Bit 30 - Endpoint disable"]
     #[inline(always)]
     #[must_use]
-    pub fn epdis(&mut self) -> EPDIS_W<DIEPCTL0_SPEC, 30> {
-        EPDIS_W::new(self)
+    pub fn epdis(&mut self) -> EPDIS_W<DIEPCTL0_SPEC> {
+        EPDIS_W::new(self, 30)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epena(&mut self) -> EPENA_W<DIEPCTL0_SPEC, 31> {
-        EPENA_W::new(self)
+    pub fn epena(&mut self) -> EPENA_W<DIEPCTL0_SPEC> {
+        EPENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

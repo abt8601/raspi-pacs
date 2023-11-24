@@ -5,7 +5,7 @@ pub type W = crate::W<IBRD_SPEC>;
 #[doc = "Field `BAUDDIVINT` reader - BAUDDIVINT"]
 pub type BAUDDIVINT_R = crate::FieldReader<u16>;
 #[doc = "Field `BAUDDIVINT` writer - BAUDDIVINT"]
-pub type BAUDDIVINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type BAUDDIVINT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - BAUDDIVINT"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IBRD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - BAUDDIVINT"]
     #[inline(always)]
     #[must_use]
-    pub fn bauddivint(&mut self) -> BAUDDIVINT_W<IBRD_SPEC, 0> {
-        BAUDDIVINT_W::new(self)
+    pub fn bauddivint(&mut self) -> BAUDDIVINT_W<IBRD_SPEC> {
+        BAUDDIVINT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

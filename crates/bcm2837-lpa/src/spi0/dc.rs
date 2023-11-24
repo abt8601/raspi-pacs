@@ -5,19 +5,19 @@ pub type W = crate::W<DC_SPEC>;
 #[doc = "Field `TDREQ` reader - DMA Write request threshold"]
 pub type TDREQ_R = crate::FieldReader;
 #[doc = "Field `TDREQ` writer - DMA Write request threshold"]
-pub type TDREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TDREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TPANIC` reader - DMA write panic threshold"]
 pub type TPANIC_R = crate::FieldReader;
 #[doc = "Field `TPANIC` writer - DMA write panic threshold"]
-pub type TPANIC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TPANIC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RDREQ` reader - DMA read request threshold"]
 pub type RDREQ_R = crate::FieldReader;
 #[doc = "Field `RDREQ` writer - DMA read request threshold"]
-pub type RDREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RDREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RPANIC` reader - DMA read panic threshold"]
 pub type RPANIC_R = crate::FieldReader;
 #[doc = "Field `RPANIC` writer - DMA read panic threshold"]
-pub type RPANIC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RPANIC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - DMA Write request threshold"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - DMA Write request threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn tdreq(&mut self) -> TDREQ_W<DC_SPEC, 0> {
-        TDREQ_W::new(self)
+    pub fn tdreq(&mut self) -> TDREQ_W<DC_SPEC> {
+        TDREQ_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DMA write panic threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn tpanic(&mut self) -> TPANIC_W<DC_SPEC, 8> {
-        TPANIC_W::new(self)
+    pub fn tpanic(&mut self) -> TPANIC_W<DC_SPEC> {
+        TPANIC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - DMA read request threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn rdreq(&mut self) -> RDREQ_W<DC_SPEC, 16> {
-        RDREQ_W::new(self)
+    pub fn rdreq(&mut self) -> RDREQ_W<DC_SPEC> {
+        RDREQ_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - DMA read panic threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn rpanic(&mut self) -> RPANIC_W<DC_SPEC, 24> {
-        RPANIC_W::new(self)
+    pub fn rpanic(&mut self) -> RPANIC_W<DC_SPEC> {
+        RPANIC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

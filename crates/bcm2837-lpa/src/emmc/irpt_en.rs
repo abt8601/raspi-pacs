@@ -5,71 +5,71 @@ pub type W = crate::W<IRPT_EN_SPEC>;
 #[doc = "Field `CMD_DONE` reader - Command has finished"]
 pub type CMD_DONE_R = crate::BitReader;
 #[doc = "Field `CMD_DONE` writer - Command has finished"]
-pub type CMD_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMD_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_DONE` reader - Data transfer has finished"]
 pub type DATA_DONE_R = crate::BitReader;
 #[doc = "Field `DATA_DONE` writer - Data transfer has finished"]
-pub type DATA_DONE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATA_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLOCK_GAP` reader - Data transfer has stopped at block gap"]
 pub type BLOCK_GAP_R = crate::BitReader;
 #[doc = "Field `BLOCK_GAP` writer - Data transfer has stopped at block gap"]
-pub type BLOCK_GAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BLOCK_GAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WRITE_RDY` reader - DATA can be written to"]
 pub type WRITE_RDY_R = crate::BitReader;
 #[doc = "Field `WRITE_RDY` writer - DATA can be written to"]
-pub type WRITE_RDY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRITE_RDY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `READ_RDY` reader - DATA contains data to be read"]
 pub type READ_RDY_R = crate::BitReader;
 #[doc = "Field `READ_RDY` writer - DATA contains data to be read"]
-pub type READ_RDY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READ_RDY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CARD` reader - Card made interrupt request"]
 pub type CARD_R = crate::BitReader;
 #[doc = "Field `CARD` writer - Card made interrupt request"]
-pub type CARD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CARD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RETUNE` reader - Clock retune request"]
 pub type RETUNE_R = crate::BitReader;
 #[doc = "Field `RETUNE` writer - Clock retune request"]
-pub type RETUNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RETUNE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOOTACK` reader - Boot has been acknowledged"]
 pub type BOOTACK_R = crate::BitReader;
 #[doc = "Field `BOOTACK` writer - Boot has been acknowledged"]
-pub type BOOTACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOOTACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENDBOOT` reader - Boot operation has terminated"]
 pub type ENDBOOT_R = crate::BitReader;
 #[doc = "Field `ENDBOOT` writer - Boot operation has terminated"]
-pub type ENDBOOT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENDBOOT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTO_ERR` reader - Command timeout"]
 pub type CTO_ERR_R = crate::BitReader;
 #[doc = "Field `CTO_ERR` writer - Command timeout"]
-pub type CTO_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTO_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CCRC_ERR` reader - Command CRC error"]
 pub type CCRC_ERR_R = crate::BitReader;
 #[doc = "Field `CCRC_ERR` writer - Command CRC error"]
-pub type CCRC_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CCRC_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CEND_ERR` reader - Command end bit error (not 1)"]
 pub type CEND_ERR_R = crate::BitReader;
 #[doc = "Field `CEND_ERR` writer - Command end bit error (not 1)"]
-pub type CEND_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CEND_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CBAD_ERR` reader - Incorrect response command index"]
 pub type CBAD_ERR_R = crate::BitReader;
 #[doc = "Field `CBAD_ERR` writer - Incorrect response command index"]
-pub type CBAD_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CBAD_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTO_ERR` reader - Data timeout"]
 pub type DTO_ERR_R = crate::BitReader;
 #[doc = "Field `DTO_ERR` writer - Data timeout"]
-pub type DTO_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTO_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCRC_ERR` reader - Data CRC error"]
 pub type DCRC_ERR_R = crate::BitReader;
 #[doc = "Field `DCRC_ERR` writer - Data CRC error"]
-pub type DCRC_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCRC_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEND_ERR` reader - Data end bit error (not 1)"]
 pub type DEND_ERR_R = crate::BitReader;
 #[doc = "Field `DEND_ERR` writer - Data end bit error (not 1)"]
-pub type DEND_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEND_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACMD_ERR` reader - Auto command error"]
 pub type ACMD_ERR_R = crate::BitReader;
 #[doc = "Field `ACMD_ERR` writer - Auto command error"]
-pub type ACMD_ERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACMD_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Command has finished"]
     #[inline(always)]
@@ -182,111 +182,111 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IRPT_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Command has finished"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd_done(&mut self) -> CMD_DONE_W<IRPT_EN_SPEC, 0> {
-        CMD_DONE_W::new(self)
+    pub fn cmd_done(&mut self) -> CMD_DONE_W<IRPT_EN_SPEC> {
+        CMD_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data transfer has finished"]
     #[inline(always)]
     #[must_use]
-    pub fn data_done(&mut self) -> DATA_DONE_W<IRPT_EN_SPEC, 1> {
-        DATA_DONE_W::new(self)
+    pub fn data_done(&mut self) -> DATA_DONE_W<IRPT_EN_SPEC> {
+        DATA_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Data transfer has stopped at block gap"]
     #[inline(always)]
     #[must_use]
-    pub fn block_gap(&mut self) -> BLOCK_GAP_W<IRPT_EN_SPEC, 2> {
-        BLOCK_GAP_W::new(self)
+    pub fn block_gap(&mut self) -> BLOCK_GAP_W<IRPT_EN_SPEC> {
+        BLOCK_GAP_W::new(self, 2)
     }
     #[doc = "Bit 4 - DATA can be written to"]
     #[inline(always)]
     #[must_use]
-    pub fn write_rdy(&mut self) -> WRITE_RDY_W<IRPT_EN_SPEC, 4> {
-        WRITE_RDY_W::new(self)
+    pub fn write_rdy(&mut self) -> WRITE_RDY_W<IRPT_EN_SPEC> {
+        WRITE_RDY_W::new(self, 4)
     }
     #[doc = "Bit 5 - DATA contains data to be read"]
     #[inline(always)]
     #[must_use]
-    pub fn read_rdy(&mut self) -> READ_RDY_W<IRPT_EN_SPEC, 5> {
-        READ_RDY_W::new(self)
+    pub fn read_rdy(&mut self) -> READ_RDY_W<IRPT_EN_SPEC> {
+        READ_RDY_W::new(self, 5)
     }
     #[doc = "Bit 8 - Card made interrupt request"]
     #[inline(always)]
     #[must_use]
-    pub fn card(&mut self) -> CARD_W<IRPT_EN_SPEC, 8> {
-        CARD_W::new(self)
+    pub fn card(&mut self) -> CARD_W<IRPT_EN_SPEC> {
+        CARD_W::new(self, 8)
     }
     #[doc = "Bit 12 - Clock retune request"]
     #[inline(always)]
     #[must_use]
-    pub fn retune(&mut self) -> RETUNE_W<IRPT_EN_SPEC, 12> {
-        RETUNE_W::new(self)
+    pub fn retune(&mut self) -> RETUNE_W<IRPT_EN_SPEC> {
+        RETUNE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Boot has been acknowledged"]
     #[inline(always)]
     #[must_use]
-    pub fn bootack(&mut self) -> BOOTACK_W<IRPT_EN_SPEC, 13> {
-        BOOTACK_W::new(self)
+    pub fn bootack(&mut self) -> BOOTACK_W<IRPT_EN_SPEC> {
+        BOOTACK_W::new(self, 13)
     }
     #[doc = "Bit 14 - Boot operation has terminated"]
     #[inline(always)]
     #[must_use]
-    pub fn endboot(&mut self) -> ENDBOOT_W<IRPT_EN_SPEC, 14> {
-        ENDBOOT_W::new(self)
+    pub fn endboot(&mut self) -> ENDBOOT_W<IRPT_EN_SPEC> {
+        ENDBOOT_W::new(self, 14)
     }
     #[doc = "Bit 16 - Command timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn cto_err(&mut self) -> CTO_ERR_W<IRPT_EN_SPEC, 16> {
-        CTO_ERR_W::new(self)
+    pub fn cto_err(&mut self) -> CTO_ERR_W<IRPT_EN_SPEC> {
+        CTO_ERR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Command CRC error"]
     #[inline(always)]
     #[must_use]
-    pub fn ccrc_err(&mut self) -> CCRC_ERR_W<IRPT_EN_SPEC, 17> {
-        CCRC_ERR_W::new(self)
+    pub fn ccrc_err(&mut self) -> CCRC_ERR_W<IRPT_EN_SPEC> {
+        CCRC_ERR_W::new(self, 17)
     }
     #[doc = "Bit 18 - Command end bit error (not 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn cend_err(&mut self) -> CEND_ERR_W<IRPT_EN_SPEC, 18> {
-        CEND_ERR_W::new(self)
+    pub fn cend_err(&mut self) -> CEND_ERR_W<IRPT_EN_SPEC> {
+        CEND_ERR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Incorrect response command index"]
     #[inline(always)]
     #[must_use]
-    pub fn cbad_err(&mut self) -> CBAD_ERR_W<IRPT_EN_SPEC, 19> {
-        CBAD_ERR_W::new(self)
+    pub fn cbad_err(&mut self) -> CBAD_ERR_W<IRPT_EN_SPEC> {
+        CBAD_ERR_W::new(self, 19)
     }
     #[doc = "Bit 20 - Data timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn dto_err(&mut self) -> DTO_ERR_W<IRPT_EN_SPEC, 20> {
-        DTO_ERR_W::new(self)
+    pub fn dto_err(&mut self) -> DTO_ERR_W<IRPT_EN_SPEC> {
+        DTO_ERR_W::new(self, 20)
     }
     #[doc = "Bit 21 - Data CRC error"]
     #[inline(always)]
     #[must_use]
-    pub fn dcrc_err(&mut self) -> DCRC_ERR_W<IRPT_EN_SPEC, 21> {
-        DCRC_ERR_W::new(self)
+    pub fn dcrc_err(&mut self) -> DCRC_ERR_W<IRPT_EN_SPEC> {
+        DCRC_ERR_W::new(self, 21)
     }
     #[doc = "Bit 22 - Data end bit error (not 1)"]
     #[inline(always)]
     #[must_use]
-    pub fn dend_err(&mut self) -> DEND_ERR_W<IRPT_EN_SPEC, 22> {
-        DEND_ERR_W::new(self)
+    pub fn dend_err(&mut self) -> DEND_ERR_W<IRPT_EN_SPEC> {
+        DEND_ERR_W::new(self, 22)
     }
     #[doc = "Bit 24 - Auto command error"]
     #[inline(always)]
     #[must_use]
-    pub fn acmd_err(&mut self) -> ACMD_ERR_W<IRPT_EN_SPEC, 24> {
-        ACMD_ERR_W::new(self)
+    pub fn acmd_err(&mut self) -> ACMD_ERR_W<IRPT_EN_SPEC> {
+        ACMD_ERR_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<EXRDFIFO_EN_SPEC>;
 #[doc = "Field `ENABLE` reader - Enable the extension FIFO"]
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable the extension FIFO"]
-pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable the extension FIFO"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<EXRDFIFO_EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Enable the extension FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<EXRDFIFO_EN_SPEC, 0> {
-        ENABLE_W::new(self)
+    pub fn enable(&mut self) -> ENABLE_W<EXRDFIFO_EN_SPEC> {
+        ENABLE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

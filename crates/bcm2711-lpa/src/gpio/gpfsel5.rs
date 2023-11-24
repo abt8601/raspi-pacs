@@ -92,8 +92,8 @@ impl FSEL50_R {
     }
 }
 #[doc = "Field `FSEL50` writer - Function Select 50"]
-pub type FSEL50_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL50_A>;
-impl<'a, REG, const O: u8> FSEL50_W<'a, REG, O>
+pub type FSEL50_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL50_A>;
+impl<'a, REG> FSEL50_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -229,8 +229,8 @@ impl FSEL51_R {
     }
 }
 #[doc = "Field `FSEL51` writer - Function Select 51"]
-pub type FSEL51_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL51_A>;
-impl<'a, REG, const O: u8> FSEL51_W<'a, REG, O>
+pub type FSEL51_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL51_A>;
+impl<'a, REG> FSEL51_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -366,8 +366,8 @@ impl FSEL52_R {
     }
 }
 #[doc = "Field `FSEL52` writer - Function Select 52"]
-pub type FSEL52_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL52_A>;
-impl<'a, REG, const O: u8> FSEL52_W<'a, REG, O>
+pub type FSEL52_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL52_A>;
+impl<'a, REG> FSEL52_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -503,8 +503,8 @@ impl FSEL53_R {
     }
 }
 #[doc = "Field `FSEL53` writer - Function Select 53"]
-pub type FSEL53_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL53_A>;
-impl<'a, REG, const O: u8> FSEL53_W<'a, REG, O>
+pub type FSEL53_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL53_A>;
+impl<'a, REG> FSEL53_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -640,8 +640,8 @@ impl FSEL54_R {
     }
 }
 #[doc = "Field `FSEL54` writer - Function Select 54"]
-pub type FSEL54_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL54_A>;
-impl<'a, REG, const O: u8> FSEL54_W<'a, REG, O>
+pub type FSEL54_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL54_A>;
+impl<'a, REG> FSEL54_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -777,8 +777,8 @@ impl FSEL55_R {
     }
 }
 #[doc = "Field `FSEL55` writer - Function Select 55"]
-pub type FSEL55_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL55_A>;
-impl<'a, REG, const O: u8> FSEL55_W<'a, REG, O>
+pub type FSEL55_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL55_A>;
+impl<'a, REG> FSEL55_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -914,8 +914,8 @@ impl FSEL56_R {
     }
 }
 #[doc = "Field `FSEL56` writer - Function Select 56"]
-pub type FSEL56_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL56_A>;
-impl<'a, REG, const O: u8> FSEL56_W<'a, REG, O>
+pub type FSEL56_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL56_A>;
+impl<'a, REG> FSEL56_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -1051,8 +1051,8 @@ impl FSEL57_R {
     }
 }
 #[doc = "Field `FSEL57` writer - Function Select 57"]
-pub type FSEL57_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, FSEL57_A>;
-impl<'a, REG, const O: u8> FSEL57_W<'a, REG, O>
+pub type FSEL57_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, FSEL57_A>;
+impl<'a, REG> FSEL57_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -1156,57 +1156,57 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPFSEL5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Function Select 50"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel50(&mut self) -> FSEL50_W<GPFSEL5_SPEC, 0> {
-        FSEL50_W::new(self)
+    pub fn fsel50(&mut self) -> FSEL50_W<GPFSEL5_SPEC> {
+        FSEL50_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Function Select 51"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel51(&mut self) -> FSEL51_W<GPFSEL5_SPEC, 3> {
-        FSEL51_W::new(self)
+    pub fn fsel51(&mut self) -> FSEL51_W<GPFSEL5_SPEC> {
+        FSEL51_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Function Select 52"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel52(&mut self) -> FSEL52_W<GPFSEL5_SPEC, 6> {
-        FSEL52_W::new(self)
+    pub fn fsel52(&mut self) -> FSEL52_W<GPFSEL5_SPEC> {
+        FSEL52_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - Function Select 53"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel53(&mut self) -> FSEL53_W<GPFSEL5_SPEC, 9> {
-        FSEL53_W::new(self)
+    pub fn fsel53(&mut self) -> FSEL53_W<GPFSEL5_SPEC> {
+        FSEL53_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - Function Select 54"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel54(&mut self) -> FSEL54_W<GPFSEL5_SPEC, 12> {
-        FSEL54_W::new(self)
+    pub fn fsel54(&mut self) -> FSEL54_W<GPFSEL5_SPEC> {
+        FSEL54_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - Function Select 55"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel55(&mut self) -> FSEL55_W<GPFSEL5_SPEC, 15> {
-        FSEL55_W::new(self)
+    pub fn fsel55(&mut self) -> FSEL55_W<GPFSEL5_SPEC> {
+        FSEL55_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Function Select 56"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel56(&mut self) -> FSEL56_W<GPFSEL5_SPEC, 18> {
-        FSEL56_W::new(self)
+    pub fn fsel56(&mut self) -> FSEL56_W<GPFSEL5_SPEC> {
+        FSEL56_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Function Select 57"]
     #[inline(always)]
     #[must_use]
-    pub fn fsel57(&mut self) -> FSEL57_W<GPFSEL5_SPEC, 21> {
-        FSEL57_W::new(self)
+    pub fn fsel57(&mut self) -> FSEL57_W<GPFSEL5_SPEC> {
+        FSEL57_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

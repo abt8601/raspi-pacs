@@ -2,20 +2,50 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct GICD_ISENABLER {
+    gicd_isenabler0: GICD_ISENABLER0,
+    gicd_isenabler1: GICD_ISENABLER1,
+    gicd_isenabler2: GICD_ISENABLER2,
+    gicd_isenabler3: GICD_ISENABLER3,
+    gicd_isenabler4: GICD_ISENABLER4,
+    gicd_isenabler5: GICD_ISENABLER5,
+    gicd_isenabler6: GICD_ISENABLER6,
+}
+impl GICD_ISENABLER {
     #[doc = "0x00 - Interrupt Set-Enable"]
-    pub gicd_isenabler0: GICD_ISENABLER0,
+    #[inline(always)]
+    pub const fn gicd_isenabler0(&self) -> &GICD_ISENABLER0 {
+        &self.gicd_isenabler0
+    }
     #[doc = "0x04 - Interrupt Set-Enable"]
-    pub gicd_isenabler1: GICD_ISENABLER1,
+    #[inline(always)]
+    pub const fn gicd_isenabler1(&self) -> &GICD_ISENABLER1 {
+        &self.gicd_isenabler1
+    }
     #[doc = "0x08 - Interrupt Set-Enable"]
-    pub gicd_isenabler2: GICD_ISENABLER2,
+    #[inline(always)]
+    pub const fn gicd_isenabler2(&self) -> &GICD_ISENABLER2 {
+        &self.gicd_isenabler2
+    }
     #[doc = "0x0c - Interrupt Set-Enable"]
-    pub gicd_isenabler3: GICD_ISENABLER3,
+    #[inline(always)]
+    pub const fn gicd_isenabler3(&self) -> &GICD_ISENABLER3 {
+        &self.gicd_isenabler3
+    }
     #[doc = "0x10 - Interrupt Set-Enable"]
-    pub gicd_isenabler4: GICD_ISENABLER4,
+    #[inline(always)]
+    pub const fn gicd_isenabler4(&self) -> &GICD_ISENABLER4 {
+        &self.gicd_isenabler4
+    }
     #[doc = "0x14 - Interrupt Set-Enable"]
-    pub gicd_isenabler5: GICD_ISENABLER5,
+    #[inline(always)]
+    pub const fn gicd_isenabler5(&self) -> &GICD_ISENABLER5 {
+        &self.gicd_isenabler5
+    }
     #[doc = "0x18 - Interrupt Set-Enable"]
-    pub gicd_isenabler6: GICD_ISENABLER6,
+    #[inline(always)]
+    pub const fn gicd_isenabler6(&self) -> &GICD_ISENABLER6 {
+        &self.gicd_isenabler6
+    }
 }
 #[doc = "GICD_ISENABLER0 (rw) register accessor: Interrupt Set-Enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_isenabler0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_isenabler0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_isenabler0`]
 module"]

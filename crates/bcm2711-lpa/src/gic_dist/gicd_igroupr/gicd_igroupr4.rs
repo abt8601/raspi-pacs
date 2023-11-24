@@ -5,131 +5,131 @@ pub type W = crate::W<GICD_IGROUPR4_SPEC>;
 #[doc = "Field `HDMI_CEC` reader - HDMI CEC"]
 pub type HDMI_CEC_R = crate::BitReader;
 #[doc = "Field `HDMI_CEC` writer - HDMI CEC"]
-pub type HDMI_CEC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDMI_CEC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HVS` reader - HVS"]
 pub type HVS_R = crate::BitReader;
 #[doc = "Field `HVS` writer - HVS"]
-pub type HVS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HVS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RPIVID` reader - RPIVID"]
 pub type RPIVID_R = crate::BitReader;
 #[doc = "Field `RPIVID` writer - RPIVID"]
-pub type RPIVID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RPIVID_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDC` reader - SDC"]
 pub type SDC_R = crate::BitReader;
 #[doc = "Field `SDC` writer - SDC"]
-pub type SDC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSI_0` reader - DSI 0"]
 pub type DSI_0_R = crate::BitReader;
 #[doc = "Field `DSI_0` writer - DSI 0"]
-pub type DSI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DSI_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIXEL_VALVE_2` reader - Pixel Valve 2"]
 pub type PIXEL_VALVE_2_R = crate::BitReader;
 #[doc = "Field `PIXEL_VALVE_2` writer - Pixel Valve 2"]
-pub type PIXEL_VALVE_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIXEL_VALVE_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAMERA_0` reader - Camera 0"]
 pub type CAMERA_0_R = crate::BitReader;
 #[doc = "Field `CAMERA_0` writer - Camera 0"]
-pub type CAMERA_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAMERA_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAMERA_1` reader - Camera 1"]
 pub type CAMERA_1_R = crate::BitReader;
 #[doc = "Field `CAMERA_1` writer - Camera 1"]
-pub type CAMERA_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAMERA_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDMI_0` reader - HDMI 0"]
 pub type HDMI_0_R = crate::BitReader;
 #[doc = "Field `HDMI_0` writer - HDMI 0"]
-pub type HDMI_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDMI_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDMI_1` reader - HDMI 1"]
 pub type HDMI_1_R = crate::BitReader;
 #[doc = "Field `HDMI_1` writer - HDMI 1"]
-pub type HDMI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDMI_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIXEL_VALVE_3` reader - Pixel Valve 3"]
 pub type PIXEL_VALVE_3_R = crate::BitReader;
 #[doc = "Field `PIXEL_VALVE_3` writer - Pixel Valve 3"]
-pub type PIXEL_VALVE_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIXEL_VALVE_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_BSC_SLAVE` reader - SPI/BSC Slave"]
 pub type SPI_BSC_SLAVE_R = crate::BitReader;
 #[doc = "Field `SPI_BSC_SLAVE` writer - SPI/BSC Slave"]
-pub type SPI_BSC_SLAVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_BSC_SLAVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSI_1` reader - DSI 1"]
 pub type DSI_1_R = crate::BitReader;
 #[doc = "Field `DSI_1` writer - DSI 1"]
-pub type DSI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DSI_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIXEL_VALVE_0` reader - Pixel Valve 0"]
 pub type PIXEL_VALVE_0_R = crate::BitReader;
 #[doc = "Field `PIXEL_VALVE_0` writer - Pixel Valve 0"]
-pub type PIXEL_VALVE_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIXEL_VALVE_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIXEL_VALVE_1_2` reader - OR of Pixel Valve 1 and 2"]
 pub type PIXEL_VALVE_1_2_R = crate::BitReader;
 #[doc = "Field `PIXEL_VALVE_1_2` writer - OR of Pixel Valve 1 and 2"]
-pub type PIXEL_VALVE_1_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIXEL_VALVE_1_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPR` reader - CPR"]
 pub type CPR_R = crate::BitReader;
 #[doc = "Field `CPR` writer - CPR"]
-pub type CPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SMI` reader - SMI"]
 pub type SMI_R = crate::BitReader;
 #[doc = "Field `SMI` writer - SMI"]
-pub type SMI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SMI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_0` reader - GPIO 0"]
 pub type GPIO_0_R = crate::BitReader;
 #[doc = "Field `GPIO_0` writer - GPIO 0"]
-pub type GPIO_0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_1` reader - GPIO 1"]
 pub type GPIO_1_R = crate::BitReader;
 #[doc = "Field `GPIO_1` writer - GPIO 1"]
-pub type GPIO_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_2` reader - GPIO 2"]
 pub type GPIO_2_R = crate::BitReader;
 #[doc = "Field `GPIO_2` writer - GPIO 2"]
-pub type GPIO_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIO_3` reader - GPIO 3"]
 pub type GPIO_3_R = crate::BitReader;
 #[doc = "Field `GPIO_3` writer - GPIO 3"]
-pub type GPIO_3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIO_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C` reader - OR of all I2C"]
 pub type I2C_R = crate::BitReader;
 #[doc = "Field `I2C` writer - OR of all I2C"]
-pub type I2C_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI` reader - OR of all SPI"]
 pub type SPI_R = crate::BitReader;
 #[doc = "Field `SPI` writer - OR of all SPI"]
-pub type SPI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCM_I2S` reader - PCM/I2S"]
 pub type PCM_I2S_R = crate::BitReader;
 #[doc = "Field `PCM_I2S` writer - PCM/I2S"]
-pub type PCM_I2S_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCM_I2S_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDHOST` reader - SDHOST"]
 pub type SDHOST_R = crate::BitReader;
 #[doc = "Field `SDHOST` writer - SDHOST"]
-pub type SDHOST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDHOST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART` reader - OR of all PL011 UARTs"]
 pub type UART_R = crate::BitReader;
 #[doc = "Field `UART` writer - OR of all PL011 UARTs"]
-pub type UART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETH_PCIE` reader - OR of all ETH_PCIe L2"]
 pub type ETH_PCIE_R = crate::BitReader;
 #[doc = "Field `ETH_PCIE` writer - OR of all ETH_PCIe L2"]
-pub type ETH_PCIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETH_PCIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VEC` reader - VEC"]
 pub type VEC_R = crate::BitReader;
 #[doc = "Field `VEC` writer - VEC"]
-pub type VEC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VEC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPG` reader - CPG"]
 pub type CPG_R = crate::BitReader;
 #[doc = "Field `CPG` writer - CPG"]
-pub type CPG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RNG` reader - RNG"]
 pub type RNG_R = crate::BitReader;
 #[doc = "Field `RNG` writer - RNG"]
-pub type RNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMMC` reader - OR of EMMC and EMMC2"]
 pub type EMMC_R = crate::BitReader;
 #[doc = "Field `EMMC` writer - OR of EMMC and EMMC2"]
-pub type EMMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMMC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETH_PCIE_SECURE` reader - ETH_PCIe secure"]
 pub type ETH_PCIE_SECURE_R = crate::BitReader;
 #[doc = "Field `ETH_PCIE_SECURE` writer - ETH_PCIe secure"]
-pub type ETH_PCIE_SECURE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETH_PCIE_SECURE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - HDMI CEC"]
     #[inline(always)]
@@ -350,201 +350,201 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IGROUPR4_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - HDMI CEC"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_IGROUPR4_SPEC, 0> {
-        HDMI_CEC_W::new(self)
+    pub fn hdmi_cec(&mut self) -> HDMI_CEC_W<GICD_IGROUPR4_SPEC> {
+        HDMI_CEC_W::new(self, 0)
     }
     #[doc = "Bit 1 - HVS"]
     #[inline(always)]
     #[must_use]
-    pub fn hvs(&mut self) -> HVS_W<GICD_IGROUPR4_SPEC, 1> {
-        HVS_W::new(self)
+    pub fn hvs(&mut self) -> HVS_W<GICD_IGROUPR4_SPEC> {
+        HVS_W::new(self, 1)
     }
     #[doc = "Bit 2 - RPIVID"]
     #[inline(always)]
     #[must_use]
-    pub fn rpivid(&mut self) -> RPIVID_W<GICD_IGROUPR4_SPEC, 2> {
-        RPIVID_W::new(self)
+    pub fn rpivid(&mut self) -> RPIVID_W<GICD_IGROUPR4_SPEC> {
+        RPIVID_W::new(self, 2)
     }
     #[doc = "Bit 3 - SDC"]
     #[inline(always)]
     #[must_use]
-    pub fn sdc(&mut self) -> SDC_W<GICD_IGROUPR4_SPEC, 3> {
-        SDC_W::new(self)
+    pub fn sdc(&mut self) -> SDC_W<GICD_IGROUPR4_SPEC> {
+        SDC_W::new(self, 3)
     }
     #[doc = "Bit 4 - DSI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_0(&mut self) -> DSI_0_W<GICD_IGROUPR4_SPEC, 4> {
-        DSI_0_W::new(self)
+    pub fn dsi_0(&mut self) -> DSI_0_W<GICD_IGROUPR4_SPEC> {
+        DSI_0_W::new(self, 4)
     }
     #[doc = "Bit 5 - Pixel Valve 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_2(&mut self) -> PIXEL_VALVE_2_W<GICD_IGROUPR4_SPEC, 5> {
-        PIXEL_VALVE_2_W::new(self)
+    pub fn pixel_valve_2(&mut self) -> PIXEL_VALVE_2_W<GICD_IGROUPR4_SPEC> {
+        PIXEL_VALVE_2_W::new(self, 5)
     }
     #[doc = "Bit 6 - Camera 0"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_0(&mut self) -> CAMERA_0_W<GICD_IGROUPR4_SPEC, 6> {
-        CAMERA_0_W::new(self)
+    pub fn camera_0(&mut self) -> CAMERA_0_W<GICD_IGROUPR4_SPEC> {
+        CAMERA_0_W::new(self, 6)
     }
     #[doc = "Bit 7 - Camera 1"]
     #[inline(always)]
     #[must_use]
-    pub fn camera_1(&mut self) -> CAMERA_1_W<GICD_IGROUPR4_SPEC, 7> {
-        CAMERA_1_W::new(self)
+    pub fn camera_1(&mut self) -> CAMERA_1_W<GICD_IGROUPR4_SPEC> {
+        CAMERA_1_W::new(self, 7)
     }
     #[doc = "Bit 8 - HDMI 0"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_IGROUPR4_SPEC, 8> {
-        HDMI_0_W::new(self)
+    pub fn hdmi_0(&mut self) -> HDMI_0_W<GICD_IGROUPR4_SPEC> {
+        HDMI_0_W::new(self, 8)
     }
     #[doc = "Bit 9 - HDMI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_IGROUPR4_SPEC, 9> {
-        HDMI_1_W::new(self)
+    pub fn hdmi_1(&mut self) -> HDMI_1_W<GICD_IGROUPR4_SPEC> {
+        HDMI_1_W::new(self, 9)
     }
     #[doc = "Bit 10 - Pixel Valve 3"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_IGROUPR4_SPEC, 10> {
-        PIXEL_VALVE_3_W::new(self)
+    pub fn pixel_valve_3(&mut self) -> PIXEL_VALVE_3_W<GICD_IGROUPR4_SPEC> {
+        PIXEL_VALVE_3_W::new(self, 10)
     }
     #[doc = "Bit 11 - SPI/BSC Slave"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_IGROUPR4_SPEC, 11> {
-        SPI_BSC_SLAVE_W::new(self)
+    pub fn spi_bsc_slave(&mut self) -> SPI_BSC_SLAVE_W<GICD_IGROUPR4_SPEC> {
+        SPI_BSC_SLAVE_W::new(self, 11)
     }
     #[doc = "Bit 12 - DSI 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_IGROUPR4_SPEC, 12> {
-        DSI_1_W::new(self)
+    pub fn dsi_1(&mut self) -> DSI_1_W<GICD_IGROUPR4_SPEC> {
+        DSI_1_W::new(self, 12)
     }
     #[doc = "Bit 13 - Pixel Valve 0"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_IGROUPR4_SPEC, 13> {
-        PIXEL_VALVE_0_W::new(self)
+    pub fn pixel_valve_0(&mut self) -> PIXEL_VALVE_0_W<GICD_IGROUPR4_SPEC> {
+        PIXEL_VALVE_0_W::new(self, 13)
     }
     #[doc = "Bit 14 - OR of Pixel Valve 1 and 2"]
     #[inline(always)]
     #[must_use]
-    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_IGROUPR4_SPEC, 14> {
-        PIXEL_VALVE_1_2_W::new(self)
+    pub fn pixel_valve_1_2(&mut self) -> PIXEL_VALVE_1_2_W<GICD_IGROUPR4_SPEC> {
+        PIXEL_VALVE_1_2_W::new(self, 14)
     }
     #[doc = "Bit 15 - CPR"]
     #[inline(always)]
     #[must_use]
-    pub fn cpr(&mut self) -> CPR_W<GICD_IGROUPR4_SPEC, 15> {
-        CPR_W::new(self)
+    pub fn cpr(&mut self) -> CPR_W<GICD_IGROUPR4_SPEC> {
+        CPR_W::new(self, 15)
     }
     #[doc = "Bit 16 - SMI"]
     #[inline(always)]
     #[must_use]
-    pub fn smi(&mut self) -> SMI_W<GICD_IGROUPR4_SPEC, 16> {
-        SMI_W::new(self)
+    pub fn smi(&mut self) -> SMI_W<GICD_IGROUPR4_SPEC> {
+        SMI_W::new(self, 16)
     }
     #[doc = "Bit 17 - GPIO 0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_IGROUPR4_SPEC, 17> {
-        GPIO_0_W::new(self)
+    pub fn gpio_0(&mut self) -> GPIO_0_W<GICD_IGROUPR4_SPEC> {
+        GPIO_0_W::new(self, 17)
     }
     #[doc = "Bit 18 - GPIO 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_IGROUPR4_SPEC, 18> {
-        GPIO_1_W::new(self)
+    pub fn gpio_1(&mut self) -> GPIO_1_W<GICD_IGROUPR4_SPEC> {
+        GPIO_1_W::new(self, 18)
     }
     #[doc = "Bit 19 - GPIO 2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_IGROUPR4_SPEC, 19> {
-        GPIO_2_W::new(self)
+    pub fn gpio_2(&mut self) -> GPIO_2_W<GICD_IGROUPR4_SPEC> {
+        GPIO_2_W::new(self, 19)
     }
     #[doc = "Bit 20 - GPIO 3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_IGROUPR4_SPEC, 20> {
-        GPIO_3_W::new(self)
+    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_IGROUPR4_SPEC> {
+        GPIO_3_W::new(self, 20)
     }
     #[doc = "Bit 21 - OR of all I2C"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c(&mut self) -> I2C_W<GICD_IGROUPR4_SPEC, 21> {
-        I2C_W::new(self)
+    pub fn i2c(&mut self) -> I2C_W<GICD_IGROUPR4_SPEC> {
+        I2C_W::new(self, 21)
     }
     #[doc = "Bit 22 - OR of all SPI"]
     #[inline(always)]
     #[must_use]
-    pub fn spi(&mut self) -> SPI_W<GICD_IGROUPR4_SPEC, 22> {
-        SPI_W::new(self)
+    pub fn spi(&mut self) -> SPI_W<GICD_IGROUPR4_SPEC> {
+        SPI_W::new(self, 22)
     }
     #[doc = "Bit 23 - PCM/I2S"]
     #[inline(always)]
     #[must_use]
-    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_IGROUPR4_SPEC, 23> {
-        PCM_I2S_W::new(self)
+    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_IGROUPR4_SPEC> {
+        PCM_I2S_W::new(self, 23)
     }
     #[doc = "Bit 24 - SDHOST"]
     #[inline(always)]
     #[must_use]
-    pub fn sdhost(&mut self) -> SDHOST_W<GICD_IGROUPR4_SPEC, 24> {
-        SDHOST_W::new(self)
+    pub fn sdhost(&mut self) -> SDHOST_W<GICD_IGROUPR4_SPEC> {
+        SDHOST_W::new(self, 24)
     }
     #[doc = "Bit 25 - OR of all PL011 UARTs"]
     #[inline(always)]
     #[must_use]
-    pub fn uart(&mut self) -> UART_W<GICD_IGROUPR4_SPEC, 25> {
-        UART_W::new(self)
+    pub fn uart(&mut self) -> UART_W<GICD_IGROUPR4_SPEC> {
+        UART_W::new(self, 25)
     }
     #[doc = "Bit 26 - OR of all ETH_PCIe L2"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_IGROUPR4_SPEC, 26> {
-        ETH_PCIE_W::new(self)
+    pub fn eth_pcie(&mut self) -> ETH_PCIE_W<GICD_IGROUPR4_SPEC> {
+        ETH_PCIE_W::new(self, 26)
     }
     #[doc = "Bit 27 - VEC"]
     #[inline(always)]
     #[must_use]
-    pub fn vec(&mut self) -> VEC_W<GICD_IGROUPR4_SPEC, 27> {
-        VEC_W::new(self)
+    pub fn vec(&mut self) -> VEC_W<GICD_IGROUPR4_SPEC> {
+        VEC_W::new(self, 27)
     }
     #[doc = "Bit 28 - CPG"]
     #[inline(always)]
     #[must_use]
-    pub fn cpg(&mut self) -> CPG_W<GICD_IGROUPR4_SPEC, 28> {
-        CPG_W::new(self)
+    pub fn cpg(&mut self) -> CPG_W<GICD_IGROUPR4_SPEC> {
+        CPG_W::new(self, 28)
     }
     #[doc = "Bit 29 - RNG"]
     #[inline(always)]
     #[must_use]
-    pub fn rng(&mut self) -> RNG_W<GICD_IGROUPR4_SPEC, 29> {
-        RNG_W::new(self)
+    pub fn rng(&mut self) -> RNG_W<GICD_IGROUPR4_SPEC> {
+        RNG_W::new(self, 29)
     }
     #[doc = "Bit 30 - OR of EMMC and EMMC2"]
     #[inline(always)]
     #[must_use]
-    pub fn emmc(&mut self) -> EMMC_W<GICD_IGROUPR4_SPEC, 30> {
-        EMMC_W::new(self)
+    pub fn emmc(&mut self) -> EMMC_W<GICD_IGROUPR4_SPEC> {
+        EMMC_W::new(self, 30)
     }
     #[doc = "Bit 31 - ETH_PCIe secure"]
     #[inline(always)]
     #[must_use]
-    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_IGROUPR4_SPEC, 31> {
-        ETH_PCIE_SECURE_W::new(self)
+    pub fn eth_pcie_secure(&mut self) -> ETH_PCIE_SECURE_W<GICD_IGROUPR4_SPEC> {
+        ETH_PCIE_SECURE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

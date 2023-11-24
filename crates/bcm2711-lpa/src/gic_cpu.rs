@@ -2,40 +2,102 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - CPU Interface Control"]
-    pub gicc_ctlr: GICC_CTLR,
-    #[doc = "0x04 - Interrupt Priority Mask"]
-    pub gicc_pmr: GICC_PMR,
-    #[doc = "0x08 - Binary Point"]
-    pub gicc_bpr: GICC_BPR,
-    #[doc = "0x0c - Interrupt Acknowledge"]
-    pub gicc_iar: GICC_IAR,
-    #[doc = "0x10 - End of Interrupt"]
-    pub gicc_eoir: GICC_EOIR,
-    #[doc = "0x14 - Running Priority"]
-    pub gicc_rpr: GICC_RPR,
-    #[doc = "0x18 - Highest Priority Pending Interrupt"]
-    pub gicc_hppir: GICC_HPPIR,
-    #[doc = "0x1c - Aliased Binary Point"]
-    pub gicc_abpr: GICC_ABPR,
-    #[doc = "0x20 - Aliased Interrupt Acknowledge"]
-    pub gicc_aiar: GICC_AIAR,
-    #[doc = "0x24 - Aliased End of Interrupt"]
-    pub gicc_aeoir: GICC_AEOIR,
-    #[doc = "0x28 - Aliased Highest Priority Pending Interrupt"]
-    pub gicc_ahppir: GICC_AHPPIR,
+    gicc_ctlr: GICC_CTLR,
+    gicc_pmr: GICC_PMR,
+    gicc_bpr: GICC_BPR,
+    gicc_iar: GICC_IAR,
+    gicc_eoir: GICC_EOIR,
+    gicc_rpr: GICC_RPR,
+    gicc_hppir: GICC_HPPIR,
+    gicc_abpr: GICC_ABPR,
+    gicc_aiar: GICC_AIAR,
+    gicc_aeoir: GICC_AEOIR,
+    gicc_ahppir: GICC_AHPPIR,
     _reserved11: [u8; 0xa4],
-    #[doc = "0xd0 - Active Priority"]
-    pub gicc_apr0: GICC_APR0,
+    gicc_apr0: GICC_APR0,
     _reserved12: [u8; 0x0c],
-    #[doc = "0xe0 - Non-Secure Active Priority"]
-    pub gicc_nsapr0: GICC_NSAPR0,
+    gicc_nsapr0: GICC_NSAPR0,
     _reserved13: [u8; 0x18],
-    #[doc = "0xfc - CPU Interface Identification Register"]
-    pub gicc_iidr: GICC_IIDR,
+    gicc_iidr: GICC_IIDR,
     _reserved14: [u8; 0x0f00],
+    gicc_dir: GICC_DIR,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - CPU Interface Control"]
+    #[inline(always)]
+    pub const fn gicc_ctlr(&self) -> &GICC_CTLR {
+        &self.gicc_ctlr
+    }
+    #[doc = "0x04 - Interrupt Priority Mask"]
+    #[inline(always)]
+    pub const fn gicc_pmr(&self) -> &GICC_PMR {
+        &self.gicc_pmr
+    }
+    #[doc = "0x08 - Binary Point"]
+    #[inline(always)]
+    pub const fn gicc_bpr(&self) -> &GICC_BPR {
+        &self.gicc_bpr
+    }
+    #[doc = "0x0c - Interrupt Acknowledge"]
+    #[inline(always)]
+    pub const fn gicc_iar(&self) -> &GICC_IAR {
+        &self.gicc_iar
+    }
+    #[doc = "0x10 - End of Interrupt"]
+    #[inline(always)]
+    pub const fn gicc_eoir(&self) -> &GICC_EOIR {
+        &self.gicc_eoir
+    }
+    #[doc = "0x14 - Running Priority"]
+    #[inline(always)]
+    pub const fn gicc_rpr(&self) -> &GICC_RPR {
+        &self.gicc_rpr
+    }
+    #[doc = "0x18 - Highest Priority Pending Interrupt"]
+    #[inline(always)]
+    pub const fn gicc_hppir(&self) -> &GICC_HPPIR {
+        &self.gicc_hppir
+    }
+    #[doc = "0x1c - Aliased Binary Point"]
+    #[inline(always)]
+    pub const fn gicc_abpr(&self) -> &GICC_ABPR {
+        &self.gicc_abpr
+    }
+    #[doc = "0x20 - Aliased Interrupt Acknowledge"]
+    #[inline(always)]
+    pub const fn gicc_aiar(&self) -> &GICC_AIAR {
+        &self.gicc_aiar
+    }
+    #[doc = "0x24 - Aliased End of Interrupt"]
+    #[inline(always)]
+    pub const fn gicc_aeoir(&self) -> &GICC_AEOIR {
+        &self.gicc_aeoir
+    }
+    #[doc = "0x28 - Aliased Highest Priority Pending Interrupt"]
+    #[inline(always)]
+    pub const fn gicc_ahppir(&self) -> &GICC_AHPPIR {
+        &self.gicc_ahppir
+    }
+    #[doc = "0xd0 - Active Priority"]
+    #[inline(always)]
+    pub const fn gicc_apr0(&self) -> &GICC_APR0 {
+        &self.gicc_apr0
+    }
+    #[doc = "0xe0 - Non-Secure Active Priority"]
+    #[inline(always)]
+    pub const fn gicc_nsapr0(&self) -> &GICC_NSAPR0 {
+        &self.gicc_nsapr0
+    }
+    #[doc = "0xfc - CPU Interface Identification Register"]
+    #[inline(always)]
+    pub const fn gicc_iidr(&self) -> &GICC_IIDR {
+        &self.gicc_iidr
+    }
     #[doc = "0x1000 - Deactivate Interrupt"]
-    pub gicc_dir: GICC_DIR,
+    #[inline(always)]
+    pub const fn gicc_dir(&self) -> &GICC_DIR {
+        &self.gicc_dir
+    }
 }
 #[doc = "GICC_CTLR (rw) register accessor: CPU Interface Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicc_ctlr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicc_ctlr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicc_ctlr`]
 module"]

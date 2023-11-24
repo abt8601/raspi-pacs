@@ -5,7 +5,7 @@ pub type W = crate::W<SPI_INT_SPT_SPEC>;
 #[doc = "Field `SELECT` reader - "]
 pub type SELECT_R = crate::FieldReader;
 #[doc = "Field `SELECT` writer - "]
-pub type SELECT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SELECT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<SPI_INT_SPT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn select(&mut self) -> SELECT_W<SPI_INT_SPT_SPEC, 0> {
-        SELECT_W::new(self)
+    pub fn select(&mut self) -> SELECT_W<SPI_INT_SPT_SPEC> {
+        SELECT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

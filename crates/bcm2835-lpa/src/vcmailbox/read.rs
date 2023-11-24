@@ -7,7 +7,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<READ_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Read messages from the VideoCore\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`read::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

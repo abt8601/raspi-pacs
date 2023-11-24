@@ -2,28 +2,70 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Read messages from the VideoCore"]
-    pub read: READ,
+    read: READ,
     _reserved1: [u8; 0x0c],
-    #[doc = "0x10 - "]
-    pub peek0: PEEK0,
-    #[doc = "0x14 - "]
-    pub sender0: SENDER0,
-    #[doc = "0x18 - "]
-    pub status0: STATUS0,
-    #[doc = "0x1c - "]
-    pub config0: CONFIG0,
-    #[doc = "0x20 - Write messages to the VideoCore"]
-    pub write: WRITE,
+    peek0: PEEK0,
+    sender0: SENDER0,
+    status0: STATUS0,
+    config0: CONFIG0,
+    write: WRITE,
     _reserved6: [u8; 0x0c],
+    peek1: PEEK1,
+    sender1: SENDER1,
+    status1: STATUS1,
+    config1: CONFIG1,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Read messages from the VideoCore"]
+    #[inline(always)]
+    pub const fn read(&self) -> &READ {
+        &self.read
+    }
+    #[doc = "0x10 - "]
+    #[inline(always)]
+    pub const fn peek0(&self) -> &PEEK0 {
+        &self.peek0
+    }
+    #[doc = "0x14 - "]
+    #[inline(always)]
+    pub const fn sender0(&self) -> &SENDER0 {
+        &self.sender0
+    }
+    #[doc = "0x18 - "]
+    #[inline(always)]
+    pub const fn status0(&self) -> &STATUS0 {
+        &self.status0
+    }
+    #[doc = "0x1c - "]
+    #[inline(always)]
+    pub const fn config0(&self) -> &CONFIG0 {
+        &self.config0
+    }
+    #[doc = "0x20 - Write messages to the VideoCore"]
+    #[inline(always)]
+    pub const fn write(&self) -> &WRITE {
+        &self.write
+    }
     #[doc = "0x30 - "]
-    pub peek1: PEEK1,
+    #[inline(always)]
+    pub const fn peek1(&self) -> &PEEK1 {
+        &self.peek1
+    }
     #[doc = "0x34 - "]
-    pub sender1: SENDER1,
+    #[inline(always)]
+    pub const fn sender1(&self) -> &SENDER1 {
+        &self.sender1
+    }
     #[doc = "0x38 - "]
-    pub status1: STATUS1,
+    #[inline(always)]
+    pub const fn status1(&self) -> &STATUS1 {
+        &self.status1
+    }
     #[doc = "0x3c - "]
-    pub config1: CONFIG1,
+    #[inline(always)]
+    pub const fn config1(&self) -> &CONFIG1 {
+        &self.config1
+    }
 }
 #[doc = "READ (r) register accessor: Read messages from the VideoCore\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`read::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@read`]
 module"]

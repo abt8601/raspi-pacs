@@ -44,8 +44,8 @@ impl DATA_SIZE_R {
     }
 }
 #[doc = "Field `DATA_SIZE` writer - UART word size"]
-pub type DATA_SIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, MODE_A>;
-impl<'a, REG, const O: u8> DATA_SIZE_W<'a, REG, O>
+pub type DATA_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, MODE_A>;
+impl<'a, REG> DATA_SIZE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -64,11 +64,11 @@ where
 #[doc = "Field `BREAK` reader - Pull TX low continuously to send break"]
 pub type BREAK_R = crate::BitReader;
 #[doc = "Field `BREAK` writer - Pull TX low continuously to send break"]
-pub type BREAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BREAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DLAB` reader - First two registers are baudrate"]
 pub type DLAB_R = crate::BitReader;
 #[doc = "Field `DLAB` writer - First two registers are baudrate"]
-pub type DLAB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DLAB_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - UART word size"]
     #[inline(always)]
@@ -97,27 +97,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<LCR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - UART word size"]
     #[inline(always)]
     #[must_use]
-    pub fn data_size(&mut self) -> DATA_SIZE_W<LCR_SPEC, 0> {
-        DATA_SIZE_W::new(self)
+    pub fn data_size(&mut self) -> DATA_SIZE_W<LCR_SPEC> {
+        DATA_SIZE_W::new(self, 0)
     }
     #[doc = "Bit 6 - Pull TX low continuously to send break"]
     #[inline(always)]
     #[must_use]
-    pub fn break_(&mut self) -> BREAK_W<LCR_SPEC, 6> {
-        BREAK_W::new(self)
+    pub fn break_(&mut self) -> BREAK_W<LCR_SPEC> {
+        BREAK_W::new(self, 6)
     }
     #[doc = "Bit 7 - First two registers are baudrate"]
     #[inline(always)]
     #[must_use]
-    pub fn dlab(&mut self) -> DLAB_W<LCR_SPEC, 7> {
-        DLAB_W::new(self)
+    pub fn dlab(&mut self) -> DLAB_W<LCR_SPEC> {
+        DLAB_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

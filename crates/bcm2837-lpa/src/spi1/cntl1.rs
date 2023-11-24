@@ -5,23 +5,23 @@ pub type W = crate::W<CNTL1_SPEC>;
 #[doc = "Field `KEEP_INPUT` reader - Don't clear the RX shift register before a new transaction"]
 pub type KEEP_INPUT_R = crate::BitReader;
 #[doc = "Field `KEEP_INPUT` writer - Don't clear the RX shift register before a new transaction"]
-pub type KEEP_INPUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type KEEP_INPUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSB_FIRST` reader - Shift the most significant bit first (MSB)"]
 pub type MSB_FIRST_R = crate::BitReader;
 #[doc = "Field `MSB_FIRST` writer - Shift the most significant bit first (MSB)"]
-pub type MSB_FIRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSB_FIRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DONE_ENABLE` reader - Enable DONE interrupt"]
 pub type DONE_ENABLE_R = crate::BitReader;
 #[doc = "Field `DONE_ENABLE` writer - Enable DONE interrupt"]
-pub type DONE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DONE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXE_ENABLE` reader - Enable TX empty interrupt"]
 pub type TXE_ENABLE_R = crate::BitReader;
 #[doc = "Field `TXE_ENABLE` writer - Enable TX empty interrupt"]
-pub type TXE_ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXE_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_HIGH_TIME` reader - Additional SPI clock cycles where CS is high"]
 pub type CS_HIGH_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_HIGH_TIME` writer - Additional SPI clock cycles where CS is high"]
-pub type CS_HIGH_TIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CS_HIGH_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 0 - Don't clear the RX shift register before a new transaction"]
     #[inline(always)]
@@ -65,39 +65,39 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CNTL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Don't clear the RX shift register before a new transaction"]
     #[inline(always)]
     #[must_use]
-    pub fn keep_input(&mut self) -> KEEP_INPUT_W<CNTL1_SPEC, 0> {
-        KEEP_INPUT_W::new(self)
+    pub fn keep_input(&mut self) -> KEEP_INPUT_W<CNTL1_SPEC> {
+        KEEP_INPUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Shift the most significant bit first (MSB)"]
     #[inline(always)]
     #[must_use]
-    pub fn msb_first(&mut self) -> MSB_FIRST_W<CNTL1_SPEC, 1> {
-        MSB_FIRST_W::new(self)
+    pub fn msb_first(&mut self) -> MSB_FIRST_W<CNTL1_SPEC> {
+        MSB_FIRST_W::new(self, 1)
     }
     #[doc = "Bit 6 - Enable DONE interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn done_enable(&mut self) -> DONE_ENABLE_W<CNTL1_SPEC, 6> {
-        DONE_ENABLE_W::new(self)
+    pub fn done_enable(&mut self) -> DONE_ENABLE_W<CNTL1_SPEC> {
+        DONE_ENABLE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable TX empty interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn txe_enable(&mut self) -> TXE_ENABLE_W<CNTL1_SPEC, 7> {
-        TXE_ENABLE_W::new(self)
+    pub fn txe_enable(&mut self) -> TXE_ENABLE_W<CNTL1_SPEC> {
+        TXE_ENABLE_W::new(self, 7)
     }
     #[doc = "Bits 8:10 - Additional SPI clock cycles where CS is high"]
     #[inline(always)]
     #[must_use]
-    pub fn cs_high_time(&mut self) -> CS_HIGH_TIME_W<CNTL1_SPEC, 8> {
-        CS_HIGH_TIME_W::new(self)
+    pub fn cs_high_time(&mut self) -> CS_HIGH_TIME_W<CNTL1_SPEC> {
+        CS_HIGH_TIME_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

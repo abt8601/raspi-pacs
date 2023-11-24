@@ -2,34 +2,92 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct GICD_ICFGR {
+    gicd_icfgr0: GICD_ICFGR0,
+    gicd_icfgr4: GICD_ICFGR4,
+    gicd_icfgr8: GICD_ICFGR8,
+    gicd_icfgr12: GICD_ICFGR12,
+    gicd_icfgr16: GICD_ICFGR16,
+    gicd_icfgr20: GICD_ICFGR20,
+    gicd_icfgr24: GICD_ICFGR24,
+    gicd_icfgr28: GICD_ICFGR28,
+    gicd_icfgr32: GICD_ICFGR32,
+    gicd_icfgr36: GICD_ICFGR36,
+    gicd_icfgr40: GICD_ICFGR40,
+    gicd_icfgr44: GICD_ICFGR44,
+    gicd_icfgr48: GICD_ICFGR48,
+    gicd_icfgr52: GICD_ICFGR52,
+}
+impl GICD_ICFGR {
     #[doc = "0x00 - Interrupt Configuration 0 - 15"]
-    pub gicd_icfgr0: GICD_ICFGR0,
+    #[inline(always)]
+    pub const fn gicd_icfgr0(&self) -> &GICD_ICFGR0 {
+        &self.gicd_icfgr0
+    }
     #[doc = "0x04 - Interrupt Configuration 16 - 31"]
-    pub gicd_icfgr4: GICD_ICFGR4,
+    #[inline(always)]
+    pub const fn gicd_icfgr4(&self) -> &GICD_ICFGR4 {
+        &self.gicd_icfgr4
+    }
     #[doc = "0x08 - Interrupt Configuration 32 - 47"]
-    pub gicd_icfgr8: GICD_ICFGR8,
+    #[inline(always)]
+    pub const fn gicd_icfgr8(&self) -> &GICD_ICFGR8 {
+        &self.gicd_icfgr8
+    }
     #[doc = "0x0c - Interrupt Configuration 48 - 63"]
-    pub gicd_icfgr12: GICD_ICFGR12,
+    #[inline(always)]
+    pub const fn gicd_icfgr12(&self) -> &GICD_ICFGR12 {
+        &self.gicd_icfgr12
+    }
     #[doc = "0x10 - Interrupt Configuration 64 - 79"]
-    pub gicd_icfgr16: GICD_ICFGR16,
+    #[inline(always)]
+    pub const fn gicd_icfgr16(&self) -> &GICD_ICFGR16 {
+        &self.gicd_icfgr16
+    }
     #[doc = "0x14 - Interrupt Configuration 80 - 95"]
-    pub gicd_icfgr20: GICD_ICFGR20,
+    #[inline(always)]
+    pub const fn gicd_icfgr20(&self) -> &GICD_ICFGR20 {
+        &self.gicd_icfgr20
+    }
     #[doc = "0x18 - Interrupt Configuration 96 - 111"]
-    pub gicd_icfgr24: GICD_ICFGR24,
+    #[inline(always)]
+    pub const fn gicd_icfgr24(&self) -> &GICD_ICFGR24 {
+        &self.gicd_icfgr24
+    }
     #[doc = "0x1c - Interrupt Configuration 112 - 127"]
-    pub gicd_icfgr28: GICD_ICFGR28,
+    #[inline(always)]
+    pub const fn gicd_icfgr28(&self) -> &GICD_ICFGR28 {
+        &self.gicd_icfgr28
+    }
     #[doc = "0x20 - Interrupt Configuration 128 - 143"]
-    pub gicd_icfgr32: GICD_ICFGR32,
+    #[inline(always)]
+    pub const fn gicd_icfgr32(&self) -> &GICD_ICFGR32 {
+        &self.gicd_icfgr32
+    }
     #[doc = "0x24 - Interrupt Configuration 144 - 159"]
-    pub gicd_icfgr36: GICD_ICFGR36,
+    #[inline(always)]
+    pub const fn gicd_icfgr36(&self) -> &GICD_ICFGR36 {
+        &self.gicd_icfgr36
+    }
     #[doc = "0x28 - Interrupt Configuration 160 - 175"]
-    pub gicd_icfgr40: GICD_ICFGR40,
+    #[inline(always)]
+    pub const fn gicd_icfgr40(&self) -> &GICD_ICFGR40 {
+        &self.gicd_icfgr40
+    }
     #[doc = "0x2c - Interrupt Configuration 176 - 191"]
-    pub gicd_icfgr44: GICD_ICFGR44,
+    #[inline(always)]
+    pub const fn gicd_icfgr44(&self) -> &GICD_ICFGR44 {
+        &self.gicd_icfgr44
+    }
     #[doc = "0x30 - Interrupt Configuration 192 - 207"]
-    pub gicd_icfgr48: GICD_ICFGR48,
+    #[inline(always)]
+    pub const fn gicd_icfgr48(&self) -> &GICD_ICFGR48 {
+        &self.gicd_icfgr48
+    }
     #[doc = "0x34 - Interrupt Configuration 208 - 223"]
-    pub gicd_icfgr52: GICD_ICFGR52,
+    #[inline(always)]
+    pub const fn gicd_icfgr52(&self) -> &GICD_ICFGR52 {
+        &self.gicd_icfgr52
+    }
 }
 #[doc = "GICD_ICFGR0 (rw) register accessor: Interrupt Configuration 0 - 15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gicd_icfgr0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gicd_icfgr0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gicd_icfgr0`]
 module"]

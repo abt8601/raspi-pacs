@@ -5,7 +5,7 @@ pub type W = crate::W<MCR_SPEC>;
 #[doc = "Field `RTS` reader - RTS is low"]
 pub type RTS_R = crate::BitReader;
 #[doc = "Field `RTS` writer - RTS is low"]
-pub type RTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - RTS is low"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<MCR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - RTS is low"]
     #[inline(always)]
     #[must_use]
-    pub fn rts(&mut self) -> RTS_W<MCR_SPEC, 1> {
-        RTS_W::new(self)
+    pub fn rts(&mut self) -> RTS_W<MCR_SPEC> {
+        RTS_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

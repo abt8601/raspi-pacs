@@ -5,91 +5,91 @@ pub type W = crate::W<GPAREN1_SPEC>;
 #[doc = "Field `AREN32` reader - Async rising enabled 32"]
 pub type AREN32_R = crate::BitReader;
 #[doc = "Field `AREN32` writer - Async rising enabled 32"]
-pub type AREN32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN33` reader - Async rising enabled 33"]
 pub type AREN33_R = crate::BitReader;
 #[doc = "Field `AREN33` writer - Async rising enabled 33"]
-pub type AREN33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN34` reader - Async rising enabled 34"]
 pub type AREN34_R = crate::BitReader;
 #[doc = "Field `AREN34` writer - Async rising enabled 34"]
-pub type AREN34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN35` reader - Async rising enabled 35"]
 pub type AREN35_R = crate::BitReader;
 #[doc = "Field `AREN35` writer - Async rising enabled 35"]
-pub type AREN35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN36` reader - Async rising enabled 36"]
 pub type AREN36_R = crate::BitReader;
 #[doc = "Field `AREN36` writer - Async rising enabled 36"]
-pub type AREN36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN37` reader - Async rising enabled 37"]
 pub type AREN37_R = crate::BitReader;
 #[doc = "Field `AREN37` writer - Async rising enabled 37"]
-pub type AREN37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN38` reader - Async rising enabled 38"]
 pub type AREN38_R = crate::BitReader;
 #[doc = "Field `AREN38` writer - Async rising enabled 38"]
-pub type AREN38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN39` reader - Async rising enabled 39"]
 pub type AREN39_R = crate::BitReader;
 #[doc = "Field `AREN39` writer - Async rising enabled 39"]
-pub type AREN39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN40` reader - Async rising enabled 40"]
 pub type AREN40_R = crate::BitReader;
 #[doc = "Field `AREN40` writer - Async rising enabled 40"]
-pub type AREN40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN41` reader - Async rising enabled 41"]
 pub type AREN41_R = crate::BitReader;
 #[doc = "Field `AREN41` writer - Async rising enabled 41"]
-pub type AREN41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN42` reader - Async rising enabled 42"]
 pub type AREN42_R = crate::BitReader;
 #[doc = "Field `AREN42` writer - Async rising enabled 42"]
-pub type AREN42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN43` reader - Async rising enabled 43"]
 pub type AREN43_R = crate::BitReader;
 #[doc = "Field `AREN43` writer - Async rising enabled 43"]
-pub type AREN43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN44` reader - Async rising enabled 44"]
 pub type AREN44_R = crate::BitReader;
 #[doc = "Field `AREN44` writer - Async rising enabled 44"]
-pub type AREN44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN45` reader - Async rising enabled 45"]
 pub type AREN45_R = crate::BitReader;
 #[doc = "Field `AREN45` writer - Async rising enabled 45"]
-pub type AREN45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN46` reader - Async rising enabled 46"]
 pub type AREN46_R = crate::BitReader;
 #[doc = "Field `AREN46` writer - Async rising enabled 46"]
-pub type AREN46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN47` reader - Async rising enabled 47"]
 pub type AREN47_R = crate::BitReader;
 #[doc = "Field `AREN47` writer - Async rising enabled 47"]
-pub type AREN47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN48` reader - Async rising enabled 48"]
 pub type AREN48_R = crate::BitReader;
 #[doc = "Field `AREN48` writer - Async rising enabled 48"]
-pub type AREN48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN49` reader - Async rising enabled 49"]
 pub type AREN49_R = crate::BitReader;
 #[doc = "Field `AREN49` writer - Async rising enabled 49"]
-pub type AREN49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN49_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN50` reader - Async rising enabled 50"]
 pub type AREN50_R = crate::BitReader;
 #[doc = "Field `AREN50` writer - Async rising enabled 50"]
-pub type AREN50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN51` reader - Async rising enabled 51"]
 pub type AREN51_R = crate::BitReader;
 #[doc = "Field `AREN51` writer - Async rising enabled 51"]
-pub type AREN51_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN51_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN52` reader - Async rising enabled 52"]
 pub type AREN52_R = crate::BitReader;
 #[doc = "Field `AREN52` writer - Async rising enabled 52"]
-pub type AREN52_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN52_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AREN53` reader - Async rising enabled 53"]
 pub type AREN53_R = crate::BitReader;
 #[doc = "Field `AREN53` writer - Async rising enabled 53"]
-pub type AREN53_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AREN53_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Async rising enabled 32"]
     #[inline(always)]
@@ -232,141 +232,141 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPAREN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Async rising enabled 32"]
     #[inline(always)]
     #[must_use]
-    pub fn aren32(&mut self) -> AREN32_W<GPAREN1_SPEC, 0> {
-        AREN32_W::new(self)
+    pub fn aren32(&mut self) -> AREN32_W<GPAREN1_SPEC> {
+        AREN32_W::new(self, 0)
     }
     #[doc = "Bit 1 - Async rising enabled 33"]
     #[inline(always)]
     #[must_use]
-    pub fn aren33(&mut self) -> AREN33_W<GPAREN1_SPEC, 1> {
-        AREN33_W::new(self)
+    pub fn aren33(&mut self) -> AREN33_W<GPAREN1_SPEC> {
+        AREN33_W::new(self, 1)
     }
     #[doc = "Bit 2 - Async rising enabled 34"]
     #[inline(always)]
     #[must_use]
-    pub fn aren34(&mut self) -> AREN34_W<GPAREN1_SPEC, 2> {
-        AREN34_W::new(self)
+    pub fn aren34(&mut self) -> AREN34_W<GPAREN1_SPEC> {
+        AREN34_W::new(self, 2)
     }
     #[doc = "Bit 3 - Async rising enabled 35"]
     #[inline(always)]
     #[must_use]
-    pub fn aren35(&mut self) -> AREN35_W<GPAREN1_SPEC, 3> {
-        AREN35_W::new(self)
+    pub fn aren35(&mut self) -> AREN35_W<GPAREN1_SPEC> {
+        AREN35_W::new(self, 3)
     }
     #[doc = "Bit 4 - Async rising enabled 36"]
     #[inline(always)]
     #[must_use]
-    pub fn aren36(&mut self) -> AREN36_W<GPAREN1_SPEC, 4> {
-        AREN36_W::new(self)
+    pub fn aren36(&mut self) -> AREN36_W<GPAREN1_SPEC> {
+        AREN36_W::new(self, 4)
     }
     #[doc = "Bit 5 - Async rising enabled 37"]
     #[inline(always)]
     #[must_use]
-    pub fn aren37(&mut self) -> AREN37_W<GPAREN1_SPEC, 5> {
-        AREN37_W::new(self)
+    pub fn aren37(&mut self) -> AREN37_W<GPAREN1_SPEC> {
+        AREN37_W::new(self, 5)
     }
     #[doc = "Bit 6 - Async rising enabled 38"]
     #[inline(always)]
     #[must_use]
-    pub fn aren38(&mut self) -> AREN38_W<GPAREN1_SPEC, 6> {
-        AREN38_W::new(self)
+    pub fn aren38(&mut self) -> AREN38_W<GPAREN1_SPEC> {
+        AREN38_W::new(self, 6)
     }
     #[doc = "Bit 7 - Async rising enabled 39"]
     #[inline(always)]
     #[must_use]
-    pub fn aren39(&mut self) -> AREN39_W<GPAREN1_SPEC, 7> {
-        AREN39_W::new(self)
+    pub fn aren39(&mut self) -> AREN39_W<GPAREN1_SPEC> {
+        AREN39_W::new(self, 7)
     }
     #[doc = "Bit 8 - Async rising enabled 40"]
     #[inline(always)]
     #[must_use]
-    pub fn aren40(&mut self) -> AREN40_W<GPAREN1_SPEC, 8> {
-        AREN40_W::new(self)
+    pub fn aren40(&mut self) -> AREN40_W<GPAREN1_SPEC> {
+        AREN40_W::new(self, 8)
     }
     #[doc = "Bit 9 - Async rising enabled 41"]
     #[inline(always)]
     #[must_use]
-    pub fn aren41(&mut self) -> AREN41_W<GPAREN1_SPEC, 9> {
-        AREN41_W::new(self)
+    pub fn aren41(&mut self) -> AREN41_W<GPAREN1_SPEC> {
+        AREN41_W::new(self, 9)
     }
     #[doc = "Bit 10 - Async rising enabled 42"]
     #[inline(always)]
     #[must_use]
-    pub fn aren42(&mut self) -> AREN42_W<GPAREN1_SPEC, 10> {
-        AREN42_W::new(self)
+    pub fn aren42(&mut self) -> AREN42_W<GPAREN1_SPEC> {
+        AREN42_W::new(self, 10)
     }
     #[doc = "Bit 11 - Async rising enabled 43"]
     #[inline(always)]
     #[must_use]
-    pub fn aren43(&mut self) -> AREN43_W<GPAREN1_SPEC, 11> {
-        AREN43_W::new(self)
+    pub fn aren43(&mut self) -> AREN43_W<GPAREN1_SPEC> {
+        AREN43_W::new(self, 11)
     }
     #[doc = "Bit 12 - Async rising enabled 44"]
     #[inline(always)]
     #[must_use]
-    pub fn aren44(&mut self) -> AREN44_W<GPAREN1_SPEC, 12> {
-        AREN44_W::new(self)
+    pub fn aren44(&mut self) -> AREN44_W<GPAREN1_SPEC> {
+        AREN44_W::new(self, 12)
     }
     #[doc = "Bit 13 - Async rising enabled 45"]
     #[inline(always)]
     #[must_use]
-    pub fn aren45(&mut self) -> AREN45_W<GPAREN1_SPEC, 13> {
-        AREN45_W::new(self)
+    pub fn aren45(&mut self) -> AREN45_W<GPAREN1_SPEC> {
+        AREN45_W::new(self, 13)
     }
     #[doc = "Bit 14 - Async rising enabled 46"]
     #[inline(always)]
     #[must_use]
-    pub fn aren46(&mut self) -> AREN46_W<GPAREN1_SPEC, 14> {
-        AREN46_W::new(self)
+    pub fn aren46(&mut self) -> AREN46_W<GPAREN1_SPEC> {
+        AREN46_W::new(self, 14)
     }
     #[doc = "Bit 15 - Async rising enabled 47"]
     #[inline(always)]
     #[must_use]
-    pub fn aren47(&mut self) -> AREN47_W<GPAREN1_SPEC, 15> {
-        AREN47_W::new(self)
+    pub fn aren47(&mut self) -> AREN47_W<GPAREN1_SPEC> {
+        AREN47_W::new(self, 15)
     }
     #[doc = "Bit 16 - Async rising enabled 48"]
     #[inline(always)]
     #[must_use]
-    pub fn aren48(&mut self) -> AREN48_W<GPAREN1_SPEC, 16> {
-        AREN48_W::new(self)
+    pub fn aren48(&mut self) -> AREN48_W<GPAREN1_SPEC> {
+        AREN48_W::new(self, 16)
     }
     #[doc = "Bit 17 - Async rising enabled 49"]
     #[inline(always)]
     #[must_use]
-    pub fn aren49(&mut self) -> AREN49_W<GPAREN1_SPEC, 17> {
-        AREN49_W::new(self)
+    pub fn aren49(&mut self) -> AREN49_W<GPAREN1_SPEC> {
+        AREN49_W::new(self, 17)
     }
     #[doc = "Bit 18 - Async rising enabled 50"]
     #[inline(always)]
     #[must_use]
-    pub fn aren50(&mut self) -> AREN50_W<GPAREN1_SPEC, 18> {
-        AREN50_W::new(self)
+    pub fn aren50(&mut self) -> AREN50_W<GPAREN1_SPEC> {
+        AREN50_W::new(self, 18)
     }
     #[doc = "Bit 19 - Async rising enabled 51"]
     #[inline(always)]
     #[must_use]
-    pub fn aren51(&mut self) -> AREN51_W<GPAREN1_SPEC, 19> {
-        AREN51_W::new(self)
+    pub fn aren51(&mut self) -> AREN51_W<GPAREN1_SPEC> {
+        AREN51_W::new(self, 19)
     }
     #[doc = "Bit 20 - Async rising enabled 52"]
     #[inline(always)]
     #[must_use]
-    pub fn aren52(&mut self) -> AREN52_W<GPAREN1_SPEC, 20> {
-        AREN52_W::new(self)
+    pub fn aren52(&mut self) -> AREN52_W<GPAREN1_SPEC> {
+        AREN52_W::new(self, 20)
     }
     #[doc = "Bit 21 - Async rising enabled 53"]
     #[inline(always)]
     #[must_use]
-    pub fn aren53(&mut self) -> AREN53_W<GPAREN1_SPEC, 21> {
-        AREN53_W::new(self)
+    pub fn aren53(&mut self) -> AREN53_W<GPAREN1_SPEC> {
+        AREN53_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<ENABLES_SPEC>;
 #[doc = "Field `UART_1` reader - UART1 enabled"]
 pub type UART_1_R = crate::BitReader;
 #[doc = "Field `UART_1` writer - UART1 enabled"]
-pub type UART_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_1` reader - SPI1 enabled"]
 pub type SPI_1_R = crate::BitReader;
 #[doc = "Field `SPI_1` writer - SPI1 enabled"]
-pub type SPI_1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_2` reader - SPI2 enabled"]
 pub type SPI_2_R = crate::BitReader;
 #[doc = "Field `SPI_2` writer - SPI2 enabled"]
-pub type SPI_2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - UART1 enabled"]
     #[inline(always)]
@@ -42,27 +42,27 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<ENABLES_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - UART1 enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn uart_1(&mut self) -> UART_1_W<ENABLES_SPEC, 0> {
-        UART_1_W::new(self)
+    pub fn uart_1(&mut self) -> UART_1_W<ENABLES_SPEC> {
+        UART_1_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI1 enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_1(&mut self) -> SPI_1_W<ENABLES_SPEC, 1> {
-        SPI_1_W::new(self)
+    pub fn spi_1(&mut self) -> SPI_1_W<ENABLES_SPEC> {
+        SPI_1_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI2 enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_2(&mut self) -> SPI_2_W<ENABLES_SPEC, 2> {
-        SPI_2_W::new(self)
+    pub fn spi_2(&mut self) -> SPI_2_W<ENABLES_SPEC> {
+        SPI_2_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

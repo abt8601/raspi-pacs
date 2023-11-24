@@ -5,7 +5,7 @@ pub type W = crate::W<TUNE_STEP_SPEC>;
 #[doc = "Field `DELAY` reader - "]
 pub type DELAY_R = crate::FieldReader;
 #[doc = "Field `DELAY` writer - "]
-pub type DELAY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TUNE_STEP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     #[must_use]
-    pub fn delay(&mut self) -> DELAY_W<TUNE_STEP_SPEC, 0> {
-        DELAY_W::new(self)
+    pub fn delay(&mut self) -> DELAY_W<TUNE_STEP_SPEC> {
+        DELAY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,43 +5,43 @@ pub type W = crate::W<CONTROL0_SPEC>;
 #[doc = "Field `HCTL_DWIDTH` reader - Use 4 data lines"]
 pub type HCTL_DWIDTH_R = crate::BitReader;
 #[doc = "Field `HCTL_DWIDTH` writer - Use 4 data lines"]
-pub type HCTL_DWIDTH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HCTL_DWIDTH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HCTL_HS_EN` reader - Enable high speed mode"]
 pub type HCTL_HS_EN_R = crate::BitReader;
 #[doc = "Field `HCTL_HS_EN` writer - Enable high speed mode"]
-pub type HCTL_HS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HCTL_HS_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HCTL_8BIT` reader - Use 8 data lines"]
 pub type HCTL_8BIT_R = crate::BitReader;
 #[doc = "Field `HCTL_8BIT` writer - Use 8 data lines"]
-pub type HCTL_8BIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HCTL_8BIT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAP_STOP` reader - Stop the current transaction at the next block gap"]
 pub type GAP_STOP_R = crate::BitReader;
 #[doc = "Field `GAP_STOP` writer - Stop the current transaction at the next block gap"]
-pub type GAP_STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAP_STOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAP_RESTART` reader - Restart a transaction stopped by GAP_STOP"]
 pub type GAP_RESTART_R = crate::BitReader;
 #[doc = "Field `GAP_RESTART` writer - Restart a transaction stopped by GAP_STOP"]
-pub type GAP_RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAP_RESTART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `READWAIT_EN` reader - Use DAT2 read/wait protocol"]
 pub type READWAIT_EN_R = crate::BitReader;
 #[doc = "Field `READWAIT_EN` writer - Use DAT2 read/wait protocol"]
-pub type READWAIT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READWAIT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GAP_IEN` reader - Enable interrupt on block gap"]
 pub type GAP_IEN_R = crate::BitReader;
 #[doc = "Field `GAP_IEN` writer - Enable interrupt on block gap"]
-pub type GAP_IEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GAP_IEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI_MODE` reader - Enable SPI mode"]
 pub type SPI_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MODE` writer - Enable SPI mode"]
-pub type SPI_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BOOT_EN` reader - Boot mode enabled"]
 pub type BOOT_EN_R = crate::BitReader;
 #[doc = "Field `BOOT_EN` writer - Boot mode enabled"]
-pub type BOOT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BOOT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALT_BOOT_EN` reader - Enable alternate boot mode"]
 pub type ALT_BOOT_EN_R = crate::BitReader;
 #[doc = "Field `ALT_BOOT_EN` writer - Enable alternate boot mode"]
-pub type ALT_BOOT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALT_BOOT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Use 4 data lines"]
     #[inline(always)]
@@ -112,69 +112,69 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CONTROL0_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 1 - Use 4 data lines"]
     #[inline(always)]
     #[must_use]
-    pub fn hctl_dwidth(&mut self) -> HCTL_DWIDTH_W<CONTROL0_SPEC, 1> {
-        HCTL_DWIDTH_W::new(self)
+    pub fn hctl_dwidth(&mut self) -> HCTL_DWIDTH_W<CONTROL0_SPEC> {
+        HCTL_DWIDTH_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable high speed mode"]
     #[inline(always)]
     #[must_use]
-    pub fn hctl_hs_en(&mut self) -> HCTL_HS_EN_W<CONTROL0_SPEC, 2> {
-        HCTL_HS_EN_W::new(self)
+    pub fn hctl_hs_en(&mut self) -> HCTL_HS_EN_W<CONTROL0_SPEC> {
+        HCTL_HS_EN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Use 8 data lines"]
     #[inline(always)]
     #[must_use]
-    pub fn hctl_8bit(&mut self) -> HCTL_8BIT_W<CONTROL0_SPEC, 5> {
-        HCTL_8BIT_W::new(self)
+    pub fn hctl_8bit(&mut self) -> HCTL_8BIT_W<CONTROL0_SPEC> {
+        HCTL_8BIT_W::new(self, 5)
     }
     #[doc = "Bit 16 - Stop the current transaction at the next block gap"]
     #[inline(always)]
     #[must_use]
-    pub fn gap_stop(&mut self) -> GAP_STOP_W<CONTROL0_SPEC, 16> {
-        GAP_STOP_W::new(self)
+    pub fn gap_stop(&mut self) -> GAP_STOP_W<CONTROL0_SPEC> {
+        GAP_STOP_W::new(self, 16)
     }
     #[doc = "Bit 17 - Restart a transaction stopped by GAP_STOP"]
     #[inline(always)]
     #[must_use]
-    pub fn gap_restart(&mut self) -> GAP_RESTART_W<CONTROL0_SPEC, 17> {
-        GAP_RESTART_W::new(self)
+    pub fn gap_restart(&mut self) -> GAP_RESTART_W<CONTROL0_SPEC> {
+        GAP_RESTART_W::new(self, 17)
     }
     #[doc = "Bit 18 - Use DAT2 read/wait protocol"]
     #[inline(always)]
     #[must_use]
-    pub fn readwait_en(&mut self) -> READWAIT_EN_W<CONTROL0_SPEC, 18> {
-        READWAIT_EN_W::new(self)
+    pub fn readwait_en(&mut self) -> READWAIT_EN_W<CONTROL0_SPEC> {
+        READWAIT_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable interrupt on block gap"]
     #[inline(always)]
     #[must_use]
-    pub fn gap_ien(&mut self) -> GAP_IEN_W<CONTROL0_SPEC, 19> {
-        GAP_IEN_W::new(self)
+    pub fn gap_ien(&mut self) -> GAP_IEN_W<CONTROL0_SPEC> {
+        GAP_IEN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Enable SPI mode"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_mode(&mut self) -> SPI_MODE_W<CONTROL0_SPEC, 20> {
-        SPI_MODE_W::new(self)
+    pub fn spi_mode(&mut self) -> SPI_MODE_W<CONTROL0_SPEC> {
+        SPI_MODE_W::new(self, 20)
     }
     #[doc = "Bit 21 - Boot mode enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn boot_en(&mut self) -> BOOT_EN_W<CONTROL0_SPEC, 21> {
-        BOOT_EN_W::new(self)
+    pub fn boot_en(&mut self) -> BOOT_EN_W<CONTROL0_SPEC> {
+        BOOT_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Enable alternate boot mode"]
     #[inline(always)]
     #[must_use]
-    pub fn alt_boot_en(&mut self) -> ALT_BOOT_EN_W<CONTROL0_SPEC, 22> {
-        ALT_BOOT_EN_W::new(self)
+    pub fn alt_boot_en(&mut self) -> ALT_BOOT_EN_W<CONTROL0_SPEC> {
+        ALT_BOOT_EN_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

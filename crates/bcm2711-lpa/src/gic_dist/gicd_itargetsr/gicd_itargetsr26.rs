@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR26_SPEC>;
 #[doc = "Field `ISP` reader - ISP"]
 pub type ISP_R = crate::FieldReader;
 #[doc = "Field `ISP` writer - ISP"]
-pub type ISP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ISP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `USB` reader - USB"]
 pub type USB_R = crate::FieldReader;
 #[doc = "Field `USB` writer - USB"]
-pub type USB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type USB_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `V3D` reader - V3D"]
 pub type V3D_R = crate::FieldReader;
 #[doc = "Field `V3D` writer - V3D"]
-pub type V3D_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type V3D_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `TRANSPOSER` reader - Transposer"]
 pub type TRANSPOSER_R = crate::FieldReader;
 #[doc = "Field `TRANSPOSER` writer - Transposer"]
-pub type TRANSPOSER_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type TRANSPOSER_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - ISP"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR26_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - ISP"]
     #[inline(always)]
     #[must_use]
-    pub fn isp(&mut self) -> ISP_W<GICD_ITARGETSR26_SPEC, 0> {
-        ISP_W::new(self)
+    pub fn isp(&mut self) -> ISP_W<GICD_ITARGETSR26_SPEC> {
+        ISP_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - USB"]
     #[inline(always)]
     #[must_use]
-    pub fn usb(&mut self) -> USB_W<GICD_ITARGETSR26_SPEC, 8> {
-        USB_W::new(self)
+    pub fn usb(&mut self) -> USB_W<GICD_ITARGETSR26_SPEC> {
+        USB_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - V3D"]
     #[inline(always)]
     #[must_use]
-    pub fn v3d(&mut self) -> V3D_W<GICD_ITARGETSR26_SPEC, 16> {
-        V3D_W::new(self)
+    pub fn v3d(&mut self) -> V3D_W<GICD_ITARGETSR26_SPEC> {
+        V3D_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Transposer"]
     #[inline(always)]
     #[must_use]
-    pub fn transposer(&mut self) -> TRANSPOSER_W<GICD_ITARGETSR26_SPEC, 24> {
-        TRANSPOSER_W::new(self)
+    pub fn transposer(&mut self) -> TRANSPOSER_W<GICD_ITARGETSR26_SPEC> {
+        TRANSPOSER_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -2,24 +2,58 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Control"]
-    pub ctl: CTL,
-    #[doc = "0x04 - Status"]
-    pub sta: STA,
-    #[doc = "0x08 - DMA control"]
-    pub dmac: DMAC,
+    ctl: CTL,
+    sta: STA,
+    dmac: DMAC,
     _reserved3: [u8; 0x04],
-    #[doc = "0x10 - Range for channel 1"]
-    pub rng1: RNG1,
-    #[doc = "0x14 - Channel 1 data"]
-    pub dat1: DAT1,
-    #[doc = "0x18 - FIFO input"]
-    pub fif1: FIF1,
+    rng1: RNG1,
+    dat1: DAT1,
+    fif1: FIF1,
     _reserved6: [u8; 0x04],
+    rng2: RNG2,
+    dat2: DAT2,
+}
+impl RegisterBlock {
+    #[doc = "0x00 - Control"]
+    #[inline(always)]
+    pub const fn ctl(&self) -> &CTL {
+        &self.ctl
+    }
+    #[doc = "0x04 - Status"]
+    #[inline(always)]
+    pub const fn sta(&self) -> &STA {
+        &self.sta
+    }
+    #[doc = "0x08 - DMA control"]
+    #[inline(always)]
+    pub const fn dmac(&self) -> &DMAC {
+        &self.dmac
+    }
+    #[doc = "0x10 - Range for channel 1"]
+    #[inline(always)]
+    pub const fn rng1(&self) -> &RNG1 {
+        &self.rng1
+    }
+    #[doc = "0x14 - Channel 1 data"]
+    #[inline(always)]
+    pub const fn dat1(&self) -> &DAT1 {
+        &self.dat1
+    }
+    #[doc = "0x18 - FIFO input"]
+    #[inline(always)]
+    pub const fn fif1(&self) -> &FIF1 {
+        &self.fif1
+    }
     #[doc = "0x20 - Range for channel 2"]
-    pub rng2: RNG2,
+    #[inline(always)]
+    pub const fn rng2(&self) -> &RNG2 {
+        &self.rng2
+    }
     #[doc = "0x24 - Channel 2 data"]
-    pub dat2: DAT2,
+    #[inline(always)]
+    pub const fn dat2(&self) -> &DAT2 {
+        &self.dat2
+    }
 }
 #[doc = "CTL (rw) register accessor: Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctl`]
 module"]

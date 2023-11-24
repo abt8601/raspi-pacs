@@ -2,22 +2,56 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
+    c: C,
+    s: S,
+    dlen: DLEN,
+    a: A,
+    fifo: FIFO,
+    div: DIV,
+    del: DEL,
+    clkt: CLKT,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Control"]
-    pub c: C,
+    #[inline(always)]
+    pub const fn c(&self) -> &C {
+        &self.c
+    }
     #[doc = "0x04 - Status"]
-    pub s: S,
+    #[inline(always)]
+    pub const fn s(&self) -> &S {
+        &self.s
+    }
     #[doc = "0x08 - Data length"]
-    pub dlen: DLEN,
+    #[inline(always)]
+    pub const fn dlen(&self) -> &DLEN {
+        &self.dlen
+    }
     #[doc = "0x0c - Slave address"]
-    pub a: A,
+    #[inline(always)]
+    pub const fn a(&self) -> &A {
+        &self.a
+    }
     #[doc = "0x10 - Data FIFO"]
-    pub fifo: FIFO,
+    #[inline(always)]
+    pub const fn fifo(&self) -> &FIFO {
+        &self.fifo
+    }
     #[doc = "0x14 - Clock divider"]
-    pub div: DIV,
+    #[inline(always)]
+    pub const fn div(&self) -> &DIV {
+        &self.div
+    }
     #[doc = "0x18 - Data delay (Values must be under CDIV / 2)"]
-    pub del: DEL,
+    #[inline(always)]
+    pub const fn del(&self) -> &DEL {
+        &self.del
+    }
     #[doc = "0x1c - Clock stretch timeout (broken on 283x)"]
-    pub clkt: CLKT,
+    #[inline(always)]
+    pub const fn clkt(&self) -> &CLKT {
+        &self.clkt
+    }
 }
 #[doc = "C (rw) register accessor: Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c`]
 module"]

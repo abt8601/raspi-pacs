@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR37_SPEC>;
 #[doc = "Field `GPIO_3` reader - GPIO 3"]
 pub type GPIO_3_R = crate::FieldReader;
 #[doc = "Field `GPIO_3` writer - GPIO 3"]
-pub type GPIO_3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type GPIO_3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `I2C` reader - OR of all I2C"]
 pub type I2C_R = crate::FieldReader;
 #[doc = "Field `I2C` writer - OR of all I2C"]
-pub type I2C_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type I2C_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SPI` reader - OR of all SPI"]
 pub type SPI_R = crate::FieldReader;
 #[doc = "Field `SPI` writer - OR of all SPI"]
-pub type SPI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPI_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `PCM_I2S` reader - PCM/I2S"]
 pub type PCM_I2S_R = crate::FieldReader;
 #[doc = "Field `PCM_I2S` writer - PCM/I2S"]
-pub type PCM_I2S_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PCM_I2S_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - GPIO 3"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR37_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - GPIO 3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_IPRIORITYR37_SPEC, 0> {
-        GPIO_3_W::new(self)
+    pub fn gpio_3(&mut self) -> GPIO_3_W<GICD_IPRIORITYR37_SPEC> {
+        GPIO_3_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - OR of all I2C"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c(&mut self) -> I2C_W<GICD_IPRIORITYR37_SPEC, 8> {
-        I2C_W::new(self)
+    pub fn i2c(&mut self) -> I2C_W<GICD_IPRIORITYR37_SPEC> {
+        I2C_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - OR of all SPI"]
     #[inline(always)]
     #[must_use]
-    pub fn spi(&mut self) -> SPI_W<GICD_IPRIORITYR37_SPEC, 16> {
-        SPI_W::new(self)
+    pub fn spi(&mut self) -> SPI_W<GICD_IPRIORITYR37_SPEC> {
+        SPI_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - PCM/I2S"]
     #[inline(always)]
     #[must_use]
-    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_IPRIORITYR37_SPEC, 24> {
-        PCM_I2S_W::new(self)
+    pub fn pcm_i2s(&mut self) -> PCM_I2S_W<GICD_IPRIORITYR37_SPEC> {
+        PCM_I2S_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<CS_SPEC>;
 #[doc = "Field `CS` reader - Chip select"]
 pub type CS_R = crate::FieldReader;
 #[doc = "Field `CS` writer - Chip select"]
-pub type CS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CPHA` reader - Clock phase"]
 pub type CPHA_R = crate::BitReader;
 #[doc = "Field `CPHA` writer - Clock phase"]
-pub type CPHA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPHA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CPOL` reader - Clock polarity"]
 pub type CPOL_R = crate::BitReader;
 #[doc = "Field `CPOL` writer - Clock polarity"]
-pub type CPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CPOL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLEAR` reader - Clear the FIFO(s)"]
 pub type CLEAR_R = crate::FieldReader<CLEAR_A>;
 #[doc = "Clear the FIFO(s)\n\nValue on reset: 0"]
@@ -64,8 +64,8 @@ impl CLEAR_R {
     }
 }
 #[doc = "Field `CLEAR` writer - Clear the FIFO(s)"]
-pub type CLEAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, CLEAR_A>;
-impl<'a, REG, const O: u8> CLEAR_W<'a, REG, O>
+pub type CLEAR_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CLEAR_A>;
+impl<'a, REG> CLEAR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -89,43 +89,43 @@ where
 #[doc = "Field `CSPOL` reader - Chip select polarity"]
 pub type CSPOL_R = crate::BitReader;
 #[doc = "Field `CSPOL` writer - Chip select polarity"]
-pub type CSPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPOL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TA` reader - Transfer active"]
 pub type TA_R = crate::BitReader;
 #[doc = "Field `TA` writer - Transfer active"]
-pub type TA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMAEN` reader - Enable DMA"]
 pub type DMAEN_R = crate::BitReader;
 #[doc = "Field `DMAEN` writer - Enable DMA"]
-pub type DMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTD` reader - Interrupt on done"]
 pub type INTD_R = crate::BitReader;
 #[doc = "Field `INTD` writer - Interrupt on done"]
-pub type INTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTR` reader - Interrupt on RX"]
 pub type INTR_R = crate::BitReader;
 #[doc = "Field `INTR` writer - Interrupt on RX"]
-pub type INTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADCS` reader - Automatically deassert chip select"]
 pub type ADCS_R = crate::BitReader;
 #[doc = "Field `ADCS` writer - Automatically deassert chip select"]
-pub type ADCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADCS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REN` reader - Read enable"]
 pub type REN_R = crate::BitReader;
 #[doc = "Field `REN` writer - Read enable"]
-pub type REN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN` reader - LoSSI enable"]
 pub type LEN_R = crate::BitReader;
 #[doc = "Field `LEN` writer - LoSSI enable"]
-pub type LEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LMONO` reader - "]
 pub type LMONO_R = crate::BitReader;
 #[doc = "Field `LMONO` writer - "]
-pub type LMONO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LMONO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TE_EN` reader - "]
 pub type TE_EN_R = crate::BitReader;
 #[doc = "Field `TE_EN` writer - "]
-pub type TE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DONE` reader - Transfer is done"]
 pub type DONE_R = crate::BitReader;
 #[doc = "Field `RXD` reader - RX FIFO contains data"]
@@ -139,23 +139,23 @@ pub type RXF_R = crate::BitReader;
 #[doc = "Field `CSPOL0` reader - Chip select 0 polarity"]
 pub type CSPOL0_R = crate::BitReader;
 #[doc = "Field `CSPOL0` writer - Chip select 0 polarity"]
-pub type CSPOL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPOL0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CSPOL1` reader - Chip select 1 polarity"]
 pub type CSPOL1_R = crate::BitReader;
 #[doc = "Field `CSPOL1` writer - Chip select 1 polarity"]
-pub type CSPOL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPOL1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CSPOL2` reader - Chip select 2 polarity"]
 pub type CSPOL2_R = crate::BitReader;
 #[doc = "Field `CSPOL2` writer - Chip select 2 polarity"]
-pub type CSPOL2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPOL2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_LEN` reader - Enable DMA in LoSSI mode"]
 pub type DMA_LEN_R = crate::BitReader;
 #[doc = "Field `DMA_LEN` writer - Enable DMA in LoSSI mode"]
-pub type DMA_LEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_LEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEN_LONG` reader - Enable long data word in LoSSI mode"]
 pub type LEN_LONG_R = crate::BitReader;
 #[doc = "Field `LEN_LONG` writer - Enable long data word in LoSSI mode"]
-pub type LEN_LONG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEN_LONG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Chip select"]
     #[inline(always)]
@@ -310,123 +310,123 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - Chip select"]
     #[inline(always)]
     #[must_use]
-    pub fn cs(&mut self) -> CS_W<CS_SPEC, 0> {
-        CS_W::new(self)
+    pub fn cs(&mut self) -> CS_W<CS_SPEC> {
+        CS_W::new(self, 0)
     }
     #[doc = "Bit 2 - Clock phase"]
     #[inline(always)]
     #[must_use]
-    pub fn cpha(&mut self) -> CPHA_W<CS_SPEC, 2> {
-        CPHA_W::new(self)
+    pub fn cpha(&mut self) -> CPHA_W<CS_SPEC> {
+        CPHA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn cpol(&mut self) -> CPOL_W<CS_SPEC, 3> {
-        CPOL_W::new(self)
+    pub fn cpol(&mut self) -> CPOL_W<CS_SPEC> {
+        CPOL_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Clear the FIFO(s)"]
     #[inline(always)]
     #[must_use]
-    pub fn clear(&mut self) -> CLEAR_W<CS_SPEC, 4> {
-        CLEAR_W::new(self)
+    pub fn clear(&mut self) -> CLEAR_W<CS_SPEC> {
+        CLEAR_W::new(self, 4)
     }
     #[doc = "Bit 6 - Chip select polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn cspol(&mut self) -> CSPOL_W<CS_SPEC, 6> {
-        CSPOL_W::new(self)
+    pub fn cspol(&mut self) -> CSPOL_W<CS_SPEC> {
+        CSPOL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Transfer active"]
     #[inline(always)]
     #[must_use]
-    pub fn ta(&mut self) -> TA_W<CS_SPEC, 7> {
-        TA_W::new(self)
+    pub fn ta(&mut self) -> TA_W<CS_SPEC> {
+        TA_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable DMA"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<CS_SPEC, 8> {
-        DMAEN_W::new(self)
+    pub fn dmaen(&mut self) -> DMAEN_W<CS_SPEC> {
+        DMAEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt on done"]
     #[inline(always)]
     #[must_use]
-    pub fn intd(&mut self) -> INTD_W<CS_SPEC, 9> {
-        INTD_W::new(self)
+    pub fn intd(&mut self) -> INTD_W<CS_SPEC> {
+        INTD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt on RX"]
     #[inline(always)]
     #[must_use]
-    pub fn intr(&mut self) -> INTR_W<CS_SPEC, 10> {
-        INTR_W::new(self)
+    pub fn intr(&mut self) -> INTR_W<CS_SPEC> {
+        INTR_W::new(self, 10)
     }
     #[doc = "Bit 11 - Automatically deassert chip select"]
     #[inline(always)]
     #[must_use]
-    pub fn adcs(&mut self) -> ADCS_W<CS_SPEC, 11> {
-        ADCS_W::new(self)
+    pub fn adcs(&mut self) -> ADCS_W<CS_SPEC> {
+        ADCS_W::new(self, 11)
     }
     #[doc = "Bit 12 - Read enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ren(&mut self) -> REN_W<CS_SPEC, 12> {
-        REN_W::new(self)
+    pub fn ren(&mut self) -> REN_W<CS_SPEC> {
+        REN_W::new(self, 12)
     }
     #[doc = "Bit 13 - LoSSI enable"]
     #[inline(always)]
     #[must_use]
-    pub fn len(&mut self) -> LEN_W<CS_SPEC, 13> {
-        LEN_W::new(self)
+    pub fn len(&mut self) -> LEN_W<CS_SPEC> {
+        LEN_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn lmono(&mut self) -> LMONO_W<CS_SPEC, 14> {
-        LMONO_W::new(self)
+    pub fn lmono(&mut self) -> LMONO_W<CS_SPEC> {
+        LMONO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn te_en(&mut self) -> TE_EN_W<CS_SPEC, 15> {
-        TE_EN_W::new(self)
+    pub fn te_en(&mut self) -> TE_EN_W<CS_SPEC> {
+        TE_EN_W::new(self, 15)
     }
     #[doc = "Bit 21 - Chip select 0 polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn cspol0(&mut self) -> CSPOL0_W<CS_SPEC, 21> {
-        CSPOL0_W::new(self)
+    pub fn cspol0(&mut self) -> CSPOL0_W<CS_SPEC> {
+        CSPOL0_W::new(self, 21)
     }
     #[doc = "Bit 22 - Chip select 1 polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn cspol1(&mut self) -> CSPOL1_W<CS_SPEC, 22> {
-        CSPOL1_W::new(self)
+    pub fn cspol1(&mut self) -> CSPOL1_W<CS_SPEC> {
+        CSPOL1_W::new(self, 22)
     }
     #[doc = "Bit 23 - Chip select 2 polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn cspol2(&mut self) -> CSPOL2_W<CS_SPEC, 23> {
-        CSPOL2_W::new(self)
+    pub fn cspol2(&mut self) -> CSPOL2_W<CS_SPEC> {
+        CSPOL2_W::new(self, 23)
     }
     #[doc = "Bit 24 - Enable DMA in LoSSI mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_len(&mut self) -> DMA_LEN_W<CS_SPEC, 24> {
-        DMA_LEN_W::new(self)
+    pub fn dma_len(&mut self) -> DMA_LEN_W<CS_SPEC> {
+        DMA_LEN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Enable long data word in LoSSI mode"]
     #[inline(always)]
     #[must_use]
-    pub fn len_long(&mut self) -> LEN_LONG_W<CS_SPEC, 25> {
-        LEN_LONG_W::new(self)
+    pub fn len_long(&mut self) -> LEN_LONG_W<CS_SPEC> {
+        LEN_LONG_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

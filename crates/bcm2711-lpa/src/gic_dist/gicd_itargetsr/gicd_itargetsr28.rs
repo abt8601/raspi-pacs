@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_ITARGETSR28_SPEC>;
 #[doc = "Field `DMA_0` reader - DMA 0"]
 pub type DMA_0_R = crate::FieldReader;
 #[doc = "Field `DMA_0` writer - DMA 0"]
-pub type DMA_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_1` reader - DMA 1"]
 pub type DMA_1_R = crate::FieldReader;
 #[doc = "Field `DMA_1` writer - DMA 1"]
-pub type DMA_1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_1_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_2` reader - DMA 2"]
 pub type DMA_2_R = crate::FieldReader;
 #[doc = "Field `DMA_2` writer - DMA 2"]
-pub type DMA_2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_3` reader - DMA 3"]
 pub type DMA_3_R = crate::FieldReader;
 #[doc = "Field `DMA_3` writer - DMA 3"]
-pub type DMA_3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_3_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - DMA 0"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_ITARGETSR28_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - DMA 0"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ITARGETSR28_SPEC, 0> {
-        DMA_0_W::new(self)
+    pub fn dma_0(&mut self) -> DMA_0_W<GICD_ITARGETSR28_SPEC> {
+        DMA_0_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DMA 1"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ITARGETSR28_SPEC, 8> {
-        DMA_1_W::new(self)
+    pub fn dma_1(&mut self) -> DMA_1_W<GICD_ITARGETSR28_SPEC> {
+        DMA_1_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - DMA 2"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ITARGETSR28_SPEC, 16> {
-        DMA_2_W::new(self)
+    pub fn dma_2(&mut self) -> DMA_2_W<GICD_ITARGETSR28_SPEC> {
+        DMA_2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - DMA 3"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ITARGETSR28_SPEC, 24> {
-        DMA_3_W::new(self)
+    pub fn dma_3(&mut self) -> DMA_3_W<GICD_ITARGETSR28_SPEC> {
+        DMA_3_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

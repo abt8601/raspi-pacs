@@ -5,107 +5,107 @@ pub type W = crate::W<GPFEN1_SPEC>;
 #[doc = "Field `FEN32` reader - Falling edge enabled 32"]
 pub type FEN32_R = crate::BitReader;
 #[doc = "Field `FEN32` writer - Falling edge enabled 32"]
-pub type FEN32_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN32_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN33` reader - Falling edge enabled 33"]
 pub type FEN33_R = crate::BitReader;
 #[doc = "Field `FEN33` writer - Falling edge enabled 33"]
-pub type FEN33_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN33_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN34` reader - Falling edge enabled 34"]
 pub type FEN34_R = crate::BitReader;
 #[doc = "Field `FEN34` writer - Falling edge enabled 34"]
-pub type FEN34_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN34_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN35` reader - Falling edge enabled 35"]
 pub type FEN35_R = crate::BitReader;
 #[doc = "Field `FEN35` writer - Falling edge enabled 35"]
-pub type FEN35_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN35_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN36` reader - Falling edge enabled 36"]
 pub type FEN36_R = crate::BitReader;
 #[doc = "Field `FEN36` writer - Falling edge enabled 36"]
-pub type FEN36_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN36_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN37` reader - Falling edge enabled 37"]
 pub type FEN37_R = crate::BitReader;
 #[doc = "Field `FEN37` writer - Falling edge enabled 37"]
-pub type FEN37_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN37_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN38` reader - Falling edge enabled 38"]
 pub type FEN38_R = crate::BitReader;
 #[doc = "Field `FEN38` writer - Falling edge enabled 38"]
-pub type FEN38_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN38_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN39` reader - Falling edge enabled 39"]
 pub type FEN39_R = crate::BitReader;
 #[doc = "Field `FEN39` writer - Falling edge enabled 39"]
-pub type FEN39_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN39_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN40` reader - Falling edge enabled 40"]
 pub type FEN40_R = crate::BitReader;
 #[doc = "Field `FEN40` writer - Falling edge enabled 40"]
-pub type FEN40_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN40_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN41` reader - Falling edge enabled 41"]
 pub type FEN41_R = crate::BitReader;
 #[doc = "Field `FEN41` writer - Falling edge enabled 41"]
-pub type FEN41_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN41_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN42` reader - Falling edge enabled 42"]
 pub type FEN42_R = crate::BitReader;
 #[doc = "Field `FEN42` writer - Falling edge enabled 42"]
-pub type FEN42_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN42_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN43` reader - Falling edge enabled 43"]
 pub type FEN43_R = crate::BitReader;
 #[doc = "Field `FEN43` writer - Falling edge enabled 43"]
-pub type FEN43_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN43_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN44` reader - Falling edge enabled 44"]
 pub type FEN44_R = crate::BitReader;
 #[doc = "Field `FEN44` writer - Falling edge enabled 44"]
-pub type FEN44_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN44_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN45` reader - Falling edge enabled 45"]
 pub type FEN45_R = crate::BitReader;
 #[doc = "Field `FEN45` writer - Falling edge enabled 45"]
-pub type FEN45_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN45_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN46` reader - Falling edge enabled 46"]
 pub type FEN46_R = crate::BitReader;
 #[doc = "Field `FEN46` writer - Falling edge enabled 46"]
-pub type FEN46_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN46_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN47` reader - Falling edge enabled 47"]
 pub type FEN47_R = crate::BitReader;
 #[doc = "Field `FEN47` writer - Falling edge enabled 47"]
-pub type FEN47_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN47_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN48` reader - Falling edge enabled 48"]
 pub type FEN48_R = crate::BitReader;
 #[doc = "Field `FEN48` writer - Falling edge enabled 48"]
-pub type FEN48_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN48_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN49` reader - Falling edge enabled 49"]
 pub type FEN49_R = crate::BitReader;
 #[doc = "Field `FEN49` writer - Falling edge enabled 49"]
-pub type FEN49_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN49_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN50` reader - Falling edge enabled 50"]
 pub type FEN50_R = crate::BitReader;
 #[doc = "Field `FEN50` writer - Falling edge enabled 50"]
-pub type FEN50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN50_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN51` reader - Falling edge enabled 51"]
 pub type FEN51_R = crate::BitReader;
 #[doc = "Field `FEN51` writer - Falling edge enabled 51"]
-pub type FEN51_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN51_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN52` reader - Falling edge enabled 52"]
 pub type FEN52_R = crate::BitReader;
 #[doc = "Field `FEN52` writer - Falling edge enabled 52"]
-pub type FEN52_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN52_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN53` reader - Falling edge enabled 53"]
 pub type FEN53_R = crate::BitReader;
 #[doc = "Field `FEN53` writer - Falling edge enabled 53"]
-pub type FEN53_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN53_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN54` reader - Falling edge enabled 54"]
 pub type FEN54_R = crate::BitReader;
 #[doc = "Field `FEN54` writer - Falling edge enabled 54"]
-pub type FEN54_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN54_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN55` reader - Falling edge enabled 55"]
 pub type FEN55_R = crate::BitReader;
 #[doc = "Field `FEN55` writer - Falling edge enabled 55"]
-pub type FEN55_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN55_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN56` reader - Falling edge enabled 56"]
 pub type FEN56_R = crate::BitReader;
 #[doc = "Field `FEN56` writer - Falling edge enabled 56"]
-pub type FEN56_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN56_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEN57` reader - Falling edge enabled 57"]
 pub type FEN57_R = crate::BitReader;
 #[doc = "Field `FEN57` writer - Falling edge enabled 57"]
-pub type FEN57_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN57_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Falling edge enabled 32"]
     #[inline(always)]
@@ -272,165 +272,165 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GPFEN1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Falling edge enabled 32"]
     #[inline(always)]
     #[must_use]
-    pub fn fen32(&mut self) -> FEN32_W<GPFEN1_SPEC, 0> {
-        FEN32_W::new(self)
+    pub fn fen32(&mut self) -> FEN32_W<GPFEN1_SPEC> {
+        FEN32_W::new(self, 0)
     }
     #[doc = "Bit 1 - Falling edge enabled 33"]
     #[inline(always)]
     #[must_use]
-    pub fn fen33(&mut self) -> FEN33_W<GPFEN1_SPEC, 1> {
-        FEN33_W::new(self)
+    pub fn fen33(&mut self) -> FEN33_W<GPFEN1_SPEC> {
+        FEN33_W::new(self, 1)
     }
     #[doc = "Bit 2 - Falling edge enabled 34"]
     #[inline(always)]
     #[must_use]
-    pub fn fen34(&mut self) -> FEN34_W<GPFEN1_SPEC, 2> {
-        FEN34_W::new(self)
+    pub fn fen34(&mut self) -> FEN34_W<GPFEN1_SPEC> {
+        FEN34_W::new(self, 2)
     }
     #[doc = "Bit 3 - Falling edge enabled 35"]
     #[inline(always)]
     #[must_use]
-    pub fn fen35(&mut self) -> FEN35_W<GPFEN1_SPEC, 3> {
-        FEN35_W::new(self)
+    pub fn fen35(&mut self) -> FEN35_W<GPFEN1_SPEC> {
+        FEN35_W::new(self, 3)
     }
     #[doc = "Bit 4 - Falling edge enabled 36"]
     #[inline(always)]
     #[must_use]
-    pub fn fen36(&mut self) -> FEN36_W<GPFEN1_SPEC, 4> {
-        FEN36_W::new(self)
+    pub fn fen36(&mut self) -> FEN36_W<GPFEN1_SPEC> {
+        FEN36_W::new(self, 4)
     }
     #[doc = "Bit 5 - Falling edge enabled 37"]
     #[inline(always)]
     #[must_use]
-    pub fn fen37(&mut self) -> FEN37_W<GPFEN1_SPEC, 5> {
-        FEN37_W::new(self)
+    pub fn fen37(&mut self) -> FEN37_W<GPFEN1_SPEC> {
+        FEN37_W::new(self, 5)
     }
     #[doc = "Bit 6 - Falling edge enabled 38"]
     #[inline(always)]
     #[must_use]
-    pub fn fen38(&mut self) -> FEN38_W<GPFEN1_SPEC, 6> {
-        FEN38_W::new(self)
+    pub fn fen38(&mut self) -> FEN38_W<GPFEN1_SPEC> {
+        FEN38_W::new(self, 6)
     }
     #[doc = "Bit 7 - Falling edge enabled 39"]
     #[inline(always)]
     #[must_use]
-    pub fn fen39(&mut self) -> FEN39_W<GPFEN1_SPEC, 7> {
-        FEN39_W::new(self)
+    pub fn fen39(&mut self) -> FEN39_W<GPFEN1_SPEC> {
+        FEN39_W::new(self, 7)
     }
     #[doc = "Bit 8 - Falling edge enabled 40"]
     #[inline(always)]
     #[must_use]
-    pub fn fen40(&mut self) -> FEN40_W<GPFEN1_SPEC, 8> {
-        FEN40_W::new(self)
+    pub fn fen40(&mut self) -> FEN40_W<GPFEN1_SPEC> {
+        FEN40_W::new(self, 8)
     }
     #[doc = "Bit 9 - Falling edge enabled 41"]
     #[inline(always)]
     #[must_use]
-    pub fn fen41(&mut self) -> FEN41_W<GPFEN1_SPEC, 9> {
-        FEN41_W::new(self)
+    pub fn fen41(&mut self) -> FEN41_W<GPFEN1_SPEC> {
+        FEN41_W::new(self, 9)
     }
     #[doc = "Bit 10 - Falling edge enabled 42"]
     #[inline(always)]
     #[must_use]
-    pub fn fen42(&mut self) -> FEN42_W<GPFEN1_SPEC, 10> {
-        FEN42_W::new(self)
+    pub fn fen42(&mut self) -> FEN42_W<GPFEN1_SPEC> {
+        FEN42_W::new(self, 10)
     }
     #[doc = "Bit 11 - Falling edge enabled 43"]
     #[inline(always)]
     #[must_use]
-    pub fn fen43(&mut self) -> FEN43_W<GPFEN1_SPEC, 11> {
-        FEN43_W::new(self)
+    pub fn fen43(&mut self) -> FEN43_W<GPFEN1_SPEC> {
+        FEN43_W::new(self, 11)
     }
     #[doc = "Bit 12 - Falling edge enabled 44"]
     #[inline(always)]
     #[must_use]
-    pub fn fen44(&mut self) -> FEN44_W<GPFEN1_SPEC, 12> {
-        FEN44_W::new(self)
+    pub fn fen44(&mut self) -> FEN44_W<GPFEN1_SPEC> {
+        FEN44_W::new(self, 12)
     }
     #[doc = "Bit 13 - Falling edge enabled 45"]
     #[inline(always)]
     #[must_use]
-    pub fn fen45(&mut self) -> FEN45_W<GPFEN1_SPEC, 13> {
-        FEN45_W::new(self)
+    pub fn fen45(&mut self) -> FEN45_W<GPFEN1_SPEC> {
+        FEN45_W::new(self, 13)
     }
     #[doc = "Bit 14 - Falling edge enabled 46"]
     #[inline(always)]
     #[must_use]
-    pub fn fen46(&mut self) -> FEN46_W<GPFEN1_SPEC, 14> {
-        FEN46_W::new(self)
+    pub fn fen46(&mut self) -> FEN46_W<GPFEN1_SPEC> {
+        FEN46_W::new(self, 14)
     }
     #[doc = "Bit 15 - Falling edge enabled 47"]
     #[inline(always)]
     #[must_use]
-    pub fn fen47(&mut self) -> FEN47_W<GPFEN1_SPEC, 15> {
-        FEN47_W::new(self)
+    pub fn fen47(&mut self) -> FEN47_W<GPFEN1_SPEC> {
+        FEN47_W::new(self, 15)
     }
     #[doc = "Bit 16 - Falling edge enabled 48"]
     #[inline(always)]
     #[must_use]
-    pub fn fen48(&mut self) -> FEN48_W<GPFEN1_SPEC, 16> {
-        FEN48_W::new(self)
+    pub fn fen48(&mut self) -> FEN48_W<GPFEN1_SPEC> {
+        FEN48_W::new(self, 16)
     }
     #[doc = "Bit 17 - Falling edge enabled 49"]
     #[inline(always)]
     #[must_use]
-    pub fn fen49(&mut self) -> FEN49_W<GPFEN1_SPEC, 17> {
-        FEN49_W::new(self)
+    pub fn fen49(&mut self) -> FEN49_W<GPFEN1_SPEC> {
+        FEN49_W::new(self, 17)
     }
     #[doc = "Bit 18 - Falling edge enabled 50"]
     #[inline(always)]
     #[must_use]
-    pub fn fen50(&mut self) -> FEN50_W<GPFEN1_SPEC, 18> {
-        FEN50_W::new(self)
+    pub fn fen50(&mut self) -> FEN50_W<GPFEN1_SPEC> {
+        FEN50_W::new(self, 18)
     }
     #[doc = "Bit 19 - Falling edge enabled 51"]
     #[inline(always)]
     #[must_use]
-    pub fn fen51(&mut self) -> FEN51_W<GPFEN1_SPEC, 19> {
-        FEN51_W::new(self)
+    pub fn fen51(&mut self) -> FEN51_W<GPFEN1_SPEC> {
+        FEN51_W::new(self, 19)
     }
     #[doc = "Bit 20 - Falling edge enabled 52"]
     #[inline(always)]
     #[must_use]
-    pub fn fen52(&mut self) -> FEN52_W<GPFEN1_SPEC, 20> {
-        FEN52_W::new(self)
+    pub fn fen52(&mut self) -> FEN52_W<GPFEN1_SPEC> {
+        FEN52_W::new(self, 20)
     }
     #[doc = "Bit 21 - Falling edge enabled 53"]
     #[inline(always)]
     #[must_use]
-    pub fn fen53(&mut self) -> FEN53_W<GPFEN1_SPEC, 21> {
-        FEN53_W::new(self)
+    pub fn fen53(&mut self) -> FEN53_W<GPFEN1_SPEC> {
+        FEN53_W::new(self, 21)
     }
     #[doc = "Bit 22 - Falling edge enabled 54"]
     #[inline(always)]
     #[must_use]
-    pub fn fen54(&mut self) -> FEN54_W<GPFEN1_SPEC, 22> {
-        FEN54_W::new(self)
+    pub fn fen54(&mut self) -> FEN54_W<GPFEN1_SPEC> {
+        FEN54_W::new(self, 22)
     }
     #[doc = "Bit 23 - Falling edge enabled 55"]
     #[inline(always)]
     #[must_use]
-    pub fn fen55(&mut self) -> FEN55_W<GPFEN1_SPEC, 23> {
-        FEN55_W::new(self)
+    pub fn fen55(&mut self) -> FEN55_W<GPFEN1_SPEC> {
+        FEN55_W::new(self, 23)
     }
     #[doc = "Bit 24 - Falling edge enabled 56"]
     #[inline(always)]
     #[must_use]
-    pub fn fen56(&mut self) -> FEN56_W<GPFEN1_SPEC, 24> {
-        FEN56_W::new(self)
+    pub fn fen56(&mut self) -> FEN56_W<GPFEN1_SPEC> {
+        FEN56_W::new(self, 24)
     }
     #[doc = "Bit 25 - Falling edge enabled 57"]
     #[inline(always)]
     #[must_use]
-    pub fn fen57(&mut self) -> FEN57_W<GPFEN1_SPEC, 25> {
-        FEN57_W::new(self)
+    pub fn fen57(&mut self) -> FEN57_W<GPFEN1_SPEC> {
+        FEN57_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

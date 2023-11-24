@@ -5,7 +5,7 @@ pub type W = crate::W<GICC_BPR_SPEC>;
 #[doc = "Field `BINARY_POINT` reader - Split point between group priority and subpriority"]
 pub type BINARY_POINT_R = crate::FieldReader;
 #[doc = "Field `BINARY_POINT` writer - Split point between group priority and subpriority"]
-pub type BINARY_POINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type BINARY_POINT_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Split point between group priority and subpriority"]
     #[inline(always)]
@@ -25,15 +25,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICC_BPR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - Split point between group priority and subpriority"]
     #[inline(always)]
     #[must_use]
-    pub fn binary_point(&mut self) -> BINARY_POINT_W<GICC_BPR_SPEC, 0> {
-        BINARY_POINT_W::new(self)
+    pub fn binary_point(&mut self) -> BINARY_POINT_W<GICC_BPR_SPEC> {
+        BINARY_POINT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

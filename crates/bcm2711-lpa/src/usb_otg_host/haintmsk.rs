@@ -5,7 +5,7 @@ pub type W = crate::W<HAINTMSK_SPEC>;
 #[doc = "Field `HAINTM` reader - Channel interrupt mask"]
 pub type HAINTM_R = crate::FieldReader<u16>;
 #[doc = "Field `HAINTM` writer - Channel interrupt mask"]
-pub type HAINTM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type HAINTM_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Channel interrupt mask"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HAINTMSK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Channel interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn haintm(&mut self) -> HAINTM_W<HAINTMSK_SPEC, 0> {
-        HAINTM_W::new(self)
+    pub fn haintm(&mut self) -> HAINTM_W<HAINTMSK_SPEC> {
+        HAINTM_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

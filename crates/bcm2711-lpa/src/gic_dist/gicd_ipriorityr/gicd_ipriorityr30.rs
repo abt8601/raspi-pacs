@@ -5,19 +5,19 @@ pub type W = crate::W<GICD_IPRIORITYR30_SPEC>;
 #[doc = "Field `DMA_9_10` reader - OR of DMA 9 and 10"]
 pub type DMA_9_10_R = crate::FieldReader;
 #[doc = "Field `DMA_9_10` writer - OR of DMA 9 and 10"]
-pub type DMA_9_10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_9_10_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_11` reader - DMA 11"]
 pub type DMA_11_R = crate::FieldReader;
 #[doc = "Field `DMA_11` writer - DMA 11"]
-pub type DMA_11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_11_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_12` reader - DMA 12"]
 pub type DMA_12_R = crate::FieldReader;
 #[doc = "Field `DMA_12` writer - DMA 12"]
-pub type DMA_12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_12_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_13` reader - DMA 13"]
 pub type DMA_13_R = crate::FieldReader;
 #[doc = "Field `DMA_13` writer - DMA 13"]
-pub type DMA_13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DMA_13_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - OR of DMA 9 and 10"]
     #[inline(always)]
@@ -52,33 +52,33 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GICD_IPRIORITYR30_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - OR of DMA 9 and 10"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_IPRIORITYR30_SPEC, 0> {
-        DMA_9_10_W::new(self)
+    pub fn dma_9_10(&mut self) -> DMA_9_10_W<GICD_IPRIORITYR30_SPEC> {
+        DMA_9_10_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DMA 11"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_11(&mut self) -> DMA_11_W<GICD_IPRIORITYR30_SPEC, 8> {
-        DMA_11_W::new(self)
+    pub fn dma_11(&mut self) -> DMA_11_W<GICD_IPRIORITYR30_SPEC> {
+        DMA_11_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - DMA 12"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_12(&mut self) -> DMA_12_W<GICD_IPRIORITYR30_SPEC, 16> {
-        DMA_12_W::new(self)
+    pub fn dma_12(&mut self) -> DMA_12_W<GICD_IPRIORITYR30_SPEC> {
+        DMA_12_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - DMA 13"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_13(&mut self) -> DMA_13_W<GICD_IPRIORITYR30_SPEC, 24> {
-        DMA_13_W::new(self)
+    pub fn dma_13(&mut self) -> DMA_13_W<GICD_IPRIORITYR30_SPEC> {
+        DMA_13_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

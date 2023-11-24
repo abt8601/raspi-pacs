@@ -4,46 +4,82 @@
 pub struct RegisterBlock {
     _reserved_0_io: [u8; 0x04],
     _reserved_1_ier: [u8; 0x04],
-    #[doc = "0x08 - Interrupt Identify"]
-    pub iir: IIR,
-    #[doc = "0x0c - Line control"]
-    pub lcr: LCR,
-    #[doc = "0x10 - Modem Control"]
-    pub mcr: MCR,
-    #[doc = "0x14 - Line Status"]
-    pub lsr: LSR,
-    #[doc = "0x18 - Modem Status"]
-    pub msr: MSR,
-    #[doc = "0x1c - Scratch"]
-    pub scratch: SCRATCH,
+    iir: IIR,
+    lcr: LCR,
+    mcr: MCR,
+    lsr: LSR,
+    msr: MSR,
+    scratch: SCRATCH,
     _reserved8: [u8; 0x03],
-    #[doc = "0x20 - Control"]
-    pub cntl: CNTL,
-    #[doc = "0x24 - Status"]
-    pub stat: STAT,
-    #[doc = "0x28 - Baudrate"]
-    pub baud: BAUD,
+    cntl: CNTL,
+    stat: STAT,
+    baud: BAUD,
 }
 impl RegisterBlock {
     #[doc = "0x00 - Lower bits of baudrate when DLAB is set"]
     #[inline(always)]
     pub const fn baudl(&self) -> &BAUDL {
-        unsafe { &*(self as *const Self).cast::<u8>().add(0usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(0).cast() }
     }
     #[doc = "0x00 - I/O Data"]
     #[inline(always)]
     pub const fn io(&self) -> &IO {
-        unsafe { &*(self as *const Self).cast::<u8>().add(0usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(0).cast() }
     }
     #[doc = "0x04 - High bits of baudrate when DLAB is set"]
     #[inline(always)]
     pub const fn baudh(&self) -> &BAUDH {
-        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(4).cast() }
     }
     #[doc = "0x04 - Interrupt Enable"]
     #[inline(always)]
     pub const fn ier(&self) -> &IER {
-        unsafe { &*(self as *const Self).cast::<u8>().add(4usize).cast() }
+        unsafe { &*(self as *const Self).cast::<u8>().add(4).cast() }
+    }
+    #[doc = "0x08 - Interrupt Identify"]
+    #[inline(always)]
+    pub const fn iir(&self) -> &IIR {
+        &self.iir
+    }
+    #[doc = "0x0c - Line control"]
+    #[inline(always)]
+    pub const fn lcr(&self) -> &LCR {
+        &self.lcr
+    }
+    #[doc = "0x10 - Modem Control"]
+    #[inline(always)]
+    pub const fn mcr(&self) -> &MCR {
+        &self.mcr
+    }
+    #[doc = "0x14 - Line Status"]
+    #[inline(always)]
+    pub const fn lsr(&self) -> &LSR {
+        &self.lsr
+    }
+    #[doc = "0x18 - Modem Status"]
+    #[inline(always)]
+    pub const fn msr(&self) -> &MSR {
+        &self.msr
+    }
+    #[doc = "0x1c - Scratch"]
+    #[inline(always)]
+    pub const fn scratch(&self) -> &SCRATCH {
+        &self.scratch
+    }
+    #[doc = "0x20 - Control"]
+    #[inline(always)]
+    pub const fn cntl(&self) -> &CNTL {
+        &self.cntl
+    }
+    #[doc = "0x24 - Status"]
+    #[inline(always)]
+    pub const fn stat(&self) -> &STAT {
+        &self.stat
+    }
+    #[doc = "0x28 - Baudrate"]
+    #[inline(always)]
+    pub const fn baud(&self) -> &BAUD {
+        &self.baud
     }
 }
 #[doc = "IO (rw) register accessor: I/O Data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`io::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`io::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@io`]

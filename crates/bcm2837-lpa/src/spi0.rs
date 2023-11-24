@@ -2,18 +2,44 @@
 #[repr(C)]
 #[derive(Debug)]
 pub struct RegisterBlock {
+    cs: CS,
+    fifo: FIFO,
+    clk: CLK,
+    dlen: DLEN,
+    ltoh: LTOH,
+    dc: DC,
+}
+impl RegisterBlock {
     #[doc = "0x00 - Control and Status"]
-    pub cs: CS,
+    #[inline(always)]
+    pub const fn cs(&self) -> &CS {
+        &self.cs
+    }
     #[doc = "0x04 - FIFO access"]
-    pub fifo: FIFO,
+    #[inline(always)]
+    pub const fn fifo(&self) -> &FIFO {
+        &self.fifo
+    }
     #[doc = "0x08 - Clock divider"]
-    pub clk: CLK,
+    #[inline(always)]
+    pub const fn clk(&self) -> &CLK {
+        &self.clk
+    }
     #[doc = "0x0c - Data length"]
-    pub dlen: DLEN,
+    #[inline(always)]
+    pub const fn dlen(&self) -> &DLEN {
+        &self.dlen
+    }
     #[doc = "0x10 - LoSSI output hold delay"]
-    pub ltoh: LTOH,
+    #[inline(always)]
+    pub const fn ltoh(&self) -> &LTOH {
+        &self.ltoh
+    }
     #[doc = "0x14 - "]
-    pub dc: DC,
+    #[inline(always)]
+    pub const fn dc(&self) -> &DC {
+        &self.dc
+    }
 }
 #[doc = "CS (rw) register accessor: Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cs`]
 module"]

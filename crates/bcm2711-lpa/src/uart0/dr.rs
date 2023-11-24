@@ -5,23 +5,23 @@ pub type W = crate::W<DR_SPEC>;
 #[doc = "Field `DATA` reader - DATA"]
 pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - DATA"]
-pub type DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `FE` reader - FE"]
 pub type FE_R = crate::BitReader;
 #[doc = "Field `FE` writer - FE"]
-pub type FE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PE` reader - PE"]
 pub type PE_R = crate::BitReader;
 #[doc = "Field `PE` writer - PE"]
-pub type PE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BE` reader - BE"]
 pub type BE_R = crate::BitReader;
 #[doc = "Field `BE` writer - BE"]
-pub type BE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OE` reader - OE"]
 pub type OE_R = crate::BitReader;
 #[doc = "Field `OE` writer - OE"]
-pub type OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - DATA"]
     #[inline(always)]
@@ -62,39 +62,39 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - DATA"]
     #[inline(always)]
     #[must_use]
-    pub fn data(&mut self) -> DATA_W<DR_SPEC, 0> {
-        DATA_W::new(self)
+    pub fn data(&mut self) -> DATA_W<DR_SPEC> {
+        DATA_W::new(self, 0)
     }
     #[doc = "Bit 8 - FE"]
     #[inline(always)]
     #[must_use]
-    pub fn fe(&mut self) -> FE_W<DR_SPEC, 8> {
-        FE_W::new(self)
+    pub fn fe(&mut self) -> FE_W<DR_SPEC> {
+        FE_W::new(self, 8)
     }
     #[doc = "Bit 9 - PE"]
     #[inline(always)]
     #[must_use]
-    pub fn pe(&mut self) -> PE_W<DR_SPEC, 9> {
-        PE_W::new(self)
+    pub fn pe(&mut self) -> PE_W<DR_SPEC> {
+        PE_W::new(self, 9)
     }
     #[doc = "Bit 10 - BE"]
     #[inline(always)]
     #[must_use]
-    pub fn be(&mut self) -> BE_W<DR_SPEC, 10> {
-        BE_W::new(self)
+    pub fn be(&mut self) -> BE_W<DR_SPEC> {
+        BE_W::new(self, 10)
     }
     #[doc = "Bit 11 - OE"]
     #[inline(always)]
     #[must_use]
-    pub fn oe(&mut self) -> OE_W<DR_SPEC, 11> {
-        OE_W::new(self)
+    pub fn oe(&mut self) -> OE_W<DR_SPEC> {
+        OE_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

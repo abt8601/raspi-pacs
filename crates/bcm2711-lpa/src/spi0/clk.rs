@@ -5,7 +5,7 @@ pub type W = crate::W<CLK_SPEC>;
 #[doc = "Field `CDIV` reader - Clock divider"]
 pub type CDIV_R = crate::FieldReader<u16>;
 #[doc = "Field `CDIV` writer - Clock divider"]
-pub type CDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Clock divider"]
     #[inline(always)]
@@ -22,15 +22,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - Clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn cdiv(&mut self) -> CDIV_W<CLK_SPEC, 0> {
-        CDIV_W::new(self)
+    pub fn cdiv(&mut self) -> CDIV_W<CLK_SPEC> {
+        CDIV_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -7,7 +7,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CLO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Lower 32 bits for the free running counter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
