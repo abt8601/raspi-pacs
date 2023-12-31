@@ -1,6 +1,6 @@
 #[doc = "Register `HW_DIRECTION` reader"]
 pub type R = crate::R<HW_DIRECTION_SPEC>;
-#[doc = "Field `DIRECTION[0-15]` reader - Direction %s"]
+#[doc = "Field `DIRECTION(0-15)` reader - Direction %s"]
 pub type DIRECTION_R = crate::FieldReader<DIRECTION_A>;
 #[doc = "Direction %s"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -50,12 +50,20 @@ impl DIRECTION_R {
     }
 }
 impl R {
-    #[doc = "Direction [0-15]\n\nNOTE: `n` is number of field in register. `n == 0` corresponds to `DIRECTION0` field"]
+    #[doc = "Direction (0-15)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DIRECTION0` field"]
     #[inline(always)]
     pub fn direction(&self, n: u8) -> DIRECTION_R {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         DIRECTION_R::new(((self.bits >> (n * 2)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Direction (0-15)"]
+    #[inline(always)]
+    pub fn direction_iter(&self) -> impl Iterator<Item = DIRECTION_R> + '_ {
+        (0..16).map(move |n| DIRECTION_R::new(((self.bits >> (n * 2)) & 3) as u8))
     }
     #[doc = "Bits 0:1 - Direction 0"]
     #[inline(always)]

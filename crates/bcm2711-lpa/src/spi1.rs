@@ -35,10 +35,22 @@ impl RegisterBlock {
     pub const fn io(&self, n: usize) -> &IO {
         &self.io[n]
     }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x10..0x20 - Writing to the FIFO will deassert CS at the end of the access"]
+    #[inline(always)]
+    pub fn io_iter(&self) -> impl Iterator<Item = &IO> {
+        self.io.iter()
+    }
     #[doc = "0x20..0x30 - Writing to the FIFO will maintain CS at the end of the access"]
     #[inline(always)]
     pub const fn txhold(&self, n: usize) -> &TXHOLD {
         &self.txhold[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x30 - Writing to the FIFO will maintain CS at the end of the access"]
+    #[inline(always)]
+    pub fn txhold_iter(&self) -> impl Iterator<Item = &TXHOLD> {
+        self.txhold.iter()
     }
 }
 #[doc = "CNTL0 (rw) register accessor: Control 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cntl0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cntl0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cntl0`]
