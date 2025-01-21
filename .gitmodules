@@ -1,4 +1,4 @@
-[submodule "peripherals"]
-	path = peripherals
-	url = https://github.com/abt8601/broadcom-peripherals.git
+[submodule "broadcom-peripherals"]
+	path = broadcom-peripherals
+	url = https://github.com/adafruit/broadcom-peripherals.git
 	branch = main-build

@@ -1,27 +1,100 @@
 name: Check
 
-on: [push, pull_request]
+on:
+  push:
+    branches-ignore:
+      - main-build
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+  SVD2RUST_VERSION: 0.31.5
 
 jobs:
 
   check:
 
     strategy:
+      fail-fast: false
       matrix:
         mcu: [bcm2835, bcm2837, bcm2711]
-        os: [ubuntu, windows]
-        rust-version: [1.65.0, 1.66.1, 1.67.1, 1.68.2, 1.69.0, 1.70.0, 1.71.1, 1.72.1, 1.73.0, 1.74.1, 1.75.0, 1.76.0]
+        rust-version: [1.76.0, 1.77.2, 1.78.0, 1.79.0, 1.80.1, 1.81.0, 1.82.0, 1.83.0, 1.84.0]
 
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
-      - name: Install Rust
-        run: rustup default ${{ matrix.rust-version }}
+      - name: Setup Rust and Cargo
+        uses: moonrepo/setup-rust@v1.2
+        with:
+          channel: ${{ matrix.rust-version }}
+          components: rust-docs,rustfmt
+          targets: aarch64-unknown-none
+          bins: svd2rust@${{ env.SVD2RUST_VERSION }},form
+          # Caching `build/pacs/${{ matrix.mcu }}-lpa/target` is useless
+          # since our PAC generation script (`gen-pac.sh`) removes it.
+          # Therefore, we will remove the contents of the directory at the end.
+          target-dirs: build/pacs/${{ matrix.mcu }}-lpa/target
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check crate
-        working-directory: crates/${{ matrix.mcu }}-lpa
-        run: |
-          cargo check
-          cargo check --all-features
+      - name: Setup Jinja2 CLI
+        run: pip3 install jinja2-cli toml
+
+      - name: Generate SVD file
+        run: make build/svds/${{ matrix.mcu }}.svd
+
+      - name: Generate PAC
+        run: make build/pacs/${{ matrix.mcu }}-lpa
+
+      - name: Check PAC
+        working-directory: build/pacs/${{ matrix.mcu }}-lpa
+        run: cargo check --all-features --verbose
+
+      - name: Check PAC doc
+        working-directory: build/pacs/${{ matrix.mcu }}-lpa
+        run: cargo doc --all-features --verbose
+
+      - name: Clean PAC
+        working-directory: build/pacs/${{ matrix.mcu }}-lpa
+        run: cargo clean --verbose
+
+  windows-gen:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        mcu: [bcm2835, bcm2837, bcm2711]
+
+    runs-on: windows-latest
+
+    env:
+      RUST_VERSION: 1.84.0
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Rust and Cargo
+        uses: moonrepo/setup-rust@v1.2
+        with:
+          channel: ${{ env.RUST_VERSION }}
+          components: rust-docs,rustfmt,clippy
+          targets: aarch64-unknown-none
+          bins: svd2rust@${{ env.SVD2RUST_VERSION }},form
+          target-dirs: build/pacs/${{ matrix.mcu }}-lpa/target
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Jinja2 CLI
+        run: pip3 install jinja2-cli toml
+
+      - name: Generate SVD file
+        run: make build/svds/${{ matrix.mcu }}.svd
+
+      - name: Generate PAC
+        run: make build/pacs/${{ matrix.mcu }}-lpa
