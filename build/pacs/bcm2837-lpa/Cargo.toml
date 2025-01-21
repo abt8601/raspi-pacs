@@ -1,0 +1,23 @@
+[package]
+name = "bcm2837-lpa"
+version = "0.5.0"
+authors = ["Po-Yi Tsai <abt8601@protonmail.ch>"]
+edition = "2021"
+rust-version = "1.76.0"
+description = "Peripheral access crate for BCM2837 found in the Raspberry Pi 3 and Zero 2W."
+repository = "https://github.com/abt8601/raspi-pacs"
+license = "Unlicense"
+keywords = ["raspberrypi", "bcm2837", "pac"]
+categories = ["embedded", "hardware-support", "no-std", "no-std::no-alloc"]
+
+[dependencies]
+critical-section = { version = "1.0", optional = true }
+vcell = "0.1.0"
+
+portable-atomic = { version = "0.3.16", optional = true, default-features = false }
+defmt = { version = "0.3.10", optional = true }
+
+[features]
+rt = []
+
+atomic = ["portable-atomic"]
